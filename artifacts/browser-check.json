@@ -1,5 +1,5 @@
 {
-  "base_url": "http://127.0.0.1:8001",
+  "base_url": "http://127.0.0.1:8002",
   "checks": [
     "desktop_initial_prepared",
     "actual_mcp_run",
@@ -15,6 +15,8 @@
     "actual_reconcile",
     "search_evidence",
     "search_empty",
+    "unsupported_samsung",
+    "unsupported_SK",
     "search_network_error",
     "evaluation_six_configurations",
     "run_api_unavailable",
@@ -23,7 +25,7 @@
     "mobile_case_and_source",
     "boot_network_failure"
   ],
-  "passed": 21,
+  "passed": 23,
   "page_errors": [],
   "browser": "Chromium via Playwright",
   "viewports": [

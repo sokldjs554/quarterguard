@@ -7,7 +7,8 @@ from .ingest import METRICS
 CONFIGS=('fixed_word','cell_word','cell_char','hybrid_meta')
 def normalize(q):
     for a,b in [('삼성전자','samsung'),('연결','CFS'),('별도','OFS'),('3분기','Q3'),('2분기','Q2'),('3개월','quarter'),('누적','ytd'),('원화','KRW'),('달러','USD')]+[(v[1],k) for k,v in METRICS.items()]: q=q.replace(a,b)
-    return re.sub(r"(20\d{2})년",r"\1",q.lower())
+    q=re.sub(r"([1-4])분기",r"q\1",q.lower())
+    return re.sub(r"(20\d{2})년",r"\1",q)
 
 def describe(f):
     quarter=(int(f.end[5:7])+2)//3
@@ -37,6 +38,8 @@ def constraints(q):
     # The public explorer supports an explicit entity and controlled financial terms.
     # Unknown entities are not a request for the only entity in the corpus.
     if not re.search(r'\bsamsung\b',q):return None
+    allowed={'samsung','electronics','q','quarter','ytd','cfs','ofs','krw','usd'} | set(METRICS)
+    if any(token not in allowed for token in re.findall(r'[a-z_]+|[가-힣]+',q)):return None
     filt['company']='samsung'
     if any(re.search(r'\b'+c+r'\b',q) for c in ('eur','jpy','gbp','cny','hkd','cad','aud')):return None
     for key,vals in [('scope',['cfs','ofs']),('currency',['krw','usd']),('metric',list(METRICS))]:
