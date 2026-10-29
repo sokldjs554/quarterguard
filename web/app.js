@@ -155,7 +155,7 @@ async function boot() {
    const row=current?.rows.find(r=>r.current.id===id||r.base.id===id);if(!row)return;
    selectedMetric=row.metric;selectedSide=index===0?'current':'base';selectRow();
   });
-  $('#version').textContent='v1.3.0 · '+health.commit.slice(0,7);
+  $('#version').textContent='v1.3.1 · '+health.commit.slice(0,7);
   $('#document-count').textContent=sources.length;
   $('#document-list').innerHTML=sources.map(s=>`<button class="document-item" data-document="${esc(s.id)}" aria-pressed="false"><span class="doc-icon" aria-hidden="true">PDF</span><span><strong>${s.id==='s24q3'?'2024년 3분기':'2024년 반기'}</strong><small>${s.pages}쪽 · 영문 IR</small></span></button>`).join('');
   document.querySelectorAll('[data-document]').forEach(b=>b.onclick=async()=>{

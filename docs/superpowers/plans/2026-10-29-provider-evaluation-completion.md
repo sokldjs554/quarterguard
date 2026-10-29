@@ -13,3 +13,5 @@ Architecture: Keep canonical calculator and real MCP paths. Add an opt-in provid
 Review focus: retries and concurrency spend before success; resets on ephemeral storage; cached responses not mislabeled live; tampered IDs/SSRF/key leakage; evaluation leakage and fixture-assisted results overclaim.
 
 Outcome: implementation/CI/public version validation completed; public DART blocked by runtime KEY_NOT_CONFIGURED despite reported setup; paid LLM deliberately remains blocked. Direct HTTPS browser trust failed without bypass. Detailed evidence and final deployment follow docs/completion-report.md and release.
+
+Follow-up 2026-10-30 KST: user saved/redeployed Render key; public DART enabled, four actual calls and 16/16 exact amounts passed, four immediate repeats used cache (zero extra provider calls). Paid LLM remains blocked.

@@ -1,6 +1,6 @@
-# v1.3 보완·검증 보고
+# v1.3.1 보완·검증 보고
 
-작성 기준: 2026-10-29 (한국 시간). 기능 배포와 공개 서버 검증을 구분해 기록한다. 과거 API 검증을 이번 호출로 합산하지 않는다.
+최초 작성: 2026-10-29, DART 후속 검증 갱신: 2026-10-30 (한국 시간). 기능 배포와 공개 서버 검증을 구분해 기록한다. 과거 API 검증을 이번 호출로 합산하지 않는다.
 
 ## 지원 프로젝트로서의 판단
 
@@ -36,9 +36,9 @@
 |실행 범위|OpenAI|DART|비용|
 |---|---:|---:|---|
 |과거 수동 Actions|4회|4회 / 16금액 일치|OpenAI 입력 2,576·출력 438 tokens; 현재 공개 단가로 약 $0.0017312, 실제 청구액 미조회|
-|이번 변경의 유료 호출|0회|해당 없음|새 유료 API $0, 유료 서비스 전환 없음|
+|공개 데모 후속 실호출|0회|4회 / 16금액 일치|DART 무료 API, 새 유료 API $0, 유료 서비스 전환 없음|
 
-과거 [OpenAI 기록](../artifacts/live-openai.json)·[DART 기록](../artifacts/live-dart.json)은 별도 실행이다. 이번 공개 서버 상태 조회에서 DART 키가 반영되지 않아 아직 DART 요청은 0회다. 키 등록 완료라는 사용자 응답과 실행 서버 상태가 달라, 환경 변수 저장·재배포 확인을 요청했다. 이를 실제 연동 성공으로 계산하지 않는다. API 비용은 CPU·네트워크·저장 비용 전체를 의미하지 않는다.
+과거 [OpenAI 기록](../artifacts/live-openai.json)·[DART 기록](../artifacts/live-dart.json)은 별도 실행이다. 이후 사용자가 Render 환경 변수를 저장·재배포한 뒤 공개 서버의 DART 활성화를 확인했다. 삼성전자 2024 반기·3분기 × 연결·별도 4개 고정 조회를 실제 실행했고 매출·영업이익의 분기·누적 16개 금액이 모두 일치했다. [공개 DART 요청·응답 원본](../artifacts/public-dart.json). 각 조회를 한 번 더 요청한 4개 응답은 모두 캐시 재사용으로 추가 외부 호출 0회였다. 과거 Actions DART 4회와 이번 공개 DART 4회는 별도이며, 확인한 두 기록의 합계는 8회다. API 비용은 CPU·네트워크·저장 비용 전체를 의미하지 않는다.
 
 ## 미완료·제한
 
@@ -48,14 +48,23 @@
 
 ## 공개 서버와 HTTPS 검증
 
-기능 커밋 [`79fc4e2af479c94ec6d1c4df2970936a8ab0d923`](https://github.com/sokldjs554/quarterguard/commit/79fc4e2af479c94ec6d1c4df2970936a8ab0d923), [PR #9](https://github.com/sokldjs554/quarterguard/pull/9), Render live 배포 `dep-dbhljr0473hc73covhhg`, 공개 `/health.commit`이 일치했다. API/UI 버전은 **1.3.0**이다. 이 보고 파일을 추가하는 문서 커밋은 후속 배포이므로 최종 SHA와 배포 확인은 [v1.3.0 릴리스](https://github.com/sokldjs554/quarterguard/releases/tag/v1.3.0)에 남긴다.
+기능 커밋 [`79fc4e2af479c94ec6d1c4df2970936a8ab0d923`](https://github.com/sokldjs554/quarterguard/commit/79fc4e2af479c94ec6d1c4df2970936a8ab0d923), [PR #9](https://github.com/sokldjs554/quarterguard/pull/9), Render live 배포 `dep-dbhljr0473hc73covhhg`, 공개 `/health.commit`이 일치했다. API/UI 버전은 **1.3.0**이다. 이 보고 파일을 추가하는 문서 커밋은 후속 배포이므로 DART 검증 반영 후 최종 SHA와 배포 확인은 [v1.3.1 릴리스](https://github.com/sokldjs554/quarterguard/releases/tag/v1.3.1)에 남긴다. 이전 v1.3.0 검증 커밋과 현재 배포를 혼동하지 않도록 분리한다.
 
-[공개 서버 대조 원본](../artifacts/public-deployment-check.json): 기본 TLS 검증을 켠 HTTPS로 HTML·app.js·providers.js·heldout.js·CSS의 SHA-256이 저장소와 같음을 확인했다. 개발 평가와 추가 문서 평가 API JSON도 저장소 artifact와 정확히 일치한다. 이 조회 자체는 외부 공급자 호출을 하지 않았다.
+[최초 공개 서버 대조 원본](../artifacts/public-deployment-check.json) (키 설정 전 기록): 기본 TLS 검증을 켠 HTTPS로 HTML·app.js·providers.js·heldout.js·CSS의 SHA-256이 저장소와 같음을 확인했다. 개발 평가와 추가 문서 평가 API JSON도 저장소 artifact와 정확히 일치한다. 이 조회 자체는 외부 공급자 호출을 하지 않았다.
 
-공개 `/api/providers`는 DART `KEY_NOT_CONFIGURED`, OpenAI `KEY_NOT_CONFIGURED`, `PAID_APPROVAL_REQUIRED`, `DURABLE_LEDGER_REQUIRED`를 반환했다. 화면은 실제 서버 상태를 읽어 버튼을 비활성화하며 이유를 표시한다. 키 값은 조회·노출하지 않았다. 사용자에게 정확한 서비스 Environment의 저장·재배포 확인을 요청했으며, 키가 실행 환경에 반영되기 전에는 실제 DART 조회 성공을 주장할 수 없다.
+최초 `/api/providers` 조회에서는 DART `KEY_NOT_CONFIGURED`로 차단됐으나 후속 재배포 `dep-dbhlsqhsrm7s7386at8g`에서 해결됐다. 실제 호출 기록의 애플리케이션 커밋은 `c89af39f169d114d8e95a3a2e59f791ee30b8d9f`(v1.3.0)이다. 서버 키 값은 읽거나 노출하지 않았고 공개 API로 실제 응답만 검증했다. OpenAI는 계속 `KEY_NOT_CONFIGURED`, `PAID_APPROVAL_REQUIRED`, `DURABLE_LEDGER_REQUIRED`로 차단된다. DART 사용량 4회, OpenAI 사용량 0회도 조회 전후 기록에 남겼다.
 
 직접 Chromium HTTPS는 **PC 1440×1000와 모바일 크기 390×844 모두 `ERR_CERT_AUTHORITY_INVALID`**로 막혔다. 새 v1.3 배포 이후에도 재시도했고 결과를 [원본](../artifacts/https-browser-limitations.json)에 저장했다. 정당한 환경 CA를 격리 프로필에 설치한 Firefox 시도도 브라우저 시작 오류로 페이지 탐색 전 실패했다. 인증서 무시 옵션이나 유료 TinyFish는 사용하지 않았다. HTTPS HTTP 요청 성공은 직접 브라우저 성공을 대신하지 않는다.
 
 공개 서버를 대상으로 [고정 목적지 중계기](../scripts/https_qa_relay.py)를 사용한 Chromium PC·모바일 크기 검사는 **37/37 통과, 페이지 오류 0건**이었다. [공개 브라우저 결과](../artifacts/public-browser-check.json). 이 경로는 `브라우저 → 로컬 HTTP → 인증서 검증 HTTPS → Render`이며, 직접 HTTPS 브라우저 검증과 물리 휴대폰 검증이 아니다. 출처 이동·기간/범위/통화 차단·실제 MCP·메모/CSV·저장 결과·실패 복구를 확인했다. 외부 발행사 PDF 렌더링 성공은 주장하지 않는다.
 
-재현: `python -m uvicorn scripts.https_qa_relay:app --host 127.0.0.1 --port 8006` 후 `DEMO_URL=http://127.0.0.1:8006 QA_OUTPUT_DIR=work/public-check python scripts/browser_check.py`. 실제 공급자 요청은 이 브라우저 회귀 스크립트에 포함되지 않는다. [공개 공급자 화면](../artifacts/public-provider-browser-check.json)도 PC·모바일에서 차단 이유·9개 평가 실패 노출·가로 넘침 없음·외부 POST 0회를 별도로 확인했다.
+재현: `python -m uvicorn scripts.https_qa_relay:app --host 127.0.0.1 --port 8006` 후 `DEMO_URL=http://127.0.0.1:8006 QA_OUTPUT_DIR=work/public-check python scripts/browser_check.py`. 실제 공급자 요청은 이 브라우저 회귀 스크립트에 포함되지 않는다. [키 설정 전 공개 공급자 화면](../artifacts/public-provider-browser-check.json)도 PC·모바일에서 차단 이유·9개 평가 실패 노출·가로 넘침 없음·외부 POST 0회를 별도로 확인했다.
+
+
+## DART 활성화 후 실제 공개 화면 확인
+
+[후속 브라우저 기록](../artifacts/public-dart-browser.json): PC 1440×1000과 모바일 크기 390×844에서 DART 요청 버튼이 활성화되고, 실제 공급자에서 받아 저장한 응답의 금액 4개·캐시 재사용·이번 외부 호출 0회가 표시되는 것을 확인했다. 두 브라우저 요청은 모두 캐시를 사용했으며 OpenAI 버튼은 비활성 상태를 유지했다. 페이지 오류와 가로 넘침은 없었다. [화면 캡처](images/public-providers.png).
+
+외부 DART 실제 요청은 HTTPS API 검사 4회뿐이다. HTTP 반복 확인 4회와 브라우저 확인 2회는 모두 캐시 응답이므로 추가 외부 요청이 아니다. 직접 HTTPS 브라우저의 인증서 제한은 해결된 것으로 표현하지 않으며, 후속 화면 검사도 TLS 검증 중계 경로를 사용했다. 이 후속 검증은 v1.3.0 기능 코드에서 수행했고, v1.3.1은 API/UI 버전 표시와 문서·검증 증거를 갱신한다. 공급자 실행·검증 코드는 동일하다.
+
+후속 문서 배포로 무료 인스턴스 사용량/캐시가 초기화될 수 있으므로 현재 화면의 누적 값이 과거 실제 검증 4회를 영구 누적한 값은 아니다. 과거 실행 시각·사용량·응답은 위 원본에 보존한다.
