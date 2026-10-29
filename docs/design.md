@@ -13,6 +13,8 @@
 조사한 FinRobot은 계산·출처·에이전트 검증도 다루므로 이를 독창성으로 주장하지 않는다. 본 프로젝트의 초점은 한국 분기 공시 문맥의 호환성 검사 및 누적 차감의 독립 근거 교차검증이다. 최초·유일 주장은 하지 않는다. AlphaSense의 인용 확인 흐름, Docling의 파싱 책임 분리, FinanceBench의 evidence 기반 평가 구조를 참고한다. 서비스 실제 사용이나 유료 제품 성능을 검증한 것은 아니다.
 
 ## 구조와 사용자 흐름
+
+현재 v1.1 화면은 [문서 작업지 설계](superpowers/specs/2026-10-29-document-worksheet-design.md)와 [UI 조사](ui-research.md)를 따른다. 독립 A/B 조건 선택 → 6개 손익 항목 대조 → 셀별 출처 확인 → 실제 MCP 재검증이 메인 흐름이며 아래 사례 실행은 평가·기록에 유지한다.
 Python FastAPI + 정적 HTML/CSS/JS. 조사자가 선택한 사례 → 실제 MCP stdio 세션 → search_documents → get_fact → verify_comparison 또는 reconcile_quarter → 보고서와 trace. 표 레코드는 company, metric, scope, currency, scale, start, end, duration, value, source URL, page, row, column, document hash를 보존한다. Decimal만 계산에 사용한다.
 
 문서 파싱은 삼성전자 2024 영문 반기·3분기 손익계산서의 검증된 레이아웃에 한정한다. 레이아웃 변경·필수 헤더 누락 시 중단한다. PDF 본문은 로컬 처리하며 공개본에는 최소 수치 사실과 직접 작성한 설명만 포함한다. DART 수집기는 별도로 제공하고 인증키 미설정 상태를 분리한다.
@@ -23,4 +25,4 @@ Python FastAPI + 정적 HTML/CSS/JS. 조사자가 선택한 사례 → 실제 MC
 단위 테스트: 기간/통화/단위/회사/범위/항목 불일치, 근거 없음, 0 분모, 음수 기저, 모호한 사실, 누적 구간 불일치, 수치 충돌. 통합: 실제 MCP handshake 및 call_tool, API 오류/준비/실행 분리. 평가: 검색 Recall@k/MRR, 수치·상태·인용 exact match, 실제 도구 성공률, latency. 평가셋은 사람이 검수하지 않은 프로그램 생성 및 작성 사례로 표시한다. 문서/회사 수가 적어 일반화 성능을 주장하지 않는다.
 
 ## 권한과 완료 조건
-사용자가 주제 선정·새 공개 GitHub 저장소·공개 배포를 명시적으로 요청했다. 별도 기획 승인 대기 없이 진행한다. Render 대상은 아직 사용자 선택 대기. 신규 서비스만 생성하고 기존 서비스 변경 없음. 공개 결과와 코드·평가 artifact의 버전을 대조한다. 외부 의존 차단 항목을 성공으로 간주하지 않는다.
+사용자가 주제 선정·새 공개 GitHub 저장소·공개 배포를 명시적으로 요청했다. 별도 기획 승인 대기 없이 진행한다. Render 대상은 사용자가 선택한 my2 workspace다. 신규 서비스만 생성하고 기존 서비스 변경 없음. 공개 결과와 코드·평가 artifact의 버전을 대조한다. 외부 의존 차단 항목을 성공으로 간주하지 않는다.

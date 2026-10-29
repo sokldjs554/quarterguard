@@ -1,14 +1,52 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="분기·누적, 연결·별도, 통화 혼동을 근거와 계산으로 확인하는 금융 실적 검증대"><title>QuarterGuard · 분기 실적 검증대</title><link rel="stylesheet" href="/assets/style.css"></head><body>
-<aside class="rail"><a class="brand" href="/"><span class="mark">Q<span>G</span></span><span>QuarterGuard<small>FINANCIAL EVIDENCE WORKSPACE</small></span></a><div class="rail-label">WORKSPACE</div><nav aria-label="주 메뉴"><button class="nav active" data-tab="work"><span>▦</span>실적 검증대</button><button class="nav" data-tab="search"><span>⌕</span>근거 검색</button><button class="nav" data-tab="eval"><span>▥</span>평가 실험</button></nav><div class="rail-note"><span class="live-dot"></span> PUBLIC RESEARCH DEMO<p>삼성전자 · 2024 Q2 / Q3</p><small>공개 IR 보고서 2건<br>투자 판단용 서비스 아님</small></div><a class="repo" href="https://github.com/sokldjs554/quarterguard" target="_blank" rel="noopener">GitHub 저장소 ↗</a></aside>
-<div class="shell"><header><span>RESEARCH OPERATIONS <i>/</i> <strong id="crumb">실적 검증대</strong></span><span class="version" id="version">버전 확인 중</span></header><main>
-<section id="work" class="tab"><div class="page-heading"><div class="eyebrow">01 / QUARTERLY COMPARISON</div><h1>분기 실적 검증대</h1><p>비교 가능한 숫자만, 확인 가능한 근거로.</p></div>
-<div class="scope-strip"><span><b>삼성전자</b> 005930</span><span>보고서 기준 <b>2024.09.30</b></span><span>2개 문서 <b>192개 수치</b></span><span class="subtle">생성형 LLM 미사용 · 규칙 기반 MCP</span></div>
-<div class="workspace"><section class="case-panel"><div class="panel-heading"><h2>검증 사례</h2><span>08</span></div><div id="case-list" class="case-list" aria-label="검증 사례 목록"></div><div class="case-hint">추천 흐름<strong>분기 매출 → 누적 혼동 → 누적 차감</strong>정상 비교와 차단 근거를 순서대로 확인</div></section>
-<div class="analysis-panel"><div class="selection"><div><span class="eyebrow">SELECTED WORKFLOW</span><h2 id="case-title">데이터 로딩</h2><p id="case-description">공개 근거 준비 중</p></div><div class="actions"><button id="prepared-btn" class="secondary">준비 결과</button><button id="run-btn" class="primary">MCP 실행 <span>↗</span></button></div></div>
-<div id="alert" role="alert" hidden></div><div id="loading" role="status" hidden><span class="spinner"></span>근거 검색 · 문맥 확인 · 수치 검증</div>
-<div id="result-area" aria-live="polite"></div>
-<section class="trace-panel"><div class="panel-heading"><h2>도구 실행 기록</h2><button id="download-btn" class="text-button">JSON 내려받기 ↓</button></div><div id="trace"></div></section></div></div></section>
-<section id="search" class="tab" hidden><div class="page-heading"><div class="eyebrow">02 / SOURCE EXPLORER</div><h1>근거 검색</h1><p>행·열·기간을 유지한 수치 근거 검색</p></div><form id="search-form"><label for="query">검색어</label><div class="search-bar"><input id="query" maxlength="500" value="삼성전자 2024 3분기 연결 매출액 3개월 KRW"><button class="primary">검색</button></div><p class="subtle">예시 형식의 명시적 조건 검색 · 미지원 어휘는 결과 없음<br>수집 범위: 삼성전자 2023·2024 비교 수치 · Q2/Q3 · 연결/별도 · 6개 손익 항목</p></form><div id="search-results"></div><section class="sources-panel"><h2>원문 문서</h2><div id="sources"></div><p class="subtle">원문은 발행사 사이트에서 확인 · PDF 원본 재배포 없음 · 페이지 번호는 PDF 1부터 시작</p></section></section>
-<section id="eval" class="tab" hidden><div class="page-heading"><div class="eyebrow">03 / REPRODUCIBLE EVALUATION</div><h1>평가 실험</h1><p>청킹과 검색 구성별 측정 결과</p></div><div class="notice">평가 범위: 1개 기업 · 문서 2건 · 템플릿 질의 36개 · 업무 사례 8개<br>사람 검수 없음 · 개발용 회귀 평가 · 실제 고객 트래픽 및 일반화 성능 아님</div><div id="eval-content"></div></section>
-<footer><span>QuarterGuard / Evidence before inference</span><span>수치 수집 기준 2024.09.30 · 자료 확인 2026.10.29</span></footer></main></div>
-<dialog id="evidence-dialog"><div class="dialog-head"><div><span class="eyebrow">SOURCE RECORD</span><h2>수치 근거</h2></div><button id="close-dialog" aria-label="닫기">×</button></div><div id="evidence-content"></div></dialog><script src="/assets/app.js" defer></script></body></html>
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="공시의 기간·범위·단위를 대조하고 재무 수치에서 원문 근거까지 확인하는 작업지">
+<title>QuarterGuard · 공시 대조 작업지</title>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">작업 영역으로 이동</a>
+<header class="app-header">
+ <a class="brand" href="/" aria-label="QuarterGuard 홈"><span class="brand-symbol" aria-hidden="true">qg.</span>QuarterGuard<span class="brand-caption">공시 검토</span></a>
+ <nav aria-label="주 메뉴"><button data-view="work" class="active" aria-current="page">대조 작업지</button><button data-view="search">근거 검색</button><button data-view="review">평가·기록</button></nav>
+ <a class="github-link" href="https://github.com/sokldjs554/quarterguard" target="_blank" rel="noopener">GitHub ↗</a>
+</header>
+<main id="main">
+<section id="work" class="view">
+ <div class="title-line"><div><div class="overline">DOCUMENT REVIEW / 01</div><h1>공시 대조 작업지</h1></div><details class="dataset-note"><summary><span class="sample-tag">예시 데이터</span> 삼성전자 · 보고서 2건 <span aria-hidden="true">⌄</span></summary><div><strong>현재 검증 범위</strong><p>삼성전자 2024년 반기·3분기 IR 보고서의 연결·별도 손익 표. 2023·2024 비교 수치 192개를 수집했습니다.</p><p>다른 기업·문서의 분석은 지원하지 않습니다. 삼성전자는 제품의 고정 대상이 아닌 공개 검증 예시입니다.</p><span>자료 기준 2024.09.30 · 수집 확인 2026.10.29</span></div></details></div>
+ <div class="work-toolbar"><label for="mode">비교 기준 <select id="mode"><option value="qoq">전분기 대비</option><option value="yoy">전년 동기 대비</option></select></label><span class="toolbar-divider"></span><span id="table-summary" role="status">근거 준비 중</span><div class="toolbar-actions"><button id="reset-btn" class="quiet" disabled>설정 초기화</button><button id="run-btn" class="primary" disabled>근거 재검증 <span aria-hidden="true">↗</span></button></div></div>
+ <div id="work-alert" class="error-message" role="alert" hidden></div>
+ <div id="boot-error" class="boot-error" hidden><h2>서비스 연결 불가</h2><p>데이터를 불러오지 못했습니다. 서버 연결을 확인한 뒤 다시 시도해 주세요.</p><button id="boot-retry" class="primary">다시 연결</button></div>
+ <div class="desk" id="desk" aria-busy="true">
+  <section class="worksheet" aria-labelledby="sheet-title">
+   <div class="section-bar"><h2 id="sheet-title">손익 항목 대조</h2><span>표시 금액 · 각 열의 단위 기준</span></div>
+   <div class="column-settings"><fieldset id="current-settings"><legend><span class="side-index">A</span>기준 자료</legend><div class="selectors" data-side="current"></div></fieldset><fieldset id="base-settings"><legend><span class="side-index">B</span>비교 자료</legend><div class="selectors" data-side="base"></div></fieldset></div>
+   <div class="sheet-scroll" tabindex="0" aria-label="재무 비교표 가로 스크롤"><table class="financial-table"><thead><tr><th scope="col" class="row-index">#</th><th scope="col">항목</th><th scope="col" id="current-heading">기준 A</th><th scope="col" id="base-heading">비교 B</th><th scope="col">증감률</th><th scope="col">검토</th></tr></thead><tbody id="worksheet-rows"><tr><td colspan="6" class="empty">수치와 출처 로딩 중</td></tr></tbody></table></div>
+   <div class="sheet-legend"><span><i class="selection-dot"></i> 숫자 선택 → 문서의 해당 근거</span><span>증감률은 원화 단위 정규화 후 계산</span></div>
+   <section id="finding" class="finding" aria-live="polite"><h3>선택 항목</h3><p>표에서 검토할 항목 선택</p></section>
+   <div class="execution-line"><span id="execution-status" role="status">표 계산 준비</span><button id="trace-btn" class="link-button" disabled>실행 상세</button></div>
+  </section>
+  <aside class="evidence-panel" id="source-panel" aria-label="선택 수치의 근거"><div class="section-bar"><h2>문서 근거</h2><span id="source-counter">—</span></div><div id="evidence-content"><div class="empty">비교표의 수치를 선택하면 근거를 표시합니다.</div></div></aside>
+ </div>
+ <p class="work-footnote">표 계산은 수집된 공시 수치의 대조입니다. <b>근거 재검증</b>은 실제 MCP 도구를 실행합니다. 이 화면은 생성형 LLM·DART API를 실시간 호출하지 않습니다.</p>
+</section>
+<section id="search" class="view" hidden>
+ <div class="title-line"><div><div class="overline">EVIDENCE INDEX / 02</div><h1>근거 검색</h1></div><span class="page-context">192개 수치 · 기간과 범위 보존</span></div>
+ <form id="search-form"><label for="query">기업 · 연도 · 분기 · 범위 · 항목 · 기간 · 통화</label><div class="search-input"><input id="query" maxlength="500" value="삼성전자 2024 3분기 연결 매출액 3개월 KRW"><button class="primary">근거 검색</button></div><p>명시적 조건 검색 · 삼성전자 / 2023·2024 / Q2·Q3 / 연결·별도 / 6개 손익 항목. 미지원 조건은 결과 없음으로 표시합니다.</p></form>
+ <div id="search-results" aria-live="polite"><div class="empty">검색한 수치를 대조 작업지의 기준 자료로 선택할 수 있습니다.</div></div>
+ <section class="document-index"><h2>수집 문서</h2><div id="source-index"></div></section>
+</section>
+<section id="review" class="view" hidden>
+ <div class="title-line"><div><div class="overline">VALIDATION RECORD / 03</div><h1>평가·실행 기록</h1></div><span class="page-context">측정 산출물 기반</span></div>
+ <p class="scope-notice">1개 기업 · 문서 2건 · 템플릿 질의 36개 · 업무 사례 8개. 개발용 회귀 평가이며, 사람 검수·독립 보류셋·일반화 성능을 뜻하지 않습니다.</p>
+ <div id="evaluation-content"></div>
+ <section class="regression-section"><div class="section-bar"><h2>오류 유형별 재현</h2><span>준비 재생과 현재 실행 구분</span></div><div class="regression-controls"><label for="case-select">검증 사례 <select id="case-select"></select></label><button id="prepared-btn" class="secondary">저장 기록</button><button id="case-run-btn" class="primary">현재 재실행</button></div><div id="case-output" aria-live="polite">사례 선택 후 저장된 실행 기록 확인</div></section>
+ <div class="provider-note"><h2>외부 API 검증 범위</h2><p>별도 GitHub Actions에서 OpenAI 설명 생성 4회와 DART 금액 16개 대조를 검증했습니다. 공개 웹 작업지의 실시간 연동은 아닙니다.</p><a href="https://github.com/sokldjs554/quarterguard/blob/main/docs/live-verification.md" target="_blank" rel="noopener">응답 원본과 검증 한계 ↗</a></div>
+</section>
+</main>
+<footer><span>공개 문서 기반 검토 도구 <span class="footer-dot">·</span> 투자 추천·감사 의견 아님</span><span id="version">버전 확인 중</span></footer>
+<dialog id="trace-dialog"><div class="dialog-heading"><div><div class="overline">EXECUTION RECORD</div><h2>근거 재검증 기록</h2></div><button id="close-trace" class="icon-button" aria-label="실행 기록 닫기">×</button></div><div id="trace-content"></div><button id="download-btn" class="secondary">실행 JSON 내려받기 ↓</button></dialog>
+<script type="module" src="/assets/app.js"></script>
+</body></html>

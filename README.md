@@ -2,9 +2,9 @@
 
 **같은 통화, 다른 기간. 숫자가 맞아도 비교는 틀릴 수 있습니다.**
 
-분기·누적, 연결·별도, 단위·참고 환산액 혼동을 막는 **분기 실적 비교 검증대**입니다. 실제 공개 보고서의 수치를 검색하고, 출처와 문맥을 확인한 뒤 계산합니다. 잘못된 입력 조합은 확인 필요로 남깁니다.
+분기·누적, 연결·별도, 단위·참고 환산액 혼동을 막는 **공시 대조 작업지**입니다. 실제 공개 보고서의 수치를 검색하고, 출처와 문맥을 확인한 뒤 계산합니다. 잘못된 입력 조합은 확인 필요로 남깁니다.
 
-[공개 데모](https://quarterguard.onrender.com) · [평가 원본](artifacts/evaluation.json) · [조사와 주제 선정](docs/research.md) · [실패와 개선](docs/failures.md) · [요구사항 대응](docs/requirements.md)
+[공개 데모](https://quarterguard.onrender.com) · [평가 원본](artifacts/evaluation.json) · [조사와 주제 선정](docs/research.md) · [UI 조사와 반영](docs/ui-research.md) · [실패와 개선](docs/failures.md) · [요구사항 대응](docs/requirements.md)
 
 ## 문제 → 검증
 
@@ -23,23 +23,27 @@
 
 ## 실제 화면
 
-![실적 검증대 PC 화면](docs/images/desktop.png)
+![공시 대조 작업지 PC 화면](docs/images/desktop.png)
 
 <details><summary>모바일과 평가 화면</summary>
 
-<img src="docs/images/mobile.png" alt="모바일 검증대" width="320">
+<img src="docs/images/mobile.png" alt="모바일 공시 대조 작업지" width="320">
 
 ![평가 구성 비교](docs/images/evaluation.png)
 
 </details>
 
-**추천 체험:** 분기 매출 증감 → 누적·분기 혼동 → 누적 차감 교차검증 → p.34 근거 상세 → 도구 실행 기록 → 평가 실험.
+**추천 체험:** A/B 보고서와 조건 선택 → 매출액의 A/B 숫자 클릭 → 해당 문서·행·열 확인 → B 기간을 누적으로 변경 → 비교 차단 이유 확인 → 초기화 → 근거 재검증 → 실행 상세.
 
-- `준비 결과`: 미리 실행한 MCP 결과 재생. 현재 모델/API 실행 없음.
-- `MCP 실행`: 서버에서 실제 MCP stdio 세션과 도구를 다시 실행.
+- `표 계산`: 수집한 정본 수치에 문맥 검사와 Decimal 계산 적용. 현재 MCP 호출 없음.
+- `근거 재검증`: 실제 MCP stdio 세션에서 6개 항목의 근거 조회·비교 도구를 총 18회 호출. 실패하면 이전 결과를 지움.
+- `근거표`: 수집 수치로 재구성한 표. `원문 PDF`는 발행사 원문을 직접 열며 외부 차단 시 새 탭 링크와 근거표를 제공.
+- `평가·기록`: 6개 검색 구성, 8개 회귀 사례의 상태·원인·수치·인용 확인. 저장 결과 재생과 실제 MCP 실행을 구분.
 - 공개 데모는 생성형 LLM을 사용하지 않습니다. 계획은 규칙 기반이며, 임베딩 모델 두 종은 검색 비교 실험에서 실제 실행했습니다. LLM 자율 에이전트로 과장하지 않습니다.
 
 **외부 API 실호출 검증 완료(2026-10-29):** OpenAI 설명 생성 **4/4 구조 필드 검증 통과**, DART 조회 4회로 **16/16 재무 금액 일치**. [실행 근거·응답·한계](docs/live-verification.md). 공개 데모와 분리된 수동 Actions 검증이며, LLM 설명의 용어상 모호함 한 건도 원문과 함께 기록했습니다.
+
+삼성전자는 **수집·평가한 예시 기업 1곳**입니다. 트레져러와의 관계나 다중 기업 지원을 뜻하지 않습니다. 제품 흐름은 문서와 수치 대조에 맞추고, 화면에 데이터 범위를 명시했습니다.
 
 ## 평가 결과
 
@@ -60,7 +64,7 @@
 
 평가셋은 프로그램 작성 템플릿과 회귀 사례이며 **사람 검수 없음, 독립 보류셋 아님, 일반화 성능 아님**입니다. 영어 임베딩에는 정해진 한국어 금융 용어 치환을 적용했습니다. 신경망 재랭커와 LLM-as-judge는 사용하지 않았습니다.
 
-유료 모델 API 호출은 0회/$0이며 이는 서버·CPU·다운로드 비용을 포함하지 않습니다. 검색 시간은 인덱스 생성과 모델 로딩을 제외하고, MCP 전체 흐름은 subprocess 초기화를 포함합니다. 환경/모델 해시/개별 rank/latency는 평가 JSON에 있습니다. 최초 정답 오기와 수정 전 수치 정확도 2/3도 [원본 기록](artifacts/initial-label-audit.json)에 보존합니다.
+위 검색·MCP 평가의 유료 모델 API 호출은 0회/$0이며 (별도 OpenAI 실호출 검증 비용은 제외) 이는 서버·CPU·다운로드 비용을 포함하지 않습니다. 검색 시간은 인덱스 생성과 모델 로딩을 제외하고, MCP 전체 흐름은 subprocess 초기화를 포함합니다. 환경/모델 해시/개별 rank/latency는 평가 JSON에 있습니다. 최초 정답 오기와 수정 전 수치 정확도 2/3도 [원본 기록](artifacts/initial-label-audit.json)에 보존합니다.
 
 ## 실행
 
@@ -75,7 +79,7 @@ pip install -r requirements.txt
 python -m uvicorn quarterguard.api:app --host 0.0.0.0 --port 8000
 ```
 
-`http://localhost:8000`에서 검증대를 엽니다. `.env.example`은 선택적 DART 키 안내이며 기본 앱은 `.env`를 자동 로드하지 않습니다.
+`http://localhost:8000`에서 공시 대조 작업지를 엽니다. `.env.example`은 선택적 DART 키 안내이며 기본 앱은 `.env`를 자동 로드하지 않습니다.
 
 ```bash
 python -m unittest discover -s tests -v
@@ -92,7 +96,7 @@ python -m quarterguard.ingest --download
 
 전체 평가 명령은 artifacts를 갱신합니다. 신경망 모델의 최초 다운로드에는 인터넷과 저장 공간이 필요합니다. 코드/데이터 변경 후 과거 평가를 최신처럼 사용하지 마세요.
 
-브라우저 재현: `pip install playwright` 후 Chromium을 설치하고 `scripts/browser_check.py`의 실행 경로를 환경에 맞추세요. 서버 실행 후 `DEMO_URL=http://127.0.0.1:8000 python scripts/browser_check.py`. 실제 검사 viewport는 PC 1440×1100, 모바일 390×844입니다. [검사 결과](artifacts/browser-check.json)
+브라우저 재현: `pip install playwright` 후 Chromium을 설치하고 `scripts/browser_check.py`의 실행 경로를 환경에 맞추세요. 서버 실행 후 `DEMO_URL=http://127.0.0.1:8000 python scripts/browser_check.py`. 실제 검사 viewport는 PC 1440×1000, 모바일 390×844입니다. **단위·통합 54개, 브라우저 흐름 31개 통과.** [검사 결과](artifacts/browser-check.json)
 
 ## 구조와 기술 선택
 
@@ -133,6 +137,6 @@ MCP 서버: `python -m quarterguard.mcp_server`. 4개 도구: `search_documents`
 
 ## 개발 근거
 
-[설계·주제 비교](docs/design.md) · [조사한 제품과 SK Family README](docs/research.md) · [실패/수정 기록](docs/failures.md) · [직무 요구사항 대응](docs/requirements.md).
+[설계·주제 비교](docs/design.md) · [UI 제품 조사·구현](docs/ui-research.md) · [조사한 제품과 SK Family README](docs/research.md) · [실패/수정 기록](docs/failures.md) · [직무 요구사항 대응](docs/requirements.md).
 
 본 프로젝트는 AI 코딩 도구로 작성하고 별도 AI 리뷰 및 자동 검증을 수행했습니다. 사람 협업·전문가 검수·고객 운영 경험으로 주장하지 않습니다. 금융 투자 추천이나 감사 의견을 제공하지 않습니다.

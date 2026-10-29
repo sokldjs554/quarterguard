@@ -1,38 +1,226 @@
-import json,os
+"""Behavior checks for the document worksheet; no external API keys required."""
+import json
+import os
 from pathlib import Path
-from playwright.sync_api import sync_playwright
-ROOT=Path(__file__).resolve().parents[1]
-url=os.getenv('DEMO_URL','http://127.0.0.1:8000');checks=[]
-OUT=Path(os.getenv('QA_OUTPUT_DIR',str(ROOT)));(OUT/'docs/images').mkdir(parents=True,exist_ok=True);(OUT/'artifacts').mkdir(parents=True,exist_ok=True)
+from playwright.sync_api import sync_playwright, expect
+
+ROOT = Path(__file__).resolve().parents[1]
+URL = os.getenv('DEMO_URL', 'http://127.0.0.1:8005')
+OUT = Path(os.getenv('QA_OUTPUT_DIR', str(ROOT)))
+(OUT / 'docs/images').mkdir(parents=True, exist_ok=True)
+(OUT / 'artifacts').mkdir(parents=True, exist_ok=True)
+checks, errors = [], []
+
 with sync_playwright() as p:
- browser=p.chromium.launch(headless=True,executable_path='/usr/bin/chromium',args=['--no-sandbox'])
- page=browser.new_page(viewport={'width':1440,'height':1100},device_scale_factor=1)
- errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
- page.goto(url,wait_until='networkidle');page.get_by_text('+6.7916',exact=False).wait_for()
- page.screenshot(path=str(OUT/'docs/images/desktop.png'),full_page=True)
- checks.append('desktop_initial_prepared')
- page.get_by_role('button',name='MCP 실행').click();page.get_by_text('실제 MCP 실행',exact=False).wait_for(timeout=35000)
- checks.append('actual_mcp_run')
- page.locator('[data-evidence]').first.click();page.locator('dialog[open]').wait_for();assert '79,098,731' in page.locator('#evidence-content').inner_text();assert '#page=34' in page.locator('#evidence-content a').get_attribute('href')
- page.get_by_role('button',name='닫기',exact=True).click();checks.append('source_dialog_and_pdf_page')
- ids=['ytd-trap','scope-trap','currency-trap','negative-base','no-evidence','qoq-profit','reconcile-revenue','qoq-revenue']
- for cid in ids:
-  page.locator(f'[data-case="{cid}"]').click();page.locator('#loading').wait_for(state='hidden');assert page.locator('#result-area').inner_text().strip();checks.append('prepared_'+cid)
- page.locator('[data-case="reconcile-revenue"]').click();page.locator('#loading').wait_for(state='hidden');assert '79,098,731' in page.locator('.result-number').inner_text()
- page.get_by_role('button',name='MCP 실행').click();page.get_by_text('실제 MCP 실행',exact=False).wait_for(timeout=35000);checks.append('actual_reconcile')
- page.locator('[data-tab="search"]').click();page.locator('#search-form button').click();page.locator('.search-hit').first.wait_for();checks.append('search_evidence')
- page.locator('#query').fill('samsung 2025 Q3 CFS revenue quarter KRW');page.locator('#search-form button').click();page.get_by_text('검색 결과 없음',exact=False).wait_for();checks.append('search_empty')
- for query in ['samsung 2024 Q3 CFS revenue quarter CHF','SK hynix 2024 Q3 CFS revenue quarter KRW']:
-  page.locator('#query').fill(query);page.locator('#search-form button').click();page.get_by_text('검색 결과 없음',exact=False).wait_for();checks.append('unsupported_'+query.split()[0])
- page.route('**/api/search?*',lambda route:route.abort());page.locator('#search-form button').click();page.locator('#search-results [role="alert"]').wait_for();checks.append('search_network_error');page.unroute('**/api/search?*')
- page.locator('[data-tab="eval"]').click();assert page.locator('#eval-content tbody tr').count()==6;page.screenshot(path=str(OUT/'docs/images/evaluation.png'),full_page=True);checks.append('evaluation_six_configurations')
- page.locator('[data-tab="work"]').click();page.route('**/api/run/*',lambda route:route.fulfill(status=503,body='{}'));page.get_by_role('button',name='MCP 실행').click();page.locator('#alert').wait_for(state='visible');assert '연결 오류' in page.locator('#alert').inner_text();checks.append('run_api_unavailable');page.unroute('**/api/run/*')
- page.get_by_role('button',name='준비 결과',exact=True).click();page.locator('#loading').wait_for(state='hidden');assert '79,098,731' in page.locator('#result-area').inner_text();checks.append('recovery_after_error')
- mobile=browser.new_page(viewport={'width':390,'height':844},device_scale_factor=1,is_mobile=True,has_touch=True)
- mobile.goto(url,wait_until='networkidle');mobile.get_by_text('+6.7916',exact=False).wait_for();assert mobile.evaluate('document.documentElement.scrollWidth<=window.innerWidth');mobile.screenshot(path=str(OUT/'docs/images/mobile.png'),full_page=True);checks.append('mobile_layout_no_overflow')
- mobile.locator('[data-case="ytd-trap"]').click();mobile.locator('#loading').wait_for(state='hidden');assert '확인 필요' in mobile.locator('#result-area').inner_text();mobile.locator('[data-evidence]').first.click();mobile.locator('dialog[open]').wait_for();checks.append('mobile_case_and_source')
- fail=browser.new_page();fail.route('**/api/cases',lambda r:r.abort());fail.goto(url);fail.get_by_text('서비스 연결 불가').wait_for();assert fail.locator('#run-btn').is_disabled();checks.append('boot_network_failure')
- browser.close()
-result={'base_url':url,'checks':checks,'passed':len(checks),'page_errors':errors,'browser':'Chromium via Playwright','viewports':['1440x1100','390x844']}
+    browser = p.chromium.launch(headless=True, executable_path='/usr/bin/chromium', args=['--no-sandbox'])
+    page = browser.new_page(viewport={'width': 1440, 'height': 1000})
+    page.on('pageerror', lambda e: errors.append(str(e)))
+
+    def ready(pg=page):
+        expect(pg.locator('#desk')).to_have_attribute('aria-busy', 'false', timeout=65000)
+        expect(pg.locator('#worksheet-rows tr')).to_have_count(6)
+
+    def reset(pg=page):
+        pg.locator('#reset-btn').click()
+        ready(pg)
+
+    page.goto(URL, wait_until='networkidle')
+    ready()
+    expect(page.locator('#worksheet-rows .growth').first).to_have_text('+6.7916%')
+    expect(page.locator('#execution-status')).to_contain_text('현재 MCP 호출 없음')
+    assert not page.locator('.rail, .case-list, .hero-result').count()
+    assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
+    page.screenshot(path=str(OUT / 'docs/images/desktop.png'), full_page=True)
+    checks.append('document_worksheet_six_rows_no_case_gallery')
+
+    page.locator('[data-fact="s24q2-CFS-operating_profit-2024-q-KRW"]').click()
+    expect(page.locator('#source-counter')).to_have_text('B 비교 · 영업이익')
+    expect(page.locator('.selected-location')).to_contain_text('10,443,878')
+    assert '#page=48' in page.locator('#publisher-link').get_attribute('href')
+    expect(page.locator('.chosen-cell')).to_have_text('10,443,878')
+    checks.append('clicked_number_tracks_document_row_column')
+
+    page.locator('[data-source-index="0"]').click()
+    expect(page.locator('#source-counter')).to_have_text('A 기준 · 영업이익')
+    expect(page.locator('.number-button.active')).to_have_attribute('data-side', 'current')
+    page.locator('[data-source-index="1"]').focus()
+    page.keyboard.press('Enter')
+    expect(page.locator('[data-source-index="1"]')).to_be_focused()
+    expect(page.locator('.number-button.active')).to_have_attribute('data-side', 'base')
+    checks.append('source_switch_sync_and_keyboard_focus')
+
+    # Simulate an unavailable publisher PDF. The direct link and reconstructed
+    # table remain available; this is not a claim of PDF rendering success.
+    page.route('https://images.samsung.com/**', lambda r: r.abort())
+    page.locator('[data-source-mode="pdf"]').focus()
+    page.keyboard.press('Enter')
+    expect(page.locator('[data-source-mode="pdf"]')).to_be_focused()
+    expect(page.locator('.pdf-frame')).to_have_attribute('src', __import__('re').compile(r'#page=48$'))
+    expect(page.locator('.pdf-notice')).to_contain_text('표시가 제한되면')
+    page.locator('[data-source-mode="table"]').click()
+    expect(page.locator('.paper-caption')).to_contain_text('원문 이미지 아님')
+    page.unroute('https://images.samsung.com/**')
+    checks.append('publisher_pdf_failure_has_link_and_table_fallback')
+
+    reset()
+    for key, value, reason in [('period', 'ytd', '기간 불일치'), ('scope', 'OFS', '연결 범위 불일치'), ('currency', 'USD', '통화 불일치')]:
+        page.locator('#base-' + key).select_option(value)
+        ready()
+        expect(page.locator('#worksheet-rows .growth').first).to_have_text('—')
+        expect(page.locator('#finding')).to_contain_text(reason)
+        if key == 'period':
+            page.screenshot(path=str(OUT / 'docs/images/context-conflict.png'), full_page=True)
+        if key == 'currency':
+            page.locator('[data-source-index="1"]').click()
+            expect(page.locator('.source-warning')).to_contain_text('1349.5')
+        checks.append('block_mismatched_' + key)
+        reset()
+
+    page.locator('#base-document').select_option('s24q3'); ready()
+    page.locator('[data-source-index="1"]').click()
+    expect(page.locator('#source-counter')).to_have_text('B 비교 · 매출액')
+    expect(page.locator('.number-button.active')).to_have_attribute('data-side', 'base')
+    expect(page.locator('.source-switcher [aria-pressed="true"]')).to_have_count(1)
+    checks.append('identical_fact_ids_keep_distinct_sides')
+    page.locator('#base-year').select_option('2023'); ready()
+    page.locator('#mode').select_option('yoy'); ready()
+    expect(page.locator('#finding')).to_contain_text('비교 조건 일치')
+    checks.append('same_document_prior_year_yoy')
+    reset()
+
+    page.locator('#run-btn').click(); ready()
+    expect(page.locator('#execution-status')).to_contain_text('실제 MCP 재검증 완료')
+    page.locator('#trace-btn').click()
+    expect(page.locator('#trace-dialog .trace-row')).to_have_count(18)
+    expect(page.locator('.trace-summary')).to_contain_text('생성형 모델 0회')
+    with page.expect_download() as download:
+        page.locator('#download-btn').click()
+    assert download.value.suggested_filename.startswith('quarterguard-worksheet-')
+    page.keyboard.press('Escape')
+    checks.append('actual_mcp_18_calls_trace_and_download')
+    page.locator('#base-scope').select_option('OFS'); ready()
+    page.locator('#trace-btn').click()
+    expect(page.locator('.trace-summary')).to_contain_text('MCP 실행 아님')
+    expect(page.locator('#trace-dialog .trace-row')).to_have_count(0)
+    page.keyboard.press('Escape')
+    checks.append('changed_selection_clears_live_trace')
+    reset()
+
+    page.route('**/api/worksheet/run', lambda r: r.fulfill(status=503, body='{}'))
+    page.locator('#run-btn').click()
+    expect(page.locator('#work-alert')).to_contain_text('연결 오류', timeout=65000)
+    expect(page.locator('#worksheet-rows')).to_contain_text('결과 없음')
+    page.unroute('**/api/worksheet/run')
+    reset()
+    checks.append('run_failure_clears_old_result_and_recovers')
+
+    # Let an older preview finish after a newer one; only newer data may render.
+    held = []
+    def delayed(route):
+        if not held:
+            held.append(route)
+        else:
+            route.continue_()
+    page.route('**/api/worksheet', delayed)
+    page.locator('#current-scope').select_option('OFS')
+    page.wait_for_timeout(100)
+    page.evaluate("document.querySelector('#current-scope').value='CFS';document.querySelector('#current-scope').dispatchEvent(new Event('change'))")
+    ready()
+    old = page.request.post(URL + '/api/worksheet', data=json.loads(held[0].request.post_data)).json()
+    held[0].fulfill(json=old)
+    page.wait_for_timeout(150)
+    expect(page.locator('#worksheet-rows .growth').first).to_have_text('+6.7916%')
+    expect(page.locator('#source-counter')).to_have_text('A 기준 · 매출액')
+    page.unroute('**/api/worksheet')
+    checks.append('stale_preview_cannot_overwrite_new_selection')
+
+    page.locator('[data-view="search"]').click()
+    page.locator('#search-form button').click()
+    expect(page.locator('[data-use-fact]').first).to_be_visible()
+    page.locator('[data-use-fact]').first.click(); ready()
+    expect(page.locator('#work')).to_be_visible()
+    checks.append('search_fact_opens_matching_worksheet_selection')
+    page.locator('[data-view="search"]').click()
+    for query in ['samsung 2025 Q3 CFS revenue quarter KRW', 'samsung 2024 Q3 CFS revenue quarter CHF', 'SK hynix 2024 Q3 CFS revenue quarter KRW']:
+        page.locator('#query').fill(query); page.locator('#search-form button').click()
+        expect(page.locator('#search-results')).to_contain_text('검색 결과 없음')
+    checks.append('unsupported_searches_have_no_fabricated_evidence')
+    page.route('**/api/search?*', lambda r: r.abort())
+    page.locator('#search-form button').click()
+    expect(page.locator('#search-results [role="alert"]')).to_be_visible()
+    page.unroute('**/api/search?*')
+    checks.append('search_network_failure')
+
+    page.locator('[data-view="review"]').click()
+    expect(page.locator('#retrieval-table tbody tr')).to_have_count(6)
+    expect(page.locator('#case-check-table tbody tr')).to_have_count(8)
+    expect(page.locator('#case-check-table thead')).to_contain_text('거부 사유')
+    page.screenshot(path=str(OUT / 'docs/images/evaluation.png'), full_page=True)
+    checks.append('evaluation_configuration_and_case_level_checks')
+    for case in ['qoq-revenue', 'ytd-trap', 'scope-trap', 'currency-trap', 'reconcile-revenue', 'qoq-profit', 'negative-base', 'no-evidence']:
+        page.locator('#case-select').select_option(case)
+        page.locator('#prepared-btn').click()
+        expect(page.locator('.case-result-head')).to_contain_text('저장된 MCP 기록 재생')
+        checks.append('saved_regression_' + case)
+    page.locator('#case-select').select_option('reconcile-revenue')
+    page.locator('#case-run-btn').click()
+    expect(page.locator('.case-result-head')).to_contain_text('현재 MCP 실제 실행', timeout=65000)
+    expect(page.locator('.case-result-head')).to_contain_text('79,098,731')
+    checks.append('actual_mcp_reconciliation')
+
+    # A wrong rejection reason must not appear as an entirely successful row.
+    bad_eval = page.request.get(URL + '/api/evaluation').json()
+    bad_eval['workflow']['checks'][1]['issue_correct'] = False
+    bad_eval['workflow']['checks'][1]['case_correct'] = False
+    regression = browser.new_page()
+    regression.route('**/api/evaluation', lambda r: r.fulfill(json=bad_eval))
+    regression.goto(URL, wait_until='networkidle')
+    regression.locator('[data-view="review"]').click()
+    expect(regression.locator('#case-check-table tbody tr').nth(1).locator('.warn')).to_have_count(2)
+    checks.append('incorrect_rejection_reason_marks_overall_failure')
+    regression.close()
+
+    mobile = browser.new_page(viewport={'width':390,'height':844},is_mobile=True,has_touch=True)
+    mobile.on('pageerror', lambda e: errors.append(str(e)))
+    mobile.goto(URL, wait_until='networkidle'); ready(mobile)
+    assert mobile.evaluate('document.documentElement.scrollWidth<=innerWidth')
+    # Both comparison values fit in the same mobile row, without horizontal scrolling.
+    row = mobile.locator('#worksheet-rows tr').first
+    for button in row.locator('.number-button').all():
+        box = button.bounding_box(); assert box['x'] >= 0 and box['x'] + box['width'] <= 390
+    mobile.screenshot(path=str(OUT / 'docs/images/mobile.png'), full_page=True)
+    checks.append('mobile_both_values_visible_no_body_overflow')
+    mobile.locator('[data-fact="s24q2-CFS-revenue-2024-q-KRW"]').click()
+    expect(mobile.locator('#source-counter')).to_have_text('B 비교 · 매출액')
+    assert mobile.locator('#source-panel').bounding_box()['y'] < 120
+    mobile.locator('#base-period').select_option('ytd'); ready(mobile)
+    expect(mobile.locator('#finding')).to_contain_text('기간 불일치')
+    checks.append('mobile_source_navigation_and_context_guard')
+
+    fail = browser.new_page()
+    fail.route('**/api/facts', lambda r: r.abort())
+    fail.goto(URL)
+    expect(fail.locator('#boot-error')).to_be_visible()
+    expect(fail.locator('#run-btn')).to_be_disabled()
+    fail.unroute('**/api/facts')
+    fail.locator('#boot-retry').click(); ready(fail)
+    checks.append('boot_failure_retry')
+
+    ancillary = browser.new_page()
+    ancillary.route('**/api/evaluation', lambda r: r.fulfill(status=503,body='{}'))
+    ancillary.goto(URL,wait_until='networkidle'); ready(ancillary)
+    ancillary.locator('[data-view="review"]').click()
+    expect(ancillary.locator('#review-retry')).to_be_visible()
+    ancillary.unroute('**/api/evaluation')
+    ancillary.locator('#review-retry').click()
+    expect(ancillary.locator('#case-check-table tbody tr')).to_have_count(8)
+    expect(ancillary.locator('#prepared-btn')).to_be_enabled()
+    checks.append('evaluation_failure_does_not_block_work_and_can_retry')
+    browser.close()
+
+result={'base_url':URL,'checks':checks,'passed':len(checks),'page_errors':errors,
+        'browser':'Chromium via Playwright','viewports':['1440x1000','390x844'],
+        'publisher_pdf_rendering':'External failure simulated; direct URL/page and table fallback checked. Actual PDF rendering not asserted.'}
 (OUT/'artifacts/browser-check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
-print(json.dumps(result,ensure_ascii=False,indent=2));assert not errors
+print(json.dumps(result,ensure_ascii=False,indent=2))
+assert not errors
