@@ -7,7 +7,7 @@ from .store import ROOT,load_facts
 from .search import SearchIndex
 from .orchestrator import cases,run_case
 app=FastAPI(title='QuarterGuard',version='1.0.0')
-slots=asyncio.Semaphore(2)
+slots=asyncio.Semaphore(1)  # Bound subprocess CPU/RSS on the free 0.1 CPU / 512 MB instance.
 @lru_cache(maxsize=1)
 def index():return SearchIndex(load_facts())
 def artifact(name):

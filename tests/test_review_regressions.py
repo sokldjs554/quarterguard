@@ -13,7 +13,7 @@ class ReviewRegression(unittest.TestCase):
   a=self.f['s24q3-CFS-revenue-2024-q-USD'];b=self.f['s24q2-CFS-revenue-2024-q-USD']
   self.assertIn('CONVENIENCE_TRANSLATION',compare(a,b)['issues'])
  def test_unknown_or_conflicting_search(self):
-  for q in ['SK hynix 2024 Q3 CFS revenue quarter KRW','samsung 2024 Q3 CFS revenue quarter ytd KRW','samsung 2024 Q1 CFS revenue quarter KRW','samsung 2024 Q4 CFS revenue quarter KRW','samsung 2024 Q3 CFS revenue quarter EUR','samsung 2024 Q3 CFS OFS revenue quarter KRW','samsung 2023 2024 Q3 CFS revenue quarter KRW']:
+  for q in ['samsung Apple 2024 Q3 CFS revenue quarter KRW','samsung 2024 Q3 CFS revenue quarter CHF','삼성전자 2024년 1분기 연결 매출액 3개월 KRW','SK hynix 2024 Q3 CFS revenue quarter KRW','samsung 2024 Q3 CFS revenue quarter ytd KRW','samsung 2024 Q1 CFS revenue quarter KRW','samsung 2024 Q4 CFS revenue quarter KRW','samsung 2024 Q3 CFS revenue quarter EUR','samsung 2024 Q3 CFS OFS revenue quarter KRW','samsung 2023 2024 Q3 CFS revenue quarter KRW']:
    with self.subTest(query=q):self.assertEqual(self.index.search(q),[])
  def test_korean_year_suffix(self):
   hits=self.index.search('삼성전자 2023년 3분기 연결 매출액 3개월 KRW')
