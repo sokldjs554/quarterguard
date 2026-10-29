@@ -1,0 +1,33 @@
+{
+  "base_url": "http://127.0.0.1:8001",
+  "checks": [
+    "desktop_initial_prepared",
+    "actual_mcp_run",
+    "source_dialog_and_pdf_page",
+    "prepared_ytd-trap",
+    "prepared_scope-trap",
+    "prepared_currency-trap",
+    "prepared_negative-base",
+    "prepared_no-evidence",
+    "prepared_qoq-profit",
+    "prepared_reconcile-revenue",
+    "prepared_qoq-revenue",
+    "actual_reconcile",
+    "search_evidence",
+    "search_empty",
+    "search_network_error",
+    "evaluation_six_configurations",
+    "run_api_unavailable",
+    "recovery_after_error",
+    "mobile_layout_no_overflow",
+    "mobile_case_and_source",
+    "boot_network_failure"
+  ],
+  "passed": 21,
+  "page_errors": [],
+  "browser": "Chromium via Playwright",
+  "viewports": [
+    "1440x1100",
+    "390x844"
+  ]
+}

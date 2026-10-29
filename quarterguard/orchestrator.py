@@ -13,7 +13,8 @@ async def run_case(case_id):
     start=time.perf_counter(); trace=[];run_id=str(uuid.uuid4()); result=None
     async def execute():
         nonlocal result
-        with (ROOT/'work').mkdir(exist_ok=True) or open(ROOT/'work/mcp-stderr.log','a') as log:
+        (ROOT/'work').mkdir(exist_ok=True)
+        with open(ROOT/'work/mcp-stderr.log','a') as log:
             async with stdio_client(StdioServerParameters(command=sys.executable,args=['-m','quarterguard.mcp_server'],cwd=str(ROOT)),errlog=log) as (r,w):
                 async with ClientSession(r,w) as session:
                     init=await session.initialize()
@@ -42,6 +43,6 @@ async def run_case(case_id):
     except TimeoutError:result={'status':'needs_review','issues':['TOOL_TIMEOUT'],'evidence':[]}
     except Exception:result={'status':'needs_review','issues':['TOOL_ERROR'],'evidence':[]}
     return {'run_id':run_id,'case_id':case_id,'title':case['title'],'execution_mode':'live_mcp',
-      'planner':'deterministic_workflow','protocol':protocol,'created_at':datetime.now(timezone.utc).isoformat(),
+      'planner':'deterministic_workflow','workflow_success':protocol is not None and not any(x in result['issues'] for x in ('TOOL_ERROR','TOOL_TIMEOUT')),'protocol':protocol,'created_at':datetime.now(timezone.utc).isoformat(),
       'latency_ms':round((time.perf_counter()-start)*1000,3),'model_calls':0,'provider_api_cost_usd':0,
       'cost_scope':'No paid model API calls; hosting and local compute excluded','result':result,'trace':trace}

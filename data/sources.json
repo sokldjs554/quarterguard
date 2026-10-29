@@ -8,7 +8,16 @@
     "accessed": "2026-10-29",
     "distribution": "No original PDF redistribution; extracted numeric facts and locators only",
     "sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
-    "pages": 179
+    "pages": 179,
+    "statement_pages": {
+      "CFS": 34,
+      "OFS": 89
+    },
+    "usd_translation_rate": "1352.4",
+    "usd_note_pages": {
+      "CFS": 52,
+      "OFS": 98
+    }
   },
   {
     "id": "s24q2",
@@ -19,6 +28,15 @@
     "accessed": "2026-10-29",
     "distribution": "No original PDF redistribution; extracted numeric facts and locators only",
     "sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
-    "pages": 287
+    "pages": 287,
+    "statement_pages": {
+      "CFS": 48,
+      "OFS": 104
+    },
+    "usd_translation_rate": "1349.5",
+    "usd_note_pages": {
+      "CFS": 66,
+      "OFS": 113
+    }
   }
 ]

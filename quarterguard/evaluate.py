@@ -41,11 +41,16 @@ async def evaluate_cases():
   checks.append({'case_id':c['id'],'status_correct':r['status']==c['expected_status'],
    'value_correct':r.get('growth_pct',r.get('derived_value'))==c['expected_value'] if 'expected_value' in c else None,
    'issue_correct':c['expected_issue'] in r.get('issues',[]) if 'expected_issue' in c else None,
-   'source_valid':all(f['source_url'].startswith('https://') and f['page']>0 and f['document_sha256'] for f in r.get('evidence',[])) if r.get('evidence') else None})
+   'source_valid':r.get('evidence',[])==c['expected_evidence'],
+   'workflow_success':run.get('workflow_success',False)})
  (ROOT/'artifacts/prepared.json').write_text(json.dumps({r['case_id']:r|{'execution_mode':'prepared_replay'} for r in runs},ensure_ascii=False,indent=2)+'\n')
- return {'checks':checks,'status_accuracy':sum(c['status_correct'] for c in checks)/len(checks),
+ for check in checks:check['case_correct']=check['workflow_success'] and check['status_correct'] and check['value_correct'] is not False and check['issue_correct'] is not False and check['source_valid']
+ total_tools=sum(len(r['trace']) for r in runs)
+ return {'checks':checks,'case_accuracy':sum(c['case_correct'] for c in checks)/len(checks),'workflow_success_rate':sum(c['workflow_success'] for c in checks)/len(checks),
+  'citation_exact_match':sum(c['source_valid'] for c in checks)/len(checks),'issue_accuracy':sum(c['issue_correct'] for c in checks if c['issue_correct'] is not None)/sum(c['issue_correct'] is not None for c in checks),
+  'status_accuracy':sum(c['status_correct'] for c in checks)/len(checks),
   'numeric_accuracy':sum(c['value_correct'] for c in checks if c['value_correct'] is not None)/sum(c['value_correct'] is not None for c in checks),
-  'tool_success_rate':sum(t['success'] for r in runs for t in r['trace'])/sum(len(r['trace']) for r in runs),
+  'tool_success_rate':sum(t['success'] for r in runs for t in r['trace'])/total_tools if total_tools else None,
   'latency_p50_ms':float(np.median([r['latency_ms'] for r in runs])), 'latency_p95_ms':float(np.percentile([r['latency_ms'] for r in runs],95)),
   'model_calls':0,'provider_api_cost_usd':0,'cost_scope':'Paid model API only, excludes hosting/CPU/download costs'}
 

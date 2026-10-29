@@ -15,6 +15,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -33,6 +36,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -51,6 +57,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 3
   },
   {
@@ -69,6 +78,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 3
   },
   {
@@ -87,6 +99,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -105,6 +120,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -123,6 +141,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 9
   },
   {
@@ -141,6 +162,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 9
   },
   {
@@ -159,6 +183,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -177,6 +204,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -195,6 +225,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 3
   },
   {
@@ -213,6 +246,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 3
   },
   {
@@ -231,6 +267,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -249,6 +288,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -267,6 +309,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 9
   },
   {
@@ -285,6 +330,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 9
   },
   {
@@ -303,6 +351,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -321,6 +372,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -339,6 +393,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 3
   },
   {
@@ -357,6 +414,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 3
   },
   {
@@ -375,6 +435,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -393,6 +456,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -411,6 +477,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 9
   },
   {
@@ -429,6 +498,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 9
   },
   {
@@ -447,6 +519,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -465,6 +540,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -483,6 +561,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 3
   },
   {
@@ -501,6 +582,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 3
   },
   {
@@ -519,6 +603,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -537,6 +624,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -555,6 +645,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 9
   },
   {
@@ -573,6 +666,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 9
   },
   {
@@ -591,6 +687,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -609,6 +708,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -627,6 +729,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 3
   },
   {
@@ -645,6 +750,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 3
   },
   {
@@ -663,6 +771,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -681,6 +792,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -699,6 +813,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 9
   },
   {
@@ -717,6 +834,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 9
   },
   {
@@ -735,6 +855,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -753,6 +876,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -771,6 +897,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 3
   },
   {
@@ -789,6 +918,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 3
   },
   {
@@ -807,6 +939,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -825,6 +960,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -843,6 +981,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 9
   },
   {
@@ -861,6 +1002,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 52,
     "months": 9
   },
   {
@@ -879,6 +1023,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -897,6 +1044,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -915,6 +1065,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 3
   },
   {
@@ -933,6 +1086,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 3
   },
   {
@@ -951,6 +1107,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -969,6 +1128,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -987,6 +1149,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 9
   },
   {
@@ -1005,6 +1170,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 9
   },
   {
@@ -1023,6 +1191,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -1041,6 +1212,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -1059,6 +1233,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 3
   },
   {
@@ -1077,6 +1254,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 3
   },
   {
@@ -1095,6 +1275,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -1113,6 +1296,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -1131,6 +1317,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 9
   },
   {
@@ -1149,6 +1338,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 9
   },
   {
@@ -1167,6 +1359,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -1185,6 +1380,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -1203,6 +1401,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 3
   },
   {
@@ -1221,6 +1422,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 3
   },
   {
@@ -1239,6 +1443,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -1257,6 +1464,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -1275,6 +1485,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 9
   },
   {
@@ -1293,6 +1506,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 9
   },
   {
@@ -1311,6 +1527,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -1329,6 +1548,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -1347,6 +1569,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 3
   },
   {
@@ -1365,6 +1590,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 3
   },
   {
@@ -1383,6 +1611,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -1401,6 +1632,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -1419,6 +1653,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 9
   },
   {
@@ -1437,6 +1674,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 9
   },
   {
@@ -1455,6 +1695,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -1473,6 +1716,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -1491,6 +1737,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 3
   },
   {
@@ -1509,6 +1758,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 3
   },
   {
@@ -1527,6 +1779,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -1545,6 +1800,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -1563,6 +1821,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 9
   },
   {
@@ -1581,6 +1842,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 9
   },
   {
@@ -1599,6 +1863,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -1617,6 +1884,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -1635,6 +1905,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 3
   },
   {
@@ -1653,6 +1926,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 3
   },
   {
@@ -1671,6 +1947,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -1689,6 +1968,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 9
   },
   {
@@ -1707,6 +1989,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 9
   },
   {
@@ -1725,6 +2010,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q3",
     "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1352.4",
+    "translation_note_page": 98,
     "months": 9
   },
   {
@@ -1743,6 +2031,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -1761,6 +2052,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -1779,6 +2073,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 3
   },
   {
@@ -1797,6 +2094,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 3
   },
   {
@@ -1815,6 +2115,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -1833,6 +2136,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -1851,6 +2157,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 6
   },
   {
@@ -1869,6 +2178,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 6
   },
   {
@@ -1887,6 +2199,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -1905,6 +2220,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -1923,6 +2241,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 3
   },
   {
@@ -1941,6 +2262,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 3
   },
   {
@@ -1959,6 +2283,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -1977,6 +2304,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -1995,6 +2325,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 6
   },
   {
@@ -2013,6 +2346,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 6
   },
   {
@@ -2031,6 +2367,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -2049,6 +2388,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -2067,6 +2409,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 3
   },
   {
@@ -2085,6 +2430,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 3
   },
   {
@@ -2103,6 +2451,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -2121,6 +2472,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -2139,6 +2493,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 6
   },
   {
@@ -2157,6 +2514,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 6
   },
   {
@@ -2175,6 +2535,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -2193,6 +2556,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -2211,6 +2577,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 3
   },
   {
@@ -2229,6 +2598,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 3
   },
   {
@@ -2247,6 +2619,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -2265,6 +2640,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -2283,6 +2661,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 6
   },
   {
@@ -2301,6 +2682,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 6
   },
   {
@@ -2319,6 +2703,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -2337,6 +2724,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -2355,6 +2745,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 3
   },
   {
@@ -2373,6 +2766,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 3
   },
   {
@@ -2391,6 +2787,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -2409,6 +2808,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -2427,6 +2829,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 6
   },
   {
@@ -2445,6 +2850,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 6
   },
   {
@@ -2463,6 +2871,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -2481,6 +2892,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -2499,6 +2913,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 3
   },
   {
@@ -2517,6 +2934,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 3
   },
   {
@@ -2535,6 +2955,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -2553,6 +2976,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -2571,6 +2997,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 6
   },
   {
@@ -2589,6 +3018,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 66,
     "months": 6
   },
   {
@@ -2607,6 +3039,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -2625,6 +3060,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -2643,6 +3081,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 3
   },
   {
@@ -2661,6 +3102,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 3
   },
   {
@@ -2679,6 +3123,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -2697,6 +3144,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -2715,6 +3165,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 6
   },
   {
@@ -2733,6 +3186,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 6
   },
   {
@@ -2751,6 +3207,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -2769,6 +3228,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -2787,6 +3249,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 3
   },
   {
@@ -2805,6 +3270,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 3
   },
   {
@@ -2823,6 +3291,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -2841,6 +3312,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -2859,6 +3333,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 6
   },
   {
@@ -2877,6 +3354,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 6
   },
   {
@@ -2895,6 +3375,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -2913,6 +3396,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -2931,6 +3417,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 3
   },
   {
@@ -2949,6 +3438,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 3
   },
   {
@@ -2967,6 +3459,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -2985,6 +3480,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -3003,6 +3501,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 6
   },
   {
@@ -3021,6 +3522,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 6
   },
   {
@@ -3039,6 +3543,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -3057,6 +3564,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -3075,6 +3585,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 3
   },
   {
@@ -3093,6 +3606,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 3
   },
   {
@@ -3111,6 +3627,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -3129,6 +3648,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -3147,6 +3669,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 6
   },
   {
@@ -3165,6 +3690,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 6
   },
   {
@@ -3183,6 +3711,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -3201,6 +3732,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -3219,6 +3753,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 3
   },
   {
@@ -3237,6 +3774,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 3
   },
   {
@@ -3255,6 +3795,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -3273,6 +3816,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -3291,6 +3837,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 6
   },
   {
@@ -3309,6 +3858,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 6
   },
   {
@@ -3327,6 +3879,9 @@
     "column": "2024 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -3345,6 +3900,9 @@
     "column": "2023 Q KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 3
   },
   {
@@ -3363,6 +3921,9 @@
     "column": "2024 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 3
   },
   {
@@ -3381,6 +3942,9 @@
     "column": "2023 Q USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 3
   },
   {
@@ -3399,6 +3963,9 @@
     "column": "2024 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -3417,6 +3984,9 @@
     "column": "2023 YTD KRW",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "reported_currency",
+    "translation_rate": null,
+    "translation_note_page": null,
     "months": 6
   },
   {
@@ -3435,6 +4005,9 @@
     "column": "2024 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 6
   },
   {
@@ -3453,6 +4026,9 @@
     "column": "2023 YTD USD",
     "document_id": "s24q2",
     "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "translation_basis": "convenience_translation",
+    "translation_rate": "1349.5",
+    "translation_note_page": 113,
     "months": 6
   }
 ]

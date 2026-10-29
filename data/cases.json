@@ -10,7 +10,51 @@
       "samsung 2024 Q2 CFS revenue quarter KRW"
     ],
     "expected_status": "verified",
-    "expected_value": "6.7916"
+    "expected_value": "6.7916",
+    "expected_evidence": [
+      {
+        "id": "s24q3-CFS-revenue-2024-q-KRW",
+        "company": "samsung",
+        "metric": "revenue",
+        "scope": "CFS",
+        "currency": "KRW",
+        "scale": 1000000,
+        "start": "2024-07-01",
+        "end": "2024-09-30",
+        "value": "79098731",
+        "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+        "page": 34,
+        "row": "Revenue",
+        "column": "2024 Q KRW",
+        "document_id": "s24q3",
+        "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+        "months": 3,
+        "translation_basis": "reported_currency",
+        "translation_rate": null,
+        "translation_note_page": null
+      },
+      {
+        "id": "s24q2-CFS-revenue-2024-q-KRW",
+        "company": "samsung",
+        "metric": "revenue",
+        "scope": "CFS",
+        "currency": "KRW",
+        "scale": 1000000,
+        "start": "2024-04-01",
+        "end": "2024-06-30",
+        "value": "74068302",
+        "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+        "page": 48,
+        "row": "Revenue",
+        "column": "2024 Q KRW",
+        "document_id": "s24q2",
+        "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+        "months": 3,
+        "translation_basis": "reported_currency",
+        "translation_rate": null,
+        "translation_note_page": null
+      }
+    ]
   },
   {
     "id": "ytd-trap",
@@ -23,7 +67,51 @@
       "samsung 2023 Q3 CFS revenue quarter KRW"
     ],
     "expected_status": "needs_review",
-    "expected_issue": "PERIOD_MISMATCH"
+    "expected_issue": "PERIOD_MISMATCH",
+    "expected_evidence": [
+      {
+        "id": "s24q3-CFS-revenue-2024-ytd-KRW",
+        "company": "samsung",
+        "metric": "revenue",
+        "scope": "CFS",
+        "currency": "KRW",
+        "scale": 1000000,
+        "start": "2024-01-01",
+        "end": "2024-09-30",
+        "value": "225082634",
+        "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+        "page": 34,
+        "row": "Revenue",
+        "column": "2024 YTD KRW",
+        "document_id": "s24q3",
+        "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+        "months": 9,
+        "translation_basis": "reported_currency",
+        "translation_rate": null,
+        "translation_note_page": null
+      },
+      {
+        "id": "s24q3-CFS-revenue-2023-q-KRW",
+        "company": "samsung",
+        "metric": "revenue",
+        "scope": "CFS",
+        "currency": "KRW",
+        "scale": 1000000,
+        "start": "2023-07-01",
+        "end": "2023-09-30",
+        "value": "67404652",
+        "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+        "page": 34,
+        "row": "Revenue",
+        "column": "2023 Q KRW",
+        "document_id": "s24q3",
+        "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+        "months": 3,
+        "translation_basis": "reported_currency",
+        "translation_rate": null,
+        "translation_note_page": null
+      }
+    ]
   },
   {
     "id": "scope-trap",
@@ -36,7 +124,51 @@
       "samsung 2024 Q2 OFS revenue quarter KRW"
     ],
     "expected_status": "needs_review",
-    "expected_issue": "SCOPE_MISMATCH"
+    "expected_issue": "SCOPE_MISMATCH",
+    "expected_evidence": [
+      {
+        "id": "s24q3-CFS-revenue-2024-q-KRW",
+        "company": "samsung",
+        "metric": "revenue",
+        "scope": "CFS",
+        "currency": "KRW",
+        "scale": 1000000,
+        "start": "2024-07-01",
+        "end": "2024-09-30",
+        "value": "79098731",
+        "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+        "page": 34,
+        "row": "Revenue",
+        "column": "2024 Q KRW",
+        "document_id": "s24q3",
+        "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+        "months": 3,
+        "translation_basis": "reported_currency",
+        "translation_rate": null,
+        "translation_note_page": null
+      },
+      {
+        "id": "s24q2-OFS-revenue-2024-q-KRW",
+        "company": "samsung",
+        "metric": "revenue",
+        "scope": "OFS",
+        "currency": "KRW",
+        "scale": 1000000,
+        "start": "2024-04-01",
+        "end": "2024-06-30",
+        "value": "53734118",
+        "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+        "page": 104,
+        "row": "Revenue",
+        "column": "2024 Q KRW",
+        "document_id": "s24q2",
+        "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+        "months": 3,
+        "translation_basis": "reported_currency",
+        "translation_rate": null,
+        "translation_note_page": null
+      }
+    ]
   },
   {
     "id": "currency-trap",
@@ -49,7 +181,51 @@
       "samsung 2024 Q2 CFS revenue quarter USD"
     ],
     "expected_status": "needs_review",
-    "expected_issue": "CURRENCY_MISMATCH"
+    "expected_issue": "CURRENCY_MISMATCH",
+    "expected_evidence": [
+      {
+        "id": "s24q3-CFS-revenue-2024-q-KRW",
+        "company": "samsung",
+        "metric": "revenue",
+        "scope": "CFS",
+        "currency": "KRW",
+        "scale": 1000000,
+        "start": "2024-07-01",
+        "end": "2024-09-30",
+        "value": "79098731",
+        "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+        "page": 34,
+        "row": "Revenue",
+        "column": "2024 Q KRW",
+        "document_id": "s24q3",
+        "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+        "months": 3,
+        "translation_basis": "reported_currency",
+        "translation_rate": null,
+        "translation_note_page": null
+      },
+      {
+        "id": "s24q2-CFS-revenue-2024-q-USD",
+        "company": "samsung",
+        "metric": "revenue",
+        "scope": "CFS",
+        "currency": "USD",
+        "scale": 1000,
+        "start": "2024-04-01",
+        "end": "2024-06-30",
+        "value": "54885849",
+        "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+        "page": 48,
+        "row": "Revenue",
+        "column": "2024 Q USD",
+        "document_id": "s24q2",
+        "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+        "months": 3,
+        "translation_basis": "convenience_translation",
+        "translation_rate": "1349.5",
+        "translation_note_page": 66
+      }
+    ]
   },
   {
     "id": "reconcile-revenue",
@@ -62,7 +238,72 @@
       "samsung 2024 Q3 CFS revenue quarter KRW"
     ],
     "expected_status": "verified",
-    "expected_value": "79098731"
+    "expected_value": "79098731",
+    "expected_evidence": [
+      {
+        "id": "s24q3-CFS-revenue-2024-ytd-KRW",
+        "company": "samsung",
+        "metric": "revenue",
+        "scope": "CFS",
+        "currency": "KRW",
+        "scale": 1000000,
+        "start": "2024-01-01",
+        "end": "2024-09-30",
+        "value": "225082634",
+        "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+        "page": 34,
+        "row": "Revenue",
+        "column": "2024 YTD KRW",
+        "document_id": "s24q3",
+        "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+        "months": 9,
+        "translation_basis": "reported_currency",
+        "translation_rate": null,
+        "translation_note_page": null
+      },
+      {
+        "id": "s24q2-CFS-revenue-2024-ytd-KRW",
+        "company": "samsung",
+        "metric": "revenue",
+        "scope": "CFS",
+        "currency": "KRW",
+        "scale": 1000000,
+        "start": "2024-01-01",
+        "end": "2024-06-30",
+        "value": "145983903",
+        "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+        "page": 48,
+        "row": "Revenue",
+        "column": "2024 YTD KRW",
+        "document_id": "s24q2",
+        "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+        "months": 6,
+        "translation_basis": "reported_currency",
+        "translation_rate": null,
+        "translation_note_page": null
+      },
+      {
+        "id": "s24q3-CFS-revenue-2024-q-KRW",
+        "company": "samsung",
+        "metric": "revenue",
+        "scope": "CFS",
+        "currency": "KRW",
+        "scale": 1000000,
+        "start": "2024-07-01",
+        "end": "2024-09-30",
+        "value": "79098731",
+        "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+        "page": 34,
+        "row": "Revenue",
+        "column": "2024 Q KRW",
+        "document_id": "s24q3",
+        "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+        "months": 3,
+        "translation_basis": "reported_currency",
+        "translation_rate": null,
+        "translation_note_page": null
+      }
+    ]
   },
   {
     "id": "qoq-profit",
@@ -75,7 +316,51 @@
       "samsung 2024 Q2 CFS operating_profit quarter KRW"
     ],
     "expected_status": "verified",
-    "expected_value": "-12.0693"
+    "expected_value": "-12.0693",
+    "expected_evidence": [
+      {
+        "id": "s24q3-CFS-operating_profit-2024-q-KRW",
+        "company": "samsung",
+        "metric": "operating_profit",
+        "scope": "CFS",
+        "currency": "KRW",
+        "scale": 1000000,
+        "start": "2024-07-01",
+        "end": "2024-09-30",
+        "value": "9183371",
+        "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+        "page": 34,
+        "row": "Operating profit",
+        "column": "2024 Q KRW",
+        "document_id": "s24q3",
+        "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+        "months": 3,
+        "translation_basis": "reported_currency",
+        "translation_rate": null,
+        "translation_note_page": null
+      },
+      {
+        "id": "s24q2-CFS-operating_profit-2024-q-KRW",
+        "company": "samsung",
+        "metric": "operating_profit",
+        "scope": "CFS",
+        "currency": "KRW",
+        "scale": 1000000,
+        "start": "2024-04-01",
+        "end": "2024-06-30",
+        "value": "10443878",
+        "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+        "page": 48,
+        "row": "Operating profit",
+        "column": "2024 Q KRW",
+        "document_id": "s24q2",
+        "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+        "months": 3,
+        "translation_basis": "reported_currency",
+        "translation_rate": null,
+        "translation_note_page": null
+      }
+    ]
   },
   {
     "id": "negative-base",
@@ -88,7 +373,51 @@
       "samsung 2023 Q3 OFS operating_profit quarter KRW"
     ],
     "expected_status": "needs_review",
-    "expected_issue": "NEGATIVE_BASE"
+    "expected_issue": "NEGATIVE_BASE",
+    "expected_evidence": [
+      {
+        "id": "s24q3-OFS-operating_profit-2024-q-KRW",
+        "company": "samsung",
+        "metric": "operating_profit",
+        "scope": "OFS",
+        "currency": "KRW",
+        "scale": 1000000,
+        "start": "2024-07-01",
+        "end": "2024-09-30",
+        "value": "4504920",
+        "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+        "page": 89,
+        "row": "Operating profit",
+        "column": "2024 Q KRW",
+        "document_id": "s24q3",
+        "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+        "months": 3,
+        "translation_basis": "reported_currency",
+        "translation_rate": null,
+        "translation_note_page": null
+      },
+      {
+        "id": "s24q3-OFS-operating_profit-2023-q-KRW",
+        "company": "samsung",
+        "metric": "operating_profit",
+        "scope": "OFS",
+        "currency": "KRW",
+        "scale": 1000000,
+        "start": "2023-07-01",
+        "end": "2023-09-30",
+        "value": "-2167988",
+        "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+        "page": 89,
+        "row": "Operating profit",
+        "column": "2023 Q KRW",
+        "document_id": "s24q3",
+        "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+        "months": 3,
+        "translation_basis": "reported_currency",
+        "translation_rate": null,
+        "translation_note_page": null
+      }
+    ]
   },
   {
     "id": "no-evidence",
@@ -101,6 +430,7 @@
       "samsung 2024 Q3 CFS revenue quarter KRW"
     ],
     "expected_status": "needs_review",
-    "expected_issue": "SEARCH_EMPTY"
+    "expected_issue": "SEARCH_EMPTY",
+    "expected_evidence": []
   }
 ]

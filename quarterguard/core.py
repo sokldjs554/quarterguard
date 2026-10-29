@@ -2,7 +2,9 @@
 from dataclasses import dataclass, asdict
 from datetime import date, timedelta
 from decimal import Decimal, InvalidOperation
-import calendar
+import calendar, json, re
+from pathlib import Path
+from functools import lru_cache
 
 @dataclass(frozen=True)
 class Fact:
@@ -21,6 +23,9 @@ class Fact:
     column: str
     document_id: str
     document_sha256: str
+    translation_basis: str = "reported_currency"
+    translation_rate: str | None = None
+    translation_note_page: int | None = None
 
     def __post_init__(self):
         try:
@@ -43,12 +48,28 @@ def select_unique(facts,**filters):
     if len(matches)!=1: raise ValueError('AMBIGUOUS_FACT')
     return matches[0]
 
+@lru_cache(maxsize=1)
+def source_manifest():
+    return {s['id']:s for s in json.loads((Path(__file__).resolve().parents[1]/'data/sources.json').read_text())}
+
+def valid_source(f):
+    d=source_manifest().get(f.document_id)
+    if not d:return False
+    column=f'{f.start[:4]} {"Q" if f.months==3 else "YTD"} {f.currency}'
+    return (f.source_url==d['url'] and re.fullmatch(r'[0-9a-f]{64}',f.document_sha256) is not None and
+      f.document_sha256==d['sha256'] and f.page==d.get('statement_pages',{}).get(f.scope) and
+      f.row=={'revenue':'Revenue','cost_of_sales':'Cost of sales','gross_profit':'Gross profit',
+        'operating_expenses':'Selling and administrative expenses','operating_profit':'Operating profit','net_profit':'Profit for the period'}.get(f.metric) and
+      f.column==column and 1<=f.page<=d['pages'])
+
 def context_issues(facts):
     issues=[]
     for key in ('company','scope','metric','currency'):
         if len({getattr(f,key) for f in facts})>1: issues.append(key.upper()+'_MISMATCH')
     if any(f.scale not in (1,1000,1000000,100000000,1000000000,1000000000000) for f in facts): issues.append('UNKNOWN_UNIT')
     if any(not f.source_url.startswith('https://') or f.page<1 or not f.row or not f.column or len(f.document_sha256)!=64 for f in facts): issues.append('MISSING_SOURCE')
+    if any(not valid_source(f) for f in facts):issues.append('SOURCE_MISMATCH')
+    if any(f.currency=='USD' or f.translation_basis=='convenience_translation' for f in facts):issues.append('CONVENIENCE_TRANSLATION')
     return issues
 
 def compare(current:Fact,base:Fact,mode='qoq'):
@@ -63,7 +84,7 @@ def compare(current:Fact,base:Fact,mode='qoq'):
     if base.amount<0: issues.append('NEGATIVE_BASE')
     pct=None if issues else str(((current.amount/base.amount-1)*100).quantize(Decimal('.0001')))
     return {'status':'needs_review' if issues else 'verified','issues':issues,'growth_pct':pct,
-      'formula':'(current × scale / base × scale - 1) × 100',
+      'formula':'((current × current_scale) / (base × base_scale) - 1) × 100',
       'normalized_inputs':[str(current.amount),str(base.amount)],'currency':current.currency,
       'evidence':[current.public(),base.public()], 'mode':mode}
 

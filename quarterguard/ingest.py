@@ -18,7 +18,10 @@ def parse_statement(text,doc,page,metrics=None):
     required=['STATEMENTS OF PROFIT OR LOSS','millions of Korean won','thousands of US dollars','KRW KRW USD USD KRW KRW USD USD','2024 2023 2024 2023 2024 2023 2024 2023']
     if not all(s in t for s in required): raise ValueError('UNSUPPORTED_LAYOUT: header')
     q=doc['quarter']; month,day,word={2:('06','30','six'),3:('09','30','nine')}[q]
-    if 'three-month periods' not in t or f'{word}-month periods' not in t: raise ValueError('UNSUPPORTED_LAYOUT: periods')
+    month_name={2:'June',3:'September'}[q]
+    expected=f'For the three-month periods ended {month_name} {day}, For the {word}-month periods ended {month_name} {day}, Notes 2024 2023 2024 2023 2024 2023 2024 2023 KRW KRW USD USD KRW KRW USD USD'
+    if expected not in t or doc.get('report_end',f'2024-{month}-{day}')!=f'2024-{month}-{day}':
+        raise ValueError('UNSUPPORTED_LAYOUT: ordered periods or reporting date')
     scope='CFS' if 'INTERIM CONSOLIDATED' in t else 'OFS' if 'INTERIM SEPARATE' in t else None
     if not scope: raise ValueError('UNSUPPORTED_LAYOUT: scope')
     out=[]
@@ -37,7 +40,9 @@ def parse_statement(text,doc,page,metrics=None):
             end=f'{year}-{month}-{day}'; period='ytd' if cumulative else 'q'
             out.append(Fact(id=f"{doc['id']}-{scope}-{metric}-{year}-{period}-{curr}",company='samsung',metric=metric,scope=scope,currency=curr,
               scale=1000000 if curr=='KRW' else 1000,start=start,end=end,value=n.replace(',','').replace('(','-').replace(')',''),
-              source_url=doc['url'],page=page,row=label,column=f'{year} {period.upper()} {curr}',document_id=doc['id'],document_sha256=doc['sha256']))
+              source_url=doc['url'],page=page,row=label,column=f'{year} {period.upper()} {curr}',document_id=doc['id'],document_sha256=doc['sha256'],translation_basis='convenience_translation' if curr=='USD' else 'reported_currency',
+              translation_rate=doc.get('usd_translation_rate') if curr=='USD' else None,
+              translation_note_page=doc.get('usd_note_pages',{}).get(scope) if curr=='USD' else None))
     return out
 
 def collect(cache:Path,download=False):
@@ -53,10 +58,16 @@ def collect(cache:Path,download=False):
                 r=client.get(doc['url']);r.raise_for_status();path.write_bytes(r.content)
         raw=path.read_bytes();doc['sha256']=hashlib.sha256(raw).hexdigest()
         reader=PdfReader(path);doc['pages']=len(reader.pages); tables=0
+        for note_page in doc.get('usd_note_pages',{}).values():
+            note=reader.pages[note_page-1].extract_text() or ''
+            rate=doc['usd_translation_rate'];formatted=f'{float(rate):,.1f}'
+            if 'Convenience Translation' not in note or formatted not in note:
+                raise ValueError('UNSUPPORTED_LAYOUT: translation note')
         for i,p in enumerate(reader.pages):
             text=p.extract_text() or ''
             if 'STATEMENTS OF PROFIT OR LOSS' in text and 'Revenue' in text:
-                facts.extend(parse_statement(text,doc,i+1));tables+=1
+                parsed=parse_statement(text,doc,i+1);facts.extend(parsed);tables+=1
+                doc.setdefault('statement_pages',{})[parsed[0].scope]=i+1
             else:
                 paragraphs.append({'document_id':doc['id'],'page':i+1,'kind':'body','text':text})
         if tables!=2: raise ValueError(f'UNSUPPORTED_LAYOUT: expected 2 statements, got {tables}')

@@ -1,12 +1,12 @@
 {
-  "created_at": "2026-10-29T04:13:38.659911+00:00",
+  "created_at": "2026-10-29T04:23:27.207960+00:00",
   "python": "3.12.14",
   "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
   "documents": 2,
   "facts": 192,
   "human_reviewed": false,
   "evaluation_type": "template regression; not held-out generalization",
-  "corpus_sha256": "f228b4fe23f3a3c33d40102452625999f86709ea74ad22d17f4ef498d86ab178",
+  "corpus_sha256": "d3a7074f9f1ef0745aa04a9586833b1d1f2bf188102ef66fdb6f315b73425969",
   "gold_sha256": "b840033fda526093a60fadfeb1aacaf678456d9ae9459e5454ae67d274fc7164",
   "retrieval": {
     "fixed_word": {
@@ -3391,63 +3391,83 @@
         "status_correct": true,
         "value_correct": true,
         "issue_correct": null,
-        "source_valid": true
+        "source_valid": true,
+        "workflow_success": true,
+        "case_correct": true
       },
       {
         "case_id": "ytd-trap",
         "status_correct": true,
         "value_correct": null,
         "issue_correct": true,
-        "source_valid": true
+        "source_valid": true,
+        "workflow_success": true,
+        "case_correct": true
       },
       {
         "case_id": "scope-trap",
         "status_correct": true,
         "value_correct": null,
         "issue_correct": true,
-        "source_valid": true
+        "source_valid": true,
+        "workflow_success": true,
+        "case_correct": true
       },
       {
         "case_id": "currency-trap",
         "status_correct": true,
         "value_correct": null,
         "issue_correct": true,
-        "source_valid": true
+        "source_valid": true,
+        "workflow_success": true,
+        "case_correct": true
       },
       {
         "case_id": "reconcile-revenue",
         "status_correct": true,
         "value_correct": true,
         "issue_correct": null,
-        "source_valid": true
+        "source_valid": true,
+        "workflow_success": true,
+        "case_correct": true
       },
       {
         "case_id": "qoq-profit",
         "status_correct": true,
         "value_correct": true,
         "issue_correct": null,
-        "source_valid": true
+        "source_valid": true,
+        "workflow_success": true,
+        "case_correct": true
       },
       {
         "case_id": "negative-base",
         "status_correct": true,
         "value_correct": null,
         "issue_correct": true,
-        "source_valid": true
+        "source_valid": true,
+        "workflow_success": true,
+        "case_correct": true
       },
       {
         "case_id": "no-evidence",
         "status_correct": true,
         "value_correct": null,
         "issue_correct": true,
-        "source_valid": null
+        "source_valid": true,
+        "workflow_success": true,
+        "case_correct": true
       }
     ],
+    "case_accuracy": 1.0,
+    "workflow_success_rate": 1.0,
+    "citation_exact_match": 1.0,
+    "issue_accuracy": 1.0,
     "status_accuracy": 1.0,
     "numeric_accuracy": 1.0,
     "tool_success_rate": 1.0,
-    "latency_p50_ms": 1708.7575,
-    "latency_p95_ms": 1821.66355,
+    "latency_p50_ms": 1683.4655,
+    "latency_p95_ms": 2806.8932499999996,
     "model_calls": 0,
     "provider_api_cost_usd": 0,
     "cost_scope": "Paid model API only, excludes hosting/CPU/download costs"

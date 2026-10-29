@@ -4,10 +4,16 @@ from quarterguard.core import Fact, compare, reconcile, select_unique
 from quarterguard.ingest import parse_statement
 
 def fact(**kw):
-    base=dict(id='a',company='samsung',metric='revenue',scope='CFS',currency='KRW',scale=1000000,
-      start='2024-07-01',end='2024-09-30',value='79098731',source_url='https://example.org/report.pdf',
-      page=34,row='Revenue',column='2024 Q3 KRW',document_id='s24q3',document_sha256='a'*64)
-    return Fact(**(base|kw))
+    from quarterguard.store import load_facts
+    from dataclasses import asdict
+    rows=load_facts();target=next(f for f in rows if f.id=='s24q3-CFS-revenue-2024-q-KRW')
+    base=asdict(target);base.update(kw)
+    matching=[f for f in rows if f.scope==base['scope'] and f.metric==base['metric'] and f.currency==base['currency'] and f.start==base['start'] and f.end==base['end']]
+    if matching:
+        src=asdict(matching[0])
+        for k in ('source_url','page','row','column','document_id','document_sha256'):
+            if k not in kw:base[k]=src[k]
+    return Fact(**base)
 
 class VerificationTests(unittest.TestCase):
     def test_qoq_decimal(self):
