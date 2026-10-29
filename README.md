@@ -4,7 +4,7 @@
 
 분기·누적, 연결·별도, 단위·참고 환산액 혼동을 막는 **공시 검토 도구**입니다. 실제 공개 보고서의 수치를 검색하고, 출처와 문맥을 확인한 뒤 계산합니다. 잘못된 입력 조합은 확인 필요로 남깁니다.
 
-[공개 데모](https://quarterguard.onrender.com) · [v1.3 보완·검증 보고](docs/completion-report.md) · [공고 재대조](docs/job-fit-audit.md) · [평가 원본](artifacts/evaluation.json) · [조사와 주제 선정](docs/research.md) · [실제 데모 조사·화면 재구성](docs/live-demo-research.md) · [실패와 개선](docs/failures.md) · [요구사항 대응](docs/requirements.md)
+[공개 데모](https://quarterguard.onrender.com) · [v1.3.1 보완·검증 보고](docs/completion-report.md) · [공고 재대조](docs/job-fit-audit.md) · [평가 원본](artifacts/evaluation.json) · [조사와 주제 선정](docs/research.md) · [실제 데모 조사·화면 재구성](docs/live-demo-research.md) · [실패와 개선](docs/failures.md) · [요구사항 대응](docs/requirements.md)
 
 ## 문제 → 검증
 
@@ -27,7 +27,7 @@
 
 ![공시 대조 작업지 PC 화면](docs/images/desktop.png)
 
-화면 캡처는 v1.3 기능 커밋 `79fc4e2`의 공개 서버를 TLS 검증 중계로 확인한 시점입니다. 문서·증거 추가 후 최종 배포 SHA는 [릴리스](https://github.com/sokldjs554/quarterguard/releases/tag/v1.3.0)에 기록합니다.
+화면 캡처는 v1.3 기능 커밋 `79fc4e2`의 공개 서버를 TLS 검증 중계로 확인한 시점입니다. 문서·증거 추가 후 최종 배포 SHA는 [릴리스](https://github.com/sokldjs554/quarterguard/releases/tag/v1.3.1)에 기록합니다.
 
 <details><summary>모바일과 평가 화면</summary>
 
@@ -72,7 +72,7 @@
 
 위 검색·MCP 평가의 유료 모델 API 호출은 0회/$0이며 (별도 OpenAI 실호출 검증 비용은 제외) 이는 서버·CPU·다운로드 비용을 포함하지 않습니다. 검색 시간은 인덱스 생성과 모델 로딩을 제외하고, MCP 전체 흐름은 subprocess 초기화를 포함합니다. 환경/모델 해시/개별 rank/latency는 평가 JSON에 있습니다. 최초 정답 오기와 수정 전 수치 정확도 2/3도 [원본 기록](artifacts/initial-label-audit.json)에 보존합니다.
 
-## 새 문서 평가와 공개 API 보완 (v1.3)
+## 새 문서 평가와 공개 API 보완 (v1.3.1)
 
 2025년 같은 기업의 공식 반기·3분기 문서 2건을 개발 자료와 분리하고 **64개 수치·40개 사례**를 첫 실행 전 고정했습니다. AI 작성 정답이며 사람/전문가 검수는 없습니다. 새 기업 자료는 추가하지 않았습니다. 최초 결과와 수정 후 회귀 결과를 모두 [평가 원본](artifacts/heldout-evaluation.json), [출처·정답 방법·실패 전체](docs/heldout-evaluation.md)에 남겼습니다.
 
@@ -86,7 +86,7 @@
 
 출처 검증에서 금액·배율·기업 위조를 놓치던 문제를 고쳤습니다. 정본 금액과 문맥을 확인하며 동등한 단위 환산은 허용합니다. 수정 후 결과는 이미 공개한 사례의 회귀 결과이므로 새 보류셋 성능으로 표현하지 않습니다. 파서는 2024년 표 헤더에 고정돼 새 문서를 거부하고, 자연어 검색 5건도 실패합니다. 후속 계산/검색은 별도 fixture와 manifest를 주입한 평가이며 **PDF부터 답변까지 성공한 결과가 아닙니다**. 2025 Q3 원문의 순이익 행 내부 불일치도 정답을 고쳐 숨기지 않고 `NUMERIC_CONFLICT`로 기록했습니다.
 
-DART 조회 경로는 구현했지만, 이번 공개 서버 확인에서는 `KEY_NOT_CONFIGURED`로 차단돼 새 실호출 0회입니다. 키 등록 완료 응답과 실행 환경 상태가 달라 저장·재배포 확인을 요청했습니다. [현재 연결 상태](https://quarterguard.onrender.com/api/providers)를 화면에도 그대로 표시합니다. 공개 DART는 키를 서버에만 두고 4개 고정 조회, 성공 캐시 24시간, 전역 60초 간격, 인스턴스 기록 기준 일 8회/누적 200회로 제한합니다. 무료 서버 재시작 시 이 기록은 사라질 수 있습니다. 유료 LLM은 이 한계를 그대로 허용하지 않고 **지속 기록 없이는 차단**합니다. 최대 20회/$0.20 보수적 예상 API 예산안은 문서화했으나 승인·유료 서비스 전환·새 유료 호출을 하지 않았습니다. 실제 공개 검증 횟수와 배포 SHA는 [최종 보고](docs/completion-report.md)에 구분합니다.
+**공개 데모 DART 실호출 검증 완료(2026-10-30 한국 시간):** 서버 키 반영 후 4회 실제 조회에서 16/16 금액이 일치했습니다. 같은 요청 4회는 캐시 응답으로 추가 외부 호출 0회였습니다. [공개 요청·응답 원본](artifacts/public-dart.json). PC·모바일 화면에서도 실제 응답의 캐시 재사용을 확인했습니다. [화면 검증](artifacts/public-dart-browser.json). 이전 키 미설정 상태는 해결됐습니다. [현재 연결 상태](https://quarterguard.onrender.com/api/providers)를 화면에도 그대로 표시합니다. 공개 DART는 키를 서버에만 두고 4개 고정 조회, 성공 캐시 24시간, 전역 60초 간격, 인스턴스 기록 기준 일 8회/누적 200회로 제한합니다. 무료 서버 재시작 시 이 기록은 사라질 수 있습니다. 유료 LLM은 이 한계를 그대로 허용하지 않고 **지속 기록 없이는 차단**합니다. 최대 20회/$0.20 보수적 예상 API 예산안은 문서화했으나 승인·유료 서비스 전환·새 유료 호출을 하지 않았습니다. 실제 공개 검증 횟수와 배포 SHA는 [최종 보고](docs/completion-report.md)에 구분합니다.
 
 ## 실행
 

@@ -1,0 +1,164 @@
+{
+  "checked_at": "2026-10-29T15:02:50.303308+00:00",
+  "base_url": "http://127.0.0.1:8006",
+  "upstream": "https://quarterguard.onrender.com",
+  "upstream_tls_verified": true,
+  "direct_browser_https": false,
+  "application_commit": "c89af39f169d114d8e95a3a2e59f791ee30b8d9f",
+  "checks": [
+    {
+      "viewport": "1440x1000",
+      "response": {
+        "request_id": "b3052a57-567e-492c-9721-f98d58371b42",
+        "provider": "dart",
+        "target": "s24q3-CFS",
+        "created_at": "2026-10-29T14:59:17.830134+00:00",
+        "execution": "cached_provider_response",
+        "external_calls_this_request": 0,
+        "verification_version": "593ddc89c83e7a96c9e7383a2726f26f4ff2668339d669521dacfc382c655e2a",
+        "status": "succeeded",
+        "estimated_cost_usd": "0",
+        "billed_cost_usd": null,
+        "checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-q-KRW",
+            "account_id": "ifrs-full_Revenue",
+            "source_field": "thstrm_amount",
+            "expected_krw": "79098731000000",
+            "dart_krw": "79098731000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241114002642",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+            "ir_page": 34,
+            "passed": true
+          },
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-ytd-KRW",
+            "account_id": "ifrs-full_Revenue",
+            "source_field": "thstrm_add_amount",
+            "expected_krw": "225082634000000",
+            "dart_krw": "225082634000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241114002642",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+            "ir_page": 34,
+            "passed": true
+          },
+          {
+            "fact_id": "s24q3-CFS-operating_profit-2024-q-KRW",
+            "account_id": "dart_OperatingIncomeLoss",
+            "source_field": "thstrm_amount",
+            "expected_krw": "9183371000000",
+            "dart_krw": "9183371000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241114002642",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+            "ir_page": 34,
+            "passed": true
+          },
+          {
+            "fact_id": "s24q3-CFS-operating_profit-2024-ytd-KRW",
+            "account_id": "dart_OperatingIncomeLoss",
+            "source_field": "thstrm_add_amount",
+            "expected_krw": "26233258000000",
+            "dart_krw": "26233258000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241114002642",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+            "ir_page": 34,
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "scope_basis": "request_fs_div",
+        "year": 2024,
+        "report_code": "11014",
+        "scope": "CFS",
+        "served_at": "2026-10-29T15:02:45.131290+00:00"
+      },
+      "cache_label_visible": true,
+      "four_amounts_visible": true,
+      "openai_disabled": true,
+      "no_page_overflow": true
+    },
+    {
+      "viewport": "390x844",
+      "response": {
+        "request_id": "13135297-4e0c-4ba0-ad9b-9b45c75bd498",
+        "provider": "dart",
+        "target": "s24q2-OFS",
+        "created_at": "2026-10-29T15:02:26.782265+00:00",
+        "execution": "cached_provider_response",
+        "external_calls_this_request": 0,
+        "verification_version": "593ddc89c83e7a96c9e7383a2726f26f4ff2668339d669521dacfc382c655e2a",
+        "status": "succeeded",
+        "estimated_cost_usd": "0",
+        "billed_cost_usd": null,
+        "checks": [
+          {
+            "fact_id": "s24q2-OFS-revenue-2024-q-KRW",
+            "account_id": "ifrs-full_Revenue",
+            "source_field": "thstrm_amount",
+            "expected_krw": "53734118000000",
+            "dart_krw": "53734118000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240814003284",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+            "ir_page": 104,
+            "passed": true
+          },
+          {
+            "fact_id": "s24q2-OFS-revenue-2024-ytd-KRW",
+            "account_id": "ifrs-full_Revenue",
+            "source_field": "thstrm_add_amount",
+            "expected_krw": "104973735000000",
+            "dart_krw": "104973735000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240814003284",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+            "ir_page": 104,
+            "passed": true
+          },
+          {
+            "fact_id": "s24q2-OFS-operating_profit-2024-q-KRW",
+            "account_id": "dart_OperatingIncomeLoss",
+            "source_field": "thstrm_amount",
+            "expected_krw": "7222491000000",
+            "dart_krw": "7222491000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240814003284",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+            "ir_page": 104,
+            "passed": true
+          },
+          {
+            "fact_id": "s24q2-OFS-operating_profit-2024-ytd-KRW",
+            "account_id": "dart_OperatingIncomeLoss",
+            "source_field": "thstrm_add_amount",
+            "expected_krw": "9229871000000",
+            "dart_krw": "9229871000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240814003284",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+            "ir_page": 104,
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "scope_basis": "request_fs_div",
+        "year": 2024,
+        "report_code": "11012",
+        "scope": "OFS",
+        "served_at": "2026-10-29T15:02:50.022560+00:00"
+      },
+      "cache_label_visible": true,
+      "four_amounts_visible": true,
+      "openai_disabled": true,
+      "no_page_overflow": true
+    }
+  ],
+  "public_post_requests": 2,
+  "external_provider_calls": 0,
+  "page_errors": [],
+  "limitation": "Browser used local relay; live provider requests were verified separately over TLS-verified HTTPS. These two UI requests reused real provider cache."
+}
