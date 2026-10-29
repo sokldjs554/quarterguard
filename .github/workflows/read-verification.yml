@@ -1,0 +1,29 @@
+name: read verification evidence
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: Completed live provider verification run ID
+        type: string
+        required: true
+permissions:
+  actions: read
+jobs:
+  read:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: live-provider-verification
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.run_id }}
+          path: evidence
+      - name: Print public verification evidence (no provider keys available)
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          report = json.loads(Path('evidence/live-verification.json').read_text())
+          print('EVIDENCE_JSON=' + json.dumps(report, ensure_ascii=True, separators=(',', ':')))
+          PY
