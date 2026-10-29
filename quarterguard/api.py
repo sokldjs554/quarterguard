@@ -7,7 +7,7 @@ from .store import ROOT,load_facts
 from .search import SearchIndex
 from .orchestrator import cases,run_case
 from .worksheet import WorksheetRequest,preview,run_worksheet
-app=FastAPI(title='QuarterGuard',version='1.2.1')
+app=FastAPI(title='QuarterGuard',version='1.3.0')
 slots=asyncio.Semaphore(1)  # Bound subprocess CPU/RSS on the free 0.1 CPU / 512 MB instance.
 @lru_cache(maxsize=1)
 def index():return SearchIndex(load_facts())
@@ -20,7 +20,7 @@ def revision():
  try:return subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True,timeout=2).strip()
  except Exception:return 'local-unversioned'
 @app.get('/health')
-def health():return {'status':'ok','facts':len(load_facts()),'commit':revision()}
+def health():return {'status':'ok','facts':len(load_facts()),'commit':revision(),'version':app.version}
 @app.get('/api/cases')
 def get_cases():return [{k:v for k,v in c.items() if not k.startswith('expected')} for c in cases()]
 @app.get('/api/sources')
@@ -52,9 +52,27 @@ async def worksheet_run(request:WorksheetRequest):
  except TimeoutError:raise HTTPException(429,'BUSY_RETRY')
  try:return await run_worksheet(request)
  finally:slots.release()
+@app.get('/api/providers')
+def provider_status():
+ from .public_providers import status
+ return status()
 @app.get('/api/connectors/dart')
-def dart_status():return {'status':'configured_not_verified' if os.getenv('DART_API_KEY') else 'not_configured',
- 'message':'별도 CI에서 DART 실호출·16개 금액 일치 검증 · 현재 공개 데모는 준비된 IR 보고서 근거 사용'}
+def dart_status():return provider_status()['dart']
+@app.post('/api/providers/{provider}/{target}')
+async def call_provider(provider:str,target:str):
+ from .public_providers import execute
+ from .provider_controls import Blocked
+ try:await asyncio.wait_for(slots.acquire(),timeout=.1)
+ except TimeoutError:raise HTTPException(429,'BUSY_RETRY')
+ try:
+  return await asyncio.to_thread(execute,provider,target)
+ except Blocked as exc:
+  raise HTTPException(404 if str(exc)=='UNKNOWN_TARGET' else 429,str(exc))
+ except Exception:
+  raise HTTPException(503,'PROVIDER_SERVICE_UNAVAILABLE') from None
+ finally:slots.release()
+@app.get('/api/evaluation/heldout')
+def heldout_evaluation():return artifact('heldout-evaluation.json')
 @app.get('/')
 def home():return FileResponse(ROOT/'web/index.html')
 app.mount('/assets',StaticFiles(directory=ROOT/'web'),name='assets')

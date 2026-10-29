@@ -1,0 +1,477 @@
+[
+  {
+    "id": "ingest-s25q2-CFS",
+    "stage": "raw_ingestion",
+    "document_id": "s25q2",
+    "scope": "CFS",
+    "expected_fact_count": 32
+  },
+  {
+    "id": "ingest-s25q2-OFS",
+    "stage": "raw_ingestion",
+    "document_id": "s25q2",
+    "scope": "OFS",
+    "expected_fact_count": 32
+  },
+  {
+    "id": "ingest-s25q3-CFS",
+    "stage": "raw_ingestion",
+    "document_id": "s25q3",
+    "scope": "CFS",
+    "expected_fact_count": 32
+  },
+  {
+    "id": "ingest-s25q3-OFS",
+    "stage": "raw_ingestion",
+    "document_id": "s25q3",
+    "scope": "OFS",
+    "expected_fact_count": 32
+  },
+  {
+    "id": "retrieve-01",
+    "stage": "fixture_retrieval",
+    "query": "samsung CFS 2025 Q3 quarter revenue KRW",
+    "gold_fact_id": "s25q3-CFS-revenue-2025-q-KRW",
+    "query_style": "controlled",
+    "expected_rank_max": 1
+  },
+  {
+    "id": "retrieve-02",
+    "stage": "fixture_retrieval",
+    "query": "samsung OFS 2025 Q2 quarter operating_profit KRW",
+    "gold_fact_id": "s25q2-OFS-operating_profit-2025-q-KRW",
+    "query_style": "controlled",
+    "expected_rank_max": 1
+  },
+  {
+    "id": "retrieve-03",
+    "stage": "fixture_retrieval",
+    "query": "삼성전자 연결 2025년 3분기 누적 매출액 원화",
+    "gold_fact_id": "s25q3-CFS-revenue-2025-ytd-KRW",
+    "query_style": "controlled",
+    "expected_rank_max": 1
+  },
+  {
+    "id": "retrieve-04",
+    "stage": "fixture_retrieval",
+    "query": "samsung CFS 2024 Q2 quarter gross_profit KRW",
+    "gold_fact_id": "s25q2-CFS-gross_profit-2024-q-KRW",
+    "query_style": "controlled",
+    "expected_rank_max": 1
+  },
+  {
+    "id": "retrieve-05",
+    "stage": "fixture_retrieval",
+    "query": "삼성전자 별도 2025년 3분기 3개월 당기순이익 원화",
+    "gold_fact_id": "s25q3-OFS-net_profit-2025-q-KRW",
+    "query_style": "controlled",
+    "expected_rank_max": 1
+  },
+  {
+    "id": "retrieve-06",
+    "stage": "fixture_retrieval",
+    "query": "What was Samsung consolidated revenue in the third quarter of 2025?",
+    "gold_fact_id": "s25q3-CFS-revenue-2025-q-KRW",
+    "query_style": "natural",
+    "expected_rank_max": 1
+  },
+  {
+    "id": "retrieve-07",
+    "stage": "fixture_retrieval",
+    "query": "삼성전자 2025년 2분기 별도 영업이익은 얼마인가요?",
+    "gold_fact_id": "s25q2-OFS-operating_profit-2025-q-KRW",
+    "query_style": "natural",
+    "expected_rank_max": 1
+  },
+  {
+    "id": "retrieve-08",
+    "stage": "fixture_retrieval",
+    "query": "How much gross profit did Samsung report for Q2 2025 on a consolidated basis?",
+    "gold_fact_id": "s25q2-CFS-gross_profit-2025-q-KRW",
+    "query_style": "natural",
+    "expected_rank_max": 1
+  },
+  {
+    "id": "retrieve-09",
+    "stage": "fixture_retrieval",
+    "query": "Show Samsung separate net income for the first nine months of 2025 in won.",
+    "gold_fact_id": "s25q3-OFS-net_profit-2025-ytd-KRW",
+    "query_style": "natural",
+    "expected_rank_max": 1
+  },
+  {
+    "id": "retrieve-10",
+    "stage": "fixture_retrieval",
+    "query": "2025년 3분기 삼성전자 연결 누적 매출을 알려줘",
+    "gold_fact_id": "s25q3-CFS-revenue-2025-ytd-KRW",
+    "query_style": "natural",
+    "expected_rank_max": 1
+  },
+  {
+    "id": "calc-01",
+    "stage": "fixture_calculation",
+    "operation": "compare",
+    "inputs": [
+      "s25q3-CFS-revenue-2025-q-KRW",
+      "s25q2-CFS-revenue-2025-q-KRW"
+    ],
+    "mode": "qoq",
+    "expected_status": "verified",
+    "expected_value": "15.4164",
+    "expected_issues": []
+  },
+  {
+    "id": "calc-02",
+    "stage": "fixture_calculation",
+    "operation": "compare",
+    "inputs": [
+      "s25q3-OFS-revenue-2025-q-KRW",
+      "s25q2-OFS-revenue-2025-q-KRW"
+    ],
+    "mode": "qoq",
+    "expected_status": "verified",
+    "expected_value": "14.6693",
+    "expected_issues": []
+  },
+  {
+    "id": "calc-03",
+    "stage": "fixture_calculation",
+    "operation": "compare",
+    "inputs": [
+      "s25q3-CFS-operating_profit-2025-q-KRW",
+      "s25q2-CFS-operating_profit-2025-q-KRW"
+    ],
+    "mode": "qoq",
+    "expected_status": "verified",
+    "expected_value": "160.1778",
+    "expected_issues": []
+  },
+  {
+    "id": "calc-04",
+    "stage": "fixture_calculation",
+    "operation": "compare",
+    "inputs": [
+      "s25q3-OFS-net_profit-2025-q-KRW",
+      "s25q2-OFS-net_profit-2025-q-KRW"
+    ],
+    "mode": "qoq",
+    "expected_status": "verified",
+    "expected_value": "287.6634",
+    "expected_issues": []
+  },
+  {
+    "id": "calc-05",
+    "stage": "fixture_calculation",
+    "operation": "compare",
+    "inputs": [
+      "s25q3-CFS-gross_profit-2025-q-KRW",
+      "s25q3-CFS-gross_profit-2024-q-KRW"
+    ],
+    "mode": "yoy",
+    "expected_status": "verified",
+    "expected_value": "11.6268",
+    "expected_issues": []
+  },
+  {
+    "id": "calc-06",
+    "stage": "fixture_calculation",
+    "operation": "reconcile",
+    "inputs": [
+      "s25q3-CFS-revenue-2025-ytd-KRW",
+      "s25q2-CFS-revenue-2025-ytd-KRW",
+      "s25q3-CFS-revenue-2025-q-KRW"
+    ],
+    "expected_status": "verified",
+    "expected_value": "86061747",
+    "expected_issues": []
+  },
+  {
+    "id": "calc-07",
+    "stage": "fixture_calculation",
+    "operation": "reconcile",
+    "inputs": [
+      "s25q3-OFS-operating_profit-2025-ytd-KRW",
+      "s25q2-OFS-operating_profit-2025-ytd-KRW",
+      "s25q3-OFS-operating_profit-2025-q-KRW"
+    ],
+    "expected_status": "verified",
+    "expected_value": "7941086",
+    "expected_issues": []
+  },
+  {
+    "id": "calc-08",
+    "stage": "fixture_calculation",
+    "operation": "reconcile",
+    "inputs": [
+      "s25q3-CFS-net_profit-2025-ytd-KRW",
+      "s25q2-CFS-net_profit-2025-ytd-KRW",
+      "s25q3-CFS-net_profit-2025-q-KRW"
+    ],
+    "expected_status": "needs_review",
+    "expected_value": "0",
+    "expected_issues": [
+      "NUMERIC_CONFLICT"
+    ]
+  },
+  {
+    "id": "context-scope",
+    "stage": "fixture_context",
+    "operation": "compare",
+    "mode": "qoq",
+    "inputs": [
+      "s25q3-CFS-revenue-2025-q-KRW",
+      "s25q2-CFS-revenue-2025-q-KRW"
+    ],
+    "mutation": {
+      "input_index": 1,
+      "changes": {
+        "scope": "OFS"
+      }
+    },
+    "expected_status": "needs_review",
+    "expected_value": null,
+    "expected_issue": "SCOPE_MISMATCH"
+  },
+  {
+    "id": "context-period",
+    "stage": "fixture_context",
+    "operation": "compare",
+    "mode": "qoq",
+    "inputs": [
+      "s25q3-CFS-revenue-2025-q-KRW",
+      "s25q2-CFS-revenue-2025-q-KRW"
+    ],
+    "mutation": {
+      "input_index": 1,
+      "changes": {
+        "start": "2025-01-01"
+      }
+    },
+    "expected_status": "needs_review",
+    "expected_value": null,
+    "expected_issue": "PERIOD_MISMATCH"
+  },
+  {
+    "id": "context-unit",
+    "stage": "fixture_context",
+    "operation": "compare",
+    "mode": "qoq",
+    "inputs": [
+      "s25q3-CFS-revenue-2025-q-KRW",
+      "s25q2-CFS-revenue-2025-q-KRW"
+    ],
+    "mutation": {
+      "input_index": 1,
+      "changes": {
+        "scale": 7
+      }
+    },
+    "expected_status": "needs_review",
+    "expected_value": null,
+    "expected_issue": "UNKNOWN_UNIT"
+  },
+  {
+    "id": "context-company",
+    "stage": "fixture_context",
+    "operation": "compare",
+    "mode": "qoq",
+    "inputs": [
+      "s25q3-CFS-revenue-2025-q-KRW",
+      "s25q2-CFS-revenue-2025-q-KRW"
+    ],
+    "mutation": {
+      "input_index": 1,
+      "changes": {
+        "company": "other"
+      }
+    },
+    "expected_status": "needs_review",
+    "expected_value": null,
+    "expected_issue": "COMPANY_MISMATCH"
+  },
+  {
+    "id": "context-metric",
+    "stage": "fixture_context",
+    "operation": "compare",
+    "mode": "qoq",
+    "inputs": [
+      "s25q3-CFS-revenue-2025-q-KRW",
+      "s25q2-CFS-revenue-2025-q-KRW"
+    ],
+    "mutation": {
+      "input_index": 1,
+      "changes": {
+        "metric": "gross_profit"
+      }
+    },
+    "expected_status": "needs_review",
+    "expected_value": null,
+    "expected_issue": "METRIC_MISMATCH"
+  },
+  {
+    "id": "context-currency",
+    "stage": "fixture_context",
+    "operation": "compare",
+    "mode": "qoq",
+    "inputs": [
+      "s25q3-CFS-revenue-2025-q-KRW",
+      "s25q2-CFS-revenue-2025-q-KRW"
+    ],
+    "mutation": {
+      "input_index": 1,
+      "changes": {
+        "currency": "USD"
+      }
+    },
+    "expected_status": "needs_review",
+    "expected_value": null,
+    "expected_issue": "CURRENCY_MISMATCH"
+  },
+  {
+    "id": "context-translation",
+    "stage": "fixture_context",
+    "operation": "compare",
+    "mode": "qoq",
+    "inputs": [
+      "s25q3-CFS-revenue-2025-q-KRW",
+      "s25q2-CFS-revenue-2025-q-KRW"
+    ],
+    "mutation": {
+      "input_index": 1,
+      "changes": {
+        "translation_basis": "convenience_translation"
+      }
+    },
+    "expected_status": "needs_review",
+    "expected_value": null,
+    "expected_issue": "CONVENIENCE_TRANSLATION"
+  },
+  {
+    "id": "context-zero",
+    "stage": "fixture_context",
+    "operation": "compare",
+    "mode": "qoq",
+    "inputs": [
+      "s25q3-CFS-revenue-2025-q-KRW",
+      "s25q2-CFS-revenue-2025-q-KRW"
+    ],
+    "mutation": {
+      "input_index": 1,
+      "changes": {
+        "value": "0"
+      }
+    },
+    "expected_status": "needs_review",
+    "expected_value": null,
+    "expected_issue": "ZERO_BASE"
+  },
+  {
+    "id": "context-negative",
+    "stage": "fixture_context",
+    "operation": "compare",
+    "mode": "qoq",
+    "inputs": [
+      "s25q3-CFS-revenue-2025-q-KRW",
+      "s25q2-CFS-revenue-2025-q-KRW"
+    ],
+    "mutation": {
+      "input_index": 1,
+      "changes": {
+        "value": "-1"
+      }
+    },
+    "expected_status": "needs_review",
+    "expected_value": null,
+    "expected_issue": "NEGATIVE_BASE"
+  },
+  {
+    "id": "context-scale-equivalent",
+    "stage": "fixture_context",
+    "operation": "compare",
+    "mode": "qoq",
+    "inputs": [
+      "s25q3-CFS-revenue-2025-q-KRW",
+      "s25q2-CFS-revenue-2025-q-KRW"
+    ],
+    "mutation": {
+      "input_index": 1,
+      "changes": {
+        "scale": 1000,
+        "value": "74566317000"
+      }
+    },
+    "expected_status": "verified",
+    "expected_value": "15.4164",
+    "expected_issues": []
+  },
+  {
+    "id": "citation-original",
+    "stage": "fixture_citation",
+    "input": "s25q3-CFS-revenue-2025-q-KRW",
+    "mutation": {},
+    "expected_valid": true
+  },
+  {
+    "id": "citation-page",
+    "stage": "fixture_citation",
+    "input": "s25q3-CFS-revenue-2025-q-KRW",
+    "mutation": {
+      "page": 35
+    },
+    "expected_valid": false
+  },
+  {
+    "id": "citation-hash",
+    "stage": "fixture_citation",
+    "input": "s25q3-CFS-revenue-2025-q-KRW",
+    "mutation": {
+      "document_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "expected_valid": false
+  },
+  {
+    "id": "citation-url",
+    "stage": "fixture_citation",
+    "input": "s25q3-CFS-revenue-2025-q-KRW",
+    "mutation": {
+      "source_url": "https://example.org/fake.pdf"
+    },
+    "expected_valid": false
+  },
+  {
+    "id": "citation-row",
+    "stage": "fixture_citation",
+    "input": "s25q3-CFS-revenue-2025-q-KRW",
+    "mutation": {
+      "row": "Invented row"
+    },
+    "expected_valid": false
+  },
+  {
+    "id": "citation-value",
+    "stage": "fixture_citation",
+    "input": "s25q3-CFS-revenue-2025-q-KRW",
+    "mutation": {
+      "value": "1"
+    },
+    "expected_valid": false
+  },
+  {
+    "id": "citation-scale",
+    "stage": "fixture_citation",
+    "input": "s25q3-CFS-revenue-2025-q-KRW",
+    "mutation": {
+      "scale": 1000
+    },
+    "expected_valid": false
+  },
+  {
+    "id": "citation-company",
+    "stage": "fixture_citation",
+    "input": "s25q3-CFS-revenue-2025-q-KRW",
+    "mutation": {
+      "company": "other"
+    },
+    "expected_valid": false
+  }
+]

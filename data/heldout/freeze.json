@@ -1,0 +1,29 @@
+{
+  "frozen_at": "2026-10-29T14:08:15.793140+00:00",
+  "human_reviewed": false,
+  "author": "AI agent; newly withheld documents, not independently curated human holdout",
+  "selection": "Two official Samsung 2025 reports not in the existing 2024 development corpus. Four metrics, two statement scopes, current and prior year, quarter and YTD. Same issuer and similar layouts.",
+  "gold_method": "AI transcribed official PDF cells before running evaluation. Expected arithmetic independently computed with Fraction; source-literal net-profit anomaly retained. No production predictions used for labels.",
+  "files": {
+    "data/heldout/sources.json": "6785992f5ccf7d0cf4d1bf6d211feed3c27c0458b76e023fb0867a63ec47a6c8",
+    "data/heldout/facts.json": "e77f6cf53c126c9a8cea234ed985715fbd4d22297258c92bfe8869d178243f68",
+    "data/heldout/cases.json": "3fc3d385e0cf72f71cb297dc85a028e2e787afef1d70d8ea824ec6210fba739a"
+  },
+  "production_files": {
+    "quarterguard/core.py": "0fb4a16a5eb48d5389a0f3bce11e82f4a5d77784ccf411b1ccb42b6672334335",
+    "quarterguard/ingest.py": "692ea34874f943bb0b1abdbb69a1fa3d01d63c72060f85005d444ec31ae9b93e",
+    "quarterguard/search.py": "b0a9ff7002590da6ca51d22488bb4802c8563b1462bc97fc9a645960e641c7df",
+    "data/sources.json": "8ec9649bea4557fcd801500a80a57696479e18110ba809d4dec6f7d4f1ecfd68",
+    "data/facts.json": "d3a7074f9f1ef0745aa04a9586833b1d1f2bf188102ef66fdb6f315b73425969"
+  },
+  "known_source_anomaly": {
+    "document_id": "s25q3",
+    "page": 34,
+    "metric": "net_profit",
+    "source_literal_q": "5116435",
+    "source_literal_ytd": "13339313",
+    "q_profit_before_tax_minus_tax": "12225747",
+    "ytd_profit_before_tax_minus_tax": "25565060",
+    "observation": "pypdf text, independent PyMuPDF text and AI inspection of rasterized page agree. Not human reviewed. Do not silently replace printed values."
+  }
+}

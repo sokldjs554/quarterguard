@@ -2,6 +2,8 @@ import {$,esc,labels,shortLabels,issues,money,unit,scope,docTitle,api,errorText,
 import {evidenceInspector} from './evidence.js';
 import {mountReview} from './review.js';
 import {reviewKey,readReview,writeReview,csvText} from './review-notes.mjs';
+import {mountProviders} from './providers.js';
+import {mountHeldout} from './heldout.js';
 
 const defaults={current:{document:'s24q3',year:2024,scope:'CFS',period:'q',currency:'KRW'},base:{document:'s24q2',year:2024,scope:'CFS',period:'q',currency:'KRW'},mode:'qoq'};
 let facts=[],sources=[],inspector=null,current=null,selectedMetric='revenue',selectedSide='current',busy=false,requestId=0,ready=false,searchId=0;
@@ -153,7 +155,7 @@ async function boot() {
    const row=current?.rows.find(r=>r.current.id===id||r.base.id===id);if(!row)return;
    selectedMetric=row.metric;selectedSide=index===0?'current':'base';selectRow();
   });
-  $('#version').textContent='v1.2.1 · '+health.commit.slice(0,7);
+  $('#version').textContent='v1.3.0 · '+health.commit.slice(0,7);
   $('#document-count').textContent=sources.length;
   $('#document-list').innerHTML=sources.map(s=>`<button class="document-item" data-document="${esc(s.id)}" aria-pressed="false"><span class="doc-icon" aria-hidden="true">PDF</span><span><strong>${s.id==='s24q3'?'2024년 3분기':'2024년 반기'}</strong><small>${s.pages}쪽 · 영문 IR</small></span></button>`).join('');
   document.querySelectorAll('[data-document]').forEach(b=>b.onclick=async()=>{
@@ -204,3 +206,5 @@ $('#export-btn').onclick=()=>{
  a.href=href;a.download=`quarterguard-review-${new Date().toISOString().slice(0,10)}.csv`;a.click();setTimeout(()=>URL.revokeObjectURL(href),1000);
 };
 boot();
+mountProviders($('#provider-content'));
+mountHeldout($('#heldout-content'));

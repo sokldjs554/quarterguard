@@ -1,0 +1,2247 @@
+{
+  "evaluated_at": "2026-10-29T14:32:00.881654+00:00",
+  "freeze": {
+    "frozen_at": "2026-10-29T14:08:15.793140+00:00",
+    "human_reviewed": false,
+    "author": "AI agent; newly withheld documents, not independently curated human holdout",
+    "selection": "Two official Samsung 2025 reports not in the existing 2024 development corpus. Four metrics, two statement scopes, current and prior year, quarter and YTD. Same issuer and similar layouts.",
+    "gold_method": "AI transcribed official PDF cells before running evaluation. Expected arithmetic independently computed with Fraction; source-literal net-profit anomaly retained. No production predictions used for labels.",
+    "files": {
+      "data/heldout/sources.json": "6785992f5ccf7d0cf4d1bf6d211feed3c27c0458b76e023fb0867a63ec47a6c8",
+      "data/heldout/facts.json": "e77f6cf53c126c9a8cea234ed985715fbd4d22297258c92bfe8869d178243f68",
+      "data/heldout/cases.json": "3fc3d385e0cf72f71cb297dc85a028e2e787afef1d70d8ea824ec6210fba739a"
+    },
+    "production_files": {
+      "quarterguard/core.py": "0fb4a16a5eb48d5389a0f3bce11e82f4a5d77784ccf411b1ccb42b6672334335",
+      "quarterguard/ingest.py": "692ea34874f943bb0b1abdbb69a1fa3d01d63c72060f85005d444ec31ae9b93e",
+      "quarterguard/search.py": "b0a9ff7002590da6ca51d22488bb4802c8563b1462bc97fc9a645960e641c7df",
+      "data/sources.json": "8ec9649bea4557fcd801500a80a57696479e18110ba809d4dec6f7d4f1ecfd68",
+      "data/facts.json": "d3a7074f9f1ef0745aa04a9586833b1d1f2bf188102ef66fdb6f315b73425969"
+    },
+    "known_source_anomaly": {
+      "document_id": "s25q3",
+      "page": 34,
+      "metric": "net_profit",
+      "source_literal_q": "5116435",
+      "source_literal_ytd": "13339313",
+      "q_profit_before_tax_minus_tax": "12225747",
+      "ytd_profit_before_tax_minus_tax": "25565060",
+      "observation": "pypdf text, independent PyMuPDF text and AI inspection of rasterized page agree. Not human reviewed. Do not silently replace printed values."
+    }
+  },
+  "evaluation_type": "Post-disclosure remediation regression; NOT unseen heldout",
+  "post_fix": true,
+  "current_production_hashes": {
+    "quarterguard/core.py": "dbe42039fae2619484df0a79bd5b893ee58e0efc40468570a672da79c877830e",
+    "quarterguard/ingest.py": "692ea34874f943bb0b1abdbb69a1fa3d01d63c72060f85005d444ec31ae9b93e",
+    "quarterguard/search.py": "b0a9ff7002590da6ca51d22488bb4802c8563b1462bc97fc9a645960e641c7df",
+    "data/sources.json": "8ec9649bea4557fcd801500a80a57696479e18110ba809d4dec6f7d4f1ecfd68",
+    "data/facts.json": "d3a7074f9f1ef0745aa04a9586833b1d1f2bf188102ef66fdb6f315b73425969"
+  },
+  "human_reviewed": false,
+  "documents": 2,
+  "gold_facts": 64,
+  "model_calls": 0,
+  "provider_api_cost_usd": 0,
+  "cost_scope": "Paid model APIs only; excludes CPU, storage and network",
+  "adapter": "Fixtures supplied directly to SearchIndex/core; isolated source_manifest and source_facts patches; real current valid_source",
+  "raw_registry": {
+    "accepted": 0,
+    "total": 64,
+    "reason": "2025 documents absent from production allowlist"
+  },
+  "end_to_end": {
+    "status": "unsupported",
+    "ingested_statements": 0,
+    "claim": "No successful raw-PDF-to-answer evaluation. Downstream fixture results are diagnostic only."
+  },
+  "source_audit": [
+    {
+      "fact_id": "s25q2-CFS-revenue-2025-q-KRW",
+      "source_cell": "74566317",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-CFS-revenue-2024-q-KRW",
+      "source_cell": "74068302",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-CFS-revenue-2025-ytd-KRW",
+      "source_cell": "153706820",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-CFS-revenue-2024-ytd-KRW",
+      "source_cell": "145983903",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-CFS-gross_profit-2025-q-KRW",
+      "source_cell": "25496751",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-CFS-gross_profit-2024-q-KRW",
+      "source_cell": "29756276",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-CFS-gross_profit-2025-ytd-KRW",
+      "source_cell": "53627323",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-CFS-gross_profit-2024-ytd-KRW",
+      "source_cell": "55785545",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-CFS-operating_profit-2025-q-KRW",
+      "source_cell": "4676057",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-CFS-operating_profit-2024-q-KRW",
+      "source_cell": "10443878",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-CFS-operating_profit-2025-ytd-KRW",
+      "source_cell": "11361329",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-CFS-operating_profit-2024-ytd-KRW",
+      "source_cell": "17049887",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-CFS-net_profit-2025-q-KRW",
+      "source_cell": "5116435",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-CFS-net_profit-2024-q-KRW",
+      "source_cell": "9841345",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-CFS-net_profit-2025-ytd-KRW",
+      "source_cell": "13339313",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-CFS-net_profit-2024-ytd-KRW",
+      "source_cell": "16596053",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-OFS-revenue-2025-q-KRW",
+      "source_cell": "54765394",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-OFS-revenue-2024-q-KRW",
+      "source_cell": "53734118",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-OFS-revenue-2025-ytd-KRW",
+      "source_cell": "110300265",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-OFS-revenue-2024-ytd-KRW",
+      "source_cell": "104973735",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-OFS-gross_profit-2025-q-KRW",
+      "source_cell": "12866547",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-OFS-gross_profit-2024-q-KRW",
+      "source_cell": "17552654",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-OFS-gross_profit-2025-ytd-KRW",
+      "source_cell": "25942743",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-OFS-gross_profit-2024-ytd-KRW",
+      "source_cell": "30019421",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-OFS-operating_profit-2025-q-KRW",
+      "source_cell": "1190832",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-OFS-operating_profit-2024-q-KRW",
+      "source_cell": "7222491",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-OFS-operating_profit-2025-ytd-KRW",
+      "source_cell": "2660105",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-OFS-operating_profit-2024-ytd-KRW",
+      "source_cell": "9229871",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-OFS-net_profit-2025-q-KRW",
+      "source_cell": "2752020",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-OFS-net_profit-2024-q-KRW",
+      "source_cell": "7098417",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-OFS-net_profit-2025-ytd-KRW",
+      "source_cell": "9139217",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q2-OFS-net_profit-2024-ytd-KRW",
+      "source_cell": "16835854",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-CFS-revenue-2025-q-KRW",
+      "source_cell": "86061747",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-CFS-revenue-2024-q-KRW",
+      "source_cell": "79098731",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-CFS-revenue-2025-ytd-KRW",
+      "source_cell": "239768567",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-CFS-revenue-2024-ytd-KRW",
+      "source_cell": "225082634",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-CFS-gross_profit-2025-q-KRW",
+      "source_cell": "33492127",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-CFS-gross_profit-2024-q-KRW",
+      "source_cell": "30003648",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-CFS-gross_profit-2025-ytd-KRW",
+      "source_cell": "87119450",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-CFS-gross_profit-2024-ytd-KRW",
+      "source_cell": "85789193",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-CFS-operating_profit-2025-q-KRW",
+      "source_cell": "12166062",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-CFS-operating_profit-2024-q-KRW",
+      "source_cell": "9183371",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-CFS-operating_profit-2025-ytd-KRW",
+      "source_cell": "23527391",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-CFS-operating_profit-2024-ytd-KRW",
+      "source_cell": "26233258",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-CFS-net_profit-2025-q-KRW",
+      "source_cell": "5116435",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-CFS-net_profit-2024-q-KRW",
+      "source_cell": "9841345",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-CFS-net_profit-2025-ytd-KRW",
+      "source_cell": "13339313",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-CFS-net_profit-2024-ytd-KRW",
+      "source_cell": "16596053",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-OFS-revenue-2025-q-KRW",
+      "source_cell": "62799068",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-OFS-revenue-2024-q-KRW",
+      "source_cell": "55828922",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-OFS-revenue-2025-ytd-KRW",
+      "source_cell": "173099333",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-OFS-revenue-2024-ytd-KRW",
+      "source_cell": "160802657",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-OFS-gross_profit-2025-q-KRW",
+      "source_cell": "19446472",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-OFS-gross_profit-2024-q-KRW",
+      "source_cell": "15718870",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-OFS-gross_profit-2025-ytd-KRW",
+      "source_cell": "45389215",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-OFS-gross_profit-2024-ytd-KRW",
+      "source_cell": "45738291",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-OFS-operating_profit-2025-q-KRW",
+      "source_cell": "7941086",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-OFS-operating_profit-2024-q-KRW",
+      "source_cell": "4504920",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-OFS-operating_profit-2025-ytd-KRW",
+      "source_cell": "10601191",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-OFS-operating_profit-2024-ytd-KRW",
+      "source_cell": "13734791",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-OFS-net_profit-2025-q-KRW",
+      "source_cell": "10668573",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-OFS-net_profit-2024-q-KRW",
+      "source_cell": "5694610",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-OFS-net_profit-2025-ytd-KRW",
+      "source_cell": "19807790",
+      "passed": true
+    },
+    {
+      "fact_id": "s25q3-OFS-net_profit-2024-ytd-KRW",
+      "source_cell": "22530464",
+      "passed": true
+    }
+  ],
+  "stage_counts": {
+    "fixture_calculation": {
+      "total": 8,
+      "passed": 8,
+      "failed": 0
+    },
+    "fixture_citation": {
+      "total": 8,
+      "passed": 8,
+      "failed": 0
+    },
+    "fixture_context": {
+      "total": 10,
+      "passed": 10,
+      "failed": 0
+    },
+    "fixture_retrieval": {
+      "total": 10,
+      "passed": 5,
+      "failed": 5
+    },
+    "raw_ingestion": {
+      "total": 4,
+      "passed": 0,
+      "failed": 4
+    }
+  },
+  "retrieval_metrics": {
+    "controlled": {
+      "n": 5,
+      "recall_at_1": 1.0,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 1.0
+    },
+    "natural": {
+      "n": 5,
+      "recall_at_1": 0.0,
+      "recall_at_5": 0.0,
+      "mrr_at_5": 0.0
+    }
+  },
+  "failure_ids": [
+    "ingest-s25q2-CFS",
+    "ingest-s25q2-OFS",
+    "ingest-s25q3-CFS",
+    "ingest-s25q3-OFS",
+    "retrieve-06",
+    "retrieve-07",
+    "retrieve-08",
+    "retrieve-09",
+    "retrieve-10"
+  ],
+  "results": [
+    {
+      "id": "ingest-s25q2-CFS",
+      "stage": "raw_ingestion",
+      "document_id": "s25q2",
+      "scope": "CFS",
+      "expected_fact_count": 32,
+      "error": "UNSUPPORTED_LAYOUT: header",
+      "parsed_fact_count": 0,
+      "passed": false
+    },
+    {
+      "id": "ingest-s25q2-OFS",
+      "stage": "raw_ingestion",
+      "document_id": "s25q2",
+      "scope": "OFS",
+      "expected_fact_count": 32,
+      "error": "UNSUPPORTED_LAYOUT: header",
+      "parsed_fact_count": 0,
+      "passed": false
+    },
+    {
+      "id": "ingest-s25q3-CFS",
+      "stage": "raw_ingestion",
+      "document_id": "s25q3",
+      "scope": "CFS",
+      "expected_fact_count": 32,
+      "error": "UNSUPPORTED_LAYOUT: header",
+      "parsed_fact_count": 0,
+      "passed": false
+    },
+    {
+      "id": "ingest-s25q3-OFS",
+      "stage": "raw_ingestion",
+      "document_id": "s25q3",
+      "scope": "OFS",
+      "expected_fact_count": 32,
+      "error": "UNSUPPORTED_LAYOUT: header",
+      "parsed_fact_count": 0,
+      "passed": false
+    },
+    {
+      "id": "retrieve-01",
+      "stage": "fixture_retrieval",
+      "query": "samsung CFS 2025 Q3 quarter revenue KRW",
+      "gold_fact_id": "s25q3-CFS-revenue-2025-q-KRW",
+      "query_style": "controlled",
+      "expected_rank_max": 1,
+      "rank": 1,
+      "retrieved": [
+        "s25q3-CFS-revenue-2025-q-KRW"
+      ],
+      "passed": true
+    },
+    {
+      "id": "retrieve-02",
+      "stage": "fixture_retrieval",
+      "query": "samsung OFS 2025 Q2 quarter operating_profit KRW",
+      "gold_fact_id": "s25q2-OFS-operating_profit-2025-q-KRW",
+      "query_style": "controlled",
+      "expected_rank_max": 1,
+      "rank": 1,
+      "retrieved": [
+        "s25q2-OFS-operating_profit-2025-q-KRW"
+      ],
+      "passed": true
+    },
+    {
+      "id": "retrieve-03",
+      "stage": "fixture_retrieval",
+      "query": "삼성전자 연결 2025년 3분기 누적 매출액 원화",
+      "gold_fact_id": "s25q3-CFS-revenue-2025-ytd-KRW",
+      "query_style": "controlled",
+      "expected_rank_max": 1,
+      "rank": 1,
+      "retrieved": [
+        "s25q3-CFS-revenue-2025-ytd-KRW"
+      ],
+      "passed": true
+    },
+    {
+      "id": "retrieve-04",
+      "stage": "fixture_retrieval",
+      "query": "samsung CFS 2024 Q2 quarter gross_profit KRW",
+      "gold_fact_id": "s25q2-CFS-gross_profit-2024-q-KRW",
+      "query_style": "controlled",
+      "expected_rank_max": 1,
+      "rank": 1,
+      "retrieved": [
+        "s25q2-CFS-gross_profit-2024-q-KRW"
+      ],
+      "passed": true
+    },
+    {
+      "id": "retrieve-05",
+      "stage": "fixture_retrieval",
+      "query": "삼성전자 별도 2025년 3분기 3개월 당기순이익 원화",
+      "gold_fact_id": "s25q3-OFS-net_profit-2025-q-KRW",
+      "query_style": "controlled",
+      "expected_rank_max": 1,
+      "rank": 1,
+      "retrieved": [
+        "s25q3-OFS-net_profit-2025-q-KRW"
+      ],
+      "passed": true
+    },
+    {
+      "id": "retrieve-06",
+      "stage": "fixture_retrieval",
+      "query": "What was Samsung consolidated revenue in the third quarter of 2025?",
+      "gold_fact_id": "s25q3-CFS-revenue-2025-q-KRW",
+      "query_style": "natural",
+      "expected_rank_max": 1,
+      "rank": null,
+      "retrieved": [],
+      "passed": false
+    },
+    {
+      "id": "retrieve-07",
+      "stage": "fixture_retrieval",
+      "query": "삼성전자 2025년 2분기 별도 영업이익은 얼마인가요?",
+      "gold_fact_id": "s25q2-OFS-operating_profit-2025-q-KRW",
+      "query_style": "natural",
+      "expected_rank_max": 1,
+      "rank": null,
+      "retrieved": [],
+      "passed": false
+    },
+    {
+      "id": "retrieve-08",
+      "stage": "fixture_retrieval",
+      "query": "How much gross profit did Samsung report for Q2 2025 on a consolidated basis?",
+      "gold_fact_id": "s25q2-CFS-gross_profit-2025-q-KRW",
+      "query_style": "natural",
+      "expected_rank_max": 1,
+      "rank": null,
+      "retrieved": [],
+      "passed": false
+    },
+    {
+      "id": "retrieve-09",
+      "stage": "fixture_retrieval",
+      "query": "Show Samsung separate net income for the first nine months of 2025 in won.",
+      "gold_fact_id": "s25q3-OFS-net_profit-2025-ytd-KRW",
+      "query_style": "natural",
+      "expected_rank_max": 1,
+      "rank": null,
+      "retrieved": [],
+      "passed": false
+    },
+    {
+      "id": "retrieve-10",
+      "stage": "fixture_retrieval",
+      "query": "2025년 3분기 삼성전자 연결 누적 매출을 알려줘",
+      "gold_fact_id": "s25q3-CFS-revenue-2025-ytd-KRW",
+      "query_style": "natural",
+      "expected_rank_max": 1,
+      "rank": null,
+      "retrieved": [],
+      "passed": false
+    },
+    {
+      "id": "calc-01",
+      "stage": "fixture_calculation",
+      "operation": "compare",
+      "inputs": [
+        "s25q3-CFS-revenue-2025-q-KRW",
+        "s25q2-CFS-revenue-2025-q-KRW"
+      ],
+      "mode": "qoq",
+      "expected_status": "verified",
+      "expected_value": "15.4164",
+      "expected_issues": [],
+      "result": {
+        "status": "verified",
+        "issues": [],
+        "growth_pct": "15.4164",
+        "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+        "normalized_inputs": [
+          "86061747000000",
+          "74566317000000"
+        ],
+        "currency": "KRW",
+        "evidence": [
+          {
+            "id": "s25q3-CFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-07-01",
+            "end": "2025-09-30",
+            "value": "86061747",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q3",
+            "document_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          },
+          {
+            "id": "s25q2-CFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-04-01",
+            "end": "2025-06-30",
+            "value": "74566317",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf",
+            "page": 44,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q2",
+            "document_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ],
+        "mode": "qoq"
+      },
+      "checks": {
+        "status": true,
+        "value": true,
+        "evidence_preserved": true,
+        "issues": true
+      },
+      "passed": true
+    },
+    {
+      "id": "calc-02",
+      "stage": "fixture_calculation",
+      "operation": "compare",
+      "inputs": [
+        "s25q3-OFS-revenue-2025-q-KRW",
+        "s25q2-OFS-revenue-2025-q-KRW"
+      ],
+      "mode": "qoq",
+      "expected_status": "verified",
+      "expected_value": "14.6693",
+      "expected_issues": [],
+      "result": {
+        "status": "verified",
+        "issues": [],
+        "growth_pct": "14.6693",
+        "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+        "normalized_inputs": [
+          "62799068000000",
+          "54765394000000"
+        ],
+        "currency": "KRW",
+        "evidence": [
+          {
+            "id": "s25q3-OFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "OFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-07-01",
+            "end": "2025-09-30",
+            "value": "62799068",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_3Q_Interim_Report.pdf",
+            "page": 89,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q3",
+            "document_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          },
+          {
+            "id": "s25q2-OFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "OFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-04-01",
+            "end": "2025-06-30",
+            "value": "54765394",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf",
+            "page": 96,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q2",
+            "document_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ],
+        "mode": "qoq"
+      },
+      "checks": {
+        "status": true,
+        "value": true,
+        "evidence_preserved": true,
+        "issues": true
+      },
+      "passed": true
+    },
+    {
+      "id": "calc-03",
+      "stage": "fixture_calculation",
+      "operation": "compare",
+      "inputs": [
+        "s25q3-CFS-operating_profit-2025-q-KRW",
+        "s25q2-CFS-operating_profit-2025-q-KRW"
+      ],
+      "mode": "qoq",
+      "expected_status": "verified",
+      "expected_value": "160.1778",
+      "expected_issues": [],
+      "result": {
+        "status": "verified",
+        "issues": [],
+        "growth_pct": "160.1778",
+        "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+        "normalized_inputs": [
+          "12166062000000",
+          "4676057000000"
+        ],
+        "currency": "KRW",
+        "evidence": [
+          {
+            "id": "s25q3-CFS-operating_profit-2025-q-KRW",
+            "company": "samsung",
+            "metric": "operating_profit",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-07-01",
+            "end": "2025-09-30",
+            "value": "12166062",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Operating profit",
+            "column": "2025 Q KRW",
+            "document_id": "s25q3",
+            "document_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          },
+          {
+            "id": "s25q2-CFS-operating_profit-2025-q-KRW",
+            "company": "samsung",
+            "metric": "operating_profit",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-04-01",
+            "end": "2025-06-30",
+            "value": "4676057",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf",
+            "page": 44,
+            "row": "Operating profit",
+            "column": "2025 Q KRW",
+            "document_id": "s25q2",
+            "document_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ],
+        "mode": "qoq"
+      },
+      "checks": {
+        "status": true,
+        "value": true,
+        "evidence_preserved": true,
+        "issues": true
+      },
+      "passed": true
+    },
+    {
+      "id": "calc-04",
+      "stage": "fixture_calculation",
+      "operation": "compare",
+      "inputs": [
+        "s25q3-OFS-net_profit-2025-q-KRW",
+        "s25q2-OFS-net_profit-2025-q-KRW"
+      ],
+      "mode": "qoq",
+      "expected_status": "verified",
+      "expected_value": "287.6634",
+      "expected_issues": [],
+      "result": {
+        "status": "verified",
+        "issues": [],
+        "growth_pct": "287.6634",
+        "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+        "normalized_inputs": [
+          "10668573000000",
+          "2752020000000"
+        ],
+        "currency": "KRW",
+        "evidence": [
+          {
+            "id": "s25q3-OFS-net_profit-2025-q-KRW",
+            "company": "samsung",
+            "metric": "net_profit",
+            "scope": "OFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-07-01",
+            "end": "2025-09-30",
+            "value": "10668573",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_3Q_Interim_Report.pdf",
+            "page": 89,
+            "row": "Profit for the period",
+            "column": "2025 Q KRW",
+            "document_id": "s25q3",
+            "document_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          },
+          {
+            "id": "s25q2-OFS-net_profit-2025-q-KRW",
+            "company": "samsung",
+            "metric": "net_profit",
+            "scope": "OFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-04-01",
+            "end": "2025-06-30",
+            "value": "2752020",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf",
+            "page": 96,
+            "row": "Profit for the period",
+            "column": "2025 Q KRW",
+            "document_id": "s25q2",
+            "document_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ],
+        "mode": "qoq"
+      },
+      "checks": {
+        "status": true,
+        "value": true,
+        "evidence_preserved": true,
+        "issues": true
+      },
+      "passed": true
+    },
+    {
+      "id": "calc-05",
+      "stage": "fixture_calculation",
+      "operation": "compare",
+      "inputs": [
+        "s25q3-CFS-gross_profit-2025-q-KRW",
+        "s25q3-CFS-gross_profit-2024-q-KRW"
+      ],
+      "mode": "yoy",
+      "expected_status": "verified",
+      "expected_value": "11.6268",
+      "expected_issues": [],
+      "result": {
+        "status": "verified",
+        "issues": [],
+        "growth_pct": "11.6268",
+        "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+        "normalized_inputs": [
+          "33492127000000",
+          "30003648000000"
+        ],
+        "currency": "KRW",
+        "evidence": [
+          {
+            "id": "s25q3-CFS-gross_profit-2025-q-KRW",
+            "company": "samsung",
+            "metric": "gross_profit",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-07-01",
+            "end": "2025-09-30",
+            "value": "33492127",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Gross profit",
+            "column": "2025 Q KRW",
+            "document_id": "s25q3",
+            "document_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          },
+          {
+            "id": "s25q3-CFS-gross_profit-2024-q-KRW",
+            "company": "samsung",
+            "metric": "gross_profit",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-07-01",
+            "end": "2024-09-30",
+            "value": "30003648",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Gross profit",
+            "column": "2024 Q KRW",
+            "document_id": "s25q3",
+            "document_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ],
+        "mode": "yoy"
+      },
+      "checks": {
+        "status": true,
+        "value": true,
+        "evidence_preserved": true,
+        "issues": true
+      },
+      "passed": true
+    },
+    {
+      "id": "calc-06",
+      "stage": "fixture_calculation",
+      "operation": "reconcile",
+      "inputs": [
+        "s25q3-CFS-revenue-2025-ytd-KRW",
+        "s25q2-CFS-revenue-2025-ytd-KRW",
+        "s25q3-CFS-revenue-2025-q-KRW"
+      ],
+      "expected_status": "verified",
+      "expected_value": "86061747",
+      "expected_issues": [],
+      "result": {
+        "status": "verified",
+        "issues": [],
+        "derived_value": "86061747",
+        "difference": "0",
+        "formula": "(YTD × scale - previous YTD × scale) / direct scale",
+        "normalized_inputs": [
+          "239768567000000",
+          "153706820000000",
+          "86061747000000"
+        ],
+        "evidence": [
+          {
+            "id": "s25q3-CFS-revenue-2025-ytd-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "value": "239768567",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2025 YTD KRW",
+            "document_id": "s25q3",
+            "document_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 9
+          },
+          {
+            "id": "s25q2-CFS-revenue-2025-ytd-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-01-01",
+            "end": "2025-06-30",
+            "value": "153706820",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf",
+            "page": 44,
+            "row": "Revenue",
+            "column": "2025 YTD KRW",
+            "document_id": "s25q2",
+            "document_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 6
+          },
+          {
+            "id": "s25q3-CFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-07-01",
+            "end": "2025-09-30",
+            "value": "86061747",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q3",
+            "document_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ]
+      },
+      "checks": {
+        "status": true,
+        "value": true,
+        "evidence_preserved": true,
+        "issues": true
+      },
+      "passed": true
+    },
+    {
+      "id": "calc-07",
+      "stage": "fixture_calculation",
+      "operation": "reconcile",
+      "inputs": [
+        "s25q3-OFS-operating_profit-2025-ytd-KRW",
+        "s25q2-OFS-operating_profit-2025-ytd-KRW",
+        "s25q3-OFS-operating_profit-2025-q-KRW"
+      ],
+      "expected_status": "verified",
+      "expected_value": "7941086",
+      "expected_issues": [],
+      "result": {
+        "status": "verified",
+        "issues": [],
+        "derived_value": "7941086",
+        "difference": "0",
+        "formula": "(YTD × scale - previous YTD × scale) / direct scale",
+        "normalized_inputs": [
+          "10601191000000",
+          "2660105000000",
+          "7941086000000"
+        ],
+        "evidence": [
+          {
+            "id": "s25q3-OFS-operating_profit-2025-ytd-KRW",
+            "company": "samsung",
+            "metric": "operating_profit",
+            "scope": "OFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "value": "10601191",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_3Q_Interim_Report.pdf",
+            "page": 89,
+            "row": "Operating profit",
+            "column": "2025 YTD KRW",
+            "document_id": "s25q3",
+            "document_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 9
+          },
+          {
+            "id": "s25q2-OFS-operating_profit-2025-ytd-KRW",
+            "company": "samsung",
+            "metric": "operating_profit",
+            "scope": "OFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-01-01",
+            "end": "2025-06-30",
+            "value": "2660105",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf",
+            "page": 96,
+            "row": "Operating profit",
+            "column": "2025 YTD KRW",
+            "document_id": "s25q2",
+            "document_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 6
+          },
+          {
+            "id": "s25q3-OFS-operating_profit-2025-q-KRW",
+            "company": "samsung",
+            "metric": "operating_profit",
+            "scope": "OFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-07-01",
+            "end": "2025-09-30",
+            "value": "7941086",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_3Q_Interim_Report.pdf",
+            "page": 89,
+            "row": "Operating profit",
+            "column": "2025 Q KRW",
+            "document_id": "s25q3",
+            "document_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ]
+      },
+      "checks": {
+        "status": true,
+        "value": true,
+        "evidence_preserved": true,
+        "issues": true
+      },
+      "passed": true
+    },
+    {
+      "id": "calc-08",
+      "stage": "fixture_calculation",
+      "operation": "reconcile",
+      "inputs": [
+        "s25q3-CFS-net_profit-2025-ytd-KRW",
+        "s25q2-CFS-net_profit-2025-ytd-KRW",
+        "s25q3-CFS-net_profit-2025-q-KRW"
+      ],
+      "expected_status": "needs_review",
+      "expected_value": "0",
+      "expected_issues": [
+        "NUMERIC_CONFLICT"
+      ],
+      "result": {
+        "status": "needs_review",
+        "issues": [
+          "NUMERIC_CONFLICT"
+        ],
+        "derived_value": "0",
+        "difference": "-5116435",
+        "formula": "(YTD × scale - previous YTD × scale) / direct scale",
+        "normalized_inputs": [
+          "13339313000000",
+          "13339313000000",
+          "5116435000000"
+        ],
+        "evidence": [
+          {
+            "id": "s25q3-CFS-net_profit-2025-ytd-KRW",
+            "company": "samsung",
+            "metric": "net_profit",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-01-01",
+            "end": "2025-09-30",
+            "value": "13339313",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Profit for the period",
+            "column": "2025 YTD KRW",
+            "document_id": "s25q3",
+            "document_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 9
+          },
+          {
+            "id": "s25q2-CFS-net_profit-2025-ytd-KRW",
+            "company": "samsung",
+            "metric": "net_profit",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-01-01",
+            "end": "2025-06-30",
+            "value": "13339313",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf",
+            "page": 44,
+            "row": "Profit for the period",
+            "column": "2025 YTD KRW",
+            "document_id": "s25q2",
+            "document_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 6
+          },
+          {
+            "id": "s25q3-CFS-net_profit-2025-q-KRW",
+            "company": "samsung",
+            "metric": "net_profit",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-07-01",
+            "end": "2025-09-30",
+            "value": "5116435",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Profit for the period",
+            "column": "2025 Q KRW",
+            "document_id": "s25q3",
+            "document_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ]
+      },
+      "checks": {
+        "status": true,
+        "value": true,
+        "evidence_preserved": true,
+        "issues": true
+      },
+      "passed": true
+    },
+    {
+      "id": "context-scope",
+      "stage": "fixture_context",
+      "operation": "compare",
+      "mode": "qoq",
+      "inputs": [
+        "s25q3-CFS-revenue-2025-q-KRW",
+        "s25q2-CFS-revenue-2025-q-KRW"
+      ],
+      "mutation": {
+        "input_index": 1,
+        "changes": {
+          "scope": "OFS"
+        }
+      },
+      "expected_status": "needs_review",
+      "expected_value": null,
+      "expected_issue": "SCOPE_MISMATCH",
+      "result": {
+        "status": "needs_review",
+        "issues": [
+          "SCOPE_MISMATCH",
+          "SOURCE_MISMATCH"
+        ],
+        "growth_pct": null,
+        "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+        "normalized_inputs": [
+          "86061747000000",
+          "74566317000000"
+        ],
+        "currency": "KRW",
+        "evidence": [
+          {
+            "id": "s25q3-CFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-07-01",
+            "end": "2025-09-30",
+            "value": "86061747",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q3",
+            "document_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          },
+          {
+            "id": "s25q2-CFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "OFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-04-01",
+            "end": "2025-06-30",
+            "value": "74566317",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf",
+            "page": 44,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q2",
+            "document_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ],
+        "mode": "qoq"
+      },
+      "checks": {
+        "status": true,
+        "value": true,
+        "evidence_preserved": true,
+        "issues": true
+      },
+      "passed": true
+    },
+    {
+      "id": "context-period",
+      "stage": "fixture_context",
+      "operation": "compare",
+      "mode": "qoq",
+      "inputs": [
+        "s25q3-CFS-revenue-2025-q-KRW",
+        "s25q2-CFS-revenue-2025-q-KRW"
+      ],
+      "mutation": {
+        "input_index": 1,
+        "changes": {
+          "start": "2025-01-01"
+        }
+      },
+      "expected_status": "needs_review",
+      "expected_value": null,
+      "expected_issue": "PERIOD_MISMATCH",
+      "result": {
+        "status": "needs_review",
+        "issues": [
+          "SOURCE_MISMATCH",
+          "PERIOD_MISMATCH"
+        ],
+        "growth_pct": null,
+        "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+        "normalized_inputs": [
+          "86061747000000",
+          "74566317000000"
+        ],
+        "currency": "KRW",
+        "evidence": [
+          {
+            "id": "s25q3-CFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-07-01",
+            "end": "2025-09-30",
+            "value": "86061747",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q3",
+            "document_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          },
+          {
+            "id": "s25q2-CFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-01-01",
+            "end": "2025-06-30",
+            "value": "74566317",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf",
+            "page": 44,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q2",
+            "document_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 6
+          }
+        ],
+        "mode": "qoq"
+      },
+      "checks": {
+        "status": true,
+        "value": true,
+        "evidence_preserved": true,
+        "issues": true
+      },
+      "passed": true
+    },
+    {
+      "id": "context-unit",
+      "stage": "fixture_context",
+      "operation": "compare",
+      "mode": "qoq",
+      "inputs": [
+        "s25q3-CFS-revenue-2025-q-KRW",
+        "s25q2-CFS-revenue-2025-q-KRW"
+      ],
+      "mutation": {
+        "input_index": 1,
+        "changes": {
+          "scale": 7
+        }
+      },
+      "expected_status": "needs_review",
+      "expected_value": null,
+      "expected_issue": "UNKNOWN_UNIT",
+      "result": {
+        "status": "needs_review",
+        "issues": [
+          "UNKNOWN_UNIT",
+          "SOURCE_MISMATCH"
+        ],
+        "growth_pct": null,
+        "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+        "normalized_inputs": [
+          "86061747000000",
+          "521964219"
+        ],
+        "currency": "KRW",
+        "evidence": [
+          {
+            "id": "s25q3-CFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-07-01",
+            "end": "2025-09-30",
+            "value": "86061747",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q3",
+            "document_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          },
+          {
+            "id": "s25q2-CFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 7,
+            "start": "2025-04-01",
+            "end": "2025-06-30",
+            "value": "74566317",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf",
+            "page": 44,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q2",
+            "document_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ],
+        "mode": "qoq"
+      },
+      "checks": {
+        "status": true,
+        "value": true,
+        "evidence_preserved": true,
+        "issues": true
+      },
+      "passed": true
+    },
+    {
+      "id": "context-company",
+      "stage": "fixture_context",
+      "operation": "compare",
+      "mode": "qoq",
+      "inputs": [
+        "s25q3-CFS-revenue-2025-q-KRW",
+        "s25q2-CFS-revenue-2025-q-KRW"
+      ],
+      "mutation": {
+        "input_index": 1,
+        "changes": {
+          "company": "other"
+        }
+      },
+      "expected_status": "needs_review",
+      "expected_value": null,
+      "expected_issue": "COMPANY_MISMATCH",
+      "result": {
+        "status": "needs_review",
+        "issues": [
+          "COMPANY_MISMATCH",
+          "SOURCE_MISMATCH"
+        ],
+        "growth_pct": null,
+        "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+        "normalized_inputs": [
+          "86061747000000",
+          "74566317000000"
+        ],
+        "currency": "KRW",
+        "evidence": [
+          {
+            "id": "s25q3-CFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-07-01",
+            "end": "2025-09-30",
+            "value": "86061747",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q3",
+            "document_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          },
+          {
+            "id": "s25q2-CFS-revenue-2025-q-KRW",
+            "company": "other",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-04-01",
+            "end": "2025-06-30",
+            "value": "74566317",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf",
+            "page": 44,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q2",
+            "document_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ],
+        "mode": "qoq"
+      },
+      "checks": {
+        "status": true,
+        "value": true,
+        "evidence_preserved": true,
+        "issues": true
+      },
+      "passed": true
+    },
+    {
+      "id": "context-metric",
+      "stage": "fixture_context",
+      "operation": "compare",
+      "mode": "qoq",
+      "inputs": [
+        "s25q3-CFS-revenue-2025-q-KRW",
+        "s25q2-CFS-revenue-2025-q-KRW"
+      ],
+      "mutation": {
+        "input_index": 1,
+        "changes": {
+          "metric": "gross_profit"
+        }
+      },
+      "expected_status": "needs_review",
+      "expected_value": null,
+      "expected_issue": "METRIC_MISMATCH",
+      "result": {
+        "status": "needs_review",
+        "issues": [
+          "METRIC_MISMATCH",
+          "SOURCE_MISMATCH"
+        ],
+        "growth_pct": null,
+        "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+        "normalized_inputs": [
+          "86061747000000",
+          "74566317000000"
+        ],
+        "currency": "KRW",
+        "evidence": [
+          {
+            "id": "s25q3-CFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-07-01",
+            "end": "2025-09-30",
+            "value": "86061747",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q3",
+            "document_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          },
+          {
+            "id": "s25q2-CFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "gross_profit",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-04-01",
+            "end": "2025-06-30",
+            "value": "74566317",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf",
+            "page": 44,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q2",
+            "document_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ],
+        "mode": "qoq"
+      },
+      "checks": {
+        "status": true,
+        "value": true,
+        "evidence_preserved": true,
+        "issues": true
+      },
+      "passed": true
+    },
+    {
+      "id": "context-currency",
+      "stage": "fixture_context",
+      "operation": "compare",
+      "mode": "qoq",
+      "inputs": [
+        "s25q3-CFS-revenue-2025-q-KRW",
+        "s25q2-CFS-revenue-2025-q-KRW"
+      ],
+      "mutation": {
+        "input_index": 1,
+        "changes": {
+          "currency": "USD"
+        }
+      },
+      "expected_status": "needs_review",
+      "expected_value": null,
+      "expected_issue": "CURRENCY_MISMATCH",
+      "result": {
+        "status": "needs_review",
+        "issues": [
+          "CURRENCY_MISMATCH",
+          "SOURCE_MISMATCH",
+          "CONVENIENCE_TRANSLATION"
+        ],
+        "growth_pct": null,
+        "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+        "normalized_inputs": [
+          "86061747000000",
+          "74566317000000"
+        ],
+        "currency": "KRW",
+        "evidence": [
+          {
+            "id": "s25q3-CFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-07-01",
+            "end": "2025-09-30",
+            "value": "86061747",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q3",
+            "document_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          },
+          {
+            "id": "s25q2-CFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "start": "2025-04-01",
+            "end": "2025-06-30",
+            "value": "74566317",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf",
+            "page": 44,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q2",
+            "document_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ],
+        "mode": "qoq"
+      },
+      "checks": {
+        "status": true,
+        "value": true,
+        "evidence_preserved": true,
+        "issues": true
+      },
+      "passed": true
+    },
+    {
+      "id": "context-translation",
+      "stage": "fixture_context",
+      "operation": "compare",
+      "mode": "qoq",
+      "inputs": [
+        "s25q3-CFS-revenue-2025-q-KRW",
+        "s25q2-CFS-revenue-2025-q-KRW"
+      ],
+      "mutation": {
+        "input_index": 1,
+        "changes": {
+          "translation_basis": "convenience_translation"
+        }
+      },
+      "expected_status": "needs_review",
+      "expected_value": null,
+      "expected_issue": "CONVENIENCE_TRANSLATION",
+      "result": {
+        "status": "needs_review",
+        "issues": [
+          "SOURCE_MISMATCH",
+          "CONVENIENCE_TRANSLATION"
+        ],
+        "growth_pct": null,
+        "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+        "normalized_inputs": [
+          "86061747000000",
+          "74566317000000"
+        ],
+        "currency": "KRW",
+        "evidence": [
+          {
+            "id": "s25q3-CFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-07-01",
+            "end": "2025-09-30",
+            "value": "86061747",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q3",
+            "document_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          },
+          {
+            "id": "s25q2-CFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-04-01",
+            "end": "2025-06-30",
+            "value": "74566317",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf",
+            "page": 44,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q2",
+            "document_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+            "translation_basis": "convenience_translation",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ],
+        "mode": "qoq"
+      },
+      "checks": {
+        "status": true,
+        "value": true,
+        "evidence_preserved": true,
+        "issues": true
+      },
+      "passed": true
+    },
+    {
+      "id": "context-zero",
+      "stage": "fixture_context",
+      "operation": "compare",
+      "mode": "qoq",
+      "inputs": [
+        "s25q3-CFS-revenue-2025-q-KRW",
+        "s25q2-CFS-revenue-2025-q-KRW"
+      ],
+      "mutation": {
+        "input_index": 1,
+        "changes": {
+          "value": "0"
+        }
+      },
+      "expected_status": "needs_review",
+      "expected_value": null,
+      "expected_issue": "ZERO_BASE",
+      "result": {
+        "status": "needs_review",
+        "issues": [
+          "SOURCE_MISMATCH",
+          "ZERO_BASE"
+        ],
+        "growth_pct": null,
+        "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+        "normalized_inputs": [
+          "86061747000000",
+          "0"
+        ],
+        "currency": "KRW",
+        "evidence": [
+          {
+            "id": "s25q3-CFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-07-01",
+            "end": "2025-09-30",
+            "value": "86061747",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q3",
+            "document_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          },
+          {
+            "id": "s25q2-CFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-04-01",
+            "end": "2025-06-30",
+            "value": "0",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf",
+            "page": 44,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q2",
+            "document_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ],
+        "mode": "qoq"
+      },
+      "checks": {
+        "status": true,
+        "value": true,
+        "evidence_preserved": true,
+        "issues": true
+      },
+      "passed": true
+    },
+    {
+      "id": "context-negative",
+      "stage": "fixture_context",
+      "operation": "compare",
+      "mode": "qoq",
+      "inputs": [
+        "s25q3-CFS-revenue-2025-q-KRW",
+        "s25q2-CFS-revenue-2025-q-KRW"
+      ],
+      "mutation": {
+        "input_index": 1,
+        "changes": {
+          "value": "-1"
+        }
+      },
+      "expected_status": "needs_review",
+      "expected_value": null,
+      "expected_issue": "NEGATIVE_BASE",
+      "result": {
+        "status": "needs_review",
+        "issues": [
+          "SOURCE_MISMATCH",
+          "NEGATIVE_BASE"
+        ],
+        "growth_pct": null,
+        "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+        "normalized_inputs": [
+          "86061747000000",
+          "-1000000"
+        ],
+        "currency": "KRW",
+        "evidence": [
+          {
+            "id": "s25q3-CFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-07-01",
+            "end": "2025-09-30",
+            "value": "86061747",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q3",
+            "document_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          },
+          {
+            "id": "s25q2-CFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-04-01",
+            "end": "2025-06-30",
+            "value": "-1",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf",
+            "page": 44,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q2",
+            "document_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ],
+        "mode": "qoq"
+      },
+      "checks": {
+        "status": true,
+        "value": true,
+        "evidence_preserved": true,
+        "issues": true
+      },
+      "passed": true
+    },
+    {
+      "id": "context-scale-equivalent",
+      "stage": "fixture_context",
+      "operation": "compare",
+      "mode": "qoq",
+      "inputs": [
+        "s25q3-CFS-revenue-2025-q-KRW",
+        "s25q2-CFS-revenue-2025-q-KRW"
+      ],
+      "mutation": {
+        "input_index": 1,
+        "changes": {
+          "scale": 1000,
+          "value": "74566317000"
+        }
+      },
+      "expected_status": "verified",
+      "expected_value": "15.4164",
+      "expected_issues": [],
+      "result": {
+        "status": "verified",
+        "issues": [],
+        "growth_pct": "15.4164",
+        "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+        "normalized_inputs": [
+          "86061747000000",
+          "74566317000000"
+        ],
+        "currency": "KRW",
+        "evidence": [
+          {
+            "id": "s25q3-CFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2025-07-01",
+            "end": "2025-09-30",
+            "value": "86061747",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q3",
+            "document_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          },
+          {
+            "id": "s25q2-CFS-revenue-2025-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000,
+            "start": "2025-04-01",
+            "end": "2025-06-30",
+            "value": "74566317000",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_Half_Interim_Report.pdf",
+            "page": 44,
+            "row": "Revenue",
+            "column": "2025 Q KRW",
+            "document_id": "s25q2",
+            "document_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ],
+        "mode": "qoq"
+      },
+      "checks": {
+        "status": true,
+        "value": true,
+        "evidence_preserved": true,
+        "issues": true
+      },
+      "passed": true
+    },
+    {
+      "id": "citation-original",
+      "stage": "fixture_citation",
+      "input": "s25q3-CFS-revenue-2025-q-KRW",
+      "mutation": {},
+      "expected_valid": true,
+      "actual_valid": true,
+      "passed": true
+    },
+    {
+      "id": "citation-page",
+      "stage": "fixture_citation",
+      "input": "s25q3-CFS-revenue-2025-q-KRW",
+      "mutation": {
+        "page": 35
+      },
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true
+    },
+    {
+      "id": "citation-hash",
+      "stage": "fixture_citation",
+      "input": "s25q3-CFS-revenue-2025-q-KRW",
+      "mutation": {
+        "document_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true
+    },
+    {
+      "id": "citation-url",
+      "stage": "fixture_citation",
+      "input": "s25q3-CFS-revenue-2025-q-KRW",
+      "mutation": {
+        "source_url": "https://example.org/fake.pdf"
+      },
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true
+    },
+    {
+      "id": "citation-row",
+      "stage": "fixture_citation",
+      "input": "s25q3-CFS-revenue-2025-q-KRW",
+      "mutation": {
+        "row": "Invented row"
+      },
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true
+    },
+    {
+      "id": "citation-value",
+      "stage": "fixture_citation",
+      "input": "s25q3-CFS-revenue-2025-q-KRW",
+      "mutation": {
+        "value": "1"
+      },
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true
+    },
+    {
+      "id": "citation-scale",
+      "stage": "fixture_citation",
+      "input": "s25q3-CFS-revenue-2025-q-KRW",
+      "mutation": {
+        "scale": 1000
+      },
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true
+    },
+    {
+      "id": "citation-company",
+      "stage": "fixture_citation",
+      "input": "s25q3-CFS-revenue-2025-q-KRW",
+      "mutation": {
+        "company": "other"
+      },
+      "expected_valid": false,
+      "actual_valid": false,
+      "passed": true
+    }
+  ],
+  "first_run_sha256": "cce68f9edc5cced8263c967d00b0685f587851dce0e82ed3b82a27fb49b43de4",
+  "first_run_path": "data/heldout/first-run.json",
+  "baseline_stage_counts": {
+    "fixture_calculation": {
+      "total": 8,
+      "passed": 8,
+      "failed": 0
+    },
+    "fixture_citation": {
+      "total": 8,
+      "passed": 5,
+      "failed": 3
+    },
+    "fixture_context": {
+      "total": 10,
+      "passed": 10,
+      "failed": 0
+    },
+    "fixture_retrieval": {
+      "total": 10,
+      "passed": 5,
+      "failed": 5
+    },
+    "raw_ingestion": {
+      "total": 4,
+      "passed": 0,
+      "failed": 4
+    }
+  },
+  "baseline_failure_ids": [
+    "ingest-s25q2-CFS",
+    "ingest-s25q2-OFS",
+    "ingest-s25q3-CFS",
+    "ingest-s25q3-OFS",
+    "retrieve-06",
+    "retrieve-07",
+    "retrieve-08",
+    "retrieve-09",
+    "retrieve-10",
+    "citation-value",
+    "citation-scale",
+    "citation-company"
+  ]
+}

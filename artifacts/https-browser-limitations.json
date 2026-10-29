@@ -1,0 +1,28 @@
+{
+  "direct_browser_status": "blocked",
+  "direct_chromium": [
+    {
+      "viewport": "1440x1000",
+      "tls_verification": true,
+      "url": "https://quarterguard.onrender.com",
+      "error": "Page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://quarterguard.onrender.com/\nCall log:\n  - navigating to \"https://quarterguard.onrender.com/\", waiting until \"load\"\n"
+    },
+    {
+      "viewport": "390x844",
+      "tls_verification": true,
+      "url": "https://quarterguard.onrender.com",
+      "error": "Page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://quarterguard.onrender.com/\nCall log:\n  - navigating to \"https://quarterguard.onrender.com/\", waiting until \"load\"\n"
+    }
+  ],
+  "firefox_isolated_ca_profile": "launch failed before navigation",
+  "firefox_error": "RenderCompositorSWGL failed mapping default framebuffer, no dt; BrowserType.launch_persistent_context: Timeout 30000ms exceeded",
+  "httpx_verified_https": {
+    "job": 200,
+    "health": 200,
+    "evaluation": 200
+  },
+  "tls_bypass_used": false,
+  "tinyfish_used": false,
+  "historical_public_commit": "14b2159cb22d350f30c2a259a2469cfe579058be",
+  "final_deployment_status": "not checked by this audit"
+}

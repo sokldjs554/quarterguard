@@ -1,14 +1,14 @@
 {
   "qoq-revenue": {
-    "run_id": "0a0974d8-dc44-4e3e-a363-013207847b66",
+    "run_id": "f7962860-7416-4543-87b9-107f2d299b5c",
     "case_id": "qoq-revenue",
     "title": "분기 매출 증감",
     "execution_mode": "prepared_replay",
     "planner": "deterministic_workflow",
     "workflow_success": true,
     "protocol": "2025-11-25",
-    "created_at": "2026-10-29T04:28:16.132384+00:00",
-    "latency_ms": 1851.588,
+    "created_at": "2026-10-29T14:31:09.547827+00:00",
+    "latency_ms": 1689.335,
     "model_calls": 0,
     "provider_api_cost_usd": 0,
     "cost_scope": "No paid model API calls; hosting and local compute excluded",
@@ -76,7 +76,7 @@
           "query": "samsung 2024 Q3 CFS revenue quarter KRW",
           "k": 3
         },
-        "latency_ms": 35.707,
+        "latency_ms": 31.994,
         "success": true,
         "output": {
           "hits": [
@@ -98,7 +98,7 @@
         "arguments": {
           "fact_id": "s24q3-CFS-revenue-2024-q-KRW"
         },
-        "latency_ms": 1.736,
+        "latency_ms": 1.311,
         "success": true,
         "output": {
           "id": "s24q3-CFS-revenue-2024-q-KRW",
@@ -129,7 +129,7 @@
           "query": "samsung 2024 Q2 CFS revenue quarter KRW",
           "k": 3
         },
-        "latency_ms": 3.081,
+        "latency_ms": 3.049,
         "success": true,
         "output": {
           "hits": [
@@ -151,7 +151,7 @@
         "arguments": {
           "fact_id": "s24q2-CFS-revenue-2024-q-KRW"
         },
-        "latency_ms": 1.426,
+        "latency_ms": 1.241,
         "success": true,
         "output": {
           "id": "s24q2-CFS-revenue-2024-q-KRW",
@@ -183,7 +183,7 @@
           "base_id": "s24q2-CFS-revenue-2024-q-KRW",
           "mode": "qoq"
         },
-        "latency_ms": 1.87,
+        "latency_ms": 2.349,
         "success": true,
         "output": {
           "status": "verified",
@@ -245,15 +245,15 @@
     ]
   },
   "ytd-trap": {
-    "run_id": "e16134ae-bff4-4e12-b329-c546c285d1ce",
+    "run_id": "d92ac078-81f7-4af6-9057-509704336507",
     "case_id": "ytd-trap",
     "title": "누적·분기 혼동",
     "execution_mode": "prepared_replay",
     "planner": "deterministic_workflow",
     "workflow_success": true,
     "protocol": "2025-11-25",
-    "created_at": "2026-10-29T04:28:17.961248+00:00",
-    "latency_ms": 1827.531,
+    "created_at": "2026-10-29T14:31:11.230689+00:00",
+    "latency_ms": 1682.567,
     "model_calls": 0,
     "provider_api_cost_usd": 0,
     "cost_scope": "No paid model API calls; hosting and local compute excluded",
@@ -323,7 +323,7 @@
           "query": "samsung 2024 Q3 CFS revenue ytd KRW",
           "k": 3
         },
-        "latency_ms": 32.531,
+        "latency_ms": 30.351,
         "success": true,
         "output": {
           "hits": [
@@ -345,7 +345,7 @@
         "arguments": {
           "fact_id": "s24q3-CFS-revenue-2024-ytd-KRW"
         },
-        "latency_ms": 1.775,
+        "latency_ms": 1.179,
         "success": true,
         "output": {
           "id": "s24q3-CFS-revenue-2024-ytd-KRW",
@@ -376,7 +376,7 @@
           "query": "samsung 2023 Q3 CFS revenue quarter KRW",
           "k": 3
         },
-        "latency_ms": 2.901,
+        "latency_ms": 2.928,
         "success": true,
         "output": {
           "hits": [
@@ -398,7 +398,7 @@
         "arguments": {
           "fact_id": "s24q3-CFS-revenue-2023-q-KRW"
         },
-        "latency_ms": 1.357,
+        "latency_ms": 1.393,
         "success": true,
         "output": {
           "id": "s24q3-CFS-revenue-2023-q-KRW",
@@ -430,7 +430,7 @@
           "base_id": "s24q3-CFS-revenue-2023-q-KRW",
           "mode": "yoy"
         },
-        "latency_ms": 5.171,
+        "latency_ms": 2.469,
         "success": true,
         "output": {
           "status": "needs_review",
@@ -494,15 +494,15 @@
     ]
   },
   "scope-trap": {
-    "run_id": "5d87b04d-3954-4364-9f6d-5fff60765934",
+    "run_id": "1e7c41d8-74aa-4bd2-854b-e73ea4dadcef",
     "case_id": "scope-trap",
     "title": "연결·별도 혼동",
     "execution_mode": "prepared_replay",
     "planner": "deterministic_workflow",
     "workflow_success": true,
     "protocol": "2025-11-25",
-    "created_at": "2026-10-29T04:28:19.695368+00:00",
-    "latency_ms": 1733.448,
+    "created_at": "2026-10-29T14:31:12.960196+00:00",
+    "latency_ms": 1729.176,
     "model_calls": 0,
     "provider_api_cost_usd": 0,
     "cost_scope": "No paid model API calls; hosting and local compute excluded",
@@ -572,7 +572,7 @@
           "query": "samsung 2024 Q3 CFS revenue quarter KRW",
           "k": 3
         },
-        "latency_ms": 33.277,
+        "latency_ms": 31.392,
         "success": true,
         "output": {
           "hits": [
@@ -594,7 +594,7 @@
         "arguments": {
           "fact_id": "s24q3-CFS-revenue-2024-q-KRW"
         },
-        "latency_ms": 1.4,
+        "latency_ms": 1.381,
         "success": true,
         "output": {
           "id": "s24q3-CFS-revenue-2024-q-KRW",
@@ -625,7 +625,7 @@
           "query": "samsung 2024 Q2 OFS revenue quarter KRW",
           "k": 3
         },
-        "latency_ms": 3.273,
+        "latency_ms": 3.286,
         "success": true,
         "output": {
           "hits": [
@@ -647,7 +647,7 @@
         "arguments": {
           "fact_id": "s24q2-OFS-revenue-2024-q-KRW"
         },
-        "latency_ms": 1.209,
+        "latency_ms": 1.276,
         "success": true,
         "output": {
           "id": "s24q2-OFS-revenue-2024-q-KRW",
@@ -679,7 +679,7 @@
           "base_id": "s24q2-OFS-revenue-2024-q-KRW",
           "mode": "qoq"
         },
-        "latency_ms": 2.141,
+        "latency_ms": 2.404,
         "success": true,
         "output": {
           "status": "needs_review",
@@ -743,15 +743,15 @@
     ]
   },
   "currency-trap": {
-    "run_id": "6b14396b-bb25-4f2b-a192-50911df29294",
+    "run_id": "936f3de5-42d0-4d4a-aaf4-c167fcf33a86",
     "case_id": "currency-trap",
     "title": "통화 혼동",
     "execution_mode": "prepared_replay",
     "planner": "deterministic_workflow",
     "workflow_success": true,
     "protocol": "2025-11-25",
-    "created_at": "2026-10-29T04:28:21.461871+00:00",
-    "latency_ms": 1766.077,
+    "created_at": "2026-10-29T14:31:14.648466+00:00",
+    "latency_ms": 1687.944,
     "model_calls": 0,
     "provider_api_cost_usd": 0,
     "cost_scope": "No paid model API calls; hosting and local compute excluded",
@@ -822,7 +822,7 @@
           "query": "samsung 2024 Q3 CFS revenue quarter KRW",
           "k": 3
         },
-        "latency_ms": 32.532,
+        "latency_ms": 31.354,
         "success": true,
         "output": {
           "hits": [
@@ -844,7 +844,7 @@
         "arguments": {
           "fact_id": "s24q3-CFS-revenue-2024-q-KRW"
         },
-        "latency_ms": 2.432,
+        "latency_ms": 1.956,
         "success": true,
         "output": {
           "id": "s24q3-CFS-revenue-2024-q-KRW",
@@ -875,7 +875,7 @@
           "query": "samsung 2024 Q2 CFS revenue quarter USD",
           "k": 3
         },
-        "latency_ms": 2.876,
+        "latency_ms": 2.883,
         "success": true,
         "output": {
           "hits": [
@@ -897,7 +897,7 @@
         "arguments": {
           "fact_id": "s24q2-CFS-revenue-2024-q-USD"
         },
-        "latency_ms": 1.423,
+        "latency_ms": 1.151,
         "success": true,
         "output": {
           "id": "s24q2-CFS-revenue-2024-q-USD",
@@ -929,7 +929,7 @@
           "base_id": "s24q2-CFS-revenue-2024-q-USD",
           "mode": "qoq"
         },
-        "latency_ms": 1.538,
+        "latency_ms": 2.237,
         "success": true,
         "output": {
           "status": "needs_review",
@@ -994,15 +994,15 @@
     ]
   },
   "reconcile-revenue": {
-    "run_id": "fbc69c4c-837f-4965-8247-86bc88935aed",
+    "run_id": "8a098eb2-9e0d-424e-8250-968d1f0ea331",
     "case_id": "reconcile-revenue",
     "title": "누적 차감 교차검증",
     "execution_mode": "prepared_replay",
     "planner": "deterministic_workflow",
     "workflow_success": true,
     "protocol": "2025-11-25",
-    "created_at": "2026-10-29T04:28:23.209935+00:00",
-    "latency_ms": 1747.762,
+    "created_at": "2026-10-29T14:31:16.343431+00:00",
+    "latency_ms": 1694.652,
     "model_calls": 0,
     "provider_api_cost_usd": 0,
     "cost_scope": "No paid model API calls; hosting and local compute excluded",
@@ -1091,7 +1091,7 @@
           "query": "samsung 2024 Q3 CFS revenue ytd KRW",
           "k": 3
         },
-        "latency_ms": 33.852,
+        "latency_ms": 30.443,
         "success": true,
         "output": {
           "hits": [
@@ -1113,7 +1113,7 @@
         "arguments": {
           "fact_id": "s24q3-CFS-revenue-2024-ytd-KRW"
         },
-        "latency_ms": 1.384,
+        "latency_ms": 1.346,
         "success": true,
         "output": {
           "id": "s24q3-CFS-revenue-2024-ytd-KRW",
@@ -1144,7 +1144,7 @@
           "query": "samsung 2024 Q2 CFS revenue ytd KRW",
           "k": 3
         },
-        "latency_ms": 3.019,
+        "latency_ms": 2.893,
         "success": true,
         "output": {
           "hits": [
@@ -1166,7 +1166,7 @@
         "arguments": {
           "fact_id": "s24q2-CFS-revenue-2024-ytd-KRW"
         },
-        "latency_ms": 1.274,
+        "latency_ms": 1.341,
         "success": true,
         "output": {
           "id": "s24q2-CFS-revenue-2024-ytd-KRW",
@@ -1197,7 +1197,7 @@
           "query": "samsung 2024 Q3 CFS revenue quarter KRW",
           "k": 3
         },
-        "latency_ms": 3.158,
+        "latency_ms": 2.784,
         "success": true,
         "output": {
           "hits": [
@@ -1219,7 +1219,7 @@
         "arguments": {
           "fact_id": "s24q3-CFS-revenue-2024-q-KRW"
         },
-        "latency_ms": 1.219,
+        "latency_ms": 1.23,
         "success": true,
         "output": {
           "id": "s24q3-CFS-revenue-2024-q-KRW",
@@ -1251,7 +1251,7 @@
           "previous_id": "s24q2-CFS-revenue-2024-ytd-KRW",
           "direct_id": "s24q3-CFS-revenue-2024-q-KRW"
         },
-        "latency_ms": 2.253,
+        "latency_ms": 2.405,
         "success": true,
         "output": {
           "status": "verified",
@@ -1334,15 +1334,15 @@
     ]
   },
   "qoq-profit": {
-    "run_id": "2218b524-8cd1-4a3b-b2ed-ef5bcad7de82",
+    "run_id": "d62e08a4-fa21-4d2f-9053-69a48313db18",
     "case_id": "qoq-profit",
     "title": "영업이익 증감",
     "execution_mode": "prepared_replay",
     "planner": "deterministic_workflow",
     "workflow_success": true,
     "protocol": "2025-11-25",
-    "created_at": "2026-10-29T04:28:24.943266+00:00",
-    "latency_ms": 1733.051,
+    "created_at": "2026-10-29T14:31:18.147884+00:00",
+    "latency_ms": 1804.164,
     "model_calls": 0,
     "provider_api_cost_usd": 0,
     "cost_scope": "No paid model API calls; hosting and local compute excluded",
@@ -1410,7 +1410,7 @@
           "query": "samsung 2024 Q3 CFS operating_profit quarter KRW",
           "k": 3
         },
-        "latency_ms": 33.066,
+        "latency_ms": 32.751,
         "success": true,
         "output": {
           "hits": [
@@ -1432,7 +1432,7 @@
         "arguments": {
           "fact_id": "s24q3-CFS-operating_profit-2024-q-KRW"
         },
-        "latency_ms": 1.278,
+        "latency_ms": 1.14,
         "success": true,
         "output": {
           "id": "s24q3-CFS-operating_profit-2024-q-KRW",
@@ -1463,7 +1463,7 @@
           "query": "samsung 2024 Q2 CFS operating_profit quarter KRW",
           "k": 3
         },
-        "latency_ms": 2.834,
+        "latency_ms": 2.753,
         "success": true,
         "output": {
           "hits": [
@@ -1485,7 +1485,7 @@
         "arguments": {
           "fact_id": "s24q2-CFS-operating_profit-2024-q-KRW"
         },
-        "latency_ms": 3.866,
+        "latency_ms": 1.112,
         "success": true,
         "output": {
           "id": "s24q2-CFS-operating_profit-2024-q-KRW",
@@ -1517,7 +1517,7 @@
           "base_id": "s24q2-CFS-operating_profit-2024-q-KRW",
           "mode": "qoq"
         },
-        "latency_ms": 1.702,
+        "latency_ms": 2.13,
         "success": true,
         "output": {
           "status": "verified",
@@ -1579,15 +1579,15 @@
     ]
   },
   "negative-base": {
-    "run_id": "3d2742b9-8f6e-4245-953e-8ebd49e94bf6",
+    "run_id": "81a22a52-d5d5-49e0-8858-5be8f4e467b0",
     "case_id": "negative-base",
     "title": "적자 기저 비교",
     "execution_mode": "prepared_replay",
     "planner": "deterministic_workflow",
     "workflow_success": true,
     "protocol": "2025-11-25",
-    "created_at": "2026-10-29T04:28:26.742746+00:00",
-    "latency_ms": 1799.225,
+    "created_at": "2026-10-29T14:31:19.915270+00:00",
+    "latency_ms": 1767.113,
     "model_calls": 0,
     "provider_api_cost_usd": 0,
     "cost_scope": "No paid model API calls; hosting and local compute excluded",
@@ -1657,7 +1657,7 @@
           "query": "samsung 2024 Q3 OFS operating_profit quarter KRW",
           "k": 3
         },
-        "latency_ms": 35.519,
+        "latency_ms": 34.589,
         "success": true,
         "output": {
           "hits": [
@@ -1679,7 +1679,7 @@
         "arguments": {
           "fact_id": "s24q3-OFS-operating_profit-2024-q-KRW"
         },
-        "latency_ms": 1.287,
+        "latency_ms": 1.109,
         "success": true,
         "output": {
           "id": "s24q3-OFS-operating_profit-2024-q-KRW",
@@ -1710,7 +1710,7 @@
           "query": "samsung 2023 Q3 OFS operating_profit quarter KRW",
           "k": 3
         },
-        "latency_ms": 2.807,
+        "latency_ms": 2.438,
         "success": true,
         "output": {
           "hits": [
@@ -1732,7 +1732,7 @@
         "arguments": {
           "fact_id": "s24q3-OFS-operating_profit-2023-q-KRW"
         },
-        "latency_ms": 1.271,
+        "latency_ms": 1.129,
         "success": true,
         "output": {
           "id": "s24q3-OFS-operating_profit-2023-q-KRW",
@@ -1764,7 +1764,7 @@
           "base_id": "s24q3-OFS-operating_profit-2023-q-KRW",
           "mode": "yoy"
         },
-        "latency_ms": 1.701,
+        "latency_ms": 4.268,
         "success": true,
         "output": {
           "status": "needs_review",
@@ -1828,15 +1828,15 @@
     ]
   },
   "no-evidence": {
-    "run_id": "ba98b3e3-dda5-46a7-8847-7c0378fb64ea",
+    "run_id": "d89da964-d455-4167-9c4c-cb47bc1ceb69",
     "case_id": "no-evidence",
     "title": "근거 부재",
     "execution_mode": "prepared_replay",
     "planner": "deterministic_workflow",
     "workflow_success": true,
     "protocol": "2025-11-25",
-    "created_at": "2026-10-29T04:28:28.476890+00:00",
-    "latency_ms": 1733.525,
+    "created_at": "2026-10-29T14:31:21.579998+00:00",
+    "latency_ms": 1664.349,
     "model_calls": 0,
     "provider_api_cost_usd": 0,
     "cost_scope": "No paid model API calls; hosting and local compute excluded",
@@ -1855,7 +1855,7 @@
           "query": "samsung 2025 Q3 CFS revenue quarter KRW",
           "k": 3
         },
-        "latency_ms": 36.295,
+        "latency_ms": 30.174,
         "success": true,
         "output": {
           "hits": [],
