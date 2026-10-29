@@ -1,0 +1,74 @@
+{
+  "original_workflow_metrics": {
+    "checks": [
+      {
+        "case_id": "qoq-revenue",
+        "status_correct": true,
+        "value_correct": true,
+        "issue_correct": null,
+        "source_valid": true
+      },
+      {
+        "case_id": "ytd-trap",
+        "status_correct": true,
+        "value_correct": null,
+        "issue_correct": true,
+        "source_valid": true
+      },
+      {
+        "case_id": "scope-trap",
+        "status_correct": true,
+        "value_correct": null,
+        "issue_correct": true,
+        "source_valid": true
+      },
+      {
+        "case_id": "currency-trap",
+        "status_correct": true,
+        "value_correct": null,
+        "issue_correct": true,
+        "source_valid": true
+      },
+      {
+        "case_id": "reconcile-revenue",
+        "status_correct": true,
+        "value_correct": true,
+        "issue_correct": null,
+        "source_valid": true
+      },
+      {
+        "case_id": "qoq-profit",
+        "status_correct": true,
+        "value_correct": false,
+        "issue_correct": null,
+        "source_valid": true
+      },
+      {
+        "case_id": "negative-base",
+        "status_correct": true,
+        "value_correct": null,
+        "issue_correct": true,
+        "source_valid": true
+      },
+      {
+        "case_id": "no-evidence",
+        "status_correct": true,
+        "value_correct": null,
+        "issue_correct": true,
+        "source_valid": null
+      }
+    ],
+    "status_accuracy": 1.0,
+    "numeric_accuracy": 0.6666666666666666,
+    "tool_success_rate": 1.0,
+    "latency_p50_ms": 1634.3615,
+    "latency_p95_ms": 1724.14275,
+    "model_calls": 0,
+    "provider_api_cost_usd": 0,
+    "cost_scope": "Paid model API only, excludes hosting/CPU/download costs"
+  },
+  "finding": "qoq-profit gold rounding typo: -12.0694 vs -12.06933861157704",
+  "correction": "-12.0693",
+  "verification": "Independent fractions.Fraction((9183371-10443878),10443878)*100; PDF Q3 p34 and H1 p48",
+  "human_reviewed": false
+}
