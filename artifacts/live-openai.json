@@ -1,0 +1,1035 @@
+{
+  "created_at": "2026-10-29T04:56:37.045092+00:00",
+  "commit": "738357883f014e2c010a008145c18be66ede702c",
+  "run_id": "40820498010",
+  "facts_sha256": "d3a7074f9f1ef0745aa04a9586833b1d1f2bf188102ef66fdb6f315b73425969",
+  "public_demo_uses_these_providers": false,
+  "openai": {
+    "status": "passed",
+    "calls_attempted": 4,
+    "records": [
+      {
+        "case_id": "qoq-revenue",
+        "source_checks": {
+          "workflow_success": true,
+          "status_correct": true,
+          "evidence_correct": true,
+          "value_correct": true,
+          "issue_correct": true
+        },
+        "mcp_run": {
+          "run_id": "12c16a63-6f5d-4274-8274-9aedd5d4e0bf",
+          "case_id": "qoq-revenue",
+          "title": "분기 매출 증감",
+          "execution_mode": "live_mcp",
+          "planner": "deterministic_workflow",
+          "workflow_success": true,
+          "protocol": "2025-11-25",
+          "created_at": "2026-10-29T04:56:39.208373+00:00",
+          "latency_ms": 2162.312,
+          "model_calls": 0,
+          "provider_api_cost_usd": 0,
+          "cost_scope": "No paid model API calls; hosting and local compute excluded",
+          "result": {
+            "status": "verified",
+            "issues": [],
+            "growth_pct": "6.7916",
+            "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+            "normalized_inputs": [
+              "79098731000000",
+              "74068302000000"
+            ],
+            "currency": "KRW",
+            "evidence": [
+              {
+                "id": "s24q3-CFS-revenue-2024-q-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2024-07-01",
+                "end": "2024-09-30",
+                "value": "79098731",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+                "page": 34,
+                "row": "Revenue",
+                "column": "2024 Q KRW",
+                "document_id": "s24q3",
+                "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              },
+              {
+                "id": "s24q2-CFS-revenue-2024-q-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2024-04-01",
+                "end": "2024-06-30",
+                "value": "74068302",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+                "page": 48,
+                "row": "Revenue",
+                "column": "2024 Q KRW",
+                "document_id": "s24q2",
+                "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              }
+            ],
+            "mode": "qoq"
+          },
+          "trace": [
+            {
+              "step": 1,
+              "tool": "search_documents",
+              "arguments": {
+                "query": "samsung 2024 Q3 CFS revenue quarter KRW",
+                "k": 3
+              },
+              "latency_ms": 41.504,
+              "success": true,
+              "output": {
+                "hits": [
+                  {
+                    "id": "s24q3-CFS-revenue-2024-q-KRW",
+                    "text": "samsung revenue Revenue 매출액 CFS 2024 Q3 quarter 2024-07-01 2024-09-30 KRW scale 1000000 value 79098731",
+                    "fact_ids": [
+                      "s24q3-CFS-revenue-2024-q-KRW"
+                    ],
+                    "score": 0.622048
+                  }
+                ],
+                "config": "hybrid_meta"
+              }
+            },
+            {
+              "step": 2,
+              "tool": "get_fact",
+              "arguments": {
+                "fact_id": "s24q3-CFS-revenue-2024-q-KRW"
+              },
+              "latency_ms": 1.696,
+              "success": true,
+              "output": {
+                "id": "s24q3-CFS-revenue-2024-q-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2024-07-01",
+                "end": "2024-09-30",
+                "value": "79098731",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+                "page": 34,
+                "row": "Revenue",
+                "column": "2024 Q KRW",
+                "document_id": "s24q3",
+                "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              }
+            },
+            {
+              "step": 3,
+              "tool": "search_documents",
+              "arguments": {
+                "query": "samsung 2024 Q2 CFS revenue quarter KRW",
+                "k": 3
+              },
+              "latency_ms": 3.447,
+              "success": true,
+              "output": {
+                "hits": [
+                  {
+                    "id": "s24q2-CFS-revenue-2024-q-KRW",
+                    "text": "samsung revenue Revenue 매출액 CFS 2024 Q2 quarter 2024-04-01 2024-06-30 KRW scale 1000000 value 74068302",
+                    "fact_ids": [
+                      "s24q2-CFS-revenue-2024-q-KRW"
+                    ],
+                    "score": 0.623905
+                  }
+                ],
+                "config": "hybrid_meta"
+              }
+            },
+            {
+              "step": 4,
+              "tool": "get_fact",
+              "arguments": {
+                "fact_id": "s24q2-CFS-revenue-2024-q-KRW"
+              },
+              "latency_ms": 1.561,
+              "success": true,
+              "output": {
+                "id": "s24q2-CFS-revenue-2024-q-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2024-04-01",
+                "end": "2024-06-30",
+                "value": "74068302",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+                "page": 48,
+                "row": "Revenue",
+                "column": "2024 Q KRW",
+                "document_id": "s24q2",
+                "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              }
+            },
+            {
+              "step": 5,
+              "tool": "verify_comparison",
+              "arguments": {
+                "current_id": "s24q3-CFS-revenue-2024-q-KRW",
+                "base_id": "s24q2-CFS-revenue-2024-q-KRW",
+                "mode": "qoq"
+              },
+              "latency_ms": 2.031,
+              "success": true,
+              "output": {
+                "status": "verified",
+                "issues": [],
+                "growth_pct": "6.7916",
+                "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+                "normalized_inputs": [
+                  "79098731000000",
+                  "74068302000000"
+                ],
+                "currency": "KRW",
+                "evidence": [
+                  {
+                    "id": "s24q3-CFS-revenue-2024-q-KRW",
+                    "company": "samsung",
+                    "metric": "revenue",
+                    "scope": "CFS",
+                    "currency": "KRW",
+                    "scale": 1000000,
+                    "start": "2024-07-01",
+                    "end": "2024-09-30",
+                    "value": "79098731",
+                    "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+                    "page": 34,
+                    "row": "Revenue",
+                    "column": "2024 Q KRW",
+                    "document_id": "s24q3",
+                    "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+                    "translation_basis": "reported_currency",
+                    "translation_rate": null,
+                    "translation_note_page": null,
+                    "months": 3
+                  },
+                  {
+                    "id": "s24q2-CFS-revenue-2024-q-KRW",
+                    "company": "samsung",
+                    "metric": "revenue",
+                    "scope": "CFS",
+                    "currency": "KRW",
+                    "scale": 1000000,
+                    "start": "2024-04-01",
+                    "end": "2024-06-30",
+                    "value": "74068302",
+                    "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+                    "page": 48,
+                    "row": "Revenue",
+                    "column": "2024 Q KRW",
+                    "document_id": "s24q2",
+                    "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+                    "translation_basis": "reported_currency",
+                    "translation_rate": null,
+                    "translation_note_page": null,
+                    "months": 3
+                  }
+                ],
+                "mode": "qoq"
+              }
+            }
+          ]
+        },
+        "generated": {
+          "status": "verified",
+          "value": "6.7916",
+          "issues": [],
+          "evidence_ids": [
+            "s24q3-CFS-revenue-2024-q-KRW",
+            "s24q2-CFS-revenue-2024-q-KRW"
+          ],
+          "explanation_ko": "2024년 3분기 삼성전자의 연결 매출은 전분기 대비 6.7916% 증가하였습니다. 해당 수치는 각 분기별 3개월 기간의 연결 기준 매출 데이터를 사용하여 산출되었습니다."
+        },
+        "provider": {
+          "requested_model": "gpt-4.1-mini-2025-04-14",
+          "returned_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 712,
+          "output_tokens": 108,
+          "latency_ms": 2302.456,
+          "billed_cost_usd": null,
+          "cost_note": "Usage measured; billing not queried."
+        },
+        "checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "passed": true
+      },
+      {
+        "case_id": "ytd-trap",
+        "source_checks": {
+          "workflow_success": true,
+          "status_correct": true,
+          "evidence_correct": true,
+          "value_correct": true,
+          "issue_correct": true
+        },
+        "mcp_run": {
+          "run_id": "c5d39aa8-41c2-4383-86c6-d587b1cd5c52",
+          "case_id": "ytd-trap",
+          "title": "누적·분기 혼동",
+          "execution_mode": "live_mcp",
+          "planner": "deterministic_workflow",
+          "workflow_success": true,
+          "protocol": "2025-11-25",
+          "created_at": "2026-10-29T04:56:43.295655+00:00",
+          "latency_ms": 1784.336,
+          "model_calls": 0,
+          "provider_api_cost_usd": 0,
+          "cost_scope": "No paid model API calls; hosting and local compute excluded",
+          "result": {
+            "status": "needs_review",
+            "issues": [
+              "PERIOD_MISMATCH"
+            ],
+            "growth_pct": null,
+            "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+            "normalized_inputs": [
+              "225082634000000",
+              "67404652000000"
+            ],
+            "currency": "KRW",
+            "evidence": [
+              {
+                "id": "s24q3-CFS-revenue-2024-ytd-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2024-01-01",
+                "end": "2024-09-30",
+                "value": "225082634",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+                "page": 34,
+                "row": "Revenue",
+                "column": "2024 YTD KRW",
+                "document_id": "s24q3",
+                "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 9
+              },
+              {
+                "id": "s24q3-CFS-revenue-2023-q-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2023-07-01",
+                "end": "2023-09-30",
+                "value": "67404652",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+                "page": 34,
+                "row": "Revenue",
+                "column": "2023 Q KRW",
+                "document_id": "s24q3",
+                "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              }
+            ],
+            "mode": "yoy"
+          },
+          "trace": [
+            {
+              "step": 1,
+              "tool": "search_documents",
+              "arguments": {
+                "query": "samsung 2024 Q3 CFS revenue ytd KRW",
+                "k": 3
+              },
+              "latency_ms": 41.804,
+              "success": true,
+              "output": {
+                "hits": [
+                  {
+                    "id": "s24q3-CFS-revenue-2024-ytd-KRW",
+                    "text": "samsung revenue Revenue 매출액 CFS 2024 Q3 ytd 2024-01-01 2024-09-30 KRW scale 1000000 value 225082634",
+                    "fact_ids": [
+                      "s24q3-CFS-revenue-2024-ytd-KRW"
+                    ],
+                    "score": 0.63012
+                  }
+                ],
+                "config": "hybrid_meta"
+              }
+            },
+            {
+              "step": 2,
+              "tool": "get_fact",
+              "arguments": {
+                "fact_id": "s24q3-CFS-revenue-2024-ytd-KRW"
+              },
+              "latency_ms": 1.434,
+              "success": true,
+              "output": {
+                "id": "s24q3-CFS-revenue-2024-ytd-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2024-01-01",
+                "end": "2024-09-30",
+                "value": "225082634",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+                "page": 34,
+                "row": "Revenue",
+                "column": "2024 YTD KRW",
+                "document_id": "s24q3",
+                "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 9
+              }
+            },
+            {
+              "step": 3,
+              "tool": "search_documents",
+              "arguments": {
+                "query": "samsung 2023 Q3 CFS revenue quarter KRW",
+                "k": 3
+              },
+              "latency_ms": 3.1,
+              "success": true,
+              "output": {
+                "hits": [
+                  {
+                    "id": "s24q3-CFS-revenue-2023-q-KRW",
+                    "text": "samsung revenue Revenue 매출액 CFS 2023 Q3 quarter 2023-07-01 2023-09-30 KRW scale 1000000 value 67404652",
+                    "fact_ids": [
+                      "s24q3-CFS-revenue-2023-q-KRW"
+                    ],
+                    "score": 0.624121
+                  }
+                ],
+                "config": "hybrid_meta"
+              }
+            },
+            {
+              "step": 4,
+              "tool": "get_fact",
+              "arguments": {
+                "fact_id": "s24q3-CFS-revenue-2023-q-KRW"
+              },
+              "latency_ms": 1.316,
+              "success": true,
+              "output": {
+                "id": "s24q3-CFS-revenue-2023-q-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2023-07-01",
+                "end": "2023-09-30",
+                "value": "67404652",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+                "page": 34,
+                "row": "Revenue",
+                "column": "2023 Q KRW",
+                "document_id": "s24q3",
+                "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              }
+            },
+            {
+              "step": 5,
+              "tool": "verify_comparison",
+              "arguments": {
+                "current_id": "s24q3-CFS-revenue-2024-ytd-KRW",
+                "base_id": "s24q3-CFS-revenue-2023-q-KRW",
+                "mode": "yoy"
+              },
+              "latency_ms": 1.789,
+              "success": true,
+              "output": {
+                "status": "needs_review",
+                "issues": [
+                  "PERIOD_MISMATCH"
+                ],
+                "growth_pct": null,
+                "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+                "normalized_inputs": [
+                  "225082634000000",
+                  "67404652000000"
+                ],
+                "currency": "KRW",
+                "evidence": [
+                  {
+                    "id": "s24q3-CFS-revenue-2024-ytd-KRW",
+                    "company": "samsung",
+                    "metric": "revenue",
+                    "scope": "CFS",
+                    "currency": "KRW",
+                    "scale": 1000000,
+                    "start": "2024-01-01",
+                    "end": "2024-09-30",
+                    "value": "225082634",
+                    "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+                    "page": 34,
+                    "row": "Revenue",
+                    "column": "2024 YTD KRW",
+                    "document_id": "s24q3",
+                    "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+                    "translation_basis": "reported_currency",
+                    "translation_rate": null,
+                    "translation_note_page": null,
+                    "months": 9
+                  },
+                  {
+                    "id": "s24q3-CFS-revenue-2023-q-KRW",
+                    "company": "samsung",
+                    "metric": "revenue",
+                    "scope": "CFS",
+                    "currency": "KRW",
+                    "scale": 1000000,
+                    "start": "2023-07-01",
+                    "end": "2023-09-30",
+                    "value": "67404652",
+                    "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+                    "page": 34,
+                    "row": "Revenue",
+                    "column": "2023 Q KRW",
+                    "document_id": "s24q3",
+                    "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+                    "translation_basis": "reported_currency",
+                    "translation_rate": null,
+                    "translation_note_page": null,
+                    "months": 3
+                  }
+                ],
+                "mode": "yoy"
+              }
+            }
+          ]
+        },
+        "generated": {
+          "status": "needs_review",
+          "value": null,
+          "issues": [
+            "PERIOD_MISMATCH"
+          ],
+          "evidence_ids": [
+            "s24q3-CFS-revenue-2024-ytd-KRW",
+            "s24q3-CFS-revenue-2023-q-KRW"
+          ],
+          "explanation_ko": "해당 매출 비교는 2024년 9개월 누적 매출과 2023년 3개월 매출을 비교하여 기간 불일치 문제가 있습니다. 따라서, 두 기간이 동일하지 않아 성장률 산출에 적합하지 않습니다."
+        },
+        "provider": {
+          "requested_model": "gpt-4.1-mini-2025-04-14",
+          "returned_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 722,
+          "output_tokens": 117,
+          "latency_ms": 1836.922,
+          "billed_cost_usd": null,
+          "cost_note": "Usage measured; billing not queried."
+        },
+        "checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "passed": true
+      },
+      {
+        "case_id": "no-evidence",
+        "source_checks": {
+          "workflow_success": true,
+          "status_correct": true,
+          "evidence_correct": true,
+          "value_correct": true,
+          "issue_correct": true
+        },
+        "mcp_run": {
+          "run_id": "579a9821-b73a-4e8f-9bd3-6126ac3f95ef",
+          "case_id": "no-evidence",
+          "title": "근거 부재",
+          "execution_mode": "live_mcp",
+          "planner": "deterministic_workflow",
+          "workflow_success": true,
+          "protocol": "2025-11-25",
+          "created_at": "2026-10-29T04:56:46.839711+00:00",
+          "latency_ms": 1706.69,
+          "model_calls": 0,
+          "provider_api_cost_usd": 0,
+          "cost_scope": "No paid model API calls; hosting and local compute excluded",
+          "result": {
+            "status": "needs_review",
+            "issues": [
+              "SEARCH_EMPTY"
+            ],
+            "evidence": []
+          },
+          "trace": [
+            {
+              "step": 1,
+              "tool": "search_documents",
+              "arguments": {
+                "query": "samsung 2025 Q3 CFS revenue quarter KRW",
+                "k": 3
+              },
+              "latency_ms": 43.199,
+              "success": true,
+              "output": {
+                "hits": [],
+                "config": "hybrid_meta"
+              }
+            }
+          ]
+        },
+        "generated": {
+          "status": "needs_review",
+          "value": null,
+          "issues": [
+            "SEARCH_EMPTY"
+          ],
+          "evidence_ids": [],
+          "explanation_ko": "요청하신 2025년 실적은 현재 수집 범위를 벗어나 있어 데이터를 확인할 수 없습니다. 따라서 해당 기간의 재무 정보 조회가 불가능합니다."
+        },
+        "provider": {
+          "requested_model": "gpt-4.1-mini-2025-04-14",
+          "returned_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 212,
+          "output_tokens": 67,
+          "latency_ms": 1546.245,
+          "billed_cost_usd": null,
+          "cost_note": "Usage measured; billing not queried."
+        },
+        "checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "passed": true
+      },
+      {
+        "case_id": "reconcile-revenue",
+        "source_checks": {
+          "workflow_success": true,
+          "status_correct": true,
+          "evidence_correct": true,
+          "value_correct": true,
+          "issue_correct": true
+        },
+        "mcp_run": {
+          "run_id": "b27df47d-e0bf-43cd-9bac-e02dc3c97954",
+          "case_id": "reconcile-revenue",
+          "title": "누적 차감 교차검증",
+          "execution_mode": "live_mcp",
+          "planner": "deterministic_workflow",
+          "workflow_success": true,
+          "protocol": "2025-11-25",
+          "created_at": "2026-10-29T04:56:50.108296+00:00",
+          "latency_ms": 1721.893,
+          "model_calls": 0,
+          "provider_api_cost_usd": 0,
+          "cost_scope": "No paid model API calls; hosting and local compute excluded",
+          "result": {
+            "status": "verified",
+            "issues": [],
+            "derived_value": "79098731",
+            "difference": "0",
+            "formula": "(YTD × scale - previous YTD × scale) / direct scale",
+            "normalized_inputs": [
+              "225082634000000",
+              "145983903000000",
+              "79098731000000"
+            ],
+            "evidence": [
+              {
+                "id": "s24q3-CFS-revenue-2024-ytd-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2024-01-01",
+                "end": "2024-09-30",
+                "value": "225082634",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+                "page": 34,
+                "row": "Revenue",
+                "column": "2024 YTD KRW",
+                "document_id": "s24q3",
+                "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 9
+              },
+              {
+                "id": "s24q2-CFS-revenue-2024-ytd-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2024-01-01",
+                "end": "2024-06-30",
+                "value": "145983903",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+                "page": 48,
+                "row": "Revenue",
+                "column": "2024 YTD KRW",
+                "document_id": "s24q2",
+                "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 6
+              },
+              {
+                "id": "s24q3-CFS-revenue-2024-q-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2024-07-01",
+                "end": "2024-09-30",
+                "value": "79098731",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+                "page": 34,
+                "row": "Revenue",
+                "column": "2024 Q KRW",
+                "document_id": "s24q3",
+                "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              }
+            ]
+          },
+          "trace": [
+            {
+              "step": 1,
+              "tool": "search_documents",
+              "arguments": {
+                "query": "samsung 2024 Q3 CFS revenue ytd KRW",
+                "k": 3
+              },
+              "latency_ms": 42.641,
+              "success": true,
+              "output": {
+                "hits": [
+                  {
+                    "id": "s24q3-CFS-revenue-2024-ytd-KRW",
+                    "text": "samsung revenue Revenue 매출액 CFS 2024 Q3 ytd 2024-01-01 2024-09-30 KRW scale 1000000 value 225082634",
+                    "fact_ids": [
+                      "s24q3-CFS-revenue-2024-ytd-KRW"
+                    ],
+                    "score": 0.63012
+                  }
+                ],
+                "config": "hybrid_meta"
+              }
+            },
+            {
+              "step": 2,
+              "tool": "get_fact",
+              "arguments": {
+                "fact_id": "s24q3-CFS-revenue-2024-ytd-KRW"
+              },
+              "latency_ms": 1.419,
+              "success": true,
+              "output": {
+                "id": "s24q3-CFS-revenue-2024-ytd-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2024-01-01",
+                "end": "2024-09-30",
+                "value": "225082634",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+                "page": 34,
+                "row": "Revenue",
+                "column": "2024 YTD KRW",
+                "document_id": "s24q3",
+                "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 9
+              }
+            },
+            {
+              "step": 3,
+              "tool": "search_documents",
+              "arguments": {
+                "query": "samsung 2024 Q2 CFS revenue ytd KRW",
+                "k": 3
+              },
+              "latency_ms": 3.103,
+              "success": true,
+              "output": {
+                "hits": [
+                  {
+                    "id": "s24q2-CFS-revenue-2024-ytd-KRW",
+                    "text": "samsung revenue Revenue 매출액 CFS 2024 Q2 ytd 2024-01-01 2024-06-30 KRW scale 1000000 value 145983903",
+                    "fact_ids": [
+                      "s24q2-CFS-revenue-2024-ytd-KRW"
+                    ],
+                    "score": 0.627665
+                  }
+                ],
+                "config": "hybrid_meta"
+              }
+            },
+            {
+              "step": 4,
+              "tool": "get_fact",
+              "arguments": {
+                "fact_id": "s24q2-CFS-revenue-2024-ytd-KRW"
+              },
+              "latency_ms": 1.259,
+              "success": true,
+              "output": {
+                "id": "s24q2-CFS-revenue-2024-ytd-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2024-01-01",
+                "end": "2024-06-30",
+                "value": "145983903",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+                "page": 48,
+                "row": "Revenue",
+                "column": "2024 YTD KRW",
+                "document_id": "s24q2",
+                "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 6
+              }
+            },
+            {
+              "step": 5,
+              "tool": "search_documents",
+              "arguments": {
+                "query": "samsung 2024 Q3 CFS revenue quarter KRW",
+                "k": 3
+              },
+              "latency_ms": 2.813,
+              "success": true,
+              "output": {
+                "hits": [
+                  {
+                    "id": "s24q3-CFS-revenue-2024-q-KRW",
+                    "text": "samsung revenue Revenue 매출액 CFS 2024 Q3 quarter 2024-07-01 2024-09-30 KRW scale 1000000 value 79098731",
+                    "fact_ids": [
+                      "s24q3-CFS-revenue-2024-q-KRW"
+                    ],
+                    "score": 0.622048
+                  }
+                ],
+                "config": "hybrid_meta"
+              }
+            },
+            {
+              "step": 6,
+              "tool": "get_fact",
+              "arguments": {
+                "fact_id": "s24q3-CFS-revenue-2024-q-KRW"
+              },
+              "latency_ms": 1.166,
+              "success": true,
+              "output": {
+                "id": "s24q3-CFS-revenue-2024-q-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2024-07-01",
+                "end": "2024-09-30",
+                "value": "79098731",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+                "page": 34,
+                "row": "Revenue",
+                "column": "2024 Q KRW",
+                "document_id": "s24q3",
+                "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              }
+            },
+            {
+              "step": 7,
+              "tool": "reconcile_quarter",
+              "arguments": {
+                "ytd_id": "s24q3-CFS-revenue-2024-ytd-KRW",
+                "previous_id": "s24q2-CFS-revenue-2024-ytd-KRW",
+                "direct_id": "s24q3-CFS-revenue-2024-q-KRW"
+              },
+              "latency_ms": 1.636,
+              "success": true,
+              "output": {
+                "status": "verified",
+                "issues": [],
+                "derived_value": "79098731",
+                "difference": "0",
+                "formula": "(YTD × scale - previous YTD × scale) / direct scale",
+                "normalized_inputs": [
+                  "225082634000000",
+                  "145983903000000",
+                  "79098731000000"
+                ],
+                "evidence": [
+                  {
+                    "id": "s24q3-CFS-revenue-2024-ytd-KRW",
+                    "company": "samsung",
+                    "metric": "revenue",
+                    "scope": "CFS",
+                    "currency": "KRW",
+                    "scale": 1000000,
+                    "start": "2024-01-01",
+                    "end": "2024-09-30",
+                    "value": "225082634",
+                    "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+                    "page": 34,
+                    "row": "Revenue",
+                    "column": "2024 YTD KRW",
+                    "document_id": "s24q3",
+                    "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+                    "translation_basis": "reported_currency",
+                    "translation_rate": null,
+                    "translation_note_page": null,
+                    "months": 9
+                  },
+                  {
+                    "id": "s24q2-CFS-revenue-2024-ytd-KRW",
+                    "company": "samsung",
+                    "metric": "revenue",
+                    "scope": "CFS",
+                    "currency": "KRW",
+                    "scale": 1000000,
+                    "start": "2024-01-01",
+                    "end": "2024-06-30",
+                    "value": "145983903",
+                    "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+                    "page": 48,
+                    "row": "Revenue",
+                    "column": "2024 YTD KRW",
+                    "document_id": "s24q2",
+                    "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+                    "translation_basis": "reported_currency",
+                    "translation_rate": null,
+                    "translation_note_page": null,
+                    "months": 6
+                  },
+                  {
+                    "id": "s24q3-CFS-revenue-2024-q-KRW",
+                    "company": "samsung",
+                    "metric": "revenue",
+                    "scope": "CFS",
+                    "currency": "KRW",
+                    "scale": 1000000,
+                    "start": "2024-07-01",
+                    "end": "2024-09-30",
+                    "value": "79098731",
+                    "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+                    "page": 34,
+                    "row": "Revenue",
+                    "column": "2024 Q KRW",
+                    "document_id": "s24q3",
+                    "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+                    "translation_basis": "reported_currency",
+                    "translation_rate": null,
+                    "translation_note_page": null,
+                    "months": 3
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "generated": {
+          "status": "verified",
+          "value": "79098731",
+          "issues": [],
+          "evidence_ids": [
+            "s24q3-CFS-revenue-2024-ytd-KRW",
+            "s24q2-CFS-revenue-2024-ytd-KRW",
+            "s24q3-CFS-revenue-2024-q-KRW"
+          ],
+          "explanation_ko": "9개월 누적 매출에서 6개월 누적 매출을 빼면 3분기 개별 매출과 정확히 일치합니다. 기간은 1월부터 9월까지(9개월)와 1월부터 6월까지(6개월)이며, 단위는 백만 원(KRW)입니다."
+        },
+        "provider": {
+          "requested_model": "gpt-4.1-mini-2025-04-14",
+          "returned_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 930,
+          "output_tokens": 146,
+          "latency_ms": 1533.051,
+          "billed_cost_usd": null,
+          "cost_note": "Usage measured; billing not queried."
+        },
+        "checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "passed": true
+      }
+    ],
+    "scope": "Actual MCP + generated explanation. Deterministic planner. Prose not automatically fact-checked."
+  }
+}

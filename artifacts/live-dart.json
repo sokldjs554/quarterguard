@@ -1,0 +1,242 @@
+{
+  "created_at": "2026-10-29T04:57:20.622607+00:00",
+  "commit": "738357883f014e2c010a008145c18be66ede702c",
+  "run_id": "40820560140",
+  "facts_sha256": "d3a7074f9f1ef0745aa04a9586833b1d1f2bf188102ef66fdb6f315b73425969",
+  "public_demo_uses_these_providers": false,
+  "dart": {
+    "status": "passed",
+    "calls_attempted": 4,
+    "records": [
+      {
+        "report_code": "11014",
+        "scope": "CFS",
+        "row_count": 60,
+        "latency_ms": 1292.227,
+        "checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-q-KRW",
+            "account_id": "ifrs-full_Revenue",
+            "source_field": "thstrm_amount",
+            "expected_krw": "79098731000000",
+            "dart_krw": "79098731000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241114002642",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+            "ir_page": 34,
+            "passed": true
+          },
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-ytd-KRW",
+            "account_id": "ifrs-full_Revenue",
+            "source_field": "thstrm_add_amount",
+            "expected_krw": "225082634000000",
+            "dart_krw": "225082634000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241114002642",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+            "ir_page": 34,
+            "passed": true
+          },
+          {
+            "fact_id": "s24q3-CFS-operating_profit-2024-q-KRW",
+            "account_id": "dart_OperatingIncomeLoss",
+            "source_field": "thstrm_amount",
+            "expected_krw": "9183371000000",
+            "dart_krw": "9183371000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241114002642",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+            "ir_page": 34,
+            "passed": true
+          },
+          {
+            "fact_id": "s24q3-CFS-operating_profit-2024-ytd-KRW",
+            "account_id": "dart_OperatingIncomeLoss",
+            "source_field": "thstrm_add_amount",
+            "expected_krw": "26233258000000",
+            "dart_krw": "26233258000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241114002642",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+            "ir_page": 34,
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "report_code": "11014",
+        "scope": "OFS",
+        "row_count": 42,
+        "latency_ms": 1116.489,
+        "checks": [
+          {
+            "fact_id": "s24q3-OFS-revenue-2024-q-KRW",
+            "account_id": "ifrs-full_Revenue",
+            "source_field": "thstrm_amount",
+            "expected_krw": "55828922000000",
+            "dart_krw": "55828922000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241114002642",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+            "ir_page": 89,
+            "passed": true
+          },
+          {
+            "fact_id": "s24q3-OFS-revenue-2024-ytd-KRW",
+            "account_id": "ifrs-full_Revenue",
+            "source_field": "thstrm_add_amount",
+            "expected_krw": "160802657000000",
+            "dart_krw": "160802657000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241114002642",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+            "ir_page": 89,
+            "passed": true
+          },
+          {
+            "fact_id": "s24q3-OFS-operating_profit-2024-q-KRW",
+            "account_id": "dart_OperatingIncomeLoss",
+            "source_field": "thstrm_amount",
+            "expected_krw": "4504920000000",
+            "dart_krw": "4504920000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241114002642",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+            "ir_page": 89,
+            "passed": true
+          },
+          {
+            "fact_id": "s24q3-OFS-operating_profit-2024-ytd-KRW",
+            "account_id": "dart_OperatingIncomeLoss",
+            "source_field": "thstrm_add_amount",
+            "expected_krw": "13734791000000",
+            "dart_krw": "13734791000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241114002642",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+            "ir_page": 89,
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "report_code": "11012",
+        "scope": "CFS",
+        "row_count": 62,
+        "latency_ms": 1230.032,
+        "checks": [
+          {
+            "fact_id": "s24q2-CFS-revenue-2024-q-KRW",
+            "account_id": "ifrs-full_Revenue",
+            "source_field": "thstrm_amount",
+            "expected_krw": "74068302000000",
+            "dart_krw": "74068302000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240814003284",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+            "ir_page": 48,
+            "passed": true
+          },
+          {
+            "fact_id": "s24q2-CFS-revenue-2024-ytd-KRW",
+            "account_id": "ifrs-full_Revenue",
+            "source_field": "thstrm_add_amount",
+            "expected_krw": "145983903000000",
+            "dart_krw": "145983903000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240814003284",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+            "ir_page": 48,
+            "passed": true
+          },
+          {
+            "fact_id": "s24q2-CFS-operating_profit-2024-q-KRW",
+            "account_id": "dart_OperatingIncomeLoss",
+            "source_field": "thstrm_amount",
+            "expected_krw": "10443878000000",
+            "dart_krw": "10443878000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240814003284",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+            "ir_page": 48,
+            "passed": true
+          },
+          {
+            "fact_id": "s24q2-CFS-operating_profit-2024-ytd-KRW",
+            "account_id": "dart_OperatingIncomeLoss",
+            "source_field": "thstrm_add_amount",
+            "expected_krw": "17049887000000",
+            "dart_krw": "17049887000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240814003284",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+            "ir_page": 48,
+            "passed": true
+          }
+        ],
+        "passed": true
+      },
+      {
+        "report_code": "11012",
+        "scope": "OFS",
+        "row_count": 44,
+        "latency_ms": 1161.92,
+        "checks": [
+          {
+            "fact_id": "s24q2-OFS-revenue-2024-q-KRW",
+            "account_id": "ifrs-full_Revenue",
+            "source_field": "thstrm_amount",
+            "expected_krw": "53734118000000",
+            "dart_krw": "53734118000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240814003284",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+            "ir_page": 104,
+            "passed": true
+          },
+          {
+            "fact_id": "s24q2-OFS-revenue-2024-ytd-KRW",
+            "account_id": "ifrs-full_Revenue",
+            "source_field": "thstrm_add_amount",
+            "expected_krw": "104973735000000",
+            "dart_krw": "104973735000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240814003284",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+            "ir_page": 104,
+            "passed": true
+          },
+          {
+            "fact_id": "s24q2-OFS-operating_profit-2024-q-KRW",
+            "account_id": "dart_OperatingIncomeLoss",
+            "source_field": "thstrm_amount",
+            "expected_krw": "7222491000000",
+            "dart_krw": "7222491000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240814003284",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+            "ir_page": 104,
+            "passed": true
+          },
+          {
+            "fact_id": "s24q2-OFS-operating_profit-2024-ytd-KRW",
+            "account_id": "dart_OperatingIncomeLoss",
+            "source_field": "thstrm_add_amount",
+            "expected_krw": "9229871000000",
+            "dart_krw": "9229871000000",
+            "candidate_count": 1,
+            "dart_source": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240814003284",
+            "ir_source": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+            "ir_page": 104,
+            "passed": true
+          }
+        ],
+        "passed": true
+      }
+    ],
+    "scope": "Samsung 2024 Q2/Q3; CFS/OFS; revenue/operating profit; quarter/YTD. No corpus import."
+  }
+}
