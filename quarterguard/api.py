@@ -6,7 +6,8 @@ from fastapi.staticfiles import StaticFiles
 from .store import ROOT,load_facts
 from .search import SearchIndex
 from .orchestrator import cases,run_case
-app=FastAPI(title='QuarterGuard',version='1.0.0')
+from .worksheet import WorksheetRequest,preview,run_worksheet
+app=FastAPI(title='QuarterGuard',version='1.1.0')
 slots=asyncio.Semaphore(1)  # Bound subprocess CPU/RSS on the free 0.1 CPU / 512 MB instance.
 @lru_cache(maxsize=1)
 def index():return SearchIndex(load_facts())
@@ -43,6 +44,14 @@ async def run(case_id:str):
 @app.get('/api/search')
 def search(q:str=Query('',max_length=500)):
  return {'hits':index().search(q,5),'configuration':'hybrid_meta'}
+@app.post('/api/worksheet')
+def worksheet(request:WorksheetRequest):return preview(request)
+@app.post('/api/worksheet/run')
+async def worksheet_run(request:WorksheetRequest):
+ try:await asyncio.wait_for(slots.acquire(),timeout=.1)
+ except TimeoutError:raise HTTPException(429,'BUSY_RETRY')
+ try:return await run_worksheet(request)
+ finally:slots.release()
 @app.get('/api/connectors/dart')
 def dart_status():return {'status':'configured_not_verified' if os.getenv('DART_API_KEY') else 'not_configured',
  'message':'별도 CI에서 DART 실호출·16개 금액 일치 검증 · 현재 공개 데모는 준비된 IR 보고서 근거 사용'}
