@@ -24,5 +24,19 @@
   "tls_bypass_used": false,
   "tinyfish_used": false,
   "historical_public_commit": "14b2159cb22d350f30c2a259a2469cfe579058be",
-  "final_deployment_status": "not checked by this audit"
+  "final_deployment_status": "not checked by this audit",
+  "v13_direct_chromium": [
+    {
+      "viewport": "1440x1000",
+      "error": "Page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://quarterguard.onrender.com/\nCall log:\n  - navigating to \"https://quarterguard.onrender.com/\", waiting until \"load\"\n",
+      "tls_verification": true
+    },
+    {
+      "viewport": "390x844",
+      "error": "Page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://quarterguard.onrender.com/\nCall log:\n  - navigating to \"https://quarterguard.onrender.com/\", waiting until \"load\"\n",
+      "tls_verification": true
+    }
+  ],
+  "v13_checked_at": "2026-10-29T14:39:00.759949+00:00",
+  "v13_server_commit": "79fc4e2af479c94ec6d1c4df2970936a8ab0d923"
 }

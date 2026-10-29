@@ -1,0 +1,35 @@
+{
+  "application_commit": "79fc4e2af479c94ec6d1c4df2970936a8ab0d923",
+  "python_unittest": {
+    "passed": 75,
+    "command": "python -m unittest discover -s tests -q"
+  },
+  "node_tests": {
+    "passed": 5,
+    "command": "node --test --test-reporter=spec tests/test_review_notes.mjs"
+  },
+  "local_browser": {
+    "passed": 37,
+    "artifact": "browser-check.json",
+    "viewports": [
+      "1440x1000",
+      "390x844"
+    ]
+  },
+  "provider_mock_browser": {
+    "passed": 7,
+    "artifact": "provider-browser-check.json",
+    "external_provider_calls": 0
+  },
+  "artifact_consistency": "passed",
+  "ci": "https://github.com/sokldjs554/quarterguard/actions/runs/40893175143",
+  "ci_conclusion": "success",
+  "new_paid_api_calls": 0,
+  "new_paid_infrastructure": false,
+  "public_relay_browser": {
+    "passed": 37,
+    "page_errors": 0,
+    "artifact": "public-browser-check.json",
+    "direct_https": false
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "url": "http://127.0.0.1:8006",
+  "upstream": "https://quarterguard.onrender.com",
+  "upstream_tls_verified": true,
+  "direct_browser_https": false,
+  "application_commit": "79fc4e2af479c94ec6d1c4df2970936a8ab0d923",
+  "checks": [
+    {
+      "viewport": "1440x1000",
+      "blocked_reasons_visible": true,
+      "provider_posts": 0,
+      "heldout_failures_visible": 9,
+      "no_page_overflow": true
+    },
+    {
+      "viewport": "390x844",
+      "blocked_reasons_visible": true,
+      "provider_posts": 0,
+      "heldout_failures_visible": 9,
+      "no_page_overflow": true
+    }
+  ],
+  "external_provider_calls": 0
+}

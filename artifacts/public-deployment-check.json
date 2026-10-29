@@ -1,0 +1,96 @@
+{
+  "checked_at": "2026-10-29T14:40:07.335798+00:00",
+  "base_url": "https://quarterguard.onrender.com",
+  "tls_verification": true,
+  "external_provider_calls": 0,
+  "matches": {
+    "/": {
+      "sha256": "9bbbdaaa7cbd76b289420918a393d56ed0f2bef292f6605e81e98fd2159e27de",
+      "matches_local": true
+    },
+    "/assets/app.js": {
+      "sha256": "3133a896fde2166c7ef964c76b136572017a4e55c0e10075bd9f38423ba23366",
+      "matches_local": true
+    },
+    "/assets/providers.js": {
+      "sha256": "3ab26682ce90160aac5297699e0101317fe927ad142e7b7f60588ab1129f7475",
+      "matches_local": true
+    },
+    "/assets/heldout.js": {
+      "sha256": "0271bc50c5c8a515c6f4a87178cdcb6bb48ece59878dfba9b90ea783ed5f9c13",
+      "matches_local": true
+    },
+    "/assets/style.css": {
+      "sha256": "d156a6aba54a6d3f840e8d2efcca3a8c80f5dd3991e78cd925b3828e0ddc69ba",
+      "matches_local": true
+    },
+    "/api/evaluation": {
+      "json_equal": true
+    },
+    "/api/evaluation/heldout": {
+      "json_equal": true
+    }
+  },
+  "health": {
+    "status": "ok",
+    "facts": 192,
+    "commit": "79fc4e2af479c94ec6d1c4df2970936a8ab0d923",
+    "version": "1.3.0"
+  },
+  "providers": {
+    "openai": {
+      "status": "not_configured",
+      "enabled": false,
+      "blocked_reasons": [
+        "KEY_NOT_CONFIGURED",
+        "PAID_APPROVAL_REQUIRED",
+        "DURABLE_LEDGER_REQUIRED"
+      ],
+      "usage": {
+        "attempts_total": 0,
+        "attempts_today_utc": 0
+      },
+      "targets": [
+        "qoq-revenue",
+        "ytd-trap",
+        "no-evidence",
+        "reconcile-revenue"
+      ],
+      "limits": {
+        "attempts_total": 20,
+        "attempts_per_day": 5,
+        "global_cooldown_seconds": 60,
+        "cache_seconds": 86400
+      },
+      "ledger_scope": "instance_ephemeral_resets_on_restart",
+      "estimated_cost_ceiling_usd": "0.20",
+      "current_execution": "none"
+    },
+    "dart": {
+      "status": "not_configured",
+      "enabled": false,
+      "blocked_reasons": [
+        "KEY_NOT_CONFIGURED"
+      ],
+      "usage": {
+        "attempts_total": 0,
+        "attempts_today_utc": 0
+      },
+      "targets": [
+        "s24q3-CFS",
+        "s24q3-OFS",
+        "s24q2-CFS",
+        "s24q2-OFS"
+      ],
+      "limits": {
+        "attempts_total": 200,
+        "attempts_per_day": 8,
+        "global_cooldown_seconds": 60,
+        "cache_seconds": 86400
+      },
+      "ledger_scope": "instance_ephemeral_resets_on_restart",
+      "estimated_cost_ceiling_usd": "0",
+      "current_execution": "none"
+    }
+  }
+}
