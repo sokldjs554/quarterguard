@@ -27,6 +27,8 @@
 
 ![공시 대조 작업지 PC 화면](docs/images/desktop.png)
 
+화면 캡처는 v1.3 기능 커밋 `79fc4e2`의 공개 서버를 TLS 검증 중계로 확인한 시점입니다. 문서·증거 추가 후 최종 배포 SHA는 [릴리스](https://github.com/sokldjs554/quarterguard/releases/tag/v1.3.0)에 기록합니다.
+
 <details><summary>모바일과 평가 화면</summary>
 
 <img src="docs/images/mobile.png" alt="모바일 공시 대조 작업지" width="320">
