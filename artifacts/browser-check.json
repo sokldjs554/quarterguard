@@ -5,6 +5,10 @@
     "clicked_number_tracks_document_row_column",
     "source_switch_sync_and_keyboard_focus",
     "publisher_pdf_failure_has_link_and_table_fallback",
+    "actual_documents_open_matching_source",
+    "review_notes_and_manual_mark_persist_after_reload",
+    "csv_contains_real_values_sources_status_and_notes",
+    "notes_isolated_by_context_manual_mark_never_overrides_guard",
     "block_mismatched_period",
     "block_mismatched_scope",
     "block_mismatched_currency",
@@ -31,9 +35,11 @@
     "mobile_both_values_visible_no_body_overflow",
     "mobile_source_navigation_and_context_guard",
     "boot_failure_retry",
-    "evaluation_failure_does_not_block_work_and_can_retry"
+    "evaluation_failure_does_not_block_work_and_can_retry",
+    "storage_failure_visible_draft_retained_and_exportable",
+    "storage_read_failure_blocks_overwrite_and_export_until_retry"
   ],
-  "passed": 31,
+  "passed": 37,
   "page_errors": [],
   "browser": "Chromium via Playwright",
   "viewports": [

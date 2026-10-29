@@ -15,8 +15,8 @@ export function evidenceInspector(root, facts, sources, onSelect) {
    <div class="source-header"><h3>${docTitle(f.document_id)}</h3><p>삼성전자 · ${scope(f)} 손익계산서 · PDF p.${f.page}</p></div>
    <div class="source-tools"><div class="source-tabs" aria-label="근거 표시 방식"><button data-source-mode="table" class="${mode==='table'?'active':''}" aria-pressed="${mode==='table'}">근거표</button><button data-source-mode="pdf" class="${mode==='pdf'?'active':''}" aria-pressed="${mode==='pdf'}">원문 PDF</button></div><a href="${esc(href)}" target="_blank" rel="noopener" id="publisher-link">발행사 원문 ↗</a></div>
    ${mode==='table' ? `
-    <div class="document-paper"><div class="paper-title">INTERIM ${f.scope==='CFS'?'CONSOLIDATED':'SEPARATE'} STATEMENT<br>OF PROFIT OR LOSS</div><div class="paper-subtitle">Samsung Electronics Co., Ltd.<br>표시 단위: ${unit(f)} · 보고서 기준 ${source.report_end}</div>
-     <div class="paper-rule source-table-scroll" tabindex="0" aria-label="문서 근거표 가로 스크롤"><table class="source-table"><thead><tr><th scope="col">Account</th>${cols.map(c=>`<th scope="col">${c.year}<span>${c.months}개월 ${c.months===3?'분기':'누적'}</span></th>`).join('')}</tr></thead><tbody>${metrics.map(metric => {
+    <div class="document-paper"><div class="paper-title">${scope(f)} 손익계산서 · 추출 수치</div><div class="paper-subtitle">표시 단위: ${unit(f)} · 보고서 기준 ${source.report_end}</div>
+     <div class="paper-rule source-table-scroll" tabindex="0" aria-label="문서 근거표 가로 스크롤"><table class="source-table"><thead><tr><th scope="col">원문 항목</th>${cols.map(c=>`<th scope="col">${c.year}<span>${c.months}개월 ${c.months===3?'분기':'누적'}</span></th>`).join('')}</tr></thead><tbody>${metrics.map(metric => {
       const row = sourceFacts.filter(x=>x.metric===metric), name=row[0]?.row||metric;
       return `<tr class="${metric===f.metric?'source-selected':''}"><td>${esc(name)}</td>${cols.map(c=>{
        const cell=row.find(x=>x.start.startsWith(String(c.year))&&x.months===c.months);
