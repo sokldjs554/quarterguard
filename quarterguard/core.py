@@ -52,9 +52,17 @@ def select_unique(facts,**filters):
 def source_manifest():
     return {s['id']:s for s in json.loads((Path(__file__).resolve().parents[1]/'data/sources.json').read_text())}
 
+@lru_cache(maxsize=1)
+def source_facts():
+    return {f['id']:f for f in json.loads((Path(__file__).resolve().parents[1]/'data/facts.json').read_text())}
+
 def valid_source(f):
     d=source_manifest().get(f.document_id)
-    if not d:return False
+    canonical=source_facts().get(f.id)
+    if not d or not canonical:return False
+    if any(canonical.get(key)!=value for key,value in asdict(f).items() if key not in ('value','scale')):return False
+    # Equivalent unit representations preserve the registered source amount.
+    if f.amount != Decimal(canonical['value'])*canonical['scale']:return False
     column=f'{f.start[:4]} {"Q" if f.months==3 else "YTD"} {f.currency}'
     return (f.source_url==d['url'] and re.fullmatch(r'[0-9a-f]{64}',f.document_sha256) is not None and
       f.document_sha256==d['sha256'] and f.page==d.get('statement_pages',{}).get(f.scope) and

@@ -1,6 +1,6 @@
-"""Opt-in provider verification; never loaded by the public demo.
+"""Opt-in manual verification; shared schemas/checks also used by the public demo.
 
-Only public financial facts are sent to OpenAI. Keys stay in the Actions runner.
+Only public financial facts are sent to OpenAI. Keys stay on the server/Actions runner.
 Structured fields are checked; free prose still requires a human reading.
 """
 import argparse

@@ -41,7 +41,7 @@
   </section>
   <aside class="evidence-panel" id="source-panel" aria-label="선택 수치의 근거"><div class="section-bar"><h2>문서 근거</h2><span id="source-counter">—</span></div><div id="evidence-content"><div class="empty">수치를 선택하면 해당 근거를 표시합니다.</div></div></aside>
  </div>
- <p class="work-footnote">공개 예시 자료 · 수집 수치의 자동 계산과 도구 재검증을 구분합니다. <span>실시간 LLM·DART 연동 없음</span></p>
+ <p class="work-footnote">공개 예시 자료 · 수집 수치의 자동 계산과 도구 재검증을 구분합니다. <span>외부 API는 검증 기록 화면에서 별도로 요청합니다. 이 작업지는 자동으로 호출하지 않습니다.</span></p>
 </section>
 <section id="search" class="view" hidden>
  <div class="title-line"><div><h1>근거 검색</h1></div><span class="page-context">192개 수치 · 기간과 범위 보존</span></div>
@@ -54,7 +54,9 @@
  <p class="scope-notice">1개 기업 · 문서 2건 · 템플릿 질의 36개 · 업무 사례 8개. 개발용 회귀 평가이며, 사람 검수·독립 보류셋·일반화 성능을 뜻하지 않습니다.</p>
  <div id="evaluation-content"></div>
  <section class="regression-section"><div class="section-bar"><h2>오류 유형별 재현</h2><span>준비 재생과 현재 실행 구분</span></div><div class="regression-controls"><label for="case-select">검증 사례 <select id="case-select"></select></label><button id="prepared-btn" class="secondary">저장 기록</button><button id="case-run-btn" class="primary">현재 재실행</button></div><div id="case-output" aria-live="polite">사례 선택 후 저장된 실행 기록 확인</div></section>
- <div class="provider-note"><h2>외부 API 검증 범위</h2><p>별도 GitHub Actions에서 OpenAI 설명 생성 4회와 DART 금액 16개 대조를 검증했습니다. 공개 웹 작업지의 실시간 연동은 아닙니다.</p><a href="https://github.com/sokldjs554/quarterguard/blob/main/docs/live-verification.md" target="_blank" rel="noopener">응답 원본과 검증 한계 ↗</a></div>
+ <section id="heldout-content" class="review-section" aria-label="추가 문서 평가"></section>
+ <section id="provider-content" class="review-section" aria-label="외부 API 직접 확인"></section>
+ <div class="provider-note"><h2>별도 CI 검증 기록</h2><p>GitHub Actions에서 실행한 OpenAI 설명 생성 4회와 DART 금액 16개 대조 기록입니다. 위 버튼의 현재 요청 또는 캐시 응답과 구분합니다. 현재 사용 가능 여부는 서버의 연결 상태와 승인·사용량 제한에 따릅니다.</p><a href="https://github.com/sokldjs554/quarterguard/blob/main/docs/live-verification.md" target="_blank" rel="noopener">CI 응답 원본과 검증 한계 ↗</a></div>
 </section>
 
 </main>

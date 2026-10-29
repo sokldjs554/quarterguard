@@ -279,3 +279,24 @@ dialog::backdrop { background:#1f251966; }
 }
 @media(prefers-reduced-motion:reduce) { .busy-pulse:before { animation:none; } }
 @media(forced-colors:active) { .financial-table tr.selected,.source-table td.chosen-cell,.document-item.active { outline:1px solid Highlight; } }
+.provider-section-heading { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.provider-section-heading h2 { margin:0; }
+.provider-grid { display:grid; grid-template-columns:minmax(0,1fr); gap:16px; }
+.provider-card { padding:18px; background:#fff; border:1px solid var(--line); border-radius:6px; min-width:0; }
+.provider-card h3 { margin-bottom:12px; }
+.provider-card>label { display:inline-flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 10px 12px 0; font-size:12px; }
+.provider-card select { max-width:100%; }
+.provider-availability { font-size:12px; }
+.provider-availability p { margin-top:6px; }
+.provider-result { border-top:1px solid var(--line); padding-top:14px; margin-top:12px; font-size:12px; overflow-wrap:anywhere; }
+.provider-result-heading { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:8px; }
+.provider-result-heading span { color:var(--muted); }
+.provider-fields { display:grid; grid-template-columns:110px minmax(0,1fr); gap:8px; font-size:12px; }
+.provider-fields dd { margin:0; overflow-wrap:anywhere; }
+.generated-explanation { color:var(--ink); font-size:13px; white-space:pre-wrap; margin:12px 0; }
+.provider-raw pre,.heldout-failures pre,.heldout-anomaly pre { font:11px/1.6 var(--mono); white-space:pre-wrap; overflow-wrap:anywhere; max-height:300px; overflow:auto; padding:12px; background:var(--subtle); }
+.provider-card details summary,.heldout-failures summary,.heldout-anomaly summary { cursor:pointer; margin:12px 0; }
+.provider-result td small,.heldout-failures td small { display:block; font-size:10px; color:var(--muted); }
+.heldout-limitation { padding:12px 14px; border-left:3px solid var(--amber); background:var(--amber-bg); font-size:12px; }
+.heldout-failures { margin-top:18px; }
+@media(max-width:700px) { .provider-card { padding:13px; } .provider-section-heading { align-items:flex-start; flex-direction:column; } .provider-card>label { display:flex; } .provider-fields { grid-template-columns:1fr; gap:4px; } .provider-fields dd { margin-bottom:8px; } }
