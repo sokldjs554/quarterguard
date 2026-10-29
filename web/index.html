@@ -31,7 +31,6 @@
  <div id="work-alert" class="error-message" role="alert" hidden></div>
  <div id="boot-error" class="boot-error" hidden><h2>자료에 연결할 수 없습니다</h2><p>서버 연결을 확인한 뒤 다시 시도해 주세요.</p><button id="boot-retry" class="primary">다시 연결</button></div>
  <div class="desk" id="desk" aria-busy="true">
-  <aside class="evidence-panel" id="source-panel" aria-label="선택 수치의 근거"><div class="section-bar"><h2>문서 근거</h2><span id="source-counter">—</span></div><div id="evidence-content"><div class="empty">수치를 선택하면 해당 근거를 표시합니다.</div></div></aside>
   <section class="worksheet" aria-labelledby="sheet-title">
    <div class="section-bar"><h2 id="sheet-title">손익 항목</h2><span id="table-summary" role="status">준비 중</span></div>
    <div class="sheet-scroll" tabindex="0" aria-label="재무 비교표 가로 스크롤"><table class="financial-table"><thead><tr><th scope="col" class="row-index">#</th><th scope="col">항목</th><th scope="col" id="current-heading">기준 A</th><th scope="col" id="base-heading">비교 B</th><th scope="col">증감률</th><th scope="col">검토</th></tr></thead><tbody id="worksheet-rows"><tr><td colspan="6" class="empty">수치와 출처 로딩 중</td></tr></tbody></table></div>
@@ -40,6 +39,7 @@
    <section class="review-editor" aria-label="개인 검토 기록"><div class="editor-heading"><label for="review-note">개인 검토 메모 <span id="note-metric"></span></label><button id="mark-reviewed" class="review-toggle" aria-pressed="false" disabled>확인 표시</button></div><textarea id="review-note" rows="2" maxlength="2000" placeholder="검토한 내용이나 확인이 필요한 사항을 남기세요." disabled></textarea><div class="editor-footer"><span id="note-status" role="status">이 브라우저에만 저장됩니다.</span><button id="retry-note" class="secondary" hidden>메모 다시 불러오기</button><button id="save-note" class="secondary" disabled>메모 저장</button></div></section>
    <div class="execution-line"><span id="execution-status" role="status">자료 준비 중</span><button id="trace-btn" class="link-button" disabled>실행 상세</button></div>
   </section>
+  <aside class="evidence-panel" id="source-panel" aria-label="선택 수치의 근거"><div class="section-bar"><h2>문서 근거</h2><span id="source-counter">—</span></div><div id="evidence-content"><div class="empty">수치를 선택하면 해당 근거를 표시합니다.</div></div></aside>
  </div>
  <p class="work-footnote">공개 예시 자료 · 수집 수치의 자동 계산과 도구 재검증을 구분합니다. <span>실시간 LLM·DART 연동 없음</span></p>
 </section>
