@@ -9,6 +9,10 @@ jobs:
         with:
           python-version: '3.12'
           cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/test_review_notes.mjs
       - run: pip install -r requirements.txt
       - run: python -m unittest discover -s tests -v
       - run: python -m quarterguard.evaluate --cases-only

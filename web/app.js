@@ -1,9 +1,63 @@
 import {$,esc,labels,shortLabels,issues,money,unit,scope,docTitle,api,errorText,download,traceHTML,localTime} from './shared.js';
 import {evidenceInspector} from './evidence.js';
 import {mountReview} from './review.js';
+import {reviewKey,readReview,writeReview,csvText} from './review-notes.mjs';
 
 const defaults={current:{document:'s24q3',year:2024,scope:'CFS',period:'q',currency:'KRW'},base:{document:'s24q2',year:2024,scope:'CFS',period:'q',currency:'KRW'},mode:'qoq'};
 let facts=[],sources=[],inspector=null,current=null,selectedMetric='revenue',selectedSide='current',busy=false,requestId=0,ready=false,searchId=0;
+let noteKey=null,noteRecord=null,noteDirty=false;
+const reviewCache=new Map(),unsavedKeys=new Set(),unreadableKeys=new Set();
+function getNote(row,mode) {
+ const key=reviewKey(row,mode);
+ if(reviewCache.has(key))return reviewCache.get(key);
+ try {const record=readReview(localStorage,key);reviewCache.set(key,record);unreadableKeys.delete(key);return record;}
+ catch {unreadableKeys.add(key);return {note:'',reviewed:false,updated_at:null};}
+}
+function unreadableCurrent() {return current?.rows?.some(row=>unreadableKeys.has(reviewKey(row,current.selection.mode)))||false;}
+function reviewControls() {
+ const unavailable=busy||!ready||!current?.workflow_success||!current?.rows?.length;
+ const unreadable=unreadableCurrent();
+ $('#export-btn').disabled=unavailable||unreadable;
+ document.querySelectorAll('#review-note, #mark-reviewed, #save-note').forEach(x=>x.disabled=unavailable||unreadableKeys.has(noteKey));
+ $('#retry-note').hidden=!unreadable;$('#retry-note').disabled=unavailable;
+ if(unreadable)$('#note-status').textContent='메모 읽기 실패 · 기존 기록 보호를 위해 CSV를 중지했습니다. 다시 불러오세요.';
+}
+function saveNote() {
+ if(!noteKey||!noteRecord||unreadableKeys.has(noteKey))return;
+ noteRecord={...noteRecord,note:$('#review-note').value,updated_at:new Date().toISOString()};
+ reviewCache.set(noteKey,noteRecord);
+ try {writeReview(localStorage,noteKey,noteRecord);unsavedKeys.delete(noteKey);noteDirty=false;$('#note-status').textContent='저장됨 · 이 브라우저에만 보관';}
+ catch {unsavedKeys.add(noteKey);noteDirty=true;$('#note-status').textContent='저장 실패 · 현재 화면에만 유지됩니다. CSV로 보관하세요.';}
+ reviewControls();
+}
+function clearNote() {
+ if(noteDirty)saveNote();
+ noteKey=null;noteRecord=null;noteDirty=false;
+ $('#review-note').value='';$('#note-metric').textContent='';$('#mark-reviewed').textContent='확인 표시';$('#mark-reviewed').setAttribute('aria-pressed','false');
+ $('#note-status').textContent='이 브라우저에만 저장됩니다.';
+}
+function bindNote(row) {
+ const key=reviewKey(row,current.selection.mode);
+ if(key!==noteKey) {
+  if(noteDirty)saveNote();
+  noteKey=key;noteRecord=getNote(row,current.selection.mode);noteDirty=unsavedKeys.has(key);
+  $('#review-note').value=noteRecord.note;
+  $('#note-status').textContent=noteDirty?'저장 실패 · 현재 화면에만 유지됩니다. CSV로 보관하세요.':noteRecord.updated_at?'저장됨 · 이 브라우저에만 보관':'이 브라우저에만 저장됩니다.';
+ }
+ $('#note-metric').textContent='· '+labels[row.metric];
+ $('#mark-reviewed').textContent=noteRecord.reviewed?'확인함':'확인 표시';$('#mark-reviewed').setAttribute('aria-pressed',String(noteRecord.reviewed));
+ reviewControls();
+}
+function settings(open) {
+ $('#comparison-settings').hidden=!open;$('#settings-btn').setAttribute('aria-expanded',String(open));
+}
+function updateContext() {
+ const request=selection();
+ const describe=s=>`${s.year}년 ${s.document==='s24q3'?'3분기':'2분기'} ${s.period==='ytd'?'누적':'단독'} · ${s.scope==='CFS'?'연결':'별도'} · ${s.currency==='KRW'?'백만 원':'천 USD'}`;
+ $('#selection-summary').textContent=`${request.mode==='qoq'?'전분기':'전년 동기'} 대비 | A ${describe(request.current)} / B ${describe(request.base)}`;
+ const row=current?.rows?.find(r=>r.metric===selectedMetric);
+ document.querySelectorAll('[data-document]').forEach(b=>{const active=row?.[selectedSide]?.document_id===b.dataset.document;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
+}
 const options={document:[['s24q3','2024년 3분기 보고서'],['s24q2','2024년 반기 보고서']],year:[[2024,'2024년'],[2023,'2023년']],scope:[['CFS','연결'],['OFS','별도']],period:[['q','단독 분기'],['ytd','누적']],currency:[['KRW','백만 원'],['USD','천 USD · 참고']]};
 const optionNames={document:'문서',year:'연도',scope:'범위',period:'기간',currency:'단위'};
 function view(name) {
@@ -28,12 +82,13 @@ function setSelection(request) {
 }
 function setBusy(value) {
  busy=value;$('#desk').setAttribute('aria-busy',String(value));
- document.querySelectorAll('.selectors select, #mode, #run-btn, #reset-btn').forEach(x=>x.disabled=value||!ready);
+ document.querySelectorAll('.selectors select, #mode, #run-btn, #reset-btn, [data-document]').forEach(x=>x.disabled=value||!ready);
+ reviewControls();
  $('#execution-status').classList.toggle('busy-pulse',value);
 }
 async function execute(live) {
  const token=++requestId,request=selection(),focusId=document.activeElement?.id;
- current=null;$('#work-alert').hidden=true;$('#trace-btn').disabled=true;$('#trace-dialog').close();setBusy(true);
+ clearNote();current=null;updateContext();$('#work-alert').hidden=true;$('#trace-btn').disabled=true;$('#trace-dialog').close();setBusy(true);
  $('#execution-status').textContent=live?'근거 조회·문맥 대조 진행 중 · 실제 MCP 실행':'선택한 자료의 표 계산 중';
  $('#table-summary').textContent='자료 대조 중';
  $('#worksheet-rows').innerHTML='<tr><td colspan="6" class="empty" role="status">선택한 자료의 근거 대조 중</td></tr>';
@@ -46,7 +101,7 @@ async function execute(live) {
    current=result;$('#trace-btn').disabled=false;
    throw Error((result.issues||[]).map(x=>issues[x]?.[0]||x).join(' · ')||'재검증 실패');
   }
-  current=result;render();
+  current={...result,selection:request};render();
  } catch(e) {
   if(token!==requestId)return;
   $('#work-alert').textContent=errorText(e)+' · 설정 초기화 또는 근거 재검증으로 다시 시도할 수 있습니다.';$('#work-alert').hidden=false;
@@ -57,6 +112,7 @@ async function execute(live) {
 }
 function render() {
  const rows=current.rows,first=rows[0],failed=rows.filter(r=>r.result.status!=='verified').length;
+ rows.forEach(row=>getNote(row,current.selection.mode));
  $('#current-heading').innerHTML=`기준 A <span class="column-subtitle">${first.current.start.slice(0,7)}–${first.current.end.slice(0,7)} · ${unit(first.current)}</span>`;
  $('#base-heading').innerHTML=`비교 B <span class="column-subtitle">${first.base.start.slice(0,7)}–${first.base.end.slice(0,7)} · ${unit(first.base)}</span>`;
  $('#table-summary').textContent=`${rows.length}개 항목 · ${failed?'확인 필요 '+failed+'건':'문맥 일치'}`;
@@ -71,12 +127,13 @@ function render() {
  $('#trace-btn').disabled=false;selectRow();
 }
 function selectRow() {
- const row=current?.rows.find(r=>r.metric===selectedMetric);if(!row)return;
+ const row=current?.rows?.find(r=>r.metric===selectedMetric);if(!row)return;
  document.querySelectorAll('[data-row]').forEach(tr=>tr.classList.toggle('selected',tr.dataset.row===selectedMetric));
  document.querySelectorAll('[data-fact]').forEach(b=>b.classList.toggle('active',b.dataset.metric===selectedMetric&&b.dataset.side===selectedSide));
  const a=row.current,b=row.base,r=row.result,ok=r.status==='verified';
  $('#finding').innerHTML=`<div class="finding-heading"><h3>${labels[row.metric]} · 검토 근거</h3><span class="${ok?'ok':'warn'}">${ok?'비교 조건 일치':'계산 보류'}</span></div><div class="context-checks"><span class="${r.issues.includes('PERIOD_MISMATCH')?'bad':''}">기간 ${a.months}개월 ↔ ${b.months}개월</span><span class="${r.issues.includes('SCOPE_MISMATCH')?'bad':''}">범위 ${scope(a)} ↔ ${scope(b)}</span><span class="${r.issues.some(x=>['CURRENCY_MISMATCH','CONVENIENCE_TRANSLATION'].includes(x))?'bad':''}">${unit(a)} ↔ ${unit(b)}</span></div>${ok?`<div class="calculation">(${money(a)} ÷ ${money(b)} − 1) × 100 = ${esc(r.growth_pct)}%</div><p class="calculation-note">문서·행·열의 출처 확인 · Decimal 계산 · 소수점 4자리 반올림</p>`:r.issues.map(x=>`<div class="finding-issue">${esc(issues[x]?.[0]||x)}<small>${esc(issues[x]?.[1]||'근거 재확인 필요')}</small></div>`).join('')}`;
  inspector.show(row[selectedSide],[a,b],selectedSide==='current'?0:1);$('#source-counter').textContent=`${selectedSide==='current'?'A 기준':'B 비교'} · ${labels[row.metric]}`;
+ bindNote(row);updateContext();
 }
 function openTrace() {
  if(!current)return;
@@ -96,7 +153,15 @@ async function boot() {
    const row=current?.rows.find(r=>r.current.id===id||r.base.id===id);if(!row)return;
    selectedMetric=row.metric;selectedSide=index===0?'current':'base';selectRow();
   });
-  $('#version').textContent='v1.1 · '+health.commit.slice(0,7);
+  $('#version').textContent='v1.2 · '+health.commit.slice(0,7);
+  $('#document-count').textContent=sources.length;
+  $('#document-list').innerHTML=sources.map(s=>`<button class="document-item" data-document="${esc(s.id)}" aria-pressed="false"><span class="doc-icon" aria-hidden="true">PDF</span><span><strong>${s.id==='s24q3'?'2024년 3분기':'2024년 반기'}</strong><small>${s.pages}쪽 · 영문 IR</small></span></button>`).join('');
+  document.querySelectorAll('[data-document]').forEach(b=>b.onclick=async()=>{
+   if(busy||!ready)return;view('work');const row=current?.rows?.find(r=>r.metric===selectedMetric);
+   const side=['current','base'].find(side=>row?.[side]?.document_id===b.dataset.document);
+   if(side){selectedSide=side;selectRow();}
+   else {const request=selection();request.current.document=b.dataset.document;setSelection(request);selectedSide='current';await execute(false);}
+  });
   $('#source-index').innerHTML=sources.map(s=>`<div class="source-index-row"><a href="${esc(s.url)}" target="_blank" rel="noopener">${docTitle(s.id)} · Samsung Electronics ↗</a><span>${s.pages} pages · ${s.report_end}</span></div>`).join('');
   ready=true;await execute(false);loadReview();
  } catch(e) {$('#boot-error').hidden=false;$('#work-alert').hidden=true;$('#desk').setAttribute('aria-busy','false');$('#table-summary').textContent='연결 불가';$('#execution-status').textContent='수집 자료 연결 필요';}
@@ -120,4 +185,22 @@ $('#reset-btn').onclick=()=>{setSelection(defaults);selectedMetric='revenue';sel
 $('#run-btn').onclick=()=>execute(true);$('#trace-btn').onclick=openTrace;$('#close-trace').onclick=()=>$('#trace-dialog').close();
 $('#download-btn').onclick=()=>current&&download(current,`quarterguard-worksheet-${current.run_id}.json`);
 $('#boot-retry').onclick=boot;
+$('#settings-btn').onclick=()=>settings($('#comparison-settings').hidden);
+$('#settings-close').onclick=()=>{settings(false);$('#settings-btn').focus();};
+$('#review-note').oninput=()=>{noteDirty=true;$('#note-status').textContent='작성 중 · 항목을 바꾸면 자동 저장됩니다.';};
+$('#review-note').onblur=()=>{if(noteDirty)saveNote();};
+$('#save-note').onclick=saveNote;
+$('#retry-note').onclick=()=>{
+ if(busy||!current?.workflow_success)return;
+ if(noteDirty)saveNote();
+ current.rows.forEach(row=>getNote(row,current.selection.mode));
+ noteKey=null;bindNote(current.rows.find(row=>row.metric===selectedMetric));
+};
+$('#mark-reviewed').onclick=()=>{if(!noteRecord||busy)return;noteRecord={...noteRecord,reviewed:!noteRecord.reviewed};saveNote();$('#mark-reviewed').setAttribute('aria-pressed',String(noteRecord.reviewed));$('#mark-reviewed').textContent=noteRecord.reviewed?'확인함':'확인 표시';};
+$('#export-btn').onclick=()=>{
+ if(busy||!current?.workflow_success||!current?.rows?.length||unreadableCurrent())return;
+ if(noteDirty)saveNote();
+ const text=csvText(current.rows,current.selection.mode,getNote,labels),href=URL.createObjectURL(new Blob([text],{type:'text/csv;charset=utf-8'})),a=document.createElement('a');
+ a.href=href;a.download=`quarterguard-review-${new Date().toISOString().slice(0,10)}.csv`;a.click();setTimeout(()=>URL.revokeObjectURL(href),1000);
+};
 boot();

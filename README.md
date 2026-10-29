@@ -2,9 +2,9 @@
 
 **같은 통화, 다른 기간. 숫자가 맞아도 비교는 틀릴 수 있습니다.**
 
-분기·누적, 연결·별도, 단위·참고 환산액 혼동을 막는 **공시 대조 작업지**입니다. 실제 공개 보고서의 수치를 검색하고, 출처와 문맥을 확인한 뒤 계산합니다. 잘못된 입력 조합은 확인 필요로 남깁니다.
+분기·누적, 연결·별도, 단위·참고 환산액 혼동을 막는 **공시 검토 도구**입니다. 실제 공개 보고서의 수치를 검색하고, 출처와 문맥을 확인한 뒤 계산합니다. 잘못된 입력 조합은 확인 필요로 남깁니다.
 
-[공개 데모](https://quarterguard.onrender.com) · [평가 원본](artifacts/evaluation.json) · [조사와 주제 선정](docs/research.md) · [UI 조사와 반영](docs/ui-research.md) · [실패와 개선](docs/failures.md) · [요구사항 대응](docs/requirements.md)
+[공개 데모](https://quarterguard.onrender.com) · [평가 원본](artifacts/evaluation.json) · [조사와 주제 선정](docs/research.md) · [실제 데모 조사·화면 재구성](docs/live-demo-research.md) · [실패와 개선](docs/failures.md) · [요구사항 대응](docs/requirements.md)
 
 ## 문제 → 검증
 
@@ -33,12 +33,14 @@
 
 </details>
 
-**추천 체험:** A/B 보고서와 조건 선택 → 매출액의 A/B 숫자 클릭 → 해당 문서·행·열 확인 → B 기간을 누적으로 변경 → 비교 차단 이유 확인 → 초기화 → 근거 재검증 → 실행 상세.
+**추천 체험:** 보고서 목록에서 근거 선택 → 매출액 A/B 숫자 클릭 → 문서·행·열 확인 → 메모와 개인 확인 표시 → CSV 내보내기. `비교 설정`에서 B 기간을 누적으로 바꾸면 계산이 차단됩니다. 초기화 후 `비교 검증`을 누르면 실제 MCP 실행과 상세 기록을 확인할 수 있습니다.
 
 - `표 계산`: 수집한 정본 수치에 문맥 검사와 Decimal 계산 적용. 현재 MCP 호출 없음.
-- `근거 재검증`: 실제 MCP stdio 세션에서 6개 항목의 근거 조회·비교 도구를 총 18회 호출. 실패하면 이전 결과를 지움.
+- `비교 검증`: 실제 MCP stdio 세션에서 6개 항목의 근거 조회·비교 도구를 총 18회 호출. 실패하면 이전 결과를 지움.
 - `근거표`: 수집 수치로 재구성한 표. `원문 PDF`는 발행사 원문을 직접 열며 외부 차단 시 새 탭 링크와 근거표를 제공.
-- `평가·기록`: 6개 검색 구성, 8개 회귀 사례의 상태·원인·수치·인용 확인. 저장 결과 재생과 실제 MCP 실행을 구분.
+- `검증 기록`: 6개 검색 구성, 8개 회귀 사례의 상태·원인·수치·인용 확인. 저장 결과 재생과 실제 MCP 실행을 구분.
+- `개인 검토 메모`: 정확히 같은 수치 쌍·문서 버전·비교 방식에 묶인 브라우저 저장. 개인 확인은 자동 판정을 변경하지 않습니다. 다른 기기로 동기화되지 않으며 저장 실패를 표시합니다.
+- `CSV 내보내기`: 6개 항목의 값·기간·범위·통화·배율·출처·자동 판정·개인 확인·메모를 포함합니다. 실행 중이나 실패 후에는 비활성화됩니다.
 - 공개 데모는 생성형 LLM을 사용하지 않습니다. 계획은 규칙 기반이며, 임베딩 모델 두 종은 검색 비교 실험에서 실제 실행했습니다. LLM 자율 에이전트로 과장하지 않습니다.
 
 **외부 API 실호출 검증 완료(2026-10-29):** OpenAI 설명 생성 **4/4 구조 필드 검증 통과**, DART 조회 4회로 **16/16 재무 금액 일치**. [실행 근거·응답·한계](docs/live-verification.md). 공개 데모와 분리된 수동 Actions 검증이며, LLM 설명의 용어상 모호함 한 건도 원문과 함께 기록했습니다.
@@ -85,6 +87,8 @@ python -m uvicorn quarterguard.api:app --host 0.0.0.0 --port 8000
 python -m unittest discover -s tests -v
 python -m quarterguard.evaluate --cases-only
 python scripts/check_artifacts.py
+# 브라우저 저장/CSV 로직 (Node 22+)
+node --test tests/test_review_notes.mjs
 # 희소 검색 4개 구성과 실제 MCP 평가 (dense 결과는 이 실행에서 미포함)
 python -m quarterguard.evaluate
 # ONNX 모델 두 종까지 다시 평가
@@ -96,7 +100,7 @@ python -m quarterguard.ingest --download
 
 전체 평가 명령은 artifacts를 갱신합니다. 신경망 모델의 최초 다운로드에는 인터넷과 저장 공간이 필요합니다. 코드/데이터 변경 후 과거 평가를 최신처럼 사용하지 마세요.
 
-브라우저 재현: `pip install playwright` 후 Chromium을 설치하고 `scripts/browser_check.py`의 실행 경로를 환경에 맞추세요. 서버 실행 후 `DEMO_URL=http://127.0.0.1:8000 python scripts/browser_check.py`. 실제 검사 viewport는 PC 1440×1000, 모바일 390×844입니다. **단위·통합 54개, 브라우저 흐름 31개 통과.** [검사 결과](artifacts/browser-check.json)
+브라우저 재현: `pip install playwright` 후 Chromium을 설치하고 `scripts/browser_check.py`의 실행 경로를 환경에 맞추세요. 서버 실행 후 `DEMO_URL=http://127.0.0.1:8000 python scripts/browser_check.py`. 실제 검사 viewport는 PC 1440×1000, 모바일 390×844입니다. **Python 단위·통합 54개, Node 5개, 브라우저 흐름 37개 통과.** [검사 결과](artifacts/browser-check.json)
 
 ## 구조와 기술 선택
 
@@ -137,6 +141,6 @@ MCP 서버: `python -m quarterguard.mcp_server`. 4개 도구: `search_documents`
 
 ## 개발 근거
 
-[설계·주제 비교](docs/design.md) · [UI 제품 조사·구현](docs/ui-research.md) · [조사한 제품과 SK Family README](docs/research.md) · [실패/수정 기록](docs/failures.md) · [직무 요구사항 대응](docs/requirements.md).
+[설계·주제 비교](docs/design.md) · [실제 데모 조사·구현](docs/live-demo-research.md) · [조사한 제품과 SK Family README](docs/research.md) · [실패/수정 기록](docs/failures.md) · [직무 요구사항 대응](docs/requirements.md).
 
 본 프로젝트는 AI 코딩 도구로 작성하고 별도 AI 리뷰 및 자동 검증을 수행했습니다. 사람 협업·전문가 검수·고객 운영 경험으로 주장하지 않습니다. 금융 투자 추천이나 감사 의견을 제공하지 않습니다.
