@@ -1,0 +1,106 @@
+[
+  {
+    "id": "qoq-revenue",
+    "title": "분기 매출 증감",
+    "description": "2024년 3분기 연결 매출의 전분기 대비 증감률",
+    "operation": "compare",
+    "mode": "qoq",
+    "queries": [
+      "samsung 2024 Q3 CFS revenue quarter KRW",
+      "samsung 2024 Q2 CFS revenue quarter KRW"
+    ],
+    "expected_status": "verified",
+    "expected_value": "6.7916"
+  },
+  {
+    "id": "ytd-trap",
+    "title": "누적·분기 혼동",
+    "description": "9개월 누적 매출과 전년 3개월 매출의 잘못된 비교",
+    "operation": "compare",
+    "mode": "yoy",
+    "queries": [
+      "samsung 2024 Q3 CFS revenue ytd KRW",
+      "samsung 2023 Q3 CFS revenue quarter KRW"
+    ],
+    "expected_status": "needs_review",
+    "expected_issue": "PERIOD_MISMATCH"
+  },
+  {
+    "id": "scope-trap",
+    "title": "연결·별도 혼동",
+    "description": "연결 매출과 별도 매출의 잘못된 비교",
+    "operation": "compare",
+    "mode": "qoq",
+    "queries": [
+      "samsung 2024 Q3 CFS revenue quarter KRW",
+      "samsung 2024 Q2 OFS revenue quarter KRW"
+    ],
+    "expected_status": "needs_review",
+    "expected_issue": "SCOPE_MISMATCH"
+  },
+  {
+    "id": "currency-trap",
+    "title": "통화 혼동",
+    "description": "원화와 참고 달러 표시액의 잘못된 비교",
+    "operation": "compare",
+    "mode": "qoq",
+    "queries": [
+      "samsung 2024 Q3 CFS revenue quarter KRW",
+      "samsung 2024 Q2 CFS revenue quarter USD"
+    ],
+    "expected_status": "needs_review",
+    "expected_issue": "CURRENCY_MISMATCH"
+  },
+  {
+    "id": "reconcile-revenue",
+    "title": "누적 차감 교차검증",
+    "description": "9개월 누적 − 반기 누적 = 직접 공시된 3분기 매출",
+    "operation": "reconcile",
+    "queries": [
+      "samsung 2024 Q3 CFS revenue ytd KRW",
+      "samsung 2024 Q2 CFS revenue ytd KRW",
+      "samsung 2024 Q3 CFS revenue quarter KRW"
+    ],
+    "expected_status": "verified",
+    "expected_value": "79098731"
+  },
+  {
+    "id": "qoq-profit",
+    "title": "영업이익 증감",
+    "description": "2024년 3분기 연결 영업이익의 전분기 대비 증감률",
+    "operation": "compare",
+    "mode": "qoq",
+    "queries": [
+      "samsung 2024 Q3 CFS operating_profit quarter KRW",
+      "samsung 2024 Q2 CFS operating_profit quarter KRW"
+    ],
+    "expected_status": "verified",
+    "expected_value": "-12.0693"
+  },
+  {
+    "id": "negative-base",
+    "title": "적자 기저 비교",
+    "description": "전년 별도 영업손실 대비 증감률의 해석 제한",
+    "operation": "compare",
+    "mode": "yoy",
+    "queries": [
+      "samsung 2024 Q3 OFS operating_profit quarter KRW",
+      "samsung 2023 Q3 OFS operating_profit quarter KRW"
+    ],
+    "expected_status": "needs_review",
+    "expected_issue": "NEGATIVE_BASE"
+  },
+  {
+    "id": "no-evidence",
+    "title": "근거 부재",
+    "description": "수집 범위 밖인 2025년 실적 조회",
+    "operation": "compare",
+    "mode": "yoy",
+    "queries": [
+      "samsung 2025 Q3 CFS revenue quarter KRW",
+      "samsung 2024 Q3 CFS revenue quarter KRW"
+    ],
+    "expected_status": "needs_review",
+    "expected_issue": "SEARCH_EMPTY"
+  }
+]

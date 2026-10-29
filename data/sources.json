@@ -1,0 +1,24 @@
+[
+  {
+    "id": "s24q3",
+    "title": "Samsung Electronics 2024 3Q Interim Business Report",
+    "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+    "quarter": 3,
+    "report_end": "2024-09-30",
+    "accessed": "2026-10-29",
+    "distribution": "No original PDF redistribution; extracted numeric facts and locators only",
+    "sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "pages": 179
+  },
+  {
+    "id": "s24q2",
+    "title": "Samsung Electronics 2024 Half-year Business Report",
+    "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+    "quarter": 2,
+    "report_end": "2024-06-30",
+    "accessed": "2026-10-29",
+    "distribution": "No original PDF redistribution; extracted numeric facts and locators only",
+    "sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+    "pages": 287
+  }
+]

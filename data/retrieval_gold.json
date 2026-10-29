@@ -1,0 +1,254 @@
+[
+  {
+    "id": "q01",
+    "query": "삼성전자 2024 3분기 연결 매출액 3개월 KRW",
+    "gold_fact_id": "s24q3-CFS-revenue-2024-q-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q02",
+    "query": "삼성전자 2024 2분기 연결 매출액 누적 KRW",
+    "gold_fact_id": "s24q2-CFS-revenue-2024-ytd-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q03",
+    "query": "삼성전자 2023 3분기 별도 매출액 3개월 KRW",
+    "gold_fact_id": "s24q3-OFS-revenue-2023-q-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q04",
+    "query": "삼성전자 2023 2분기 별도 매출액 누적 USD",
+    "gold_fact_id": "s24q2-OFS-revenue-2023-ytd-USD",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q05",
+    "query": "삼성전자 2024 3분기 별도 매출액 누적 KRW",
+    "gold_fact_id": "s24q3-OFS-revenue-2024-ytd-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q06",
+    "query": "삼성전자 2024 2분기 연결 매출액 3개월 USD",
+    "gold_fact_id": "s24q2-CFS-revenue-2024-q-USD",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q07",
+    "query": "삼성전자 2024 3분기 연결 매출원가 3개월 KRW",
+    "gold_fact_id": "s24q3-CFS-cost_of_sales-2024-q-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q08",
+    "query": "삼성전자 2024 2분기 연결 매출원가 누적 KRW",
+    "gold_fact_id": "s24q2-CFS-cost_of_sales-2024-ytd-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q09",
+    "query": "삼성전자 2023 3분기 별도 매출원가 3개월 KRW",
+    "gold_fact_id": "s24q3-OFS-cost_of_sales-2023-q-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q10",
+    "query": "삼성전자 2023 2분기 별도 매출원가 누적 USD",
+    "gold_fact_id": "s24q2-OFS-cost_of_sales-2023-ytd-USD",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q11",
+    "query": "삼성전자 2024 3분기 별도 매출원가 누적 KRW",
+    "gold_fact_id": "s24q3-OFS-cost_of_sales-2024-ytd-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q12",
+    "query": "삼성전자 2024 2분기 연결 매출원가 3개월 USD",
+    "gold_fact_id": "s24q2-CFS-cost_of_sales-2024-q-USD",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q13",
+    "query": "삼성전자 2024 3분기 연결 매출총이익 3개월 KRW",
+    "gold_fact_id": "s24q3-CFS-gross_profit-2024-q-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q14",
+    "query": "삼성전자 2024 2분기 연결 매출총이익 누적 KRW",
+    "gold_fact_id": "s24q2-CFS-gross_profit-2024-ytd-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q15",
+    "query": "삼성전자 2023 3분기 별도 매출총이익 3개월 KRW",
+    "gold_fact_id": "s24q3-OFS-gross_profit-2023-q-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q16",
+    "query": "삼성전자 2023 2분기 별도 매출총이익 누적 USD",
+    "gold_fact_id": "s24q2-OFS-gross_profit-2023-ytd-USD",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q17",
+    "query": "삼성전자 2024 3분기 별도 매출총이익 누적 KRW",
+    "gold_fact_id": "s24q3-OFS-gross_profit-2024-ytd-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q18",
+    "query": "삼성전자 2024 2분기 연결 매출총이익 3개월 USD",
+    "gold_fact_id": "s24q2-CFS-gross_profit-2024-q-USD",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q19",
+    "query": "삼성전자 2024 3분기 연결 판매관리비 3개월 KRW",
+    "gold_fact_id": "s24q3-CFS-operating_expenses-2024-q-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q20",
+    "query": "삼성전자 2024 2분기 연결 판매관리비 누적 KRW",
+    "gold_fact_id": "s24q2-CFS-operating_expenses-2024-ytd-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q21",
+    "query": "삼성전자 2023 3분기 별도 판매관리비 3개월 KRW",
+    "gold_fact_id": "s24q3-OFS-operating_expenses-2023-q-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q22",
+    "query": "삼성전자 2023 2분기 별도 판매관리비 누적 USD",
+    "gold_fact_id": "s24q2-OFS-operating_expenses-2023-ytd-USD",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q23",
+    "query": "삼성전자 2024 3분기 별도 판매관리비 누적 KRW",
+    "gold_fact_id": "s24q3-OFS-operating_expenses-2024-ytd-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q24",
+    "query": "삼성전자 2024 2분기 연결 판매관리비 3개월 USD",
+    "gold_fact_id": "s24q2-CFS-operating_expenses-2024-q-USD",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q25",
+    "query": "삼성전자 2024 3분기 연결 영업이익 3개월 KRW",
+    "gold_fact_id": "s24q3-CFS-operating_profit-2024-q-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q26",
+    "query": "삼성전자 2024 2분기 연결 영업이익 누적 KRW",
+    "gold_fact_id": "s24q2-CFS-operating_profit-2024-ytd-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q27",
+    "query": "삼성전자 2023 3분기 별도 영업이익 3개월 KRW",
+    "gold_fact_id": "s24q3-OFS-operating_profit-2023-q-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q28",
+    "query": "삼성전자 2023 2분기 별도 영업이익 누적 USD",
+    "gold_fact_id": "s24q2-OFS-operating_profit-2023-ytd-USD",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q29",
+    "query": "삼성전자 2024 3분기 별도 영업이익 누적 KRW",
+    "gold_fact_id": "s24q3-OFS-operating_profit-2024-ytd-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q30",
+    "query": "삼성전자 2024 2분기 연결 영업이익 3개월 USD",
+    "gold_fact_id": "s24q2-CFS-operating_profit-2024-q-USD",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q31",
+    "query": "삼성전자 2024 3분기 연결 당기순이익 3개월 KRW",
+    "gold_fact_id": "s24q3-CFS-net_profit-2024-q-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q32",
+    "query": "삼성전자 2024 2분기 연결 당기순이익 누적 KRW",
+    "gold_fact_id": "s24q2-CFS-net_profit-2024-ytd-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q33",
+    "query": "삼성전자 2023 3분기 별도 당기순이익 3개월 KRW",
+    "gold_fact_id": "s24q3-OFS-net_profit-2023-q-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q34",
+    "query": "삼성전자 2023 2분기 별도 당기순이익 누적 USD",
+    "gold_fact_id": "s24q2-OFS-net_profit-2023-ytd-USD",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q35",
+    "query": "삼성전자 2024 3분기 별도 당기순이익 누적 KRW",
+    "gold_fact_id": "s24q3-OFS-net_profit-2024-ytd-KRW",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  },
+  {
+    "id": "q36",
+    "query": "삼성전자 2024 2분기 연결 당기순이익 3개월 USD",
+    "gold_fact_id": "s24q2-CFS-net_profit-2024-q-USD",
+    "origin": "fixed_template",
+    "human_reviewed": false
+  }
+]
