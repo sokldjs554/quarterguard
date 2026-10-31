@@ -1,0 +1,3022 @@
+{
+  "schema_version": 1,
+  "label": "first-post-fix-frozen-gold",
+  "evaluated_at": "2026-10-31T12:24:57.913473+00:00",
+  "freeze_sha256": "0c34675a0a408ee92f4e4bccc8d2552eb929f145c0aab0b432bdfc2c8b18dfec",
+  "freeze": {
+    "schema_version": 1,
+    "frozen_at": "2026-10-31T12:23:14.398410+00:00",
+    "author": "independent AI worker in same task; not human or independent expert curation",
+    "human_reviewed": false,
+    "baseline_commit": "39b59bd",
+    "pipeline_run_before_freeze": false,
+    "inspected_pipeline": "Only original code at 39b59bd for interface/support constraints; no current changes or query outcomes inspected",
+    "selection": "Official 2023 Samsung H1/Q3 reporting documents and Hyundai Q3 2023 report. 2022 comparative columns are explicitly labeled. Samsung 2023 comparisons also appear in original 2024 documents: new source documents/reporting periods, not wholly unseen financial values.",
+    "gold_method": "AI literal table-cell transcription from official PDF text and header reading; no production parser/search used. Canonical metric row aliases explicitly mapped in source_cells.json.",
+    "post_freeze_tuning_allowed": false,
+    "files": {
+      "data/v2-blind/calculations.json": "c7f9f70b8b1cabd3cde91177555f255f213e4e615fd080bf45250bae233845c2",
+      "data/v2-blind/facts.json": "be9141767c17b84f1dafb1d55586a4e47615bad3de7a783a4dec86bd890c3138",
+      "data/v2-blind/retrieval_gold.json": "ef7991da0eab2e79dce96c6de17a4e41964c2121c23e94d6f7eff357100a98a2",
+      "data/v2-blind/source_cells.json": "ce0f8b5211219f207923c42e248e2c8ebd368d3af9debb6c655437b347d13fc8",
+      "data/v2-blind/sources.json": "73a7256a30e0b7088cb191f11b88d854bd5ce2c9e1f2ea7cfa2fb1c24a00be95"
+    }
+  },
+  "implementation_hashes": {
+    "quarterguard/core.py": "dbe42039fae2619484df0a79bd5b893ee58e0efc40468570a672da79c877830e",
+    "quarterguard/ingest.py": "0b38ba3062e2f649eb4e0ff6d64529aecacc546de57aed9ea3c909d5479663e8",
+    "quarterguard/search.py": "03e36e985309f85d5b9d62980ba65793dfd1876f4ab715a1bd76b2acc557c379"
+  },
+  "evaluation_harness_sha256": "0ded793b0318a2af4093cd0c4893fe76c62307ec1902769aa1fc80734071efc9",
+  "human_reviewed": false,
+  "same_task_ai_authored": true,
+  "model_calls": 0,
+  "provider_api_cost_usd": 0,
+  "cost_scope": "Paid model APIs only; excludes local CPU, storage, and network",
+  "source_audit": [
+    {
+      "fact_id": "s23q2-CFS-revenue-2023-q-KRW",
+      "source_cell": "60005533",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-CFS-revenue-2022-q-KRW",
+      "source_cell": "77203607",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-CFS-revenue-2023-ytd-KRW",
+      "source_cell": "123750904",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-CFS-revenue-2022-ytd-KRW",
+      "source_cell": "154985105",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-CFS-gross_profit-2023-q-KRW",
+      "source_cell": "18358343",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-CFS-gross_profit-2022-q-KRW",
+      "source_cell": "30933859",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-CFS-gross_profit-2023-ytd-KRW",
+      "source_cell": "36096621",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-CFS-gross_profit-2022-ytd-KRW",
+      "source_cell": "61643300",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-CFS-operating_profit-2023-q-KRW",
+      "source_cell": "668547",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-CFS-operating_profit-2022-q-KRW",
+      "source_cell": "14097045",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-CFS-operating_profit-2023-ytd-KRW",
+      "source_cell": "1308725",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-CFS-operating_profit-2022-ytd-KRW",
+      "source_cell": "28218454",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-CFS-net_profit-2023-q-KRW",
+      "source_cell": "1723571",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-CFS-net_profit-2022-q-KRW",
+      "source_cell": "11098805",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-CFS-net_profit-2023-ytd-KRW",
+      "source_cell": "3298171",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-CFS-net_profit-2022-ytd-KRW",
+      "source_cell": "22423433",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-OFS-revenue-2023-q-KRW",
+      "source_cell": "39729088",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-OFS-revenue-2022-q-KRW",
+      "source_cell": "58641288",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-OFS-revenue-2023-ytd-KRW",
+      "source_cell": "81897767",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-OFS-revenue-2022-ytd-KRW",
+      "source_cell": "115365546",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-OFS-gross_profit-2023-q-KRW",
+      "source_cell": "5920518",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-OFS-gross_profit-2022-q-KRW",
+      "source_cell": "18677020",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-OFS-gross_profit-2023-ytd-KRW",
+      "source_cell": "10975708",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-OFS-gross_profit-2022-ytd-KRW",
+      "source_cell": "36216366",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-OFS-operating_profit-2023-q-KRW",
+      "source_cell": "-3698103",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-OFS-operating_profit-2022-q-KRW",
+      "source_cell": "10158878",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-OFS-operating_profit-2023-ytd-KRW",
+      "source_cell": "-7606864",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-OFS-operating_profit-2022-ytd-KRW",
+      "source_cell": "19310709",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-OFS-net_profit-2023-q-KRW",
+      "source_cell": "9584633",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-OFS-net_profit-2022-q-KRW",
+      "source_cell": "8191308",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-OFS-net_profit-2023-ytd-KRW",
+      "source_cell": "13742728",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q2-OFS-net_profit-2022-ytd-KRW",
+      "source_cell": "15843251",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-CFS-revenue-2023-q-KRW",
+      "source_cell": "67404652",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-CFS-revenue-2022-q-KRW",
+      "source_cell": "76781680",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-CFS-revenue-2023-ytd-KRW",
+      "source_cell": "191155556",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-CFS-revenue-2022-ytd-KRW",
+      "source_cell": "231766785",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-CFS-gross_profit-2023-q-KRW",
+      "source_cell": "20785926",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-CFS-gross_profit-2022-q-KRW",
+      "source_cell": "28709443",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-CFS-gross_profit-2023-ytd-KRW",
+      "source_cell": "56882547",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-CFS-gross_profit-2022-ytd-KRW",
+      "source_cell": "90352743",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-CFS-operating_profit-2023-q-KRW",
+      "source_cell": "2433534",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-CFS-operating_profit-2022-q-KRW",
+      "source_cell": "10852045",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-CFS-operating_profit-2023-ytd-KRW",
+      "source_cell": "3742259",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-CFS-operating_profit-2022-ytd-KRW",
+      "source_cell": "39070499",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-CFS-net_profit-2023-q-KRW",
+      "source_cell": "5844171",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-CFS-net_profit-2022-q-KRW",
+      "source_cell": "9389198",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-CFS-net_profit-2023-ytd-KRW",
+      "source_cell": "9142342",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-CFS-net_profit-2022-ytd-KRW",
+      "source_cell": "31812631",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-OFS-revenue-2023-q-KRW",
+      "source_cell": "45866224",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-OFS-revenue-2022-q-KRW",
+      "source_cell": "53711041",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-OFS-revenue-2023-ytd-KRW",
+      "source_cell": "127763991",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-OFS-revenue-2022-ytd-KRW",
+      "source_cell": "169076587",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-OFS-gross_profit-2023-q-KRW",
+      "source_cell": "7295853",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-OFS-gross_profit-2022-q-KRW",
+      "source_cell": "15021662",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-OFS-gross_profit-2023-ytd-KRW",
+      "source_cell": "18271561",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-OFS-gross_profit-2022-ytd-KRW",
+      "source_cell": "51238028",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-OFS-operating_profit-2023-q-KRW",
+      "source_cell": "-2167988",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-OFS-operating_profit-2022-q-KRW",
+      "source_cell": "6430056",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-OFS-operating_profit-2023-ytd-KRW",
+      "source_cell": "-9774852",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-OFS-operating_profit-2022-ytd-KRW",
+      "source_cell": "25740765",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-OFS-net_profit-2023-q-KRW",
+      "source_cell": "10416811",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-OFS-net_profit-2022-q-KRW",
+      "source_cell": "5748478",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-OFS-net_profit-2023-ytd-KRW",
+      "source_cell": "24159539",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s23q3-OFS-net_profit-2022-ytd-KRW",
+      "source_cell": "21591729",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h23q3-CFS-revenue-2023-q-KRW",
+      "source_cell": "41002663",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h23q3-CFS-revenue-2022-q-KRW",
+      "source_cell": "37705442",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h23q3-CFS-revenue-2023-ytd-KRW",
+      "source_cell": "121031051",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h23q3-CFS-revenue-2022-ytd-KRW",
+      "source_cell": "104003906",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h23q3-CFS-gross_profit-2023-q-KRW",
+      "source_cell": "8461358",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h23q3-CFS-gross_profit-2022-q-KRW",
+      "source_cell": "7357191",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h23q3-CFS-gross_profit-2023-ytd-KRW",
+      "source_cell": "25076757",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h23q3-CFS-gross_profit-2022-ytd-KRW",
+      "source_cell": "20530701",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h23q3-CFS-operating_profit-2023-q-KRW",
+      "source_cell": "3821799",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h23q3-CFS-operating_profit-2022-q-KRW",
+      "source_cell": "1551819",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h23q3-CFS-operating_profit-2023-ytd-KRW",
+      "source_cell": "11652429",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h23q3-CFS-operating_profit-2022-ytd-KRW",
+      "source_cell": "6460543",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h23q3-CFS-net_profit-2023-q-KRW",
+      "source_cell": "3303451",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h23q3-CFS-net_profit-2022-q-KRW",
+      "source_cell": "1411490",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h23q3-CFS-net_profit-2023-ytd-KRW",
+      "source_cell": "10069667",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h23q3-CFS-net_profit-2022-ytd-KRW",
+      "source_cell": "6273692",
+      "header_verified": true,
+      "passed": true
+    }
+  ],
+  "raw_statements": [
+    {
+      "id": "s23q2-CFS",
+      "parsed_count": 0,
+      "gold_cells": 16,
+      "exact_cells": 0,
+      "error": "ValueError: UNSUPPORTED_LAYOUT: ordered header, units or periods",
+      "passed": false
+    },
+    {
+      "id": "s23q2-OFS",
+      "parsed_count": 0,
+      "gold_cells": 16,
+      "exact_cells": 0,
+      "error": "ValueError: UNSUPPORTED_LAYOUT: ordered header, units or periods",
+      "passed": false
+    },
+    {
+      "id": "s23q3-CFS",
+      "parsed_count": 0,
+      "gold_cells": 16,
+      "exact_cells": 0,
+      "error": "ValueError: UNSUPPORTED_LAYOUT: ordered header, units or periods",
+      "passed": false
+    },
+    {
+      "id": "s23q3-OFS",
+      "parsed_count": 0,
+      "gold_cells": 16,
+      "exact_cells": 0,
+      "error": "ValueError: UNSUPPORTED_LAYOUT: ordered header, units or periods",
+      "passed": false
+    },
+    {
+      "id": "h23q3-CFS",
+      "parsed_count": 0,
+      "gold_cells": 16,
+      "exact_cells": 0,
+      "error": "ValueError: UNSUPPORTED_LAYOUT: ordered header, units or periods",
+      "passed": false
+    }
+  ],
+  "raw_statement_summary": {
+    "total": 5,
+    "passed": 0,
+    "failed": 5
+  },
+  "raw_exact_cells": [
+    {
+      "fact_id": "s23q2-CFS-revenue-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-CFS-revenue-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-CFS-revenue-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-CFS-revenue-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-CFS-gross_profit-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-CFS-gross_profit-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-CFS-gross_profit-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-CFS-gross_profit-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-CFS-operating_profit-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-CFS-operating_profit-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-CFS-operating_profit-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-CFS-operating_profit-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-CFS-net_profit-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-CFS-net_profit-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-CFS-net_profit-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-CFS-net_profit-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-OFS-revenue-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-OFS-revenue-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-OFS-revenue-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-OFS-revenue-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-OFS-gross_profit-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-OFS-gross_profit-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-OFS-gross_profit-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-OFS-gross_profit-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-OFS-operating_profit-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-OFS-operating_profit-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-OFS-operating_profit-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-OFS-operating_profit-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-OFS-net_profit-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-OFS-net_profit-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-OFS-net_profit-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q2-OFS-net_profit-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-CFS-revenue-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-CFS-revenue-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-CFS-revenue-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-CFS-revenue-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-CFS-gross_profit-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-CFS-gross_profit-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-CFS-gross_profit-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-CFS-gross_profit-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-CFS-operating_profit-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-CFS-operating_profit-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-CFS-operating_profit-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-CFS-operating_profit-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-CFS-net_profit-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-CFS-net_profit-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-CFS-net_profit-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-CFS-net_profit-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-OFS-revenue-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-OFS-revenue-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-OFS-revenue-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-OFS-revenue-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-OFS-gross_profit-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-OFS-gross_profit-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-OFS-gross_profit-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-OFS-gross_profit-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-OFS-operating_profit-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-OFS-operating_profit-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-OFS-operating_profit-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-OFS-operating_profit-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-OFS-net_profit-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-OFS-net_profit-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-OFS-net_profit-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s23q3-OFS-net_profit-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h23q3-CFS-revenue-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h23q3-CFS-revenue-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h23q3-CFS-revenue-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h23q3-CFS-revenue-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h23q3-CFS-gross_profit-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h23q3-CFS-gross_profit-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h23q3-CFS-gross_profit-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h23q3-CFS-gross_profit-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h23q3-CFS-operating_profit-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h23q3-CFS-operating_profit-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h23q3-CFS-operating_profit-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h23q3-CFS-operating_profit-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h23q3-CFS-net_profit-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h23q3-CFS-net_profit-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h23q3-CFS-net_profit-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h23q3-CFS-net_profit-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    }
+  ],
+  "raw_cell_summary": {
+    "total": 80,
+    "passed": 0,
+    "failed": 80
+  },
+  "production_registry": {
+    "accepted_parsed_facts": 0,
+    "parsed_facts": 0,
+    "production_end_to_end_supported": false,
+    "limitation": "New documents are not added to production canonical registration by this evaluation."
+  },
+  "stages": {
+    "raw_parsed": {
+      "adapter": "isolated source_manifest + source_facts patches; production functions unchanged",
+      "registration": "only exact independently audited parser outputs",
+      "corpus_facts": 0,
+      "queries": [
+        {
+          "id": "v2-q01",
+          "query": "삼성전자 2023년 3분기 당분기 연결 원화 백만원 매출액",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q02",
+          "query": "Samsung Electronics 2023 Q3 quarter consolidated KRW million operating profit",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q03",
+          "query": "삼성전자 2023년 3분기 누적 별도 원화 백만원 매출액",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q04",
+          "query": "Samsung 2023 Q3 YTD separate KRW million net profit",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q05",
+          "query": "삼성전자 2023년 2분기 당분기 연결 원화 백만원 매출총이익",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q06",
+          "query": "Samsung 2023 Q2 quarter separate KRW million operating profit",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q07",
+          "query": "삼성전자 2022년 3분기 당분기 연결 원화 백만원 당기순이익",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q08",
+          "query": "Samsung 2022 Q2 YTD consolidated KRW million revenue",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q09",
+          "query": "삼성전자 2023년 상반기 누적 연결 원화 백만원 영업이익",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q10",
+          "query": "Samsung 2023 Q3 quarter OFS KRW million gross profit",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q11",
+          "query": "현대자동차 2023년 3분기 당분기 연결 원화 백만원 매출액",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q12",
+          "query": "Hyundai Motor 2023 Q3 YTD consolidated KRW million operating profit",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q13",
+          "query": "현대자동차 2022년 3분기 당분기 연결 원화 백만원 당기순이익",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q14",
+          "query": "Hyundai 2023 Q3 quarter consolidated KRW million gross profit",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q15",
+          "query": "삼성전자 2023년 3분기 매출액",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q16",
+          "query": "Samsung 2023 Q3 quarter revenue KRW million",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q17",
+          "query": "삼성전자 2023년 3분기 당분기 연결 별도 원화 백만원 영업이익",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q18",
+          "query": "Samsung 2023 2022 Q3 quarter consolidated KRW million revenue",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q19",
+          "query": "삼성전자 2023년 2분기 3분기 당분기 연결 원화 백만원 매출액",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q20",
+          "query": "Samsung 2023 Q3 quarter YTD consolidated KRW million net profit",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q21",
+          "query": "Samsung 2023 Q3 quarter consolidated EUR million revenue",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q22",
+          "query": "삼성전자 2023년 3분기 당분기 연결 원화 억원 매출액",
+          "expected_answerable": false,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q23",
+          "query": "Samsung 2023 Q3 quarter consolidated KRW million revenue operating profit",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "v2-q24",
+          "query": "Samsung 2023 Q3 quarter not consolidated KRW million revenue",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        }
+      ],
+      "query_summary": {
+        "total": 24,
+        "passed": 0,
+        "failed": 24
+      },
+      "citations": [
+        {
+          "fact_id": "s23q2-CFS-revenue-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-CFS-revenue-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-CFS-revenue-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-CFS-revenue-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-CFS-gross_profit-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-CFS-gross_profit-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-CFS-gross_profit-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-CFS-gross_profit-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-CFS-operating_profit-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-CFS-operating_profit-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-CFS-operating_profit-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-CFS-operating_profit-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-CFS-net_profit-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-CFS-net_profit-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-CFS-net_profit-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-CFS-net_profit-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-OFS-revenue-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-OFS-revenue-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-OFS-revenue-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-OFS-revenue-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-OFS-gross_profit-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-OFS-gross_profit-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-OFS-gross_profit-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-OFS-gross_profit-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-OFS-operating_profit-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-OFS-operating_profit-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-OFS-operating_profit-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-OFS-operating_profit-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-OFS-net_profit-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-OFS-net_profit-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-OFS-net_profit-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q2-OFS-net_profit-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-CFS-revenue-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-CFS-revenue-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-CFS-revenue-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-CFS-revenue-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-CFS-gross_profit-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-CFS-gross_profit-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-CFS-gross_profit-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-CFS-gross_profit-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-CFS-operating_profit-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-CFS-operating_profit-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-CFS-operating_profit-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-CFS-operating_profit-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-CFS-net_profit-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-CFS-net_profit-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-CFS-net_profit-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-CFS-net_profit-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-OFS-revenue-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-OFS-revenue-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-OFS-revenue-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-OFS-revenue-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-OFS-gross_profit-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-OFS-gross_profit-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-OFS-gross_profit-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-OFS-gross_profit-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-OFS-operating_profit-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-OFS-operating_profit-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-OFS-operating_profit-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-OFS-operating_profit-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-OFS-net_profit-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-OFS-net_profit-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-OFS-net_profit-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s23q3-OFS-net_profit-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h23q3-CFS-revenue-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h23q3-CFS-revenue-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h23q3-CFS-revenue-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h23q3-CFS-revenue-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h23q3-CFS-gross_profit-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h23q3-CFS-gross_profit-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h23q3-CFS-gross_profit-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h23q3-CFS-gross_profit-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h23q3-CFS-operating_profit-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h23q3-CFS-operating_profit-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h23q3-CFS-operating_profit-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h23q3-CFS-operating_profit-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h23q3-CFS-net_profit-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h23q3-CFS-net_profit-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h23q3-CFS-net_profit-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h23q3-CFS-net_profit-2022-ytd-KRW",
+          "passed": false
+        }
+      ],
+      "citation_summary": {
+        "total": 80,
+        "passed": 0,
+        "failed": 80
+      },
+      "calculations": [
+        {
+          "id": "v2-reconcile-CFS-revenue",
+          "passed": false,
+          "status": "blocked_missing_parsed_fact",
+          "missing": [
+            "s23q3-CFS-revenue-2023-ytd-KRW",
+            "s23q2-CFS-revenue-2023-ytd-KRW",
+            "s23q3-CFS-revenue-2023-q-KRW"
+          ]
+        },
+        {
+          "id": "v2-reconcile-CFS-operating_profit",
+          "passed": false,
+          "status": "blocked_missing_parsed_fact",
+          "missing": [
+            "s23q3-CFS-operating_profit-2023-ytd-KRW",
+            "s23q2-CFS-operating_profit-2023-ytd-KRW",
+            "s23q3-CFS-operating_profit-2023-q-KRW"
+          ]
+        },
+        {
+          "id": "v2-reconcile-OFS-revenue",
+          "passed": false,
+          "status": "blocked_missing_parsed_fact",
+          "missing": [
+            "s23q3-OFS-revenue-2023-ytd-KRW",
+            "s23q2-OFS-revenue-2023-ytd-KRW",
+            "s23q3-OFS-revenue-2023-q-KRW"
+          ]
+        },
+        {
+          "id": "v2-reconcile-OFS-operating_profit",
+          "passed": false,
+          "status": "blocked_missing_parsed_fact",
+          "missing": [
+            "s23q3-OFS-operating_profit-2023-ytd-KRW",
+            "s23q2-OFS-operating_profit-2023-ytd-KRW",
+            "s23q3-OFS-operating_profit-2023-q-KRW"
+          ]
+        },
+        {
+          "id": "v2-yoy-s23q3-revenue",
+          "passed": false,
+          "status": "blocked_missing_parsed_fact",
+          "missing": [
+            "s23q3-CFS-revenue-2023-q-KRW",
+            "s23q3-CFS-revenue-2022-q-KRW"
+          ]
+        },
+        {
+          "id": "v2-yoy-h23q3-revenue",
+          "passed": false,
+          "status": "blocked_missing_parsed_fact",
+          "missing": [
+            "h23q3-CFS-revenue-2023-q-KRW",
+            "h23q3-CFS-revenue-2022-q-KRW"
+          ]
+        }
+      ],
+      "calculation_summary": {
+        "total": 6,
+        "passed": 0,
+        "failed": 6
+      },
+      "positive_retrieval": {
+        "n": 14,
+        "recall_at_1": 0.0,
+        "recall_at_5": 0.0,
+        "mrr_at_5": 0.0
+      }
+    },
+    "fixture_assisted": {
+      "adapter": "isolated source_manifest + source_facts patches; production functions unchanged",
+      "registration": "gold fixtures supplied directly, not ingestion evidence",
+      "corpus_facts": 80,
+      "queries": [
+        {
+          "id": "v2-q01",
+          "query": "삼성전자 2023년 3분기 당분기 연결 원화 백만원 매출액",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [
+            "s23q3-CFS-revenue-2023-q-KRW"
+          ],
+          "rank": 1,
+          "status": "ready",
+          "issues": [],
+          "trusted_query": true,
+          "passed": true,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q02",
+          "query": "Samsung Electronics 2023 Q3 quarter consolidated KRW million operating profit",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [
+            "s23q3-CFS-operating_profit-2023-q-KRW"
+          ],
+          "rank": 1,
+          "status": "ready",
+          "issues": [],
+          "trusted_query": true,
+          "passed": true,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q03",
+          "query": "삼성전자 2023년 3분기 누적 별도 원화 백만원 매출액",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [
+            "s23q3-OFS-revenue-2023-ytd-KRW"
+          ],
+          "rank": 1,
+          "status": "ready",
+          "issues": [],
+          "trusted_query": true,
+          "passed": true,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q04",
+          "query": "Samsung 2023 Q3 YTD separate KRW million net profit",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [
+            "s23q3-OFS-net_profit-2023-ytd-KRW"
+          ],
+          "rank": 1,
+          "status": "ready",
+          "issues": [],
+          "trusted_query": true,
+          "passed": true,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q05",
+          "query": "삼성전자 2023년 2분기 당분기 연결 원화 백만원 매출총이익",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [
+            "s23q2-CFS-gross_profit-2023-q-KRW"
+          ],
+          "rank": 1,
+          "status": "ready",
+          "issues": [],
+          "trusted_query": true,
+          "passed": true,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q06",
+          "query": "Samsung 2023 Q2 quarter separate KRW million operating profit",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [
+            "s23q2-OFS-operating_profit-2023-q-KRW"
+          ],
+          "rank": 1,
+          "status": "ready",
+          "issues": [],
+          "trusted_query": true,
+          "passed": true,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q07",
+          "query": "삼성전자 2022년 3분기 당분기 연결 원화 백만원 당기순이익",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [
+            "s23q3-CFS-net_profit-2022-q-KRW"
+          ],
+          "rank": 1,
+          "status": "ready",
+          "issues": [],
+          "trusted_query": true,
+          "passed": true,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q08",
+          "query": "Samsung 2022 Q2 YTD consolidated KRW million revenue",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [
+            "s23q2-CFS-revenue-2022-ytd-KRW"
+          ],
+          "rank": 1,
+          "status": "ready",
+          "issues": [],
+          "trusted_query": true,
+          "passed": true,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q09",
+          "query": "삼성전자 2023년 상반기 누적 연결 원화 백만원 영업이익",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "needs_clarification",
+          "issues": [
+            "UNSUPPORTED_TERMS",
+            "MISSING_QUARTER"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q10",
+          "query": "Samsung 2023 Q3 quarter OFS KRW million gross profit",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [
+            "s23q3-OFS-gross_profit-2023-q-KRW"
+          ],
+          "rank": 1,
+          "status": "ready",
+          "issues": [],
+          "trusted_query": true,
+          "passed": true,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q11",
+          "query": "현대자동차 2023년 3분기 당분기 연결 원화 백만원 매출액",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "needs_clarification",
+          "issues": [
+            "UNSUPPORTED_TERMS",
+            "MISSING_COMPANY"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q12",
+          "query": "Hyundai Motor 2023 Q3 YTD consolidated KRW million operating profit",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "needs_clarification",
+          "issues": [
+            "UNSUPPORTED_TERMS"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q13",
+          "query": "현대자동차 2022년 3분기 당분기 연결 원화 백만원 당기순이익",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "needs_clarification",
+          "issues": [
+            "UNSUPPORTED_TERMS",
+            "MISSING_COMPANY"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q14",
+          "query": "Hyundai 2023 Q3 quarter consolidated KRW million gross profit",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [
+            "h23q3-CFS-gross_profit-2023-q-KRW"
+          ],
+          "rank": 1,
+          "status": "ready",
+          "issues": [],
+          "trusted_query": true,
+          "passed": true,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q15",
+          "query": "삼성전자 2023년 3분기 매출액",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [
+            "s23q3-CFS-revenue-2023-q-KRW",
+            "s23q3-CFS-revenue-2023-ytd-KRW",
+            "s23q3-OFS-revenue-2023-ytd-KRW",
+            "s23q3-OFS-revenue-2023-q-KRW"
+          ],
+          "rank": null,
+          "status": "needs_clarification",
+          "issues": [
+            "MISSING_KIND",
+            "MISSING_SCOPE",
+            "MISSING_CURRENCY",
+            "MISSING_SCALE"
+          ],
+          "trusted_query": false,
+          "passed": true,
+          "retrieval_passed": false,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q16",
+          "query": "Samsung 2023 Q3 quarter revenue KRW million",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [
+            "s23q3-CFS-revenue-2023-q-KRW",
+            "s23q3-OFS-revenue-2023-q-KRW"
+          ],
+          "rank": null,
+          "status": "needs_clarification",
+          "issues": [
+            "MISSING_SCOPE"
+          ],
+          "trusted_query": false,
+          "passed": true,
+          "retrieval_passed": false,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q17",
+          "query": "삼성전자 2023년 3분기 당분기 연결 별도 원화 백만원 영업이익",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "needs_clarification",
+          "issues": [
+            "CONFLICT_SCOPE"
+          ],
+          "trusted_query": false,
+          "passed": true,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q18",
+          "query": "Samsung 2023 2022 Q3 quarter consolidated KRW million revenue",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "needs_clarification",
+          "issues": [
+            "CONFLICT_YEAR"
+          ],
+          "trusted_query": false,
+          "passed": true,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q19",
+          "query": "삼성전자 2023년 2분기 3분기 당분기 연결 원화 백만원 매출액",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "needs_clarification",
+          "issues": [
+            "CONFLICT_QUARTER"
+          ],
+          "trusted_query": false,
+          "passed": true,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q20",
+          "query": "Samsung 2023 Q3 quarter YTD consolidated KRW million net profit",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "needs_clarification",
+          "issues": [
+            "CONFLICT_KIND"
+          ],
+          "trusted_query": false,
+          "passed": true,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q21",
+          "query": "Samsung 2023 Q3 quarter consolidated EUR million revenue",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "needs_clarification",
+          "issues": [
+            "UNSUPPORTED_TERMS",
+            "MISSING_CURRENCY"
+          ],
+          "trusted_query": false,
+          "passed": true,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q22",
+          "query": "삼성전자 2023년 3분기 당분기 연결 원화 억원 매출액",
+          "expected_answerable": false,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_results",
+          "issues": [],
+          "trusted_query": true,
+          "passed": true,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q23",
+          "query": "Samsung 2023 Q3 quarter consolidated KRW million revenue operating profit",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "needs_clarification",
+          "issues": [
+            "CONFLICT_METRIC"
+          ],
+          "trusted_query": false,
+          "passed": true,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "v2-q24",
+          "query": "Samsung 2023 Q3 quarter not consolidated KRW million revenue",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "needs_clarification",
+          "issues": [
+            "UNSUPPORTED_NEGATION",
+            "UNSUPPORTED_TERMS"
+          ],
+          "trusted_query": false,
+          "passed": true,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        }
+      ],
+      "query_summary": {
+        "total": 24,
+        "passed": 20,
+        "failed": 4
+      },
+      "citations": [
+        {
+          "fact_id": "s23q2-CFS-revenue-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-CFS-revenue-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-CFS-revenue-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-CFS-revenue-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-CFS-gross_profit-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-CFS-gross_profit-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-CFS-gross_profit-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-CFS-gross_profit-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-CFS-operating_profit-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-CFS-operating_profit-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-CFS-operating_profit-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-CFS-operating_profit-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-CFS-net_profit-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-CFS-net_profit-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-CFS-net_profit-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-CFS-net_profit-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-OFS-revenue-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-OFS-revenue-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-OFS-revenue-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-OFS-revenue-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-OFS-gross_profit-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-OFS-gross_profit-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-OFS-gross_profit-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-OFS-gross_profit-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-OFS-operating_profit-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-OFS-operating_profit-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-OFS-operating_profit-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-OFS-operating_profit-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-OFS-net_profit-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-OFS-net_profit-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-OFS-net_profit-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q2-OFS-net_profit-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-CFS-revenue-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-CFS-revenue-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-CFS-revenue-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-CFS-revenue-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-CFS-gross_profit-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-CFS-gross_profit-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-CFS-gross_profit-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-CFS-gross_profit-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-CFS-operating_profit-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-CFS-operating_profit-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-CFS-operating_profit-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-CFS-operating_profit-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-CFS-net_profit-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-CFS-net_profit-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-CFS-net_profit-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-CFS-net_profit-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-OFS-revenue-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-OFS-revenue-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-OFS-revenue-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-OFS-revenue-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-OFS-gross_profit-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-OFS-gross_profit-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-OFS-gross_profit-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-OFS-gross_profit-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-OFS-operating_profit-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-OFS-operating_profit-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-OFS-operating_profit-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-OFS-operating_profit-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-OFS-net_profit-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-OFS-net_profit-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-OFS-net_profit-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s23q3-OFS-net_profit-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h23q3-CFS-revenue-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h23q3-CFS-revenue-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h23q3-CFS-revenue-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h23q3-CFS-revenue-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h23q3-CFS-gross_profit-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h23q3-CFS-gross_profit-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h23q3-CFS-gross_profit-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h23q3-CFS-gross_profit-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h23q3-CFS-operating_profit-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h23q3-CFS-operating_profit-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h23q3-CFS-operating_profit-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h23q3-CFS-operating_profit-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h23q3-CFS-net_profit-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h23q3-CFS-net_profit-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h23q3-CFS-net_profit-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h23q3-CFS-net_profit-2022-ytd-KRW",
+          "passed": true
+        }
+      ],
+      "citation_summary": {
+        "total": 80,
+        "passed": 80,
+        "failed": 0
+      },
+      "calculations": [
+        {
+          "id": "v2-reconcile-CFS-revenue",
+          "passed": true,
+          "result": {
+            "status": "verified",
+            "issues": [],
+            "derived_value": "67404652",
+            "difference": "0",
+            "formula": "(YTD × scale - previous YTD × scale) / direct scale",
+            "normalized_inputs": [
+              "191155556000000",
+              "123750904000000",
+              "67404652000000"
+            ],
+            "evidence": [
+              {
+                "id": "s23q3-CFS-revenue-2023-ytd-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2023-01-01",
+                "end": "2023-09-30",
+                "value": "191155556",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2023_3Q_Interim_Report.pdf",
+                "page": 38,
+                "row": "Revenue",
+                "column": "2023 YTD KRW",
+                "document_id": "s23q3",
+                "document_sha256": "f4442f7374243d590e39a6461399061cc8c9abbcfb0782427179996ccaf93ca1",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 9
+              },
+              {
+                "id": "s23q2-CFS-revenue-2023-ytd-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2023-01-01",
+                "end": "2023-06-30",
+                "value": "123750904",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2023_Half_Interim_Report.pdf",
+                "page": 47,
+                "row": "Revenue",
+                "column": "2023 YTD KRW",
+                "document_id": "s23q2",
+                "document_sha256": "31917cd249b942ff228678daf1e8aa945c80e4818406ef917b01aa7158c3adab",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 6
+              },
+              {
+                "id": "s23q3-CFS-revenue-2023-q-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2023-07-01",
+                "end": "2023-09-30",
+                "value": "67404652",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2023_3Q_Interim_Report.pdf",
+                "page": 38,
+                "row": "Revenue",
+                "column": "2023 Q KRW",
+                "document_id": "s23q3",
+                "document_sha256": "f4442f7374243d590e39a6461399061cc8c9abbcfb0782427179996ccaf93ca1",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "v2-reconcile-CFS-operating_profit",
+          "passed": true,
+          "result": {
+            "status": "verified",
+            "issues": [],
+            "derived_value": "2433534",
+            "difference": "0",
+            "formula": "(YTD × scale - previous YTD × scale) / direct scale",
+            "normalized_inputs": [
+              "3742259000000",
+              "1308725000000",
+              "2433534000000"
+            ],
+            "evidence": [
+              {
+                "id": "s23q3-CFS-operating_profit-2023-ytd-KRW",
+                "company": "samsung",
+                "metric": "operating_profit",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2023-01-01",
+                "end": "2023-09-30",
+                "value": "3742259",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2023_3Q_Interim_Report.pdf",
+                "page": 38,
+                "row": "Operating profit",
+                "column": "2023 YTD KRW",
+                "document_id": "s23q3",
+                "document_sha256": "f4442f7374243d590e39a6461399061cc8c9abbcfb0782427179996ccaf93ca1",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 9
+              },
+              {
+                "id": "s23q2-CFS-operating_profit-2023-ytd-KRW",
+                "company": "samsung",
+                "metric": "operating_profit",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2023-01-01",
+                "end": "2023-06-30",
+                "value": "1308725",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2023_Half_Interim_Report.pdf",
+                "page": 47,
+                "row": "Operating profit",
+                "column": "2023 YTD KRW",
+                "document_id": "s23q2",
+                "document_sha256": "31917cd249b942ff228678daf1e8aa945c80e4818406ef917b01aa7158c3adab",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 6
+              },
+              {
+                "id": "s23q3-CFS-operating_profit-2023-q-KRW",
+                "company": "samsung",
+                "metric": "operating_profit",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2023-07-01",
+                "end": "2023-09-30",
+                "value": "2433534",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2023_3Q_Interim_Report.pdf",
+                "page": 38,
+                "row": "Operating profit",
+                "column": "2023 Q KRW",
+                "document_id": "s23q3",
+                "document_sha256": "f4442f7374243d590e39a6461399061cc8c9abbcfb0782427179996ccaf93ca1",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "v2-reconcile-OFS-revenue",
+          "passed": true,
+          "result": {
+            "status": "verified",
+            "issues": [],
+            "derived_value": "45866224",
+            "difference": "0",
+            "formula": "(YTD × scale - previous YTD × scale) / direct scale",
+            "normalized_inputs": [
+              "127763991000000",
+              "81897767000000",
+              "45866224000000"
+            ],
+            "evidence": [
+              {
+                "id": "s23q3-OFS-revenue-2023-ytd-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "OFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2023-01-01",
+                "end": "2023-09-30",
+                "value": "127763991",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2023_3Q_Interim_Report.pdf",
+                "page": 93,
+                "row": "Revenue",
+                "column": "2023 YTD KRW",
+                "document_id": "s23q3",
+                "document_sha256": "f4442f7374243d590e39a6461399061cc8c9abbcfb0782427179996ccaf93ca1",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 9
+              },
+              {
+                "id": "s23q2-OFS-revenue-2023-ytd-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "OFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2023-01-01",
+                "end": "2023-06-30",
+                "value": "81897767",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2023_Half_Interim_Report.pdf",
+                "page": 103,
+                "row": "Revenue",
+                "column": "2023 YTD KRW",
+                "document_id": "s23q2",
+                "document_sha256": "31917cd249b942ff228678daf1e8aa945c80e4818406ef917b01aa7158c3adab",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 6
+              },
+              {
+                "id": "s23q3-OFS-revenue-2023-q-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "OFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2023-07-01",
+                "end": "2023-09-30",
+                "value": "45866224",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2023_3Q_Interim_Report.pdf",
+                "page": 93,
+                "row": "Revenue",
+                "column": "2023 Q KRW",
+                "document_id": "s23q3",
+                "document_sha256": "f4442f7374243d590e39a6461399061cc8c9abbcfb0782427179996ccaf93ca1",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "v2-reconcile-OFS-operating_profit",
+          "passed": true,
+          "result": {
+            "status": "verified",
+            "issues": [],
+            "derived_value": "-2167988",
+            "difference": "0",
+            "formula": "(YTD × scale - previous YTD × scale) / direct scale",
+            "normalized_inputs": [
+              "-9774852000000",
+              "-7606864000000",
+              "-2167988000000"
+            ],
+            "evidence": [
+              {
+                "id": "s23q3-OFS-operating_profit-2023-ytd-KRW",
+                "company": "samsung",
+                "metric": "operating_profit",
+                "scope": "OFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2023-01-01",
+                "end": "2023-09-30",
+                "value": "-9774852",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2023_3Q_Interim_Report.pdf",
+                "page": 93,
+                "row": "Operating profit",
+                "column": "2023 YTD KRW",
+                "document_id": "s23q3",
+                "document_sha256": "f4442f7374243d590e39a6461399061cc8c9abbcfb0782427179996ccaf93ca1",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 9
+              },
+              {
+                "id": "s23q2-OFS-operating_profit-2023-ytd-KRW",
+                "company": "samsung",
+                "metric": "operating_profit",
+                "scope": "OFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2023-01-01",
+                "end": "2023-06-30",
+                "value": "-7606864",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2023_Half_Interim_Report.pdf",
+                "page": 103,
+                "row": "Operating profit",
+                "column": "2023 YTD KRW",
+                "document_id": "s23q2",
+                "document_sha256": "31917cd249b942ff228678daf1e8aa945c80e4818406ef917b01aa7158c3adab",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 6
+              },
+              {
+                "id": "s23q3-OFS-operating_profit-2023-q-KRW",
+                "company": "samsung",
+                "metric": "operating_profit",
+                "scope": "OFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2023-07-01",
+                "end": "2023-09-30",
+                "value": "-2167988",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2023_3Q_Interim_Report.pdf",
+                "page": 93,
+                "row": "Operating profit",
+                "column": "2023 Q KRW",
+                "document_id": "s23q3",
+                "document_sha256": "f4442f7374243d590e39a6461399061cc8c9abbcfb0782427179996ccaf93ca1",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "v2-yoy-s23q3-revenue",
+          "passed": true,
+          "result": {
+            "status": "verified",
+            "issues": [],
+            "growth_pct": "-12.2126",
+            "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+            "normalized_inputs": [
+              "67404652000000",
+              "76781680000000"
+            ],
+            "currency": "KRW",
+            "evidence": [
+              {
+                "id": "s23q3-CFS-revenue-2023-q-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2023-07-01",
+                "end": "2023-09-30",
+                "value": "67404652",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2023_3Q_Interim_Report.pdf",
+                "page": 38,
+                "row": "Revenue",
+                "column": "2023 Q KRW",
+                "document_id": "s23q3",
+                "document_sha256": "f4442f7374243d590e39a6461399061cc8c9abbcfb0782427179996ccaf93ca1",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              },
+              {
+                "id": "s23q3-CFS-revenue-2022-q-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2022-07-01",
+                "end": "2022-09-30",
+                "value": "76781680",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2023_3Q_Interim_Report.pdf",
+                "page": 38,
+                "row": "Revenue",
+                "column": "2022 Q KRW",
+                "document_id": "s23q3",
+                "document_sha256": "f4442f7374243d590e39a6461399061cc8c9abbcfb0782427179996ccaf93ca1",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              }
+            ],
+            "mode": "yoy"
+          }
+        },
+        {
+          "id": "v2-yoy-h23q3-revenue",
+          "passed": true,
+          "result": {
+            "status": "verified",
+            "issues": [],
+            "growth_pct": "8.7447",
+            "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+            "normalized_inputs": [
+              "41002663000000",
+              "37705442000000"
+            ],
+            "currency": "KRW",
+            "evidence": [
+              {
+                "id": "h23q3-CFS-revenue-2023-q-KRW",
+                "company": "hyundai",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2023-07-01",
+                "end": "2023-09-30",
+                "value": "41002663",
+                "source_url": "https://www.hyundai.com/content/dam/hyundai/ww/en/images/company/investor-relations/financial-Information/report-en/2023/2023-q3-consolidated-audit-report-en.pdf",
+                "page": 8,
+                "row": "Revenue",
+                "column": "2023 Q KRW",
+                "document_id": "h23q3",
+                "document_sha256": "5ac749a9810e566bc92e23234137c9bc7ab60c734f7ead2badc6b73f9ef38121",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              },
+              {
+                "id": "h23q3-CFS-revenue-2022-q-KRW",
+                "company": "hyundai",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2022-07-01",
+                "end": "2022-09-30",
+                "value": "37705442",
+                "source_url": "https://www.hyundai.com/content/dam/hyundai/ww/en/images/company/investor-relations/financial-Information/report-en/2023/2023-q3-consolidated-audit-report-en.pdf",
+                "page": 8,
+                "row": "Revenue",
+                "column": "2022 Q KRW",
+                "document_id": "h23q3",
+                "document_sha256": "5ac749a9810e566bc92e23234137c9bc7ab60c734f7ead2badc6b73f9ef38121",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              }
+            ],
+            "mode": "yoy"
+          }
+        }
+      ],
+      "calculation_summary": {
+        "total": 6,
+        "passed": 6,
+        "failed": 0
+      },
+      "positive_retrieval": {
+        "n": 14,
+        "recall_at_1": 0.7142857142857143,
+        "recall_at_5": 0.7142857142857143,
+        "mrr_at_5": 0.7142857142857143
+      }
+    }
+  },
+  "first_observed_failures": {
+    "raw_statements": [
+      "s23q2-CFS",
+      "s23q2-OFS",
+      "s23q3-CFS",
+      "s23q3-OFS",
+      "h23q3-CFS"
+    ],
+    "raw_parsed": {
+      "queries": [
+        "v2-q01",
+        "v2-q02",
+        "v2-q03",
+        "v2-q04",
+        "v2-q05",
+        "v2-q06",
+        "v2-q07",
+        "v2-q08",
+        "v2-q09",
+        "v2-q10",
+        "v2-q11",
+        "v2-q12",
+        "v2-q13",
+        "v2-q14",
+        "v2-q15",
+        "v2-q16",
+        "v2-q17",
+        "v2-q18",
+        "v2-q19",
+        "v2-q20",
+        "v2-q21",
+        "v2-q22",
+        "v2-q23",
+        "v2-q24"
+      ],
+      "calculations": [
+        "v2-reconcile-CFS-revenue",
+        "v2-reconcile-CFS-operating_profit",
+        "v2-reconcile-OFS-revenue",
+        "v2-reconcile-OFS-operating_profit",
+        "v2-yoy-s23q3-revenue",
+        "v2-yoy-h23q3-revenue"
+      ]
+    },
+    "fixture_assisted": {
+      "queries": [
+        "v2-q09",
+        "v2-q11",
+        "v2-q12",
+        "v2-q13"
+      ],
+      "calculations": []
+    }
+  }
+}

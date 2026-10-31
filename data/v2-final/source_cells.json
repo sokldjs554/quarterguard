@@ -1,0 +1,178 @@
+[
+  {
+    "fact_id": "s22q3-CFS-revenue-2022-q-KRW",
+    "source_row": "Revenue",
+    "data_column_index_1based": 1,
+    "header_year": 2022,
+    "header_period_months": 3,
+    "header_end": "2022-09-30",
+    "source_unit": "millions of Korean won",
+    "source_scope": "CFS",
+    "canonical_row_mapping": "identity"
+  },
+  {
+    "fact_id": "s22q3-CFS-revenue-2021-q-KRW",
+    "source_row": "Revenue",
+    "data_column_index_1based": 2,
+    "header_year": 2021,
+    "header_period_months": 3,
+    "header_end": "2021-09-30",
+    "source_unit": "millions of Korean won",
+    "source_scope": "CFS",
+    "canonical_row_mapping": "identity"
+  },
+  {
+    "fact_id": "s22q3-CFS-revenue-2022-ytd-KRW",
+    "source_row": "Revenue",
+    "data_column_index_1based": 5,
+    "header_year": 2022,
+    "header_period_months": 9,
+    "header_end": "2022-09-30",
+    "source_unit": "millions of Korean won",
+    "source_scope": "CFS",
+    "canonical_row_mapping": "identity"
+  },
+  {
+    "fact_id": "s22q3-CFS-revenue-2021-ytd-KRW",
+    "source_row": "Revenue",
+    "data_column_index_1based": 6,
+    "header_year": 2021,
+    "header_period_months": 9,
+    "header_end": "2021-09-30",
+    "source_unit": "millions of Korean won",
+    "source_scope": "CFS",
+    "canonical_row_mapping": "identity"
+  },
+  {
+    "fact_id": "s22q3-CFS-gross_profit-2022-q-KRW",
+    "source_row": "Gross profit",
+    "data_column_index_1based": 1,
+    "header_year": 2022,
+    "header_period_months": 3,
+    "header_end": "2022-09-30",
+    "source_unit": "millions of Korean won",
+    "source_scope": "CFS",
+    "canonical_row_mapping": "identity"
+  },
+  {
+    "fact_id": "s22q3-CFS-gross_profit-2021-q-KRW",
+    "source_row": "Gross profit",
+    "data_column_index_1based": 2,
+    "header_year": 2021,
+    "header_period_months": 3,
+    "header_end": "2021-09-30",
+    "source_unit": "millions of Korean won",
+    "source_scope": "CFS",
+    "canonical_row_mapping": "identity"
+  },
+  {
+    "fact_id": "s22q3-CFS-gross_profit-2022-ytd-KRW",
+    "source_row": "Gross profit",
+    "data_column_index_1based": 5,
+    "header_year": 2022,
+    "header_period_months": 9,
+    "header_end": "2022-09-30",
+    "source_unit": "millions of Korean won",
+    "source_scope": "CFS",
+    "canonical_row_mapping": "identity"
+  },
+  {
+    "fact_id": "s22q3-CFS-gross_profit-2021-ytd-KRW",
+    "source_row": "Gross profit",
+    "data_column_index_1based": 6,
+    "header_year": 2021,
+    "header_period_months": 9,
+    "header_end": "2021-09-30",
+    "source_unit": "millions of Korean won",
+    "source_scope": "CFS",
+    "canonical_row_mapping": "identity"
+  },
+  {
+    "fact_id": "s22q3-CFS-operating_profit-2022-q-KRW",
+    "source_row": "Operating profit",
+    "data_column_index_1based": 1,
+    "header_year": 2022,
+    "header_period_months": 3,
+    "header_end": "2022-09-30",
+    "source_unit": "millions of Korean won",
+    "source_scope": "CFS",
+    "canonical_row_mapping": "identity"
+  },
+  {
+    "fact_id": "s22q3-CFS-operating_profit-2021-q-KRW",
+    "source_row": "Operating profit",
+    "data_column_index_1based": 2,
+    "header_year": 2021,
+    "header_period_months": 3,
+    "header_end": "2021-09-30",
+    "source_unit": "millions of Korean won",
+    "source_scope": "CFS",
+    "canonical_row_mapping": "identity"
+  },
+  {
+    "fact_id": "s22q3-CFS-operating_profit-2022-ytd-KRW",
+    "source_row": "Operating profit",
+    "data_column_index_1based": 5,
+    "header_year": 2022,
+    "header_period_months": 9,
+    "header_end": "2022-09-30",
+    "source_unit": "millions of Korean won",
+    "source_scope": "CFS",
+    "canonical_row_mapping": "identity"
+  },
+  {
+    "fact_id": "s22q3-CFS-operating_profit-2021-ytd-KRW",
+    "source_row": "Operating profit",
+    "data_column_index_1based": 6,
+    "header_year": 2021,
+    "header_period_months": 9,
+    "header_end": "2021-09-30",
+    "source_unit": "millions of Korean won",
+    "source_scope": "CFS",
+    "canonical_row_mapping": "identity"
+  },
+  {
+    "fact_id": "s22q3-CFS-net_profit-2022-q-KRW",
+    "source_row": "Profit for the period",
+    "data_column_index_1based": 1,
+    "header_year": 2022,
+    "header_period_months": 3,
+    "header_end": "2022-09-30",
+    "source_unit": "millions of Korean won",
+    "source_scope": "CFS",
+    "canonical_row_mapping": "identity"
+  },
+  {
+    "fact_id": "s22q3-CFS-net_profit-2021-q-KRW",
+    "source_row": "Profit for the period",
+    "data_column_index_1based": 2,
+    "header_year": 2021,
+    "header_period_months": 3,
+    "header_end": "2021-09-30",
+    "source_unit": "millions of Korean won",
+    "source_scope": "CFS",
+    "canonical_row_mapping": "identity"
+  },
+  {
+    "fact_id": "s22q3-CFS-net_profit-2022-ytd-KRW",
+    "source_row": "Profit for the period",
+    "data_column_index_1based": 5,
+    "header_year": 2022,
+    "header_period_months": 9,
+    "header_end": "2022-09-30",
+    "source_unit": "millions of Korean won",
+    "source_scope": "CFS",
+    "canonical_row_mapping": "identity"
+  },
+  {
+    "fact_id": "s22q3-CFS-net_profit-2021-ytd-KRW",
+    "source_row": "Profit for the period",
+    "data_column_index_1based": 6,
+    "header_year": 2021,
+    "header_period_months": 9,
+    "header_end": "2021-09-30",
+    "source_unit": "millions of Korean won",
+    "source_scope": "CFS",
+    "canonical_row_mapping": "identity"
+  }
+]

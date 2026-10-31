@@ -1,0 +1,850 @@
+{
+  "schema_version": 1,
+  "label": "final-round-baseline-39b59bd",
+  "evaluated_at": "2026-10-31T12:29:45.626664+00:00",
+  "freeze_sha256": "90f47e7bf0a58c6afbe22614f0b0796db42dd2c5efe1210d9f386e4fa516055f",
+  "freeze": {
+    "schema_version": 1,
+    "frozen_at": "2026-10-31T12:29:25.431926+00:00",
+    "author": "same-task AI worker; not human or independent expert",
+    "human_reviewed": false,
+    "baseline_commit": "39b59bd",
+    "pipeline_run_before_freeze": false,
+    "selection": "Final-round official 2022Q3 new source document. Its 2022 current values overlap prior-round2023 comparative cells; its 2021 comparative values are new to both earlier datasets. Six positive questions include four targeting2021.",
+    "gold_method": "Literal table-cell transcription and ordered header reading from official PDF page37. No production parser/search results for this document before freeze.",
+    "disclosure": "Prior-round2023 failures were disclosed; comma-header and company/half-year language fixes existed before this final freeze. Final source values/questions were not shared with fix workers.",
+    "post_freeze_tuning_allowed": false,
+    "files": {
+      "data/v2-final/calculations.json": "5f479300e5f474be8cfd5ab6310b73e18d447a8177e475817705f9609e1891c3",
+      "data/v2-final/facts.json": "2ab83d69710d15f8454b9721a7ecc22989d0098a66af0d88b80ef7d55f7b2d78",
+      "data/v2-final/retrieval_gold.json": "88369807673b520e51bdc0ac132c03ee9da822af74a2cfa631d0d99a4575ebaa",
+      "data/v2-final/source_cells.json": "d894ebf8b574e75ebfeb3e453220872ddd4104987b85e162848cb0ad2cec309b",
+      "data/v2-final/sources.json": "d0654f8022f15effd7858b4def44d0644391e76146e2ce42050cee846bf3748b"
+    }
+  },
+  "implementation_hashes": {
+    "quarterguard/core.py": "dbe42039fae2619484df0a79bd5b893ee58e0efc40468570a672da79c877830e",
+    "quarterguard/ingest.py": "692ea34874f943bb0b1abdbb69a1fa3d01d63c72060f85005d444ec31ae9b93e",
+    "quarterguard/search.py": "b0a9ff7002590da6ca51d22488bb4802c8563b1462bc97fc9a645960e641c7df"
+  },
+  "evaluation_harness_sha256": "4a94bc3b9ad403e3be5c6b015af2af6c9aa59315de58bafe6b671124d820d687",
+  "human_reviewed": false,
+  "same_task_ai_authored": true,
+  "model_calls": 0,
+  "provider_api_cost_usd": 0,
+  "cost_scope": "Paid model APIs only; excludes local CPU, storage, and network",
+  "source_audit": [
+    {
+      "fact_id": "s22q3-CFS-revenue-2022-q-KRW",
+      "source_cell": "76781680",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s22q3-CFS-revenue-2021-q-KRW",
+      "source_cell": "73979187",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s22q3-CFS-revenue-2022-ytd-KRW",
+      "source_cell": "231766785",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s22q3-CFS-revenue-2021-ytd-KRW",
+      "source_cell": "203039275",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s22q3-CFS-gross_profit-2022-q-KRW",
+      "source_cell": "28709443",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s22q3-CFS-gross_profit-2021-q-KRW",
+      "source_cell": "31080316",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s22q3-CFS-gross_profit-2022-ytd-KRW",
+      "source_cell": "90352743",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s22q3-CFS-gross_profit-2021-ytd-KRW",
+      "source_cell": "81574488",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s22q3-CFS-operating_profit-2022-q-KRW",
+      "source_cell": "10852045",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s22q3-CFS-operating_profit-2021-q-KRW",
+      "source_cell": "15817531",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s22q3-CFS-operating_profit-2022-ytd-KRW",
+      "source_cell": "39070499",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s22q3-CFS-operating_profit-2021-ytd-KRW",
+      "source_cell": "37767144",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s22q3-CFS-net_profit-2022-q-KRW",
+      "source_cell": "9389198",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s22q3-CFS-net_profit-2021-q-KRW",
+      "source_cell": "12293331",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s22q3-CFS-net_profit-2022-ytd-KRW",
+      "source_cell": "31812631",
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "s22q3-CFS-net_profit-2021-ytd-KRW",
+      "source_cell": "29069502",
+      "header_verified": true,
+      "passed": true
+    }
+  ],
+  "raw_statements": [
+    {
+      "id": "s22q3-CFS",
+      "parsed_count": 0,
+      "gold_cells": 16,
+      "exact_cells": 0,
+      "error": "ValueError: UNSUPPORTED_LAYOUT: header",
+      "passed": false
+    }
+  ],
+  "raw_statement_summary": {
+    "total": 1,
+    "passed": 0,
+    "failed": 1
+  },
+  "raw_exact_cells": [
+    {
+      "fact_id": "s22q3-CFS-revenue-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s22q3-CFS-revenue-2021-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s22q3-CFS-revenue-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s22q3-CFS-revenue-2021-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s22q3-CFS-gross_profit-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s22q3-CFS-gross_profit-2021-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s22q3-CFS-gross_profit-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s22q3-CFS-gross_profit-2021-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s22q3-CFS-operating_profit-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s22q3-CFS-operating_profit-2021-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s22q3-CFS-operating_profit-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s22q3-CFS-operating_profit-2021-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s22q3-CFS-net_profit-2022-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s22q3-CFS-net_profit-2021-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s22q3-CFS-net_profit-2022-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "s22q3-CFS-net_profit-2021-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    }
+  ],
+  "raw_cell_summary": {
+    "total": 16,
+    "passed": 0,
+    "failed": 16
+  },
+  "production_registry": {
+    "accepted_parsed_facts": 0,
+    "parsed_facts": 0,
+    "production_end_to_end_supported": false,
+    "limitation": "New documents are not added to production canonical registration by this evaluation."
+  },
+  "stages": {
+    "raw_parsed": {
+      "adapter": "isolated source_manifest + source_facts patches; production functions unchanged",
+      "registration": "only exact independently audited parser outputs",
+      "corpus_facts": 0,
+      "queries": [
+        {
+          "id": "final-q01",
+          "query": "삼성전자 2021년 3분기 당분기 연결 원화 백만원 매출액",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "final-q02",
+          "query": "Samsung 2021 Q3 YTD consolidated KRW million operating profit",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "final-q03",
+          "query": "삼성전자 2021년 3분기 누적 연결 원화 백만원 당기순이익",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "final-q04",
+          "query": "Samsung Electronics 2021 Q3 quarter CFS KRW million gross profit",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "final-q05",
+          "query": "삼성전자 2022년 3분기 당분기 연결 원화 백만원 영업이익",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "final-q06",
+          "query": "Samsung 2022 Q3 YTD consolidated KRW million revenue",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "final-q07",
+          "query": "Samsung 2021 Q3 quarter consolidated separate KRW million revenue",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "final-q08",
+          "query": "삼성전자 2021년 3분기 누적 매출액",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        }
+      ],
+      "query_summary": {
+        "total": 8,
+        "passed": 0,
+        "failed": 8
+      },
+      "citations": [
+        {
+          "fact_id": "s22q3-CFS-revenue-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s22q3-CFS-revenue-2021-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s22q3-CFS-revenue-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s22q3-CFS-revenue-2021-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s22q3-CFS-gross_profit-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s22q3-CFS-gross_profit-2021-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s22q3-CFS-gross_profit-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s22q3-CFS-gross_profit-2021-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s22q3-CFS-operating_profit-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s22q3-CFS-operating_profit-2021-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s22q3-CFS-operating_profit-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s22q3-CFS-operating_profit-2021-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s22q3-CFS-net_profit-2022-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s22q3-CFS-net_profit-2021-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s22q3-CFS-net_profit-2022-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "s22q3-CFS-net_profit-2021-ytd-KRW",
+          "passed": false
+        }
+      ],
+      "citation_summary": {
+        "total": 16,
+        "passed": 0,
+        "failed": 16
+      },
+      "calculations": [
+        {
+          "id": "final-yoy-revenue",
+          "passed": false,
+          "status": "blocked_missing_parsed_fact",
+          "missing": [
+            "s22q3-CFS-revenue-2022-q-KRW",
+            "s22q3-CFS-revenue-2021-q-KRW"
+          ]
+        },
+        {
+          "id": "final-yoy-operating_profit",
+          "passed": false,
+          "status": "blocked_missing_parsed_fact",
+          "missing": [
+            "s22q3-CFS-operating_profit-2022-q-KRW",
+            "s22q3-CFS-operating_profit-2021-q-KRW"
+          ]
+        }
+      ],
+      "calculation_summary": {
+        "total": 2,
+        "passed": 0,
+        "failed": 2
+      },
+      "positive_retrieval": {
+        "n": 6,
+        "recall_at_1": 0.0,
+        "recall_at_5": 0.0,
+        "mrr_at_5": 0.0
+      }
+    },
+    "fixture_assisted": {
+      "adapter": "isolated source_manifest + source_facts patches; production functions unchanged",
+      "registration": "gold fixtures supplied directly, not ingestion evidence",
+      "corpus_facts": 16,
+      "queries": [
+        {
+          "id": "final-q01",
+          "query": "삼성전자 2021년 3분기 당분기 연결 원화 백만원 매출액",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "legacy_no_diagnostics",
+          "issues": [],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "final-q02",
+          "query": "Samsung 2021 Q3 YTD consolidated KRW million operating profit",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "legacy_no_diagnostics",
+          "issues": [],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "final-q03",
+          "query": "삼성전자 2021년 3분기 누적 연결 원화 백만원 당기순이익",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "legacy_no_diagnostics",
+          "issues": [],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "final-q04",
+          "query": "Samsung Electronics 2021 Q3 quarter CFS KRW million gross profit",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "legacy_no_diagnostics",
+          "issues": [],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "final-q05",
+          "query": "삼성전자 2022년 3분기 당분기 연결 원화 백만원 영업이익",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "legacy_no_diagnostics",
+          "issues": [],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "final-q06",
+          "query": "Samsung 2022 Q3 YTD consolidated KRW million revenue",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "legacy_no_diagnostics",
+          "issues": [],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "final-q07",
+          "query": "Samsung 2021 Q3 quarter consolidated separate KRW million revenue",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "legacy_no_diagnostics",
+          "issues": [],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": true,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "final-q08",
+          "query": "삼성전자 2021년 3분기 누적 매출액",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [
+            "s22q3-CFS-revenue-2021-ytd-KRW"
+          ],
+          "rank": null,
+          "status": "legacy_no_diagnostics",
+          "issues": [],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        }
+      ],
+      "query_summary": {
+        "total": 8,
+        "passed": 0,
+        "failed": 8
+      },
+      "citations": [
+        {
+          "fact_id": "s22q3-CFS-revenue-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s22q3-CFS-revenue-2021-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s22q3-CFS-revenue-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s22q3-CFS-revenue-2021-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s22q3-CFS-gross_profit-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s22q3-CFS-gross_profit-2021-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s22q3-CFS-gross_profit-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s22q3-CFS-gross_profit-2021-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s22q3-CFS-operating_profit-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s22q3-CFS-operating_profit-2021-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s22q3-CFS-operating_profit-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s22q3-CFS-operating_profit-2021-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s22q3-CFS-net_profit-2022-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s22q3-CFS-net_profit-2021-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s22q3-CFS-net_profit-2022-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "s22q3-CFS-net_profit-2021-ytd-KRW",
+          "passed": true
+        }
+      ],
+      "citation_summary": {
+        "total": 16,
+        "passed": 16,
+        "failed": 0
+      },
+      "calculations": [
+        {
+          "id": "final-yoy-revenue",
+          "passed": true,
+          "result": {
+            "status": "verified",
+            "issues": [],
+            "growth_pct": "3.7882",
+            "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+            "normalized_inputs": [
+              "76781680000000",
+              "73979187000000"
+            ],
+            "currency": "KRW",
+            "evidence": [
+              {
+                "id": "s22q3-CFS-revenue-2022-q-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2022-07-01",
+                "end": "2022-09-30",
+                "value": "76781680",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2022_3Q_Interim_Report_vF.pdf",
+                "page": 37,
+                "row": "Revenue",
+                "column": "2022 Q KRW",
+                "document_id": "s22q3",
+                "document_sha256": "0a00681375790f92a4660c65983473b70a8bac17f163c84cadc062493b4851fd",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              },
+              {
+                "id": "s22q3-CFS-revenue-2021-q-KRW",
+                "company": "samsung",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2021-07-01",
+                "end": "2021-09-30",
+                "value": "73979187",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2022_3Q_Interim_Report_vF.pdf",
+                "page": 37,
+                "row": "Revenue",
+                "column": "2021 Q KRW",
+                "document_id": "s22q3",
+                "document_sha256": "0a00681375790f92a4660c65983473b70a8bac17f163c84cadc062493b4851fd",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              }
+            ],
+            "mode": "yoy"
+          }
+        },
+        {
+          "id": "final-yoy-operating_profit",
+          "passed": true,
+          "result": {
+            "status": "verified",
+            "issues": [],
+            "growth_pct": "-31.3923",
+            "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+            "normalized_inputs": [
+              "10852045000000",
+              "15817531000000"
+            ],
+            "currency": "KRW",
+            "evidence": [
+              {
+                "id": "s22q3-CFS-operating_profit-2022-q-KRW",
+                "company": "samsung",
+                "metric": "operating_profit",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2022-07-01",
+                "end": "2022-09-30",
+                "value": "10852045",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2022_3Q_Interim_Report_vF.pdf",
+                "page": 37,
+                "row": "Operating profit",
+                "column": "2022 Q KRW",
+                "document_id": "s22q3",
+                "document_sha256": "0a00681375790f92a4660c65983473b70a8bac17f163c84cadc062493b4851fd",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              },
+              {
+                "id": "s22q3-CFS-operating_profit-2021-q-KRW",
+                "company": "samsung",
+                "metric": "operating_profit",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2021-07-01",
+                "end": "2021-09-30",
+                "value": "15817531",
+                "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2022_3Q_Interim_Report_vF.pdf",
+                "page": 37,
+                "row": "Operating profit",
+                "column": "2021 Q KRW",
+                "document_id": "s22q3",
+                "document_sha256": "0a00681375790f92a4660c65983473b70a8bac17f163c84cadc062493b4851fd",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              }
+            ],
+            "mode": "yoy"
+          }
+        }
+      ],
+      "calculation_summary": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      },
+      "positive_retrieval": {
+        "n": 6,
+        "recall_at_1": 0.0,
+        "recall_at_5": 0.0,
+        "mrr_at_5": 0.0
+      }
+    }
+  },
+  "first_observed_failures": {
+    "raw_statements": [
+      "s22q3-CFS"
+    ],
+    "raw_parsed": {
+      "queries": [
+        "final-q01",
+        "final-q02",
+        "final-q03",
+        "final-q04",
+        "final-q05",
+        "final-q06",
+        "final-q07",
+        "final-q08"
+      ],
+      "calculations": [
+        "final-yoy-revenue",
+        "final-yoy-operating_profit"
+      ]
+    },
+    "fixture_assisted": {
+      "queries": [
+        "final-q01",
+        "final-q02",
+        "final-q03",
+        "final-q04",
+        "final-q05",
+        "final-q06",
+        "final-q07",
+        "final-q08"
+      ],
+      "calculations": []
+    }
+  }
+}

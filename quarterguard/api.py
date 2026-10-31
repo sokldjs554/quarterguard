@@ -7,7 +7,7 @@ from .store import ROOT,load_facts
 from .search import SearchIndex
 from .orchestrator import cases,run_case
 from .worksheet import WorksheetRequest,preview,run_worksheet
-app=FastAPI(title='QuarterGuard',version='1.3.1')
+app=FastAPI(title='QuarterGuard',version='1.4.0')
 slots=asyncio.Semaphore(1)  # Bound subprocess CPU/RSS on the free 0.1 CPU / 512 MB instance.
 @lru_cache(maxsize=1)
 def index():return SearchIndex(load_facts())
@@ -43,7 +43,7 @@ async def run(case_id:str):
  finally:slots.release()
 @app.get('/api/search')
 def search(q:str=Query('',max_length=500)):
- return {'hits':index().search(q,5),'configuration':'hybrid_meta'}
+ return index().search_with_diagnostics(q,5)|{'configuration':'hybrid_meta'}
 @app.post('/api/worksheet')
 def worksheet(request:WorksheetRequest):return preview(request)
 @app.post('/api/worksheet/run')
@@ -73,6 +73,11 @@ async def call_provider(provider:str,target:str):
  finally:slots.release()
 @app.get('/api/evaluation/heldout')
 def heldout_evaluation():return artifact('heldout-evaluation.json')
+@app.get('/api/evaluation/current/{report}')
+def current_evaluation(report:str):
+ names={'progress':'progress-v2-final.json','parser':'parser-development-v2-reviewed.json','search':'search-development-v2-followup.json','documents':'evaluation-v2-final-summary.json','ranking':'ranking-v2-disclosed-followup.json','explanations':'explanation-v2-final.json','mcp':'mcp-v2-reviewed.json'}
+ if report not in names:raise HTTPException(404,'UNKNOWN_REPORT')
+ return artifact(names[report])
 @app.get('/')
 def home():return FileResponse(ROOT/'web/index.html')
 app.mount('/assets',StaticFiles(directory=ROOT/'web'),name='assets')

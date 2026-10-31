@@ -1,0 +1,419 @@
+{
+  "version": "search-development-v2-followup",
+  "split": "post_disclosure_development_correction",
+  "human_reviewed": false,
+  "new_final_gold_accessed": false,
+  "paid_api_calls": 0,
+  "disclosure": "Parent disclosed first separate v2 misses: Korean first-half period and Hyundai Motor aliases. No blind facts/gold were read by search implementation worker.",
+  "original_development_artifact_sha256": "76fdbebd397965c9afc5d6319d0bf9ac59ab50eea20650049626ad364a479cae",
+  "before_implementation_sha256": {
+    "quarterguard/search.py": "03e36e985309f85d5b9d62980ba65793dfd1876f4ab715a1bd76b2acc557c379",
+    "quarterguard/query.py": "68aefecef0162973c000a747830cf7fc481223ec344a671c6d7bccf9e4013272",
+    "tests/test_query_v2.py": "efb3ee5e531d528faaa737918742500ed35a734a9f1ca7bc4a617d75f1f1d148"
+  },
+  "after_implementation_sha256": {
+    "quarterguard/search.py": "03e36e985309f85d5b9d62980ba65793dfd1876f4ab715a1bd76b2acc557c379",
+    "quarterguard/query.py": "22799afcf36ffb935aa4e772bfb507f9899e36e5b73264082a02bf5da310acf6",
+    "tests/test_query_v2.py": "b87f0aff9af2d9c3053286677fc5551e085e09afabfe9299454e7b335cfa7684"
+  },
+  "synthetic_regressions": [
+    {
+      "query": "삼성전자 2024년 상반기 연결 매출 백만원",
+      "diagnostics": {
+        "filters": {
+          "company": "samsung",
+          "metric": "revenue",
+          "year": "2024",
+          "quarter": 2,
+          "kind": "ytd",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000
+        },
+        "issues": [],
+        "missing_fields": [],
+        "unknown_terms": [],
+        "blocked": false,
+        "trusted_query": true,
+        "hits": [
+          {
+            "id": "s24q2-CFS-revenue-2024-ytd-KRW",
+            "text": "samsung revenue Revenue 매출액 CFS 2024 Q2 ytd 2024-01-01 2024-06-30 KRW scale 1000000 value 145983903",
+            "fact_ids": [
+              "s24q2-CFS-revenue-2024-ytd-KRW"
+            ],
+            "score": 0.250178
+          }
+        ],
+        "status": "ready",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 1
+      }
+    },
+    {
+      "query": "Hyundai Motor 2024 Q3 CFS revenue quarter KRW million",
+      "diagnostics": {
+        "filters": {
+          "company": "hyundai",
+          "metric": "revenue",
+          "year": "2024",
+          "quarter": 3,
+          "kind": "quarter",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000
+        },
+        "issues": [],
+        "missing_fields": [],
+        "unknown_terms": [],
+        "blocked": false,
+        "trusted_query": true,
+        "hits": [
+          {
+            "id": "hyundai-synthetic",
+            "text": "hyundai revenue Revenue 매출액 CFS 2024 Q3 quarter 2024-07-01 2024-09-30 KRW scale 1000000 value 79098731",
+            "fact_ids": [
+              "hyundai-synthetic"
+            ],
+            "score": 0.650839
+          }
+        ],
+        "status": "ready",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 1
+      }
+    },
+    {
+      "query": "Hyundai Motor Company 2024 Q3 CFS revenue quarter KRW million",
+      "diagnostics": {
+        "filters": {
+          "company": "hyundai",
+          "metric": "revenue",
+          "year": "2024",
+          "quarter": 3,
+          "kind": "quarter",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000
+        },
+        "issues": [],
+        "missing_fields": [],
+        "unknown_terms": [],
+        "blocked": false,
+        "trusted_query": true,
+        "hits": [
+          {
+            "id": "hyundai-synthetic",
+            "text": "hyundai revenue Revenue 매출액 CFS 2024 Q3 quarter 2024-07-01 2024-09-30 KRW scale 1000000 value 79098731",
+            "fact_ids": [
+              "hyundai-synthetic"
+            ],
+            "score": 0.650839
+          }
+        ],
+        "status": "ready",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 1
+      }
+    },
+    {
+      "query": "현대자동차 2024 Q3 CFS revenue quarter KRW million",
+      "diagnostics": {
+        "filters": {
+          "company": "hyundai",
+          "metric": "revenue",
+          "year": "2024",
+          "quarter": 3,
+          "kind": "quarter",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000
+        },
+        "issues": [],
+        "missing_fields": [],
+        "unknown_terms": [],
+        "blocked": false,
+        "trusted_query": true,
+        "hits": [
+          {
+            "id": "hyundai-synthetic",
+            "text": "hyundai revenue Revenue 매출액 CFS 2024 Q3 quarter 2024-07-01 2024-09-30 KRW scale 1000000 value 79098731",
+            "fact_ids": [
+              "hyundai-synthetic"
+            ],
+            "score": 0.637306
+          }
+        ],
+        "status": "ready",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 1
+      }
+    },
+    {
+      "query": "현대 2024 Q3 CFS revenue quarter KRW million",
+      "diagnostics": {
+        "filters": {
+          "metric": "revenue",
+          "year": "2024",
+          "quarter": 3,
+          "kind": "quarter",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000
+        },
+        "issues": [
+          "UNSUPPORTED_TERMS",
+          "MISSING_COMPANY"
+        ],
+        "missing_fields": [
+          "company"
+        ],
+        "unknown_terms": [
+          "현대"
+        ],
+        "blocked": true,
+        "trusted_query": false,
+        "hits": [],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 0
+      }
+    }
+  ],
+  "original_disclosed_natural_results": [
+    {
+      "id": "retrieve-06",
+      "candidate_rank": 1,
+      "diagnostics": {
+        "filters": {
+          "company": "samsung",
+          "metric": "revenue",
+          "year": "2025",
+          "quarter": 3,
+          "scope": "CFS"
+        },
+        "issues": [
+          "MISSING_KIND",
+          "MISSING_CURRENCY",
+          "MISSING_SCALE"
+        ],
+        "missing_fields": [
+          "kind",
+          "currency",
+          "scale"
+        ],
+        "unknown_terms": [],
+        "blocked": false,
+        "trusted_query": false,
+        "hits": [
+          {
+            "id": "s25q3-CFS-revenue-2025-q-KRW",
+            "text": "samsung revenue Revenue 매출액 CFS 2025 Q3 quarter 2025-07-01 2025-09-30 KRW scale 1000000 value 86061747",
+            "fact_ids": [
+              "s25q3-CFS-revenue-2025-q-KRW"
+            ],
+            "score": 0.53618
+          },
+          {
+            "id": "s25q3-CFS-revenue-2025-ytd-KRW",
+            "text": "samsung revenue Revenue 매출액 CFS 2025 Q3 ytd 2025-01-01 2025-09-30 KRW scale 1000000 value 239768567",
+            "fact_ids": [
+              "s25q3-CFS-revenue-2025-ytd-KRW"
+            ],
+            "score": 0.477964
+          }
+        ],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 2
+      }
+    },
+    {
+      "id": "retrieve-07",
+      "candidate_rank": 2,
+      "diagnostics": {
+        "filters": {
+          "company": "samsung",
+          "metric": "operating_profit",
+          "year": "2025",
+          "quarter": 2,
+          "scope": "OFS"
+        },
+        "issues": [
+          "MISSING_KIND",
+          "MISSING_CURRENCY",
+          "MISSING_SCALE"
+        ],
+        "missing_fields": [
+          "kind",
+          "currency",
+          "scale"
+        ],
+        "unknown_terms": [],
+        "blocked": false,
+        "trusted_query": false,
+        "hits": [
+          {
+            "id": "s25q2-OFS-operating_profit-2025-ytd-KRW",
+            "text": "samsung operating_profit Operating profit 영업이익 OFS 2025 Q2 ytd 2025-01-01 2025-06-30 KRW scale 1000000 value 2660105",
+            "fact_ids": [
+              "s25q2-OFS-operating_profit-2025-ytd-KRW"
+            ],
+            "score": 0.58824
+          },
+          {
+            "id": "s25q2-OFS-operating_profit-2025-q-KRW",
+            "text": "samsung operating_profit Operating profit 영업이익 OFS 2025 Q2 quarter 2025-04-01 2025-06-30 KRW scale 1000000 value 1190832",
+            "fact_ids": [
+              "s25q2-OFS-operating_profit-2025-q-KRW"
+            ],
+            "score": 0.57869
+          }
+        ],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 2
+      }
+    },
+    {
+      "id": "retrieve-08",
+      "candidate_rank": 2,
+      "diagnostics": {
+        "filters": {
+          "company": "samsung",
+          "metric": "gross_profit",
+          "year": "2025",
+          "quarter": 2,
+          "scope": "CFS"
+        },
+        "issues": [
+          "MISSING_KIND",
+          "MISSING_CURRENCY",
+          "MISSING_SCALE"
+        ],
+        "missing_fields": [
+          "kind",
+          "currency",
+          "scale"
+        ],
+        "unknown_terms": [],
+        "blocked": false,
+        "trusted_query": false,
+        "hits": [
+          {
+            "id": "s25q2-CFS-gross_profit-2025-ytd-KRW",
+            "text": "samsung gross_profit Gross profit 매출총이익 CFS 2025 Q2 ytd 2025-01-01 2025-06-30 KRW scale 1000000 value 53627323",
+            "fact_ids": [
+              "s25q2-CFS-gross_profit-2025-ytd-KRW"
+            ],
+            "score": 0.456322
+          },
+          {
+            "id": "s25q2-CFS-gross_profit-2025-q-KRW",
+            "text": "samsung gross_profit Gross profit 매출총이익 CFS 2025 Q2 quarter 2025-04-01 2025-06-30 KRW scale 1000000 value 25496751",
+            "fact_ids": [
+              "s25q2-CFS-gross_profit-2025-q-KRW"
+            ],
+            "score": 0.446744
+          }
+        ],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 2
+      }
+    },
+    {
+      "id": "retrieve-09",
+      "candidate_rank": 1,
+      "diagnostics": {
+        "filters": {
+          "company": "samsung",
+          "metric": "net_profit",
+          "year": "2025",
+          "quarter": 3,
+          "kind": "ytd",
+          "scope": "OFS",
+          "currency": "KRW"
+        },
+        "issues": [
+          "MISSING_SCALE"
+        ],
+        "missing_fields": [
+          "scale"
+        ],
+        "unknown_terms": [],
+        "blocked": false,
+        "trusted_query": false,
+        "hits": [
+          {
+            "id": "s25q3-OFS-net_profit-2025-ytd-KRW",
+            "text": "samsung net_profit Profit for the period 당기순이익 OFS 2025 Q3 ytd 2025-01-01 2025-09-30 KRW scale 1000000 value 19807790",
+            "fact_ids": [
+              "s25q3-OFS-net_profit-2025-ytd-KRW"
+            ],
+            "score": 0.386611
+          }
+        ],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 1
+      }
+    },
+    {
+      "id": "retrieve-10",
+      "candidate_rank": 1,
+      "diagnostics": {
+        "filters": {
+          "company": "samsung",
+          "metric": "revenue",
+          "year": "2025",
+          "quarter": 3,
+          "kind": "ytd",
+          "scope": "CFS"
+        },
+        "issues": [
+          "MISSING_CURRENCY",
+          "MISSING_SCALE"
+        ],
+        "missing_fields": [
+          "currency",
+          "scale"
+        ],
+        "unknown_terms": [],
+        "blocked": false,
+        "trusted_query": false,
+        "hits": [
+          {
+            "id": "s25q3-CFS-revenue-2025-ytd-KRW",
+            "text": "samsung revenue Revenue 매출액 CFS 2025 Q3 ytd 2025-01-01 2025-09-30 KRW scale 1000000 value 239768567",
+            "fact_ids": [
+              "s25q3-CFS-revenue-2025-ytd-KRW"
+            ],
+            "score": 0.325762
+          }
+        ],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 1
+      }
+    }
+  ],
+  "natural_summary": {
+    "candidate_recall_at_5": 1.0,
+    "candidate_top1": 0.6,
+    "needs_clarification": 5,
+    "trusted_queries": 0,
+    "verified_answers": 0
+  },
+  "test_first_evidence": {
+    "new_tests": 2,
+    "before_failures": 4,
+    "after_suite_tests": 25,
+    "after_suite_passed": true,
+    "command": "PYTHONPATH=tests .venv/bin/python -m unittest test_pipeline test_review_regressions test_query_v2"
+  },
+  "limitations": [
+    "This follow-up uses disclosed failures and synthetic development facts, not untouched evaluation evidence.",
+    "Full integration suite is owned by root."
+  ]
+}

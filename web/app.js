@@ -1,3 +1,4 @@
+import {mountProgress} from './progress.js';
 import {$,esc,labels,shortLabels,issues,money,unit,scope,docTitle,api,errorText,download,traceHTML,localTime} from './shared.js';
 import {evidenceInspector} from './evidence.js';
 import {mountReview} from './review.js';
@@ -155,7 +156,7 @@ async function boot() {
    const row=current?.rows.find(r=>r.current.id===id||r.base.id===id);if(!row)return;
    selectedMetric=row.metric;selectedSide=index===0?'current':'base';selectRow();
   });
-  $('#version').textContent='v1.3.1 · '+health.commit.slice(0,7);
+  $('#version').textContent='v1.4.0 · '+health.commit.slice(0,7);
   $('#document-count').textContent=sources.length;
   $('#document-list').innerHTML=sources.map(s=>`<button class="document-item" data-document="${esc(s.id)}" aria-pressed="false"><span class="doc-icon" aria-hidden="true">PDF</span><span><strong>${s.id==='s24q3'?'2024년 3분기':'2024년 반기'}</strong><small>${s.pages}쪽 · 영문 IR</small></span></button>`).join('');
   document.querySelectorAll('[data-document]').forEach(b=>b.onclick=async()=>{
@@ -172,8 +173,20 @@ $('#search-form').onsubmit=async e=>{
  e.preventDefault();const ticket=++searchId,box=$('#search-results');box.innerHTML='<div class="empty busy-pulse" role="status">근거 검색 중</div>';
  try {
   const result=await api('/api/search?q='+encodeURIComponent($('#query').value));if(ticket!==searchId)return;
-  const found=result.hits.flatMap(h=>h.fact_ids.map(id=>({f:facts.find(f=>f.id===id),score:h.score}))).filter(x=>x.f);
-  box.innerHTML=found.length?`<div class="table-overflow"><table class="search-results-table"><thead><tr><th>수치 항목</th><th>기간 · 범위</th><th>금액</th><th>문서</th><th>작업</th></tr></thead><tbody>${found.map(({f})=>`<tr><td>${labels[f.metric]}<small>${esc(f.row)}</small></td><td>${f.start} — ${f.end}<small>${f.months}개월 · ${scope(f)}</small></td><td class="num">${money(f)}<small>${unit(f)}</small></td><td>${docTitle(f.document_id)}<small>p.${f.page} · ${esc(f.column)}</small></td><td><button class="link-button" data-use-fact="${esc(f.id)}">작업지에서 대조 ↗</button></td></tr>`).join('')}</tbody></table></div>`:'<div class="empty">검색 결과 없음 · 기업·기간·범위 또는 수집 범위 확인</div>';
+  if(!['ready','needs_clarification','no_results'].includes(result.status)||!result.filters||!Array.isArray(result.hits)||!Array.isArray(result.issues)||!Array.isArray(result.missing_fields)||typeof result.blocked!=='boolean'||result.answer_status!=='not_verified')throw Error('검색 조건 응답을 확인하지 못했습니다.');
+  const fields={company:'기업',metric:'항목',year:'연도',quarter:'종료 분기',kind:'기간 방식',scope:'범위',currency:'통화',scale:'표시 단위'};
+  const fieldValue=(key,value)=>key==='company'?({samsung:'삼성전자',hyundai:'현대자동차'}[value]||value):key==='metric'?(labels[value]||value):key==='quarter'?`${value}분기`:key==='kind'?({quarter:'단독 3개월',ytd:'연초부터 누적'}[value]||value):key==='scope'?({CFS:'연결',OFS:'별도'}[value]||value):key==='scale'?({1:'1',1000:'천 (1,000)',1000000:'백만 (1,000,000)',100000000:'억 (100,000,000)',1000000000:'십억 (1,000,000,000)',1000000000000:'조 (1,000,000,000,000)'}[value]||value):value;
+  const issueLabel=code=>{
+   if(code.startsWith('MISSING_'))return `${fields[code.slice(8).toLowerCase()]||'필수'} 조건을 입력해 주세요.`;
+   if(code.startsWith('CONFLICT_'))return `${fields[code.slice(9).toLowerCase()]||'검색'} 조건이 서로 다릅니다. 하나의 조건을 지정해 주세요.`;
+   return {UNSUPPORTED_NEGATION:'제외·부정 표현은 해석하지 않습니다. 원하는 조건을 직접 지정해 주세요.',UNSUPPORTED_TERMS:'해석하지 못한 표현이 있습니다. 기업명·통화·단위를 확인해 주세요.',UNSUPPORTED_SCALE:'지원하지 않는 표시 단위입니다. 원문에 적힌 단위를 확인해 주세요.',AMBIGUOUS_FACT:'같은 조건의 근거가 여러 개입니다. 문서와 수치를 직접 확인해 주세요.'}[code]||'검색 조건을 다시 확인해 주세요.';
+  };
+  const found=result.blocked?[]:result.hits.flatMap(h=>h.fact_ids.map(id=>({f:facts.find(f=>f.id===id),score:h.score}))).filter(x=>x.f);
+  const summary={ready:'조건을 갖춘 검색 후보',needs_clarification:'조건 추가 확인 필요',no_results:'검색 결과 없음'}[result.status];
+  const detected=Object.entries(fields).filter(([key])=>Object.hasOwn(result.filters,key)).map(([key,label])=>`<span data-search-field="${key}"><strong>${label}</strong> ${esc(fieldValue(key,result.filters[key]))}</span>`).join('');
+  const missing=result.missing_fields.map(key=>`<span data-search-missing="${esc(key)}">${esc(fields[key]||key)}</span>`).join(' · ');
+  const diagnostics=`<section class="finding" aria-label="검색 조건 확인" data-search-status="${result.status}"><h2>${summary}</h2><p class="calculation-note">검색 후보 · 검증된 답변 아님. 선택한 후보는 작업지에서 기간·범위·통화·출처를 다시 대조합니다.</p><h3>입력에서 확인한 조건</h3><div class="context-checks">${detected||'<span>확인된 조건 없음</span>'}</div>${missing?`<p class="warn">추가할 조건: ${missing}</p>`:''}${result.issues.map(code=>`<div class="finding-issue">${esc(issueLabel(code))}</div>`).join('')}${result.unknown_terms?.length?`<p class="calculation-note">확인이 필요한 표현: ${result.unknown_terms.map(esc).join(' · ')}</p>`:''}${result.status==='needs_clarification'&&!result.blocked?'<p class="calculation-note">아래 후보는 입력한 조건만 일치합니다. 빠진 조건을 입력하면 다시 좁힐 수 있습니다.</p>':''}</section>`;
+  box.innerHTML=diagnostics+(found.length?`<div class="table-overflow"><table class="search-results-table"><thead><tr><th>후보 수치 항목</th><th>기간 · 범위</th><th>금액</th><th>문서</th><th>작업</th></tr></thead><tbody>${found.map(({f})=>`<tr><td>${labels[f.metric]}<small>${esc(f.row)}</small></td><td>${f.start} — ${f.end}<small>${f.months}개월 · ${scope(f)}</small></td><td class="num">${money(f)}<small>${unit(f)}</small></td><td>${docTitle(f.document_id)}<small>p.${f.page} · ${esc(f.column)}</small></td><td><button class="link-button" data-use-fact="${esc(f.id)}">후보를 작업지에서 대조 ↗</button></td></tr>`).join('')}</tbody></table></div>`:'<div class="empty">검색 결과 없음 · 위 조건과 수집된 문서 범위를 확인해 주세요.</div>');
   box.querySelectorAll('[data-use-fact]').forEach(b=>b.onclick=async()=>{
    if(busy||!ready)return;const f=facts.find(f=>f.id===b.dataset.useFact),request=selection();
    request.current={document:f.document_id,year:Number(f.start.slice(0,4)),scope:f.scope,period:f.months===3?'q':'ytd',currency:f.currency};
@@ -208,3 +221,5 @@ $('#export-btn').onclick=()=>{
 boot();
 mountProviders($('#provider-content'));
 mountHeldout($('#heldout-content'));
+
+mountProgress(document.querySelector('#current-evaluation-content'));

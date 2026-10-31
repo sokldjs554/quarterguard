@@ -1,0 +1,488 @@
+{
+  "version": "search-development-v2",
+  "split": "disclosed_development_regression",
+  "human_reviewed": false,
+  "new_blind_gold_accessed": false,
+  "paid_api_calls": 0,
+  "baseline_git_commit": "39b59bdfd222da6ead5bdf4e72feea5995a72e0d",
+  "baseline_search_sha256": "b0a9ff7002590da6ca51d22488bb4802c8563b1462bc97fc9a645960e641c7df",
+  "inputs_sha256": {
+    "data/heldout/cases.json": "3fc3d385e0cf72f71cb297dc85a028e2e787afef1d70d8ea824ec6210fba739a",
+    "data/heldout/facts.json": "e77f6cf53c126c9a8cea234ed985715fbd4d22297258c92bfe8869d178243f68",
+    "data/heldout/first-run.json": "cce68f9edc5cced8263c967d00b0685f587851dce0e82ed3b82a27fb49b43de4",
+    "data/retrieval_gold.json": "b840033fda526093a60fadfeb1aacaf678456d9ae9459e5454ae67d274fc7164"
+  },
+  "implementation_sha256": {
+    "quarterguard/search.py": "03e36e985309f85d5b9d62980ba65793dfd1876f4ab715a1bd76b2acc557c379",
+    "quarterguard/query.py": "68aefecef0162973c000a747830cf7fc481223ec344a671c6d7bccf9e4013272",
+    "tests/test_query_v2.py": "efb3ee5e531d528faaa737918742500ed35a734a9f1ca7bc4a617d75f1f1d148"
+  },
+  "natural_summary": {
+    "total": 5,
+    "baseline_candidate_recall_at_5": 0.0,
+    "current_candidate_recall_at_5": 1.0,
+    "current_candidate_top1": 0.6,
+    "clarification_count": 5,
+    "trusted_query_count": 0,
+    "verified_answer_count": 0
+  },
+  "legacy_controlled_regression": {
+    "total": 36,
+    "candidate_top1_count": 36,
+    "all_omit_scale": true
+  },
+  "notes": [
+    "Candidate recall is not verified answer accuracy. All five natural cases need clarification.",
+    "The disclosed 2025 cases were used during development. This is not fresh heldout evidence.",
+    "Fixed chunk headers now derive metadata; changed header length changes 180-character boundaries. Re-run all new configurations on identical serialization."
+  ],
+  "verification": {
+    "command": "PYTHONPATH=tests .venv/bin/python -m unittest test_pipeline test_review_regressions test_query_v2",
+    "tests": 23,
+    "passed": true,
+    "full_suite": "root integration pending"
+  },
+  "results": [
+    {
+      "id": "retrieve-01",
+      "query": "samsung CFS 2025 Q3 quarter revenue KRW",
+      "query_style": "controlled",
+      "gold_fact_id": "s25q3-CFS-revenue-2025-q-KRW",
+      "baseline_candidate_rank": 1,
+      "current_candidate_rank": 1,
+      "diagnostics": {
+        "filters": {
+          "company": "samsung",
+          "metric": "revenue",
+          "year": "2025",
+          "quarter": 3,
+          "kind": "quarter",
+          "scope": "CFS",
+          "currency": "KRW"
+        },
+        "issues": [
+          "MISSING_SCALE"
+        ],
+        "missing_fields": [
+          "scale"
+        ],
+        "unknown_terms": [],
+        "blocked": false,
+        "trusted_query": false,
+        "hits": [
+          {
+            "id": "s25q3-CFS-revenue-2025-q-KRW",
+            "text": "samsung revenue Revenue 매출액 CFS 2025 Q3 quarter 2025-07-01 2025-09-30 KRW scale 1000000 value 86061747",
+            "fact_ids": [
+              "s25q3-CFS-revenue-2025-q-KRW"
+            ],
+            "score": 0.640316
+          }
+        ],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 1
+      }
+    },
+    {
+      "id": "retrieve-02",
+      "query": "samsung OFS 2025 Q2 quarter operating_profit KRW",
+      "query_style": "controlled",
+      "gold_fact_id": "s25q2-OFS-operating_profit-2025-q-KRW",
+      "baseline_candidate_rank": 1,
+      "current_candidate_rank": 1,
+      "diagnostics": {
+        "filters": {
+          "company": "samsung",
+          "metric": "operating_profit",
+          "year": "2025",
+          "quarter": 2,
+          "kind": "quarter",
+          "scope": "OFS",
+          "currency": "KRW"
+        },
+        "issues": [
+          "MISSING_SCALE"
+        ],
+        "missing_fields": [
+          "scale"
+        ],
+        "unknown_terms": [],
+        "blocked": false,
+        "trusted_query": false,
+        "hits": [
+          {
+            "id": "s25q2-OFS-operating_profit-2025-q-KRW",
+            "text": "samsung operating_profit Operating profit 영업이익 OFS 2025 Q2 quarter 2025-04-01 2025-06-30 KRW scale 1000000 value 1190832",
+            "fact_ids": [
+              "s25q2-OFS-operating_profit-2025-q-KRW"
+            ],
+            "score": 0.667999
+          }
+        ],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 1
+      }
+    },
+    {
+      "id": "retrieve-03",
+      "query": "삼성전자 연결 2025년 3분기 누적 매출액 원화",
+      "query_style": "controlled",
+      "gold_fact_id": "s25q3-CFS-revenue-2025-ytd-KRW",
+      "baseline_candidate_rank": 1,
+      "current_candidate_rank": 1,
+      "diagnostics": {
+        "filters": {
+          "company": "samsung",
+          "metric": "revenue",
+          "year": "2025",
+          "quarter": 3,
+          "kind": "ytd",
+          "scope": "CFS",
+          "currency": "KRW"
+        },
+        "issues": [
+          "MISSING_SCALE"
+        ],
+        "missing_fields": [
+          "scale"
+        ],
+        "unknown_terms": [],
+        "blocked": false,
+        "trusted_query": false,
+        "hits": [
+          {
+            "id": "s25q3-CFS-revenue-2025-ytd-KRW",
+            "text": "samsung revenue Revenue 매출액 CFS 2025 Q3 ytd 2025-01-01 2025-09-30 KRW scale 1000000 value 239768567",
+            "fact_ids": [
+              "s25q3-CFS-revenue-2025-ytd-KRW"
+            ],
+            "score": 0.648024
+          }
+        ],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 1
+      }
+    },
+    {
+      "id": "retrieve-04",
+      "query": "samsung CFS 2024 Q2 quarter gross_profit KRW",
+      "query_style": "controlled",
+      "gold_fact_id": "s25q2-CFS-gross_profit-2024-q-KRW",
+      "baseline_candidate_rank": 1,
+      "current_candidate_rank": 1,
+      "diagnostics": {
+        "filters": {
+          "company": "samsung",
+          "metric": "gross_profit",
+          "year": "2024",
+          "quarter": 2,
+          "kind": "quarter",
+          "scope": "CFS",
+          "currency": "KRW"
+        },
+        "issues": [
+          "MISSING_SCALE"
+        ],
+        "missing_fields": [
+          "scale"
+        ],
+        "unknown_terms": [],
+        "blocked": false,
+        "trusted_query": false,
+        "hits": [
+          {
+            "id": "s25q2-CFS-gross_profit-2024-q-KRW",
+            "text": "samsung gross_profit Gross profit 매출총이익 CFS 2024 Q2 quarter 2024-04-01 2024-06-30 KRW scale 1000000 value 29756276",
+            "fact_ids": [
+              "s25q2-CFS-gross_profit-2024-q-KRW"
+            ],
+            "score": 0.628089
+          }
+        ],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 1
+      }
+    },
+    {
+      "id": "retrieve-05",
+      "query": "삼성전자 별도 2025년 3분기 3개월 당기순이익 원화",
+      "query_style": "controlled",
+      "gold_fact_id": "s25q3-OFS-net_profit-2025-q-KRW",
+      "baseline_candidate_rank": 1,
+      "current_candidate_rank": 1,
+      "diagnostics": {
+        "filters": {
+          "company": "samsung",
+          "metric": "net_profit",
+          "year": "2025",
+          "quarter": 3,
+          "kind": "quarter",
+          "scope": "OFS",
+          "currency": "KRW"
+        },
+        "issues": [
+          "MISSING_SCALE"
+        ],
+        "missing_fields": [
+          "scale"
+        ],
+        "unknown_terms": [],
+        "blocked": false,
+        "trusted_query": false,
+        "hits": [
+          {
+            "id": "s25q3-OFS-net_profit-2025-q-KRW",
+            "text": "samsung net_profit Profit for the period 당기순이익 OFS 2025 Q3 quarter 2025-07-01 2025-09-30 KRW scale 1000000 value 10668573",
+            "fact_ids": [
+              "s25q3-OFS-net_profit-2025-q-KRW"
+            ],
+            "score": 0.571147
+          }
+        ],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 1
+      }
+    },
+    {
+      "id": "retrieve-06",
+      "query": "What was Samsung consolidated revenue in the third quarter of 2025?",
+      "query_style": "natural",
+      "gold_fact_id": "s25q3-CFS-revenue-2025-q-KRW",
+      "baseline_candidate_rank": null,
+      "current_candidate_rank": 1,
+      "diagnostics": {
+        "filters": {
+          "company": "samsung",
+          "metric": "revenue",
+          "year": "2025",
+          "quarter": 3,
+          "scope": "CFS"
+        },
+        "issues": [
+          "MISSING_KIND",
+          "MISSING_CURRENCY",
+          "MISSING_SCALE"
+        ],
+        "missing_fields": [
+          "kind",
+          "currency",
+          "scale"
+        ],
+        "unknown_terms": [],
+        "blocked": false,
+        "trusted_query": false,
+        "hits": [
+          {
+            "id": "s25q3-CFS-revenue-2025-q-KRW",
+            "text": "samsung revenue Revenue 매출액 CFS 2025 Q3 quarter 2025-07-01 2025-09-30 KRW scale 1000000 value 86061747",
+            "fact_ids": [
+              "s25q3-CFS-revenue-2025-q-KRW"
+            ],
+            "score": 0.53618
+          },
+          {
+            "id": "s25q3-CFS-revenue-2025-ytd-KRW",
+            "text": "samsung revenue Revenue 매출액 CFS 2025 Q3 ytd 2025-01-01 2025-09-30 KRW scale 1000000 value 239768567",
+            "fact_ids": [
+              "s25q3-CFS-revenue-2025-ytd-KRW"
+            ],
+            "score": 0.477964
+          }
+        ],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 2
+      }
+    },
+    {
+      "id": "retrieve-07",
+      "query": "삼성전자 2025년 2분기 별도 영업이익은 얼마인가요?",
+      "query_style": "natural",
+      "gold_fact_id": "s25q2-OFS-operating_profit-2025-q-KRW",
+      "baseline_candidate_rank": null,
+      "current_candidate_rank": 2,
+      "diagnostics": {
+        "filters": {
+          "company": "samsung",
+          "metric": "operating_profit",
+          "year": "2025",
+          "quarter": 2,
+          "scope": "OFS"
+        },
+        "issues": [
+          "MISSING_KIND",
+          "MISSING_CURRENCY",
+          "MISSING_SCALE"
+        ],
+        "missing_fields": [
+          "kind",
+          "currency",
+          "scale"
+        ],
+        "unknown_terms": [],
+        "blocked": false,
+        "trusted_query": false,
+        "hits": [
+          {
+            "id": "s25q2-OFS-operating_profit-2025-ytd-KRW",
+            "text": "samsung operating_profit Operating profit 영업이익 OFS 2025 Q2 ytd 2025-01-01 2025-06-30 KRW scale 1000000 value 2660105",
+            "fact_ids": [
+              "s25q2-OFS-operating_profit-2025-ytd-KRW"
+            ],
+            "score": 0.58824
+          },
+          {
+            "id": "s25q2-OFS-operating_profit-2025-q-KRW",
+            "text": "samsung operating_profit Operating profit 영업이익 OFS 2025 Q2 quarter 2025-04-01 2025-06-30 KRW scale 1000000 value 1190832",
+            "fact_ids": [
+              "s25q2-OFS-operating_profit-2025-q-KRW"
+            ],
+            "score": 0.57869
+          }
+        ],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 2
+      }
+    },
+    {
+      "id": "retrieve-08",
+      "query": "How much gross profit did Samsung report for Q2 2025 on a consolidated basis?",
+      "query_style": "natural",
+      "gold_fact_id": "s25q2-CFS-gross_profit-2025-q-KRW",
+      "baseline_candidate_rank": null,
+      "current_candidate_rank": 2,
+      "diagnostics": {
+        "filters": {
+          "company": "samsung",
+          "metric": "gross_profit",
+          "year": "2025",
+          "quarter": 2,
+          "scope": "CFS"
+        },
+        "issues": [
+          "MISSING_KIND",
+          "MISSING_CURRENCY",
+          "MISSING_SCALE"
+        ],
+        "missing_fields": [
+          "kind",
+          "currency",
+          "scale"
+        ],
+        "unknown_terms": [],
+        "blocked": false,
+        "trusted_query": false,
+        "hits": [
+          {
+            "id": "s25q2-CFS-gross_profit-2025-ytd-KRW",
+            "text": "samsung gross_profit Gross profit 매출총이익 CFS 2025 Q2 ytd 2025-01-01 2025-06-30 KRW scale 1000000 value 53627323",
+            "fact_ids": [
+              "s25q2-CFS-gross_profit-2025-ytd-KRW"
+            ],
+            "score": 0.456322
+          },
+          {
+            "id": "s25q2-CFS-gross_profit-2025-q-KRW",
+            "text": "samsung gross_profit Gross profit 매출총이익 CFS 2025 Q2 quarter 2025-04-01 2025-06-30 KRW scale 1000000 value 25496751",
+            "fact_ids": [
+              "s25q2-CFS-gross_profit-2025-q-KRW"
+            ],
+            "score": 0.446744
+          }
+        ],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 2
+      }
+    },
+    {
+      "id": "retrieve-09",
+      "query": "Show Samsung separate net income for the first nine months of 2025 in won.",
+      "query_style": "natural",
+      "gold_fact_id": "s25q3-OFS-net_profit-2025-ytd-KRW",
+      "baseline_candidate_rank": null,
+      "current_candidate_rank": 1,
+      "diagnostics": {
+        "filters": {
+          "company": "samsung",
+          "metric": "net_profit",
+          "year": "2025",
+          "quarter": 3,
+          "kind": "ytd",
+          "scope": "OFS",
+          "currency": "KRW"
+        },
+        "issues": [
+          "MISSING_SCALE"
+        ],
+        "missing_fields": [
+          "scale"
+        ],
+        "unknown_terms": [],
+        "blocked": false,
+        "trusted_query": false,
+        "hits": [
+          {
+            "id": "s25q3-OFS-net_profit-2025-ytd-KRW",
+            "text": "samsung net_profit Profit for the period 당기순이익 OFS 2025 Q3 ytd 2025-01-01 2025-09-30 KRW scale 1000000 value 19807790",
+            "fact_ids": [
+              "s25q3-OFS-net_profit-2025-ytd-KRW"
+            ],
+            "score": 0.386611
+          }
+        ],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 1
+      }
+    },
+    {
+      "id": "retrieve-10",
+      "query": "2025년 3분기 삼성전자 연결 누적 매출을 알려줘",
+      "query_style": "natural",
+      "gold_fact_id": "s25q3-CFS-revenue-2025-ytd-KRW",
+      "baseline_candidate_rank": null,
+      "current_candidate_rank": 1,
+      "diagnostics": {
+        "filters": {
+          "company": "samsung",
+          "metric": "revenue",
+          "year": "2025",
+          "quarter": 3,
+          "kind": "ytd",
+          "scope": "CFS"
+        },
+        "issues": [
+          "MISSING_CURRENCY",
+          "MISSING_SCALE"
+        ],
+        "missing_fields": [
+          "currency",
+          "scale"
+        ],
+        "unknown_terms": [],
+        "blocked": false,
+        "trusted_query": false,
+        "hits": [
+          {
+            "id": "s25q3-CFS-revenue-2025-ytd-KRW",
+            "text": "samsung revenue Revenue 매출액 CFS 2025 Q3 ytd 2025-01-01 2025-09-30 KRW scale 1000000 value 239768567",
+            "fact_ids": [
+              "s25q3-CFS-revenue-2025-ytd-KRW"
+            ],
+            "score": 0.325762
+          }
+        ],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 1
+      }
+    }
+  ]
+}

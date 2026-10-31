@@ -1,0 +1,389 @@
+{
+  "created_at": "2026-10-31T12:43:51.126991+00:00",
+  "version": "1.4.0",
+  "human_reviewed": false,
+  "new_llm_calls": 0,
+  "participant_sessions": 0,
+  "customer_deployments": 0,
+  "personal_code_review_confirmed": false,
+  "source_artifacts_sha256": {
+    "parser-development-v2-reviewed.json": "38b3abbd66765fae6997ca19ce16925bcd9f5f9718794046b8f9113682b347f4",
+    "evaluation-v2-first-post-fix.json": "3f382cee637e97f6ce66a03512edfe4681a7db52427aa74bd6c6bf3e50adb1e2",
+    "evaluation-v2-regression-reviewed.json": "11c07bdc28c7691c3b11d878b257d88ca7d61b3515f3d40c856d4e5fe33c772b",
+    "evaluation-v2-final-reviewed.json": "62c795c5b772b4b15ea39444d55463bcb21285f5a146ab19825f71993c3c6b9a",
+    "search-development-v2-followup.json": "01213134dccb35a9b320050b908c479749179be0566107c71d615bb52592d2f1",
+    "explanation-v2-reviewed.json": "d3c60ef5af447e10f8dc0a0ad58c226e1e02168657421c4f17be977ae1d62d81",
+    "mcp-v2-reviewed.json": "008c786671f73a64dc5f3397d30f1ace5e52cf3af1dc53d89e55aa70f93ceb4c",
+    "ranking-v2-dev-first.json": "38446094f464941592b2a9a8ac413a925475b8def2656819ec9b73f83f2b725b",
+    "ranking-v2-blind-first.json": "3ccfeb3e0a96341448c51c06d76b019b9db5bd0c6e4d6dfd133581a8b545997a",
+    "ranking-v2-final-first.json": "3ea88d673a5eafedc75b73143bf00d4452865337d820e53926a10c42fae0beb6"
+  },
+  "development_parser": [
+    {
+      "dataset": "data",
+      "pages": [
+        {
+          "document_id": "s24q3",
+          "scope": "CFS",
+          "page": 34,
+          "pdf_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+          "fact_count": 48,
+          "error": null
+        },
+        {
+          "document_id": "s24q3",
+          "scope": "OFS",
+          "page": 89,
+          "pdf_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+          "fact_count": 48,
+          "error": null
+        },
+        {
+          "document_id": "s24q2",
+          "scope": "CFS",
+          "page": 48,
+          "pdf_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+          "fact_count": 48,
+          "error": null
+        },
+        {
+          "document_id": "s24q2",
+          "scope": "OFS",
+          "page": 104,
+          "pdf_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+          "fact_count": 48,
+          "error": null
+        }
+      ],
+      "actual_facts": 192,
+      "matched_gold": 192,
+      "declared_gold": 192,
+      "failures": [],
+      "exact_public_record_equality": true
+    },
+    {
+      "dataset": "data/heldout",
+      "pages": [
+        {
+          "document_id": "s25q2",
+          "scope": "CFS",
+          "page": 44,
+          "pdf_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+          "fact_count": 48,
+          "error": null
+        },
+        {
+          "document_id": "s25q2",
+          "scope": "OFS",
+          "page": 96,
+          "pdf_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+          "fact_count": 48,
+          "error": null
+        },
+        {
+          "document_id": "s25q3",
+          "scope": "CFS",
+          "page": 34,
+          "pdf_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+          "fact_count": 48,
+          "error": null
+        },
+        {
+          "document_id": "s25q3",
+          "scope": "OFS",
+          "page": 89,
+          "pdf_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+          "fact_count": 48,
+          "error": null
+        }
+      ],
+      "actual_facts": 192,
+      "matched_gold": 64,
+      "declared_gold": 64,
+      "failures": [],
+      "exact_public_record_equality": null
+    }
+  ],
+  "document_rounds": [
+    {
+      "label": "2023년 자료 · 최초 별도 평가",
+      "raw_statements": {
+        "total": 5,
+        "passed": 0,
+        "failed": 5
+      },
+      "raw_cells": {
+        "total": 80,
+        "passed": 0,
+        "failed": 80
+      },
+      "raw_queries": {
+        "total": 24,
+        "passed": 0,
+        "failed": 24
+      },
+      "raw_calculations": {
+        "total": 6,
+        "passed": 0,
+        "failed": 6
+      },
+      "fixture_queries": {
+        "total": 24,
+        "passed": 20,
+        "failed": 4
+      }
+    },
+    {
+      "label": "2023년 자료 · 공개 후 수정 회귀",
+      "raw_statements": {
+        "total": 5,
+        "passed": 4,
+        "failed": 1
+      },
+      "raw_cells": {
+        "total": 80,
+        "passed": 64,
+        "failed": 16
+      },
+      "raw_queries": {
+        "total": 24,
+        "passed": 20,
+        "failed": 4
+      },
+      "raw_calculations": {
+        "total": 6,
+        "passed": 5,
+        "failed": 1
+      },
+      "fixture_queries": {
+        "total": 24,
+        "passed": 24,
+        "failed": 0
+      }
+    },
+    {
+      "label": "2022년 자료 · 별도 고정 평가 재검증",
+      "raw_statements": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "raw_cells": {
+        "total": 16,
+        "passed": 16,
+        "failed": 0
+      },
+      "raw_queries": {
+        "total": 8,
+        "passed": 8,
+        "failed": 0
+      },
+      "raw_calculations": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      },
+      "fixture_queries": {
+        "total": 8,
+        "passed": 8,
+        "failed": 0
+      }
+    }
+  ],
+  "natural_query_regression": {
+    "candidate_recall_at_5": 1.0,
+    "candidate_top1": 0.6,
+    "needs_clarification": 5,
+    "trusted_queries": 0,
+    "verified_answers": 0
+  },
+  "same_candidate_ranking": [
+    {
+      "dataset": "개발 질의 36개",
+      "method": "cell_hybrid",
+      "metrics": {
+        "n": 36,
+        "answerable_n": 36,
+        "no_gold_n": 0,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "candidate_recall": 1.0,
+        "no_gold_candidate_emission_rate": null,
+        "latency_p50_ms": 1.515983993158443,
+        "latency_p95_ms": 2.187012503782171,
+        "scoring_p50_ms": 0.00688849831931293
+      }
+    },
+    {
+      "dataset": "개발 질의 36개",
+      "method": "cross_encoder",
+      "metrics": {
+        "n": 36,
+        "answerable_n": 36,
+        "no_gold_n": 0,
+        "recall_at_1": 0.8055555555555556,
+        "recall_at_3": 1.0,
+        "mrr_at_5": 0.9027777777777778,
+        "candidate_recall": 1.0,
+        "no_gold_candidate_emission_rate": null,
+        "latency_p50_ms": 149.47292299984838,
+        "latency_p95_ms": 228.44463674846338,
+        "scoring_p50_ms": 147.9160105009214
+      }
+    },
+    {
+      "dataset": "개발 질의 36개",
+      "method": "cell_word",
+      "metrics": {
+        "n": 36,
+        "answerable_n": 36,
+        "no_gold_n": 0,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "candidate_recall": 1.0,
+        "no_gold_candidate_emission_rate": null,
+        "latency_p50_ms": 1.5205739946395624,
+        "latency_p95_ms": 2.192372252466157,
+        "scoring_p50_ms": 0.011464999261079356
+      }
+    },
+    {
+      "dataset": "2023년 별도 자료 첫 평가",
+      "method": "cell_hybrid",
+      "metrics": {
+        "n": 24,
+        "answerable_n": 14,
+        "no_gold_n": 10,
+        "recall_at_1": 0.5,
+        "recall_at_3": 0.8571428571428571,
+        "mrr_at_5": 0.7142857142857143,
+        "candidate_recall": 1.0,
+        "no_gold_candidate_emission_rate": 1.0,
+        "latency_p50_ms": 1.2429095004335977,
+        "latency_p95_ms": 1.601114245931967,
+        "scoring_p50_ms": 0.006554502760991454
+      }
+    },
+    {
+      "dataset": "2023년 별도 자료 첫 평가",
+      "method": "cross_encoder",
+      "metrics": {
+        "n": 24,
+        "answerable_n": 14,
+        "no_gold_n": 10,
+        "recall_at_1": 0.5,
+        "recall_at_3": 0.7857142857142857,
+        "mrr_at_5": 0.6964285714285714,
+        "candidate_recall": 1.0,
+        "no_gold_candidate_emission_rate": 1.0,
+        "latency_p50_ms": 128.1573739979649,
+        "latency_p95_ms": 170.12699915576377,
+        "scoring_p50_ms": 126.64130849952926
+      }
+    },
+    {
+      "dataset": "2023년 별도 자료 첫 평가",
+      "method": "cell_word",
+      "metrics": {
+        "n": 24,
+        "answerable_n": 14,
+        "no_gold_n": 10,
+        "recall_at_1": 0.42857142857142855,
+        "recall_at_3": 0.7857142857142857,
+        "mrr_at_5": 0.6428571428571429,
+        "candidate_recall": 1.0,
+        "no_gold_candidate_emission_rate": 1.0,
+        "latency_p50_ms": 1.2454620009521022,
+        "latency_p95_ms": 1.6044858526583992,
+        "scoring_p50_ms": 0.008937997336033732
+      }
+    },
+    {
+      "dataset": "2022년 별도 자료 첫 평가",
+      "method": "cell_hybrid",
+      "metrics": {
+        "n": 8,
+        "answerable_n": 6,
+        "no_gold_n": 2,
+        "recall_at_1": 0.6666666666666666,
+        "recall_at_3": 1.0,
+        "mrr_at_5": 0.8333333333333334,
+        "candidate_recall": 1.0,
+        "no_gold_candidate_emission_rate": 1.0,
+        "latency_p50_ms": 1.1889810011780355,
+        "latency_p95_ms": 1.7995255519053897,
+        "scoring_p50_ms": 0.005936002708040178
+      }
+    },
+    {
+      "dataset": "2022년 별도 자료 첫 평가",
+      "method": "cross_encoder",
+      "metrics": {
+        "n": 8,
+        "answerable_n": 6,
+        "no_gold_n": 2,
+        "recall_at_1": 0.8333333333333334,
+        "recall_at_3": 1.0,
+        "mrr_at_5": 0.9166666666666666,
+        "candidate_recall": 1.0,
+        "no_gold_candidate_emission_rate": 1.0,
+        "latency_p50_ms": 104.65781099992455,
+        "latency_p95_ms": 128.39743020012975,
+        "scoring_p50_ms": 103.17272400061483
+      }
+    },
+    {
+      "dataset": "2022년 별도 자료 첫 평가",
+      "method": "cell_word",
+      "metrics": {
+        "n": 8,
+        "answerable_n": 6,
+        "no_gold_n": 2,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "mrr_at_5": 1.0,
+        "candidate_recall": 1.0,
+        "no_gold_candidate_emission_rate": 1.0,
+        "latency_p50_ms": 1.1919095013581682,
+        "latency_p95_ms": 1.8028854494332334,
+        "scoring_p50_ms": 0.008750997949391603
+      }
+    }
+  ],
+  "explanation_audit": {
+    "recorded_count": 4,
+    "recorded_flagged": 2,
+    "synthetic_count": 19,
+    "synthetic_expectations_met": 19,
+    "semantic_accuracy": null,
+    "new_model_calls": 0
+  },
+  "mcp": {
+    "actual_stdio_checks": {
+      "passed": 8,
+      "total": 8
+    },
+    "direct_actual_stdio_calls": {
+      "passed": 5,
+      "total": 5
+    },
+    "mock_failure_injections": {
+      "passed": 4,
+      "total": 4
+    },
+    "mock_schema_injections": {
+      "passed": 10,
+      "total": 10
+    }
+  },
+  "limits": [
+    "공개 작업지는 삼성전자 2024 정본 192개를 유지합니다. 새 문서의 제품 등록·다중 기업 지원은 별도입니다.",
+    "새 문서 raw 평가는 실제 PDF 추출값을 사용하되 격리된 정본 등록을 거칩니다. fixture 단계는 준비된 정답 수치를 직접 주입합니다.",
+    "현대자동차 표 형식은 원문 파싱 미지원입니다. 첫 실패와 후속 회귀를 보존했습니다.",
+    "추가 정답은 같은 작업의 AI가 작성했으며 사람·전문가 검수는 없습니다.",
+    "리랭킹은 같은 후보 집합의 실제 신경망 점수입니다. 문맥 필터는 별개이며 후보 하나인 결과는 신경망 개선 근거가 아닙니다.",
+    "사용자 참여·고객 배포·본인 코드 검토는 미수행이며 빈 양식만 준비했습니다."
+  ]
+}

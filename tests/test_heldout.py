@@ -13,7 +13,7 @@ from quarterguard.search import SearchIndex
 
 class HeldoutHarnessTests(unittest.TestCase):
     def setUp(self):
-        self.freeze, self.sources, self.facts, self.cases = load_frozen(post_fix=True)
+        self.freeze, self.sources, self.facts, self.cases = load_frozen(post_fix=True, check_production=False)
         self.manifest = {s['id']: s for s in self.sources}
 
     def test_gold_is_frozen_and_new_documents_are_separate(self):
@@ -67,10 +67,13 @@ class HeldoutHarnessTests(unittest.TestCase):
 
     def test_natural_query_failure_is_visible(self):
         case = next(c for c in self.cases if c['id'] == 'retrieve-06')
-        result = downstream(case, self.facts, SearchIndex(list(self.facts.values())))
-        self.assertIsNone(result['rank'])
-        self.assertEqual(result['retrieved'], [])
-        self.assertFalse(result['passed'])
+        baseline=json.loads((DATA/'first-run.json').read_text())
+        original=next(r for r in baseline['results'] if r['id']==case['id'])
+        self.assertIsNone(original['rank'])
+        self.assertFalse(original['passed'])
+        current=SearchIndex(list(self.facts.values())).search_with_diagnostics(case['query'],5)
+        self.assertEqual(current['status'],'needs_clarification')
+        self.assertFalse(current['trusted_query'])
 
 
 if __name__ == '__main__':

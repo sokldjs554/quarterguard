@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-10-31T12:29:25.431926+00:00",
+  "author": "same-task AI worker; not human or independent expert",
+  "human_reviewed": false,
+  "baseline_commit": "39b59bd",
+  "pipeline_run_before_freeze": false,
+  "selection": "Final-round official 2022Q3 new source document. Its 2022 current values overlap prior-round2023 comparative cells; its 2021 comparative values are new to both earlier datasets. Six positive questions include four targeting2021.",
+  "gold_method": "Literal table-cell transcription and ordered header reading from official PDF page37. No production parser/search results for this document before freeze.",
+  "disclosure": "Prior-round2023 failures were disclosed; comma-header and company/half-year language fixes existed before this final freeze. Final source values/questions were not shared with fix workers.",
+  "post_freeze_tuning_allowed": false,
+  "files": {
+    "data/v2-final/calculations.json": "5f479300e5f474be8cfd5ab6310b73e18d447a8177e475817705f9609e1891c3",
+    "data/v2-final/facts.json": "2ab83d69710d15f8454b9721a7ecc22989d0098a66af0d88b80ef7d55f7b2d78",
+    "data/v2-final/retrieval_gold.json": "88369807673b520e51bdc0ac132c03ee9da822af74a2cfa631d0d99a4575ebaa",
+    "data/v2-final/source_cells.json": "d894ebf8b574e75ebfeb3e453220872ddd4104987b85e162848cb0ad2cec309b",
+    "data/v2-final/sources.json": "d0654f8022f15effd7858b4def44d0644391e76146e2ce42050cee846bf3748b"
+  }
+}

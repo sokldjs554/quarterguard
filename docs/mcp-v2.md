@@ -1,0 +1,21 @@
+# MCP workflow audit v2
+
+The orchestrator still executes a bounded deterministic workflow: `search_documents`, then `get_fact` for each unambiguous result, then `verify_comparison` or `reconcile_quarter`. An empty search stops the workflow. No model planner, paid model call, or external provider request is involved.
+
+The audit found that a tool attempt was appended to the trace only after `call_tool` returned. A timeout, transport exception, or invalid JSON response therefore lost the attempted tool name, arguments, and latency. The fix appends an unsuccessful pending step before awaiting the tool, records a sanitized failure code, and finalizes latency in `finally`. Only a decoded successful response sets `success=true`. Failure returns a fresh `needs_review` result with empty evidence, preventing a completed or partial earlier result from being returned as success.
+
+`_WORKFLOW_TIMEOUT_SECONDS` remains 25 in production. Tests patch this internal constant to 0.03 seconds to exercise cancellation without a long delay. Failures use `TOOL_TIMEOUT`, `TOOL_TRANSPORT_ERROR`, `TOOL_ERROR`, or `INVALID_TOOL_RESPONSE`; raw exception messages are not copied into public traces. A failure before a tool call begins can have an empty trace, because no tool was attempted.
+
+[`artifacts/mcp-v2.json`](../artifacts/mcp-v2.json) preserves the eight actual stdio MCP case traces before and after the fix. Each run is checked against the existing case status, expected value or issue, full evidence, and tool order. The seven cases with evidence proceed through the expected calculation tool; the eighth stops at the empty search. A successful MCP workflow can correctly produce a financial `needs_review` result.
+
+Five additional **real stdio MCP calls** check a missing fact ID, invalid comparison mode, mismatched periods, mismatched scopes, and two USD convenience-translation facts. Missing IDs and invalid modes return MCP error responses. Financial context mismatches return successful MCP responses containing `needs_review` and the relevant issue. These are different failure layers.
+
+Four **injected tests, with no real transport or provider**, simulate a transport exception, timeout, MCP error response, and invalid JSON after a successful search. They are separately labeled in the artifact; they do not demonstrate an observed provider outage. The synthetic exception includes a secret-like sentinel, and the test verifies that it is not exposed. The failed `get_fact` step and its input remain visible with latency; no successful financial answer or stale evidence is returned.
+
+Focused checks: `python -m unittest tests.test_mcp_v2 tests.test_mcp`. They need local subprocess/socket capability for the actual MCP transport. No full evaluation writer is called and no earlier artifact is replaced. Initial direct-wire tests incorrectly expected invalid mode to be a financial result and required `structuredContent` when the server returned valid JSON text content. Observing the real protocol corrected those test assumptions without changing the server's contract. Human review is not claimed.
+
+## Independent review correction
+
+Review then found that successful JSON decoding alone was insufficient: an empty `get_fact` object was accepted, and `{"status":"verified"}` from a comparison could raise an uncaught missing-`issues` error. Six schema-injection subcases reproduced these failures before the correction. Tool responses now validate before a trace step can succeed: search requires hit-ID lists, facts must equal their canonical public records, and calculation results require consistent status/issues, ordered canonical evidence, the expected value fields, finite numeric strings, and the relevant calculation metadata. A final result-shape check also prevents malformed results from escaping the failure response path.
+
+[`artifacts/mcp-v2-reviewed.json`](../artifacts/mcp-v2-reviewed.json) records the post-review real-wire replay and explicitly mocked malformed-payload checks with current orchestrator/server/search hashes. The original `mcp-v2.json` remains unchanged and represents the earlier implementation. These are deterministic contract checks, not a claim that arbitrary tool output or prose has been semantically verified.

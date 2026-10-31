@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-10-31T12:23:14.398410+00:00",
+  "author": "independent AI worker in same task; not human or independent expert curation",
+  "human_reviewed": false,
+  "baseline_commit": "39b59bd",
+  "pipeline_run_before_freeze": false,
+  "inspected_pipeline": "Only original code at 39b59bd for interface/support constraints; no current changes or query outcomes inspected",
+  "selection": "Official 2023 Samsung H1/Q3 reporting documents and Hyundai Q3 2023 report. 2022 comparative columns are explicitly labeled. Samsung 2023 comparisons also appear in original 2024 documents: new source documents/reporting periods, not wholly unseen financial values.",
+  "gold_method": "AI literal table-cell transcription from official PDF text and header reading; no production parser/search used. Canonical metric row aliases explicitly mapped in source_cells.json.",
+  "post_freeze_tuning_allowed": false,
+  "files": {
+    "data/v2-blind/calculations.json": "c7f9f70b8b1cabd3cde91177555f255f213e4e615fd080bf45250bae233845c2",
+    "data/v2-blind/facts.json": "be9141767c17b84f1dafb1d55586a4e47615bad3de7a783a4dec86bd890c3138",
+    "data/v2-blind/retrieval_gold.json": "ef7991da0eab2e79dce96c6de17a4e41964c2121c23e94d6f7eff357100a98a2",
+    "data/v2-blind/source_cells.json": "ce0f8b5211219f207923c42e248e2c8ebd368d3af9debb6c655437b347d13fc8",
+    "data/v2-blind/sources.json": "73a7256a30e0b7088cb191f11b88d854bd5ce2c9e1f2ea7cfa2fb1c24a00be95"
+  }
+}

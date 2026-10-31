@@ -1,0 +1,105 @@
+{
+  "schema_version": 2,
+  "evaluation_split": "post_disclosure_development",
+  "human_reviewed": false,
+  "reason": "First independent-worker evaluation disclosed the comma units separator in Samsung 2023. This correction is explicitly after that disclosure.",
+  "first_blind_raw_result_as_reported_by_root": "0/5 accepted; original independent first run retained separately",
+  "preserved_prior_artifact": {
+    "path": "artifacts/parser-development-v2.json",
+    "sha256": "2f855fef2d70ed197c4cb0b12c56f3ff238d09551ee888eafa4a1f7786cf901c"
+  },
+  "parser_prior_sha256": "0b38ba3062e2f649eb4e0ff6d64529aecacc546de57aed9ea3c909d5479663e8",
+  "parser_followup_sha256": "845e6862a2a5852091fa33445e3f3faf98a3a4f8661a6a90ac5b4149f4254904",
+  "tests": {
+    "command": "python -m unittest tests.test_parser_v2 tests.test_core tests.test_review_regressions",
+    "passed": 36,
+    "failures": 0,
+    "red_phase": "test_post_disclosure_comma_units_header_preserves_units failed with UNSUPPORTED_LAYOUT before separator change"
+  },
+  "raw_development_comparisons": [
+    {
+      "dataset": "data",
+      "pages": [
+        {
+          "document_id": "s24q3",
+          "scope": "CFS",
+          "page": 34,
+          "fact_count": 48,
+          "pdf_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f"
+        },
+        {
+          "document_id": "s24q3",
+          "scope": "OFS",
+          "page": 89,
+          "fact_count": 48,
+          "pdf_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f"
+        },
+        {
+          "document_id": "s24q2",
+          "scope": "CFS",
+          "page": 48,
+          "fact_count": 48,
+          "pdf_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4"
+        },
+        {
+          "document_id": "s24q2",
+          "scope": "OFS",
+          "page": 104,
+          "fact_count": 48,
+          "pdf_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4"
+        }
+      ],
+      "actual_facts": 192,
+      "matched_gold": 192,
+      "declared_gold": 192,
+      "failures": [],
+      "exact_public_record_equality": true
+    },
+    {
+      "dataset": "data/heldout",
+      "pages": [
+        {
+          "document_id": "s25q2",
+          "scope": "CFS",
+          "page": 44,
+          "fact_count": 48,
+          "pdf_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218"
+        },
+        {
+          "document_id": "s25q2",
+          "scope": "OFS",
+          "page": 96,
+          "fact_count": 48,
+          "pdf_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218"
+        },
+        {
+          "document_id": "s25q3",
+          "scope": "CFS",
+          "page": 34,
+          "fact_count": 48,
+          "pdf_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a"
+        },
+        {
+          "document_id": "s25q3",
+          "scope": "OFS",
+          "page": 89,
+          "fact_count": 48,
+          "pdf_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a"
+        }
+      ],
+      "actual_facts": 192,
+      "matched_gold": 64,
+      "declared_gold": 64,
+      "failures": [],
+      "exact_public_record_equality": null
+    }
+  ],
+  "unchanged_limitations": [
+    "Four-column Hyundai layout unsupported.",
+    "Q1/year-end, OCR and ambiguous numeric layouts unsupported.",
+    "No newly parsed facts registered in production.",
+    "Known source net-profit inconsistency is preserved."
+  ],
+  "preserved_data_unchanged": true,
+  "new_blind_followup_inputs_accessed": false
+}

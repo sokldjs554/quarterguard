@@ -34,7 +34,7 @@ def retrieval(dense=False):
     'normalization':'Korean controlled vocabulary → English; no multilingual claim', 'model_file_hashes':{str(p.relative_to(ROOT/'work/models')):hashlib.sha256(p.read_bytes()).hexdigest() for p in (ROOT/'work/models').rglob('*.onnx')}}
  return results
 
-async def evaluate_cases():
+async def evaluate_cases(prepared_path=None):
  runs=[];checks=[]
  for c in cases():
   run=await run_case(c['id']);runs.append(run);r=run['result']
@@ -43,7 +43,7 @@ async def evaluate_cases():
    'issue_correct':c['expected_issue'] in r.get('issues',[]) if 'expected_issue' in c else None,
    'source_valid':r.get('evidence',[])==c['expected_evidence'],
    'workflow_success':run.get('workflow_success',False)})
- (ROOT/'artifacts/prepared.json').write_text(json.dumps({r['case_id']:r|{'execution_mode':'prepared_replay'} for r in runs},ensure_ascii=False,indent=2)+'\n')
+ (prepared_path or ROOT/'artifacts/prepared-v2.json').write_text(json.dumps({r['case_id']:r|{'execution_mode':'prepared_replay'} for r in runs},ensure_ascii=False,indent=2)+'\n')
  for check in checks:check['case_correct']=check['workflow_success'] and check['status_correct'] and check['value_correct'] is not False and check['issue_correct'] is not False and check['source_valid']
  total_tools=sum(len(r['trace']) for r in runs)
  return {'checks':checks,'case_accuracy':sum(c['case_correct'] for c in checks)/len(checks),'workflow_success_rate':sum(c['workflow_success'] for c in checks)/len(checks),
@@ -55,8 +55,12 @@ async def evaluate_cases():
   'model_calls':0,'provider_api_cost_usd':0,'cost_scope':'Paid model API only, excludes hosting/CPU/download costs'}
 
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('--dense',action='store_true');p.add_argument('--cases-only',action='store_true');a=p.parse_args()
- path=ROOT/'artifacts/evaluation.json';out=json.loads(path.read_text()) if a.cases_only and path.exists() else {}
+ p=argparse.ArgumentParser();p.add_argument('--dense',action='store_true');p.add_argument('--cases-only',action='store_true');p.add_argument('--output',type=__import__('pathlib').Path,default=ROOT/'artifacts/evaluation-current-v2.json');a=p.parse_args()
+ path=a.output
+ if path.resolve()==(ROOT/'artifacts/evaluation.json').resolve():raise ValueError('PRESERVED_HISTORICAL_ARTIFACT')
+ old=ROOT/'artifacts/evaluation.json'
+ out=json.loads(old.read_text()) if a.cases_only and old.exists() else {}
+ if a.cases_only:out['retrieval_note']='Historical retrieval scores retained from artifacts/evaluation.json; current comparison is in ranking-v2 reports.'
  out.update({'created_at':datetime.now(timezone.utc).isoformat(),'python':platform.python_version(),'platform':platform.platform(),
   'documents':2,'facts':192,'human_reviewed':False,'evaluation_type':'template regression; not held-out generalization',
   'corpus_sha256':hashlib.sha256((ROOT/'data/facts.json').read_bytes()).hexdigest(),'gold_sha256':hashlib.sha256((ROOT/'data/retrieval_gold.json').read_bytes()).hexdigest()})

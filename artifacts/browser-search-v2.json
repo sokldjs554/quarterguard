@@ -1,0 +1,30 @@
+{
+  "transport": "all APIs mocked; provider POSTs blocked",
+  "assets": "local files via browser routing",
+  "base_url": "http://127.0.0.1:8007",
+  "checks": [
+    "korean_english_complete_conditions_candidates_not_answers",
+    "missing_kind_currency_unit_explained_candidates_retained",
+    "candidate_explicitly_selected_for_existing_worksheet_calculation",
+    "conflicts_unknown_company_currency_clarify_without_hits",
+    "complete_unavailable_context_has_no_results",
+    "new_query_clears_old_hits_and_stale_success_cannot_overwrite",
+    "network_failure_clears_stale_candidates_and_diagnostics",
+    "stale_failure_cannot_clear_new_candidates",
+    "missing_diagnostic_contract_fails_closed",
+    "mobile_diagnostic_panel_no_body_overflow"
+  ],
+  "page_errors": [],
+  "post_paths": [
+    "/api/worksheet",
+    "/api/worksheet"
+  ],
+  "blocked_external_requests": [],
+  "paid_provider_calls": 0,
+  "success": true,
+  "source_sha256": {
+    "web/app.js": "2527a4aab61691651bb35fd2db70e5900379fbd946fa626335569957e7f82a65",
+    "web/index.html": "0594c4050bea97033df316feefa8593f932c6d16eee967f10e2580b98cc99d5a",
+    "quarterguard/query.py": "22799afcf36ffb935aa4e772bfb507f9899e36e5b73264082a02bf5da310acf6"
+  }
+}
