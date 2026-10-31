@@ -60,7 +60,7 @@ MCP 실제 stdio 8개 흐름과 직접 잘못된 입력 5개를 확인했다. �
 
 ## 8. 테스트·배포·실제 호출
 
-로컬 Python 141개 통과, Node 메모/CSV 테스트 통과, 이전 정본·평가 artifact 일관성 통과. Chromium PC1440×1000/모바일 크기390×844에서 기존 흐름37, provider 모의7, 검색 UI 모의10, 실제 백엔드 검색·새 집계10개를 통과했다. 물리 휴대폰 검사나 발행사 PDF 브라우저 렌더링 성공을 주장하지 않는다. [로컬 증거](../artifacts/validation-v1.4-local.json), [화면](images/desktop-v1.4.png).
+로컬 Python 141개 통과, Node 메모/CSV 테스트 통과, 이전 정본·평가 artifact 일관성 통과. Chromium PC1440×1000/모바일 크기390×844에서 기존 흐름37, provider 모의7, 검색 UI 모의10, 실제 백엔드 검색·새 집계10개를 통과했다. 캡처의 `d4ba1e3`는 코드 구현 커밋이며, 이후 문서·증거 추가 커밋과 구분한다. `*-v1.4-verified.png`가 표시 오류 수정 후 캡처다. 최초 캡처도 보존했으며 `evaluation-v1.4.png`의 `undefined/8`은 당시 집계 필드 연결 오류로, 현재 코드와 검사는 8/8을 확인한다. 물리 휴대폰 검사나 발행사 PDF 브라우저 렌더링 성공을 주장하지 않는다. [로컬 증거](../artifacts/validation-v1.4-local.json), [화면](images/desktop-v1.4-verified.png).
 
 최종 커밋은 파일 자체에 자기 SHA를 기록하는 순환을 피하기 위해 [v1.4.0 릴리스](https://github.com/sokldjs554/quarterguard/releases/tag/v1.4.0)에 GitHub main·Render 배포 ID/커밋·공개 `/health`를 함께 기록한다. 배포 뒤 직접 HTTPS 시도와 TLS 검증 중계의 PC/모바일 검사, 실제 DART 요청/캐시, 정적 파일 해시도 그 릴리스의 JSON 근거로 제공한다. 직접 HTTPS가 인증서 신뢰 문제로 실패하면 성공으로 바꾸어 표현하지 않는다.
 
