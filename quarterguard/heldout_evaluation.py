@@ -26,9 +26,10 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def load_frozen(post_fix=False):
+def load_frozen(post_fix=False, *, check_production=True):
     freeze = json.loads((DATA / 'freeze.json').read_text())
-    for name, expected in (freeze['files'] | freeze['production_files']).items():
+    checked=freeze['files'] | (freeze['production_files'] if check_production else {})
+    for name, expected in checked.items():
         if digest(ROOT / name) != expected and not (post_fix and name == 'quarterguard/core.py'):
             raise ValueError(f'FROZEN_INPUT_CHANGED: {name}')
     sources = json.loads((DATA / 'sources.json').read_text())

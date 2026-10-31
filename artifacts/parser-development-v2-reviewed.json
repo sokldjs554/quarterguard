@@ -1,0 +1,105 @@
+{
+  "schema_version": 2,
+  "evaluation_split": "post_independent_review_development_regression",
+  "reason": "Independent review reproduced modified row-label suffixes accepted as canonical metrics. Ten synthetic subcases failed before row-boundary validation.",
+  "human_reviewed": false,
+  "prior_artifacts_sha256": {
+    "artifacts/parser-development-v2-followup.json": "6985cf9fe139ef54484bc7db79d2e4981b934083c16fbd26654ac2d7782bbc4e",
+    "artifacts/parser-development-v2.json": "2f855fef2d70ed197c4cb0b12c56f3ff238d09551ee888eafa4a1f7786cf901c"
+  },
+  "parser_sha256": "fff257ce462655fb6632af6752e9958a36d889fecacbe7b3f1df04144641955b",
+  "row_boundary_rule": "Canonical row starts table or follows a validated eight-cell amount row with optional Notes; modified labels and lone numeric qualifiers reject, including flattened/wrapped input.",
+  "tests": {
+    "command": "python -m unittest tests.test_parser_v2 tests.test_core tests.test_review_regressions",
+    "passed": 38,
+    "failures": 0
+  },
+  "raw_development_comparisons": [
+    {
+      "dataset": "data",
+      "pages": [
+        {
+          "document_id": "s24q3",
+          "scope": "CFS",
+          "page": 34,
+          "pdf_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+          "fact_count": 48,
+          "error": null
+        },
+        {
+          "document_id": "s24q3",
+          "scope": "OFS",
+          "page": 89,
+          "pdf_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+          "fact_count": 48,
+          "error": null
+        },
+        {
+          "document_id": "s24q2",
+          "scope": "CFS",
+          "page": 48,
+          "pdf_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+          "fact_count": 48,
+          "error": null
+        },
+        {
+          "document_id": "s24q2",
+          "scope": "OFS",
+          "page": 104,
+          "pdf_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+          "fact_count": 48,
+          "error": null
+        }
+      ],
+      "actual_facts": 192,
+      "matched_gold": 192,
+      "declared_gold": 192,
+      "failures": [],
+      "exact_public_record_equality": true
+    },
+    {
+      "dataset": "data/heldout",
+      "pages": [
+        {
+          "document_id": "s25q2",
+          "scope": "CFS",
+          "page": 44,
+          "pdf_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+          "fact_count": 48,
+          "error": null
+        },
+        {
+          "document_id": "s25q2",
+          "scope": "OFS",
+          "page": 96,
+          "pdf_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+          "fact_count": 48,
+          "error": null
+        },
+        {
+          "document_id": "s25q3",
+          "scope": "CFS",
+          "page": 34,
+          "pdf_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+          "fact_count": 48,
+          "error": null
+        },
+        {
+          "document_id": "s25q3",
+          "scope": "OFS",
+          "page": 89,
+          "pdf_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+          "fact_count": 48,
+          "error": null
+        }
+      ],
+      "actual_facts": 192,
+      "matched_gold": 64,
+      "declared_gold": 64,
+      "failures": [],
+      "exact_public_record_equality": null
+    }
+  ],
+  "new_blind_inputs_accessed": false,
+  "preserved_data_unchanged": true
+}

@@ -45,14 +45,14 @@
 </section>
 <section id="search" class="view" hidden>
  <div class="title-line"><div><h1>근거 검색</h1></div><span class="page-context">192개 수치 · 기간과 범위 보존</span></div>
- <form id="search-form"><label for="query">기업 · 연도 · 분기 · 범위 · 항목 · 기간 · 통화</label><div class="search-input"><input id="query" maxlength="500" value="삼성전자 2024 3분기 연결 매출액 3개월 KRW"><button class="primary">근거 검색</button></div><p>명시적 조건 검색 · 삼성전자 / 2023·2024 / Q2·Q3 / 연결·별도 / 6개 손익 항목. 미지원 조건은 결과 없음으로 표시합니다.</p></form>
- <div id="search-results" aria-live="polite"><div class="empty">검색한 수치를 대조 작업지의 기준 자료로 선택할 수 있습니다.</div></div>
+ <form id="search-form"><label for="query">기업 · 연도 · 분기 · 범위 · 항목 · 기간 · 통화 · 표시 단위</label><div class="search-input"><input id="query" maxlength="500" value="삼성전자 2024 3분기 연결 매출액 3개월 KRW 백만원"><button class="primary">근거 검색</button></div><p>한국어·영어로 검색 조건을 입력하세요. 빠진 조건이나 해석하지 못한 표현을 안내합니다. 현재 작업지의 수집 범위: 삼성전자 / 2023·2024 / Q2·Q3 / 연결·별도 / 6개 손익 항목.</p></form>
+ <div id="search-results" aria-live="polite"><div class="empty">검색 결과는 검증 전 후보입니다. 후보를 직접 선택해 작업지에서 대조할 수 있습니다.</div></div>
  <section class="document-index"><h2>수집 문서</h2><div id="source-index"></div></section>
 </section>
 <section id="review" class="view" hidden>
  <div class="title-line"><div><h1>검증 기록</h1></div><span class="page-context">측정 산출물 기반</span></div>
- <p class="scope-notice">1개 기업 · 문서 2건 · 템플릿 질의 36개 · 업무 사례 8개. 개발용 회귀 평가이며, 사람 검수·독립 보류셋·일반화 성능을 뜻하지 않습니다.</p>
- <div id="evaluation-content"></div>
+ <p class="scope-notice">현재 공개 작업지: 삼성전자 2024 문서 2건 · 정본 192개. 아래 추가 문서 평가는 작업지 지원 범위와 구분하며, 정답의 사람 검수는 없습니다.</p>
+ <section id="current-evaluation-content" class="review-section" aria-label="현재 보완 결과"></section><h2>이전 개발 회귀 기록 · 보존본</h2><div id="evaluation-content"></div>
  <section class="regression-section"><div class="section-bar"><h2>오류 유형별 재현</h2><span>준비 재생과 현재 실행 구분</span></div><div class="regression-controls"><label for="case-select">검증 사례 <select id="case-select"></select></label><button id="prepared-btn" class="secondary">저장 기록</button><button id="case-run-btn" class="primary">현재 재실행</button></div><div id="case-output" aria-live="polite">사례 선택 후 저장된 실행 기록 확인</div></section>
  <section id="heldout-content" class="review-section" aria-label="추가 문서 평가"></section>
  <section id="provider-content" class="review-section" aria-label="외부 API 직접 확인"></section>

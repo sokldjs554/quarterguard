@@ -1,0 +1,55 @@
+[
+  {
+    "id": "s23q2",
+    "company": "samsung",
+    "title": "Samsung Electronics 2023 Q2 interim report",
+    "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2023_Half_Interim_Report.pdf",
+    "quarter": 2,
+    "report_end": "2023-06-30",
+    "pages": 303,
+    "statement_pages": {
+      "CFS": 47,
+      "OFS": 103
+    },
+    "sha256": "31917cd249b942ff228678daf1e8aa945c80e4818406ef917b01aa7158c3adab",
+    "cache_filename": "s23q2.pdf",
+    "accessed": "2026-10-31",
+    "distribution": "Atomic facts and short table-header/row locators only; full PDF/text ignored",
+    "official_listing": "https://www.samsung.com/global/ir/reports-disclosures/business-report/"
+  },
+  {
+    "id": "s23q3",
+    "company": "samsung",
+    "title": "Samsung Electronics 2023 Q3 interim report",
+    "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2023_3Q_Interim_Report.pdf",
+    "quarter": 3,
+    "report_end": "2023-09-30",
+    "pages": 205,
+    "statement_pages": {
+      "CFS": 38,
+      "OFS": 93
+    },
+    "sha256": "f4442f7374243d590e39a6461399061cc8c9abbcfb0782427179996ccaf93ca1",
+    "cache_filename": "s23q3.pdf",
+    "accessed": "2026-10-31",
+    "distribution": "Atomic facts and short table-header/row locators only; full PDF/text ignored",
+    "official_listing": "https://www.samsung.com/global/ir/reports-disclosures/business-report/"
+  },
+  {
+    "id": "h23q3",
+    "company": "hyundai",
+    "title": "Hyundai Motor Company 2023 Q3 interim report",
+    "url": "https://www.hyundai.com/content/dam/hyundai/ww/en/images/company/investor-relations/financial-Information/report-en/2023/2023-q3-consolidated-audit-report-en.pdf",
+    "quarter": 3,
+    "report_end": "2023-09-30",
+    "pages": 68,
+    "statement_pages": {
+      "CFS": 8
+    },
+    "sha256": "5ac749a9810e566bc92e23234137c9bc7ab60c734f7ead2badc6b73f9ef38121",
+    "cache_filename": "h23q3.pdf",
+    "accessed": "2026-10-31",
+    "distribution": "Atomic facts and short table-header/row locators only; full PDF/text ignored",
+    "official_listing": "https://www.hyundai.com/worldwide/en/company/ir/financial-information/quarterly-earnings"
+  }
+]

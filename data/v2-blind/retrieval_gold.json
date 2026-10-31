@@ -1,0 +1,261 @@
+[
+  {
+    "id": "v2-q01",
+    "query": "삼성전자 2023년 3분기 당분기 연결 원화 백만원 매출액",
+    "gold_fact_ids": [
+      "s23q3-CFS-revenue-2023-q-KRW"
+    ],
+    "expected_clarification": false,
+    "expected_answerable": true,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false,
+    "gold_fact_id": "s23q3-CFS-revenue-2023-q-KRW"
+  },
+  {
+    "id": "v2-q02",
+    "query": "Samsung Electronics 2023 Q3 quarter consolidated KRW million operating profit",
+    "gold_fact_ids": [
+      "s23q3-CFS-operating_profit-2023-q-KRW"
+    ],
+    "expected_clarification": false,
+    "expected_answerable": true,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false,
+    "gold_fact_id": "s23q3-CFS-operating_profit-2023-q-KRW"
+  },
+  {
+    "id": "v2-q03",
+    "query": "삼성전자 2023년 3분기 누적 별도 원화 백만원 매출액",
+    "gold_fact_ids": [
+      "s23q3-OFS-revenue-2023-ytd-KRW"
+    ],
+    "expected_clarification": false,
+    "expected_answerable": true,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false,
+    "gold_fact_id": "s23q3-OFS-revenue-2023-ytd-KRW"
+  },
+  {
+    "id": "v2-q04",
+    "query": "Samsung 2023 Q3 YTD separate KRW million net profit",
+    "gold_fact_ids": [
+      "s23q3-OFS-net_profit-2023-ytd-KRW"
+    ],
+    "expected_clarification": false,
+    "expected_answerable": true,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false,
+    "gold_fact_id": "s23q3-OFS-net_profit-2023-ytd-KRW"
+  },
+  {
+    "id": "v2-q05",
+    "query": "삼성전자 2023년 2분기 당분기 연결 원화 백만원 매출총이익",
+    "gold_fact_ids": [
+      "s23q2-CFS-gross_profit-2023-q-KRW"
+    ],
+    "expected_clarification": false,
+    "expected_answerable": true,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false,
+    "gold_fact_id": "s23q2-CFS-gross_profit-2023-q-KRW"
+  },
+  {
+    "id": "v2-q06",
+    "query": "Samsung 2023 Q2 quarter separate KRW million operating profit",
+    "gold_fact_ids": [
+      "s23q2-OFS-operating_profit-2023-q-KRW"
+    ],
+    "expected_clarification": false,
+    "expected_answerable": true,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false,
+    "gold_fact_id": "s23q2-OFS-operating_profit-2023-q-KRW"
+  },
+  {
+    "id": "v2-q07",
+    "query": "삼성전자 2022년 3분기 당분기 연결 원화 백만원 당기순이익",
+    "gold_fact_ids": [
+      "s23q3-CFS-net_profit-2022-q-KRW"
+    ],
+    "expected_clarification": false,
+    "expected_answerable": true,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false,
+    "gold_fact_id": "s23q3-CFS-net_profit-2022-q-KRW"
+  },
+  {
+    "id": "v2-q08",
+    "query": "Samsung 2022 Q2 YTD consolidated KRW million revenue",
+    "gold_fact_ids": [
+      "s23q2-CFS-revenue-2022-ytd-KRW"
+    ],
+    "expected_clarification": false,
+    "expected_answerable": true,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false,
+    "gold_fact_id": "s23q2-CFS-revenue-2022-ytd-KRW"
+  },
+  {
+    "id": "v2-q09",
+    "query": "삼성전자 2023년 상반기 누적 연결 원화 백만원 영업이익",
+    "gold_fact_ids": [
+      "s23q2-CFS-operating_profit-2023-ytd-KRW"
+    ],
+    "expected_clarification": false,
+    "expected_answerable": true,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false,
+    "gold_fact_id": "s23q2-CFS-operating_profit-2023-ytd-KRW"
+  },
+  {
+    "id": "v2-q10",
+    "query": "Samsung 2023 Q3 quarter OFS KRW million gross profit",
+    "gold_fact_ids": [
+      "s23q3-OFS-gross_profit-2023-q-KRW"
+    ],
+    "expected_clarification": false,
+    "expected_answerable": true,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false,
+    "gold_fact_id": "s23q3-OFS-gross_profit-2023-q-KRW"
+  },
+  {
+    "id": "v2-q11",
+    "query": "현대자동차 2023년 3분기 당분기 연결 원화 백만원 매출액",
+    "gold_fact_ids": [
+      "h23q3-CFS-revenue-2023-q-KRW"
+    ],
+    "expected_clarification": false,
+    "expected_answerable": true,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false,
+    "gold_fact_id": "h23q3-CFS-revenue-2023-q-KRW"
+  },
+  {
+    "id": "v2-q12",
+    "query": "Hyundai Motor 2023 Q3 YTD consolidated KRW million operating profit",
+    "gold_fact_ids": [
+      "h23q3-CFS-operating_profit-2023-ytd-KRW"
+    ],
+    "expected_clarification": false,
+    "expected_answerable": true,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false,
+    "gold_fact_id": "h23q3-CFS-operating_profit-2023-ytd-KRW"
+  },
+  {
+    "id": "v2-q13",
+    "query": "현대자동차 2022년 3분기 당분기 연결 원화 백만원 당기순이익",
+    "gold_fact_ids": [
+      "h23q3-CFS-net_profit-2022-q-KRW"
+    ],
+    "expected_clarification": false,
+    "expected_answerable": true,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false,
+    "gold_fact_id": "h23q3-CFS-net_profit-2022-q-KRW"
+  },
+  {
+    "id": "v2-q14",
+    "query": "Hyundai 2023 Q3 quarter consolidated KRW million gross profit",
+    "gold_fact_ids": [
+      "h23q3-CFS-gross_profit-2023-q-KRW"
+    ],
+    "expected_clarification": false,
+    "expected_answerable": true,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false,
+    "gold_fact_id": "h23q3-CFS-gross_profit-2023-q-KRW"
+  },
+  {
+    "id": "v2-q15",
+    "query": "삼성전자 2023년 3분기 매출액",
+    "gold_fact_ids": [],
+    "expected_clarification": true,
+    "expected_answerable": false,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false
+  },
+  {
+    "id": "v2-q16",
+    "query": "Samsung 2023 Q3 quarter revenue KRW million",
+    "gold_fact_ids": [],
+    "expected_clarification": true,
+    "expected_answerable": false,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false
+  },
+  {
+    "id": "v2-q17",
+    "query": "삼성전자 2023년 3분기 당분기 연결 별도 원화 백만원 영업이익",
+    "gold_fact_ids": [],
+    "expected_clarification": true,
+    "expected_answerable": false,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false
+  },
+  {
+    "id": "v2-q18",
+    "query": "Samsung 2023 2022 Q3 quarter consolidated KRW million revenue",
+    "gold_fact_ids": [],
+    "expected_clarification": true,
+    "expected_answerable": false,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false
+  },
+  {
+    "id": "v2-q19",
+    "query": "삼성전자 2023년 2분기 3분기 당분기 연결 원화 백만원 매출액",
+    "gold_fact_ids": [],
+    "expected_clarification": true,
+    "expected_answerable": false,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false
+  },
+  {
+    "id": "v2-q20",
+    "query": "Samsung 2023 Q3 quarter YTD consolidated KRW million net profit",
+    "gold_fact_ids": [],
+    "expected_clarification": true,
+    "expected_answerable": false,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false
+  },
+  {
+    "id": "v2-q21",
+    "query": "Samsung 2023 Q3 quarter consolidated EUR million revenue",
+    "gold_fact_ids": [],
+    "expected_clarification": true,
+    "expected_answerable": false,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false
+  },
+  {
+    "id": "v2-q22",
+    "query": "삼성전자 2023년 3분기 당분기 연결 원화 억원 매출액",
+    "gold_fact_ids": [],
+    "expected_clarification": false,
+    "expected_answerable": false,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false,
+    "expected_reason": "No registered source fact has requested 100000000 scale; no silent scale substitution."
+  },
+  {
+    "id": "v2-q23",
+    "query": "Samsung 2023 Q3 quarter consolidated KRW million revenue operating profit",
+    "gold_fact_ids": [],
+    "expected_clarification": true,
+    "expected_answerable": false,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false
+  },
+  {
+    "id": "v2-q24",
+    "query": "Samsung 2023 Q3 quarter not consolidated KRW million revenue",
+    "gold_fact_ids": [],
+    "expected_clarification": true,
+    "expected_answerable": false,
+    "query_author": "independent same-task AI worker",
+    "human_reviewed": false
+  }
+]

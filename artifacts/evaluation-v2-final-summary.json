@@ -1,0 +1,195 @@
+{
+  "created_at": "2026-10-31T12:30:42.711165+00:00",
+  "human_reviewed": false,
+  "model_calls": 0,
+  "provider_api_cost_usd": 0,
+  "observations": {
+    "artifacts/evaluation-v2-baseline.json": "5faf83ccf551139166ada4fd420760fc3dd0f8cc3f7adcf16c4a0a2c08925af6",
+    "artifacts/evaluation-v2-first-post-fix.json": "3f382cee637e97f6ce66a03512edfe4681a7db52427aa74bd6c6bf3e50adb1e2",
+    "artifacts/evaluation-v2-post-disclosure-regression.json": "3e5a234324745fc2df6aa6ac4ad6362e37ff860013d4fa20bcdbb394b5d14961",
+    "artifacts/evaluation-v2-final-baseline.json": "218738540fe7b80e84836a04f1e9214c09424ef51d9da7e47a908bca60269a01",
+    "artifacts/evaluation-v2-final-first.json": "59e6a446a34f6bc2fb35b87970d0a3fd1d56d343d812a021ca3c5197117c3de3"
+  },
+  "freeze_sha256": {
+    "initial": "0c34675a0a408ee92f4e4bccc8d2552eb929f145c0aab0b432bdfc2c8b18dfec",
+    "final": "90f47e7bf0a58c6afbe22614f0b0796db42dd2c5efe1210d9f386e4fa516055f"
+  },
+  "rounds": [
+    {
+      "path": "artifacts/evaluation-v2-baseline.json",
+      "label": "baseline-39b59bd",
+      "raw_statements": {
+        "total": 5,
+        "passed": 0,
+        "failed": 5
+      },
+      "raw_cells": {
+        "total": 80,
+        "passed": 0,
+        "failed": 80
+      },
+      "raw_queries": {
+        "total": 24,
+        "passed": 0,
+        "failed": 24
+      },
+      "raw_calculations": {
+        "total": 6,
+        "passed": 0,
+        "failed": 6
+      },
+      "fixture_queries": {
+        "total": 24,
+        "passed": 1,
+        "failed": 23
+      },
+      "production_registry": {
+        "accepted_parsed_facts": 0,
+        "parsed_facts": 0,
+        "production_end_to_end_supported": false,
+        "limitation": "New documents are not added to production canonical registration by this evaluation."
+      }
+    },
+    {
+      "path": "artifacts/evaluation-v2-first-post-fix.json",
+      "label": "first-post-fix-frozen-gold",
+      "raw_statements": {
+        "total": 5,
+        "passed": 0,
+        "failed": 5
+      },
+      "raw_cells": {
+        "total": 80,
+        "passed": 0,
+        "failed": 80
+      },
+      "raw_queries": {
+        "total": 24,
+        "passed": 0,
+        "failed": 24
+      },
+      "raw_calculations": {
+        "total": 6,
+        "passed": 0,
+        "failed": 6
+      },
+      "fixture_queries": {
+        "total": 24,
+        "passed": 20,
+        "failed": 4
+      },
+      "production_registry": {
+        "accepted_parsed_facts": 0,
+        "parsed_facts": 0,
+        "production_end_to_end_supported": false,
+        "limitation": "New documents are not added to production canonical registration by this evaluation."
+      }
+    },
+    {
+      "path": "artifacts/evaluation-v2-post-disclosure-regression.json",
+      "label": "post-disclosure-regression-2023",
+      "raw_statements": {
+        "total": 5,
+        "passed": 4,
+        "failed": 1
+      },
+      "raw_cells": {
+        "total": 80,
+        "passed": 64,
+        "failed": 16
+      },
+      "raw_queries": {
+        "total": 24,
+        "passed": 20,
+        "failed": 4
+      },
+      "raw_calculations": {
+        "total": 6,
+        "passed": 5,
+        "failed": 1
+      },
+      "fixture_queries": {
+        "total": 24,
+        "passed": 24,
+        "failed": 0
+      },
+      "production_registry": {
+        "accepted_parsed_facts": 0,
+        "parsed_facts": 128,
+        "production_end_to_end_supported": false,
+        "limitation": "New documents are not added to production canonical registration by this evaluation."
+      }
+    },
+    {
+      "path": "artifacts/evaluation-v2-final-baseline.json",
+      "label": "final-round-baseline-39b59bd",
+      "raw_statements": {
+        "total": 1,
+        "passed": 0,
+        "failed": 1
+      },
+      "raw_cells": {
+        "total": 16,
+        "passed": 0,
+        "failed": 16
+      },
+      "raw_queries": {
+        "total": 8,
+        "passed": 0,
+        "failed": 8
+      },
+      "raw_calculations": {
+        "total": 2,
+        "passed": 0,
+        "failed": 2
+      },
+      "fixture_queries": {
+        "total": 8,
+        "passed": 0,
+        "failed": 8
+      },
+      "production_registry": {
+        "accepted_parsed_facts": 0,
+        "parsed_facts": 0,
+        "production_end_to_end_supported": false,
+        "limitation": "New documents are not added to production canonical registration by this evaluation."
+      }
+    },
+    {
+      "path": "artifacts/evaluation-v2-final-first.json",
+      "label": "final-round-first-observation",
+      "raw_statements": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      },
+      "raw_cells": {
+        "total": 16,
+        "passed": 16,
+        "failed": 0
+      },
+      "raw_queries": {
+        "total": 8,
+        "passed": 8,
+        "failed": 0
+      },
+      "raw_calculations": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      },
+      "fixture_queries": {
+        "total": 8,
+        "passed": 8,
+        "failed": 0
+      },
+      "production_registry": {
+        "accepted_parsed_facts": 0,
+        "parsed_facts": 32,
+        "production_end_to_end_supported": false,
+        "limitation": "New documents are not added to production canonical registration by this evaluation."
+      }
+    }
+  ],
+  "interpretation": "Initial2023 firstholdout0/5 preserved; disclosedregression4/5; separatelyfrozen final2022sample1/1 with16exactKRWcells,8querycontracts,2calcs inisolatedregisteredrawpipeline. Notproductionregistration, independenthumanreview, orwhole-reportcoverage."
+}

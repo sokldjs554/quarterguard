@@ -1,0 +1,68 @@
+[
+  {
+    "id": "v2-reconcile-CFS-revenue",
+    "operation": "reconcile",
+    "inputs": [
+      "s23q3-CFS-revenue-2023-ytd-KRW",
+      "s23q2-CFS-revenue-2023-ytd-KRW",
+      "s23q3-CFS-revenue-2023-q-KRW"
+    ],
+    "expected_status": "verified",
+    "expected_value": "67404652"
+  },
+  {
+    "id": "v2-reconcile-CFS-operating_profit",
+    "operation": "reconcile",
+    "inputs": [
+      "s23q3-CFS-operating_profit-2023-ytd-KRW",
+      "s23q2-CFS-operating_profit-2023-ytd-KRW",
+      "s23q3-CFS-operating_profit-2023-q-KRW"
+    ],
+    "expected_status": "verified",
+    "expected_value": "2433534"
+  },
+  {
+    "id": "v2-reconcile-OFS-revenue",
+    "operation": "reconcile",
+    "inputs": [
+      "s23q3-OFS-revenue-2023-ytd-KRW",
+      "s23q2-OFS-revenue-2023-ytd-KRW",
+      "s23q3-OFS-revenue-2023-q-KRW"
+    ],
+    "expected_status": "verified",
+    "expected_value": "45866224"
+  },
+  {
+    "id": "v2-reconcile-OFS-operating_profit",
+    "operation": "reconcile",
+    "inputs": [
+      "s23q3-OFS-operating_profit-2023-ytd-KRW",
+      "s23q2-OFS-operating_profit-2023-ytd-KRW",
+      "s23q3-OFS-operating_profit-2023-q-KRW"
+    ],
+    "expected_status": "verified",
+    "expected_value": "-2167988"
+  },
+  {
+    "id": "v2-yoy-s23q3-revenue",
+    "operation": "compare",
+    "mode": "yoy",
+    "inputs": [
+      "s23q3-CFS-revenue-2023-q-KRW",
+      "s23q3-CFS-revenue-2022-q-KRW"
+    ],
+    "expected_status": "verified",
+    "expected_value": "-12.2126"
+  },
+  {
+    "id": "v2-yoy-h23q3-revenue",
+    "operation": "compare",
+    "mode": "yoy",
+    "inputs": [
+      "h23q3-CFS-revenue-2023-q-KRW",
+      "h23q3-CFS-revenue-2022-q-KRW"
+    ],
+    "expected_status": "verified",
+    "expected_value": "8.7447"
+  }
+]

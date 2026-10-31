@@ -1,0 +1,2 @@
+-r requirements-eval.txt
+# FastEmbed includes the supported ONNX TextCrossEncoder. Weights remain in work/models.

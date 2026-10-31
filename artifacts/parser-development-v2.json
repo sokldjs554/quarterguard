@@ -1,0 +1,204 @@
+{
+  "schema_version": 2,
+  "evaluation_split": "disclosed_development_not_blind",
+  "human_reviewed": false,
+  "source_mode": "raw_pdf_pypdf_extract_text",
+  "parser_baseline_sha256": "692ea34874f943bb0b1abdbb69a1fa3d01d63c72060f85005d444ec31ae9b93e",
+  "preserved_data_sha256": {
+    "data/sources.json": "8ec9649bea4557fcd801500a80a57696479e18110ba809d4dec6f7d4f1ecfd68",
+    "data/facts.json": "d3a7074f9f1ef0745aa04a9586833b1d1f2bf188102ef66fdb6f315b73425969",
+    "data/heldout/sources.json": "6785992f5ccf7d0cf4d1bf6d211feed3c27c0458b76e023fb0867a63ec47a6c8",
+    "data/heldout/facts.json": "e77f6cf53c126c9a8cea234ed985715fbd4d22297258c92bfe8869d178243f68"
+  },
+  "baseline": [
+    {
+      "document_id": "s24q3",
+      "scope": "CFS",
+      "page": 34,
+      "pdf_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+      "manifest_hash_matches": true,
+      "fact_count": 48,
+      "error": null
+    },
+    {
+      "document_id": "s24q3",
+      "scope": "OFS",
+      "page": 89,
+      "pdf_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+      "manifest_hash_matches": true,
+      "fact_count": 48,
+      "error": null
+    },
+    {
+      "document_id": "s24q2",
+      "scope": "CFS",
+      "page": 48,
+      "pdf_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+      "manifest_hash_matches": true,
+      "fact_count": 48,
+      "error": null
+    },
+    {
+      "document_id": "s24q2",
+      "scope": "OFS",
+      "page": 104,
+      "pdf_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+      "manifest_hash_matches": true,
+      "fact_count": 48,
+      "error": null
+    },
+    {
+      "document_id": "s25q2",
+      "scope": "CFS",
+      "page": 44,
+      "pdf_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+      "manifest_hash_matches": true,
+      "fact_count": 0,
+      "error": "UNSUPPORTED_LAYOUT: header"
+    },
+    {
+      "document_id": "s25q2",
+      "scope": "OFS",
+      "page": 96,
+      "pdf_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+      "manifest_hash_matches": true,
+      "fact_count": 0,
+      "error": "UNSUPPORTED_LAYOUT: header"
+    },
+    {
+      "document_id": "s25q3",
+      "scope": "CFS",
+      "page": 34,
+      "pdf_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+      "manifest_hash_matches": true,
+      "fact_count": 0,
+      "error": "UNSUPPORTED_LAYOUT: header"
+    },
+    {
+      "document_id": "s25q3",
+      "scope": "OFS",
+      "page": 89,
+      "pdf_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+      "manifest_hash_matches": true,
+      "fact_count": 0,
+      "error": "UNSUPPORTED_LAYOUT: header"
+    }
+  ],
+  "post_fix": [
+    {
+      "document_id": "s24q3",
+      "scope": "CFS",
+      "page": 34,
+      "pdf_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+      "fact_count": 48,
+      "error": null
+    },
+    {
+      "document_id": "s24q3",
+      "scope": "OFS",
+      "page": 89,
+      "pdf_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+      "fact_count": 48,
+      "error": null
+    },
+    {
+      "document_id": "s24q2",
+      "scope": "CFS",
+      "page": 48,
+      "pdf_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+      "fact_count": 48,
+      "error": null
+    },
+    {
+      "document_id": "s24q2",
+      "scope": "OFS",
+      "page": 104,
+      "pdf_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+      "fact_count": 48,
+      "error": null
+    },
+    {
+      "document_id": "s25q2",
+      "scope": "CFS",
+      "page": 44,
+      "pdf_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+      "fact_count": 48,
+      "error": null
+    },
+    {
+      "document_id": "s25q2",
+      "scope": "OFS",
+      "page": 96,
+      "pdf_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218",
+      "fact_count": 48,
+      "error": null
+    },
+    {
+      "document_id": "s25q3",
+      "scope": "CFS",
+      "page": 34,
+      "pdf_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+      "fact_count": 48,
+      "error": null
+    },
+    {
+      "document_id": "s25q3",
+      "scope": "OFS",
+      "page": 89,
+      "pdf_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a",
+      "fact_count": 48,
+      "error": null
+    }
+  ],
+  "comparisons": [
+    {
+      "split": "2024_regression",
+      "source_mode": "raw_pdf",
+      "actual_facts": 192,
+      "declared_gold_facts": 192,
+      "gold_matches": 192,
+      "failures": [],
+      "extra_fact_count": 0,
+      "exact_public_records_equal": true,
+      "comparison": "All declared gold fields per ID; actual .public() includes derived months absent from 2025 gold."
+    },
+    {
+      "split": "2025_disclosed_development",
+      "source_mode": "raw_pdf",
+      "actual_facts": 192,
+      "declared_gold_facts": 64,
+      "gold_matches": 64,
+      "failures": [],
+      "extra_fact_count": 128,
+      "exact_public_records_equal": null,
+      "comparison": "All declared gold fields per ID; actual .public() includes derived months absent from 2025 gold."
+    }
+  ],
+  "preserved_data_unchanged": true,
+  "parser_post_fix_sha256": "0b38ba3062e2f649eb4e0ff6d64529aecacc546de57aed9ea3c909d5479663e8",
+  "remaining_raw_parse_failures": [],
+  "fixture_assisted_stage": {
+    "executed": false,
+    "reason": "Parser development comparison uses actual PDF extraction; gold is reference only, never substituted."
+  },
+  "limitations": [
+    "Disclosed development documents were used for the repair; this is not blind evaluation.",
+    "No newly parsed facts were registered in the production canonical corpus.",
+    "2025 Q3 CFS net profit reproduces printed Q2 numbers; extraction does not resolve the known source arithmetic conflict.",
+    "Only Q2/Q3 adjacent-current/prior-year eight-column KRW/USD layout is supported.",
+    "Ambiguous short initial amount with no note is rejected to avoid a missing amount being mistaken for an absent note.",
+    "USD translation remains convenience_translation; missing manifest rate/note data is not invented."
+  ],
+  "targeted_tests": {
+    "command": "python -m unittest tests.test_parser_v2 tests.test_core tests.test_review_regressions",
+    "tests": 35,
+    "passed": true,
+    "red_phase": "Before implementation the 12-test v2 suite reported 12 expected unsupported-header errors across positive subcases; rejection cases passed. An additional malformed trailing-character case was observed failing before its boundary fix."
+  },
+  "full_suite_attempt": {
+    "command": "python -m unittest discover -s tests",
+    "status": "stopped_by_root_request_during_parallel_integration",
+    "observed_output": "FastAPI TestClient StarletteDeprecationWarning; no test result before stop",
+    "final_verification_owner": "root integration"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-10-31T12:26:58.483166+00:00",
+  "human_reviewed": false,
+  "raw_pdf_to_answer_success": false,
+  "freeze_sha256": "0c34675a0a408ee92f4e4bccc8d2552eb929f145c0aab0b432bdfc2c8b18dfec",
+  "observations": {
+    "artifacts/evaluation-v2-baseline.json": "5faf83ccf551139166ada4fd420760fc3dd0f8cc3f7adcf16c4a0a2c08925af6",
+    "artifacts/evaluation-v2-first-post-fix.json": "3f382cee637e97f6ce66a03512edfe4681a7db52427aa74bd6c6bf3e50adb1e2"
+  },
+  "first_post_fix_dependency_fingerprints": {
+    "quarterguard/core.py": "dbe42039fae2619484df0a79bd5b893ee58e0efc40468570a672da79c877830e",
+    "quarterguard/ingest.py": "845e6862a2a5852091fa33445e3f3faf98a3a4f8661a6a90ac5b4149f4254904",
+    "quarterguard/search.py": "03e36e985309f85d5b9d62980ba65793dfd1876f4ab715a1bd76b2acc557c379",
+    "quarterguard/query.py": "22799afcf36ffb935aa4e772bfb507f9899e36e5b73264082a02bf5da310acf6"
+  },
+  "dependency_fingerprint_note": "Supplemental fingerprint captured after first run; original immutable observation contains core/ingest/search hashes. No implementation edits by evaluation worker.",
+  "baseline": {
+    "raw_statements": {
+      "total": 5,
+      "passed": 0,
+      "failed": 5
+    },
+    "raw_cells": {
+      "total": 80,
+      "passed": 0,
+      "failed": 80
+    },
+    "fixture_queries": {
+      "total": 24,
+      "passed": 1,
+      "failed": 23
+    }
+  },
+  "first_post_fix": {
+    "raw_statements": {
+      "total": 5,
+      "passed": 0,
+      "failed": 5
+    },
+    "raw_cells": {
+      "total": 80,
+      "passed": 0,
+      "failed": 80
+    },
+    "fixture_queries": {
+      "total": 24,
+      "passed": 20,
+      "failed": 4
+    }
+  },
+  "limitations": [
+    "Same-task AI-authored, no human review",
+    "Samsung 2023 values also appear as comparative figures in existing 2024 corpus",
+    "Raw parse fails all 5 statement pages; fixture success cannot claim raw-to-answer",
+    "Production canonical registry unchanged",
+    "Post-disclosure tuning would require relabeling this dataset as regression"
+  ]
+}

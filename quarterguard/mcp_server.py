@@ -13,9 +13,9 @@ def lookup(fid):
     return FACTS[fid]
 @mcp.tool()
 def search_documents(query:str,k:int=3,config:str='hybrid_meta')->dict:
-    """Retrieve context-preserving numeric evidence; empty hits mean no supported evidence."""
+    """Retrieve constrained evidence candidates and missing/conflicting-context diagnostics; never a verified answer."""
     if len(query)>500:raise ValueError('QUERY_TOO_LONG')
-    return {'hits':index(config).search(query,k),'config':config}
+    return index(config).search_with_diagnostics(query,k)|{'config':config}
 @mcp.tool()
 def get_fact(fact_id:str)->dict:
     """Read immutable financial fact with page, row, column and source hash."""

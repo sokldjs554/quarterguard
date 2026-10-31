@@ -1,0 +1,92 @@
+[
+  {
+    "id": "final-q01",
+    "query": "삼성전자 2021년 3분기 당분기 연결 원화 백만원 매출액",
+    "gold_fact_ids": [
+      "s22q3-CFS-revenue-2021-q-KRW"
+    ],
+    "expected_clarification": false,
+    "expected_answerable": true,
+    "query_author": "same-task AI worker final-round source reading",
+    "human_reviewed": false,
+    "gold_fact_id": "s22q3-CFS-revenue-2021-q-KRW"
+  },
+  {
+    "id": "final-q02",
+    "query": "Samsung 2021 Q3 YTD consolidated KRW million operating profit",
+    "gold_fact_ids": [
+      "s22q3-CFS-operating_profit-2021-ytd-KRW"
+    ],
+    "expected_clarification": false,
+    "expected_answerable": true,
+    "query_author": "same-task AI worker final-round source reading",
+    "human_reviewed": false,
+    "gold_fact_id": "s22q3-CFS-operating_profit-2021-ytd-KRW"
+  },
+  {
+    "id": "final-q03",
+    "query": "삼성전자 2021년 3분기 누적 연결 원화 백만원 당기순이익",
+    "gold_fact_ids": [
+      "s22q3-CFS-net_profit-2021-ytd-KRW"
+    ],
+    "expected_clarification": false,
+    "expected_answerable": true,
+    "query_author": "same-task AI worker final-round source reading",
+    "human_reviewed": false,
+    "gold_fact_id": "s22q3-CFS-net_profit-2021-ytd-KRW"
+  },
+  {
+    "id": "final-q04",
+    "query": "Samsung Electronics 2021 Q3 quarter CFS KRW million gross profit",
+    "gold_fact_ids": [
+      "s22q3-CFS-gross_profit-2021-q-KRW"
+    ],
+    "expected_clarification": false,
+    "expected_answerable": true,
+    "query_author": "same-task AI worker final-round source reading",
+    "human_reviewed": false,
+    "gold_fact_id": "s22q3-CFS-gross_profit-2021-q-KRW"
+  },
+  {
+    "id": "final-q05",
+    "query": "삼성전자 2022년 3분기 당분기 연결 원화 백만원 영업이익",
+    "gold_fact_ids": [
+      "s22q3-CFS-operating_profit-2022-q-KRW"
+    ],
+    "expected_clarification": false,
+    "expected_answerable": true,
+    "query_author": "same-task AI worker final-round source reading",
+    "human_reviewed": false,
+    "gold_fact_id": "s22q3-CFS-operating_profit-2022-q-KRW"
+  },
+  {
+    "id": "final-q06",
+    "query": "Samsung 2022 Q3 YTD consolidated KRW million revenue",
+    "gold_fact_ids": [
+      "s22q3-CFS-revenue-2022-ytd-KRW"
+    ],
+    "expected_clarification": false,
+    "expected_answerable": true,
+    "query_author": "same-task AI worker final-round source reading",
+    "human_reviewed": false,
+    "gold_fact_id": "s22q3-CFS-revenue-2022-ytd-KRW"
+  },
+  {
+    "id": "final-q07",
+    "query": "Samsung 2021 Q3 quarter consolidated separate KRW million revenue",
+    "gold_fact_ids": [],
+    "expected_clarification": true,
+    "expected_answerable": false,
+    "query_author": "same-task AI worker final-round source reading",
+    "human_reviewed": false
+  },
+  {
+    "id": "final-q08",
+    "query": "삼성전자 2021년 3분기 누적 매출액",
+    "gold_fact_ids": [],
+    "expected_clarification": true,
+    "expected_answerable": false,
+    "query_author": "same-task AI worker final-round source reading",
+    "human_reviewed": false
+  }
+]

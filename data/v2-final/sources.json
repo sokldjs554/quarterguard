@@ -1,0 +1,19 @@
+[
+  {
+    "id": "s22q3",
+    "company": "samsung",
+    "title": "Samsung Electronics 2022 Q3 Interim Report",
+    "url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2022_3Q_Interim_Report_vF.pdf",
+    "quarter": 3,
+    "report_end": "2022-09-30",
+    "pages": 198,
+    "statement_pages": {
+      "CFS": 37
+    },
+    "sha256": "0a00681375790f92a4660c65983473b70a8bac17f163c84cadc062493b4851fd",
+    "cache_filename": "2022_3Q_Interim_Report_vF.pdf",
+    "accessed": "2026-10-31",
+    "distribution": "Atomic numeric facts and short source locators only; full PDF/text ignored",
+    "evaluation_scope": "Only consolidated statement PDF page37; separate statement intentionally outside small final-round sample"
+  }
+]

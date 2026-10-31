@@ -1,0 +1,24 @@
+[
+  {
+    "id": "final-yoy-revenue",
+    "operation": "compare",
+    "mode": "yoy",
+    "inputs": [
+      "s22q3-CFS-revenue-2022-q-KRW",
+      "s22q3-CFS-revenue-2021-q-KRW"
+    ],
+    "expected_status": "verified",
+    "expected_value": "3.7882"
+  },
+  {
+    "id": "final-yoy-operating_profit",
+    "operation": "compare",
+    "mode": "yoy",
+    "inputs": [
+      "s22q3-CFS-operating_profit-2022-q-KRW",
+      "s22q3-CFS-operating_profit-2021-q-KRW"
+    ],
+    "expected_status": "verified",
+    "expected_value": "-31.3923"
+  }
+]
