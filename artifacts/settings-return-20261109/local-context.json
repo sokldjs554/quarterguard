@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-11-08T16:41:38.612060+00:00",
+  "url": "http://127.0.0.1:8005",
+  "passed": 15,
+  "checks": [
+    "320:all_amounts_show_own_period_scope_unit_below_number",
+    "320:base_context_click_keeps_base_source_selected",
+    "320:ytd_updates_base_context_and_preserves_period_hold",
+    "320:scope_change_labels_each_side_and_preserves_hold",
+    "320:context_uses_fact_year_not_report_title_year",
+    "320:usd_reference_unit_stays_distinct_and_blocked",
+    "320:failure_clears_stale_context_and_retry_recovers",
+    "390:all_amounts_show_own_period_scope_unit_below_number",
+    "390:base_context_click_keeps_base_source_selected",
+    "390:ytd_updates_base_context_and_preserves_period_hold",
+    "390:scope_change_labels_each_side_and_preserves_hold",
+    "390:context_uses_fact_year_not_report_title_year",
+    "390:usd_reference_unit_stays_distinct_and_blocked",
+    "390:failure_clears_stale_context_and_retry_recovers",
+    "desktop:existing_column_context_preserved_without_duplicate_lines"
+  ],
+  "page_errors": [],
+  "external_provider_calls": 0,
+  "physical_device": false,
+  "method": "Real backend; explicit 503 injected only for stale-context/recovery case"
+}

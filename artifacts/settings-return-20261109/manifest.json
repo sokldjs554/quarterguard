@@ -1,0 +1,27 @@
+{
+  "baseline_commit": "53aaa949dab6298648a4d87aee7bf897e1865669",
+  "source_sha256": {
+    "web/app.js": "a7cc5fdcd6dd81b5db6d38aff776540081497d1a0867d0f39d8189a742047cbf",
+    "web/index.html": "64311e321da760cc475d4267e5b3ed455b09d254b914089c758a62af4e8c9743",
+    "web/style.css": "8f42e1421c77e91ac6c905655cb97c4635830feed0566951c9d5938845ddae54",
+    "scripts/browser_settings_return_check.py": "bdf91402d58d8a49312f13d7602bf70c3f04dc26f1485ff7b3abdd079a772529"
+  },
+  "python": {
+    "passed": 144,
+    "seconds": 33.523
+  },
+  "node_passed": 5,
+  "browser_passed": {
+    "new_return": 21,
+    "existing_recovery": 21,
+    "existing_worksheet": 37,
+    "existing_feedback": 14,
+    "existing_context": 15
+  },
+  "physical_device": false,
+  "new_return_human_recheck": false,
+  "latest_feedback_public_record_confirmation": "User confirmed b directly checked the preceding recovery-shortcut UI and approved this new anonymous public record. Not a human check of the new return button.",
+  "paid_api_calls": 0,
+  "hosting_plan_changed": false,
+  "screenshots": "Local 320x568; before baseline UI, after source hashes above. Backend revision label is not proof of edited frontend revision."
+}

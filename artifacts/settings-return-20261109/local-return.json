@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-11-08T16:42:09.487874+00:00",
+  "url": "http://127.0.0.1:8005",
+  "passed": 21,
+  "checks": [
+    "320:return_action_in_view_near_focused_base_period",
+    "320:keyboard_return_keeps_period_hold_and_shows_first_row",
+    "320:explicit_return_after_correction_shows_current_normal_result",
+    "320:scope_return_does_not_override_guard",
+    "320:return_while_pending_never_reuses_previous_success",
+    "320:failure_return_focuses_error_then_retry_returns_to_results",
+    "320:initial_load_failure_return_focuses_connection_error",
+    "390:return_action_in_view_near_focused_base_period",
+    "390:keyboard_return_keeps_period_hold_and_shows_first_row",
+    "390:explicit_return_after_correction_shows_current_normal_result",
+    "390:scope_return_does_not_override_guard",
+    "390:return_while_pending_never_reuses_previous_success",
+    "390:failure_return_focuses_error_then_retry_returns_to_results",
+    "390:initial_load_failure_return_focuses_connection_error",
+    "1440:return_action_in_view_near_focused_base_period",
+    "1440:keyboard_return_keeps_period_hold_and_shows_first_row",
+    "1440:explicit_return_after_correction_shows_current_normal_result",
+    "1440:scope_return_does_not_override_guard",
+    "1440:return_while_pending_never_reuses_previous_success",
+    "1440:failure_return_focuses_error_then_retry_returns_to_results",
+    "1440:initial_load_failure_return_focuses_connection_error"
+  ],
+  "page_errors": [],
+  "physical_device": false,
+  "external_provider_calls": 0,
+  "method": "Real backend; explicit pending/503 worksheet and initial facts-load failure injections"
+}
