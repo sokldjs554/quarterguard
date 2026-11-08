@@ -227,6 +227,11 @@ $('#download-btn').onclick=()=>current&&download(current,`quarterguard-worksheet
 $('#boot-retry').onclick=boot;
 $('#settings-btn').onclick=()=>settings($('#comparison-settings').hidden);
 $('#settings-close').onclick=()=>{settings(false);$('#settings-btn').focus();};
+$('#settings-results').onclick=()=>{
+ settings(false);
+ const target=!$('#boot-error').hidden?$('#boot-error'):!$('#work-alert').hidden?$('#work-alert'):$('#sheet-title');
+ target.focus({preventScroll:true});target.scrollIntoView({block:'start'});
+};
 $('#review-note').oninput=()=>{noteDirty=true;$('#note-status').textContent='작성 중 · 항목을 바꾸면 자동 저장됩니다.';};
 $('#review-note').onblur=()=>{if(noteDirty)saveNote();};
 $('#save-note').onclick=saveNote;

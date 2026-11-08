@@ -27,12 +27,13 @@
  <section id="comparison-settings" class="comparison-settings" hidden aria-label="비교 설정">
   <div class="settings-top"><h2>비교 조건</h2><label for="mode">비교 방식 <select id="mode"><option value="qoq">전분기 대비</option><option value="yoy">전년 동기 대비</option></select></label><button id="reset-btn" class="quiet" disabled>설정 초기화</button><button id="settings-close" class="quiet">닫기</button></div>
   <div class="column-settings"><fieldset id="current-settings"><legend>A · 기준 자료</legend><div class="selectors" data-side="current"></div></fieldset><fieldset id="base-settings"><legend>B · 비교 자료</legend><div class="selectors" data-side="base"></div></fieldset></div>
+  <div class="settings-return"><button id="settings-results" class="secondary" aria-controls="comparison-settings desk">설정 닫고 결과 보기</button></div>
  </section>
- <div id="work-alert" class="error-message" role="alert" hidden></div>
- <div id="boot-error" class="boot-error" hidden><h2>자료에 연결할 수 없습니다</h2><p>서버 연결을 확인한 뒤 다시 시도해 주세요.</p><button id="boot-retry" class="primary">다시 연결</button></div>
+ <div id="work-alert" class="error-message" role="alert" tabindex="-1" hidden></div>
+ <div id="boot-error" class="boot-error" tabindex="-1" hidden><h2>자료에 연결할 수 없습니다</h2><p>서버 연결을 확인한 뒤 다시 시도해 주세요.</p><button id="boot-retry" class="primary">다시 연결</button></div>
  <div class="desk" id="desk" aria-busy="true">
   <section class="worksheet" aria-labelledby="sheet-title">
-   <div class="section-bar"><h2 id="sheet-title">손익 항목</h2><span id="table-summary" role="status">준비 중</span></div>
+   <div class="section-bar"><h2 id="sheet-title" tabindex="-1">손익 항목</h2><span id="table-summary" role="status">준비 중</span></div>
    <section id="comparison-recovery" class="comparison-recovery" aria-label="비교 조건 수정" hidden></section>
    <div class="sheet-scroll" tabindex="0" aria-label="재무 비교표 가로 스크롤"><table class="financial-table"><thead><tr><th scope="col" class="row-index">#</th><th scope="col">항목</th><th scope="col" id="current-heading">기준 A</th><th scope="col" id="base-heading">비교 B</th><th scope="col">증감률</th><th scope="col">검토</th></tr></thead><tbody id="worksheet-rows"><tr><td colspan="6" class="empty">수치와 출처 로딩 중</td></tr></tbody></table></div>
    <div class="sheet-legend">숫자를 선택하면 문서 근거에서 출처를 확인할 수 있습니다.</div>

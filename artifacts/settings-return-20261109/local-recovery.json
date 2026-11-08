@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-11-08T16:39:59.252360+00:00",
+  "url": "http://127.0.0.1:8005",
+  "passed": 21,
+  "checks": [
+    "320:normal_has_no_recovery_prompt",
+    "320:period_action_before_first_row_not_after_six_rows",
+    "320:keyboard_shortcut_focuses_without_changing_period",
+    "320:two_issues_deduplicated_and_scope_action_focuses",
+    "320:partial_and_full_correction_clear_obsolete_actions",
+    "320:currency_hold_does_not_offer_unrelated_period_scope_fix",
+    "320:pending_and_failure_remove_stale_actions_then_recover",
+    "390:normal_has_no_recovery_prompt",
+    "390:period_action_before_first_row_not_after_six_rows",
+    "390:keyboard_shortcut_focuses_without_changing_period",
+    "390:two_issues_deduplicated_and_scope_action_focuses",
+    "390:partial_and_full_correction_clear_obsolete_actions",
+    "390:currency_hold_does_not_offer_unrelated_period_scope_fix",
+    "390:pending_and_failure_remove_stale_actions_then_recover",
+    "1440:normal_has_no_recovery_prompt",
+    "1440:period_action_before_first_row_not_after_six_rows",
+    "1440:keyboard_shortcut_focuses_without_changing_period",
+    "1440:two_issues_deduplicated_and_scope_action_focuses",
+    "1440:partial_and_full_correction_clear_obsolete_actions",
+    "1440:currency_hold_does_not_offer_unrelated_period_scope_fix",
+    "1440:pending_and_failure_remove_stale_actions_then_recover"
+  ],
+  "page_errors": [],
+  "physical_device": false,
+  "external_provider_calls": 0,
+  "method": "Real backend; pending/503 worksheet response explicitly injected only for stale-state case"
+}
