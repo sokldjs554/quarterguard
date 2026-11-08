@@ -91,6 +91,7 @@ select { border:1px solid #cdd1c5; padding:5px 7px; background:#fff; min-width:0
 .number-button,.metric-name { background:none; border:0; padding:0; color:inherit; }
 .number-button { font:13px/1.6 var(--mono); font-variant-numeric:tabular-nums; }
 .number-button.active { color:#30352c; text-decoration:underline; text-underline-offset:4px; font-weight:600; }
+.value-context { display:none; }
 .metric-name { font-weight:500; font-size:12px; text-align:left; }
 .metric-name small { display:none; }
 .growth,.num { font-family:var(--mono); font-variant-numeric:tabular-nums; }
@@ -268,9 +269,12 @@ dialog::backdrop { background:#1f251966; }
  .financial-table td:nth-child(2) { grid-area:name; }
  .financial-table td:nth-child(3) { grid-area:current; text-align:left; }
  .financial-table td:nth-child(4) { grid-area:base; text-align:left; }
- .financial-table td.growth { grid-area:growth; align-self:end; font-size:11px; }
+ .financial-table td.growth { grid-area:growth; align-self:start; margin-top:18px; font-size:11px; }
  .financial-table td.status-cell { grid-area:status; white-space:normal; font-size:10px; }
  .financial-table td.value-cell:before { content:attr(data-label); display:block; font:10px/1.4 -apple-system,BlinkMacSystemFont,sans-serif; color:var(--muted); margin-bottom:4px; }
+ .financial-table td.value-cell { min-width:0; }
+ .value-context { display:block; margin-top:6px; font:11px/1.5 -apple-system,BlinkMacSystemFont,sans-serif; color:var(--muted); white-space:normal; overflow-wrap:anywhere; }
+ .value-context>span { display:block; }
  .financial-table td.empty { grid-column:1/-1; }
  .number-button { font-size:13px; }.metric-name { font-size:13px; }
  .sheet-scroll { overflow:visible; }.sheet-legend { font-size:10px; padding:10px 13px; }

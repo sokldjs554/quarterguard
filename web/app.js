@@ -114,6 +114,10 @@ async function execute(live) {
   $('#table-summary').textContent='대조 미완료';$('#execution-status').textContent='실행 미완료 · 성공 판정 없음';
  } finally {if(token===requestId){setBusy(false);if(focusId&&document.activeElement===document.body)document.getElementById(focusId)?.focus({preventScroll:true});}}
 }
+function valueContext(f,side) {
+ const start=f.start.slice(0,7).replace('-','.'),end=f.start.slice(0,4)===f.end.slice(0,4)?f.end.slice(5,7):f.end.slice(0,7).replace('-','.');
+ return `<span class="value-context" id="context-${side}-${esc(f.metric)}" data-context-side="${side}" data-side="${side}" data-metric="${esc(f.metric)}"><span>${esc(start)}–${esc(end)}</span><span>${f.months}개월 · ${scope(f)}</span><span>${unit(f)}${f.currency==='USD'?' · 참고':''}</span></span>`;
+}
 function render() {
  const rows=current.rows,first=rows[0],failed=rows.filter(r=>r.result.status!=='verified').length;
  rows.forEach(row=>getNote(row,current.selection.mode));
@@ -122,7 +126,7 @@ function render() {
  $('#table-summary').textContent=`${rows.length}개 항목 · ${failed?'확인 필요 '+failed+'건':'문맥 일치'}`;
  $('#worksheet-rows').innerHTML=rows.map((r,i)=>{
   const ok=r.result.status==='verified',value=r.result.growth_pct;
-  return `<tr data-row="${r.metric}" class="${selectedMetric===r.metric?'selected':''}"><td class="row-index">${String(i+1).padStart(2,'0')}</td><td><button class="metric-name" data-metric="${r.metric}">${labels[r.metric]}<small>${shortLabels[r.metric]}</small></button></td>${['current','base'].map(side=>`<td class="value-cell" data-label="${side==='current'?'A 기준':'B 비교'}"><button class="number-button ${selectedMetric===r.metric&&selectedSide===side?'active':''}" data-fact="${r[side].id}" data-side="${side}" data-metric="${r.metric}" aria-label="${labels[r.metric]} ${side==='current'?'기준':'비교'} ${money(r[side])} ${unit(r[side])} 근거">${money(r[side])}</button></td>`).join('')}<td class="growth ${ok?'':'warn'}">${ok?(Number(value)>0?'+':'')+esc(value)+'%':'—'}</td><td class="status-cell"><span class="${ok?'ok':'warn'}">${ok?'조건 일치':esc(issues[r.result.issues[0]]?.[0]||'확인 필요')}</span></td></tr>`;
+  return `<tr data-row="${r.metric}" class="${selectedMetric===r.metric?'selected':''}"><td class="row-index">${String(i+1).padStart(2,'0')}</td><td><button class="metric-name" data-metric="${r.metric}">${labels[r.metric]}<small>${shortLabels[r.metric]}</small></button></td>${['current','base'].map(side=>`<td class="value-cell" data-label="${side==='current'?'A 기준':'B 비교'}"><button class="number-button ${selectedMetric===r.metric&&selectedSide===side?'active':''}" data-fact="${r[side].id}" data-side="${side}" data-metric="${r.metric}" aria-describedby="context-${side}-${r.metric}" aria-label="${labels[r.metric]} ${side==='current'?'기준':'비교'} ${money(r[side])} ${unit(r[side])} 근거">${money(r[side])}</button>${valueContext(r[side],side)}</td>`).join('')}<td class="growth ${ok?'':'warn'}">${ok?(Number(value)>0?'+':'')+esc(value)+'%':'—'}</td><td class="status-cell"><span class="${ok?'ok':'warn'}">${ok?'조건 일치':esc(issues[r.result.issues[0]]?.[0]||'확인 필요')}</span></td></tr>`;
  }).join('');
  $('#worksheet-rows').querySelectorAll('tr').forEach(tr=>tr.onclick=e=>{
   const b=e.target.closest('[data-metric]');selectedMetric=tr.dataset.row;selectedSide=b?.dataset.side||'current';selectRow();if(b?.dataset.fact&&matchMedia('(max-width:600px)').matches)$('#source-panel').scrollIntoView({block:'start'});
