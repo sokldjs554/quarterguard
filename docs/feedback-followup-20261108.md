@@ -28,7 +28,7 @@
 |정본·평가 파일 일관성|통과|`scripts/check_artifacts.py`|
 |기존 작업지|37개 통과|실제 로컬 서버 + 일부 명시적 오류 주입, MCP 실행 포함|
 |검색/평가 화면|10개 통과|한국어·영어·조건 누락·미지원 기업, 실제 로컬 서버|
-|새 피드백 흐름|12개 통과|PC 1440×1000 / 모바일 크기 390×844, 실제 로컬 서버|
+|새 피드백 흐름|최종 14개 통과 (초기 12개 별도 보존)|PC 1440×1000 / 모바일 크기 390×844, 실제 로컬 서버|
 |외부 API 화면|7개 통과|브라우저에서 준비된 응답 주입; 실제 DART/LLM 호출 아님|
 
 새 검사에서는 확대 후 근거 변경 시 이전 금액이 남지 않는지, 닫기 후 초점 복귀, 설정 이동 후 보류 유지, 사용자가 범위를 맞춘 뒤 정상 비교 복구, 가로 화면 넘침을 확인했다. [실행 결과와 소스 해시](../artifacts/followup-20261108/manifest.json), [Python 출력](../artifacts/followup-20261108/python-tests.txt), [새 UI 검사](../artifacts/followup-20261108/feedback-local.json).
@@ -48,10 +48,14 @@ python scripts/check_artifacts.py
 
 브라우저 재현에는 Playwright와 `/usr/bin/chromium`이 필요하다. 위 명령은 기본 제품 의존성만 설치한 모든 OS에서 바로 실행되는 명령은 아니다. 물리 휴대폰 검사는 미실시다. 공개 배포는 변경 PR의 최종 배포 확인과 `/health`로 확인하며 직접 HTTPS 브라우저와 TLS 검증 중계를 구분한다.
 
-아래 캡처는 UI 코드 커밋 `704c3b0936a543eb3292a3e3460435eedb5e72eb`에서 새로 찍었다. 후속 문서/증거 커밋과 화면 코드가 같다는 것은 위 해시로 대조할 수 있다. 과거 캡처는 삭제하지 않았다.
+아래 캡처는 UI 코드 커밋 `704c3b0936a543eb3292a3e3460435eedb5e72eb`에서 새로 찍었다. 캡처 당시 코드의 해시는 초기 manifest에 보존했다. 최종 화면에는 USD 확대 창 안내가 추가됐으며 [최종 해시](../artifacts/followup-20261108/manifest-usd-followup.json)로 구분한다. 과거 캡처는 삭제하지 않았다.
 
 ![PC 작업지](images/desktop-feedback-20261108.png)
 ![모바일 크기의 확대 근거](images/mobile-feedback-detail-20261108.png)
+
+## 별도 AI 리뷰 후 추가 수정
+
+AI 리뷰에서 USD 확대 창에 참고 환산액 안내가 빠진 점을 발견했다. 기존 계산 차단은 유지됐고, 확대 창에도 환율·환산 주석 쪽·산술 비교 제한을 표시하도록 보완했다. [수정 전 실패](../artifacts/followup-20261108/feedback-usd-missing-warning.txt)와 [수정 후 PC/모바일 14개 검사](../artifacts/followup-20261108/feedback-usd-local.json)를 구분한다. 별도 AI가 재검토했고 남은 지적은 없었다. 사람 검수나 사용성 재평가가 아니다.
 
 ## 사람이 이어서 할 일
 

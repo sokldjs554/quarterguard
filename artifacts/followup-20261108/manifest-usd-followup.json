@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-11-08",
+  "base_commit": "a83d222f2cbf442c2eb16694140367cc230fc308",
+  "revision_note": "Final USD warning patch; hashes identify exact tested UI. Original manifest and 12-check run retained.",
+  "web_sha256": {
+    "web/app.js": "871567272f1129653e8cdefd7ad1bb07fe50d4fcee7304982b42011ffc2670aa",
+    "web/evidence.js": "549b76f54030bb8f0ff8652f50ee98e39ca00d29ab8231e58cd12c703dc04a41",
+    "web/style.css": "44dca5d110d983881cbc0a4ef17768320fd34dc5ab7f974ddbb34becef02c944"
+  },
+  "feedback_checks": 14,
+  "ai_review": "Independent AI reviewer found missing USD warning in modal; fixed and re-reviewed. No remaining findings. Not a human or financial-practitioner review."
+}
