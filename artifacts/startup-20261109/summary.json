@@ -1,0 +1,28 @@
+{
+  "baseline_commit": "3a85e0c796b667fce75cbfdb0f98b9e8bf0bc5fc",
+  "local_importtime_single_sample_seconds": {
+    "before": 2.253786,
+    "after": 0.569011,
+    "search_before": 1.609336
+  },
+  "python_final": {
+    "tests": 144,
+    "seconds": 26.403,
+    "result": "OK",
+    "output": "python-tests-corrected.txt"
+  },
+  "node": {
+    "tests": 5,
+    "result": "pass"
+  },
+  "artifact_consistency": "pass",
+  "preserved_failures": {
+    "startup-red.txt": "Original eager sklearn import prevents basic routes when search dependency unavailable",
+    "startup-green.txt": "Test query omitted scale; received MISSING_SCALE, production guard correct",
+    "python-tests.txt": "144-test intermediate suite had the same incomplete-query test failure"
+  },
+  "production_idle_wake_verified": false,
+  "paid_api_calls": 0,
+  "hosting_plan": "free",
+  "billing_not_queried": true
+}

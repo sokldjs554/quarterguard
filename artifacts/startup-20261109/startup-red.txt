@@ -1,0 +1,24 @@
+test_review_routes_work_before_search_dependency_is_available (test_startup.StartupTests.test_review_routes_work_before_search_dependency_is_available) ... FAIL
+
+======================================================================
+FAIL: test_review_routes_work_before_search_dependency_is_available (test_startup.StartupTests.test_review_routes_work_before_search_dependency_is_available)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_startup.py", line 42, in test_review_routes_work_before_search_dependency_is_available
+    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+AssertionError: 1 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+Traceback (most recent call last):
+  File "<string>", line 11, in <module>
+  File "/workspace/quarterguard/quarterguard/api.py", line 7, in <module>
+    from .search import SearchIndex
+  File "/workspace/quarterguard/quarterguard/search.py", line 4, in <module>
+    from sklearn.feature_extraction.text import TfidfVectorizer
+  File "<string>", line 7, in find_spec
+ImportError: retrieval dependency not ready
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.420s
+
+FAILED (failures=1)
