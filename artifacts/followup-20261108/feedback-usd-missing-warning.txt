@@ -1,0 +1,41 @@
+Traceback (most recent call last):
+  File "/workspace/quarterguard/scripts/browser_feedback_check.py", line 99, in <module>
+    expect(dialog).to_contain_text('참고 환산액')
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 22016, in to_contain_text
+    self._sync(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 303, in to_contain_text
+    await self._expect_impl(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 128, in _expect_impl
+    _record_soft_or_raise(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 60, in _record_soft_or_raise
+    raise error
+AssertionError: Locator expected to contain text '참고 환산액'
+Actual value: 선택 근거 크게 보기×58,487,296 천 USD문서2024년 3분기 보고서 · PDF p.34표연결 손익계산서행Revenue열2024 Q USD실제 비교 기간2024-07-01 — 2024-09-30 · 3개월 · 단독 분기수집 수치와 출처 정보 · 원문 이미지 아님. PDF에서 표 제목·행·열·단위를 함께 확인하세요.발행사 원문 p.34 크게 열기 ↗다른 쪽이 표시되면 PDF 뷰어의 쪽 번호에 34를 입력하세요. 
+Call log:
+  - Expect "to_contain_text" with timeout 5000ms
+  - waiting for locator("#source-detail-dialog")
+    14 × locator resolved to <dialog open="" id="source-detail-dialog" aria-labelledby="source-detail-title">…</dialog>
+       - unexpected value "선택 근거 크게 보기×58,487,296 천 USD문서2024년 3분기 보고서 · PDF p.34표연결 손익계산서행Revenue열2024 Q USD실제 비교 기간2024-07-01 — 2024-09-30 · 3개월 · 단독 분기수집 수치와 출처 정보 · 원문 이미지 아님. PDF에서 표 제목·행·열·단위를 함께 확인하세요.발행사 원문 p.34 크게 열기 ↗다른 쪽이 표시되면 PDF 뷰어의 쪽 번호에 34를 입력하세요."
+
+Aria snapshot:
+- dialog "선택 근거 크게 보기":
+  - heading "선택 근거 크게 보기" [level=2]
+  - button "확대 근거 닫기": ×
+  - paragraph: 58,487,296 천 USD
+  - term: 문서
+  - definition: 2024년 3분기 보고서 · PDF p.34
+  - term: 표
+  - definition: 연결 손익계산서
+  - term: 행
+  - definition: Revenue
+  - term: 열
+  - definition: 2024 Q USD
+  - term: 실제 비교 기간
+  - definition: 2024-07-01 — 2024-09-30 · 3개월 · 단독 분기
+  - paragraph: 수집 수치와 출처 정보 · 원문 이미지 아님. PDF에서 표 제목·행·열·단위를 함께 확인하세요.
+  - link "발행사 원문 p.34 크게 열기 ↗":
+    - /url: https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf#page=34
+  - paragraph: 다른 쪽이 표시되면 PDF 뷰어의 쪽 번호에 34를 입력하세요.

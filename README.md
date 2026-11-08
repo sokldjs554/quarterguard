@@ -4,7 +4,7 @@
 
 공식 금융 문서의 근거를 찾아 기간·연결 범위·통화·단위를 확인하고, 계산하거나 판단을 보류하는 검토 도구입니다. 규칙 기반의 실제 MCP 실행과 DART 대조를 제공하며, 자율 LLM 에이전트로 표현하지 않습니다.
 
-[공개 데모](https://quarterguard.onrender.com) · [v1.4 보완 보고](docs/completion-v1.4.md) · [현재 공고 대조](docs/job-fit-v2.md) · [새 평가와 실패 전체](docs/evaluation-v2.md) · [직접 코드 검토](docs/code-review-kit/README.md) · [사용자 검증 양식](docs/validation-kit/README.md)
+[공개 데모](https://quarterguard.onrender.com) · [2026-11-08 지원 근거](docs/application-evidence-20261108.md) · [v1.4 보완 보고](docs/completion-v1.4.md) · [현재 공고 대조](docs/job-fit-v2.md) · [새 평가와 실패 전체](docs/evaluation-v2.md) · [직접 코드 검토](docs/code-review-kit/README.md) · [사용자 검증 양식](docs/validation-kit/README.md)
 
 ## 직접 확인하기
 
@@ -20,7 +20,9 @@
 
 현재 제품 화면은 흰 작업면·비교표·문서 근거를 연결하는 기존 흐름을 유지합니다. 채팅 UI로 변경하지 않았습니다. 개인 메모/확인 표시는 이 브라우저에 저장하며 자동 금융 판정을 변경하지 않습니다.
 
-![공시 검토 작업지](docs/images/desktop-v1.4-verified.png)
+![공시 검토 작업지](docs/images/desktop-feedback-20261108.png)
+
+[2026-11-08 피드백 반영·PC/모바일 크기 검사](docs/feedback-followup-20261108.md): 선택 근거 확대, 실제 비교 기간 강조, 보류 사유에서 설정 이동. 화면 코드 기준 `704c3b0`; 개선 후 사람 재검토는 아직 없습니다.
 
 ## 파싱과 검색: 개선과 남은 실패
 
@@ -58,13 +60,15 @@ MCP는 검색→근거→문맥 검사→계산/보류의 규칙 기반 흐름�
 
 DART는 삼성전자2024 반기·3분기×연결·별도4개 조회만 허용합니다. 서버 키,24시간 캐시,60초 간격,인스턴스 기록 기준 일8회/누적200회 제한을 적용합니다. 무료 서버 재시작 시 기록이 초기화될 수 있습니다. LLM은 키·유료 승인·지속 원장이 모두 없으면 차단합니다. [범위·비용 통제](docs/public-providers.md).
 
-과거 실제 호출은 Actions OpenAI4회, Actions DART4회, 공개 데모 DART4회입니다. 이번 작업의 추가 호출 수와 비용은 [최종 보고](docs/completion-v1.4.md)에 별도로 기록하며 과거 기록을 새 호출로 합산하지 않습니다. 과거 [GPT 응답](artifacts/live-openai.json), [DART Actions](artifacts/live-dart.json), [DART 공개 검증](artifacts/public-dart.json)은 변경하지 않았습니다.
+과거 실제 호출은 Actions OpenAI4회, Actions DART4회, 공개 데모 DART4회입니다. v1.4 당시 추가 호출은 [당시 최종 보고](docs/completion-v1.4.md), 11월 7일 이후 확인은 [날짜별 지원 근거](docs/application-evidence-20261108.md)에 별도로 기록하며 과거 기록을 새 호출로 합산하지 않습니다. 과거 [GPT 응답](artifacts/live-openai.json), [DART Actions](artifacts/live-dart.json), [DART 공개 검증](artifacts/public-dart.json)은 변경하지 않았습니다.
 
 ## 사람이 직접 확인할 부분
 
-지인 일반 사용자와 회계 관련 참여 가능자가 있다는 사용자 진술은 확인했습니다. 실제 역할·경력·동의와 세션 수행은 아직 확인 전이며, 실제 참여자 사용·전문가 검수·고객 환경 배포 기록은 없습니다. [공개 자료 시나리오·동의·기록 양식](docs/validation-kit/README.md)을 준비했습니다. 참가자의 실제 관계/역할과 공개 범위에 동의받고, 관찰한 내용만 작성해야 합니다.
+2026-11-07 개발자 시연과 **대학생 1명의 실제 피드백**을 확보했습니다. 앱 조작·원문 대조·검산은 작성자가 수행했고 대학생은 종료 질문에 의견을 제공했습니다. 익명 요약의 GitHub·지원서 활용 동의를 작성자가 확인했습니다. [역할·원문·관찰·의견 기록](docs/validation-kit/session-a-20261107.md). 참여자 독립 업무 성공률, 금융 전문가 검수나 고객사 배포를 입증하지 않습니다.
 
-본인 코드 검토는 파서 실패/수정, 분기·누적/연결·별도 차단, DART/IR 단위 대조의 세 항목으로 준비했습니다. [함수·테스트·입출력·검토 질문](docs/code-review-kit/README.md). 사용자가 확인하기 전에는 본인 검토·오류 발견·수정 완료로 기록하지 않습니다.
+본인은 파서, 비교 차단, DART 단위 대조 코드를 직접 검토했다고 확인했습니다. 기간 비교는 테스트 2개를 실제 저장·실행·커밋했고, macOS 11.7.11 / Python 3.12.8에서 전체 **143개 테스트 통과**를 보고했습니다. [직접 검토·실행·AI 도움 범위](docs/code-review-kit/review-20261108.md), [원본 커밋과 PR #14](https://github.com/sokldjs554/quarterguard/pull/14). 파싱/DART의 개인 추가 테스트 작성·새 실행 로그는 별도로 확보하지 않았습니다.
+
+금융 분야 친구에게 추가 검토를 부탁할 계획이며 실제 역할·경력·동의·수행 결과는 아직 미확인입니다. [전달 문안·업무 카드·빈 기록지](docs/validation-kit/finance-peer-review.md). 고객 환경 검증은 접근·자료·배포 허가를 확보한 뒤 별도로 진행합니다.
 
 ## 실행과 재현
 
@@ -84,7 +88,7 @@ python scripts/check_artifacts.py
 
 현재 평가 재현은 [원문 평가](docs/evaluation-v2.md), [리랭킹](docs/ranking-v2.md), [LLM 규칙 검사](docs/explanations-v2.md)의 신규 출력 파일 명령을 사용하세요. 기존 실패 파일을 덮어쓰지 않습니다. 전체 PDF·모델 가중치·비밀키는 저장소에 포함하지 않습니다. `requirements-rerank.txt`는 로컬 선택적 실험이며 기본 배포 의존성이 아닙니다.
 
-브라우저 검사는 PC1440×1000/모바일 크기390×844이며 물리 휴대폰 검증이 아닙니다. 직접 HTTPS와 TLS 검증 중계 결과를 구분합니다. 최신 테스트 수·배포 SHA·현재 한계는 [v1.4 보고](docs/completion-v1.4.md)와 [릴리스](https://github.com/sokldjs554/quarterguard/releases/tag/v1.4.0)에 기록합니다.
+브라우저 검사는 PC1440×1000/모바일 크기390×844이며 물리 휴대폰 검증이 아닙니다. 직접 HTTPS와 TLS 검증 중계 결과를 구분합니다. 2026-11-08 테스트·배포 확인은 [지원 근거](docs/application-evidence-20261108.md)에, 과거 결과는 [v1.4 보고](docs/completion-v1.4.md)와 [릴리스](https://github.com/sokldjs554/quarterguard/releases/tag/v1.4.0)에 구분해 기록합니다.
 
 ## 이전 근거와 적용 범위
 

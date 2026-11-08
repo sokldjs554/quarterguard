@@ -12,7 +12,7 @@ export function evidenceInspector(root, facts, sources, onSelect) {
   const metrics = Object.keys(labels);
   root.innerHTML = `
    <div class="source-switcher" aria-label="계산 근거 선택">${pair.map((x,i) => `<button data-source-id="${esc(x.id)}" data-source-index="${i}" class="${i===selectedIndex?'active':''}" aria-pressed="${i===selectedIndex}">${i===0?'A 기준':'B 비교'} · p.${x.page}</button>`).join('')}</div>
-   <div class="source-header"><h3>${docTitle(f.document_id)}</h3><p>삼성전자 · ${scope(f)} 손익계산서 · PDF p.${f.page}</p></div>
+   <div class="source-header"><h3>${docTitle(f.document_id)}</h3><p>삼성전자 · ${scope(f)} 손익계산서 · PDF p.${f.page}</p><p class="source-period"><span>실제 비교 기간</span><strong>${esc(f.start)} — ${esc(f.end)}</strong>${f.months}개월 · ${f.months===3?'단독 분기':'누적'} · ${scope(f)}</p></div>
    <div class="source-tools"><div class="source-tabs" aria-label="근거 표시 방식"><button data-source-mode="table" class="${mode==='table'?'active':''}" aria-pressed="${mode==='table'}">근거표</button><button data-source-mode="pdf" class="${mode==='pdf'?'active':''}" aria-pressed="${mode==='pdf'}">원문 PDF</button></div><a href="${esc(href)}" target="_blank" rel="noopener" id="publisher-link">발행사 원문 ↗</a></div>
    ${mode==='table' ? `
     <div class="document-paper"><div class="paper-title">${scope(f)} 손익계산서 · 추출 수치</div><div class="paper-subtitle">표시 단위: ${unit(f)} · 보고서 기준 ${source.report_end}</div>
@@ -25,11 +25,14 @@ export function evidenceInspector(root, facts, sources, onSelect) {
      }).join('')}</tbody></table></div>
      <div class="paper-caption"><span>수집 수치로 재구성한 표<br>원문 이미지 아님 · 정확한 배치는 PDF 참조</span><b>${f.page}</b></div>
     </div>` : `<p class="pdf-notice">발행사 PDF 직접 표시 · 외부 연결 또는 브라우저에서 표시가 제한되면 <a href="${esc(href)}" target="_blank" rel="noopener">새 탭의 원문</a>을 이용하세요. 근거표로 돌아가도 수치 검토를 계속할 수 있습니다.</p><iframe class="pdf-frame" title="${esc(docTitle(f.document_id))} 원문 PDF ${f.page}페이지" src="${esc(href)}" referrerpolicy="no-referrer"></iframe>`}
-   <div class="selected-location"><strong>${esc(f.row)} → ${esc(f.column)} · ${money(f)} ${unit(f)}</strong>${f.start} — ${f.end} · ${f.months}개월 · ${scope(f)}</div>
+   <div class="selected-location"><strong>${esc(f.row)} → ${esc(f.column)} · ${money(f)} ${unit(f)}</strong>${f.start} — ${f.end} · ${f.months}개월 · ${scope(f)}<button id="enlarge-source" class="secondary" aria-haspopup="dialog">선택 근거 크게 보기</button></div>
+   <dialog id="source-detail-dialog" aria-labelledby="source-detail-title"><div class="dialog-heading"><h2 id="source-detail-title">선택 근거 크게 보기</h2><button id="close-source-detail" class="icon-button" aria-label="확대 근거 닫기">×</button></div><p class="detail-amount">${money(f)} <span>${unit(f)}</span></p><dl class="source-detail-fields"><dt>문서</dt><dd>${docTitle(f.document_id)} · PDF p.${f.page}</dd><dt>표</dt><dd>${scope(f)} 손익계산서</dd><dt>행</dt><dd>${esc(f.row)}</dd><dt>열</dt><dd>${esc(f.column)}</dd><dt>실제 비교 기간</dt><dd>${esc(f.start)} — ${esc(f.end)} · ${f.months}개월 · ${f.months===3?'단독 분기':'누적'}</dd></dl>${f.currency==='USD'?`<p class="detail-notice">참고 환산액 · KRW ${esc(f.translation_rate)}/USD<br>환산 주석 p.${f.translation_note_page} · 보고서 간 산술 비교 제한</p>`:''}<p class="detail-notice">수집 수치와 출처 정보 · 원문 이미지 아님. PDF에서 표 제목·행·열·단위를 함께 확인하세요.</p><a href="${esc(href)}" target="_blank" rel="noopener">발행사 원문 p.${f.page} 크게 열기 ↗</a><p class="detail-notice">다른 쪽이 표시되면 PDF 뷰어의 쪽 번호에 ${f.page}를 입력하세요.</p></dialog>
    ${f.currency==='USD'?`<p class="source-warning">참고 환산액 · KRW ${esc(f.translation_rate)}/USD<br>환산 주석 p.${f.translation_note_page} · 보고서 간 산술 비교 제한</p>`:''}
    <details class="source-provenance"><summary>수집·출처 정보</summary><dl><dt>수치 ID</dt><dd>${esc(f.id)}</dd><dt>문서 SHA-256</dt><dd>${esc(f.document_sha256)}</dd><dt>자료 확인</dt><dd>${esc(source.accessed)}</dd></dl></details>`;
   root.querySelectorAll('[data-source-id]').forEach(b => b.onclick = () => { const index=b.dataset.sourceIndex;onSelect(b.dataset.sourceId,Number(index));root.querySelector(`[data-source-index="${index}"]`)?.focus({preventScroll:true}); });
   root.querySelectorAll('[data-source-mode]').forEach(b => b.onclick = () => { mode=b.dataset.sourceMode;render();root.querySelector(`[data-source-mode="${mode}"]`)?.focus({preventScroll:true}); });
+  root.querySelector('#enlarge-source').onclick = () => root.querySelector('#source-detail-dialog').showModal();
+  root.querySelector('#close-source-detail').onclick = () => root.querySelector('#source-detail-dialog').close();
  }
  return {show,clear(){selected=null;root.innerHTML='<div class="empty">현재 설정의 근거 없음</div>';}};
 }

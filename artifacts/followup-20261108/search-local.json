@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-11-08T05:42:19.954372+00:00",
+  "base_url": "http://127.0.0.1:8005",
+  "passed": 10,
+  "checks": [
+    "1440:current_report_counts_and_no_overflow",
+    "1440:search:삼성전자 2024년 3분기 연결 매출액 3개월 백만원",
+    "1440:search:What was Samsung consolidated revenue for Q3 2024 quarter in million KRW?",
+    "1440:search:삼성전자 2024 3분기 연결 매출액",
+    "1440:search:Apple 2024 Q3 consolidated revenue quarter million KRW",
+    "390:current_report_counts_and_no_overflow",
+    "390:search:삼성전자 2024년 3분기 연결 매출액 3개월 백만원",
+    "390:search:What was Samsung consolidated revenue for Q3 2024 quarter in million KRW?",
+    "390:search:삼성전자 2024 3분기 연결 매출액",
+    "390:search:Apple 2024 Q3 consolidated revenue quarter million KRW"
+  ],
+  "page_errors": [],
+  "external_provider_calls": 0,
+  "backend": "real, not intercepted",
+  "physical_mobile_device": false
+}

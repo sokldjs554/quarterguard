@@ -1,0 +1,68 @@
+{
+  "checked_at": "2026-11-07T18:14:31.981626+00:00",
+  "health": {
+    "status": "ok",
+    "facts": 192,
+    "commit": "6b20c75244d0cc4cbecfd0e6d6fd1403d185ab31",
+    "version": "1.4.0"
+  },
+  "checks": [
+    {
+      "mode": "qoq",
+      "request": {
+        "current": {
+          "document": "s24q3",
+          "scope": "CFS",
+          "period": "q",
+          "currency": "KRW",
+          "year": 2024
+        },
+        "base": {
+          "document": "s24q3",
+          "scope": "CFS",
+          "period": "q",
+          "currency": "KRW",
+          "year": 2023
+        },
+        "mode": "qoq"
+      },
+      "observed": {
+        "status": "needs_review",
+        "issues": [
+          "PERIOD_MISMATCH"
+        ],
+        "growth_pct": null
+      },
+      "execution_mode": "table_calculation"
+    },
+    {
+      "mode": "yoy",
+      "request": {
+        "current": {
+          "document": "s24q3",
+          "scope": "CFS",
+          "period": "q",
+          "currency": "KRW",
+          "year": 2024
+        },
+        "base": {
+          "document": "s24q3",
+          "scope": "CFS",
+          "period": "q",
+          "currency": "KRW",
+          "year": 2023
+        },
+        "mode": "yoy"
+      },
+      "observed": {
+        "status": "verified",
+        "issues": [],
+        "growth_pct": "17.3491"
+      },
+      "execution_mode": "table_calculation"
+    }
+  ],
+  "tls_verification": true,
+  "provider_calls": 0,
+  "note": "Actual public worksheet API; deterministic calculation, not an MCP execution or browser test."
+}
