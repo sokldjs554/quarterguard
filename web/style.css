@@ -152,6 +152,20 @@ select { border:1px solid #cdd1c5; padding:5px 7px; background:#fff; min-width:0
 .paper-caption b { font-weight:500; white-space:nowrap; }
 .selected-location { padding:15px 18px; font-size:11px; line-height:1.8; color:var(--muted); }
 .selected-location strong { display:block; font-weight:500; color:var(--ink); }
+.selected-location button { display:block; margin-top:10px; }
+.source-header .source-period { margin-top:12px; padding:10px 12px; border-left:2px solid var(--line); background:var(--subtle); color:var(--ink); line-height:1.7; }
+.source-period span,.source-period strong { display:block; }
+.source-period span { color:var(--muted); font-size:11px; }
+.source-period strong { font-size:13px; font-weight:500; }
+.review-setting-link { display:block; padding:8px 0; margin-top:4px; border:0; background:none; color:inherit; text-decoration:underline; text-underline-offset:3px; cursor:pointer; }
+.source-detail-fields { display:grid; grid-template-columns:100px minmax(0,1fr); gap:12px 16px; font-size:15px; line-height:1.7; }
+.source-detail-fields dt { color:var(--muted); }
+.source-detail-fields dd { margin:0; overflow-wrap:anywhere; }
+.detail-amount { font-size:clamp(24px,5vw,36px); font-variant-numeric:tabular-nums; margin:20px 0; overflow-wrap:anywhere; }
+.detail-amount span { font-size:16px; }
+.detail-notice { font-size:12px; line-height:1.7; color:var(--muted); margin:16px 0; }
+#source-detail-dialog a { font-size:14px; }
+@media(max-width:600px) { .source-detail-fields { grid-template-columns:1fr; gap:4px; }.source-detail-fields dd { margin-bottom:10px; } }
 .source-provenance { padding:0 18px 18px; font-size:11px; color:var(--muted); }
 .source-provenance summary { cursor:pointer; }
 .source-provenance dl { margin:12px 0 0; }

@@ -54,6 +54,7 @@ function bindNote(row) {
 function settings(open) {
  $('#comparison-settings').hidden=!open;$('#settings-btn').setAttribute('aria-expanded',String(open));
 }
+const reviewSettings={PERIOD_MISMATCH:['base-period','B 기간 설정 확인'],SCOPE_MISMATCH:['base-scope','B 범위 설정 확인']};
 function updateContext() {
  const request=selection();
  const describe=s=>`${s.year}년 ${s.document==='s24q3'?'3분기':'2분기'} ${s.period==='ytd'?'누적':'단독'} · ${s.scope==='CFS'?'연결':'별도'} · ${s.currency==='KRW'?'백만 원':'천 USD'}`;
@@ -116,8 +117,8 @@ async function execute(live) {
 function render() {
  const rows=current.rows,first=rows[0],failed=rows.filter(r=>r.result.status!=='verified').length;
  rows.forEach(row=>getNote(row,current.selection.mode));
- $('#current-heading').innerHTML=`기준 A <span class="column-subtitle">${first.current.start.slice(0,7)}–${first.current.end.slice(0,7)} · ${unit(first.current)}</span>`;
- $('#base-heading').innerHTML=`비교 B <span class="column-subtitle">${first.base.start.slice(0,7)}–${first.base.end.slice(0,7)} · ${unit(first.base)}</span>`;
+ $('#current-heading').innerHTML=`기준 A <span class="column-subtitle">${first.current.start.slice(0,7)}–${first.current.end.slice(0,7)} · ${first.current.months}개월 · ${unit(first.current)}</span>`;
+ $('#base-heading').innerHTML=`비교 B <span class="column-subtitle">${first.base.start.slice(0,7)}–${first.base.end.slice(0,7)} · ${first.base.months}개월 · ${unit(first.base)}</span>`;
  $('#table-summary').textContent=`${rows.length}개 항목 · ${failed?'확인 필요 '+failed+'건':'문맥 일치'}`;
  $('#worksheet-rows').innerHTML=rows.map((r,i)=>{
   const ok=r.result.status==='verified',value=r.result.growth_pct;
@@ -134,7 +135,12 @@ function selectRow() {
  document.querySelectorAll('[data-row]').forEach(tr=>tr.classList.toggle('selected',tr.dataset.row===selectedMetric));
  document.querySelectorAll('[data-fact]').forEach(b=>b.classList.toggle('active',b.dataset.metric===selectedMetric&&b.dataset.side===selectedSide));
  const a=row.current,b=row.base,r=row.result,ok=r.status==='verified';
- $('#finding').innerHTML=`<div class="finding-heading"><h3>${labels[row.metric]} · 검토 근거</h3><span class="${ok?'ok':'warn'}">${ok?'비교 조건 일치':'계산 보류'}</span></div><div class="context-checks"><span class="${r.issues.includes('PERIOD_MISMATCH')?'bad':''}">기간 ${a.months}개월 ↔ ${b.months}개월</span><span class="${r.issues.includes('SCOPE_MISMATCH')?'bad':''}">범위 ${scope(a)} ↔ ${scope(b)}</span><span class="${r.issues.some(x=>['CURRENCY_MISMATCH','CONVENIENCE_TRANSLATION'].includes(x))?'bad':''}">${unit(a)} ↔ ${unit(b)}</span></div>${ok?`<div class="calculation">(${money(a)} ÷ ${money(b)} − 1) × 100 = ${esc(r.growth_pct)}%</div><p class="calculation-note">문서·행·열의 출처 확인 · Decimal 계산 · 소수점 4자리 반올림</p>`:r.issues.map(x=>`<div class="finding-issue">${esc(issues[x]?.[0]||x)}<small>${esc(issues[x]?.[1]||'근거 재확인 필요')}</small></div>`).join('')}`;
+ $('#finding').innerHTML=`<div class="finding-heading"><h3>${labels[row.metric]} · 검토 근거</h3><span class="${ok?'ok':'warn'}">${ok?'비교 조건 일치':'계산 보류'}</span></div><div class="context-checks"><span class="${r.issues.includes('PERIOD_MISMATCH')?'bad':''}">기간 ${a.months}개월 ↔ ${b.months}개월</span><span class="${r.issues.includes('SCOPE_MISMATCH')?'bad':''}">범위 ${scope(a)} ↔ ${scope(b)}</span><span class="${r.issues.some(x=>['CURRENCY_MISMATCH','CONVENIENCE_TRANSLATION'].includes(x))?'bad':''}">${unit(a)} ↔ ${unit(b)}</span></div>${ok?`<div class="calculation">(${money(a)} ÷ ${money(b)} − 1) × 100 = ${esc(r.growth_pct)}%</div><p class="calculation-note">문서·행·열의 출처 확인 · Decimal 계산 · 소수점 4자리 반올림</p>`:r.issues.map(x=>`<div class="finding-issue">${esc(issues[x]?.[0]||x)}<small>${esc(issues[x]?.[1]||'근거 재확인 필요')}</small>${reviewSettings[x]?`<button class="review-setting-link" data-review-setting="${reviewSettings[x][0]}">${reviewSettings[x][1]} →</button>`:''}</div>`).join('')}`;
+ $('#finding').querySelectorAll('[data-review-setting]').forEach(button=>button.onclick=()=>{
+  if(busy)return;
+  settings(true);const target=document.getElementById(button.dataset.reviewSetting);
+  target.scrollIntoView({block:'center'});target.focus({preventScroll:true});
+ });
  inspector.show(row[selectedSide],[a,b],selectedSide==='current'?0:1);$('#source-counter').textContent=`${selectedSide==='current'?'A 기준':'B 비교'} · ${labels[row.metric]}`;
  bindNote(row);updateContext();
 }
