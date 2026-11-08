@@ -1,0 +1,15 @@
+{
+  "checked_code_commit": "704c3b0936a543eb3292a3e3460435eedb5e72eb",
+  "local_test_note": "Python and legacy browser checks ran before commit publication; tracked code tree identical to 704c3b0. Feedback screenshot run repeated on the clean published code commit.",
+  "web_sha256": {
+    "web/app.js": "871567272f1129653e8cdefd7ad1bb07fe50d4fcee7304982b42011ffc2670aa",
+    "web/evidence.js": "05306bdcd4320c88f32666a58a6eb1a358e2cc7479b21cb8e7a33b122f41ed32",
+    "web/style.css": "44dca5d110d983881cbc0a4ef17768320fd34dc5ab7f974ddbb34becef02c944"
+  },
+  "historical_artifacts_modified": false,
+  "new_paid_api_calls": 0,
+  "new_dart_calls": 0,
+  "billing_queried": false,
+  "human_retest": false,
+  "test_development": "Initial browser check failed on missing selected-period display; next attempt exposed a wrong test selector (#close-settings), corrected to existing #settings-close. Final 12 checks pass."
+}

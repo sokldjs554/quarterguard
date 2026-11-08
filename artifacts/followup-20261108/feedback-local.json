@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-11-08T05:44:42.041438+00:00",
+  "url": "http://127.0.0.1:8005",
+  "checks": [
+    "desktop:half_year_document_contains_second_quarter",
+    "desktop:enlarged_evidence_matches_selected_fact_and_returns_focus",
+    "desktop:source_change_does_not_reuse_previous_amount",
+    "desktop:period_shortcut_focuses_without_changing_conditions",
+    "desktop:scope_shortcut_preserves_guard_until_user_corrects_scope",
+    "desktop:worksheet_has_no_horizontal_page_overflow",
+    "mobile-size:half_year_document_contains_second_quarter",
+    "mobile-size:enlarged_evidence_matches_selected_fact_and_returns_focus",
+    "mobile-size:source_change_does_not_reuse_previous_amount",
+    "mobile-size:period_shortcut_focuses_without_changing_conditions",
+    "mobile-size:scope_shortcut_preserves_guard_until_user_corrects_scope",
+    "mobile-size:worksheet_has_no_horizontal_page_overflow"
+  ],
+  "page_errors": [],
+  "provider_calls": 0,
+  "method": "Playwright Chromium desktop/mobile viewport; not a physical phone or human usability study"
+}
