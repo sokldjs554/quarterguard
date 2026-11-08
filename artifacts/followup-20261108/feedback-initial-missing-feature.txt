@@ -1,0 +1,196 @@
+Traceback (most recent call last):
+  File "/workspace/quarterguard/scripts/browser_feedback_check.py", line 37, in <module>
+    expect(page.locator('.source-period')).to_contain_text('2024-04-01')
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 22016, in to_contain_text
+    self._sync(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 303, in to_contain_text
+    await self._expect_impl(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 128, in _expect_impl
+    _record_soft_or_raise(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 60, in _record_soft_or_raise
+    raise error
+AssertionError: Locator expected to contain text '2024-04-01'
+Actual value: None
+Error: element(s) not found 
+Call log:
+  - Expect "to_contain_text" with timeout 5000ms
+  - waiting for locator(".source-period")
+
+Aria snapshot:
+- link "작업 영역으로 이동":
+  - /url: "#main"
+- banner:
+  - link "QuarterGuard 홈":
+    - /url: /
+    - text: QuarterGuard
+  - navigation "주 메뉴":
+    - button "공시 검토"
+    - button "근거 검색"
+    - button "검증 기록"
+  - link "프로젝트 정보 ↗":
+    - /url: https://github.com/sokldjs554/quarterguard
+- complementary "검토 자료":
+  - text: 검토 자료 2 삼성전자 공개 예시
+  - button "2024년 3분기 179쪽 · 영문 IR":
+    - strong: 2024년 3분기
+    - text: 179쪽 · 영문 IR
+  - button "2024년 반기 287쪽 · 영문 IR" [pressed]:
+    - strong: 2024년 반기
+    - text: 287쪽 · 영문 IR
+  - strong: 예시 자료 안내
+  - paragraph: 2024년 반기·3분기 영문 IR 보고서의 손익계산서입니다.
+  - paragraph: 수집된 문서 2건 안에서 비교할 수 있습니다.
+  - link "데이터 범위 ↗":
+    - /url: https://github.com/sokldjs554/quarterguard/blob/main/docs/data.md
+- main:
+  - text: 삼성전자 / 실적 검토
+  - heading "분기 실적 비교" [level=1]
+  - button "CSV 내보내기"
+  - button "비교 검증"
+  - text: 전분기 대비 | A 2024년 3분기 단독 · 연결 · 백만 원 / B 2024년 2분기 단독 · 연결 · 백만 원
+  - button "비교 설정"
+  - region "손익 항목":
+    - heading "손익 항목" [level=2]
+    - status: 6개 항목 · 문맥 일치
+    - table:
+      - rowgroup:
+        - row "항목 기준 A 2024-07–2024-09 · 백만 원 비교 B 2024-04–2024-06 · 백만 원 증감률 검토":
+          - columnheader "항목"
+          - columnheader "기준 A 2024-07–2024-09 · 백만 원"
+          - columnheader "비교 B 2024-04–2024-06 · 백만 원"
+          - columnheader "증감률"
+          - columnheader "검토"
+      - rowgroup:
+        - row "매출액 매출액 기준 79,098,731 백만 원 근거 매출액 비교 74,068,302 백만 원 근거 +6.7916% 조건 일치":
+          - cell "매출액":
+            - button "매출액"
+          - cell "매출액 기준 79,098,731 백만 원 근거":
+            - button "매출액 기준 79,098,731 백만 원 근거": 79,098,731
+          - cell "매출액 비교 74,068,302 백만 원 근거":
+            - button "매출액 비교 74,068,302 백만 원 근거": 74,068,302
+          - cell "+6.7916%"
+          - cell "조건 일치"
+        - row "매출원가 매출원가 기준 49,095,083 백만 원 근거 매출원가 비교 44,312,026 백만 원 근거 +10.7940% 조건 일치":
+          - cell "매출원가":
+            - button "매출원가"
+          - cell "매출원가 기준 49,095,083 백만 원 근거":
+            - button "매출원가 기준 49,095,083 백만 원 근거": 49,095,083
+          - cell "매출원가 비교 44,312,026 백만 원 근거":
+            - button "매출원가 비교 44,312,026 백만 원 근거": 44,312,026
+          - cell "+10.7940%"
+          - cell "조건 일치"
+        - row "매출총이익 매출총이익 기준 30,003,648 백만 원 근거 매출총이익 비교 29,756,276 백만 원 근거 +0.8313% 조건 일치":
+          - cell "매출총이익":
+            - button "매출총이익"
+          - cell "매출총이익 기준 30,003,648 백만 원 근거":
+            - button "매출총이익 기준 30,003,648 백만 원 근거": 30,003,648
+          - cell "매출총이익 비교 29,756,276 백만 원 근거":
+            - button "매출총이익 비교 29,756,276 백만 원 근거": 29,756,276
+          - cell "+0.8313%"
+          - cell "조건 일치"
+        - row "판매관리비 판매관리비 기준 20,820,277 백만 원 근거 판매관리비 비교 19,312,398 백만 원 근거 +7.8078% 조건 일치":
+          - cell "판매관리비":
+            - button "판매관리비"
+          - cell "판매관리비 기준 20,820,277 백만 원 근거":
+            - button "판매관리비 기준 20,820,277 백만 원 근거": 20,820,277
+          - cell "판매관리비 비교 19,312,398 백만 원 근거":
+            - button "판매관리비 비교 19,312,398 백만 원 근거": 19,312,398
+          - cell "+7.8078%"
+          - cell "조건 일치"
+        - row "영업이익 영업이익 기준 9,183,371 백만 원 근거 영업이익 비교 10,443,878 백만 원 근거 -12.0693% 조건 일치":
+          - cell "영업이익":
+            - button "영업이익"
+          - cell "영업이익 기준 9,183,371 백만 원 근거":
+            - button "영업이익 기준 9,183,371 백만 원 근거": 9,183,371
+          - cell "영업이익 비교 10,443,878 백만 원 근거":
+            - button "영업이익 비교 10,443,878 백만 원 근거": 10,443,878
+          - cell "-12.0693%"
+          - cell "조건 일치"
+        - row "당기순이익 당기순이익 기준 10,100,904 백만 원 근거 당기순이익 비교 9,841,345 백만 원 근거 +2.6374% 조건 일치":
+          - cell "당기순이익":
+            - button "당기순이익"
+          - cell "당기순이익 기준 10,100,904 백만 원 근거":
+            - button "당기순이익 기준 10,100,904 백만 원 근거": 10,100,904
+          - cell "당기순이익 비교 9,841,345 백만 원 근거":
+            - button "당기순이익 비교 9,841,345 백만 원 근거": 9,841,345
+          - cell "+2.6374%"
+          - cell "조건 일치"
+    - text: 숫자를 선택하면 문서 근거에서 출처를 확인할 수 있습니다.
+    - heading "매출액 · 검토 근거" [level=3]
+    - text: 비교 조건 일치 기간 3개월 ↔ 3개월 범위 연결 ↔ 연결 백만 원 ↔ 백만 원 (79,098,731 ÷ 74,068,302 − 1) × 100 = 6.7916%
+    - paragraph: 문서·행·열의 출처 확인 · Decimal 계산 · 소수점 4자리 반올림
+    - region "개인 검토 기록":
+      - text: 개인 검토 메모 · 매출액
+      - button "확인 표시"
+      - textbox "개인 검토 메모 · 매출액":
+        - /placeholder: 검토한 내용이나 확인이 필요한 사항을 남기세요.
+      - status: 이 브라우저에만 저장됩니다.
+      - button "메모 저장"
+    - status: 수집 수치의 표 계산 · 9.7 ms · 현재 MCP 호출 없음
+    - button "실행 상세"
+  - complementary "선택 수치의 근거":
+    - heading "문서 근거" [level=2]
+    - text: B 비교 · 매출액
+    - button "A 기준 · p.34"
+    - button "B 비교 · p.48" [pressed]
+    - heading "2024년 반기 보고서" [level=3]
+    - paragraph: 삼성전자 · 연결 손익계산서 · PDF p.48
+    - button "근거표" [pressed]
+    - button "원문 PDF"
+    - link "발행사 원문 ↗":
+      - /url: https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf#page=48
+    - text: "연결 손익계산서 · 추출 수치 표시 단위: 백만 원 · 보고서 기준 2024-06-30"
+    - table:
+      - rowgroup:
+        - row "원문 항목 2024 3개월 분기 2023 3개월 분기 2024 6개월 누적 2023 6개월 누적":
+          - columnheader "원문 항목"
+          - columnheader "2024 3개월 분기"
+          - columnheader "2023 3개월 분기"
+          - columnheader "2024 6개월 누적"
+          - columnheader "2023 6개월 누적"
+      - rowgroup:
+        - row "Revenue 74,068,302 60,005,533 145,983,903 123,750,904":
+          - cell "Revenue"
+          - cell "74,068,302"
+          - cell "60,005,533"
+          - cell "145,983,903"
+          - cell "123,750,904"
+        - row "Cost of sales 44,312,026 41,647,190 90,198,358 87,654,283":
+          - cell "Cost of sales"
+          - cell "44,312,026"
+          - cell "41,647,190"
+          - cell "90,198,358"
+          - cell "87,654,283"
+        - row "Gross profit 29,756,276 18,358,343 55,785,545 36,096,621":
+          - cell "Gross profit"
+          - cell "29,756,276"
+          - cell "18,358,343"
+          - cell "55,785,545"
+          - cell "36,096,621"
+        - row "Selling and administrative expenses 19,312,398 17,689,796 38,735,658 34,787,896":
+          - cell "Selling and administrative expenses"
+          - cell "19,312,398"
+          - cell "17,689,796"
+          - cell "38,735,658"
+          - cell "34,787,896"
+        - row "Operating profit 10,443,878 668,547 17,049,887 1,308,725":
+          - cell "Operating profit"
+          - cell "10,443,878"
+          - cell "668,547"
+          - cell "17,049,887"
+          - cell "1,308,725"
+        - row "Profit for the period 9,841,345 1,723,571 16,596,053 3,298,171":
+          - cell "Profit for the period"
+          - cell "9,841,345"
+          - cell "1,723,571"
+          - cell "16,596,053"
+          - cell "3,298,171"
+    - text: 수집 수치로 재구성한 표 원문 이미지 아님 · 정확한 배치는 PDF 참조 48
+    - strong: Revenue → 2024 Q KRW · 74,068,302 백만 원
+    - text: 2024-04-01 — 2024-06-30 · 3개월 · 연결
+    - group: 수집·출처 정보
+  - paragraph: 공개 예시 자료 · 수집 수치의 자동 계산과 도구 재검증을 구분합니다. 외부 API는 검증 기록 화면에서 별도로 요청합니다. 이 작업지는 자동으로 호출하지 않습니다.
+- contentinfo: 공개 문서 기반 검토 · 투자 추천이나 감사 의견이 아닙니다. v1.4.0 · b6362a9

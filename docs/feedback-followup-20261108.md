@@ -31,9 +31,9 @@
 |새 피드백 흐름|12개 통과|PC 1440×1000 / 모바일 크기 390×844, 실제 로컬 서버|
 |외부 API 화면|7개 통과|브라우저에서 준비된 응답 주입; 실제 DART/LLM 호출 아님|
 
-새 검사에서는 확대 후 근거 변경 시 이전 금액이 남지 않는지, 닫기 후 초점 복귀, 설정 이동 후 보류 유지, 사용자가 범위를 맞춘 뒤 정상 비교 복구, 가로 화면 넘침을 확인했다. [실행 결과와 소스 해시](../artifacts/followup-20261108/manifest.json), [Python 출력](../artifacts/followup-20261108/python-tests.log), [새 UI 검사](../artifacts/followup-20261108/feedback-local.json).
+새 검사에서는 확대 후 근거 변경 시 이전 금액이 남지 않는지, 닫기 후 초점 복귀, 설정 이동 후 보류 유지, 사용자가 범위를 맞춘 뒤 정상 비교 복구, 가로 화면 넘침을 확인했다. [실행 결과와 소스 해시](../artifacts/followup-20261108/manifest.json), [Python 출력](../artifacts/followup-20261108/python-tests.txt), [새 UI 검사](../artifacts/followup-20261108/feedback-local.json).
 
-첫 UI 검사는 새 기간 표시 부재로 실패했다. 구현 후 다음 실행에서는 테스트의 기존 닫기 버튼 선택자 오기가 드러났으며 이를 수정했다. 초기 실패를 최종 통과로 소급해서 표시하지 않는다. 기존의 금융 문서 파싱 실패 파일과 과거 평가 수치는 변경하지 않았다.
+첫 UI 검사는 새 기간 표시 부재로 실패했다. 구현 후 다음 실행에서는 테스트의 기존 닫기 버튼 선택자 오기가 드러났으며 이를 수정했다. 초기 실패를 최종 통과로 소급해서 표시하지 않는다. [첫 실패 출력](../artifacts/followup-20261108/feedback-initial-missing-feature.txt), [중간 선택자 오류](../artifacts/followup-20261108/feedback-intermediate-test-selector-error.txt)를 별도 보존했다. 기존의 금융 문서 파싱 실패 파일과 과거 평가 수치는 변경하지 않았다.
 
 ```sh
 python -m uvicorn quarterguard.api:app --host 127.0.0.1 --port 8005
