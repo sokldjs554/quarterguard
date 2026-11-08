@@ -42,3 +42,5 @@ MOBILE_CONTEXT_QA_DIR=work/my-mobile-context-run python scripts/browser_mobile_c
 ![변경 후 모바일](images/mobile-context-abda3f1.png)
 
 남은 사람 검증: b가 변경된 화면에서 같은 조건을 읽고 더 명확한지 확인하는 단계. 기존 직접 수행 결과를 개선 후 성공 결과로 재사용하지 않는다.
+
+**2026-11-09 후속:** 위 문장은 구현 당시 상태다. 이후 [b의 개선 후 직접 재확인 보고](validation-kit/session-b-mobile-recheck-received-20261109.md)를 별도로 받았다. 기본 조건 읽기, 누적·별도 보류 및 복구를 추가 도움 없이 수행했다고 보고했고, 수정 버튼까지 스크롤해야 한다는 불편은 남았다. 수행 날짜·배포 SHA·시간 단축 수치는 이번 제출에 없어 임의로 보완하지 않았다.
