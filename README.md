@@ -4,7 +4,7 @@
 
 공식 금융 문서의 근거를 찾아 기간·연결 범위·통화·단위를 확인하고, 계산하거나 판단을 보류하는 검토 도구입니다. 규칙 기반의 실제 MCP 실행과 DART 대조를 제공하며, 자율 LLM 에이전트로 표현하지 않습니다.
 
-[공개 데모](https://quarterguard.onrender.com) · [2026-11-08 지원 근거](docs/application-evidence-20261108.md) · [v1.4 보완 보고](docs/completion-v1.4.md) · [현재 공고 대조](docs/job-fit-v2.md) · [새 평가와 실패 전체](docs/evaluation-v2.md) · [직접 코드 검토](docs/code-review-kit/README.md) · [사용자 검증 양식](docs/validation-kit/README.md)
+[공개 데모](https://quarterguard.onrender.com) · [2026-11-09 지원 근거](docs/application-evidence-20261109.md) · [v1.4 보완 보고](docs/completion-v1.4.md) · [현재 공고 대조](docs/job-fit-v2.md) · [새 평가와 실패 전체](docs/evaluation-v2.md) · [직접 코드 검토](docs/code-review-kit/README.md) · [사용자 검증 양식](docs/validation-kit/README.md)
 
 ## 직접 확인하기
 
@@ -22,7 +22,7 @@
 
 ![공시 검토 작업지](docs/images/desktop-feedback-20261108.png)
 
-[2026-11-08 피드백 반영·PC/모바일 크기 검사](docs/feedback-followup-20261108.md): 선택 근거 확대, 실제 비교 기간 강조, 보류 사유에서 설정 이동. 화면 코드 기준 `704c3b0`; 개선 후 사람 재검토는 아직 없습니다.
+[2026-11-08 피드백 반영·PC/모바일 크기 검사](docs/feedback-followup-20261108.md): 선택 근거 확대, 실제 비교 기간 강조, 보류 사유에서 설정 이동. 화면 코드 기준 `704c3b0`의 당시 검사입니다. 후속 구현과 사람의 재확인은 아래 날짜별 기록에서 구분합니다.
 
 ## 파싱과 검색: 개선과 남은 실패
 
@@ -70,11 +70,11 @@ DART는 삼성전자2024 반기·3분기×연결·별도4개 조회만 허용합
 
 추가로 금융회사 기업 재무분석·여신심사 지원 경력 3년인 친구 b의 **공개 문서·코드 검토 의견**을 받았다는 진행자 기록을 확보했습니다. [역할·동의·의견·확인 범위](docs/validation-kit/session-b-20261108.md). 익명 요약의 최종 공개 확인과 계속 보관 동의를 받았으며 원본 메모·캡처는 30일 보관 대상입니다. 이 초기 기록에는 새 DART 조회나 모바일 업무별 직접 수행 결과가 포함되지 않습니다. 회사 허가는 미확인이고 고객 환경 배포는 별도 과제로 남습니다. [다음 직접 수행용 업무 카드](docs/validation-kit/finance-peer-review.md).
 
-후속으로 b가 모바일에서 원문 두 매출 수치 확인, 정상 비교, 누적/별도 변경·복구, CSV 다운로드·재확인을 직접 수행했고 이번 기록의 공개도 확인받았다고 진행자가 확인했습니다. [실제 수행 보고와 불편](docs/validation-kit/session-b-task-followup-20261108.md). 금액 가까이에 비교 조건을 보여 달라는 요청에 따라 **모바일 A/B 금액 아래 실제 기간·범위·단위**를 추가했습니다. [변경·전후 화면·자동 검사 15개](docs/mobile-context-followup-20261108.md). 변경 후 참여자의 재검토나 사용성 향상 측정은 아직 없습니다.
+후속으로 b가 모바일에서 원문 두 매출 수치 확인, 정상 비교, 누적/별도 변경·복구, CSV 다운로드·재확인을 직접 수행했고 이번 기록의 공개도 확인받았다고 진행자가 확인했습니다. [실제 수행 보고와 불편](docs/validation-kit/session-b-task-followup-20261108.md). 금액 가까이에 비교 조건을 보여 달라는 요청에 따라 **모바일 A/B 금액 아래 실제 기간·범위·단위**를 추가했습니다. [변경·전후 화면·자동 검사 15개](docs/mobile-context-followup-20261108.md). 이후 [b의 개선 후 직접 재확인](docs/validation-kit/session-b-mobile-recheck-received-20261109.md)을 받았습니다. 추가 도움 없이 조건 읽기·누적/별도 보류와 복구를 수행했다고 보고했으며, 수정 버튼까지 스크롤해야 한다는 불편은 남았습니다. 작업시간 단축은 측정하지 않았습니다.
 
 ## 실행과 재현
 
-Python3.12 권장. 기본 앱은 API 키와 모델 다운로드 없이 실행됩니다. Render 무료 데모는 유휴 후 첫 접속에 대기가 발생할 수 있습니다.
+Python3.12 권장. 기본 앱은 API 키와 모델 다운로드 없이 실행됩니다. Render 무료 데모는 유휴 후 첫 접속에 대기가 발생할 수 있습니다. 반복 접속 장애와 [기동 경로 수정·한계](docs/startup-availability-20261109.md)를 구분해 기록했습니다.
 
 ```sh
 git clone https://github.com/sokldjs554/quarterguard.git
