@@ -1,0 +1,13 @@
+✔ review context includes ordered evidence, mode and document version (1.345873ms)
+✔ review persists only valid fields; damaged storage is ignored (1.205249ms)
+✔ storage write failures propagate so UI cannot claim saved (0.511861ms)
+✔ CSV preserves numerical output and separates manual review from automated status (0.808584ms)
+✔ CSV neutralizes formula-like notes including leading whitespace (0.570827ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 99.793158

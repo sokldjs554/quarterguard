@@ -1,0 +1,28 @@
+{
+  "baseline_commit": "7a37a89f6e3c0ead75d8fd19f7435a6988a258dd",
+  "source_sha256": {
+    "web/app.js": "aff15ee55e345277f84dfbd99341230c487d69d078c7edb928dd52b7bb37fcb6",
+    "web/index.html": "4b165bd74d67fa5f0e3054c10b0039f782ff9859c1a7258a1aaf3b2b3dcb5364",
+    "web/style.css": "bdc74582892c6d77f3acb1684644ea8002edfa09159b7d82d4f0d3adc4b47486",
+    "scripts/browser_recovery_shortcuts_check.py": "1ff2ed523f1ab0597c73005eea0b6bd24dc0d6f1d951440ade8208e253f708e4",
+    "scripts/browser_feedback_check.py": "79a409192280797b8a443d7826d354fd022e1502a730a4ab4bfd20747eac202d"
+  },
+  "python": {
+    "passed": 144,
+    "seconds": 31.014
+  },
+  "node_passed": 5,
+  "browser_passed": {
+    "new_recovery": 21,
+    "existing_worksheet": 37,
+    "existing_feedback": 14,
+    "existing_context": 15
+  },
+  "physical_device": false,
+  "human_recheck_of_this_change": false,
+  "before": "unmodified baseline UI, local app",
+  "after": "modified local UI matched by source hashes; backend health revision may still show baseline",
+  "paid_api_calls": 0,
+  "hosting_plan_changed": false,
+  "prior_evaluation_artifacts_modified": false
+}
