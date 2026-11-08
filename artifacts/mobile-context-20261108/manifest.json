@@ -1,0 +1,18 @@
+{
+  "ui_commit": "abda3f1f9e5ac2a168297954eff4bac1eff9e041",
+  "ui_sha256": {
+    "web/app.js": "25055fddb8606335d2340e62f136531bfd4c5b88d3d9c1d667eff85df9698562",
+    "web/style.css": "e51ebccc12a2791931d99a9cc6171c0ce67f8b94e534b94c52b90b09629841a1"
+  },
+  "python_tests": 143,
+  "python_seconds": 27.688,
+  "node_tests": 5,
+  "worksheet_checks": 37,
+  "existing_feedback_checks": 14,
+  "mobile_context_checks": 15,
+  "checks_method": "Real local backend; designated failure injections. No new external provider calls.",
+  "code_review": "Independent AI review; 15 checks rerun, no material findings.",
+  "human_after_change_retest": false,
+  "historical_artifacts_modified": false,
+  "note": "Initial regression runs before publication used identical UI files; final mobile run/screenshots use clean published UI commit."
+}
