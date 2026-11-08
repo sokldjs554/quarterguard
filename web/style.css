@@ -77,6 +77,10 @@ select { border:1px solid #cdd1c5; padding:5px 7px; background:#fff; min-width:0
 .section-bar { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 16px; border-bottom:1px solid var(--line); }
 .section-bar span { font-size:11px; color:var(--muted); }
 .sheet-scroll { overflow:auto; scrollbar-width:thin; }
+.comparison-recovery { padding:12px 16px; border-bottom:1px solid var(--line); background:var(--amber-bg); color:var(--amber); }
+.recovery-summary { color:inherit; font-size:12px; overflow-wrap:anywhere; }
+.recovery-actions { display:flex; flex-wrap:wrap; gap:4px 18px; margin-top:4px; }
+.recovery-actions .review-setting-link { min-height:44px; margin:0; text-align:left; }
 .financial-table { border-collapse:collapse; width:100%; font-size:12px; }
 .financial-table th { text-align:right; padding:12px 8px; background:var(--subtle); font-size:11px; color:var(--muted); font-weight:500; white-space:nowrap; border-bottom:1px solid var(--line); }
 .financial-table th:nth-child(2) { text-align:left; padding-left:16px; }
