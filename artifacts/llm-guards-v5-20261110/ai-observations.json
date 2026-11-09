@@ -1,0 +1,29 @@
+{
+  "author": "AI assistant",
+  "human_verdict": null,
+  "semantic_accuracy": null,
+  "observations": [
+    {
+      "case_id": "period-mismatch",
+      "quote": "해당 검색 범위에서 확인할 수 없습니다.",
+      "concern": "Tool has two evidence facts and only PERIOD_MISMATCH; the appended search-absence phrase may imply missing evidence. Needs human adjudication.",
+      "display_unit_omitted": true
+    },
+    {
+      "case_id": "citation-draft",
+      "quote": "따라서 매출 증가율은 6.7916입니다.",
+      "concern": "The final number lacks a percent marker; also check the phrase 같은 보고서 기준 against two different source documents."
+    },
+    {
+      "case_id": "no-evidence",
+      "quote": "context needs review.",
+      "concern": "Unexplained English internal wording remains in the Korean output."
+    },
+    {
+      "case_id": "scope-mismatch",
+      "quote": "다른 분기라는 사실만으로는 보류 사유가 아닙니다.",
+      "concern": "New wording explicitly separates adjacent quarter dates from the scope rejection. This is an AI observation, not a new b verdict."
+    }
+  ],
+  "automatic_check_limit": "document_and_page_named expects a page marker before the digits, so PDF 34쪽 may fail literal coverage even when the location is written. Original audit score is preserved."
+}

@@ -52,3 +52,16 @@ class LatestProgressTests(unittest.TestCase):
         self.assertEqual(r['personal_review']['added_tests'],5)
         self.assertEqual(r['verification']['python_tests'],191)
         self.assertIn('Ran 191 tests',(ROOT/r['verification']['log']).read_text())
+
+    def test_new_live_batch_does_not_reuse_previous_human_verdicts(self):
+        r=TestClient(app).get('/api/evaluation/latest').json()['summary']
+        batch=r['llm'].get('latest_guard_batch')
+        self.assertIsNotNone(batch)
+        actual=json.loads((ROOT/'artifacts/llm-guards-v5-20261110/report.json').read_text())
+        self.assertEqual(batch['calls'],actual['calls_attempted'])
+        self.assertEqual(batch['structured_exact'],actual['structured_exact_count'])
+        self.assertEqual(batch['estimated_cost_usd'],actual['usage_estimated_cost_usd'])
+        self.assertFalse(batch['human_reviewed'])
+        self.assertEqual(r['human_review']['followup'],{'참':7,'모호':1})
+        historical=json.loads((ROOT/'data/latest-progress-20261110.json').read_text())
+        self.assertFalse(historical['llm']['latest_guard_live_evaluated'])
