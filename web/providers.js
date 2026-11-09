@@ -1,4 +1,5 @@
 import {esc, localTime} from './shared.js';
+import {renderExplanationContext} from './explanation-context.js';
 
 const targets={
  dart:{'s24q3-CFS':'2024년 3분기 · 연결','s24q3-OFS':'2024년 3분기 · 별도','s24q2-CFS':'2024년 반기 · 연결','s24q2-OFS':'2024년 반기 · 별도'},
@@ -16,7 +17,7 @@ function details(provider,r) {
  if(provider==='dart'&&Array.isArray(r.checks))return `<div class="table-overflow"><table class="evaluation-table"><thead><tr><th>근거 ID · 필드</th><th>IR 금액 (원)</th><th>DART 금액 (원)</th><th>대조</th><th>원문</th></tr></thead><tbody>${r.checks.map(c=>`<tr><td>${esc(c.fact_id)}<small>${esc(c.source_field)}</small></td><td class="num">${esc(c.expected_krw)}</td><td class="num">${esc(c.dart_krw??'없음')}</td><td class="${c.passed?'ok':'warn'}">${c.passed?'일치':'불일치'}</td><td>${sourceLink(c.dart_source)}</td></tr>`).join('')}</tbody></table></div><p class="review-caption">매출·영업이익의 단독 분기/누적 금액을 원 단위로 대조합니다. 연결·별도 범위는 요청한 fs_div 기준입니다.</p>`;
  if(provider==='openai'&&r.generated) {
   const g=r.generated;
-  return `<p class="generated-explanation">${esc(g.explanation_ko)}</p><p class="scope-notice">AI 생성 설명 · 문장 의미와 한국어 표현은 사람이 검수하지 않았습니다. 구조화된 수치·판정·근거 ID 검사와 구분하세요.</p><dl class="provider-fields"><dt>판정 / 값</dt><dd>${esc(g.status)} / ${esc(g.value??'없음')}</dd><dt>거부 사유</dt><dd>${esc((g.issues||[]).join(' · ')||'없음')}</dd><dt>근거 ID</dt><dd>${(g.evidence_ids||[]).map(esc).join('<br>')||'없음'}</dd><dt>모델 / 사용량</dt><dd>${esc(r.model)} · 입력 ${esc(number(r.input_tokens))} / 출력 ${esc(number(r.output_tokens))} 토큰</dd></dl><p class="review-caption">규칙 기반 MCP 흐름 뒤에 설명만 생성합니다. LLM이 검증 판정이나 근거를 선택하는 에이전트는 아닙니다.</p>`;
+  return `<h4>AI 생성 설명</h4><p class="generated-explanation">${esc(g.explanation_ko)}</p><p class="scope-notice">이 응답의 문장 의미와 한국어 표현은 사람이 검수하지 않았습니다. 구조화된 수치·판정·근거 ID 검사와 구분하세요.</p>${renderExplanationContext(r.explanation_context)}<dl class="provider-fields"><dt>판정 / 값</dt><dd>${esc(g.status)} / ${esc(g.value??'없음')}</dd><dt>거부 사유</dt><dd>${esc((g.issues||[]).join(' · ')||'없음')}</dd><dt>근거 ID</dt><dd>${(g.evidence_ids||[]).map(esc).join('<br>')||'없음'}</dd><dt>모델 / 사용량</dt><dd>${esc(r.model)} · 입력 ${esc(number(r.input_tokens))} / 출력 ${esc(number(r.output_tokens))} 토큰</dd></dl><p class="review-caption">규칙 기반 MCP 흐름 뒤에 설명만 생성합니다. LLM이 검증 판정이나 근거를 선택하는 에이전트는 아닙니다.</p>`;
  }
  return '';
 }

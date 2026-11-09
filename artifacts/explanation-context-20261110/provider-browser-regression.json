@@ -1,0 +1,15 @@
+{
+  "passed": 7,
+  "checks": [
+    "get_only_boot_fixed_targets_and_explicit_blocked_llm",
+    "heldout_raw_parser_natural_query_failures_and_fixture_limits_visible",
+    "live_dart_exact_amounts_timestamps_and_unknown_bill",
+    "cache_does_not_increment_external_calls",
+    "failed_blocked_and_unknown_outcomes_no_automatic_post_retry",
+    "mock_llm_output_escaped_prose_limits_and_target_reset",
+    "mobile_provider_and_heldout_no_page_overflow"
+  ],
+  "external_provider_calls": 0,
+  "provider_requests": "all intercepted in browser",
+  "page_errors": []
+}

@@ -1,0 +1,404 @@
+{
+  "evaluation_kind": "disclosed_development_tool_result_replay",
+  "source_report": "artifacts/llm-live-20261109/report.json",
+  "source_sha256": "deff2dc025fef8f469c34ecf4a725cadddd29f90b02ab67cdb6500fd750b343d",
+  "code_sha256": {
+    "quarterguard/explanation_context.py": "c0d063e317d372592a1dbc127291b589b4fa57898d28ff37d9a0dd8424013ded",
+    "quarterguard/public_providers.py": "01fc026db604f3bf82d04ebc4b18690b0e223b798c4bc286ca49745600407b51",
+    "web/explanation-context.js": "6b5bd1cf311cb71dcb0214c58c3282843982f16e88e38a95422656581be3e34b"
+  },
+  "new_provider_calls": 0,
+  "new_provider_cost_usd": "0",
+  "historical_bill_queried": false,
+  "fresh_pdf_parsing": false,
+  "new_model_outputs": 0,
+  "new_human_review": false,
+  "sample_count": 8,
+  "context_checks_passed": 8,
+  "semantic_accuracy": null,
+  "records": [
+    {
+      "case_id": "normal-qoq",
+      "original_model_explanation_unchanged": "2024년 3분기 연결 매출은 2024년 2분기 대비 6.7916% 증가했습니다. 단위는 KRW이며, 비교 범위는 연결재무제표(CFS) 매출입니다.",
+      "deterministic_context": {
+        "origin": "deterministic_tool_context",
+        "status": "available",
+        "comparison_status": "verified",
+        "issues": [],
+        "evidence": [
+          {
+            "id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "value": "79098731",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-07-01",
+            "end": "2024-09-30",
+            "months": 3,
+            "scope": "CFS",
+            "document_title": "Samsung Electronics 2024 3Q Interim Business Report",
+            "display_unit": "백만 원",
+            "source_href": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf#page=34",
+            "statement": "79,098,731 백만 원 · 통화 KRW · 2024-07-01 ~ 2024-09-30 · 3개월 · 연결. 근거: Samsung Electronics 2024 3Q Interim Business Report, PDF p.34, Revenue / 2024 Q KRW."
+          },
+          {
+            "id": "s24q2-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q2",
+            "page": 48,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "value": "74068302",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-04-01",
+            "end": "2024-06-30",
+            "months": 3,
+            "scope": "CFS",
+            "document_title": "Samsung Electronics 2024 Half-year Business Report",
+            "display_unit": "백만 원",
+            "source_href": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf#page=48",
+            "statement": "74,068,302 백만 원 · 통화 KRW · 2024-04-01 ~ 2024-06-30 · 3개월 · 연결. 근거: Samsung Electronics 2024 Half-year Business Report, PDF p.48, Revenue / 2024 Q KRW."
+          }
+        ],
+        "notice": "도구 결과의 표시 단위와 원문 위치입니다. AI 설명 문장 전체를 검증했다는 뜻은 아닙니다."
+      },
+      "public_payload_bytes": 4985,
+      "source_context_checks_passed": true
+    },
+    {
+      "case_id": "normal-yoy",
+      "original_model_explanation_unchanged": "2024년 3분기 연결 매출은 2023년 3분기 대비 17.3491% 증가했습니다. 비교 기간은 2024-07-01~2024-09-30과 2023-07-01~2023-09-30이며, 단위는 KRW 기준 연결(CFS) 매출입니다.",
+      "deterministic_context": {
+        "origin": "deterministic_tool_context",
+        "status": "available",
+        "comparison_status": "verified",
+        "issues": [],
+        "evidence": [
+          {
+            "id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "value": "79098731",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-07-01",
+            "end": "2024-09-30",
+            "months": 3,
+            "scope": "CFS",
+            "document_title": "Samsung Electronics 2024 3Q Interim Business Report",
+            "display_unit": "백만 원",
+            "source_href": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf#page=34",
+            "statement": "79,098,731 백만 원 · 통화 KRW · 2024-07-01 ~ 2024-09-30 · 3개월 · 연결. 근거: Samsung Electronics 2024 3Q Interim Business Report, PDF p.34, Revenue / 2024 Q KRW."
+          },
+          {
+            "id": "s24q3-CFS-revenue-2023-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2023 Q KRW",
+            "value": "67404652",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2023-07-01",
+            "end": "2023-09-30",
+            "months": 3,
+            "scope": "CFS",
+            "document_title": "Samsung Electronics 2024 3Q Interim Business Report",
+            "display_unit": "백만 원",
+            "source_href": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf#page=34",
+            "statement": "67,404,652 백만 원 · 통화 KRW · 2023-07-01 ~ 2023-09-30 · 3개월 · 연결. 근거: Samsung Electronics 2024 3Q Interim Business Report, PDF p.34, Revenue / 2023 Q KRW."
+          }
+        ],
+        "notice": "도구 결과의 표시 단위와 원문 위치입니다. AI 설명 문장 전체를 검증했다는 뜻은 아닙니다."
+      },
+      "public_payload_bytes": 4984,
+      "source_context_checks_passed": true
+    },
+    {
+      "case_id": "period-mismatch",
+      "original_model_explanation_unchanged": "전년 동기 비교가 아니라 2024년 9개월 누적 매출과 2023년 3개월 매출을 비교하고 있어 기간이 일치하지 않습니다. 두 값 모두 삼성 CFS 매출이며 단위는 KRW(표시 스케일은 백만원)지만, 이 비교는 제한되어 있어 검증 완료로 볼 수 없습니다.",
+      "deterministic_context": {
+        "origin": "deterministic_tool_context",
+        "status": "available",
+        "comparison_status": "needs_review",
+        "issues": [
+          "PERIOD_MISMATCH"
+        ],
+        "evidence": [
+          {
+            "id": "s24q3-CFS-revenue-2024-ytd-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 YTD KRW",
+            "value": "225082634",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "months": 9,
+            "scope": "CFS",
+            "document_title": "Samsung Electronics 2024 3Q Interim Business Report",
+            "display_unit": "백만 원",
+            "source_href": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf#page=34",
+            "statement": "225,082,634 백만 원 · 통화 KRW · 2024-01-01 ~ 2024-09-30 · 9개월 · 연결. 근거: Samsung Electronics 2024 3Q Interim Business Report, PDF p.34, Revenue / 2024 YTD KRW."
+          },
+          {
+            "id": "s24q3-CFS-revenue-2023-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2023 Q KRW",
+            "value": "67404652",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2023-07-01",
+            "end": "2023-09-30",
+            "months": 3,
+            "scope": "CFS",
+            "document_title": "Samsung Electronics 2024 3Q Interim Business Report",
+            "display_unit": "백만 원",
+            "source_href": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf#page=34",
+            "statement": "67,404,652 백만 원 · 통화 KRW · 2023-07-01 ~ 2023-09-30 · 3개월 · 연결. 근거: Samsung Electronics 2024 3Q Interim Business Report, PDF p.34, Revenue / 2023 Q KRW."
+          }
+        ],
+        "notice": "계산 보류 · 도구의 비교 제한을 유지합니다. 도구 결과의 표시 단위와 원문 위치입니다. AI 설명 문장 전체를 검증했다는 뜻은 아닙니다."
+      },
+      "public_payload_bytes": 5103,
+      "source_context_checks_passed": true
+    },
+    {
+      "case_id": "scope-mismatch",
+      "original_model_explanation_unchanged": "2024년 7~9월 연결(CFS) 매출과 2024년 4~6월 별도(OFS) 매출을 같은 기준으로 직접 비교할 수 없어 검토가 필요합니다. 두 값은 매출이지만 연결/별도 범위가 달라 분기·단위는 같아도 비교 제한이 있습니다.",
+      "deterministic_context": {
+        "origin": "deterministic_tool_context",
+        "status": "available",
+        "comparison_status": "needs_review",
+        "issues": [
+          "SCOPE_MISMATCH"
+        ],
+        "evidence": [
+          {
+            "id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "value": "79098731",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-07-01",
+            "end": "2024-09-30",
+            "months": 3,
+            "scope": "CFS",
+            "document_title": "Samsung Electronics 2024 3Q Interim Business Report",
+            "display_unit": "백만 원",
+            "source_href": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf#page=34",
+            "statement": "79,098,731 백만 원 · 통화 KRW · 2024-07-01 ~ 2024-09-30 · 3개월 · 연결. 근거: Samsung Electronics 2024 3Q Interim Business Report, PDF p.34, Revenue / 2024 Q KRW."
+          },
+          {
+            "id": "s24q2-OFS-revenue-2024-q-KRW",
+            "document_id": "s24q2",
+            "page": 104,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "value": "53734118",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-04-01",
+            "end": "2024-06-30",
+            "months": 3,
+            "scope": "OFS",
+            "document_title": "Samsung Electronics 2024 Half-year Business Report",
+            "display_unit": "백만 원",
+            "source_href": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf#page=104",
+            "statement": "53,734,118 백만 원 · 통화 KRW · 2024-04-01 ~ 2024-06-30 · 3개월 · 별도. 근거: Samsung Electronics 2024 Half-year Business Report, PDF p.104, Revenue / 2024 Q KRW."
+          }
+        ],
+        "notice": "계산 보류 · 도구의 비교 제한을 유지합니다. 도구 결과의 표시 단위와 원문 위치입니다. AI 설명 문장 전체를 검증했다는 뜻은 아닙니다."
+      },
+      "public_payload_bytes": 5092,
+      "source_context_checks_passed": true
+    },
+    {
+      "case_id": "unit-draft",
+      "original_model_explanation_unchanged": "삼성의 연결재무제표(CFS) 매출은 2024년 2분기 74,068,302백만 KRW에서 2024년 3분기 79,098,731백만 KRW로 증가해 QoQ 증가율은 6.7916%입니다. 근거 금액은 모두 KRW 기준이며, 표의 scale=1,000,000에 따라 백만 원 단위로 제시되었습니다.",
+      "deterministic_context": {
+        "origin": "deterministic_tool_context",
+        "status": "available",
+        "comparison_status": "verified",
+        "issues": [],
+        "evidence": [
+          {
+            "id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "value": "79098731",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-07-01",
+            "end": "2024-09-30",
+            "months": 3,
+            "scope": "CFS",
+            "document_title": "Samsung Electronics 2024 3Q Interim Business Report",
+            "display_unit": "백만 원",
+            "source_href": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf#page=34",
+            "statement": "79,098,731 백만 원 · 통화 KRW · 2024-07-01 ~ 2024-09-30 · 3개월 · 연결. 근거: Samsung Electronics 2024 3Q Interim Business Report, PDF p.34, Revenue / 2024 Q KRW."
+          },
+          {
+            "id": "s24q2-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q2",
+            "page": 48,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "value": "74068302",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-04-01",
+            "end": "2024-06-30",
+            "months": 3,
+            "scope": "CFS",
+            "document_title": "Samsung Electronics 2024 Half-year Business Report",
+            "display_unit": "백만 원",
+            "source_href": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf#page=48",
+            "statement": "74,068,302 백만 원 · 통화 KRW · 2024-04-01 ~ 2024-06-30 · 3개월 · 연결. 근거: Samsung Electronics 2024 Half-year Business Report, PDF p.48, Revenue / 2024 Q KRW."
+          }
+        ],
+        "notice": "도구 결과의 표시 단위와 원문 위치입니다. AI 설명 문장 전체를 검증했다는 뜻은 아닙니다."
+      },
+      "public_payload_bytes": 4985,
+      "source_context_checks_passed": true
+    },
+    {
+      "case_id": "no-evidence",
+      "original_model_explanation_unchanged": "검색 결과가 없어 2025년 실적을 확인할 수 없습니다. 수집 범위 밖이거나 조회 데이터가 비어 있어 검증이 필요합니다.",
+      "deterministic_context": {
+        "origin": "deterministic_tool_context",
+        "status": "no_evidence",
+        "comparison_status": "needs_review",
+        "issues": [
+          "SEARCH_EMPTY"
+        ],
+        "evidence": [],
+        "notice": "해당 검색 범위에서 근거를 확인할 수 없습니다. 기업의 실적 자체가 없다는 뜻은 아닙니다. 검색 조건과 수집 범위를 확인하세요."
+      },
+      "public_payload_bytes": 2104,
+      "source_context_checks_passed": true
+    },
+    {
+      "case_id": "conflicting-number-draft",
+      "original_model_explanation_unchanged": "삼성전자의 연결기준 매출은 2024년 2분기(2024-04-01~2024-06-30) 74,068,302백만 KRW에서 2024년 3분기(2024-07-01~2024-09-30) 79,098,731백만 KRW로 증가해 QoQ 기준 6.7916% 상승했습니다. 단위는 KRW이며, 비교 범위는 동일한 연결재무제표(CFS) 매출입니다.",
+      "deterministic_context": {
+        "origin": "deterministic_tool_context",
+        "status": "available",
+        "comparison_status": "verified",
+        "issues": [],
+        "evidence": [
+          {
+            "id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "value": "79098731",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-07-01",
+            "end": "2024-09-30",
+            "months": 3,
+            "scope": "CFS",
+            "document_title": "Samsung Electronics 2024 3Q Interim Business Report",
+            "display_unit": "백만 원",
+            "source_href": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf#page=34",
+            "statement": "79,098,731 백만 원 · 통화 KRW · 2024-07-01 ~ 2024-09-30 · 3개월 · 연결. 근거: Samsung Electronics 2024 3Q Interim Business Report, PDF p.34, Revenue / 2024 Q KRW."
+          },
+          {
+            "id": "s24q2-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q2",
+            "page": 48,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "value": "74068302",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-04-01",
+            "end": "2024-06-30",
+            "months": 3,
+            "scope": "CFS",
+            "document_title": "Samsung Electronics 2024 Half-year Business Report",
+            "display_unit": "백만 원",
+            "source_href": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf#page=48",
+            "statement": "74,068,302 백만 원 · 통화 KRW · 2024-04-01 ~ 2024-06-30 · 3개월 · 연결. 근거: Samsung Electronics 2024 Half-year Business Report, PDF p.48, Revenue / 2024 Q KRW."
+          }
+        ],
+        "notice": "도구 결과의 표시 단위와 원문 위치입니다. AI 설명 문장 전체를 검증했다는 뜻은 아닙니다."
+      },
+      "public_payload_bytes": 4999,
+      "source_context_checks_passed": true
+    },
+    {
+      "case_id": "citation-draft",
+      "original_model_explanation_unchanged": "삼성전자 연결기준(CFS) 매출은 2024년 2분기 74,068,302백만 KRW에서 2024년 3분기 79,098,731백만 KRW로 증가해 전분기 대비 매출 증가율은 6.7916%입니다. 비교 기간은 2024-04-01~2024-06-30과 2024-07-01~2024-09-30의 3개월 분기이고, 단위는 KRW이며 공시 표기는 백만 단위(scale 1,000,000)입니다.",
+      "deterministic_context": {
+        "origin": "deterministic_tool_context",
+        "status": "available",
+        "comparison_status": "verified",
+        "issues": [],
+        "evidence": [
+          {
+            "id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "value": "79098731",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-07-01",
+            "end": "2024-09-30",
+            "months": 3,
+            "scope": "CFS",
+            "document_title": "Samsung Electronics 2024 3Q Interim Business Report",
+            "display_unit": "백만 원",
+            "source_href": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf#page=34",
+            "statement": "79,098,731 백만 원 · 통화 KRW · 2024-07-01 ~ 2024-09-30 · 3개월 · 연결. 근거: Samsung Electronics 2024 3Q Interim Business Report, PDF p.34, Revenue / 2024 Q KRW."
+          },
+          {
+            "id": "s24q2-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q2",
+            "page": 48,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "value": "74068302",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-04-01",
+            "end": "2024-06-30",
+            "months": 3,
+            "scope": "CFS",
+            "document_title": "Samsung Electronics 2024 Half-year Business Report",
+            "display_unit": "백만 원",
+            "source_href": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf#page=48",
+            "statement": "74,068,302 백만 원 · 통화 KRW · 2024-04-01 ~ 2024-06-30 · 3개월 · 연결. 근거: Samsung Electronics 2024 Half-year Business Report, PDF p.48, Revenue / 2024 Q KRW."
+          }
+        ],
+        "notice": "도구 결과의 표시 단위와 원문 위치입니다. AI 설명 문장 전체를 검증했다는 뜻은 아닙니다."
+      },
+      "public_payload_bytes": 4989,
+      "source_context_checks_passed": true
+    }
+  ],
+  "limitations": [
+    "Known eight development cases reused, not holdout evidence.",
+    "Added context is deterministic; original model prose is not corrected or certified.",
+    "Updated public prompt has not been exercised with a live model.",
+    "No improvement rate or new participant review is claimed."
+  ]
+}

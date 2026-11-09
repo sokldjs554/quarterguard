@@ -11,6 +11,8 @@
 
 **2026-11-10 수신 후속:** 같은 참여자 b가 삼성 원문 이미지4개 셀 일치와 실제 LLM8건의 **참5·모호3** 판정을 보고했고 공개를 확인했습니다. [검수 범위·주석·자동 경고와의 차이](docs/validation-kit/session-b-image-llm-received-20261110.md). 자동 경고7/8은 실제 오류율이 아니며, 이번 기록 정리에서 추가 API 호출이나 설명 생성 방식 수정은 없습니다.
 
+**설명 보완:** [단위·검색 범위·인용 위치 개선](docs/explanation-context-20261110.md)을 공개 생성 지침과 별도 도구 근거 안내에 반영했습니다. 추가 API 호출0회이며, 기존 응답 재생 검사와 새 LLM 성능 평가는 구분합니다.
+
 ## 직접 확인하기
 
 공개 작업지는 **삼성전자 2024 반기·3분기 문서 2건, 정본 192개**를 유지합니다. 새로운 기간·기업의 평가 자료를 자동으로 제품에 등록하거나, 모든 문서를 지원한다고 표시하지 않습니다.
@@ -91,7 +93,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 python -m uvicorn quarterguard.api:app --host 0.0.0.0 --port 8000
 python -m unittest discover -s tests -v
-node --test tests/test_review_notes.mjs
+node --test tests/*.mjs
 python scripts/check_artifacts.py
 ```
 
