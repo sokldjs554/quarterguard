@@ -1,0 +1,35 @@
+test_disclosed_dash_in_preceding_row_is_structural_not_a_target_value (tests.test_hyundai_parser.HyundaiParserTests.test_disclosed_dash_in_preceding_row_is_structural_not_a_target_value) ... FAIL
+
+======================================================================
+FAIL: test_disclosed_dash_in_preceding_row_is_structural_not_a_target_value (tests.test_hyundai_parser.HyundaiParserTests.test_disclosed_dash_in_preceding_row_is_structural_not_a_target_value)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_hyundai_parser.py", line 152, in test_disclosed_dash_in_preceding_row_is_structural_not_a_target_value
+    facts = self.parse(text, metrics=['net_profit'])
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/tests/test_hyundai_parser.py", line 44, in parse
+    return parse_statement(text or statement(), doc or document(), 8,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/ingest.py", line 97, in parse_statement
+    return parse_hyundai_statement(text, doc, page, metrics)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/hyundai_ingest.py", line 101, in parse_statement
+    cells = _row(text[header_end:], metric)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/hyundai_ingest.py", line 87, in _row
+    _amounts(previous[0], metric + ' preceding row')
+  File "/workspace/quarterguard/quarterguard/hyundai_ingest.py", line 68, in _amounts
+    raise ValueError(f'UNSUPPORTED_LAYOUT: Hyundai {metric} cells or notes')
+ValueError: UNSUPPORTED_LAYOUT: Hyundai net_profit preceding row cells or notes
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_hyundai_parser.py", line 154, in test_disclosed_dash_in_preceding_row_is_structural_not_a_target_value
+    self.fail(f'Dash in unrelated preceding row must not hide net-profit facts: {exc}')
+AssertionError: Dash in unrelated preceding row must not hide net-profit facts: UNSUPPORTED_LAYOUT: Hyundai net_profit preceding row cells or notes
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=1)

@@ -1,0 +1,63 @@
+{
+  "human_reviewed": false,
+  "expert_gold": false,
+  "author": "AI evaluator",
+  "model_calls": 0,
+  "provider_api_cost_usd": 0,
+  "artifact_sha256": {
+    "artifacts/hyundai-holdout-20261109/baseline-first.json": "846047f5f68649d2cec4c38b4918f7ae1a89833df12e34b3dbc97568b4ab3394",
+    "artifacts/hyundai-holdout-20261109/baseline-first-failures.json": "cb7cd5965eba8223ee3b35d1d8f78b555a58cceec92fbb93f684275eaa4cc5c1",
+    "artifacts/hyundai-holdout-20261109/current-first.json": "b11e6d3bd312d536fcb3f8674a955c8e1e924be8eebdee6e7a2391af99d00897",
+    "artifacts/hyundai-holdout-20261109/current-first-failures.json": "cfaf94032cd74801b97ee993bbc51c2e82586bcb3f9bd7c0579386de755f3207",
+    "artifacts/hyundai-holdout-20261109/post-disclosure-regression.json": "43702df76c2a01bab0a18ed13d3a65b9744ca890d5b31d84fbda4098033d1778",
+    "artifacts/hyundai-final-20261109/current-first.json": "10570cba0ad89921285c6d8282f98c38a2125fa71e3027a8b6461b56378d2776",
+    "artifacts/hyundai-final-20261109/current-first-failures.json": "4eb55dfb3de578b082b06f564eaec619d8257821a1b4ac332e160bdd93f42b94"
+  },
+  "freeze_sha256": {
+    "data/hyundai-holdout-20261109/freeze.json": "cb73921f2d4eacc2ce57a902fdf4a6c53a10157ab46f96f5e90375d923eadf84",
+    "data/hyundai-final-20261109/freeze.json": "90939453de9e72f67a5e246d46666bfbfcc52a18e3e3ee74ae40738de77daa8f"
+  },
+  "final_document": "Hyundai 2025 Q3 CFS, PDF page8",
+  "final_new_current_year_cells": 8,
+  "final_prior_year_cells_overlapping_disclosed_2024": 8,
+  "final_first_raw_statement_summary": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0
+  },
+  "final_first_raw_cell_summary": {
+    "total": 16,
+    "passed": 16,
+    "failed": 0
+  },
+  "final_first_raw_query_summary": {
+    "total": 8,
+    "passed": 8,
+    "failed": 0
+  },
+  "final_first_raw_citation_summary": {
+    "total": 16,
+    "passed": 16,
+    "failed": 0
+  },
+  "final_first_raw_calculation_summary": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0
+  },
+  "production_registry": {
+    "accepted_parsed_facts": 0,
+    "parsed_facts": 16,
+    "production_end_to_end_supported": false,
+    "limitation": "New documents are not added to production canonical registration by this evaluation."
+  },
+  "limitations": [
+    "AI-authored, AI-inspected source cells; no independent human or expert review.",
+    "One newly acquired Hyundai consolidated statement; not broad issuer/layout coverage.",
+    "Comparative prior-year values may overlap disclosed data; only this document was newly withheld.",
+    "Raw downstream uses exact audited parser outputs with an isolated source registry adapter.",
+    "Production corpus and allowlist are unchanged; fixture-assisted results are diagnostic only.",
+    "Final query wording uses explicit periods and is informed by the disclosed prior MISSING_KIND failure.",
+    "Final source chosen after2024 failure; parser worker did not inspect final gold before declaring readiness."
+  ]
+}

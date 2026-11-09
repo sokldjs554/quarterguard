@@ -1,0 +1,16 @@
+{
+  "first_path": "artifacts/hyundai-final-20261109/current-first.json",
+  "first_sha256": "10570cba0ad89921285c6d8282f98c38a2125fa71e3027a8b6461b56378d2776",
+  "failure_ids": {
+    "raw_statements": [],
+    "raw_parsed": {
+      "queries": [],
+      "calculations": []
+    },
+    "fixture_assisted": {
+      "queries": [],
+      "calculations": []
+    }
+  },
+  "raw_statements": []
+}

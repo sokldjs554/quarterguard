@@ -1,0 +1,18 @@
+{
+  "status": "ready_for_one_approved_dispatch",
+  "paid_calls_made_in_preparation": 0,
+  "freeze_sha256": "13b9d839be913d209a355b061f1bd688edf8d8dd8adda8be46232402b6385081",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "max_attempts": 8,
+  "max_input_admission_tokens": 4023,
+  "max_output_tokens_per_request": 700,
+  "estimated_max_cost_usd": "0.0612",
+  "budget_usd_before_tax": "0.07",
+  "billed_cost_usd": null,
+  "offline_test_count": 167,
+  "offline_tests_passed": true,
+  "synthetic_checks_passed": 6,
+  "human_reviewed": false,
+  "semantic_certified": false,
+  "execution_owner": "root agent; single workflow dispatch only"
+}

@@ -1,5 +1,7 @@
 # 트레져러 공고 재대조 · v1.4
 
+> 최신 종합: [현재 지원 근거](application-summary-20261109.md).
+
 > 이후 업데이트: [2026-11-08 지원 근거](application-evidence-20261108.md). 아래 평가·참여 상태는 당시 기록으로 보존합니다.
 
 2026-10-31 기본 TLS 검증 HTTPS로 [현재 공고](https://treasurer.recruit.roundhr.com/c/nLeVw9amBH)를 다시 읽었다. HTTP200, HTML SHA-256 `b7a79b0b893297f8d4370f94cc937e66cafd40297843a346aa7ed3bbd5c0d208`. 회사는 금융기관 등의 문서·시세 데이터를 정확한 인용과 도구 실행으로 연결하고 실제 고객 트래픽에서 품질·지연·비용을 조정하는 문제를 설명한다.

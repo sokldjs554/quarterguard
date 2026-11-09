@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-11-09T08:41:03.800618+00:00",
+  "files": {
+    "data/hyundai-final-20261109/source_cells.json": "48446c3d321edd1160abb05478b0afa0ff951ee637c7d276704343aeb178aaa3",
+    "data/hyundai-final-20261109/calculations.json": "77d050695dbde9db30c11723360b5257db4896d9da3fb4b98a28a7a4108c2d6e",
+    "data/hyundai-final-20261109/retrieval_gold.json": "7a50f931c42991283560cb2f89e4e25b8855bcc6b0c40f0cc19bb2de2446149a",
+    "data/hyundai-final-20261109/facts.json": "075a4e4e481d2d22848b8c5d214be663ea3efc660dc6bb9e6cc25181e07a757a",
+    "data/hyundai-final-20261109/sources.json": "a51f65739fa3d821a72adbf62a85c80e4e002f268844a98e4739355c46b2d4d2"
+  },
+  "baseline_revision": "0b1613c",
+  "baseline_ingest_sha256": "fff257ce462655fb6632af6752e9958a36d889fecacbe7b3f1df04144641955b",
+  "author": "AI evaluation worker",
+  "human_reviewed": false,
+  "expert_gold": false,
+  "same_task_ai_authored": true,
+  "parser_changes_seen": false,
+  "selection": "New official 2025 Q3 Hyundai document; 8 of 16 comparative 2024 cells exactly overlap the newly disclosed 2024 source. Official 2022 Q3 guessed URL returned HTTP404; selected available 2025 Q3 before any parser execution. Earlier 2024 dash failure and MISSING_KIND query failure known to evaluator; parser implementation not read. One consolidated statement, four metrics, current/prior quarter and YTD, 16 exact KRW-million cells. Positive and ambiguous bilingual queries frozen before this document is run, with explicit positive period markers as requested after the prior query failure; this query set is informed by disclosed limitations and is not blind natural-language generalization.",
+  "inspection": "AI viewed page 8 raster and pypdf text. Gold literal cells transcribed independently of production parser. No human or expert adjudication.",
+  "canonical_row_mapping": {
+    "Sales": "Revenue"
+  },
+  "source_pdf_sha256": "d2ad517018d5498f834a45bd3f976549b6c1be8a5b1d29930d8b149f542d1219",
+  "model_calls": 0,
+  "provider_api_cost_usd": 0
+}

@@ -1,0 +1,19 @@
+[
+  {
+    "id": "h25q3",
+    "company": "hyundai",
+    "title": "Hyundai Motor Company 2025 Q3 interim consolidated financial statements",
+    "url": "https://www.hyundai.com/content/dam/hyundai/ww/en/images/company/investor-relations/financial-Information/report-en/2025/2025-q3-consolidated-audit-report-en.pdf",
+    "quarter": 3,
+    "report_end": "2025-09-30",
+    "pages": 72,
+    "statement_pages": {
+      "CFS": 8
+    },
+    "printed_statement_page": 3,
+    "sha256": "d2ad517018d5498f834a45bd3f976549b6c1be8a5b1d29930d8b149f542d1219",
+    "cache_filename": "h25q3.pdf",
+    "accessed": "2026-11-09",
+    "distribution": "Atomic cells and short source locators only; full PDF and rendering in ignored work directory"
+  }
+]
