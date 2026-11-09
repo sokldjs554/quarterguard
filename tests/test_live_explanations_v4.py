@@ -7,7 +7,8 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 import httpx
-from quarterguard import evaluate_live_explanations_v4 as m
+from quarterguard.frozen_followup import load_frozen_followup
+m = load_frozen_followup()
 
 
 class FollowupTests(unittest.TestCase):

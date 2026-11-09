@@ -12,6 +12,10 @@ INSTRUCTIONS = (
     'Set value to growth_pct or derived_value or null. Never override rejection, '
     'invent evidence, perform additional calculations or give investment advice. '
     'Distinguish quarter versus cumulative periods and consolidated versus separate statements. '
+    'Use only issues and explanation_context.decision_basis as reasons for withholding. '
+    'Different quarter dates alone are not a rejection: adjacent three-month quarters may be compared. '
+    'When only SCOPE_MISMATCH is present, explain only the consolidated/separate scope mismatch; '
+    'do not imply that the different quarter dates also caused rejection. '
     'KRW is currency, not a display unit. Use the supplied display_unit, such as 백만 원; '
     'scale is an internal conversion multiplier, not a literal heading of the source table. '
     'If no evidence was found, say 해당 검색 범위에서 확인할 수 없습니다; '
@@ -22,11 +26,29 @@ INSTRUCTIONS = (
 )
 
 
+def decision_context(result):
+    """Describe reported issue codes, not a new comparison or prose verdict."""
+    statements = {
+        'SCOPE_MISMATCH': '연결·별도 범위가 달라 계산을 보류합니다. 양쪽 범위를 맞춘 뒤 다시 검증하세요.',
+        'PERIOD_MISMATCH': '기간 길이 또는 선택한 비교 방식의 날짜 조건이 맞지 않아 계산을 보류합니다.',
+        'CURRENCY_MISMATCH': '통화가 달라 계산을 보류합니다.',
+        'SEARCH_EMPTY': '해당 검색 범위에서 근거를 확인할 수 없습니다.',
+    }
+    issues = result.get('issues', [])
+    basis = [{'code': code, 'statement': statements.get(code, f'확인 필요: 도구가 {code} 문제를 보고했습니다.')}
+             for code in issues]
+    note = '도구의 문제 목록을 설명한 안내입니다. AI 문장 전체에 대한 의미 검증은 아닙니다.'
+    if issues == ['SCOPE_MISMATCH']:
+        note = '이 도구 결과는 기간 불일치로 판정하지 않았습니다. 서로 다른 분기라는 사실만으로 비교를 보류하지 않습니다. ' + note
+    return {'decision_basis': basis, 'decision_note': note}
+
+
 def build_context(result):
     context = {'origin': 'deterministic_tool_context', 'status': 'needs_review',
                'comparison_status': result.get('status'),
                'issues': list(result.get('issues', [])), 'evidence': [],
-               'notice': '근거의 표시 단위·원문 위치를 확인해야 합니다. 임의로 보완하지 않습니다.'}
+               'notice': '근거의 표시 단위·원문 위치를 확인해야 합니다. 임의로 보완하지 않습니다.',
+               **decision_context(result)}
     evidence = result.get('evidence')
     if evidence == [] and 'SEARCH_EMPTY' in context['issues']:
         return context | {'status': 'no_evidence',

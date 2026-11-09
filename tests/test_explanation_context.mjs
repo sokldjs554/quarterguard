@@ -31,3 +31,15 @@ test('empty, missing and unresolved context never show old source links', async 
     assert.match(html,/안내|확인/);
   }
 });
+
+test('scope-only decision basis is separate, escaped, and absent from legacy context', async () => {
+  const {renderExplanationContext}=await import('../web/explanation-context.js');
+  const html=renderExplanationContext({status:'available',notice:'도구 안내',evidence:[],
+    decision_basis:[{code:'SCOPE_MISMATCH',statement:'연결·별도 범위 <img src=x>'}],
+    decision_note:'기간 불일치로 판정하지 않았습니다'});
+  assert.match(html,/도구가 판정한 보류 사유/);
+  assert.match(html,/연결·별도/);
+  assert.match(html,/기간 불일치로 판정하지 않았습니다/);
+  assert.doesNotMatch(html,/<img/);
+  assert.doesNotMatch(renderExplanationContext({status:'available',notice:'예전 응답',evidence:[]}),/decision-basis/);
+});

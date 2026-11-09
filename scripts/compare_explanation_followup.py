@@ -7,7 +7,10 @@ import sys
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
-from quarterguard.evaluate_live_explanations_v4 import DATA, audit, validate_freeze
+from quarterguard.frozen_followup import load_frozen_followup
+
+frozen_policy = load_frozen_followup()
+DATA, audit, validate_freeze = frozen_policy.DATA, frozen_policy.audit, frozen_policy.validate_freeze
 
 
 def compare_reports(baseline, followup, frozen):

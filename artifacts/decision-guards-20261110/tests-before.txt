@@ -1,0 +1,57 @@
+test_bad_id_replay_is_failed_not_cached_and_never_returns_prose (test_explanation_decision_guards.DecisionGuardTests.test_bad_id_replay_is_failed_not_cached_and_never_returns_prose) ... FAIL
+test_combined_rejections_keep_both_reasons_and_no_scope_only_note (test_explanation_decision_guards.DecisionGuardTests.test_combined_rejections_keep_both_reasons_and_no_scope_only_note) ... ERROR
+test_schema_limits_ids_without_mutating_shared_schema (test_explanation_decision_guards.DecisionGuardTests.test_schema_limits_ids_without_mutating_shared_schema) ... ERROR
+test_scope_only_reason_does_not_turn_adjacent_quarters_into_a_block (test_explanation_decision_guards.DecisionGuardTests.test_scope_only_reason_does_not_turn_adjacent_quarters_into_a_block) ... ERROR
+test_unknown_issue_is_explicit_not_replaced_with_period_or_scope (test_explanation_decision_guards.DecisionGuardTests.test_unknown_issue_is_explicit_not_replaced_with_period_or_scope) ... ERROR
+
+======================================================================
+ERROR: test_combined_rejections_keep_both_reasons_and_no_scope_only_note (test_explanation_decision_guards.DecisionGuardTests.test_combined_rejections_keep_both_reasons_and_no_scope_only_note)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_explanation_decision_guards.py", line 30, in test_combined_rejections_keep_both_reasons_and_no_scope_only_note
+    self.assertEqual([x['code'] for x in context['decision_basis']],result['issues'])
+                                         ~~~~~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'decision_basis'
+
+======================================================================
+ERROR: test_schema_limits_ids_without_mutating_shared_schema (test_explanation_decision_guards.DecisionGuardTests.test_schema_limits_ids_without_mutating_shared_schema)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_explanation_decision_guards.py", line 39, in test_schema_limits_ids_without_mutating_shared_schema
+    self.assertEqual(ids['items']['enum'],[f['id'] for f in result['evidence']])
+                     ~~~~~~~~~~~~^^^^^^^^
+KeyError: 'enum'
+
+======================================================================
+ERROR: test_scope_only_reason_does_not_turn_adjacent_quarters_into_a_block (test_explanation_decision_guards.DecisionGuardTests.test_scope_only_reason_does_not_turn_adjacent_quarters_into_a_block)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_explanation_decision_guards.py", line 21, in test_scope_only_reason_does_not_turn_adjacent_quarters_into_a_block
+    self.assertEqual([x['code'] for x in context['decision_basis']],['SCOPE_MISMATCH'])
+                                         ~~~~~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'decision_basis'
+
+======================================================================
+ERROR: test_unknown_issue_is_explicit_not_replaced_with_period_or_scope (test_explanation_decision_guards.DecisionGuardTests.test_unknown_issue_is_explicit_not_replaced_with_period_or_scope)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_explanation_decision_guards.py", line 71, in test_unknown_issue_is_explicit_not_replaced_with_period_or_scope
+    self.assertEqual(context['decision_basis'][0]['code'],'UNSUPPORTED_REASON')
+                     ~~~~~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'decision_basis'
+
+======================================================================
+FAIL: test_bad_id_replay_is_failed_not_cached_and_never_returns_prose (test_explanation_decision_guards.DecisionGuardTests.test_bad_id_replay_is_failed_not_cached_and_never_returns_prose)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_explanation_decision_guards.py", line 58, in test_bad_id_replay_is_failed_not_cached_and_never_returns_prose
+    self.assertEqual(outcome['reason'],'EXPLANATION_VALIDATION_REJECTED')
+AssertionError: 'PROVIDER_REQUEST_FAILED_OR_VALIDATION_REJECTED' != 'EXPLANATION_VALIDATION_REJECTED'
+- PROVIDER_REQUEST_FAILED_OR_VALIDATION_REJECTED
++ EXPLANATION_VALIDATION_REJECTED
+
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.019s
+
+FAILED (failures=1, errors=4)
