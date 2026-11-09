@@ -318,6 +318,10 @@ dialog::backdrop { background:#1f251966; }
 .provider-fields { display:grid; grid-template-columns:110px minmax(0,1fr); gap:8px; font-size:12px; }
 .provider-fields dd { margin:0; overflow-wrap:anywhere; }
 .generated-explanation { color:var(--ink); font-size:13px; white-space:pre-wrap; margin:12px 0; }
+.explanation-context { margin:14px 0; padding:12px; border:1px solid var(--line); background:var(--subtle); overflow-wrap:anywhere; }
+.explanation-context h4 { margin:0 0 8px; }
+.explanation-source { margin-top:12px; }
+.explanation-source p { margin-bottom:6px; line-height:1.7; }
 .provider-raw pre,.heldout-failures pre,.heldout-anomaly pre { font:11px/1.6 var(--mono); white-space:pre-wrap; overflow-wrap:anywhere; max-height:300px; overflow:auto; padding:12px; background:var(--subtle); }
 .provider-card details summary,.heldout-failures summary,.heldout-anomaly summary { cursor:pointer; margin:12px 0; }
 .provider-result td small,.heldout-failures td small { display:block; font-size:10px; color:var(--muted); }
