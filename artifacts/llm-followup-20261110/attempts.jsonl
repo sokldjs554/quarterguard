@@ -1,0 +1,16 @@
+{"attempt":1,"case_id":"normal-qoq","execution_mode":"real_provider_response","input_admission_tokens":5924,"started_at":"2026-11-09T16:01:09.378580+00:00","status":"started"}
+{"attempt":1,"case_id":"normal-qoq","failure_code":null,"finished_at":"2026-11-09T16:01:12.739399+00:00","status":"completed"}
+{"attempt":2,"case_id":"normal-yoy","execution_mode":"real_provider_response","input_admission_tokens":5930,"started_at":"2026-11-09T16:01:12.742384+00:00","status":"started"}
+{"attempt":2,"case_id":"normal-yoy","failure_code":null,"finished_at":"2026-11-09T16:01:15.566835+00:00","status":"completed"}
+{"attempt":3,"case_id":"period-mismatch","execution_mode":"real_provider_response","input_admission_tokens":6034,"started_at":"2026-11-09T16:01:15.568025+00:00","status":"started"}
+{"attempt":3,"case_id":"period-mismatch","failure_code":null,"finished_at":"2026-11-09T16:01:18.591243+00:00","status":"completed"}
+{"attempt":4,"case_id":"scope-mismatch","execution_mode":"real_provider_response","input_admission_tokens":6015,"started_at":"2026-11-09T16:01:18.592831+00:00","status":"started"}
+{"attempt":4,"case_id":"scope-mismatch","failure_code":null,"finished_at":"2026-11-09T16:01:21.333113+00:00","status":"completed"}
+{"attempt":5,"case_id":"unit-draft","execution_mode":"real_provider_response","input_admission_tokens":6053,"started_at":"2026-11-09T16:01:21.334620+00:00","status":"started"}
+{"attempt":5,"case_id":"unit-draft","failure_code":null,"finished_at":"2026-11-09T16:01:23.816241+00:00","status":"completed"}
+{"attempt":6,"case_id":"no-evidence","execution_mode":"real_provider_response","input_admission_tokens":3174,"started_at":"2026-11-09T16:01:23.818070+00:00","status":"started"}
+{"attempt":6,"case_id":"no-evidence","failure_code":null,"finished_at":"2026-11-09T16:01:25.794966+00:00","status":"completed"}
+{"attempt":7,"case_id":"conflicting-number-draft","execution_mode":"real_provider_response","input_admission_tokens":6071,"started_at":"2026-11-09T16:01:25.796987+00:00","status":"started"}
+{"attempt":7,"case_id":"conflicting-number-draft","failure_code":null,"finished_at":"2026-11-09T16:01:27.817470+00:00","status":"completed"}
+{"attempt":8,"case_id":"citation-draft","execution_mode":"real_provider_response","input_admission_tokens":6071,"started_at":"2026-11-09T16:01:27.819361+00:00","status":"started"}
+{"attempt":8,"case_id":"citation-draft","failure_code":null,"finished_at":"2026-11-09T16:01:29.993226+00:00","status":"completed"}

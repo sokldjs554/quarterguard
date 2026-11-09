@@ -1,0 +1,20 @@
+{
+  "run_id": 42650382374,
+  "run_url": "https://github.com/sokldjs554/quarterguard/actions/runs/42650382374",
+  "artifact_id": 13689781011,
+  "execution_commit": "96732c63f71762f02b87dc4bf17af3ab89b36b62",
+  "artifact_zip_sha256": "a8c9ffa1e04a4e395807a3edbae87338a99207ef7dcbdd23c47ded693e0eb39c",
+  "files": {
+    "normal-qoq.response.json": "1222fbd49e4c58952159ab2a65c9a2d3dba99c318178cbd876a2cb5018e8db22",
+    "normal-yoy.response.json": "50e53a58d1bf91b9df9d24db24f0d47696256c23e2a767f26eb5c649a463db08",
+    "human-review.json": "c2273106c25fef0cd1bced83138dfd5019f61c15535c321cf57e8d5ebaa2da75",
+    "conflicting-number-draft.response.json": "3a71cc0c61dace7e3cc38e648ccfb3e899c1329d822440d1198d537ce45a9504",
+    "citation-draft.response.json": "61537d8b1fea6b0b9dd70b5409585ec2684cb4ec586b4e2d286069ce2b5fcae0",
+    "period-mismatch.response.json": "fdd244994c30ffe06897bebae446841d2156df1bb3cf3c226b943142496f9e4c",
+    "no-evidence.response.json": "d469eb2050468369ea57b2a50d083868d1245c07d2c435605544ad46e141fdd3",
+    "report.json": "dda93cbb8acbedacb11bc07e90606451fec29abeb89087e6d22035170ea9e65e",
+    "scope-mismatch.response.json": "536964fef72977beb85f12eac3fbec4200e2f2c8d9c489e95c6952b861e8358d",
+    "attempts.jsonl": "4c2ca66be12b2eb18fc17ef23b3abe0b44b258063c07e892948a6b5271a65d11",
+    "unit-draft.response.json": "f4767038899c7ef98cfdd91b18087e0d1b35d173174597a8ecfb376b84bd003d"
+  }
+}
