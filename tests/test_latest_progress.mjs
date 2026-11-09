@@ -25,3 +25,12 @@ test('malformed current summary fails and text is escaped',()=>{
  const html=renderLatestProgress({summary:copy,runtime_commit:'<script>'});
  assert.ok(!html.includes('<img'));assert.ok(!html.includes('<script>'));
 });
+
+test('latest model batch is separate from prior human labels and has unresolved prose warnings',()=>{
+ const current=structuredClone(summary);
+ current.llm.latest_guard_batch={calls:8,structured_exact:8,previous_structured_exact:7,automatic_flagged:7,estimated_cost_usd:'0.01510425',human_reviewed:false,link:'docs/llm-guards-v5-results-20261110.md',review_link:'docs/validation-kit/llm-guards-v5-review-20261110.md'};
+ const html=renderLatestProgress({summary:current,runtime_commit:'current'});
+ for(const text of ['v5 새 8회','7/8 → 8/8','새 응답의 사람 검수는 미수행','0.01510425','근거가 있는데 검색 부재처럼 읽히는 문장'])assert.ok(html.includes(text),text);
+ assert.ok(!html.includes('변경 후 새 실호출·b 재검수는 아직 없습니다'));
+ assert.ok(html.includes('참 5·모호 3 → 참 7·모호 1'));
+});

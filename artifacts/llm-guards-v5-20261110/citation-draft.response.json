@@ -1,0 +1,11 @@
+{
+  "id": "resp_097c2b2625cd4f15016af211b47c6087d1a6e8586d2ba12352",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1522,
+    "output_tokens": 187,
+    "total_tokens": 1709
+  },
+  "output_text": "{\"status\":\"verified\",\"value\":\"6.7916\",\"issues\":[],\"evidence_ids\":[\"s24q3-CFS-revenue-2024-q-KRW\",\"s24q2-CFS-revenue-2024-q-KRW\"],\"explanation_ko\":\"삼성전자 2024년 3분기 연결 매출은 79,098,731 백만 원입니다. 출처는 Samsung Electronics 2024 3Q Interim Business Report, PDF p.34입니다. 같은 보고서 기준 2024년 2분기 연결 매출은 74,068,302 백만 원입니다. 출처는 Samsung Electronics 2024 Half-year Business Report, PDF p.48입니다. 두 분기는 모두 3개월 연결 기준의 분기 실적입니다. 따라서 매출 증가율은 6.7916입니다.\"}"
+}

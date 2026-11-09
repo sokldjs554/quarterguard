@@ -1,0 +1,1485 @@
+{
+  "baseline_report_sha256": "dda93cbb8acbedacb11bc07e90606451fec29abeb89087e6d22035170ea9e65e",
+  "paired_development_followup": true,
+  "source_execution": "historical MCP result replay",
+  "created_at": "2026-11-09T18:32:07.150537+00:00",
+  "status": "completed",
+  "freeze_sha256": "040115695a087729362bbe63f8abe78c426ed9e38d0e83ef589945c46c7f8231",
+  "contract": {
+    "model": "gpt-5.4-mini-2026-03-17",
+    "reasoning_effort": "none",
+    "max_requests": 8,
+    "max_input_admission_tokens": 7500,
+    "max_output_tokens": 700,
+    "input_counter": "UTF-8 bytes of entire serialized payload + 1024 framing reserve",
+    "input_counter_limitation": "Conservative local admission bound; provider framing is not publicly specified. Actual provider usage is checked after every response.",
+    "retries": 0,
+    "timeout_seconds": 60,
+    "input_usd_per_million": "0.75",
+    "output_usd_per_million": "4.50",
+    "estimated_max_cost_usd": "0.0702",
+    "approval_budget_usd_before_tax": "0.08",
+    "pricing_url": "https://developers.openai.com/api/docs/models/gpt-5.4-mini",
+    "pricing_checked_date": "2026-11-10",
+    "billed_cost_usd": null
+  },
+  "execution_mode": "real_provider_responses",
+  "calls_attempted": 8,
+  "records": [
+    {
+      "case_id": "normal-qoq",
+      "attempt": 1,
+      "started_at": "2026-11-09T18:32:07.150666+00:00",
+      "execution_mode": "real_provider_response",
+      "status": "completed",
+      "input_admission_tokens": 6697,
+      "raw_response_sanitized": {
+        "id": "resp_0741e2d531392b6c016af211a80a2c87d1a3dc96d9753c3504",
+        "model": "gpt-5.4-mini-2026-03-17",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 1490,
+          "output_tokens": 175,
+          "total_tokens": 1665
+        },
+        "output_text": "{\"status\":\"verified\",\"value\":\"6.7916\",\"issues\":[],\"evidence_ids\":[\"s24q3-CFS-revenue-2024-q-KRW\",\"s24q2-CFS-revenue-2024-q-KRW\"],\"explanation_ko\":\"2024년 3분기 연결 매출의 전분기 대비 증감률은 6.7916%입니다. Samsung Electronics 2024 3Q Interim Business Report, PDF p.34의 Revenue / 2024 Q KRW는 79,098,731 백만 원입니다. Samsung Electronics 2024 Half-year Business Report, PDF p.48의 Revenue / 2024 Q KRW는 74,068,302 백만 원입니다. 두 값은 모두 3개월 연결 기준입니다.\"}"
+      },
+      "provider": {
+        "requested_model": "gpt-5.4-mini-2026-03-17",
+        "returned_model": "gpt-5.4-mini-2026-03-17",
+        "input_tokens": 1490,
+        "output_tokens": 175,
+        "estimated_cost_usd": "0.001905",
+        "billed_cost_usd": null,
+        "cost_note": "Usage-based list-price estimate; billing not queried."
+      },
+      "generated": {
+        "status": "verified",
+        "value": "6.7916",
+        "issues": [],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q2-CFS-revenue-2024-q-KRW"
+        ],
+        "explanation_ko": "2024년 3분기 연결 매출의 전분기 대비 증감률은 6.7916%입니다. Samsung Electronics 2024 3Q Interim Business Report, PDF p.34의 Revenue / 2024 Q KRW는 79,098,731 백만 원입니다. Samsung Electronics 2024 Half-year Business Report, PDF p.48의 Revenue / 2024 Q KRW는 74,068,302 백만 원입니다. 두 값은 모두 3개월 연결 기준입니다."
+      },
+      "audit": {
+        "automatic_verdict": "flagged",
+        "issues": [
+          "UNBOUND_NUMBER_REQUIRES_REVIEW"
+        ],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          },
+          {
+            "fact_id": "s24q2-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q2",
+            "page": 48,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          }
+        ],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "percent",
+            "claim": "6.7916",
+            "tool_value": "6.7916"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "79098731000000",
+            "currency": "KRW"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "74068302000000",
+            "currency": "KRW"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": true,
+          "scope_limited_if_no_evidence": null,
+          "document_and_page_named": true,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "production_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "schema_keys_exact": true
+      },
+      "production_gate_passed": true,
+      "source_case_id": "qoq-revenue",
+      "tool_result": {
+        "status": "verified",
+        "issues": [],
+        "growth_pct": "6.7916",
+        "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+        "normalized_inputs": [
+          "79098731000000",
+          "74068302000000"
+        ],
+        "currency": "KRW",
+        "evidence": [
+          {
+            "id": "s24q3-CFS-revenue-2024-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-07-01",
+            "end": "2024-09-30",
+            "value": "79098731",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "document_id": "s24q3",
+            "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          },
+          {
+            "id": "s24q2-CFS-revenue-2024-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-04-01",
+            "end": "2024-06-30",
+            "value": "74068302",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+            "page": 48,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "document_id": "s24q2",
+            "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ],
+        "mode": "qoq"
+      },
+      "latency_ms": 2412.121,
+      "finished_at": "2026-11-09T18:32:09.563991+00:00"
+    },
+    {
+      "case_id": "normal-yoy",
+      "attempt": 2,
+      "started_at": "2026-11-09T18:32:09.591010+00:00",
+      "execution_mode": "real_provider_response",
+      "status": "completed",
+      "input_admission_tokens": 6703,
+      "raw_response_sanitized": {
+        "id": "resp_010e3259f4ea2567016af211a9bed487d1814206868062a0e3",
+        "model": "gpt-5.4-mini-2026-03-17",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 1501,
+          "output_tokens": 179,
+          "total_tokens": 1680
+        },
+        "output_text": "{\"status\":\"verified\",\"value\":\"17.3491\",\"issues\":[],\"evidence_ids\":[\"s24q3-CFS-revenue-2024-q-KRW\",\"s24q3-CFS-revenue-2023-q-KRW\"],\"explanation_ko\":\"2024년 3분기 연결 매출의 전년 동분기 대비 증감률은 17.3491%입니다. Samsung Electronics 2024 3Q Interim Business Report, PDF p.34에서 2024-07-01 ~ 2024-09-30 연결 매출은 79,098,731 백만 원입니다. 같은 보고서 PDF p.34에서 2023-07-01 ~ 2023-09-30 연결 매출은 67,404,652 백만 원입니다.\"}"
+      },
+      "provider": {
+        "requested_model": "gpt-5.4-mini-2026-03-17",
+        "returned_model": "gpt-5.4-mini-2026-03-17",
+        "input_tokens": 1501,
+        "output_tokens": 179,
+        "estimated_cost_usd": "0.00193125",
+        "billed_cost_usd": null,
+        "cost_note": "Usage-based list-price estimate; billing not queried."
+      },
+      "generated": {
+        "status": "verified",
+        "value": "17.3491",
+        "issues": [],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q3-CFS-revenue-2023-q-KRW"
+        ],
+        "explanation_ko": "2024년 3분기 연결 매출의 전년 동분기 대비 증감률은 17.3491%입니다. Samsung Electronics 2024 3Q Interim Business Report, PDF p.34에서 2024-07-01 ~ 2024-09-30 연결 매출은 79,098,731 백만 원입니다. 같은 보고서 PDF p.34에서 2023-07-01 ~ 2023-09-30 연결 매출은 67,404,652 백만 원입니다."
+      },
+      "audit": {
+        "automatic_verdict": "flagged",
+        "issues": [
+          "UNBOUND_NUMBER_REQUIRES_REVIEW"
+        ],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          },
+          {
+            "fact_id": "s24q3-CFS-revenue-2023-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2023 Q KRW",
+            "canonical_match": true
+          }
+        ],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2023"
+          },
+          {
+            "type": "year",
+            "claim": "2023"
+          },
+          {
+            "type": "percent",
+            "claim": "17.3491",
+            "tool_value": "17.3491"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "79098731000000",
+            "currency": "KRW"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "67404652000000",
+            "currency": "KRW"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": true,
+          "scope_limited_if_no_evidence": null,
+          "document_and_page_named": true,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "production_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "schema_keys_exact": true
+      },
+      "production_gate_passed": true,
+      "source_case_id": "yoy-revenue",
+      "tool_result": {
+        "status": "verified",
+        "issues": [],
+        "growth_pct": "17.3491",
+        "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+        "normalized_inputs": [
+          "79098731000000",
+          "67404652000000"
+        ],
+        "currency": "KRW",
+        "evidence": [
+          {
+            "id": "s24q3-CFS-revenue-2024-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-07-01",
+            "end": "2024-09-30",
+            "value": "79098731",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "document_id": "s24q3",
+            "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          },
+          {
+            "id": "s24q3-CFS-revenue-2023-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2023-07-01",
+            "end": "2023-09-30",
+            "value": "67404652",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2023 Q KRW",
+            "document_id": "s24q3",
+            "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ],
+        "mode": "yoy"
+      },
+      "latency_ms": 2398.537,
+      "finished_at": "2026-11-09T18:32:12.009196+00:00"
+    },
+    {
+      "case_id": "period-mismatch",
+      "attempt": 3,
+      "started_at": "2026-11-09T18:32:12.010570+00:00",
+      "execution_mode": "real_provider_response",
+      "status": "completed",
+      "input_admission_tokens": 6966,
+      "raw_response_sanitized": {
+        "id": "resp_0a7684f7bc9e3cfd016af211ac234887d19da11e571e593272",
+        "model": "gpt-5.4-mini-2026-03-17",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 1561,
+          "output_tokens": 205,
+          "total_tokens": 1766
+        },
+        "output_text": "{\"status\":\"needs_review\",\"value\":null,\"issues\":[\"PERIOD_MISMATCH\"],\"evidence_ids\":[\"s24q3-CFS-revenue-2024-ytd-KRW\",\"s24q3-CFS-revenue-2023-q-KRW\"],\"explanation_ko\":\"계산 보류입니다. 기간 조건이 맞지 않습니다. 비교 대상은 2024-01-01~2024-09-30의 9개월 누적 매출과 2023-07-01~2023-09-30의 3개월 매출입니다. 둘 다 연결(CFS) 기준입니다. 이 차이 때문에 성장률을 확정할 수 없습니다. 근거 문서는 Samsung Electronics 2024 3Q Interim Business Report이며, PDF 34쪽의 Revenue / 2024 YTD KRW와 Revenue / 2023 Q KRW입니다. 해당 검색 범위에서 확인할 수 없습니다.\"}"
+      },
+      "provider": {
+        "requested_model": "gpt-5.4-mini-2026-03-17",
+        "returned_model": "gpt-5.4-mini-2026-03-17",
+        "input_tokens": 1561,
+        "output_tokens": 205,
+        "estimated_cost_usd": "0.00209325",
+        "billed_cost_usd": null,
+        "cost_note": "Usage-based list-price estimate; billing not queried."
+      },
+      "generated": {
+        "status": "needs_review",
+        "value": null,
+        "issues": [
+          "PERIOD_MISMATCH"
+        ],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-ytd-KRW",
+          "s24q3-CFS-revenue-2023-q-KRW"
+        ],
+        "explanation_ko": "계산 보류입니다. 기간 조건이 맞지 않습니다. 비교 대상은 2024-01-01~2024-09-30의 9개월 누적 매출과 2023-07-01~2023-09-30의 3개월 매출입니다. 둘 다 연결(CFS) 기준입니다. 이 차이 때문에 성장률을 확정할 수 없습니다. 근거 문서는 Samsung Electronics 2024 3Q Interim Business Report이며, PDF 34쪽의 Revenue / 2024 YTD KRW와 Revenue / 2023 Q KRW입니다. 해당 검색 범위에서 확인할 수 없습니다."
+      },
+      "audit": {
+        "automatic_verdict": "flagged",
+        "issues": [
+          "NEGATION_REQUIRES_REVIEW",
+          "UNBOUND_NUMBER_REQUIRES_REVIEW"
+        ],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-ytd-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 YTD KRW",
+            "canonical_match": true
+          },
+          {
+            "fact_id": "s24q3-CFS-revenue-2023-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2023 Q KRW",
+            "canonical_match": true
+          }
+        ],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2023"
+          },
+          {
+            "type": "year",
+            "claim": "2023"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2023"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": false,
+          "scope_limited_if_no_evidence": null,
+          "document_and_page_named": false,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "production_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "schema_keys_exact": true
+      },
+      "production_gate_passed": true,
+      "source_case_id": "ytd-trap",
+      "tool_result": {
+        "status": "needs_review",
+        "issues": [
+          "PERIOD_MISMATCH"
+        ],
+        "growth_pct": null,
+        "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+        "normalized_inputs": [
+          "225082634000000",
+          "67404652000000"
+        ],
+        "currency": "KRW",
+        "evidence": [
+          {
+            "id": "s24q3-CFS-revenue-2024-ytd-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-01-01",
+            "end": "2024-09-30",
+            "value": "225082634",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 YTD KRW",
+            "document_id": "s24q3",
+            "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 9
+          },
+          {
+            "id": "s24q3-CFS-revenue-2023-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2023-07-01",
+            "end": "2023-09-30",
+            "value": "67404652",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2023 Q KRW",
+            "document_id": "s24q3",
+            "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ],
+        "mode": "yoy"
+      },
+      "latency_ms": 1885.995,
+      "finished_at": "2026-11-09T18:32:13.896946+00:00"
+    },
+    {
+      "case_id": "scope-mismatch",
+      "attempt": 4,
+      "started_at": "2026-11-09T18:32:13.898093+00:00",
+      "execution_mode": "real_provider_response",
+      "status": "completed",
+      "input_admission_tokens": 7100,
+      "raw_response_sanitized": {
+        "id": "resp_0b76b7fe04d44349016af211ae091487d1af3cfbdd8db651fd",
+        "model": "gpt-5.4-mini-2026-03-17",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 1582,
+          "output_tokens": 240,
+          "total_tokens": 1822
+        },
+        "output_text": "{\"status\":\"needs_review\",\"value\":null,\"issues\":[\"SCOPE_MISMATCH\"],\"evidence_ids\":[\"s24q3-CFS-revenue-2024-q-KRW\",\"s24q2-OFS-revenue-2024-q-KRW\"],\"explanation_ko\":\"계산 보류입니다. 연결·별도 범위가 달라 비교를 검증할 수 없습니다. 다른 분기라는 사실만으로는 보류 사유가 아닙니다. 근거: Samsung Electronics 2024 3Q Interim Business Report, PDF p.34, Revenue / 2024 Q KRW. 79,098,731 백만 원 · 통화 KRW · 2024-07-01 ~ 2024-09-30 · 3개월 · 연결. 근거: Samsung Electronics 2024 Half-year Business Report, PDF p.104, Revenue / 2024 Q KRW. 53,734,118 백만 원 · 통화 KRW · 2024-04-01 ~ 2024-06-30 · 3개월 · 별도.\"}"
+      },
+      "provider": {
+        "requested_model": "gpt-5.4-mini-2026-03-17",
+        "returned_model": "gpt-5.4-mini-2026-03-17",
+        "input_tokens": 1582,
+        "output_tokens": 240,
+        "estimated_cost_usd": "0.0022665",
+        "billed_cost_usd": null,
+        "cost_note": "Usage-based list-price estimate; billing not queried."
+      },
+      "generated": {
+        "status": "needs_review",
+        "value": null,
+        "issues": [
+          "SCOPE_MISMATCH"
+        ],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q2-OFS-revenue-2024-q-KRW"
+        ],
+        "explanation_ko": "계산 보류입니다. 연결·별도 범위가 달라 비교를 검증할 수 없습니다. 다른 분기라는 사실만으로는 보류 사유가 아닙니다. 근거: Samsung Electronics 2024 3Q Interim Business Report, PDF p.34, Revenue / 2024 Q KRW. 79,098,731 백만 원 · 통화 KRW · 2024-07-01 ~ 2024-09-30 · 3개월 · 연결. 근거: Samsung Electronics 2024 Half-year Business Report, PDF p.104, Revenue / 2024 Q KRW. 53,734,118 백만 원 · 통화 KRW · 2024-04-01 ~ 2024-06-30 · 3개월 · 별도."
+      },
+      "audit": {
+        "automatic_verdict": "flagged",
+        "issues": [
+          "UNBOUND_NUMBER_REQUIRES_REVIEW"
+        ],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          },
+          {
+            "fact_id": "s24q2-OFS-revenue-2024-q-KRW",
+            "document_id": "s24q2",
+            "page": 104,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          }
+        ],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "79098731000000",
+            "currency": "KRW"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "53734118000000",
+            "currency": "KRW"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": true,
+          "scope_limited_if_no_evidence": null,
+          "document_and_page_named": true,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "production_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "schema_keys_exact": true
+      },
+      "production_gate_passed": true,
+      "source_case_id": "scope-trap",
+      "tool_result": {
+        "status": "needs_review",
+        "issues": [
+          "SCOPE_MISMATCH"
+        ],
+        "growth_pct": null,
+        "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+        "normalized_inputs": [
+          "79098731000000",
+          "53734118000000"
+        ],
+        "currency": "KRW",
+        "evidence": [
+          {
+            "id": "s24q3-CFS-revenue-2024-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-07-01",
+            "end": "2024-09-30",
+            "value": "79098731",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "document_id": "s24q3",
+            "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          },
+          {
+            "id": "s24q2-OFS-revenue-2024-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "OFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-04-01",
+            "end": "2024-06-30",
+            "value": "53734118",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+            "page": 104,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "document_id": "s24q2",
+            "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ],
+        "mode": "qoq"
+      },
+      "latency_ms": 1725.094,
+      "finished_at": "2026-11-09T18:32:15.623534+00:00"
+    },
+    {
+      "case_id": "unit-draft",
+      "attempt": 5,
+      "started_at": "2026-11-09T18:32:15.625132+00:00",
+      "execution_mode": "real_provider_response",
+      "status": "completed",
+      "input_admission_tokens": 6830,
+      "raw_response_sanitized": {
+        "id": "resp_0db37a41659611c7016af211afc74887d19f8b3c2076d2cf55",
+        "model": "gpt-5.4-mini-2026-03-17",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 1515,
+          "output_tokens": 230,
+          "total_tokens": 1745
+        },
+        "output_text": "{\"status\":\"verified\",\"value\":\"6.7916\",\"issues\":[],\"evidence_ids\":[\"s24q3-CFS-revenue-2024-q-KRW\",\"s24q2-CFS-revenue-2024-q-KRW\"],\"explanation_ko\":\"매출 증가율은 6.7916%입니다. 비교는 연결재무제표(CFS) 기준의 분기 매출입니다. 2024-07-01~2024-09-30 3개월 매출은 79,098,731 백만 원입니다. 근거 문서는 Samsung Electronics 2024 3Q Interim Business Report, PDF p.34의 Revenue / 2024 Q KRW입니다. 2024-04-01~2024-06-30 3개월 매출은 74,068,302 백만 원입니다. 근거 문서는 Samsung Electronics 2024 Half-year Business Report, PDF p.48의 Revenue / 2024 Q KRW입니다. 금액의 표시 단위는 백만 원입니다.\"}"
+      },
+      "provider": {
+        "requested_model": "gpt-5.4-mini-2026-03-17",
+        "returned_model": "gpt-5.4-mini-2026-03-17",
+        "input_tokens": 1515,
+        "output_tokens": 230,
+        "estimated_cost_usd": "0.00217125",
+        "billed_cost_usd": null,
+        "cost_note": "Usage-based list-price estimate; billing not queried."
+      },
+      "generated": {
+        "status": "verified",
+        "value": "6.7916",
+        "issues": [],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q2-CFS-revenue-2024-q-KRW"
+        ],
+        "explanation_ko": "매출 증가율은 6.7916%입니다. 비교는 연결재무제표(CFS) 기준의 분기 매출입니다. 2024-07-01~2024-09-30 3개월 매출은 79,098,731 백만 원입니다. 근거 문서는 Samsung Electronics 2024 3Q Interim Business Report, PDF p.34의 Revenue / 2024 Q KRW입니다. 2024-04-01~2024-06-30 3개월 매출은 74,068,302 백만 원입니다. 근거 문서는 Samsung Electronics 2024 Half-year Business Report, PDF p.48의 Revenue / 2024 Q KRW입니다. 금액의 표시 단위는 백만 원입니다."
+      },
+      "audit": {
+        "automatic_verdict": "flagged",
+        "issues": [
+          "UNBOUND_NUMBER_REQUIRES_REVIEW"
+        ],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          },
+          {
+            "fact_id": "s24q2-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q2",
+            "page": 48,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          }
+        ],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "percent",
+            "claim": "6.7916",
+            "tool_value": "6.7916"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "79098731000000",
+            "currency": "KRW"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "74068302000000",
+            "currency": "KRW"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": true,
+          "scope_limited_if_no_evidence": null,
+          "document_and_page_named": true,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "production_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "schema_keys_exact": true
+      },
+      "production_gate_passed": true,
+      "source_case_id": "qoq-revenue",
+      "tool_result": {
+        "status": "verified",
+        "issues": [],
+        "growth_pct": "6.7916",
+        "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+        "normalized_inputs": [
+          "79098731000000",
+          "74068302000000"
+        ],
+        "currency": "KRW",
+        "evidence": [
+          {
+            "id": "s24q3-CFS-revenue-2024-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-07-01",
+            "end": "2024-09-30",
+            "value": "79098731",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "document_id": "s24q3",
+            "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          },
+          {
+            "id": "s24q2-CFS-revenue-2024-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-04-01",
+            "end": "2024-06-30",
+            "value": "74068302",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+            "page": 48,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "document_id": "s24q2",
+            "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ],
+        "mode": "qoq"
+      },
+      "latency_ms": 1970.642,
+      "finished_at": "2026-11-09T18:32:17.596117+00:00"
+    },
+    {
+      "case_id": "no-evidence",
+      "attempt": 6,
+      "started_at": "2026-11-09T18:32:17.597583+00:00",
+      "execution_mode": "real_provider_response",
+      "status": "completed",
+      "input_admission_tokens": 3837,
+      "raw_response_sanitized": {
+        "id": "resp_0c793212215a855c016af211b1ba2c87d19b3d14cbc74a3555",
+        "model": "gpt-5.4-mini-2026-03-17",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 521,
+          "output_tokens": 93,
+          "total_tokens": 614
+        },
+        "output_text": "{\"status\":\"needs_review\",\"value\":null,\"issues\":[\"SEARCH_EMPTY\"],\"evidence_ids\":[],\"explanation_ko\":\"해당 검색 범위에서 확인할 수 없습니다. 따라서 2025년 실적을 이 결과만으로는 확인할 수 없습니다. 기업의 실적 자체가 없다는 뜻은 아닙니다. 검색 조건과 수집 범위를 확인하세요. context needs review.\"}"
+      },
+      "provider": {
+        "requested_model": "gpt-5.4-mini-2026-03-17",
+        "returned_model": "gpt-5.4-mini-2026-03-17",
+        "input_tokens": 521,
+        "output_tokens": 93,
+        "estimated_cost_usd": "0.00080925",
+        "billed_cost_usd": null,
+        "cost_note": "Usage-based list-price estimate; billing not queried."
+      },
+      "generated": {
+        "status": "needs_review",
+        "value": null,
+        "issues": [
+          "SEARCH_EMPTY"
+        ],
+        "evidence_ids": [],
+        "explanation_ko": "해당 검색 범위에서 확인할 수 없습니다. 따라서 2025년 실적을 이 결과만으로는 확인할 수 없습니다. 기업의 실적 자체가 없다는 뜻은 아닙니다. 검색 조건과 수집 범위를 확인하세요. context needs review."
+      },
+      "audit": {
+        "automatic_verdict": "no_detected_rule_violation",
+        "issues": [],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2025"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": null,
+          "scope_limited_if_no_evidence": true,
+          "document_and_page_named": null,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "production_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "schema_keys_exact": true
+      },
+      "production_gate_passed": true,
+      "source_case_id": "no-evidence",
+      "tool_result": {
+        "status": "needs_review",
+        "issues": [
+          "SEARCH_EMPTY"
+        ],
+        "evidence": []
+      },
+      "latency_ms": 1033.857,
+      "finished_at": "2026-11-09T18:32:18.631835+00:00"
+    },
+    {
+      "case_id": "conflicting-number-draft",
+      "attempt": 7,
+      "started_at": "2026-11-09T18:32:18.633338+00:00",
+      "execution_mode": "real_provider_response",
+      "status": "completed",
+      "input_admission_tokens": 6848,
+      "raw_response_sanitized": {
+        "id": "resp_0998a5cf1e12c2dc016af211b2cc0887d187310db15412c0c1",
+        "model": "gpt-5.4-mini-2026-03-17",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 1525,
+          "output_tokens": 178,
+          "total_tokens": 1703
+        },
+        "output_text": "{\"status\":\"verified\",\"value\":\"6.7916\",\"issues\":[],\"evidence_ids\":[\"s24q3-CFS-revenue-2024-q-KRW\",\"s24q2-CFS-revenue-2024-q-KRW\"],\"explanation_ko\":\"연결 기준 매출 증가율은 6.7916%입니다. 2024년 3분기 연결 매출은 79,098,731 백만 원이며, Samsung Electronics 2024 3Q Interim Business Report의 PDF p.34에 있습니다. 2024년 2분기 연결 매출은 74,068,302 백만 원이며, Samsung Electronics 2024 Half-year Business Report의 PDF p.48에 있습니다. 두 분기 모두 3개월, 연결(CFS) 기준입니다.\"}"
+      },
+      "provider": {
+        "requested_model": "gpt-5.4-mini-2026-03-17",
+        "returned_model": "gpt-5.4-mini-2026-03-17",
+        "input_tokens": 1525,
+        "output_tokens": 178,
+        "estimated_cost_usd": "0.00194475",
+        "billed_cost_usd": null,
+        "cost_note": "Usage-based list-price estimate; billing not queried."
+      },
+      "generated": {
+        "status": "verified",
+        "value": "6.7916",
+        "issues": [],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q2-CFS-revenue-2024-q-KRW"
+        ],
+        "explanation_ko": "연결 기준 매출 증가율은 6.7916%입니다. 2024년 3분기 연결 매출은 79,098,731 백만 원이며, Samsung Electronics 2024 3Q Interim Business Report의 PDF p.34에 있습니다. 2024년 2분기 연결 매출은 74,068,302 백만 원이며, Samsung Electronics 2024 Half-year Business Report의 PDF p.48에 있습니다. 두 분기 모두 3개월, 연결(CFS) 기준입니다."
+      },
+      "audit": {
+        "automatic_verdict": "flagged",
+        "issues": [
+          "UNBOUND_NUMBER_REQUIRES_REVIEW"
+        ],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          },
+          {
+            "fact_id": "s24q2-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q2",
+            "page": 48,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          }
+        ],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "percent",
+            "claim": "6.7916",
+            "tool_value": "6.7916"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "79098731000000",
+            "currency": "KRW"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "74068302000000",
+            "currency": "KRW"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": true,
+          "scope_limited_if_no_evidence": null,
+          "document_and_page_named": true,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "production_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "schema_keys_exact": true
+      },
+      "production_gate_passed": true,
+      "source_case_id": "qoq-revenue",
+      "tool_result": {
+        "status": "verified",
+        "issues": [],
+        "growth_pct": "6.7916",
+        "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+        "normalized_inputs": [
+          "79098731000000",
+          "74068302000000"
+        ],
+        "currency": "KRW",
+        "evidence": [
+          {
+            "id": "s24q3-CFS-revenue-2024-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-07-01",
+            "end": "2024-09-30",
+            "value": "79098731",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "document_id": "s24q3",
+            "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          },
+          {
+            "id": "s24q2-CFS-revenue-2024-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-04-01",
+            "end": "2024-06-30",
+            "value": "74068302",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+            "page": 48,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "document_id": "s24q2",
+            "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ],
+        "mode": "qoq"
+      },
+      "latency_ms": 1675.969,
+      "finished_at": "2026-11-09T18:32:20.309657+00:00"
+    },
+    {
+      "case_id": "citation-draft",
+      "attempt": 8,
+      "started_at": "2026-11-09T18:32:20.311338+00:00",
+      "execution_mode": "real_provider_response",
+      "status": "completed",
+      "input_admission_tokens": 6848,
+      "raw_response_sanitized": {
+        "id": "resp_097c2b2625cd4f15016af211b47c6087d1a6e8586d2ba12352",
+        "model": "gpt-5.4-mini-2026-03-17",
+        "status": "completed",
+        "usage": {
+          "input_tokens": 1522,
+          "output_tokens": 187,
+          "total_tokens": 1709
+        },
+        "output_text": "{\"status\":\"verified\",\"value\":\"6.7916\",\"issues\":[],\"evidence_ids\":[\"s24q3-CFS-revenue-2024-q-KRW\",\"s24q2-CFS-revenue-2024-q-KRW\"],\"explanation_ko\":\"삼성전자 2024년 3분기 연결 매출은 79,098,731 백만 원입니다. 출처는 Samsung Electronics 2024 3Q Interim Business Report, PDF p.34입니다. 같은 보고서 기준 2024년 2분기 연결 매출은 74,068,302 백만 원입니다. 출처는 Samsung Electronics 2024 Half-year Business Report, PDF p.48입니다. 두 분기는 모두 3개월 연결 기준의 분기 실적입니다. 따라서 매출 증가율은 6.7916입니다.\"}"
+      },
+      "provider": {
+        "requested_model": "gpt-5.4-mini-2026-03-17",
+        "returned_model": "gpt-5.4-mini-2026-03-17",
+        "input_tokens": 1522,
+        "output_tokens": 187,
+        "estimated_cost_usd": "0.001983",
+        "billed_cost_usd": null,
+        "cost_note": "Usage-based list-price estimate; billing not queried."
+      },
+      "generated": {
+        "status": "verified",
+        "value": "6.7916",
+        "issues": [],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q2-CFS-revenue-2024-q-KRW"
+        ],
+        "explanation_ko": "삼성전자 2024년 3분기 연결 매출은 79,098,731 백만 원입니다. 출처는 Samsung Electronics 2024 3Q Interim Business Report, PDF p.34입니다. 같은 보고서 기준 2024년 2분기 연결 매출은 74,068,302 백만 원입니다. 출처는 Samsung Electronics 2024 Half-year Business Report, PDF p.48입니다. 두 분기는 모두 3개월 연결 기준의 분기 실적입니다. 따라서 매출 증가율은 6.7916입니다."
+      },
+      "audit": {
+        "automatic_verdict": "flagged",
+        "issues": [
+          "UNBOUND_NUMBER_REQUIRES_REVIEW"
+        ],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          },
+          {
+            "fact_id": "s24q2-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q2",
+            "page": 48,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          }
+        ],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "79098731000000",
+            "currency": "KRW"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "74068302000000",
+            "currency": "KRW"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": true,
+          "scope_limited_if_no_evidence": null,
+          "document_and_page_named": true,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "production_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "schema_keys_exact": true
+      },
+      "production_gate_passed": true,
+      "source_case_id": "qoq-revenue",
+      "tool_result": {
+        "status": "verified",
+        "issues": [],
+        "growth_pct": "6.7916",
+        "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+        "normalized_inputs": [
+          "79098731000000",
+          "74068302000000"
+        ],
+        "currency": "KRW",
+        "evidence": [
+          {
+            "id": "s24q3-CFS-revenue-2024-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-07-01",
+            "end": "2024-09-30",
+            "value": "79098731",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "document_id": "s24q3",
+            "document_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          },
+          {
+            "id": "s24q2-CFS-revenue-2024-q-KRW",
+            "company": "samsung",
+            "metric": "revenue",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "start": "2024-04-01",
+            "end": "2024-06-30",
+            "value": "74068302",
+            "source_url": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf",
+            "page": 48,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "document_id": "s24q2",
+            "document_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4",
+            "translation_basis": "reported_currency",
+            "translation_rate": null,
+            "translation_note_page": null,
+            "months": 3
+          }
+        ],
+        "mode": "qoq"
+      },
+      "latency_ms": 1887.256,
+      "finished_at": "2026-11-09T18:32:22.198924+00:00"
+    }
+  ],
+  "semantic_certified": false,
+  "human_review_required": true,
+  "human_reviewed": false,
+  "semantic_accuracy": null,
+  "billed_cost_usd": null,
+  "generated_count": 8,
+  "automatic_flagged_count": 7,
+  "structured_exact_count": 8,
+  "production_gate_passed_count": 8,
+  "measured_input_tokens": 11217,
+  "measured_output_tokens": 1487,
+  "usage_estimated_cost_usd": "0.01510425",
+  "unmeasured_failed_attempts": 0,
+  "cost_note": "Usage estimates exclude unmeasured failed attempts, taxes, local compute and hosting; actual billing unknown.",
+  "limitations": [
+    "The same disclosed development cases are reused; this does not estimate general model accuracy.",
+    "No-detected-rule-violation is not semantic certification.",
+    "Synthetic bad draft inputs and validator fixtures are not real model failures or human labels.",
+    "Human review is required for attribution, negation, omissions, period/scope/unit meaning and citation relevance.",
+    "Prompt, context and constrained schema changed together; effects cannot be causally separated.",
+    "Product payload/checks are reused, but this is an isolated evaluator, not a public endpoint/cache execution.",
+    "Public production still uses GPT-4.1 mini; this run uses the prior evaluation model GPT-5.4 mini."
+  ]
+}
