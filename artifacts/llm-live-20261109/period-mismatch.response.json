@@ -1,0 +1,11 @@
+{
+  "id": "resp_06aad40e24ad7fa8016af189351df487d2a91252bc0364e060",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 663,
+    "output_tokens": 151,
+    "total_tokens": 814
+  },
+  "output_text": "{\"status\":\"needs_review\",\"value\":null,\"issues\":[\"PERIOD_MISMATCH\"],\"evidence_ids\":[\"s24q3-CFS-revenue-2024-ytd-KRW\",\"s24q3-CFS-revenue-2023-q-KRW\"],\"explanation_ko\":\"전년 동기 비교가 아니라 2024년 9개월 누적 매출과 2023년 3개월 매출을 비교하고 있어 기간이 일치하지 않습니다. 두 값 모두 삼성 CFS 매출이며 단위는 KRW(표시 스케일은 백만원)지만, 이 비교는 제한되어 있어 검증 완료로 볼 수 없습니다.\"}"
+}

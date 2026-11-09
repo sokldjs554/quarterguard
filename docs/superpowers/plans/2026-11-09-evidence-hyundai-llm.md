@@ -12,8 +12,8 @@ Spec: user's 2026-11-09 instruction and original nine-part requirements. Demo ac
 - [x] Consolidate current status with links, preserve all historical reports, prepare blank human cell/query audit.
 - [x] Reproduce Hyundai2023 failure; implement strictly mapped four-column table parser and regression tests.
 - [x] Freeze separate Hyundai2024 official PDF gold before parser inspection; run raw-PDF and fixture evaluations separately and preserve first results.
-- [ ] Freeze 8 new LLM cases, implement bounded runner and deterministic checks, obtain exact model/cost/key approval, execute once and save failures/usage.
-- [ ] Review changes, run regression/artifact integrity checks, publish and check deployment metadata without claiming a user browser test.
+- [x] Freeze 8 new LLM cases, implement bounded runner and deterministic checks, obtain exact model/cost/key approval, execute once and save failures/usage.
+- [x] Review changes, run regression/artifact integrity checks, publish and check deployment metadata without claiming a user browser test.
 
 ## Review focus
 - Incorrect year/period or swapped column accepted: malformed header rejection tests.
