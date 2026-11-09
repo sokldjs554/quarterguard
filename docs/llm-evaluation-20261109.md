@@ -1,5 +1,7 @@
 # Bounded live explanation evaluation — 2026-11-09
 
+**Later human review (received 2026-11-10 KST):** The same participant b reviewed these eight actual responses and reported five true and three ambiguous, with qualifications retained. Identity and anonymous publication were confirmed by the project author. See [the separate follow-up](validation-kit/session-b-image-llm-received-20261110.md). The original run, automatic flags and blank forms below describe their original state and remain unchanged. No additional API calls or prompt/validator changes were made.
+
 This harness samples **eight new provider-generated Korean explanations**, with copied structured result fields and freely generated prose. It changes no product behavior. The historical four GPT-4.1-mini outputs in `artifacts/live-openai.json` remain untouched. Preparation and tests made zero paid calls. The approved live run has now completed; its results are recorded below separately from the offline fixtures.
 
 The user approved this exact run on 2026-11-09: `gpt-5.4-mini-2026-03-17`, reasoning `none`, at most eight attempts, at most 700 output tokens per request, 6000 input-token admission limit, no retries, estimated maximum **$0.0612**, budget **$0.07 before tax**. The existing GitHub Actions `OPENAI_API_KEY` secret is used; no new key is created. The root agent is the sole dispatcher. This approval does not authorize another dispatch, a retry, an alternate model, or a larger run.
