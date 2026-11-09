@@ -1,0 +1,11 @@
+{
+  "id": "resp_049d6863d8d17e68016af189387e0487d2b1daf8b7f1b94ce0",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 679,
+    "output_tokens": 166,
+    "total_tokens": 845
+  },
+  "output_text": "{\"status\":\"verified\",\"value\":\"6.7916\",\"issues\":[],\"evidence_ids\":[\"s24q3-CFS-revenue-2024-q-KRW\",\"s24q2-CFS-revenue-2024-q-KRW\"],\"explanation_ko\":\"삼성의 연결재무제표(CFS) 매출은 2024년 2분기 74,068,302백만 KRW에서 2024년 3분기 79,098,731백만 KRW로 증가해 QoQ 증가율은 6.7916%입니다. 근거 금액은 모두 KRW 기준이며, 표의 scale=1,000,000에 따라 백만 원 단위로 제시되었습니다.\"}"
+}

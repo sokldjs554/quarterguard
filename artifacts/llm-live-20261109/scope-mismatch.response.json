@@ -1,0 +1,11 @@
+{
+  "id": "resp_0a4df897bd6002cc016af189371f5887d2ba5a500a8f2717ec",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 654,
+    "output_tokens": 147,
+    "total_tokens": 801
+  },
+  "output_text": "{\"status\":\"needs_review\",\"value\":null,\"issues\":[\"SCOPE_MISMATCH\"],\"evidence_ids\":[\"s24q3-CFS-revenue-2024-q-KRW\",\"s24q2-OFS-revenue-2024-q-KRW\"],\"explanation_ko\":\"2024년 7~9월 연결(CFS) 매출과 2024년 4~6월 별도(OFS) 매출을 같은 기준으로 직접 비교할 수 없어 검토가 필요합니다. 두 값은 매출이지만 연결/별도 범위가 달라 분기·단위는 같아도 비교 제한이 있습니다.\"}"
+}

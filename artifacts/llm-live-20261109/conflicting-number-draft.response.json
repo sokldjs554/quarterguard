@@ -1,0 +1,11 @@
+{
+  "id": "resp_093e116716d85a15016af1893bb59c87d2b37f30b28c5d51c7",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 689,
+    "output_tokens": 184,
+    "total_tokens": 873
+  },
+  "output_text": "{\"status\":\"verified\",\"value\":\"6.7916\",\"issues\":[],\"evidence_ids\":[\"s24q3-CFS-revenue-2024-q-KRW\",\"s24q2-CFS-revenue-2024-q-KRW\"],\"explanation_ko\":\"삼성전자의 연결기준 매출은 2024년 2분기(2024-04-01~2024-06-30) 74,068,302백만 KRW에서 2024년 3분기(2024-07-01~2024-09-30) 79,098,731백만 KRW로 증가해 QoQ 기준 6.7916% 상승했습니다. 단위는 KRW이며, 비교 범위는 동일한 연결재무제표(CFS) 매출입니다.\"}"
+}

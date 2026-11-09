@@ -7,7 +7,7 @@
 [공개 데모](https://quarterguard.onrender.com) · [최신 지원 근거](docs/application-summary-20261109.md) · [v1.4 보완 보고](docs/completion-v1.4.md) · [현재 공고 대조](docs/job-fit-v2.md) · [새 평가와 실패 전체](docs/evaluation-v2.md) · [직접 코드 검토](docs/code-review-kit/README.md) · [사용자 검증 양식](docs/validation-kit/README.md)
 
 
-**2026-11-09 현대차 후속:** [검증한 연결 손익계산서 파서](docs/hyundai-parser-20261109.md)와 [2024 첫 실패·후속 수정·별도2025 평가](docs/hyundai-holdout-20261109.md)를 추가했습니다. 이는 원문 파싱과 격리 평가 지원이며, 공개 데모에 현대차 정본을 등록한 것은 아닙니다. [새 LLM 평가 범위](docs/llm-evaluation-20261109.md)와 [사람 정답 검수 안내](docs/validation-kit/source-gold-review-20261109.md)는 기존 GPT4회·사용자 사용성 기록과 구분합니다.
+**2026-11-09 현대차 후속:** [검증한 연결 손익계산서 파서](docs/hyundai-parser-20261109.md)와 [2024 첫 실패·후속 수정·별도2025 평가](docs/hyundai-holdout-20261109.md)를 추가했습니다. 이는 원문 파싱과 격리 평가 지원이며, 공개 데모에 현대차 정본을 등록한 것은 아닙니다. [새 LLM 실제8회 평가·추정$0.009048](docs/llm-evaluation-20261109.md)와 [사람 정답 검수 안내](docs/validation-kit/source-gold-review-20261109.md)는 기존 GPT4회·사용자 사용성 기록과 구분합니다.
 
 ## 직접 확인하기
 

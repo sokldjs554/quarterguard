@@ -1,0 +1,11 @@
+{
+  "id": "resp_05205cd8f1b5b0b6016af18931a6fc87d289d9bb2705848eee",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 656,
+    "output_tokens": 119,
+    "total_tokens": 775
+  },
+  "output_text": "{\"status\":\"verified\",\"value\":\"6.7916\",\"issues\":[],\"evidence_ids\":[\"s24q3-CFS-revenue-2024-q-KRW\",\"s24q2-CFS-revenue-2024-q-KRW\"],\"explanation_ko\":\"2024년 3분기 연결 매출은 2024년 2분기 대비 6.7916% 증가했습니다. 단위는 KRW이며, 비교 범위는 연결재무제표(CFS) 매출입니다.\"}"
+}
