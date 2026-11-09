@@ -1,0 +1,115 @@
+{
+  "status": "user_confirmed_human_followup_review",
+  "received_at_utc": "2026-11-09T16:23:35Z",
+  "received_date_kst": "2026-11-10",
+  "reviewer": "b",
+  "actual_review_date": "2026-11-10",
+  "environment": null,
+  "assistance": "none_reported_by_user",
+  "public_confirmation": {
+    "confirmed_by": "project_author",
+    "scope": [
+      "anonymous_GitHub_summary",
+      "application_evidence"
+    ],
+    "user_statement": "b가 직접 검수했고 검토 날짜는 11/10일 1시23분이야 도움은 안받음 익명 GitHub·지원서 공개 확인 받았음"
+  },
+  "source_report": "artifacts/llm-followup-20261110/report.json",
+  "source_report_sha256": "dda93cbb8acbedacb11bc07e90606451fec29abeb89087e6d22035170ea9e65e",
+  "records": [
+    {
+      "case_id": "normal-qoq",
+      "reported_sentence_verdict": "참",
+      "reported_evidence_id_verdict": "일치",
+      "reason_transcribed_formatting_removed": "2024년 3분기 79,098,731백만 원과 2분기 74,068,302백만 원의 연결매출 및 증가율 6.7916%가 맞습니다. 새 문장에 금액·단위·문서와 페이지가 추가됐습니다.",
+      "prior_sentence_verdict": "참",
+      "response_sha256": "1222fbd49e4c58952159ab2a65c9a2d3dba99c318178cbd876a2cb5018e8db22"
+    },
+    {
+      "case_id": "normal-yoy",
+      "reported_sentence_verdict": "참",
+      "reported_evidence_id_verdict": "불일치",
+      "reason_transcribed_formatting_removed": "문장의 2024·2023년 3분기 금액과 증가율 17.3491%는 맞습니다. 다만 모델의 2023년 근거 ID 끝이 KKR이고 도구 결과는 KRW입니다. 문장의 정확성과 별개로 구조화 인용에 오류가 있습니다.",
+      "prior_sentence_verdict": "참",
+      "response_sha256": "50e53a58d1bf91b9df9d24db24f0d47696256c23e2a767f26eb5c649a463db08"
+    },
+    {
+      "case_id": "period-mismatch",
+      "reported_sentence_verdict": "참",
+      "reported_evidence_id_verdict": "일치",
+      "reason_transcribed_formatting_removed": "2024년 9개월 누적과 2023년 3개월을 비교하고 있어 기간 불일치를 설명한 것이 맞습니다. 원문 위치는 추가됐지만, 기존 문장에 있던 표시 단위는 빠졌습니다. 새 문장에 금액 자체는 제시되지 않았습니다.",
+      "prior_sentence_verdict": "참",
+      "response_sha256": "fdd244994c30ffe06897bebae446841d2156df1bb3cf3c226b943142496f9e4c"
+    },
+    {
+      "case_id": "scope-mismatch",
+      "reported_sentence_verdict": "모호",
+      "reported_evidence_id_verdict": "일치",
+      "reason_transcribed_formatting_removed": "연결과 별도 범위가 달라 보류한 결론 및 각 금액은 맞습니다. 다만 마지막 문장은 서로 다른 분기라는 점도 보류 이유인 것처럼 읽힐 수 있습니다. 연속된 두 3개월 분기는 전분기 비교에 사용할 수 있고, 이 사례의 문제는 연결·별도 범위 차이입니다.",
+      "prior_sentence_verdict": "참",
+      "response_sha256": "536964fef72977beb85f12eac3fbec4200e2f2c8d9c489e95c6952b861e8358d"
+    },
+    {
+      "case_id": "unit-draft",
+      "reported_sentence_verdict": "참",
+      "reported_evidence_id_verdict": "일치",
+      "reason_transcribed_formatting_removed": "금액·기간·증가율이 맞고, 백만 원은 표시 단위, KRW는 통화라고 구분했습니다. 기존 표의 scale 표현보다 명확합니다. 문서 제목과 페이지도 적혀 있습니다.",
+      "prior_sentence_verdict": "모호",
+      "response_sha256": "f4767038899c7ef98cfdd91b18087e0d1b35d173174597a8ecfb376b84bd003d"
+    },
+    {
+      "case_id": "no-evidence",
+      "reported_sentence_verdict": "참",
+      "reported_evidence_id_verdict": "빈 목록 일치",
+      "reason_transcribed_formatting_removed": "도구의 검색 결과가 없다는 범위에서 확인할 수 없다고 설명합니다. 실적 자체가 없다는 뜻이 아니라고 명시해 기존 표현보다 명확합니다. 원문이 없는 사례이므로 개별 문서 인용의 적합성은 평가 대상이 아닙니다.",
+      "prior_sentence_verdict": "모호",
+      "response_sha256": "d469eb2050468369ea57b2a50d083868d1245c07d2c435605544ad46e141fdd3"
+    },
+    {
+      "case_id": "conflicting-number-draft",
+      "reported_sentence_verdict": "참",
+      "reported_evidence_id_verdict": "일치",
+      "reason_transcribed_formatting_removed": "두 분기의 연결매출과 6.7916%가 원문 및 도구 결과와 맞습니다. 새 문장에는 보고서와 페이지가 추가됐습니다.",
+      "prior_sentence_verdict": "참",
+      "response_sha256": "3a71cc0c61dace7e3cc38e648ccfb3e899c1329d822440d1198d537ce45a9504"
+    },
+    {
+      "case_id": "citation-draft",
+      "reported_sentence_verdict": "참",
+      "reported_evidence_id_verdict": "일치",
+      "reason_transcribed_formatting_removed": "두 분기의 금액·범위·기간 및 증가율이 맞고, 기존 응답과 달리 보고서명과 페이지를 본문에 적었습니다. 행 이름 Revenue도 있습니다.",
+      "prior_sentence_verdict": "모호",
+      "response_sha256": "61537d8b1fea6b0b9dd70b5409585ec2684cb4ec586b4e2d286069ce2b5fcae0"
+    }
+  ],
+  "reported_counts": {
+    "참": 7,
+    "모호": 1,
+    "거짓": 0,
+    "판단 불가": 0
+  },
+  "reported_method": "금액과 기간을 삼성전자 공식 보고서 2024년 3분기 34쪽, 반기 연결 48쪽·별도 104쪽과 대조했다는 사용자 전달 기록",
+  "new_api_calls": 0,
+  "limitations": [
+    "No new participant identity inferred.",
+    "No independent or blinded evaluation inferred.",
+    "Same eight development cases; not a new holdout.",
+    "Previous artifacts and blank human-review forms remain unchanged."
+  ],
+  "reported_review_time": "01:23",
+  "review_timezone": "Asia/Seoul",
+  "date_interpretation": "Year 2026 and KST carried from session context; user supplied 11/10 1시23분.",
+  "new_unique_participants": 0,
+  "evidence_id_counts": {
+    "matching_including_empty": 7,
+    "mismatching": 1,
+    "empty_matching": 1
+  },
+  "retention": {
+    "anonymous_public_summary": "indefinite, per prior confirmed scope",
+    "original_notes_and_captures": "30 days from participation end; manager handles deletion",
+    "actual_end_time": null,
+    "date_based_expiry": "2026-12-10",
+    "expiry_note": "Date-level deadline only; 01:23 was not reported as end time."
+  }
+}
