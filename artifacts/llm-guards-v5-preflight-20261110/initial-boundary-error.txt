@@ -1,0 +1,28 @@
+test_approval_and_journal_prevent_calls_and_preserve_old_attempt (test_live_explanations_v5.CurrentGuardBatchTests.test_approval_and_journal_prevent_calls_and_preserve_old_attempt) ... ok
+test_comparison_reaudits_both_batches_without_copying_human_labels (test_live_explanations_v5.CurrentGuardBatchTests.test_comparison_reaudits_both_batches_without_copying_human_labels) ... ok
+test_current_product_instructions_context_and_schema_reach_every_payload (test_live_explanations_v5.CurrentGuardBatchTests.test_current_product_instructions_context_and_schema_reach_every_payload) ... ERROR
+test_provider_schema_rejection_stops_once_and_preserves_http_failure (test_live_explanations_v5.CurrentGuardBatchTests.test_provider_schema_rejection_stops_once_and_preserves_http_failure) ... ok
+test_same_disclosed_cases_preserve_previous_mcp_inputs_and_drafts (test_live_explanations_v5.CurrentGuardBatchTests.test_same_disclosed_cases_preserve_previous_mcp_inputs_and_drafts) ... ok
+test_tampered_input_rejected_even_with_recomputed_freeze_digest (test_live_explanations_v5.CurrentGuardBatchTests.test_tampered_input_rejected_even_with_recomputed_freeze_digest) ... ok
+test_timeout_stops_once_without_retry_or_exposing_key (test_live_explanations_v5.CurrentGuardBatchTests.test_timeout_stops_once_without_retry_or_exposing_key) ... ok
+test_usage_over_cap_stops_and_preserves_measured_cost (test_live_explanations_v5.CurrentGuardBatchTests.test_usage_over_cap_stops_and_preserves_measured_cost) ... ok
+test_wrong_id_is_preserved_for_audit_but_would_not_pass_product_gate (test_live_explanations_v5.CurrentGuardBatchTests.test_wrong_id_is_preserved_for_audit_but_would_not_pass_product_gate) ... ok
+
+======================================================================
+ERROR: test_current_product_instructions_context_and_schema_reach_every_payload (test_live_explanations_v5.CurrentGuardBatchTests.test_current_product_instructions_context_and_schema_reach_every_payload)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_live_explanations_v5.py", line 38, in test_current_product_instructions_context_and_schema_reach_every_payload
+    self.m.make_payload(self.frozen['cases'][0]|{'task':'A'*20000})
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v5.py", line 101, in make_payload
+    payload = product_payload(case['tool_result'], case['task'])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/public_providers.py", line 74, in build_payload
+    if len(json.dumps(payload,ensure_ascii=False).encode())>12000: raise Blocked('INPUT_TOO_LARGE')
+                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+quarterguard.provider_controls.Blocked: INPUT_TOO_LARGE
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.605s
+
+FAILED (errors=1)
