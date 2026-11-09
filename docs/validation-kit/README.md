@@ -24,4 +24,4 @@
 
 금융 분야 친구 b의 직무·경력·동의와 문서·코드 검토 의견은 [후속 기록](session-b-20261108.md)에 정리했습니다. 후속 [모바일 직접 수행 보고](session-b-task-followup-20261108.md)도 확보했습니다. 금액 아래 조건 표시를 반영한 뒤 [b의 직접 재확인 보고](session-b-mobile-recheck-received-20261109.md)도 받았습니다. 정성 의견과 세 과제 수행 보고이며 시간 단축이나 금융기관 고객 검증을 뜻하지 않습니다. [초대 문안·업무 카드·빈 기록지](finance-peer-review.md)를 사용하고, [과거 모집 상태](recruitment-status.md)는 당시 기록으로 보존합니다.
 
-**추가 후속:** [표 위 설정 이동 버튼에 대한 b의 직접 확인 의견](session-b-recovery-feedback-received-20261109.md)을 접수했다. 그 뒤 추가한 [설정 닫고 결과 보기](../settings-return-20261109.md) 기능은 자동 검사까지이며 사람 재확인은 아직이다.
+**추가 후속:** [표 위 설정 이동 버튼에 대한 b의 직접 확인 의견](session-b-recovery-feedback-received-20261109.md)을 접수했다. 그 뒤 추가한 [설정 닫고 결과 보기](../settings-return-20261109.md) 기능에 대해 같은 참여자가 [이번 복구 흐름에서 막힌 부분이 없었다는 후속 의견](session-b-settings-return-received-20261109.md)을 전달했다. 사람의 정성 보고와 자동 검사 결과를 구분한다.
