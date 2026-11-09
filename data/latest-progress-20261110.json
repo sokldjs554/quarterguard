@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "as_of_kst": "2026-11-10",
+  "evidence_basis_commit": "f5377adf4d5dea3cd6bde05ab2233dea4390dd27",
+  "production": {
+    "companies": [
+      "samsung"
+    ],
+    "year": 2024,
+    "documents": 2,
+    "facts": 192
+  },
+  "hyundai": {
+    "raw_cells": {
+      "total": 16,
+      "passed": 16,
+      "failed": 0
+    },
+    "raw_queries": {
+      "total": 8,
+      "passed": 8,
+      "failed": 0
+    },
+    "raw_calculations": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0
+    },
+    "production_registered": false,
+    "link": "docs/hyundai-holdout-20261109.md"
+  },
+  "human_review": {
+    "reviewer": "b",
+    "baseline": {
+      "참": 5,
+      "모호": 3
+    },
+    "followup": {
+      "참": 7,
+      "모호": 1
+    },
+    "cells": 8,
+    "queries": 4,
+    "link": "docs/validation-kit/session-b-llm-followup-20261110.md",
+    "gold_link": "docs/validation-kit/session-b-source-gold-20261109.md"
+  },
+  "llm": {
+    "historical_gpt_calls": 4,
+    "calls_per_batch": [
+      8,
+      8
+    ],
+    "structured_exact": [
+      8,
+      7
+    ],
+    "model": "gpt-5.4-mini-2026-03-17",
+    "same_development_cases": 8,
+    "latest_guard_live_evaluated": false,
+    "link": "docs/llm-followup-results-20261110.md",
+    "guard_link": "docs/decision-guards-20261110.md"
+  },
+  "personal_review": {
+    "added_tests": 5,
+    "period_tests": 2,
+    "dart_tests": 3,
+    "reported_full_suite": 143,
+    "period_link": "docs/code-review-kit/review-20261108.md",
+    "dart_link": "docs/code-review-kit/review-dart-20261109.md"
+  },
+  "participants": {
+    "unique_external_people": 2,
+    "roles": [
+      {
+        "id": "a",
+        "role": "대학생 · 작성자 시연에 의견 제공"
+      },
+      {
+        "id": "b",
+        "role": "금융 분야 경력 3년인 친구"
+      }
+    ],
+    "customer_environment_deployments": 0,
+    "a_link": "docs/validation-kit/session-a-20261107.md",
+    "b_link": "docs/validation-kit/session-b-task-followup-20261108.md"
+  },
+  "verification": {
+    "python_tests": 191,
+    "node_tests": 8,
+    "browser_replay_checks": 8,
+    "actual_mcp_cases": 8,
+    "actor": "AI",
+    "code_commit": "f5377adf4d5dea3cd6bde05ab2233dea4390dd27",
+    "log": "artifacts/decision-guards-20261110/python-tests.txt",
+    "link": "docs/decision-guards-20261110.md"
+  },
+  "source_sha256": {
+    "artifacts/hyundai-final-20261109/summary.json": "293b558dd6db30aaf4cd0588662633d9807c1fde588f15822b285cd9cb9776c7",
+    "artifacts/human-review-followup-20261110/review.json": "1b81260bb86308f14af2394c0a22dadf8d49f7b2550f8930c6a3610e30c2d00c",
+    "artifacts/human-llm-followup-20261110/review.json": "3d5f05558410a2e6230cd27842da9f4ac597d2261adae811a139a38fdb64b298",
+    "artifacts/llm-followup-20261110/comparison.json": "d8b0a1a9dc673ba54c2e486e404fa0581d91aeae382615604cc7a7fa860ddc72",
+    "artifacts/decision-guards-20261110/python-tests.txt": "025515c463806964db0ca4da285fe621900b289846a11b9b24b249db930e7a28",
+    "docs/code-review-kit/review-20261108.md": "426f2494eadd49424640bef078d679c3f0da4b1a0764ad6f406964dd156c644a",
+    "docs/code-review-kit/review-dart-20261109.md": "015da789f022a33c3f5e92a93830f6e85bf5d6afeccdabf4a1a2131b6d634d8c",
+    "docs/validation-kit/session-a-20261107.md": "d18e8b72e8fe76606f1d94693f6fd74d8e23f7d9b6698e6f0728004f57d5e13b",
+    "docs/validation-kit/session-b-source-gold-20261109.md": "b936fff8634f3796df75260ef75201d38805d4f508d12a4301deed44b0ca2ad9",
+    "docs/validation-kit/session-b-task-followup-20261108.md": "6932e639c13fc083dd603e6ae7b65d6dd3936d04380a8c808fa70ae14c573cf8",
+    "docs/decision-guards-20261110.md": "766cb1bdaf9fb9fddaf2f156484bb485443a9c1a2839dc3a00d1b26f9211758c"
+  }
+}

@@ -1,0 +1,3 @@
+Initial local browser check failed at its final POST assertion.
+AssertionError: ['http://127.0.0.1:8791/api/worksheet', 'http://127.0.0.1:8791/api/worksheet', 'http://127.0.0.1:8791/api/worksheet', 'http://127.0.0.1:8791/api/worksheet', 'http://127.0.0.1:8791/api/worksheet', 'http://127.0.0.1:8791/api/worksheet']
+The test intercepted every POST, including the app's ordinary local worksheet preview. This is a test harness error, not evidence of external provider calls or an app failure. The follow-up allows local worksheet POSTs and blocks/counts provider POSTs separately; assertions for current/history/error/recovery are unchanged.
