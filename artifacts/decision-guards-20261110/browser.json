@@ -1,0 +1,21 @@
+{
+  "mode": "local_HTTP_intercepted_provider_responses",
+  "checks": [
+    "390:scope_prose_unchanged_separate_issue_basis",
+    "390:failed_validation_clears_old_prose_and_context",
+    "390:normal_recovery_drops_scope_warning",
+    "390:target_change_clears_result",
+    "1440:scope_prose_unchanged_separate_issue_basis",
+    "1440:failed_validation_clears_old_prose_and_context",
+    "1440:normal_recovery_drops_scope_warning",
+    "1440:target_change_clears_result"
+  ],
+  "checks_passed": 8,
+  "provider_posts_intercepted": 6,
+  "actual_external_calls": 0,
+  "new_model_responses": 0,
+  "human_review": false,
+  "physical_mobile": false,
+  "direct_public_HTTPS": false,
+  "page_errors": []
+}

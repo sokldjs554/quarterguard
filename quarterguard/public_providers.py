@@ -1,5 +1,6 @@
 """Opt-in providers: fixed targets, bounded requests, provenance and fail-closed spend."""
 import asyncio
+import copy
 from datetime import datetime, timezone
 from decimal import Decimal
 from functools import lru_cache
@@ -20,6 +21,12 @@ DART_TARGETS = {'s24q3-CFS':('11014','s24q3','CFS'),'s24q3-OFS':('11014','s24q3'
                 's24q2-CFS':('11012','s24q2','CFS'),'s24q2-OFS':('11012','s24q2','OFS')}
 APPROVAL = 'gpt41mini-20-attempts-usd020-v1'
 lock = threading.Lock()
+
+class ExplanationRejected(RuntimeError):
+    """Safe diagnostic flags only; rejected model prose never reaches the UI."""
+    def __init__(self, checks):
+        super().__init__('OPENAI_RESPONSE_FAILED_OR_REJECTED')
+        self.checks = checks
 
 def now(): return datetime.now(timezone.utc).isoformat()
 def ledger_path(): return Path(os.getenv('QG_LEDGER_PATH',str(ROOT/'work/provider-ledger.sqlite3')))
@@ -55,10 +62,15 @@ def status():
     return out
 
 def build_payload(result, title):
+    schema=copy.deepcopy(SCHEMA)
+    ids=[fact['id'] for fact in result.get('evidence', [])]
+    field=schema['properties']['evidence_ids']
+    field.update(minItems=len(ids), maxItems=len(ids))
+    if ids: field['items']['enum']=list(dict.fromkeys(ids))
     payload={'model':MODEL,'store':False,'max_output_tokens':700,
         'instructions':INSTRUCTIONS,
         'input':json.dumps({'task':title,'tool_result':result,'explanation_context':build_context(result)},ensure_ascii=False),
-        'text':{'format':{'type':'json_schema','name':'financial_explanation','strict':True,'schema':SCHEMA}}}
+        'text':{'format':{'type':'json_schema','name':'financial_explanation','strict':True,'schema':schema}}}
     if len(json.dumps(payload,ensure_ascii=False).encode())>12000: raise Blocked('INPUT_TOO_LARGE')
     return payload
 
@@ -73,11 +85,13 @@ def generate_public(payload, result):
         usage=body['usage'];inp=usage['input_tokens'];output=usage['output_tokens']
         if type(inp) is not int or type(output) is not int or inp<0 or output<0 or body.get('model')!=MODEL: raise ValueError()
         checks=check_explanation(answer,result)
-        if not all(checks.values()): raise RuntimeError('EXPLANATION_MISMATCH')
+        if not all(checks.values()): raise ExplanationRejected(checks)
         return {'generated':answer,'checks':checks,'model':body['model'],'input_tokens':inp,'output_tokens':output,
                 'estimated_cost_usd':str((Decimal(inp)*Decimal('.4')+Decimal(output)*Decimal('1.6'))/1000000),
                 'billed_cost_usd':None,'prose_semantics_verified':False,
                 'explanation_context':build_context(result)}
+    except ExplanationRejected:
+        raise
     except Exception:
         # Never return provider body, URL, key, headers or arbitrary exception text.
         raise RuntimeError('OPENAI_RESPONSE_FAILED_OR_REJECTED') from None
@@ -131,6 +145,9 @@ def execute(provider,target):
                 result.update(generate_public(payload,run['result']))
                 result['mcp_run_id']=run['run_id'];result['mcp_tool_calls']=len(run['trace'])
             result['status']='succeeded'
+        except ExplanationRejected as exc:
+            result['reason']='EXPLANATION_VALIDATION_REJECTED'
+            result['validation_checks']=exc.checks
         except Exception:
             result['reason']='PROVIDER_REQUEST_FAILED_OR_VALIDATION_REJECTED'
         db.finish(rid,result)

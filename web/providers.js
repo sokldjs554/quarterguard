@@ -5,7 +5,7 @@ const targets={
  dart:{'s24q3-CFS':'2024년 3분기 · 연결','s24q3-OFS':'2024년 3분기 · 별도','s24q2-CFS':'2024년 반기 · 연결','s24q2-OFS':'2024년 반기 · 별도'},
  openai:{'qoq-revenue':'분기 매출 증감','ytd-trap':'누적·분기 혼동','no-evidence':'근거 부재','reconcile-revenue':'누적 차감 교차검증'}
 };
-const reasons={KEY_NOT_CONFIGURED:'API 키 미설정',PAID_APPROVAL_REQUIRED:'유료 호출 승인 미설정',DURABLE_LEDGER_REQUIRED:'재시작 후에도 유지되는 사용량 기록 필요',OPERATOR_DISABLED:'운영자가 호출 중지',LEDGER_UNAVAILABLE:'사용량 기록 연결 불가',QUOTA_EXHAUSTED:'공유 호출 한도 소진',COOLDOWN:'호출 간 대기 시간 미경과',BUSY_RETRY:'다른 검증 실행 중',MCP_FAILED:'선행 MCP 검증 실패',INPUT_TOO_LARGE:'입력 크기 제한 초과',UNKNOWN_TARGET:'지원하지 않는 대상',PROVIDER_SERVICE_UNAVAILABLE:'외부 검증 서비스 연결 불가',PROVIDER_REQUEST_FAILED_OR_VALIDATION_REJECTED:'외부 요청 실패 또는 응답 검증 불일치'};
+const reasons={EXPLANATION_VALIDATION_REJECTED:'AI 응답의 수치·판정·근거 ID 검사 불일치 · 설명을 표시하지 않습니다',KEY_NOT_CONFIGURED:'API 키 미설정',PAID_APPROVAL_REQUIRED:'유료 호출 승인 미설정',DURABLE_LEDGER_REQUIRED:'재시작 후에도 유지되는 사용량 기록 필요',OPERATOR_DISABLED:'운영자가 호출 중지',LEDGER_UNAVAILABLE:'사용량 기록 연결 불가',QUOTA_EXHAUSTED:'공유 호출 한도 소진',COOLDOWN:'호출 간 대기 시간 미경과',BUSY_RETRY:'다른 검증 실행 중',MCP_FAILED:'선행 MCP 검증 실패',INPUT_TOO_LARGE:'입력 크기 제한 초과',UNKNOWN_TARGET:'지원하지 않는 대상',PROVIDER_SERVICE_UNAVAILABLE:'외부 검증 서비스 연결 불가',PROVIDER_REQUEST_FAILED_OR_VALIDATION_REJECTED:'외부 요청 실패 또는 응답 검증 불일치'};
 const reason=x=>reasons[x]||String(x);
 const time=x=>x&&Number.isFinite(Date.parse(x))?localTime(x):'기록 없음';
 const number=x=>Number.isFinite(x)?String(x):'확인 불가';
@@ -14,6 +14,7 @@ function sourceLink(url) {
  return '출처 링크 없음';
 }
 function details(provider,r) {
+ if(r.status!=='succeeded')return '';
  if(provider==='dart'&&Array.isArray(r.checks))return `<div class="table-overflow"><table class="evaluation-table"><thead><tr><th>근거 ID · 필드</th><th>IR 금액 (원)</th><th>DART 금액 (원)</th><th>대조</th><th>원문</th></tr></thead><tbody>${r.checks.map(c=>`<tr><td>${esc(c.fact_id)}<small>${esc(c.source_field)}</small></td><td class="num">${esc(c.expected_krw)}</td><td class="num">${esc(c.dart_krw??'없음')}</td><td class="${c.passed?'ok':'warn'}">${c.passed?'일치':'불일치'}</td><td>${sourceLink(c.dart_source)}</td></tr>`).join('')}</tbody></table></div><p class="review-caption">매출·영업이익의 단독 분기/누적 금액을 원 단위로 대조합니다. 연결·별도 범위는 요청한 fs_div 기준입니다.</p>`;
  if(provider==='openai'&&r.generated) {
   const g=r.generated;
