@@ -1,0 +1,126 @@
+{
+  "status": "user_confirmed_human_review_followup",
+  "received_date_kst": "2026-11-10",
+  "actual_review_date": null,
+  "reviewer": "b",
+  "public_confirmation": {
+    "confirmed_by": "project_author",
+    "received_date_kst": "2026-11-10",
+    "scope": [
+      "anonymous_GitHub_summary",
+      "application_evidence"
+    ],
+    "user_statement": "b가 직접 수행했고 이번 기록 공개도 확인 완료"
+  },
+  "source_report": "artifacts/llm-live-20261109/report.json",
+  "source_report_sha256": "deff2dc025fef8f469c34ecf4a725cadddd29f90b02ab67cdb6500fd750b343d",
+  "reported_samsung_image_cells": [
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+  ],
+  "reported_samsung_image_matches": 4,
+  "verdict_counts": {
+    "참": 5,
+    "모호": 3,
+    "거짓": 0,
+    "판단 불가": 0
+  },
+  "records": [
+    {
+      "case_id": "normal-qoq",
+      "reported_human_verdict": "참",
+      "reported_reason_summary": "2024년 2·3분기 연결매출 및 6.7916% 일치. KRW는 통화이고 표시 단위는 백만 원이라는 주석 포함.",
+      "automatic_verdict": "flagged",
+      "automatic_issues": [
+        "UNIT_CLAIM_CONFLICT"
+      ],
+      "response_sha256": "489e7438dbb03061675805ed79cfc9cddd62a81ae758d8d2b5e8a57a34511c79"
+    },
+    {
+      "case_id": "normal-yoy",
+      "reported_human_verdict": "참",
+      "reported_reason_summary": "2023·2024년 3분기 연결매출과 17.3491% 일치. 모두 3개월.",
+      "automatic_verdict": "flagged",
+      "automatic_issues": [
+        "UNIT_CLAIM_CONFLICT",
+        "UNBOUND_NUMBER_REQUIRES_REVIEW"
+      ],
+      "response_sha256": "e09833d7b953bc8e1f923b1130e01e3b1a0eacdbe74bacce96d3b541c04880b2"
+    },
+    {
+      "case_id": "period-mismatch",
+      "reported_human_verdict": "참",
+      "reported_reason_summary": "2024년 9개월 누적과 2023년 3개월의 비교 보류 설명이 도구 결과와 일치.",
+      "automatic_verdict": "flagged",
+      "automatic_issues": [
+        "NEGATION_REQUIRES_REVIEW",
+        "UNIT_CLAIM_CONFLICT"
+      ],
+      "response_sha256": "a23c2251b75d392c762cac072cbdd8f7edb72d15c89914e4c051cfc1b3a914f4"
+    },
+    {
+      "case_id": "scope-mismatch",
+      "reported_human_verdict": "참",
+      "reported_reason_summary": "2024년 3분기 연결과 2분기 별도 직접 비교 제한이 타당.",
+      "automatic_verdict": "flagged",
+      "automatic_issues": [
+        "UNBOUND_NUMBER_REQUIRES_REVIEW"
+      ],
+      "response_sha256": "29ab2ecdea0ac320c35b2b4fe34bed972a1dea3022a9e269f0d6b0b81a58cf4a"
+    },
+    {
+      "case_id": "unit-draft",
+      "reported_human_verdict": "모호",
+      "reported_reason_summary": "표의 scale=1,000,000 표현이 공시 표기와 내부 환산값을 혼동시킬 수 있음. 공시는 백만 원 단위.",
+      "automatic_verdict": "flagged",
+      "automatic_issues": [
+        "AMOUNT_ATTRIBUTION_REQUIRES_REVIEW",
+        "UNBOUND_NUMBER_REQUIRES_REVIEW"
+      ],
+      "response_sha256": "0a98de4ef939b9b3900413f44e1ff3db759c5e27b6be35d56d649b70b9b0aa48"
+    },
+    {
+      "case_id": "no-evidence",
+      "reported_human_verdict": "모호",
+      "reported_reason_summary": "검색 결과가 빈 것은 맞으나 해당 검색 범위에서 확인할 수 없다고 한정할 필요.",
+      "automatic_verdict": "no_detected_rule_violation",
+      "automatic_issues": [],
+      "response_sha256": "ad4197c6d0a056fe1cf7382a9d5dabe4f1dbb139956ec35029b1e30c2292e5e2"
+    },
+    {
+      "case_id": "conflicting-number-draft",
+      "reported_human_verdict": "참",
+      "reported_reason_summary": "실제 응답의 수치·기간·범위·증가율 일치. 사례 이름만으로 숫자 충돌을 판정하지 않음.",
+      "automatic_verdict": "flagged",
+      "automatic_issues": [
+        "AMOUNT_ATTRIBUTION_REQUIRES_REVIEW",
+        "UNIT_CLAIM_CONFLICT",
+        "UNBOUND_NUMBER_REQUIRES_REVIEW"
+      ],
+      "response_sha256": "569635432bf698cc5daca372d0a08e00b387177d94de02cbd0b4d0730706a074"
+    },
+    {
+      "case_id": "citation-draft",
+      "reported_human_verdict": "모호",
+      "reported_reason_summary": "수치·증가율·구조화 근거 ID는 있으나 본문에 문서·페이지가 없어 찾기 어려움. scale 설명 필요.",
+      "automatic_verdict": "flagged",
+      "automatic_issues": [
+        "AMOUNT_ATTRIBUTION_REQUIRES_REVIEW",
+        "UNIT_CLAIM_CONFLICT",
+        "UNBOUND_NUMBER_REQUIRES_REVIEW"
+      ],
+      "response_sha256": "6f65da22e034c354baaf2d6b293a72838f9acf5bb91694b2bb6d39b87cdcc6ef"
+    }
+  ],
+  "limits": [
+    "Same existing participant b; no new participant or company-authorized review.",
+    "Reported judgments summarized by AI; AI did not perform the human review.",
+    "No general semantic accuracy or error-rate claim.",
+    "Historical report and blank review forms unchanged."
+  ],
+  "new_api_calls": 0,
+  "reported_samsung_image_cells_counted_as_new_unique_cells": 0,
+  "detailed_review_dimensions": "Only overall verdicts and reasons were supplied; blank detailed fields not inferred."
+}
