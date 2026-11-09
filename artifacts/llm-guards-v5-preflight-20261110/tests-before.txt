@@ -1,0 +1,86 @@
+test_approval_and_journal_prevent_calls_and_preserve_old_attempt (test_live_explanations_v5.CurrentGuardBatchTests.test_approval_and_journal_prevent_calls_and_preserve_old_attempt) ... FAIL
+test_comparison_reaudits_both_batches_without_copying_human_labels (test_live_explanations_v5.CurrentGuardBatchTests.test_comparison_reaudits_both_batches_without_copying_human_labels) ... FAIL
+test_current_product_instructions_context_and_schema_reach_every_payload (test_live_explanations_v5.CurrentGuardBatchTests.test_current_product_instructions_context_and_schema_reach_every_payload) ... FAIL
+test_provider_schema_rejection_stops_once_and_preserves_http_failure (test_live_explanations_v5.CurrentGuardBatchTests.test_provider_schema_rejection_stops_once_and_preserves_http_failure) ... FAIL
+test_same_disclosed_cases_preserve_previous_mcp_inputs_and_drafts (test_live_explanations_v5.CurrentGuardBatchTests.test_same_disclosed_cases_preserve_previous_mcp_inputs_and_drafts) ... FAIL
+test_tampered_input_rejected_even_with_recomputed_freeze_digest (test_live_explanations_v5.CurrentGuardBatchTests.test_tampered_input_rejected_even_with_recomputed_freeze_digest) ... FAIL
+test_timeout_stops_once_without_retry_or_exposing_key (test_live_explanations_v5.CurrentGuardBatchTests.test_timeout_stops_once_without_retry_or_exposing_key) ... FAIL
+test_usage_over_cap_stops_and_preserves_measured_cost (test_live_explanations_v5.CurrentGuardBatchTests.test_usage_over_cap_stops_and_preserves_measured_cost) ... FAIL
+test_wrong_id_is_preserved_for_audit_but_would_not_pass_product_gate (test_live_explanations_v5.CurrentGuardBatchTests.test_wrong_id_is_preserved_for_audit_but_would_not_pass_product_gate) ... FAIL
+
+======================================================================
+FAIL: test_approval_and_journal_prevent_calls_and_preserve_old_attempt (test_live_explanations_v5.CurrentGuardBatchTests.test_approval_and_journal_prevent_calls_and_preserve_old_attempt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_live_explanations_v5.py", line 17, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('quarterguard.evaluate_live_explanations_v5'))
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_comparison_reaudits_both_batches_without_copying_human_labels (test_live_explanations_v5.CurrentGuardBatchTests.test_comparison_reaudits_both_batches_without_copying_human_labels)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_live_explanations_v5.py", line 17, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('quarterguard.evaluate_live_explanations_v5'))
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_current_product_instructions_context_and_schema_reach_every_payload (test_live_explanations_v5.CurrentGuardBatchTests.test_current_product_instructions_context_and_schema_reach_every_payload)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_live_explanations_v5.py", line 17, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('quarterguard.evaluate_live_explanations_v5'))
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_provider_schema_rejection_stops_once_and_preserves_http_failure (test_live_explanations_v5.CurrentGuardBatchTests.test_provider_schema_rejection_stops_once_and_preserves_http_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_live_explanations_v5.py", line 17, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('quarterguard.evaluate_live_explanations_v5'))
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_same_disclosed_cases_preserve_previous_mcp_inputs_and_drafts (test_live_explanations_v5.CurrentGuardBatchTests.test_same_disclosed_cases_preserve_previous_mcp_inputs_and_drafts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_live_explanations_v5.py", line 17, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('quarterguard.evaluate_live_explanations_v5'))
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_tampered_input_rejected_even_with_recomputed_freeze_digest (test_live_explanations_v5.CurrentGuardBatchTests.test_tampered_input_rejected_even_with_recomputed_freeze_digest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_live_explanations_v5.py", line 17, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('quarterguard.evaluate_live_explanations_v5'))
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_timeout_stops_once_without_retry_or_exposing_key (test_live_explanations_v5.CurrentGuardBatchTests.test_timeout_stops_once_without_retry_or_exposing_key)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_live_explanations_v5.py", line 17, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('quarterguard.evaluate_live_explanations_v5'))
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_usage_over_cap_stops_and_preserves_measured_cost (test_live_explanations_v5.CurrentGuardBatchTests.test_usage_over_cap_stops_and_preserves_measured_cost)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_live_explanations_v5.py", line 17, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('quarterguard.evaluate_live_explanations_v5'))
+AssertionError: unexpectedly None
+
+======================================================================
+FAIL: test_wrong_id_is_preserved_for_audit_but_would_not_pass_product_gate (test_live_explanations_v5.CurrentGuardBatchTests.test_wrong_id_is_preserved_for_audit_but_would_not_pass_product_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_live_explanations_v5.py", line 17, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('quarterguard.evaluate_live_explanations_v5'))
+AssertionError: unexpectedly None
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.001s
+
+FAILED (failures=9)
