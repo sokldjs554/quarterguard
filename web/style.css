@@ -327,4 +327,16 @@ dialog::backdrop { background:#1f251966; }
 .provider-result td small,.heldout-failures td small { display:block; font-size:10px; color:var(--muted); }
 .heldout-limitation { padding:12px 14px; border-left:3px solid var(--amber); background:var(--amber-bg); font-size:12px; }
 .heldout-failures { margin-top:18px; }
+#latest-evidence-summary td { vertical-align:top; }
+@media(max-width:700px) {
+ #latest-evidence-summary .table-overflow { overflow:visible; }
+ #latest-evidence-summary table,#latest-evidence-summary tbody { display:block; min-width:0; }
+ #latest-evidence-summary thead { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
+ #latest-evidence-summary tr { display:block; padding:14px 0; border-bottom:1px solid var(--line); }
+ #latest-evidence-summary td { display:block; width:auto; min-width:0; padding:6px 0; border:0; white-space:normal; overflow-wrap:anywhere; }
+ #latest-evidence-summary td:first-child { font-weight:600; }
+ #latest-evidence-summary td:nth-child(2):before { content:'확인한 결과'; }
+ #latest-evidence-summary td:nth-child(3):before { content:'범위와 남은 한계'; }
+ #latest-evidence-summary td:before { display:block; color:var(--muted); font-size:11px; margin-bottom:4px; }
+}
 @media(max-width:700px) { .provider-card { padding:13px; } .provider-section-heading { align-items:flex-start; flex-direction:column; } .provider-card>label { display:flex; } .provider-fields { grid-template-columns:1fr; gap:4px; } .provider-fields dd { margin-bottom:8px; } }

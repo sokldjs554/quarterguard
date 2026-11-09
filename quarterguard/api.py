@@ -75,6 +75,12 @@ async def call_provider(provider:str,target:str):
  finally:slots.release()
 @app.get('/api/evaluation/heldout')
 def heldout_evaluation():return artifact('heldout-evaluation.json')
+@app.get('/api/evaluation/latest')
+def latest_evaluation():
+ from .latest_progress import load_latest_progress
+ try:return {'summary':load_latest_progress(),'runtime_commit':revision()}
+ except (OSError,ValueError,KeyError,TypeError):
+  raise HTTPException(503,'LATEST_EVIDENCE_UNAVAILABLE') from None
 @app.get('/api/evaluation/current/{report}')
 def current_evaluation(report:str):
  names={'progress':'progress-v2-final.json','parser':'parser-development-v2-reviewed.json','search':'search-development-v2-followup.json','documents':'evaluation-v2-final-summary.json','ranking':'ranking-v2-disclosed-followup.json','explanations':'explanation-v2-final.json','mcp':'mcp-v2-reviewed.json'}

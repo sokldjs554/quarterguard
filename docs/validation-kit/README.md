@@ -26,4 +26,4 @@
 
 **추가 후속:** [표 위 설정 이동 버튼에 대한 b의 직접 확인 의견](session-b-recovery-feedback-received-20261109.md)을 접수했다. 그 뒤 추가한 [설정 닫고 결과 보기](../settings-return-20261109.md) 기능에 대해 같은 참여자가 [이번 복구 흐름에서 막힌 부분이 없었다는 후속 의견](session-b-settings-return-received-20261109.md)을 전달했다. 사람의 정성 보고와 자동 검사 결과를 구분한다.
 
-**원문 정답 검수 준비:** [셀8개·질의4개 안내](source-gold-review-20261109.md)와 [빈 기록지](source-gold-review-sheet-20261109.md). 기존 앱 사용성 확인과 다른 과제다. 이후 [b의 직접 검수 보고](session-b-source-gold-20261109.md)를 받아 셀8/8·질의4/4 일치를 기록했다. 삼성4개는 추출 텍스트 기준이며 이미지 확인은 남았다.
+**원문 정답 검수 준비:** [셀8개·질의4개 안내](source-gold-review-20261109.md)와 [빈 기록지](source-gold-review-sheet-20261109.md). 기존 앱 사용성 확인과 다른 과제다. 이후 [b의 직접 검수 보고](session-b-source-gold-20261109.md)를 받아 셀8/8·질의4/4 일치를 기록했다. 최초 삼성4개는 추출 텍스트 기준이었고, 이후 [원문 이미지4개 후속 확인](session-b-image-llm-received-20261110.md)도 받았다. 같은 셀을 새4개로 더하지 않는다. 이후 새 LLM8개도 [같은 b가 재검수](session-b-llm-followup-20261110.md)해 참7·모호1과 근거ID 오류1건을 기록했다. 마지막 설명 방어 코드 변경 후의 새 실호출·사람 검수는 아직 없다.
