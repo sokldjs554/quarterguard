@@ -1,0 +1,26 @@
+[
+  {
+    "id": "hyundai-yoy-revenue",
+    "operation": "compare",
+    "mode": "yoy",
+    "inputs": [
+      "h24q3-CFS-revenue-2024-q-KRW",
+      "h24q3-CFS-revenue-2023-q-KRW"
+    ],
+    "expected_status": "verified",
+    "expected_value": "4.7259",
+    "expected_issues": []
+  },
+  {
+    "id": "hyundai-yoy-operating_profit",
+    "operation": "compare",
+    "mode": "yoy",
+    "inputs": [
+      "h24q3-CFS-operating_profit-2024-q-KRW",
+      "h24q3-CFS-operating_profit-2023-q-KRW"
+    ],
+    "expected_status": "verified",
+    "expected_value": "-6.4665",
+    "expected_issues": []
+  }
+]

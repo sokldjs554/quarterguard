@@ -1,5 +1,7 @@
 # QuarterGuard v1.4 보완 결과
 
+> 최신 종합: [현재 지원 근거](application-summary-20261109.md).
+
 > 이후 업데이트: [2026-11-08 지원 근거](application-evidence-20261108.md). 아래 평가·참여 상태는 당시 기록으로 보존합니다.
 
 2026-10-31. [현재 채용 공고](https://treasurer.recruit.roundhr.com/c/nLeVw9amBH)와 [요구사항 대조](job-fit-v2.md). 기준 버전은 `39b59bdfd222da6ead5bdf4e72feea5995a72e0d`(v1.3.1)다. 기존 실패·실호출·정답 자료 25개의 SHA256을 보존했다. [로컬 검증과 보존 목록](../artifacts/validation-v1.4-local.json).

@@ -1,0 +1,65 @@
+name: bounded live explanations v3
+on:
+  workflow_dispatch:
+    inputs:
+      approved_contract:
+        description: 'Explicit approval: 8 requests, GPT-5.4-mini-2026-03-17, 6000 input admission / 700 output, $0.07 before tax'
+        type: boolean
+        required: true
+        default: false
+      freeze_sha256:
+        description: Exact approved content_sha256 from data/llm-eval-20261109/freeze.json
+        type: string
+        required: true
+permissions:
+  contents: read
+concurrency:
+  group: live-explanations-v3-20261109
+  cancel-in-progress: false
+jobs:
+  evaluate:
+    if: inputs.approved_contract == true
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Reject reruns and bind approval to frozen inputs
+        env:
+          APPROVED_FREEZE_SHA256: ${{ inputs.freeze_sha256 }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          if os.environ['GITHUB_RUN_ATTEMPT'] != '1':
+              raise SystemExit('Paid reruns are prohibited; do not retry this workflow.')
+          frozen = json.loads(Path('data/llm-eval-20261109/freeze.json').read_text())
+          if frozen['content_sha256'] != os.environ['APPROVED_FREEZE_SHA256']:
+              raise SystemExit('Approval does not match frozen inputs.')
+          PY
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Check frozen case and prompt integrity before exposing credentials
+        run: |
+          python - <<'PY'
+          import json
+          from quarterguard.evaluate_live_explanations_v3 import DATA, validate_freeze
+          validate_freeze(json.loads((DATA / 'freeze.json').read_text()))
+          PY
+      - name: Execute the explicitly approved bounded run once
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python -m quarterguard.evaluate_live_explanations_v3 --execute-approved --output work/live-explanations-20261109
+      - name: Preserve public response evidence, including failed attempts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-explanations-v3-${{ github.run_id }}
+          path: work/live-explanations-20261109/
+          if-no-files-found: warn
+          retention-days: 30

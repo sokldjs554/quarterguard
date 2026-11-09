@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-11-09T08:36:19.896983+00:00",
+  "files": {
+    "data/hyundai-holdout-20261109/source_cells.json": "b5d7ff1bb169d820b8cf1967ed1f1469b2efa4040ca25a164486b9c561de092c",
+    "data/hyundai-holdout-20261109/calculations.json": "c76e3226c43f548857e1a98ff61421375d4b117698b12fddec6742589ec1750a",
+    "data/hyundai-holdout-20261109/retrieval_gold.json": "8ccda8a58de5c0bcf31f7facdd6aff460712ef123b62abffdf11ff6db9e7b996",
+    "data/hyundai-holdout-20261109/facts.json": "c0dcede277358d8723258699731b239cebb72baef19f0c07c00b4ea99cf54bfa",
+    "data/hyundai-holdout-20261109/sources.json": "5e784767a166ea38b2d7db17083636bde115da688c3fbe21ab7352a02c81df0c"
+  },
+  "baseline_revision": "0b1613c",
+  "baseline_ingest_sha256": "fff257ce462655fb6632af6752e9958a36d889fecacbe7b3f1df04144641955b",
+  "author": "AI evaluation worker",
+  "human_reviewed": false,
+  "expert_gold": false,
+  "same_task_ai_authored": true,
+  "parser_changes_seen": false,
+  "selection": "New official 2024 Q3 Hyundai document, not old failed 2023 Q3 source; 2023 comparative values can overlap disclosed data. One consolidated statement, four metrics, current/prior quarter and YTD, 16 exact KRW-million cells. Positive and ambiguous bilingual queries frozen before new parser execution.",
+  "inspection": "AI viewed page 8 raster and pypdf text. Gold literal cells transcribed independently of production parser. No human or expert adjudication.",
+  "canonical_row_mapping": {
+    "Sales": "Revenue"
+  },
+  "source_pdf_sha256": "3894d0c7948e337a1f32f1be3186159b8d4bbcdea27b7cf4eb8bf61fa74e125a",
+  "model_calls": 0,
+  "provider_api_cost_usd": 0
+}

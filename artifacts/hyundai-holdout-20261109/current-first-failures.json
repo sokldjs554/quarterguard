@@ -1,0 +1,259 @@
+{
+  "first_path": "artifacts/hyundai-holdout-20261109/current-first.json",
+  "first_sha256": "b11e6d3bd312d536fcb3f8674a955c8e1e924be8eebdee6e7a2391af99d00897",
+  "raw_statements": [
+    {
+      "id": "h24q3-CFS",
+      "parsed_count": 0,
+      "gold_cells": 16,
+      "exact_cells": 0,
+      "error": "ValueError: UNSUPPORTED_LAYOUT: Hyundai net_profit preceding row cells or notes",
+      "passed": false
+    }
+  ],
+  "stages": {
+    "raw_parsed": {
+      "queries": [
+        {
+          "id": "hyundai-positive-01",
+          "query": "What was Hyundai Motor consolidated revenue for the third quarter of 2024 in KRW million?",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "hyundai-positive-02",
+          "query": "현대자동차 2024년 3분기 연결 누적 영업이익을 백만원 단위로 알려줘",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "hyundai-positive-03",
+          "query": "Hyundai Motor Company 2023 Q3 quarter consolidated KRW million gross profit",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "hyundai-positive-04",
+          "query": "현대자동차 2023년 3분기 연결 누적 당기순이익 원화 백만원",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "hyundai-ambiguous-01",
+          "query": "Hyundai Motor 2024 Q3 consolidated revenue in KRW million",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "hyundai-ambiguous-02",
+          "query": "현대자동차 2024년 3분기 연결 매출액 원화 백만원",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "hyundai-ambiguous-03",
+          "query": "Hyundai Motor 2024 Q3 quarter revenue KRW million",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "hyundai-ambiguous-04",
+          "query": "현대자동차 2024년 3분기 누적 영업이익 원화 백만원",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        }
+      ],
+      "citations": [
+        {
+          "fact_id": "h24q3-CFS-revenue-2024-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-revenue-2024-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-revenue-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-revenue-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-gross_profit-2024-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-gross_profit-2024-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-gross_profit-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-gross_profit-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-operating_profit-2024-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-operating_profit-2024-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-operating_profit-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-operating_profit-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-net_profit-2024-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-net_profit-2024-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-net_profit-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-net_profit-2023-ytd-KRW",
+          "passed": false
+        }
+      ],
+      "calculations": [
+        {
+          "id": "hyundai-yoy-revenue",
+          "passed": false,
+          "status": "blocked_missing_parsed_fact",
+          "missing": [
+            "h24q3-CFS-revenue-2024-q-KRW",
+            "h24q3-CFS-revenue-2023-q-KRW"
+          ]
+        },
+        {
+          "id": "hyundai-yoy-operating_profit",
+          "passed": false,
+          "status": "blocked_missing_parsed_fact",
+          "missing": [
+            "h24q3-CFS-operating_profit-2024-q-KRW",
+            "h24q3-CFS-operating_profit-2023-q-KRW"
+          ]
+        }
+      ]
+    },
+    "fixture_assisted": {
+      "queries": [
+        {
+          "id": "hyundai-positive-01",
+          "query": "What was Hyundai Motor consolidated revenue for the third quarter of 2024 in KRW million?",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [
+            "h24q3-CFS-revenue-2024-q-KRW",
+            "h24q3-CFS-revenue-2024-ytd-KRW"
+          ],
+          "rank": 1,
+          "status": "needs_clarification",
+          "issues": [
+            "MISSING_KIND"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        }
+      ],
+      "citations": [],
+      "calculations": []
+    }
+  }
+}

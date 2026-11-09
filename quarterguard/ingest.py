@@ -92,6 +92,9 @@ def _amount_cells(row, metric):
 
 def parse_statement(text, doc, page, metrics=None):
     """Parse a bounded bilingual-currency interim layout; never infer from IDs."""
+    if doc.get('company') == 'hyundai':
+        from .hyundai_ingest import parse_statement as parse_hyundai_statement
+        return parse_hyundai_statement(text, doc, page, metrics)
     t = _normalize_statement(text)
     scope, month, day, years, header_end = _statement_context(t, doc, page)
     out = []

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-09T08:43:12.658878+00:00",
+  "implementation_sha256": {
+    "quarterguard/ingest.py": "0a6e8708680658cf725ecfa7f679ce9c18a933cb536888a1b66c216c320756ff",
+    "quarterguard/hyundai_ingest.py": "28edef7e0ed80bd1dd64ab582ff9756c044a78946a9b10b39a3933b7814b5515"
+  },
+  "artifacts": {
+    "artifacts/hyundai-parser-20261109/disclosed-dash-after.txt": "41a2d35b3ada58186ce3108e83a4036c893012a5eb80d16ac6f9480e4dc05176",
+    "artifacts/hyundai-parser-20261109/disclosed-dash-before.txt": "a4765c173b7b9bcfd162baf922a74ad7cb8c7479251db9a0e6d9ce47b27aaea6",
+    "artifacts/hyundai-parser-20261109/historical-preservation.json": "2b2383f6822fe423319bfdeb2d3da54a8f92c52b3a2172e90a0fa6fac9744030",
+    "artifacts/hyundai-parser-20261109/hyundai-2023-extracted.json": "d3b9cdbc14ba71c615cd518d41efff14b604cb69ef3712b1a702ba6486dcb99c",
+    "artifacts/hyundai-parser-20261109/known-2023-after.json": "c72d3f6e71c615e19953bae49edc9e978104e314aba4c91ec100b4d57e9a56c0",
+    "artifacts/hyundai-parser-20261109/known-2023-before.json": "f0e4bc5fbe5a4d49ac623d617ed168bb815b4751ae4d4b33cbd9ff3a896d982c",
+    "artifacts/hyundai-parser-20261109/known-2023-final-regression.json": "8cbc9be95ebf5f97707af05b9c90de0d5e7609007bd471a3be23063826005c25",
+    "artifacts/hyundai-parser-20261109/samsung-regression-after.json": "21a1fc09c8d786ef8cbdbc3d10315af14bc2f826186bba5df11340480ce7c2a8",
+    "artifacts/hyundai-parser-20261109/samsung-regression-final.json": "7cf4fd22d0e1f36546dcd3bf158fde052e8d6e35203a471f4102ee5b7ad335d3",
+    "artifacts/hyundai-parser-20261109/tests-after.txt": "8e9fdb6aecbae52440951d23bc1e09b74c9f0df0007752a9f6922e4a2a66cf9e",
+    "artifacts/hyundai-parser-20261109/tests-before.txt": "a8fea964601a98ee409030616a93b462954a82e4e1fb781b071d8c7795e0923d",
+    "artifacts/hyundai-parser-20261109/tests-suite-after.txt": "d5fd959a6b09be7218b581c4f75ce433b41a21d08a9c50a8391b97c645ef2956",
+    "artifacts/hyundai-parser-20261109/tests-suite-final.txt": "7162fa146a14671c442c6283092ec7e574ef1ad68b067115e35c2135fe6d5762"
+  },
+  "initial_hyundai_tests": {
+    "total": 12,
+    "failures_before": 3,
+    "errors_before": 3,
+    "passed_after": 12
+  },
+  "disclosed_dash_regression": {
+    "failed_before": 1,
+    "hyundai_tests_passed_after": 13,
+    "dash_not_interpreted_as_zero": true
+  },
+  "full_suite_initial_snapshot": {
+    "total": 166,
+    "failures": 7,
+    "failure_module": "test_live_explanations_v3",
+    "reason": "concurrently unfinished harness module missing"
+  },
+  "full_suite_final": {
+    "total": 167,
+    "passed": 167,
+    "failed": 0
+  },
+  "known_2023_final": {
+    "raw_statements": 5,
+    "raw_statements_passed": 5,
+    "exact_gold_cells": 80,
+    "exact_gold_cells_passed": 80,
+    "raw_queries_passed": 24,
+    "raw_queries": 24,
+    "raw_citations_passed": 80,
+    "raw_citations": 80,
+    "raw_calculations_passed": 6,
+    "raw_calculations": 6
+  },
+  "production_hyundai_registered_facts": 0,
+  "hyundai_extracted_six_metrics": 24,
+  "independent_gold_count": 16,
+  "historical_files_preserved": 109,
+  "human_reviewed": false,
+  "same_task_ai_authored": true,
+  "model_calls": 0,
+  "provider_api_cost_usd": 0,
+  "cost_scope": "Paid model/provider APIs only; CPU/storage/network excluded",
+  "notes": [
+    "2023 and the disclosed2024 dash correction are remediation, not first-pass holdout success.",
+    "Independent holdout results live in separate worker artifacts.",
+    "Source registry and deployed product were not changed by this parser work."
+  ]
+}

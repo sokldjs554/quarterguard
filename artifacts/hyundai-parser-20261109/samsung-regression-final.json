@@ -1,0 +1,84 @@
+{
+  "evaluated_at": "2026-11-09T08:42:16.458112+00:00",
+  "label": "Samsung final regression after disclosed Hyundai dash correction",
+  "same_task_ai_authored": true,
+  "human_reviewed": false,
+  "model_calls": 0,
+  "provider_api_cost_usd": 0,
+  "implementation_sha256": {
+    "quarterguard/ingest.py": "0a6e8708680658cf725ecfa7f679ce9c18a933cb536888a1b66c216c320756ff",
+    "quarterguard/hyundai_ingest.py": "28edef7e0ed80bd1dd64ab582ff9756c044a78946a9b10b39a3933b7814b5515"
+  },
+  "datasets": [
+    {
+      "dataset": "data",
+      "statements": [
+        {
+          "id": "s24q3-CFS",
+          "page": 34,
+          "count": 48,
+          "pdf_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f"
+        },
+        {
+          "id": "s24q3-OFS",
+          "page": 89,
+          "count": 48,
+          "pdf_sha256": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f"
+        },
+        {
+          "id": "s24q2-CFS",
+          "page": 48,
+          "count": 48,
+          "pdf_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4"
+        },
+        {
+          "id": "s24q2-OFS",
+          "page": 104,
+          "count": 48,
+          "pdf_sha256": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4"
+        }
+      ],
+      "parsed_count": 192,
+      "gold_count": 192,
+      "matched_gold_count": 192,
+      "failed_ids": [],
+      "whole_corpus_exact": true,
+      "additional_extracted_without_independent_gold": 0
+    },
+    {
+      "dataset": "data/heldout",
+      "statements": [
+        {
+          "id": "s25q2-CFS",
+          "page": 44,
+          "count": 48,
+          "pdf_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218"
+        },
+        {
+          "id": "s25q2-OFS",
+          "page": 96,
+          "count": 48,
+          "pdf_sha256": "fde04bf7ebcd4bced0bd5c52c4df5b020db882ed7b65388349583af8e257e218"
+        },
+        {
+          "id": "s25q3-CFS",
+          "page": 34,
+          "count": 48,
+          "pdf_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a"
+        },
+        {
+          "id": "s25q3-OFS",
+          "page": 89,
+          "count": 48,
+          "pdf_sha256": "da4ffec442cae45ffbba478dbb05001f8dbce0c236a5618c308225548c32667a"
+        }
+      ],
+      "parsed_count": 192,
+      "gold_count": 64,
+      "matched_gold_count": 64,
+      "failed_ids": [],
+      "whole_corpus_exact": false,
+      "additional_extracted_without_independent_gold": 128
+    }
+  ]
+}

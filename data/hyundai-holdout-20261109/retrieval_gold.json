@@ -1,0 +1,74 @@
+[
+  {
+    "id": "hyundai-positive-01",
+    "query": "What was Hyundai Motor consolidated revenue for the third quarter of 2024 in KRW million?",
+    "language": "en",
+    "gold_fact_ids": [
+      "h24q3-CFS-revenue-2024-q-KRW"
+    ],
+    "expected_answerable": true,
+    "expected_clarification": false
+  },
+  {
+    "id": "hyundai-positive-02",
+    "query": "현대자동차 2024년 3분기 연결 누적 영업이익을 백만원 단위로 알려줘",
+    "language": "ko",
+    "gold_fact_ids": [
+      "h24q3-CFS-operating_profit-2024-ytd-KRW"
+    ],
+    "expected_answerable": true,
+    "expected_clarification": false
+  },
+  {
+    "id": "hyundai-positive-03",
+    "query": "Hyundai Motor Company 2023 Q3 quarter consolidated KRW million gross profit",
+    "language": "en",
+    "gold_fact_ids": [
+      "h24q3-CFS-gross_profit-2023-q-KRW"
+    ],
+    "expected_answerable": true,
+    "expected_clarification": false
+  },
+  {
+    "id": "hyundai-positive-04",
+    "query": "현대자동차 2023년 3분기 연결 누적 당기순이익 원화 백만원",
+    "language": "ko",
+    "gold_fact_ids": [
+      "h24q3-CFS-net_profit-2023-ytd-KRW"
+    ],
+    "expected_answerable": true,
+    "expected_clarification": false
+  },
+  {
+    "id": "hyundai-ambiguous-01",
+    "query": "Hyundai Motor 2024 Q3 consolidated revenue in KRW million",
+    "language": "en",
+    "gold_fact_ids": [],
+    "expected_answerable": false,
+    "expected_clarification": true
+  },
+  {
+    "id": "hyundai-ambiguous-02",
+    "query": "현대자동차 2024년 3분기 연결 매출액 원화 백만원",
+    "language": "ko",
+    "gold_fact_ids": [],
+    "expected_answerable": false,
+    "expected_clarification": true
+  },
+  {
+    "id": "hyundai-ambiguous-03",
+    "query": "Hyundai Motor 2024 Q3 quarter revenue KRW million",
+    "language": "en",
+    "gold_fact_ids": [],
+    "expected_answerable": false,
+    "expected_clarification": true
+  },
+  {
+    "id": "hyundai-ambiguous-04",
+    "query": "현대자동차 2024년 3분기 누적 영업이익 원화 백만원",
+    "language": "ko",
+    "gold_fact_ids": [],
+    "expected_answerable": false,
+    "expected_clarification": true
+  }
+]

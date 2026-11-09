@@ -1,0 +1,926 @@
+{
+  "schema_version": 1,
+  "label": "First new Hyundai 2024 Q3 document observation after frozen gold; baseline query failure previously disclosed; AI-authored not expert gold",
+  "evaluated_at": "2026-11-09T08:38:41.479855+00:00",
+  "freeze_sha256": "cb73921f2d4eacc2ce57a902fdf4a6c53a10157ab46f96f5e90375d923eadf84",
+  "freeze": {
+    "schema_version": 1,
+    "frozen_at": "2026-11-09T08:36:19.896983+00:00",
+    "files": {
+      "data/hyundai-holdout-20261109/source_cells.json": "b5d7ff1bb169d820b8cf1967ed1f1469b2efa4040ca25a164486b9c561de092c",
+      "data/hyundai-holdout-20261109/calculations.json": "c76e3226c43f548857e1a98ff61421375d4b117698b12fddec6742589ec1750a",
+      "data/hyundai-holdout-20261109/retrieval_gold.json": "8ccda8a58de5c0bcf31f7facdd6aff460712ef123b62abffdf11ff6db9e7b996",
+      "data/hyundai-holdout-20261109/facts.json": "c0dcede277358d8723258699731b239cebb72baef19f0c07c00b4ea99cf54bfa",
+      "data/hyundai-holdout-20261109/sources.json": "5e784767a166ea38b2d7db17083636bde115da688c3fbe21ab7352a02c81df0c"
+    },
+    "baseline_revision": "0b1613c",
+    "baseline_ingest_sha256": "fff257ce462655fb6632af6752e9958a36d889fecacbe7b3f1df04144641955b",
+    "author": "AI evaluation worker",
+    "human_reviewed": false,
+    "expert_gold": false,
+    "same_task_ai_authored": true,
+    "parser_changes_seen": false,
+    "selection": "New official 2024 Q3 Hyundai document, not old failed 2023 Q3 source; 2023 comparative values can overlap disclosed data. One consolidated statement, four metrics, current/prior quarter and YTD, 16 exact KRW-million cells. Positive and ambiguous bilingual queries frozen before new parser execution.",
+    "inspection": "AI viewed page 8 raster and pypdf text. Gold literal cells transcribed independently of production parser. No human or expert adjudication.",
+    "canonical_row_mapping": {
+      "Sales": "Revenue"
+    },
+    "source_pdf_sha256": "3894d0c7948e337a1f32f1be3186159b8d4bbcdea27b7cf4eb8bf61fa74e125a",
+    "model_calls": 0,
+    "provider_api_cost_usd": 0
+  },
+  "implementation_hashes": {
+    "quarterguard/core.py": "dbe42039fae2619484df0a79bd5b893ee58e0efc40468570a672da79c877830e",
+    "quarterguard/ingest.py": "0a6e8708680658cf725ecfa7f679ce9c18a933cb536888a1b66c216c320756ff",
+    "quarterguard/search.py": "03e36e985309f85d5b9d62980ba65793dfd1876f4ab715a1bd76b2acc557c379",
+    "quarterguard/query.py": "22799afcf36ffb935aa4e772bfb507f9899e36e5b73264082a02bf5da310acf6"
+  },
+  "evaluation_harness_sha256": "aabb144bf0b62e546172a1650b81396c7430a039a2d56be9f2770428736cad1b",
+  "human_reviewed": false,
+  "same_task_ai_authored": true,
+  "model_calls": 0,
+  "provider_api_cost_usd": 0,
+  "cost_scope": "Paid model APIs only; excludes local CPU, storage, and network",
+  "source_audit": [
+    {
+      "fact_id": "h24q3-CFS-revenue-2024-q-KRW",
+      "literal_cell": "42,928,332",
+      "source_column_1based": 1,
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h24q3-CFS-revenue-2024-ytd-KRW",
+      "literal_cell": "128,607,452",
+      "source_column_1based": 2,
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h24q3-CFS-revenue-2023-q-KRW",
+      "literal_cell": "40,991,126",
+      "source_column_1based": 3,
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h24q3-CFS-revenue-2023-ytd-KRW",
+      "literal_cell": "120,994,346",
+      "source_column_1based": 4,
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h24q3-CFS-gross_profit-2024-q-KRW",
+      "literal_cell": "8,497,928",
+      "source_column_1based": 1,
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h24q3-CFS-gross_profit-2024-ytd-KRW",
+      "literal_cell": "26,662,951",
+      "source_column_1based": 2,
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h24q3-CFS-gross_profit-2023-q-KRW",
+      "literal_cell": "8,463,307",
+      "source_column_1based": 3,
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h24q3-CFS-gross_profit-2023-ytd-KRW",
+      "literal_cell": "25,132,602",
+      "source_column_1based": 4,
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h24q3-CFS-operating_profit-2024-q-KRW",
+      "literal_cell": "3,580,900",
+      "source_column_1based": 1,
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h24q3-CFS-operating_profit-2024-ytd-KRW",
+      "literal_cell": "11,417,398",
+      "source_column_1based": 2,
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h24q3-CFS-operating_profit-2023-q-KRW",
+      "literal_cell": "3,828,468",
+      "source_column_1based": 3,
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h24q3-CFS-operating_profit-2023-ytd-KRW",
+      "literal_cell": "11,719,109",
+      "source_column_1based": 4,
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h24q3-CFS-net_profit-2024-q-KRW",
+      "literal_cell": "3,205,850",
+      "source_column_1based": 1,
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h24q3-CFS-net_profit-2024-ytd-KRW",
+      "literal_cell": "10,755,751",
+      "source_column_1based": 2,
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h24q3-CFS-net_profit-2023-q-KRW",
+      "literal_cell": "3,303,451",
+      "source_column_1based": 3,
+      "header_verified": true,
+      "passed": true
+    },
+    {
+      "fact_id": "h24q3-CFS-net_profit-2023-ytd-KRW",
+      "literal_cell": "10,069,667",
+      "source_column_1based": 4,
+      "header_verified": true,
+      "passed": true
+    }
+  ],
+  "raw_statements": [
+    {
+      "id": "h24q3-CFS",
+      "parsed_count": 0,
+      "gold_cells": 16,
+      "exact_cells": 0,
+      "error": "ValueError: UNSUPPORTED_LAYOUT: Hyundai net_profit preceding row cells or notes",
+      "passed": false
+    }
+  ],
+  "raw_statement_summary": {
+    "total": 1,
+    "passed": 0,
+    "failed": 1
+  },
+  "raw_exact_cells": [
+    {
+      "fact_id": "h24q3-CFS-revenue-2024-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h24q3-CFS-revenue-2024-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h24q3-CFS-revenue-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h24q3-CFS-revenue-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h24q3-CFS-gross_profit-2024-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h24q3-CFS-gross_profit-2024-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h24q3-CFS-gross_profit-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h24q3-CFS-gross_profit-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h24q3-CFS-operating_profit-2024-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h24q3-CFS-operating_profit-2024-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h24q3-CFS-operating_profit-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h24q3-CFS-operating_profit-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h24q3-CFS-net_profit-2024-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h24q3-CFS-net_profit-2024-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h24q3-CFS-net_profit-2023-q-KRW",
+      "passed": false,
+      "parsed": null
+    },
+    {
+      "fact_id": "h24q3-CFS-net_profit-2023-ytd-KRW",
+      "passed": false,
+      "parsed": null
+    }
+  ],
+  "raw_cell_summary": {
+    "total": 16,
+    "passed": 0,
+    "failed": 16
+  },
+  "production_registry": {
+    "accepted_parsed_facts": 0,
+    "parsed_facts": 0,
+    "production_end_to_end_supported": false,
+    "limitation": "New documents are not added to production canonical registration by this evaluation."
+  },
+  "stages": {
+    "raw_parsed": {
+      "adapter": "isolated source_manifest + source_facts patches; production functions unchanged",
+      "registration": "only exact independently audited parser outputs",
+      "corpus_facts": 0,
+      "queries": [
+        {
+          "id": "hyundai-positive-01",
+          "query": "What was Hyundai Motor consolidated revenue for the third quarter of 2024 in KRW million?",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "hyundai-positive-02",
+          "query": "현대자동차 2024년 3분기 연결 누적 영업이익을 백만원 단위로 알려줘",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "hyundai-positive-03",
+          "query": "Hyundai Motor Company 2023 Q3 quarter consolidated KRW million gross profit",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "hyundai-positive-04",
+          "query": "현대자동차 2023년 3분기 연결 누적 당기순이익 원화 백만원",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "hyundai-ambiguous-01",
+          "query": "Hyundai Motor 2024 Q3 consolidated revenue in KRW million",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "hyundai-ambiguous-02",
+          "query": "현대자동차 2024년 3분기 연결 매출액 원화 백만원",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "hyundai-ambiguous-03",
+          "query": "Hyundai Motor 2024 Q3 quarter revenue KRW million",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        },
+        {
+          "id": "hyundai-ambiguous-04",
+          "query": "현대자동차 2024년 3분기 누적 영업이익 원화 백만원",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [],
+          "rank": null,
+          "status": "no_parsed_corpus",
+          "issues": [
+            "RAW_INGESTION_FAILED"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": false,
+          "diagnostic_supported": false
+        }
+      ],
+      "query_summary": {
+        "total": 8,
+        "passed": 0,
+        "failed": 8
+      },
+      "citations": [
+        {
+          "fact_id": "h24q3-CFS-revenue-2024-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-revenue-2024-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-revenue-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-revenue-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-gross_profit-2024-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-gross_profit-2024-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-gross_profit-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-gross_profit-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-operating_profit-2024-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-operating_profit-2024-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-operating_profit-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-operating_profit-2023-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-net_profit-2024-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-net_profit-2024-ytd-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-net_profit-2023-q-KRW",
+          "passed": false
+        },
+        {
+          "fact_id": "h24q3-CFS-net_profit-2023-ytd-KRW",
+          "passed": false
+        }
+      ],
+      "citation_summary": {
+        "total": 16,
+        "passed": 0,
+        "failed": 16
+      },
+      "calculations": [
+        {
+          "id": "hyundai-yoy-revenue",
+          "passed": false,
+          "status": "blocked_missing_parsed_fact",
+          "missing": [
+            "h24q3-CFS-revenue-2024-q-KRW",
+            "h24q3-CFS-revenue-2023-q-KRW"
+          ]
+        },
+        {
+          "id": "hyundai-yoy-operating_profit",
+          "passed": false,
+          "status": "blocked_missing_parsed_fact",
+          "missing": [
+            "h24q3-CFS-operating_profit-2024-q-KRW",
+            "h24q3-CFS-operating_profit-2023-q-KRW"
+          ]
+        }
+      ],
+      "calculation_summary": {
+        "total": 2,
+        "passed": 0,
+        "failed": 2
+      },
+      "positive_retrieval": {
+        "n": 4,
+        "recall_at_1": 0.0,
+        "recall_at_5": 0.0,
+        "mrr_at_5": 0.0
+      }
+    },
+    "fixture_assisted": {
+      "adapter": "isolated source_manifest + source_facts patches; production functions unchanged",
+      "registration": "gold fixtures supplied directly, not ingestion evidence",
+      "corpus_facts": 16,
+      "queries": [
+        {
+          "id": "hyundai-positive-01",
+          "query": "What was Hyundai Motor consolidated revenue for the third quarter of 2024 in KRW million?",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [
+            "h24q3-CFS-revenue-2024-q-KRW",
+            "h24q3-CFS-revenue-2024-ytd-KRW"
+          ],
+          "rank": 1,
+          "status": "needs_clarification",
+          "issues": [
+            "MISSING_KIND"
+          ],
+          "trusted_query": false,
+          "passed": false,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "hyundai-positive-02",
+          "query": "현대자동차 2024년 3분기 연결 누적 영업이익을 백만원 단위로 알려줘",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [
+            "h24q3-CFS-operating_profit-2024-ytd-KRW"
+          ],
+          "rank": 1,
+          "status": "ready",
+          "issues": [],
+          "trusted_query": true,
+          "passed": true,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "hyundai-positive-03",
+          "query": "Hyundai Motor Company 2023 Q3 quarter consolidated KRW million gross profit",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [
+            "h24q3-CFS-gross_profit-2023-q-KRW"
+          ],
+          "rank": 1,
+          "status": "ready",
+          "issues": [],
+          "trusted_query": true,
+          "passed": true,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "hyundai-positive-04",
+          "query": "현대자동차 2023년 3분기 연결 누적 당기순이익 원화 백만원",
+          "expected_answerable": true,
+          "expected_clarification": false,
+          "candidate_ids": [
+            "h24q3-CFS-net_profit-2023-ytd-KRW"
+          ],
+          "rank": 1,
+          "status": "ready",
+          "issues": [],
+          "trusted_query": true,
+          "passed": true,
+          "retrieval_passed": true,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "hyundai-ambiguous-01",
+          "query": "Hyundai Motor 2024 Q3 consolidated revenue in KRW million",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [
+            "h24q3-CFS-revenue-2024-ytd-KRW",
+            "h24q3-CFS-revenue-2024-q-KRW"
+          ],
+          "rank": null,
+          "status": "needs_clarification",
+          "issues": [
+            "MISSING_KIND"
+          ],
+          "trusted_query": false,
+          "passed": true,
+          "retrieval_passed": false,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "hyundai-ambiguous-02",
+          "query": "현대자동차 2024년 3분기 연결 매출액 원화 백만원",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [
+            "h24q3-CFS-revenue-2024-ytd-KRW",
+            "h24q3-CFS-revenue-2024-q-KRW"
+          ],
+          "rank": null,
+          "status": "needs_clarification",
+          "issues": [
+            "MISSING_KIND"
+          ],
+          "trusted_query": false,
+          "passed": true,
+          "retrieval_passed": false,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "hyundai-ambiguous-03",
+          "query": "Hyundai Motor 2024 Q3 quarter revenue KRW million",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [
+            "h24q3-CFS-revenue-2024-q-KRW"
+          ],
+          "rank": null,
+          "status": "needs_clarification",
+          "issues": [
+            "MISSING_SCOPE"
+          ],
+          "trusted_query": false,
+          "passed": true,
+          "retrieval_passed": false,
+          "diagnostic_supported": true
+        },
+        {
+          "id": "hyundai-ambiguous-04",
+          "query": "현대자동차 2024년 3분기 누적 영업이익 원화 백만원",
+          "expected_answerable": false,
+          "expected_clarification": true,
+          "candidate_ids": [
+            "h24q3-CFS-operating_profit-2024-ytd-KRW"
+          ],
+          "rank": null,
+          "status": "needs_clarification",
+          "issues": [
+            "MISSING_SCOPE"
+          ],
+          "trusted_query": false,
+          "passed": true,
+          "retrieval_passed": false,
+          "diagnostic_supported": true
+        }
+      ],
+      "query_summary": {
+        "total": 8,
+        "passed": 7,
+        "failed": 1
+      },
+      "citations": [
+        {
+          "fact_id": "h24q3-CFS-revenue-2024-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h24q3-CFS-revenue-2024-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h24q3-CFS-revenue-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h24q3-CFS-revenue-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h24q3-CFS-gross_profit-2024-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h24q3-CFS-gross_profit-2024-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h24q3-CFS-gross_profit-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h24q3-CFS-gross_profit-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h24q3-CFS-operating_profit-2024-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h24q3-CFS-operating_profit-2024-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h24q3-CFS-operating_profit-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h24q3-CFS-operating_profit-2023-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h24q3-CFS-net_profit-2024-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h24q3-CFS-net_profit-2024-ytd-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h24q3-CFS-net_profit-2023-q-KRW",
+          "passed": true
+        },
+        {
+          "fact_id": "h24q3-CFS-net_profit-2023-ytd-KRW",
+          "passed": true
+        }
+      ],
+      "citation_summary": {
+        "total": 16,
+        "passed": 16,
+        "failed": 0
+      },
+      "calculations": [
+        {
+          "id": "hyundai-yoy-revenue",
+          "passed": true,
+          "result": {
+            "status": "verified",
+            "issues": [],
+            "growth_pct": "4.7259",
+            "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+            "normalized_inputs": [
+              "42928332000000",
+              "40991126000000"
+            ],
+            "currency": "KRW",
+            "evidence": [
+              {
+                "id": "h24q3-CFS-revenue-2024-q-KRW",
+                "company": "hyundai",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2024-07-01",
+                "end": "2024-09-30",
+                "value": "42928332",
+                "source_url": "https://www.hyundai.com/content/dam/hyundai/ww/en/images/company/investor-relations/financial-Information/report-en/2024/2024-q3-consolidated-audit-report-en.pdf",
+                "page": 8,
+                "row": "Revenue",
+                "column": "2024 Q KRW",
+                "document_id": "h24q3",
+                "document_sha256": "3894d0c7948e337a1f32f1be3186159b8d4bbcdea27b7cf4eb8bf61fa74e125a",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              },
+              {
+                "id": "h24q3-CFS-revenue-2023-q-KRW",
+                "company": "hyundai",
+                "metric": "revenue",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2023-07-01",
+                "end": "2023-09-30",
+                "value": "40991126",
+                "source_url": "https://www.hyundai.com/content/dam/hyundai/ww/en/images/company/investor-relations/financial-Information/report-en/2024/2024-q3-consolidated-audit-report-en.pdf",
+                "page": 8,
+                "row": "Revenue",
+                "column": "2023 Q KRW",
+                "document_id": "h24q3",
+                "document_sha256": "3894d0c7948e337a1f32f1be3186159b8d4bbcdea27b7cf4eb8bf61fa74e125a",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              }
+            ],
+            "mode": "yoy"
+          }
+        },
+        {
+          "id": "hyundai-yoy-operating_profit",
+          "passed": true,
+          "result": {
+            "status": "verified",
+            "issues": [],
+            "growth_pct": "-6.4665",
+            "formula": "((current × current_scale) / (base × base_scale) - 1) × 100",
+            "normalized_inputs": [
+              "3580900000000",
+              "3828468000000"
+            ],
+            "currency": "KRW",
+            "evidence": [
+              {
+                "id": "h24q3-CFS-operating_profit-2024-q-KRW",
+                "company": "hyundai",
+                "metric": "operating_profit",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2024-07-01",
+                "end": "2024-09-30",
+                "value": "3580900",
+                "source_url": "https://www.hyundai.com/content/dam/hyundai/ww/en/images/company/investor-relations/financial-Information/report-en/2024/2024-q3-consolidated-audit-report-en.pdf",
+                "page": 8,
+                "row": "Operating profit",
+                "column": "2024 Q KRW",
+                "document_id": "h24q3",
+                "document_sha256": "3894d0c7948e337a1f32f1be3186159b8d4bbcdea27b7cf4eb8bf61fa74e125a",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              },
+              {
+                "id": "h24q3-CFS-operating_profit-2023-q-KRW",
+                "company": "hyundai",
+                "metric": "operating_profit",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "start": "2023-07-01",
+                "end": "2023-09-30",
+                "value": "3828468",
+                "source_url": "https://www.hyundai.com/content/dam/hyundai/ww/en/images/company/investor-relations/financial-Information/report-en/2024/2024-q3-consolidated-audit-report-en.pdf",
+                "page": 8,
+                "row": "Operating profit",
+                "column": "2023 Q KRW",
+                "document_id": "h24q3",
+                "document_sha256": "3894d0c7948e337a1f32f1be3186159b8d4bbcdea27b7cf4eb8bf61fa74e125a",
+                "translation_basis": "reported_currency",
+                "translation_rate": null,
+                "translation_note_page": null,
+                "months": 3
+              }
+            ],
+            "mode": "yoy"
+          }
+        }
+      ],
+      "calculation_summary": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      },
+      "positive_retrieval": {
+        "n": 4,
+        "recall_at_1": 1.0,
+        "recall_at_5": 1.0,
+        "mrr_at_5": 1.0
+      }
+    }
+  },
+  "first_observed_failures": {
+    "raw_statements": [
+      "h24q3-CFS"
+    ],
+    "raw_parsed": {
+      "queries": [
+        "hyundai-positive-01",
+        "hyundai-positive-02",
+        "hyundai-positive-03",
+        "hyundai-positive-04",
+        "hyundai-ambiguous-01",
+        "hyundai-ambiguous-02",
+        "hyundai-ambiguous-03",
+        "hyundai-ambiguous-04"
+      ],
+      "calculations": [
+        "hyundai-yoy-revenue",
+        "hyundai-yoy-operating_profit"
+      ]
+    },
+    "fixture_assisted": {
+      "queries": [
+        "hyundai-positive-01"
+      ],
+      "calculations": []
+    }
+  },
+  "isolated_adapter_sha256": "4a94bc3b9ad403e3be5c6b015af2af6c9aa59315de58bafe6b671124d820d687",
+  "implementation_module_hashes": {
+    "quarterguard/__init__.py": "13996412da99b8f4d5ad2cca3645bcca24c08e00aad90dd6fc5f49a995c1f3ec",
+    "quarterguard/api.py": "6bf0afa63d4fcb6fadade13c5a49fdf7232bcb0eb83ce296c120db4947cb5974",
+    "quarterguard/core.py": "dbe42039fae2619484df0a79bd5b893ee58e0efc40468570a672da79c877830e",
+    "quarterguard/dart.py": "643502d04d642517489dccf5c5d41128fdfd5ad0c5643a04b603d31bfef26057",
+    "quarterguard/evaluate.py": "1c106bdaa0bc602830cd4d60192cd3fc45d3482ed1faec97b4f1e4255fd6bb59",
+    "quarterguard/evaluate_explanations_v2.py": "0a857656ca7efc9a8a11d476f48249e66530a52d3b7952079d4632d9293b0651",
+    "quarterguard/evaluation_v2.py": "4a94bc3b9ad403e3be5c6b015af2af6c9aa59315de58bafe6b671124d820d687",
+    "quarterguard/explanation_audit.py": "811741feecf2025d707caba8b0839cf44b80f287e509684ea09c71a096b3e063",
+    "quarterguard/heldout_evaluation.py": "e1369d1584605d847d6cfdaf12947ed73bf9a10590ca0959cd7154007fa22a19",
+    "quarterguard/hyundai_ingest.py": "962c797c3efe8fdf46389be2d0f17d5fef8a29647f5a5e419beea24153211bd2",
+    "quarterguard/ingest.py": "0a6e8708680658cf725ecfa7f679ce9c18a933cb536888a1b66c216c320756ff",
+    "quarterguard/live_verification.py": "08cbbdb916458f1cbbe7507447d7f9dee69ec85ce4b9627b7b5106d6aba2c4b4",
+    "quarterguard/mcp_server.py": "db3dad369219c3221ccc9a1a37e9be24c3e4394923469d499bb7b2705131b43d",
+    "quarterguard/orchestrator.py": "a75d311477411fa47aecf4b879f7768c77eb92e870aa90b8f0d68658d99164ad",
+    "quarterguard/provider_controls.py": "415cc875ce236616e57bcc63d9e4199965a757615cf32fa50fbf70383fd8f7ae",
+    "quarterguard/public_providers.py": "8fe2473f42700fa607b9f7e4db172a8c132a91b461910f7388ce62ffc0321604",
+    "quarterguard/query.py": "22799afcf36ffb935aa4e772bfb507f9899e36e5b73264082a02bf5da310acf6",
+    "quarterguard/ranking_evaluation_v2.py": "872518cb55fa2e9bc28236cfd53f8f83cc90944335e7a4cba25a740aff6d84fa",
+    "quarterguard/search.py": "03e36e985309f85d5b9d62980ba65793dfd1876f4ab715a1bd76b2acc557c379",
+    "quarterguard/store.py": "7979c1adf244e3c833cb5a8ca6ac172a29c073f8110968d2b932d206bab8708e",
+    "quarterguard/worksheet.py": "b716e71cf14d8e6fea40968068cb42d72b897f12f6aa8b307a7f9ef5b73394a1"
+  },
+  "expert_gold": false,
+  "limitations": [
+    "AI-authored, AI-inspected source cells; no independent human or expert review.",
+    "One newly acquired Hyundai 2024 Q3 consolidated statement; not broad issuer/layout coverage.",
+    "Comparative 2023 values may overlap disclosed 2023 data; only this document was newly withheld.",
+    "Raw downstream uses exact audited parser outputs with an isolated source registry adapter.",
+    "Production corpus and allowlist are unchanged; fixture-assisted results are diagnostic only."
+  ]
+}
