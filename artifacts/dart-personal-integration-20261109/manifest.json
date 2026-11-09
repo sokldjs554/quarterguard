@@ -1,0 +1,15 @@
+{
+  "main_base": "6a73ecca3cc3d7ea5b2b1a13447ff3f3c61c7ddc",
+  "user_commit": "c867fcaa68d07725bf81a2367f37a4bba0356b3b",
+  "test_bytes_match_user_commit": true,
+  "runner": "AI execution environment",
+  "python_tests": 147,
+  "seconds": 27.945,
+  "result": "OK",
+  "user_reported_tests": 3,
+  "user_reported_seconds": 0.001,
+  "new_user_full_suite_result_provided": false,
+  "new_provider_calls": 0,
+  "paid_api_calls": 0,
+  "billing_queried": false
+}
