@@ -10,7 +10,7 @@ from quarterguard.store import ROOT
 
 
 class LatestProgressTests(unittest.TestCase):
-    def test_v7_actual_batch_does_not_inherit_v6_human_verdicts(self):
+    def test_v7_confirmed_human_review_preserves_unreviewed_snapshot(self):
         s=TestClient(app).get('/api/evaluation/latest').json()['summary']
         batch=s['llm'].get('schema_batch')
         self.assertIsNotNone(batch)
@@ -18,8 +18,17 @@ class LatestProgressTests(unittest.TestCase):
         self.assertEqual(batch['calls'],actual['calls_attempted'])
         self.assertEqual(batch['cohorts'],actual['cohorts'])
         self.assertEqual(batch['estimated_cost_usd'],actual['usage_estimated_cost_usd'])
-        self.assertFalse(batch['human_reviewed'])
-        self.assertNotIn('human_verdict_counts',batch)
+        self.assertTrue(batch['human_reviewed'])
+        review=json.loads((ROOT/batch['human_record']).read_text())
+        self.assertEqual(batch['human_verdict_counts'],review['reported_counts'])
+        self.assertEqual(batch['human_reviewed_at'],'2026-11-10T23:00:00+09:00')
+        self.assertIsNone(review['environment'])
+        self.assertIsNone(review['assistance'])
+        self.assertEqual([r['case_id'] for r in review['records'] if r['explanation_verdict']=='모호'],['h25-op-period'])
+        self.assertEqual(sum(r['structured_fields']=='일치' for r in review['records']),16)
+        before=json.loads((ROOT/'data/latest-progress-v7-20261110.json').read_text())
+        self.assertFalse(before['llm']['schema_batch']['human_reviewed'])
+        self.assertNotIn('human_verdict_counts',before['llm']['schema_batch'])
         self.assertEqual(s['llm']['prose_batch']['human_verdict_counts'],{'참':15,'모호':1,'거짓':0})
         self.assertEqual(s['participants']['unique_external_people'],2)
 
