@@ -16,6 +16,7 @@ from .dart import fetch
 from .store import ROOT, load_facts
 from .orchestrator import run_case, cases
 from .explanation_context import INSTRUCTIONS, build_context
+from .explanation_guards import check_prose
 
 DART_TARGETS = {'s24q3-CFS':('11014','s24q3','CFS'),'s24q3-OFS':('11014','s24q3','OFS'),
                 's24q2-CFS':('11012','s24q2','CFS'),'s24q2-OFS':('11012','s24q2','OFS')}
@@ -84,7 +85,7 @@ def generate_public(payload, result):
         if not isinstance(answer,dict) or set(answer)!=set(SCHEMA['required']): raise ValueError()
         usage=body['usage'];inp=usage['input_tokens'];output=usage['output_tokens']
         if type(inp) is not int or type(output) is not int or inp<0 or output<0 or body.get('model')!=MODEL: raise ValueError()
-        checks=check_explanation(answer,result)
+        checks=check_explanation(answer,result) | check_prose(answer,result)
         if not all(checks.values()): raise ExplanationRejected(checks)
         return {'generated':answer,'checks':checks,'model':body['model'],'input_tokens':inp,'output_tokens':output,
                 'estimated_cost_usd':str((Decimal(inp)*Decimal('.4')+Decimal(output)*Decimal('1.6'))/1000000),
@@ -102,7 +103,7 @@ def verification_version():
     for name in ('data/facts.json','data/sources.json','data/cases.json',
                  'quarterguard/core.py','quarterguard/dart.py','quarterguard/live_verification.py',
                  'quarterguard/orchestrator.py','quarterguard/mcp_server.py','quarterguard/search.py','quarterguard/query.py','quarterguard/public_providers.py',
-                 'quarterguard/explanation_context.py'):
+                 'quarterguard/explanation_context.py','quarterguard/explanation_guards.py'):
         digest.update(name.encode());digest.update((ROOT/name).read_bytes())
     return digest.hexdigest()
 
