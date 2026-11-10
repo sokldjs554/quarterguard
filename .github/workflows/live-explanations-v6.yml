@@ -1,0 +1,71 @@
+name: bounded current-guard evaluation v6
+on:
+  workflow_dispatch:
+    inputs:
+      approved_contract:
+        description: 'New approval: 16 GPT-5.4-mini-2026-03-17 requests, input 8500/output 700, budget $0.16 before tax'
+        type: boolean
+        required: true
+        default: false
+      freeze_sha256:
+        description: Exact approved content_sha256 in data/llm-prose-v6-20261110/freeze.json
+        type: string
+        required: true
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: llm-prose-v6-20261110
+  cancel-in-progress: false
+jobs:
+  evaluate:
+    if: inputs.approved_contract == true
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Reject reruns and any prior dispatch before exposing the API key
+        env:
+          GH_TOKEN: ${{ github.token }}
+          APPROVED_FREEZE_SHA256: ${{ inputs.freeze_sha256 }}
+        run: |
+          gh api "repos/$GITHUB_REPOSITORY/actions/workflows/live-explanations-v6.yml/runs?event=workflow_dispatch&per_page=100" > /tmp/guards-v6-runs.json
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          if os.environ['GITHUB_RUN_ATTEMPT'] != '1':
+              raise SystemExit('Paid reruns prohibited.')
+          runs = json.loads(Path('/tmp/guards-v6-runs.json').read_text())['workflow_runs']
+          if any(str(r['id']) != os.environ['GITHUB_RUN_ID'] for r in runs):
+              raise SystemExit('Another dispatch exists; new approval and a new evaluation contract are required.')
+          frozen = json.loads(Path('data/llm-prose-v6-20261110/freeze.json').read_text())
+          if frozen['content_sha256'] != os.environ['APPROVED_FREEZE_SHA256']:
+              raise SystemExit('Approval does not match frozen inputs.')
+          PY
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Validate frozen prompts and source code
+        run: |
+          python - <<'PY'
+          import json
+          from quarterguard.evaluate_live_explanations_v6 import DATA, validate_freeze
+          validate_freeze(json.loads((DATA / 'freeze.json').read_text()))
+          PY
+      - name: Execute approved batch once
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python -m quarterguard.evaluate_live_explanations_v6 --execute-approved --output work/llm-prose-v6-20261110
+      - name: Preserve actual responses and failed attempts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-explanations-v6-${{ github.run_id }}
+          path: work/llm-prose-v6-20261110/
+          if-no-files-found: warn
+          retention-days: 30

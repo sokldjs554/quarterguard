@@ -1,0 +1,205 @@
+test_code_change_and_missing_approval_precede_any_http_or_journal (test_live_explanations_v6.ProseBatchTests.test_code_change_and_missing_approval_precede_any_http_or_journal) ... ERROR
+test_completed_sixteen_preserve_blank_human_labels_and_separate_cohorts (test_live_explanations_v6.ProseBatchTests.test_completed_sixteen_preserve_blank_human_labels_and_separate_cohorts) ... ERROR
+test_disclosed_bad_prose_is_preserved_and_current_product_gate_rejects (test_live_explanations_v6.ProseBatchTests.test_disclosed_bad_prose_is_preserved_and_current_product_gate_rejects) ... ERROR
+test_http_timeout_and_invalid_response_stop_without_retry_or_secret_leak (test_live_explanations_v6.ProseBatchTests.test_http_timeout_and_invalid_response_stop_without_retry_or_secret_leak) ... ERROR
+test_modified_inputs_fail_even_with_recomputed_digest (test_live_explanations_v6.ProseBatchTests.test_modified_inputs_fail_even_with_recomputed_digest) ... ERROR
+test_oversized_request_and_wrong_returned_model_fail_closed (test_live_explanations_v6.ProseBatchTests.test_oversized_request_and_wrong_returned_model_fail_closed) ... ERROR
+test_two_groups_use_frozen_product_without_registering_production_facts (test_live_explanations_v6.ProseBatchTests.test_two_groups_use_frozen_product_without_registering_production_facts) ... ERROR
+test_usage_over_limit_preserves_cost_and_stops (test_live_explanations_v6.ProseBatchTests.test_usage_over_limit_preserves_cost_and_stops) ... ERROR
+
+======================================================================
+ERROR: test_code_change_and_missing_approval_precede_any_http_or_journal (test_live_explanations_v6.ProseBatchTests.test_code_change_and_missing_approval_precede_any_http_or_journal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_live_explanations_v6.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 91, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 83, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 63, in make_payload
+    with registry(case):payload=build_payload(case['tool_result'],case['task'])
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/public_providers.py", line 73, in build_payload
+    'input':json.dumps({'task':title,'tool_result':result,'explanation_context':build_context(result)},ensure_ascii=False),
+                                                                                ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/explanation_context.py", line 73, in build_context
+    row = {k: registered[k] for k in ('id', 'document_id', 'page', 'row', 'column',
+              ~~~~~~~~~~^^^
+KeyError: 'months'
+
+======================================================================
+ERROR: test_completed_sixteen_preserve_blank_human_labels_and_separate_cohorts (test_live_explanations_v6.ProseBatchTests.test_completed_sixteen_preserve_blank_human_labels_and_separate_cohorts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_live_explanations_v6.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 91, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 83, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 63, in make_payload
+    with registry(case):payload=build_payload(case['tool_result'],case['task'])
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/public_providers.py", line 73, in build_payload
+    'input':json.dumps({'task':title,'tool_result':result,'explanation_context':build_context(result)},ensure_ascii=False),
+                                                                                ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/explanation_context.py", line 73, in build_context
+    row = {k: registered[k] for k in ('id', 'document_id', 'page', 'row', 'column',
+              ~~~~~~~~~~^^^
+KeyError: 'months'
+
+======================================================================
+ERROR: test_disclosed_bad_prose_is_preserved_and_current_product_gate_rejects (test_live_explanations_v6.ProseBatchTests.test_disclosed_bad_prose_is_preserved_and_current_product_gate_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_live_explanations_v6.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 91, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 83, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 63, in make_payload
+    with registry(case):payload=build_payload(case['tool_result'],case['task'])
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/public_providers.py", line 73, in build_payload
+    'input':json.dumps({'task':title,'tool_result':result,'explanation_context':build_context(result)},ensure_ascii=False),
+                                                                                ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/explanation_context.py", line 73, in build_context
+    row = {k: registered[k] for k in ('id', 'document_id', 'page', 'row', 'column',
+              ~~~~~~~~~~^^^
+KeyError: 'months'
+
+======================================================================
+ERROR: test_http_timeout_and_invalid_response_stop_without_retry_or_secret_leak (test_live_explanations_v6.ProseBatchTests.test_http_timeout_and_invalid_response_stop_without_retry_or_secret_leak)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_live_explanations_v6.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 91, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 83, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 63, in make_payload
+    with registry(case):payload=build_payload(case['tool_result'],case['task'])
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/public_providers.py", line 73, in build_payload
+    'input':json.dumps({'task':title,'tool_result':result,'explanation_context':build_context(result)},ensure_ascii=False),
+                                                                                ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/explanation_context.py", line 73, in build_context
+    row = {k: registered[k] for k in ('id', 'document_id', 'page', 'row', 'column',
+              ~~~~~~~~~~^^^
+KeyError: 'months'
+
+======================================================================
+ERROR: test_modified_inputs_fail_even_with_recomputed_digest (test_live_explanations_v6.ProseBatchTests.test_modified_inputs_fail_even_with_recomputed_digest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_live_explanations_v6.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 91, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 83, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 63, in make_payload
+    with registry(case):payload=build_payload(case['tool_result'],case['task'])
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/public_providers.py", line 73, in build_payload
+    'input':json.dumps({'task':title,'tool_result':result,'explanation_context':build_context(result)},ensure_ascii=False),
+                                                                                ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/explanation_context.py", line 73, in build_context
+    row = {k: registered[k] for k in ('id', 'document_id', 'page', 'row', 'column',
+              ~~~~~~~~~~^^^
+KeyError: 'months'
+
+======================================================================
+ERROR: test_oversized_request_and_wrong_returned_model_fail_closed (test_live_explanations_v6.ProseBatchTests.test_oversized_request_and_wrong_returned_model_fail_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_live_explanations_v6.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 91, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 83, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 63, in make_payload
+    with registry(case):payload=build_payload(case['tool_result'],case['task'])
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/public_providers.py", line 73, in build_payload
+    'input':json.dumps({'task':title,'tool_result':result,'explanation_context':build_context(result)},ensure_ascii=False),
+                                                                                ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/explanation_context.py", line 73, in build_context
+    row = {k: registered[k] for k in ('id', 'document_id', 'page', 'row', 'column',
+              ~~~~~~~~~~^^^
+KeyError: 'months'
+
+======================================================================
+ERROR: test_two_groups_use_frozen_product_without_registering_production_facts (test_live_explanations_v6.ProseBatchTests.test_two_groups_use_frozen_product_without_registering_production_facts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_live_explanations_v6.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 91, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 83, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 63, in make_payload
+    with registry(case):payload=build_payload(case['tool_result'],case['task'])
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/public_providers.py", line 73, in build_payload
+    'input':json.dumps({'task':title,'tool_result':result,'explanation_context':build_context(result)},ensure_ascii=False),
+                                                                                ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/explanation_context.py", line 73, in build_context
+    row = {k: registered[k] for k in ('id', 'document_id', 'page', 'row', 'column',
+              ~~~~~~~~~~^^^
+KeyError: 'months'
+
+======================================================================
+ERROR: test_usage_over_limit_preserves_cost_and_stops (test_live_explanations_v6.ProseBatchTests.test_usage_over_limit_preserves_cost_and_stops)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_live_explanations_v6.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 91, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 83, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/evaluate_live_explanations_v6.py", line 63, in make_payload
+    with registry(case):payload=build_payload(case['tool_result'],case['task'])
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/public_providers.py", line 73, in build_payload
+    'input':json.dumps({'task':title,'tool_result':result,'explanation_context':build_context(result)},ensure_ascii=False),
+                                                                                ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard/quarterguard/explanation_context.py", line 73, in build_context
+    row = {k: registered[k] for k in ('id', 'document_id', 'page', 'row', 'column',
+              ~~~~~~~~~~^^^
+KeyError: 'months'
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.401s
+
+FAILED (errors=8)
