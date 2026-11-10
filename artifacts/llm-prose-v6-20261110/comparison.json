@@ -1,0 +1,1624 @@
+{
+  "scope": "paired development8 only; separate new cohort has no previous model output",
+  "semantic_accuracy": null,
+  "human_reviewed": false,
+  "pairs": [
+    {
+      "case_id": "normal-qoq",
+      "before_generated": {
+        "status": "verified",
+        "value": "6.7916",
+        "issues": [],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q2-CFS-revenue-2024-q-KRW"
+        ],
+        "explanation_ko": "2024년 3분기 연결 매출의 전분기 대비 증감률은 6.7916%입니다. Samsung Electronics 2024 3Q Interim Business Report, PDF p.34의 Revenue / 2024 Q KRW는 79,098,731 백만 원입니다. Samsung Electronics 2024 Half-year Business Report, PDF p.48의 Revenue / 2024 Q KRW는 74,068,302 백만 원입니다. 두 값은 모두 3개월 연결 기준입니다."
+      },
+      "after_generated": {
+        "status": "verified",
+        "value": "6.7916%",
+        "issues": [],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q2-CFS-revenue-2024-q-KRW"
+        ],
+        "explanation_ko": "2024년 3분기 연결 매출의 전분기 대비 증감률은 6.7916%입니다. 기준 문서는 Samsung Electronics 2024 3Q Interim Business Report의 PDF p.34입니다. 해당 분기 값은 79,098,731 백만 원입니다. 비교 기준 문서는 Samsung Electronics 2024 Half-year Business Report의 PDF p.48입니다. 해당 분기 값은 74,068,302 백만 원입니다. 둘 다 연결 기준입니다."
+      },
+      "before_same_current_gate": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "after_same_current_gate": {
+        "status_exact": true,
+        "value_exact": false,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "before_same_current_audit": {
+        "automatic_verdict": "flagged",
+        "issues": [
+          "UNBOUND_NUMBER_REQUIRES_REVIEW"
+        ],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          },
+          {
+            "fact_id": "s24q2-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q2",
+            "page": 48,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          }
+        ],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "percent",
+            "claim": "6.7916",
+            "tool_value": "6.7916"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "79098731000000",
+            "currency": "KRW"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "74068302000000",
+            "currency": "KRW"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": true,
+          "scope_limited_if_no_evidence": null,
+          "document_and_page_named": true,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "after_same_current_audit": {
+        "automatic_verdict": "flagged",
+        "issues": [
+          "STRUCTURED_MISMATCH",
+          "UNBOUND_NUMBER_REQUIRES_REVIEW"
+        ],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": false,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          },
+          {
+            "fact_id": "s24q2-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q2",
+            "page": 48,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          }
+        ],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "percent",
+            "claim": "6.7916",
+            "tool_value": "6.7916"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "79098731000000",
+            "currency": "KRW"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "74068302000000",
+            "currency": "KRW"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": true,
+          "scope_limited_if_no_evidence": null,
+          "document_and_page_named": true,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "new_human_verdict": null
+    },
+    {
+      "case_id": "normal-yoy",
+      "before_generated": {
+        "status": "verified",
+        "value": "17.3491",
+        "issues": [],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q3-CFS-revenue-2023-q-KRW"
+        ],
+        "explanation_ko": "2024년 3분기 연결 매출의 전년 동분기 대비 증감률은 17.3491%입니다. Samsung Electronics 2024 3Q Interim Business Report, PDF p.34에서 2024-07-01 ~ 2024-09-30 연결 매출은 79,098,731 백만 원입니다. 같은 보고서 PDF p.34에서 2023-07-01 ~ 2023-09-30 연결 매출은 67,404,652 백만 원입니다."
+      },
+      "after_generated": {
+        "status": "verified",
+        "value": "17.3491%",
+        "issues": [],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q3-CFS-revenue-2023-q-KRW"
+        ],
+        "explanation_ko": "삼성전자 2024 3분기 연결 매출은 전년 동분기 대비 17.3491% 증가했습니다. 근거는 Samsung Electronics 2024 3Q Interim Business Report, PDF p.34의 Revenue / 2024 Q KRW와 Revenue / 2023 Q KRW입니다. 두 값은 모두 3개월 연결 기준입니다. 표시 단위는 백만 원입니다."
+      },
+      "before_same_current_gate": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "after_same_current_gate": {
+        "status_exact": true,
+        "value_exact": false,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "before_same_current_audit": {
+        "automatic_verdict": "flagged",
+        "issues": [
+          "UNBOUND_NUMBER_REQUIRES_REVIEW"
+        ],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          },
+          {
+            "fact_id": "s24q3-CFS-revenue-2023-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2023 Q KRW",
+            "canonical_match": true
+          }
+        ],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2023"
+          },
+          {
+            "type": "year",
+            "claim": "2023"
+          },
+          {
+            "type": "percent",
+            "claim": "17.3491",
+            "tool_value": "17.3491"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "79098731000000",
+            "currency": "KRW"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "67404652000000",
+            "currency": "KRW"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": true,
+          "scope_limited_if_no_evidence": null,
+          "document_and_page_named": true,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "after_same_current_audit": {
+        "automatic_verdict": "flagged",
+        "issues": [
+          "STRUCTURED_MISMATCH",
+          "UNBOUND_NUMBER_REQUIRES_REVIEW"
+        ],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": false,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          },
+          {
+            "fact_id": "s24q3-CFS-revenue-2023-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2023 Q KRW",
+            "canonical_match": true
+          }
+        ],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2023"
+          },
+          {
+            "type": "percent",
+            "claim": "17.3491",
+            "tool_value": "17.3491"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": true,
+          "scope_limited_if_no_evidence": null,
+          "document_and_page_named": true,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "new_human_verdict": null
+    },
+    {
+      "case_id": "period-mismatch",
+      "before_generated": {
+        "status": "needs_review",
+        "value": null,
+        "issues": [
+          "PERIOD_MISMATCH"
+        ],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-ytd-KRW",
+          "s24q3-CFS-revenue-2023-q-KRW"
+        ],
+        "explanation_ko": "계산 보류입니다. 기간 조건이 맞지 않습니다. 비교 대상은 2024-01-01~2024-09-30의 9개월 누적 매출과 2023-07-01~2023-09-30의 3개월 매출입니다. 둘 다 연결(CFS) 기준입니다. 이 차이 때문에 성장률을 확정할 수 없습니다. 근거 문서는 Samsung Electronics 2024 3Q Interim Business Report이며, PDF 34쪽의 Revenue / 2024 YTD KRW와 Revenue / 2023 Q KRW입니다. 해당 검색 범위에서 확인할 수 없습니다."
+      },
+      "after_generated": {
+        "status": "needs_review",
+        "value": null,
+        "issues": [
+          "PERIOD_MISMATCH"
+        ],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-ytd-KRW",
+          "s24q3-CFS-revenue-2023-q-KRW"
+        ],
+        "explanation_ko": "비교가 보류되었습니다. 9개월 누적과 전년 3개월은 기간 길이가 달라 같은 기준의 성장률로 비교할 수 없습니다. 첫 번째 근거는 Samsung Electronics 2024 3Q Interim Business Report, PDF p.34의 Revenue / 2024 YTD KRW입니다. 2024-01-01 ~ 2024-09-30, 9개월, 연결, 225,082,634 백만 원입니다. 두 번째 근거는 같은 보고서의 PDF p.34의 Revenue / 2023 Q KRW입니다. 2023-07-01 ~ 2023-09-30, 3개월, 연결, 67,404,652 백만 원입니다. 도구의 비교 제한에 따라 계산을 보류했습니다."
+      },
+      "before_same_current_gate": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": false,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "after_same_current_gate": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "before_same_current_audit": {
+        "automatic_verdict": "flagged",
+        "issues": [
+          "NEGATION_REQUIRES_REVIEW",
+          "UNBOUND_NUMBER_REQUIRES_REVIEW"
+        ],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-ytd-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 YTD KRW",
+            "canonical_match": true
+          },
+          {
+            "fact_id": "s24q3-CFS-revenue-2023-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2023 Q KRW",
+            "canonical_match": true
+          }
+        ],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2023"
+          },
+          {
+            "type": "year",
+            "claim": "2023"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2023"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": false,
+          "scope_limited_if_no_evidence": null,
+          "document_and_page_named": false,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "after_same_current_audit": {
+        "automatic_verdict": "flagged",
+        "issues": [
+          "UNBOUND_NUMBER_REQUIRES_REVIEW"
+        ],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-ytd-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 YTD KRW",
+            "canonical_match": true
+          },
+          {
+            "fact_id": "s24q3-CFS-revenue-2023-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2023 Q KRW",
+            "canonical_match": true
+          }
+        ],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2023"
+          },
+          {
+            "type": "year",
+            "claim": "2023"
+          },
+          {
+            "type": "year",
+            "claim": "2023"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "225082634000000",
+            "currency": "KRW"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "67404652000000",
+            "currency": "KRW"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": true,
+          "scope_limited_if_no_evidence": null,
+          "document_and_page_named": true,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "new_human_verdict": null
+    },
+    {
+      "case_id": "scope-mismatch",
+      "before_generated": {
+        "status": "needs_review",
+        "value": null,
+        "issues": [
+          "SCOPE_MISMATCH"
+        ],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q2-OFS-revenue-2024-q-KRW"
+        ],
+        "explanation_ko": "계산 보류입니다. 연결·별도 범위가 달라 비교를 검증할 수 없습니다. 다른 분기라는 사실만으로는 보류 사유가 아닙니다. 근거: Samsung Electronics 2024 3Q Interim Business Report, PDF p.34, Revenue / 2024 Q KRW. 79,098,731 백만 원 · 통화 KRW · 2024-07-01 ~ 2024-09-30 · 3개월 · 연결. 근거: Samsung Electronics 2024 Half-year Business Report, PDF p.104, Revenue / 2024 Q KRW. 53,734,118 백만 원 · 통화 KRW · 2024-04-01 ~ 2024-06-30 · 3개월 · 별도."
+      },
+      "after_generated": {
+        "status": "needs_review",
+        "value": null,
+        "issues": [
+          "SCOPE_MISMATCH"
+        ],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q2-OFS-revenue-2024-q-KRW"
+        ],
+        "explanation_ko": "연결과 별도 범위가 달라 비교를 보류했습니다. Samsung Electronics 2024 3Q Interim Business Report, PDF p.34의 Revenue는 연결입니다. 79,098,731 백만 원입니다. Samsung Electronics 2024 Half-year Business Report, PDF p.104의 Revenue는 별도입니다. 53,734,118 백만 원입니다. 두 자료는 범위가 달라 성장률을 확정하지 않았습니다."
+      },
+      "before_same_current_gate": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "after_same_current_gate": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "before_same_current_audit": {
+        "automatic_verdict": "flagged",
+        "issues": [
+          "UNBOUND_NUMBER_REQUIRES_REVIEW"
+        ],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          },
+          {
+            "fact_id": "s24q2-OFS-revenue-2024-q-KRW",
+            "document_id": "s24q2",
+            "page": 104,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          }
+        ],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "79098731000000",
+            "currency": "KRW"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "53734118000000",
+            "currency": "KRW"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": true,
+          "scope_limited_if_no_evidence": null,
+          "document_and_page_named": true,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "after_same_current_audit": {
+        "automatic_verdict": "flagged",
+        "issues": [
+          "NEGATION_REQUIRES_REVIEW",
+          "UNBOUND_NUMBER_REQUIRES_REVIEW"
+        ],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          },
+          {
+            "fact_id": "s24q2-OFS-revenue-2024-q-KRW",
+            "document_id": "s24q2",
+            "page": 104,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          }
+        ],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "79098731000000",
+            "currency": "KRW"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "53734118000000",
+            "currency": "KRW"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": true,
+          "scope_limited_if_no_evidence": null,
+          "document_and_page_named": true,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "new_human_verdict": null
+    },
+    {
+      "case_id": "unit-draft",
+      "before_generated": {
+        "status": "verified",
+        "value": "6.7916",
+        "issues": [],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q2-CFS-revenue-2024-q-KRW"
+        ],
+        "explanation_ko": "매출 증가율은 6.7916%입니다. 비교는 연결재무제표(CFS) 기준의 분기 매출입니다. 2024-07-01~2024-09-30 3개월 매출은 79,098,731 백만 원입니다. 근거 문서는 Samsung Electronics 2024 3Q Interim Business Report, PDF p.34의 Revenue / 2024 Q KRW입니다. 2024-04-01~2024-06-30 3개월 매출은 74,068,302 백만 원입니다. 근거 문서는 Samsung Electronics 2024 Half-year Business Report, PDF p.48의 Revenue / 2024 Q KRW입니다. 금액의 표시 단위는 백만 원입니다."
+      },
+      "after_generated": {
+        "status": "verified",
+        "value": "6.7916%",
+        "issues": [],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q2-CFS-revenue-2024-q-KRW"
+        ],
+        "explanation_ko": "매출 증가율은 6.7916%입니다. 전기 대비 비교입니다. 근거 금액은 Samsung Electronics 2024 3Q Interim Business Report의 PDF p.34와 Samsung Electronics 2024 Half-year Business Report의 PDF p.48입니다. 두 사실 모두 연결(CFS) 기준입니다. 첫 번째 사실은 2024-07-01 ~ 2024-09-30, 3개월, Revenue / 2024 Q KRW입니다. 값은 79,098,731 백만 원입니다. 두 번째 사실은 2024-04-01 ~ 2024-06-30, 3개월, Revenue / 2024 Q KRW입니다. 값은 74,068,302 백만 원입니다. 표시 단위는 백만 원입니다."
+      },
+      "before_same_current_gate": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "after_same_current_gate": {
+        "status_exact": true,
+        "value_exact": false,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "before_same_current_audit": {
+        "automatic_verdict": "flagged",
+        "issues": [
+          "UNBOUND_NUMBER_REQUIRES_REVIEW"
+        ],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          },
+          {
+            "fact_id": "s24q2-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q2",
+            "page": 48,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          }
+        ],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "percent",
+            "claim": "6.7916",
+            "tool_value": "6.7916"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "79098731000000",
+            "currency": "KRW"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "74068302000000",
+            "currency": "KRW"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": true,
+          "scope_limited_if_no_evidence": null,
+          "document_and_page_named": true,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "after_same_current_audit": {
+        "automatic_verdict": "flagged",
+        "issues": [
+          "STRUCTURED_MISMATCH",
+          "UNBOUND_NUMBER_REQUIRES_REVIEW"
+        ],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": false,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          },
+          {
+            "fact_id": "s24q2-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q2",
+            "page": 48,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          }
+        ],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "percent",
+            "claim": "6.7916",
+            "tool_value": "6.7916"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "79098731000000",
+            "currency": "KRW"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "74068302000000",
+            "currency": "KRW"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": true,
+          "scope_limited_if_no_evidence": null,
+          "document_and_page_named": true,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "new_human_verdict": null
+    },
+    {
+      "case_id": "no-evidence",
+      "before_generated": {
+        "status": "needs_review",
+        "value": null,
+        "issues": [
+          "SEARCH_EMPTY"
+        ],
+        "evidence_ids": [],
+        "explanation_ko": "해당 검색 범위에서 확인할 수 없습니다. 따라서 2025년 실적을 이 결과만으로는 확인할 수 없습니다. 기업의 실적 자체가 없다는 뜻은 아닙니다. 검색 조건과 수집 범위를 확인하세요. context needs review."
+      },
+      "after_generated": {
+        "status": "needs_review",
+        "value": null,
+        "issues": [
+          "SEARCH_EMPTY"
+        ],
+        "evidence_ids": [],
+        "explanation_ko": "해당 검색 범위에서 근거를 확인할 수 없습니다. 기업의 실적 자체가 없다는 뜻은 아닙니다. 검색 조건과 수집 범위를 확인하세요. 문서 제목과 PDF 페이지 정보가 제공되지 않았습니다."
+      },
+      "before_same_current_gate": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": false,
+        "schema_keys_exact": true
+      },
+      "after_same_current_gate": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "before_same_current_audit": {
+        "automatic_verdict": "no_detected_rule_violation",
+        "issues": [],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2025"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": null,
+          "scope_limited_if_no_evidence": true,
+          "document_and_page_named": null,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "after_same_current_audit": {
+        "automatic_verdict": "flagged",
+        "issues": [
+          "NEGATION_REQUIRES_REVIEW"
+        ],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [],
+        "observed_claims": [],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": null,
+          "scope_limited_if_no_evidence": true,
+          "document_and_page_named": null,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "new_human_verdict": null
+    },
+    {
+      "case_id": "conflicting-number-draft",
+      "before_generated": {
+        "status": "verified",
+        "value": "6.7916",
+        "issues": [],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q2-CFS-revenue-2024-q-KRW"
+        ],
+        "explanation_ko": "연결 기준 매출 증가율은 6.7916%입니다. 2024년 3분기 연결 매출은 79,098,731 백만 원이며, Samsung Electronics 2024 3Q Interim Business Report의 PDF p.34에 있습니다. 2024년 2분기 연결 매출은 74,068,302 백만 원이며, Samsung Electronics 2024 Half-year Business Report의 PDF p.48에 있습니다. 두 분기 모두 3개월, 연결(CFS) 기준입니다."
+      },
+      "after_generated": {
+        "status": "verified",
+        "value": "6.7916%",
+        "issues": [],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q2-CFS-revenue-2024-q-KRW"
+        ],
+        "explanation_ko": "Samsung Electronics 2024 3Q Interim Business Report의 PDF p.34에서 확인되는 연결 매출은 2024-07-01 ~ 2024-09-30 기준 79,098,731 백만 원입니다. Samsung Electronics 2024 Half-year Business Report의 PDF p.48에서 확인되는 연결 매출은 2024-04-01 ~ 2024-06-30 기준 74,068,302 백만 원입니다. 두 값은 모두 3개월 연결 기준입니다. 따라서 분기 대비 매출 증가율은 6.7916%입니다."
+      },
+      "before_same_current_gate": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "after_same_current_gate": {
+        "status_exact": true,
+        "value_exact": false,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "before_same_current_audit": {
+        "automatic_verdict": "flagged",
+        "issues": [
+          "UNBOUND_NUMBER_REQUIRES_REVIEW"
+        ],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          },
+          {
+            "fact_id": "s24q2-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q2",
+            "page": 48,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          }
+        ],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "percent",
+            "claim": "6.7916",
+            "tool_value": "6.7916"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "79098731000000",
+            "currency": "KRW"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "74068302000000",
+            "currency": "KRW"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": true,
+          "scope_limited_if_no_evidence": null,
+          "document_and_page_named": true,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "after_same_current_audit": {
+        "automatic_verdict": "flagged",
+        "issues": [
+          "STRUCTURED_MISMATCH",
+          "UNBOUND_NUMBER_REQUIRES_REVIEW"
+        ],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": false,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          },
+          {
+            "fact_id": "s24q2-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q2",
+            "page": 48,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          }
+        ],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "percent",
+            "claim": "6.7916",
+            "tool_value": "6.7916"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "79098731000000",
+            "currency": "KRW"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "74068302000000",
+            "currency": "KRW"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": true,
+          "scope_limited_if_no_evidence": null,
+          "document_and_page_named": true,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "new_human_verdict": null
+    },
+    {
+      "case_id": "citation-draft",
+      "before_generated": {
+        "status": "verified",
+        "value": "6.7916",
+        "issues": [],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q2-CFS-revenue-2024-q-KRW"
+        ],
+        "explanation_ko": "삼성전자 2024년 3분기 연결 매출은 79,098,731 백만 원입니다. 출처는 Samsung Electronics 2024 3Q Interim Business Report, PDF p.34입니다. 같은 보고서 기준 2024년 2분기 연결 매출은 74,068,302 백만 원입니다. 출처는 Samsung Electronics 2024 Half-year Business Report, PDF p.48입니다. 두 분기는 모두 3개월 연결 기준의 분기 실적입니다. 따라서 매출 증가율은 6.7916입니다."
+      },
+      "after_generated": {
+        "status": "verified",
+        "value": "6.7916%",
+        "issues": [],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q2-CFS-revenue-2024-q-KRW"
+        ],
+        "explanation_ko": "삼성전자 2024 3Q Interim Business Report, PDF p.34의 Revenue / 2024 Q KRW는 79,098,731 백만 원입니다. 삼성전자 2024 Half-year Business Report, PDF p.48의 Revenue / 2024 Q KRW는 74,068,302 백만 원입니다. 두 값은 모두 연결(CFS) 기준의 3개월 분기 수치입니다. 전분기 대비 매출 증가율은 6.7916%입니다."
+      },
+      "before_same_current_gate": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": false,
+        "prose_rate_unit_explicit": false,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "after_same_current_gate": {
+        "status_exact": true,
+        "value_exact": false,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "before_same_current_audit": {
+        "automatic_verdict": "flagged",
+        "issues": [
+          "UNBOUND_NUMBER_REQUIRES_REVIEW"
+        ],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": true,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          },
+          {
+            "fact_id": "s24q2-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q2",
+            "page": 48,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          }
+        ],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "79098731000000",
+            "currency": "KRW"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "74068302000000",
+            "currency": "KRW"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": true,
+          "scope_limited_if_no_evidence": null,
+          "document_and_page_named": true,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "after_same_current_audit": {
+        "automatic_verdict": "flagged",
+        "issues": [
+          "STRUCTURED_MISMATCH",
+          "UNBOUND_NUMBER_REQUIRES_REVIEW"
+        ],
+        "structured_checks": {
+          "status_exact": true,
+          "value_exact": false,
+          "issues_exact": true,
+          "citations_exact": true,
+          "explanation_present": true
+        },
+        "canonical_evidence_valid": true,
+        "citation_checks": [
+          {
+            "fact_id": "s24q3-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q3",
+            "page": 34,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          },
+          {
+            "fact_id": "s24q2-CFS-revenue-2024-q-KRW",
+            "document_id": "s24q2",
+            "page": 48,
+            "row": "Revenue",
+            "column": "2024 Q KRW",
+            "canonical_match": true
+          }
+        ],
+        "observed_claims": [
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "year",
+            "claim": "2024"
+          },
+          {
+            "type": "percent",
+            "claim": "6.7916",
+            "tool_value": "6.7916"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "79098731000000",
+            "currency": "KRW"
+          },
+          {
+            "type": "simple_amount",
+            "claim_normalized": "74068302000000",
+            "currency": "KRW"
+          }
+        ],
+        "semantic_verified": false,
+        "human_review_required": true,
+        "limitations": [
+          "Rule checks cover explicit patterns, not all sentence meaning.",
+          "Negation, attribution, omitted context and compound quantities require human adjudication.",
+          "No expert review or LLM-as-judge was performed."
+        ],
+        "semantic_certified": false,
+        "presentation_checks": {
+          "display_unit_named": true,
+          "scope_limited_if_no_evidence": null,
+          "document_and_page_named": false,
+          "internal_scale_term_absent": true,
+          "interpretation": "literal presentation coverage only; not semantic certification"
+        }
+      },
+      "new_human_verdict": null
+    }
+  ]
+}

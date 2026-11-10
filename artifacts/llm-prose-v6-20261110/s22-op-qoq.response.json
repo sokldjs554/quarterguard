@@ -1,0 +1,11 @@
+{
+  "id": "resp_037fdc82060ba09e016af2deb91c6487d18802d21a32271c00",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1578,
+    "output_tokens": 209,
+    "total_tokens": 1787
+  },
+  "output_text": "{\"status\":\"needs_review\",\"value\":null,\"issues\":[\"PERIOD_MISMATCH\"],\"evidence_ids\":[\"s22q3-CFS-operating_profit-2022-q-KRW\",\"s22q3-CFS-operating_profit-2021-q-KRW\"],\"explanation_ko\":\"Samsung Electronics 2022 Q3 Interim Report의 PDF p.37에서 확인한 연결 영업이익입니다. 2022-07-01~2022-09-30의 2022 Q KRW와 2021-07-01~2021-09-30의 2021 Q KRW는 둘 다 3개월 자료입니다. 다만 도구는 QoQ 비교로 사용할 수 없다고 판단했습니다. 문제 사유는 PERIOD_MISMATCH입니다. 기간 길이 또는 선택한 비교 방식의 날짜 조건이 맞지 않아 계산을 보류했습니다. 따라서 이 두 값으로 QoQ 결과를 확정할 수 없습니다.\"}"
+}

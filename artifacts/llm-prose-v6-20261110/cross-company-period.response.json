@@ -1,0 +1,11 @@
+{
+  "id": "resp_0e0357554b3f212e016af2dec06bd487d1ad5e456b5dea50a2",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1686,
+    "output_tokens": 244,
+    "total_tokens": 1930
+  },
+  "output_text": "{\"status\":\"needs_review\",\"value\":null,\"issues\":[\"COMPANY_MISMATCH\",\"PERIOD_MISMATCH\"],\"evidence_ids\":[\"s22q3-CFS-operating_profit-2022-q-KRW\",\"h25q3-CFS-operating_profit-2025-q-KRW\"],\"explanation_ko\":\"비교는 보류됩니다. 삼성전자 2022년 3분기 연결 영업이익은 Samsung Electronics 2022 Q3 Interim Report PDF p.37의 Operating profit / 2022 Q KRW입니다. 현대자동차 2025년 3분기 연결 영업이익은 Hyundai Motor Company 2025 Q3 interim consolidated financial statements PDF p.8의 Operating profit / 2025 Q KRW입니다. 두 회사가 달라 COMPANY_MISMATCH가 발생했습니다. 또한 2022년 7~9월과 2025년 7~9월은 서로 다른 기준 연도라 전년 동분기 비교 조건으로 처리할 수 없어 PERIOD_MISMATCH가 발생했습니다. 따라서 전년 동분기 성장률은 산출하지 않습니다.\"}"
+}

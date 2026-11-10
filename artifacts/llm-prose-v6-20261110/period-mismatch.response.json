@@ -1,0 +1,11 @@
+{
+  "id": "resp_0081706eac127f99016af2dea8ca1c87d1a3901f134e40ee83",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1567,
+    "output_tokens": 241,
+    "total_tokens": 1808
+  },
+  "output_text": "{\"status\":\"needs_review\",\"value\":null,\"issues\":[\"PERIOD_MISMATCH\"],\"evidence_ids\":[\"s24q3-CFS-revenue-2024-ytd-KRW\",\"s24q3-CFS-revenue-2023-q-KRW\"],\"explanation_ko\":\"비교가 보류되었습니다. 9개월 누적과 전년 3개월은 기간 길이가 달라 같은 기준의 성장률로 비교할 수 없습니다. 첫 번째 근거는 Samsung Electronics 2024 3Q Interim Business Report, PDF p.34의 Revenue / 2024 YTD KRW입니다. 2024-01-01 ~ 2024-09-30, 9개월, 연결, 225,082,634 백만 원입니다. 두 번째 근거는 같은 보고서의 PDF p.34의 Revenue / 2023 Q KRW입니다. 2023-07-01 ~ 2023-09-30, 3개월, 연결, 67,404,652 백만 원입니다. 도구의 비교 제한에 따라 계산을 보류했습니다.\"}"
+}

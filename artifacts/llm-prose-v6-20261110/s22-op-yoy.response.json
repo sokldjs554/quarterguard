@@ -1,0 +1,11 @@
+{
+  "id": "resp_0f47ea1fa3fe9286016af2deb3e38887d1b04914379ded11b5",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1528,
+    "output_tokens": 179,
+    "total_tokens": 1707
+  },
+  "output_text": "{\"status\":\"verified\",\"value\":\"-31.3923\",\"issues\":[],\"evidence_ids\":[\"s22q3-CFS-operating_profit-2022-q-KRW\",\"s22q3-CFS-operating_profit-2021-q-KRW\"],\"explanation_ko\":\"Samsung Electronics 2022 Q3 Interim Report의 PDF p.37에서 연결 영업이익이 확인됩니다. 2022년 3분기 연결 영업이익은 10,852,045 백만 원입니다. 같은 보고서의 PDF p.37에서 2021년 3분기 연결 영업이익은 15,817,531 백만 원입니다. 2022년 3분기 연결 영업이익은 전년 동분기 대비 -31.3923%입니다.\"}"
+}

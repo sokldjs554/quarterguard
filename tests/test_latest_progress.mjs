@@ -43,3 +43,11 @@ test('confirmed v5 human verdicts do not become an overall accuracy improvement'
  assert.ok(!html.includes('새 응답의 사람 검수는 미수행'));
  assert.ok(html.includes('참 5·모호 3 → 참 7·모호 1'));
 });
+
+test('v6 separates structural regression, new tasks, and still-pending human review',()=>{
+ const current=structuredClone(summary);
+ current.llm.prose_batch={calls:16,previous_structured_exact:8,paired:{structured_exact:3,production_gate_passed:3},new_tasks:{structured_exact:5,production_gate_passed:4},estimated_cost_usd:'0.03177450',human_reviewed:false,link:'docs/llm-prose-v6-results-20261110.md',review_link:'docs/validation-kit/llm-prose-v6-actual-20261110.md'};
+ const html=renderLatestProgress({summary:current,runtime_commit:'current'});
+ for(const text of ['v6 새 16회','8/8 → 3/8','새 과제: 구조 5/8','제품 검사 4/8','새 응답의 사람 검수는 미수행','value','부정문','0.03177450'])assert.ok(html.includes(text),text);
+ assert.ok(html.includes('참 5·모호 3 → 참 7·모호 1'));
+});
