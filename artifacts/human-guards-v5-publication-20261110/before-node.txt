@@ -1,0 +1,33 @@
+✔ current evidence separates product scope, reviewed responses, latest guard, and actors (1.913141ms)
+✔ historical failures are dated and never relabeled as current status (38.433969ms)
+✔ malformed current summary fails and text is escaped (0.783901ms)
+✔ latest model batch is separate from prior human labels and has unresolved prose warnings (0.308627ms)
+✖ confirmed v5 human verdicts do not become an overall accuracy improvement (1.131017ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 4
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 197.319074
+
+✖ failing tests:
+
+test at tests/test_latest_progress.mjs:38:1
+✖ confirmed v5 human verdicts do not become an overall accuracy improvement (1.131017ms)
+  AssertionError [ERR_ASSERTION]: 참 6·모호 1·거짓 1
+      at TestContext.<anonymous> (file:///workspace/quarterguard/tests/test_latest_progress.mjs:42:83)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

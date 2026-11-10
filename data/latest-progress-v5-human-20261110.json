@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "as_of_kst": "2026-11-10",
+  "evidence_basis_commit": "feaf42146939b8546c45b54223183fd16112cc6e",
+  "production": {
+    "companies": [
+      "samsung"
+    ],
+    "year": 2024,
+    "documents": 2,
+    "facts": 192
+  },
+  "hyundai": {
+    "raw_cells": {
+      "total": 16,
+      "passed": 16,
+      "failed": 0
+    },
+    "raw_queries": {
+      "total": 8,
+      "passed": 8,
+      "failed": 0
+    },
+    "raw_calculations": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0
+    },
+    "production_registered": false,
+    "link": "docs/hyundai-holdout-20261109.md"
+  },
+  "human_review": {
+    "reviewer": "b",
+    "baseline": {
+      "참": 5,
+      "모호": 3
+    },
+    "followup": {
+      "참": 7,
+      "모호": 1
+    },
+    "cells": 8,
+    "queries": 4,
+    "link": "docs/validation-kit/session-b-llm-followup-20261110.md",
+    "gold_link": "docs/validation-kit/session-b-source-gold-20261109.md"
+  },
+  "llm": {
+    "historical_gpt_calls": 4,
+    "calls_per_batch": [
+      8,
+      8
+    ],
+    "structured_exact": [
+      8,
+      7
+    ],
+    "model": "gpt-5.4-mini-2026-03-17",
+    "same_development_cases": 8,
+    "latest_guard_live_evaluated": true,
+    "link": "docs/llm-followup-results-20261110.md",
+    "guard_link": "docs/decision-guards-20261110.md",
+    "latest_guard_batch": {
+      "calls": 8,
+      "structured_exact": 8,
+      "previous_structured_exact": 7,
+      "automatic_flagged": 7,
+      "estimated_cost_usd": "0.01510425",
+      "billed_cost_usd": null,
+      "human_reviewed": true,
+      "source_commit": "feaf42146939b8546c45b54223183fd16112cc6e",
+      "link": "docs/llm-guards-v5-results-20261110.md",
+      "review_link": "docs/validation-kit/llm-guards-v5-review-20261110.md",
+      "human_verdict_counts": {
+        "참": 6,
+        "모호": 1,
+        "거짓": 1
+      },
+      "human_review_link": "docs/validation-kit/session-b-v5-20261110.md",
+      "human_reviewed_at": "2026-11-10T16:43:00+09:00"
+    }
+  },
+  "personal_review": {
+    "added_tests": 5,
+    "period_tests": 2,
+    "dart_tests": 3,
+    "reported_full_suite": 143,
+    "period_link": "docs/code-review-kit/review-20261108.md",
+    "dart_link": "docs/code-review-kit/review-dart-20261109.md"
+  },
+  "participants": {
+    "unique_external_people": 2,
+    "roles": [
+      {
+        "id": "a",
+        "role": "대학생 · 작성자 시연에 의견 제공"
+      },
+      {
+        "id": "b",
+        "role": "금융 분야 경력 3년인 친구"
+      }
+    ],
+    "customer_environment_deployments": 0,
+    "a_link": "docs/validation-kit/session-a-20261107.md",
+    "b_link": "docs/validation-kit/session-b-task-followup-20261108.md"
+  },
+  "verification": {
+    "python_tests": 191,
+    "node_tests": 8,
+    "browser_replay_checks": 8,
+    "actual_mcp_cases": 8,
+    "actor": "AI",
+    "code_commit": "f5377adf4d5dea3cd6bde05ab2233dea4390dd27",
+    "log": "artifacts/decision-guards-20261110/python-tests.txt",
+    "link": "docs/decision-guards-20261110.md"
+  },
+  "source_sha256": {
+    "artifacts/hyundai-final-20261109/summary.json": "293b558dd6db30aaf4cd0588662633d9807c1fde588f15822b285cd9cb9776c7",
+    "artifacts/human-review-followup-20261110/review.json": "1b81260bb86308f14af2394c0a22dadf8d49f7b2550f8930c6a3610e30c2d00c",
+    "artifacts/human-llm-followup-20261110/review.json": "3d5f05558410a2e6230cd27842da9f4ac597d2261adae811a139a38fdb64b298",
+    "artifacts/llm-followup-20261110/comparison.json": "d8b0a1a9dc673ba54c2e486e404fa0581d91aeae382615604cc7a7fa860ddc72",
+    "artifacts/decision-guards-20261110/python-tests.txt": "025515c463806964db0ca4da285fe621900b289846a11b9b24b249db930e7a28",
+    "docs/code-review-kit/review-20261108.md": "426f2494eadd49424640bef078d679c3f0da4b1a0764ad6f406964dd156c644a",
+    "docs/code-review-kit/review-dart-20261109.md": "015da789f022a33c3f5e92a93830f6e85bf5d6afeccdabf4a1a2131b6d634d8c",
+    "docs/validation-kit/session-a-20261107.md": "d18e8b72e8fe76606f1d94693f6fd74d8e23f7d9b6698e6f0728004f57d5e13b",
+    "docs/validation-kit/session-b-source-gold-20261109.md": "b936fff8634f3796df75260ef75201d38805d4f508d12a4301deed44b0ca2ad9",
+    "docs/validation-kit/session-b-task-followup-20261108.md": "6932e639c13fc083dd603e6ae7b65d6dd3936d04380a8c808fa70ae14c573cf8",
+    "docs/decision-guards-20261110.md": "766cb1bdaf9fb9fddaf2f156484bb485443a9c1a2839dc3a00d1b26f9211758c",
+    "data/latest-progress-20261110.json": "193173697584c3ad9558d75fb7deea1c25d64f0bf3cd9db79b19ea3b6631092c",
+    "artifacts/llm-guards-v5-20261110/comparison.json": "1712c722d717396bf87b0da6ae2e4c55d4ba8039b2b0f75c11dad2ded3055f33",
+    "artifacts/llm-guards-v5-20261110/normal-qoq.response.json": "1e0cf62f9c964d01b41c33b41a6cc667a1d8b79726c60bbb9fa4e2ce86c968c3",
+    "artifacts/llm-guards-v5-20261110/normal-yoy.response.json": "572af74019e34eb8e9b7b5ea1959ec8d53ebbcee90b5af4b0ff0f33e876ccb67",
+    "artifacts/llm-guards-v5-20261110/human-review.json": "a15dd6a48aed7ebba3dacad0e0edbe244e2cf9901dc9f97cf53b59f7a4c5bdda",
+    "artifacts/llm-guards-v5-20261110/conflicting-number-draft.response.json": "f8deca9755965f7a92baf2284016684840a86abd92c52a1fbde6b7b4bf3bb1b4",
+    "artifacts/llm-guards-v5-20261110/ai-observations.json": "dd13b189a8c325ca9cb31c57190a84a27e8fda76fd440632f466d51ffe1492f7",
+    "artifacts/llm-guards-v5-20261110/citation-draft.response.json": "e11dabe8037debd6976638d9b5a036314fa15c18dededf02559b4944265cc9d3",
+    "artifacts/llm-guards-v5-20261110/period-mismatch.response.json": "5bc4247a695f15f5fde10e61e714a4ddafa7ae570c20dceb0c964070130acbdc",
+    "artifacts/llm-guards-v5-20261110/no-evidence.response.json": "3179129062e0c9774bb1e7288dea2de248728ebfc91f36d462d0954db4f7b6c2",
+    "artifacts/llm-guards-v5-20261110/report.json": "0368259c4f6a6e9ae0b83aebc5d39bbf82c8dd1720d7491b62c1d7e18add7f96",
+    "artifacts/llm-guards-v5-20261110/scope-mismatch.response.json": "44e2c6b819aadd33f588420aaf7b2fcb69f8fd403252174e1b1b29c207b14127",
+    "artifacts/llm-guards-v5-20261110/dispatch-ref-failure.json": "42c8cf3b1c6d0f1c9ff1263f8dc1ff817821322c86866a9dc94f3dfe9064421f",
+    "artifacts/llm-guards-v5-20261110/attempts.jsonl": "5428e49ddc3f6403b8734c0a8f7620e530dac90f8d7664d1956c2c54291a933b",
+    "artifacts/llm-guards-v5-20261110/provenance.json": "a610f8fcef41c4c2d7d5cb5d23f10f0cbe0c7d127acaf5c5e520b2998d80ff71",
+    "artifacts/llm-guards-v5-20261110/unit-draft.response.json": "9e867c79d366165d9c6a8224fd06d8a578a4606ea1406dc48b06f0b56b6b7e04",
+    "data/latest-progress-v5-20261110.json": "4afad2ff7e85a8bbb6c5f5f312126e98d84fee09be32ffc4e4b45680a4598b4e",
+    "artifacts/human-guards-v5-20261110/review.json": "2d3a1568ebbfccf9e1a9fd1d6c2e912a37788c0c00a4cfa2aff2870d8ebe6a5a",
+    "docs/validation-kit/session-b-v5-20261110.md": "096fa341f17960a4d8cbd08d7c420c3bf6896dc70384a4e73b2ef6f6fad46c5e"
+  },
+  "summary_revision": "v5-human-review",
+  "previous_summary": "data/latest-progress-v5-20261110.json"
+}

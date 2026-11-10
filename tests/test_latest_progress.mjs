@@ -34,3 +34,12 @@ test('latest model batch is separate from prior human labels and has unresolved 
  assert.ok(!html.includes('변경 후 새 실호출·b 재검수는 아직 없습니다'));
  assert.ok(html.includes('참 5·모호 3 → 참 7·모호 1'));
 });
+
+test('confirmed v5 human verdicts do not become an overall accuracy improvement',()=>{
+ const current=structuredClone(summary);
+ current.llm.latest_guard_batch={calls:8,structured_exact:8,previous_structured_exact:7,automatic_flagged:7,estimated_cost_usd:'0.01510425',human_reviewed:true,human_verdict_counts:{'참':6,'모호':1,'거짓':1},human_review_link:'docs/validation-kit/session-b-v5-20261110.md',link:'docs/llm-guards-v5-results-20261110.md'};
+ const html=renderLatestProgress({summary:current,runtime_commit:'current'});
+ for(const text of ['참 6·모호 1·거짓 1','기존 b의 후속 검수','전체 설명의 개선으로 해석하지 않습니다'])assert.ok(html.includes(text),text);
+ assert.ok(!html.includes('새 응답의 사람 검수는 미수행'));
+ assert.ok(html.includes('참 5·모호 3 → 참 7·모호 1'));
+});
