@@ -1,0 +1,31 @@
+{
+  "base": "f46cea1387170dd28737970992fb135d3b65ec82",
+  "unchanged": [
+    "quarterguard/core.py",
+    "artifacts/human-prose-v7-20261110/review.json",
+    "artifacts/llm-prose-v7-20261110/README.md",
+    "artifacts/llm-prose-v7-20261110/ai-observations.json",
+    "artifacts/llm-prose-v7-20261110/attempts.jsonl",
+    "artifacts/llm-prose-v7-20261110/citation-draft.response.json",
+    "artifacts/llm-prose-v7-20261110/comparison.json",
+    "artifacts/llm-prose-v7-20261110/conflicting-number-draft.response.json",
+    "artifacts/llm-prose-v7-20261110/cross-company-period.response.json",
+    "artifacts/llm-prose-v7-20261110/h25-net-yoy.response.json",
+    "artifacts/llm-prose-v7-20261110/h25-op-period.response.json",
+    "artifacts/llm-prose-v7-20261110/h25-op-yoy.response.json",
+    "artifacts/llm-prose-v7-20261110/human-review.json",
+    "artifacts/llm-prose-v7-20261110/no-evidence.response.json",
+    "artifacts/llm-prose-v7-20261110/normal-qoq.response.json",
+    "artifacts/llm-prose-v7-20261110/normal-yoy.response.json",
+    "artifacts/llm-prose-v7-20261110/period-mismatch.response.json",
+    "artifacts/llm-prose-v7-20261110/provenance.json",
+    "artifacts/llm-prose-v7-20261110/report.json",
+    "artifacts/llm-prose-v7-20261110/s22-net-period.response.json",
+    "artifacts/llm-prose-v7-20261110/s22-net-ytd-yoy.response.json",
+    "artifacts/llm-prose-v7-20261110/s22-op-qoq.response.json",
+    "artifacts/llm-prose-v7-20261110/s22-op-yoy.response.json",
+    "artifacts/llm-prose-v7-20261110/scope-mismatch.response.json",
+    "artifacts/llm-prose-v7-20261110/unit-draft.response.json",
+    "data/llm-prose-v7-20261110/freeze.json"
+  ]
+}

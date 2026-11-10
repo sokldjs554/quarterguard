@@ -1,0 +1,41 @@
+{
+  "reported_by": "project author",
+  "basis_commit": "f46cea1387170dd28737970992fb135d3b65ec82",
+  "submitted_file": "quarterguard/explanation_context.py",
+  "submitted_sha256": "ea607fcd2c910428cc32b2dbb7e077ffa354b33b4fb58f3aa82d07146c847c9d",
+  "author_reported_commands": [
+    {
+      "command": "python -m unittest tests.test_explanation_contract tests.test_explanation_context tests.test_live_explanations_v5",
+      "output": "Ran 24 tests in 0.481s\nOK"
+    },
+    {
+      "command": "python -m unittest discover -s tests",
+      "output": "Ran 239 tests in 29.725s\nOK (skipped=1)"
+    },
+    {
+      "command": "node --test tests/*.mjs",
+      "output": "tests 14\npass 14\nfail 0"
+    }
+  ],
+  "author_reported_warnings": [
+    "Starlette",
+    "Pydantic"
+  ],
+  "execution_date": null,
+  "environment": null,
+  "assistance": null,
+  "author_test_patch_received": false,
+  "ai_verification": {
+    "targeted_tests": 23,
+    "full_tests_run": 238,
+    "skipped": 1,
+    "failures": 0,
+    "node_tests": 14,
+    "skip_reason": "test_hyundai_parser.HyundaiParserTests.test_known_official_pdf_matches_all_sixteen_frozen_cells: official PDF cache unavailable",
+    "test_count_difference": "One fewer targeted and total test than author report; only implementation file supplied; cannot identify extra author test or author skip from this submission."
+  },
+  "additional_paid_calls": 0,
+  "new_llm_generations": 0,
+  "new_b_reviews": 0,
+  "scope": "Attached implementation integrated byte-for-byte; AI handles verification, documentation and publication, not authorship of the submitted file."
+}
