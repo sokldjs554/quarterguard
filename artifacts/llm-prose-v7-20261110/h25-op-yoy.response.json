@@ -1,0 +1,11 @@
+{
+  "id": "resp_00334df9697a083f016af31e28857887d1af7ec5eff25ab35c",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1709,
+    "output_tokens": 193,
+    "total_tokens": 1902
+  },
+  "output_text": "{\"status\":\"verified\",\"value\":\"-29.1445\",\"issues\":[],\"evidence_ids\":[\"h25q3-CFS-operating_profit-2025-q-KRW\",\"h25q3-CFS-operating_profit-2024-q-KRW\"],\"explanation_ko\":\"현대자동차의 2025년 3분기 연결 영업이익은 2,537,266 백만 원입니다. PDF p.8의 Hyundai Motor Company 2025 Q3 interim consolidated financial statements, Operating profit / 2025 Q KRW 근거입니다. 2024년 3분기 연결 영업이익은 3,580,900 백만 원입니다. 같은 문서의 PDF p.8, Operating profit / 2024 Q KRW 근거입니다. 전년 동분기 증감률은 -29.1445%입니다.\"}"
+}

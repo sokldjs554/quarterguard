@@ -10,6 +10,19 @@ from quarterguard.store import ROOT
 
 
 class LatestProgressTests(unittest.TestCase):
+    def test_v7_actual_batch_does_not_inherit_v6_human_verdicts(self):
+        s=TestClient(app).get('/api/evaluation/latest').json()['summary']
+        batch=s['llm'].get('schema_batch')
+        self.assertIsNotNone(batch)
+        actual=json.loads((ROOT/'artifacts/llm-prose-v7-20261110/report.json').read_text())
+        self.assertEqual(batch['calls'],actual['calls_attempted'])
+        self.assertEqual(batch['cohorts'],actual['cohorts'])
+        self.assertEqual(batch['estimated_cost_usd'],actual['usage_estimated_cost_usd'])
+        self.assertFalse(batch['human_reviewed'])
+        self.assertNotIn('human_verdict_counts',batch)
+        self.assertEqual(s['llm']['prose_batch']['human_verdict_counts'],{'참':15,'모호':1,'거짓':0})
+        self.assertEqual(s['participants']['unique_external_people'],2)
+
     def test_v6_regression_and_new_cohort_are_separate_from_v5_human_labels(self):
         summary=TestClient(app).get('/api/evaluation/latest').json()['summary']
         batch=summary['llm'].get('prose_batch')

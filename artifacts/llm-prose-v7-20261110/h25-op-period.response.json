@@ -1,0 +1,11 @@
+{
+  "id": "resp_084e888d0b7f7f37016af31e2d245487d1bdf011b2964b0283",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1801,
+    "output_tokens": 219,
+    "total_tokens": 2020
+  },
+  "output_text": "{\"status\":\"needs_review\",\"value\":null,\"issues\":[\"PERIOD_MISMATCH\"],\"evidence_ids\":[\"h25q3-CFS-operating_profit-2025-ytd-KRW\",\"h25q3-CFS-operating_profit-2024-q-KRW\"],\"explanation_ko\":\"계산 보류입니다. 두 기간의 개월 수가 같지 않습니다. 2025년 1월 1일~2025년 9월 30일의 9개월 연결 영업이익은 Hyundai Motor Company 2025 Q3 interim consolidated financial statements PDF p.8의 Operating profit / 2025 YTD KRW입니다. 2024년 7월 1일~2024년 9월 30일의 3개월 연결 영업이익은 같은 문서 PDF p.8의 Operating profit / 2024 Q KRW입니다. 도구는 두 기간의 시작 월·일이 다르다고 판단해 비교를 보류했습니다.\"}"
+}

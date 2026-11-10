@@ -1,0 +1,29 @@
+{
+  "actor": "AI inspection of stored outputs, not b or human adjudication",
+  "human_verdicts_created": false,
+  "structured_fields_exact": 16,
+  "citations_exact": 16,
+  "percent_suffix_value_errors": 0,
+  "human_review_candidates": [
+    {
+      "case_id": "no-evidence",
+      "literal": "SEARCH_EMPTY",
+      "note": "Internal code remains in free prose; the current localized-language guard only checks needs_review/context needs review."
+    },
+    {
+      "case_id": "s22-op-qoq",
+      "literal": "qoq_adjacent",
+      "note": "The adjacency reason is now explicit, but an internal predicate name remains. Readability requires human review."
+    }
+  ],
+  "automatic_warnings": "All16 flagged by separate audit, primarily unbound page/date numbers and negation; not16 factual errors.",
+  "latency": {
+    "paired_development": {
+      "median_ms": 1929.2665
+    },
+    "new_tasks_known_documents": {
+      "median_ms": 1990.1125
+    }
+  },
+  "no_general_accuracy_claim": true
+}
