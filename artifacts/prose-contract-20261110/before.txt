@@ -1,0 +1,70 @@
+test_disclosed_negation_passes_without_changing_original_text (test_explanation_contract.OutputContractTests.test_disclosed_negation_passes_without_changing_original_text) ... FAIL
+test_duration_and_yoy_failures_are_distinguished (test_explanation_contract.OutputContractTests.test_duration_and_yoy_failures_are_distinguished) ... FAIL
+test_eight_archived_percent_values_still_fail_exact_validation (test_explanation_contract.OutputContractTests.test_eight_archived_percent_values_still_fail_exact_validation) ... ok
+test_payload_permits_only_exact_tool_value_including_null_and_derived (test_explanation_contract.OutputContractTests.test_payload_permits_only_exact_tool_value_including_null_and_derived) ... FAIL
+test_qoq_reports_date_adjacency_not_equal_months_as_failure (test_explanation_contract.OutputContractTests.test_qoq_reports_date_adjacency_not_equal_months_as_failure) ... FAIL
+test_supported_negation_does_not_hide_a_later_absence_claim (test_explanation_contract.OutputContractTests.test_supported_negation_does_not_hide_a_later_absence_claim) ... 
+  test_supported_negation_does_not_hide_a_later_absence_claim (test_explanation_contract.OutputContractTests.test_supported_negation_does_not_hide_a_later_absence_claim) (text='근거가 없다는 뜻은 아닙니다.') ... FAIL
+  test_supported_negation_does_not_hide_a_later_absence_claim (test_explanation_contract.OutputContractTests.test_supported_negation_does_not_hide_a_later_absence_claim) (text='근거가 없는 것은 아닙니다.') ... FAIL
+test_unknown_or_tampered_context_does_not_invent_period_diagnostics (test_explanation_contract.OutputContractTests.test_unknown_or_tampered_context_does_not_invent_period_diagnostics) ... FAIL
+
+======================================================================
+FAIL: test_disclosed_negation_passes_without_changing_original_text (test_explanation_contract.OutputContractTests.test_disclosed_negation_passes_without_changing_original_text)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_explanation_contract.py", line 36, in test_disclosed_negation_passes_without_changing_original_text
+    self.assertTrue(check_prose(row['generated'],row['tool_result'])['prose_evidence_presence_consistent'])
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_duration_and_yoy_failures_are_distinguished (test_explanation_contract.OutputContractTests.test_duration_and_yoy_failures_are_distinguished)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_explanation_contract.py", line 62, in test_duration_and_yoy_failures_are_distinguished
+    self.assertEqual(basis.get('failed_conditions'),['equal_months','yoy_start_month_day'])
+AssertionError: None != ['equal_months', 'yoy_start_month_day']
+
+======================================================================
+FAIL: test_payload_permits_only_exact_tool_value_including_null_and_derived (test_explanation_contract.OutputContractTests.test_payload_permits_only_exact_tool_value_including_null_and_derived)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_explanation_contract.py", line 30, in test_payload_permits_only_exact_tool_value_including_null_and_derived
+    self.assertFalse(validator.is_valid(bad), (expected,bad))
+AssertionError: True is not false : ('6.7916', '6.7916%')
+
+======================================================================
+FAIL: test_qoq_reports_date_adjacency_not_equal_months_as_failure (test_explanation_contract.OutputContractTests.test_qoq_reports_date_adjacency_not_equal_months_as_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_explanation_contract.py", line 53, in test_qoq_reports_date_adjacency_not_equal_months_as_failure
+    self.assertEqual(basis.get('failed_conditions'),['qoq_adjacent'])
+AssertionError: None != ['qoq_adjacent']
+
+======================================================================
+FAIL: test_supported_negation_does_not_hide_a_later_absence_claim (test_explanation_contract.OutputContractTests.test_supported_negation_does_not_hide_a_later_absence_claim) (text='근거가 없다는 뜻은 아닙니다.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_explanation_contract.py", line 43, in test_supported_negation_does_not_hide_a_later_absence_claim
+    self.assertTrue(check_prose({'explanation_ko':text},result)['prose_evidence_presence_consistent'])
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_supported_negation_does_not_hide_a_later_absence_claim (test_explanation_contract.OutputContractTests.test_supported_negation_does_not_hide_a_later_absence_claim) (text='근거가 없는 것은 아닙니다.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_explanation_contract.py", line 43, in test_supported_negation_does_not_hide_a_later_absence_claim
+    self.assertTrue(check_prose({'explanation_ko':text},result)['prose_evidence_presence_consistent'])
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_unknown_or_tampered_context_does_not_invent_period_diagnostics (test_explanation_contract.OutputContractTests.test_unknown_or_tampered_context_does_not_invent_period_diagnostics)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_explanation_contract.py", line 76, in test_unknown_or_tampered_context_does_not_invent_period_diagnostics
+    self.assertEqual(basis.get('failed_conditions'),[])
+AssertionError: None != []
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.011s
+
+FAILED (failures=7)

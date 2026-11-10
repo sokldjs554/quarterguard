@@ -1,0 +1,633 @@
+{
+  "mode": "saved_v6_responses_with_current_validator_and_payload_builder",
+  "model_calls": 0,
+  "pdf_calls": 0,
+  "mcp_calls": 0,
+  "new_human_review": false,
+  "source": "artifacts/llm-prose-v6-20261110/report.json",
+  "source_sha256": "2442f6231ef3d4418b4b42224079be8a336c5d579dd8fd687538d414f74ac06a",
+  "current_code_sha256": {
+    "quarterguard/core.py": "9e80d901f6bdb2f40a7a9061af2c9fbf0f0d7b1c47acb54281451fc5bb6bfe22",
+    "quarterguard/explanation_context.py": "b849a1aff699d65bea09709df099490fe7c8b0198b26ec6ac1fb8a8e90aed466",
+    "quarterguard/explanation_guards.py": "fb70bf7b569f13ca47a92671f20ff9fcf2a03aadcbae6c459b08cd4302815e00",
+    "quarterguard/public_providers.py": "820c1e96ae59432ddbb2d7bf5bf4caeb21819084fcd33e575f84fa5400378371"
+  },
+  "cohorts": {
+    "paired_development": {
+      "total": 8,
+      "historical_product_passed": 3,
+      "current_replay_passed": 3,
+      "structured_value_failures": 5
+    },
+    "new_tasks_known_documents": {
+      "total": 8,
+      "historical_product_passed": 4,
+      "current_replay_passed": 5,
+      "structured_value_failures": 3
+    }
+  },
+  "records": [
+    {
+      "case_id": "normal-qoq",
+      "cohort": "paired_development",
+      "historical_checks": {
+        "status_exact": true,
+        "value_exact": false,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_checks": {
+        "status_exact": true,
+        "value_exact": false,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_passed": false,
+      "raw_value": "6.7916%",
+      "next_request_allowed_value": [
+        "6.7916"
+      ],
+      "decision_basis": []
+    },
+    {
+      "case_id": "normal-yoy",
+      "cohort": "paired_development",
+      "historical_checks": {
+        "status_exact": true,
+        "value_exact": false,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_checks": {
+        "status_exact": true,
+        "value_exact": false,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_passed": false,
+      "raw_value": "17.3491%",
+      "next_request_allowed_value": [
+        "17.3491"
+      ],
+      "decision_basis": []
+    },
+    {
+      "case_id": "period-mismatch",
+      "cohort": "paired_development",
+      "historical_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_passed": true,
+      "raw_value": null,
+      "next_request_allowed_value": [
+        null
+      ],
+      "decision_basis": [
+        {
+          "code": "PERIOD_MISMATCH",
+          "statement": "두 기간의 개월 수가 같지 않거나 완전한 월 단위 기간으로 확인되지 않습니다. 두 기간의 시작 월·일이 다릅니다. 계산을 보류합니다.",
+          "failed_conditions": [
+            "equal_months",
+            "yoy_start_month_day"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "scope-mismatch",
+      "cohort": "paired_development",
+      "historical_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_passed": true,
+      "raw_value": null,
+      "next_request_allowed_value": [
+        null
+      ],
+      "decision_basis": [
+        {
+          "code": "SCOPE_MISMATCH",
+          "statement": "연결·별도 범위가 달라 계산을 보류합니다. 양쪽 범위를 맞춘 뒤 다시 검증하세요."
+        }
+      ]
+    },
+    {
+      "case_id": "unit-draft",
+      "cohort": "paired_development",
+      "historical_checks": {
+        "status_exact": true,
+        "value_exact": false,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_checks": {
+        "status_exact": true,
+        "value_exact": false,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_passed": false,
+      "raw_value": "6.7916%",
+      "next_request_allowed_value": [
+        "6.7916"
+      ],
+      "decision_basis": []
+    },
+    {
+      "case_id": "no-evidence",
+      "cohort": "paired_development",
+      "historical_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_passed": true,
+      "raw_value": null,
+      "next_request_allowed_value": [
+        null
+      ],
+      "decision_basis": [
+        {
+          "code": "SEARCH_EMPTY",
+          "statement": "해당 검색 범위에서 근거를 확인할 수 없습니다."
+        }
+      ]
+    },
+    {
+      "case_id": "conflicting-number-draft",
+      "cohort": "paired_development",
+      "historical_checks": {
+        "status_exact": true,
+        "value_exact": false,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_checks": {
+        "status_exact": true,
+        "value_exact": false,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_passed": false,
+      "raw_value": "6.7916%",
+      "next_request_allowed_value": [
+        "6.7916"
+      ],
+      "decision_basis": []
+    },
+    {
+      "case_id": "citation-draft",
+      "cohort": "paired_development",
+      "historical_checks": {
+        "status_exact": true,
+        "value_exact": false,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_checks": {
+        "status_exact": true,
+        "value_exact": false,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_passed": false,
+      "raw_value": "6.7916%",
+      "next_request_allowed_value": [
+        "6.7916"
+      ],
+      "decision_basis": []
+    },
+    {
+      "case_id": "s22-op-yoy",
+      "cohort": "new_tasks_known_documents",
+      "historical_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_passed": true,
+      "raw_value": "-31.3923",
+      "next_request_allowed_value": [
+        "-31.3923"
+      ],
+      "decision_basis": []
+    },
+    {
+      "case_id": "s22-net-ytd-yoy",
+      "cohort": "new_tasks_known_documents",
+      "historical_checks": {
+        "status_exact": true,
+        "value_exact": false,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_checks": {
+        "status_exact": true,
+        "value_exact": false,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_passed": false,
+      "raw_value": "9.4364%",
+      "next_request_allowed_value": [
+        "9.4364"
+      ],
+      "decision_basis": []
+    },
+    {
+      "case_id": "s22-net-period",
+      "cohort": "new_tasks_known_documents",
+      "historical_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": false,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_passed": true,
+      "raw_value": null,
+      "next_request_allowed_value": [
+        null
+      ],
+      "decision_basis": [
+        {
+          "code": "PERIOD_MISMATCH",
+          "statement": "두 기간의 개월 수가 같지 않거나 완전한 월 단위 기간으로 확인되지 않습니다. 두 기간의 시작 월·일이 다릅니다. 계산을 보류합니다.",
+          "failed_conditions": [
+            "equal_months",
+            "yoy_start_month_day"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "s22-op-qoq",
+      "cohort": "new_tasks_known_documents",
+      "historical_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_passed": true,
+      "raw_value": null,
+      "next_request_allowed_value": [
+        null
+      ],
+      "decision_basis": [
+        {
+          "code": "PERIOD_MISMATCH",
+          "statement": "A 시작일이 B 종료일 다음 날이 아니므로 인접한 분기 관계가 아닙니다. 계산을 보류합니다.",
+          "failed_conditions": [
+            "qoq_adjacent"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "h25-op-yoy",
+      "cohort": "new_tasks_known_documents",
+      "historical_checks": {
+        "status_exact": true,
+        "value_exact": false,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_checks": {
+        "status_exact": true,
+        "value_exact": false,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_passed": false,
+      "raw_value": "-29.1445%",
+      "next_request_allowed_value": [
+        "-29.1445"
+      ],
+      "decision_basis": []
+    },
+    {
+      "case_id": "h25-net-yoy",
+      "cohort": "new_tasks_known_documents",
+      "historical_checks": {
+        "status_exact": true,
+        "value_exact": false,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_checks": {
+        "status_exact": true,
+        "value_exact": false,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_passed": false,
+      "raw_value": "-20.5146%",
+      "next_request_allowed_value": [
+        "-20.5146"
+      ],
+      "decision_basis": []
+    },
+    {
+      "case_id": "h25-op-period",
+      "cohort": "new_tasks_known_documents",
+      "historical_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_passed": true,
+      "raw_value": null,
+      "next_request_allowed_value": [
+        null
+      ],
+      "decision_basis": [
+        {
+          "code": "PERIOD_MISMATCH",
+          "statement": "두 기간의 개월 수가 같지 않거나 완전한 월 단위 기간으로 확인되지 않습니다. 두 기간의 시작 월·일이 다릅니다. 계산을 보류합니다.",
+          "failed_conditions": [
+            "equal_months",
+            "yoy_start_month_day"
+          ]
+        }
+      ]
+    },
+    {
+      "case_id": "cross-company-period",
+      "cohort": "new_tasks_known_documents",
+      "historical_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "schema_keys_exact": true
+      },
+      "replay_passed": true,
+      "raw_value": null,
+      "next_request_allowed_value": [
+        null
+      ],
+      "decision_basis": [
+        {
+          "code": "COMPANY_MISMATCH",
+          "statement": "확인 필요: 도구가 COMPANY_MISMATCH 문제를 보고했습니다."
+        },
+        {
+          "code": "PERIOD_MISMATCH",
+          "statement": "A 종료 연도가 B 종료 연도의 바로 다음 해가 아닙니다. 계산을 보류합니다.",
+          "failed_conditions": [
+            "yoy_year"
+          ]
+        }
+      ]
+    }
+  ],
+  "limits": "Development replay on disclosed failures. Schema acceptance by hosted API and new model prose are untested; historical human verdicts and outputs unchanged."
+}

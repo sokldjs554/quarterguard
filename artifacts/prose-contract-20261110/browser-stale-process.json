@@ -1,0 +1,8 @@
+{
+  "failure": "latest browser assertion expected v6 검수 후 코드 보완; stale local server returned previous summary",
+  "old_server_revision": "v6-human-reviewed",
+  "new_server_revision": "v6-contract-offline-fix",
+  "resolution": "started a fresh local process after summary module changed; no production logic change",
+  "failed_check": "390px initial latest summary text assertion",
+  "old_attempt_directory": "work/contract-latest-browser"
+}
