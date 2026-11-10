@@ -1,0 +1,98 @@
+{
+  "scope": "Only five approved follow-up batches v3-v7; excludes historical GPT4 calls, DART, hosting, tax and currency conversion. Not an account-wide usage/billing audit.",
+  "batches": [
+    {
+      "version": "v3",
+      "calls": 8,
+      "generated": 8,
+      "structured_exact": 8,
+      "human_counts": {
+        "참": 5,
+        "모호": 3,
+        "거짓": 0
+      },
+      "estimated_usd": "0.00904800",
+      "billed_usd": null,
+      "report": "artifacts/llm-live-20261109/report.json",
+      "report_sha256": "deff2dc025fef8f469c34ecf4a725cadddd29f90b02ab67cdb6500fd750b343d",
+      "human_record": "artifacts/human-review-followup-20261110/review.json",
+      "human_sha256": "1b81260bb86308f14af2394c0a22dadf8d49f7b2550f8930c6a3610e30c2d00c"
+    },
+    {
+      "version": "v4",
+      "calls": 8,
+      "generated": 8,
+      "structured_exact": 7,
+      "human_counts": {
+        "참": 7,
+        "모호": 1,
+        "거짓": 0
+      },
+      "estimated_usd": "0.01388925",
+      "billed_usd": null,
+      "report": "artifacts/llm-followup-20261110/report.json",
+      "report_sha256": "dda93cbb8acbedacb11bc07e90606451fec29abeb89087e6d22035170ea9e65e",
+      "human_record": "artifacts/human-llm-followup-20261110/review.json",
+      "human_sha256": "3d5f05558410a2e6230cd27842da9f4ac597d2261adae811a139a38fdb64b298"
+    },
+    {
+      "version": "v5",
+      "calls": 8,
+      "generated": 8,
+      "structured_exact": 8,
+      "human_counts": {
+        "참": 6,
+        "모호": 1,
+        "거짓": 1
+      },
+      "estimated_usd": "0.01510425",
+      "billed_usd": null,
+      "report": "artifacts/llm-guards-v5-20261110/report.json",
+      "report_sha256": "0368259c4f6a6e9ae0b83aebc5d39bbf82c8dd1720d7491b62c1d7e18add7f96",
+      "human_record": "artifacts/human-guards-v5-20261110/review.json",
+      "human_sha256": "2d3a1568ebbfccf9e1a9fd1d6c2e912a37788c0c00a4cfa2aff2870d8ebe6a5a"
+    },
+    {
+      "version": "v6",
+      "calls": 16,
+      "generated": 16,
+      "structured_exact": 8,
+      "human_counts": {
+        "참": 15,
+        "모호": 1,
+        "거짓": 0
+      },
+      "estimated_usd": "0.03177450",
+      "billed_usd": null,
+      "report": "artifacts/llm-prose-v6-20261110/report.json",
+      "report_sha256": "2442f6231ef3d4418b4b42224079be8a336c5d579dd8fd687538d414f74ac06a",
+      "human_record": "artifacts/human-prose-v6-20261110/review.json",
+      "human_sha256": "e0a24b80ce6b177e561e4392a4cda000233efec878ae98f12a42513e6fc501d5"
+    },
+    {
+      "version": "v7",
+      "calls": 16,
+      "generated": 16,
+      "structured_exact": 16,
+      "human_counts": {
+        "참": 15,
+        "모호": 1,
+        "거짓": 0
+      },
+      "estimated_usd": "0.03265800",
+      "billed_usd": null,
+      "report": "artifacts/llm-prose-v7-20261110/report.json",
+      "report_sha256": "9bd8dd365e1ab79730074a25c3ddc1caff260b635e18820f320789c85091207d",
+      "human_record": "artifacts/human-prose-v7-20261110/review.json",
+      "human_sha256": "69b41bd253f42b6b1ed1c098d3a71c8bcc794b558103377515b26a1cb5b7aca7"
+    }
+  ],
+  "calls": 56,
+  "estimated_usd": "0.10247400",
+  "billed_usd": null,
+  "new_calls_this_documentation_work": 0,
+  "external_people": 2,
+  "finance_reviewers": 1,
+  "latest_requested_generation_and_b_review": "completed_v7",
+  "subsequent_author_code_fix": "integrated_and_locally_verified; no additional generation or human review claimed"
+}

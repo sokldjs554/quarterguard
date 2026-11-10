@@ -1,0 +1,12 @@
+{
+  "README.md": {
+    "archive": "artifacts/application-ready-20261110/README.before-consolidation.md",
+    "sha256": "8753df5c6af605ae7856e8d27de7712f66fba77d831d8c620e9982f8b40bf9f1",
+    "source_commit": "a2df3950916d6629eb153bfff7cfd48d1fbb8d6e"
+  },
+  "docs/application-summary-20261109.md": {
+    "archive": "artifacts/application-ready-20261110/application-summary.before-consolidation.md",
+    "sha256": "f3696905bbcec90898d2a156e750a7555416d32021b115588729fe149aa4aa7a",
+    "source_commit": "a2df3950916d6629eb153bfff7cfd48d1fbb8d6e"
+  }
+}
