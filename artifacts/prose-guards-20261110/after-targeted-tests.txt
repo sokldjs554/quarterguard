@@ -1,0 +1,13 @@
+test_authored_corrected_phrases_pass_without_rewriting (test_explanation_prose_guards.ProseGuardTests.test_authored_corrected_phrases_pass_without_rewriting) ... ok
+test_cache_fingerprint_includes_prose_validator (test_explanation_prose_guards.ProseGuardTests.test_cache_fingerprint_includes_prose_validator) ... ok
+test_evidence_present_rejects_v5_search_absence_tail (test_explanation_prose_guards.ProseGuardTests.test_evidence_present_rejects_v5_search_absence_tail) ... ok
+test_failed_prose_is_not_returned_or_cached_and_previous_cache_not_reused (test_explanation_prose_guards.ProseGuardTests.test_failed_prose_is_not_returned_or_cached_and_previous_cache_not_reused) ... ok
+test_internal_review_phrase_is_rejected_even_when_no_evidence_is_correct (test_explanation_prose_guards.ProseGuardTests.test_internal_review_phrase_is_rejected_even_when_no_evidence_is_correct) ... ok
+test_multiple_documents_reject_v5_same_report_claim (test_explanation_prose_guards.ProseGuardTests.test_multiple_documents_reject_v5_same_report_claim) ... ok
+test_percent_missing_is_rejected_independently_of_document_error (test_explanation_prose_guards.ProseGuardTests.test_percent_missing_is_rejected_independently_of_document_error) ... ok
+test_same_document_yoy_and_other_v5_prose_are_not_blocked (test_explanation_prose_guards.ProseGuardTests.test_same_document_yoy_and_other_v5_prose_are_not_blocked) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.033s
+
+OK

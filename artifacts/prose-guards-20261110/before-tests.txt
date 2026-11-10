@@ -1,0 +1,101 @@
+test_authored_corrected_phrases_pass_without_rewriting (test_explanation_prose_guards.ProseGuardTests.test_authored_corrected_phrases_pass_without_rewriting) ... ok
+test_cache_fingerprint_includes_prose_validator (test_explanation_prose_guards.ProseGuardTests.test_cache_fingerprint_includes_prose_validator) ... FAIL
+test_evidence_present_rejects_v5_search_absence_tail (test_explanation_prose_guards.ProseGuardTests.test_evidence_present_rejects_v5_search_absence_tail) ... FAIL
+test_failed_prose_is_not_returned_or_cached_and_previous_cache_not_reused (test_explanation_prose_guards.ProseGuardTests.test_failed_prose_is_not_returned_or_cached_and_previous_cache_not_reused) ... FAIL
+test_internal_review_phrase_is_rejected_even_when_no_evidence_is_correct (test_explanation_prose_guards.ProseGuardTests.test_internal_review_phrase_is_rejected_even_when_no_evidence_is_correct) ... FAIL
+test_multiple_documents_reject_v5_same_report_claim (test_explanation_prose_guards.ProseGuardTests.test_multiple_documents_reject_v5_same_report_claim) ... FAIL
+test_percent_missing_is_rejected_independently_of_document_error (test_explanation_prose_guards.ProseGuardTests.test_percent_missing_is_rejected_independently_of_document_error) ... 
+  test_percent_missing_is_rejected_independently_of_document_error (test_explanation_prose_guards.ProseGuardTests.test_percent_missing_is_rejected_independently_of_document_error) (text='매출 증가율은 6.7916입니다.') ... FAIL
+  test_percent_missing_is_rejected_independently_of_document_error (test_explanation_prose_guards.ProseGuardTests.test_percent_missing_is_rejected_independently_of_document_error) (text='매출 증가율은 6.79입니다.') ... FAIL
+  test_percent_missing_is_rejected_independently_of_document_error (test_explanation_prose_guards.ProseGuardTests.test_percent_missing_is_rejected_independently_of_document_error) (text='증가율은 6.7916%입니다. 다시 쓰면 6.7916입니다.') ... FAIL
+test_same_document_yoy_and_other_v5_prose_are_not_blocked (test_explanation_prose_guards.ProseGuardTests.test_same_document_yoy_and_other_v5_prose_are_not_blocked) ... ok
+
+======================================================================
+FAIL: test_cache_fingerprint_includes_prose_validator (test_explanation_prose_guards.ProseGuardTests.test_cache_fingerprint_includes_prose_validator)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_explanation_prose_guards.py", line 118, in test_cache_fingerprint_includes_prose_validator
+    self.assertNotEqual(before, pp.verification_version())
+AssertionError: 'a51c21c26546552e416efa2b59f351a831dc009af1cf033c0f6e0cad683a1d65' == 'a51c21c26546552e416efa2b59f351a831dc009af1cf033c0f6e0cad683a1d65'
+
+======================================================================
+FAIL: test_evidence_present_rejects_v5_search_absence_tail (test_explanation_prose_guards.ProseGuardTests.test_evidence_present_rejects_v5_search_absence_tail)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_explanation_prose_guards.py", line 43, in test_evidence_present_rejects_v5_search_absence_tail
+    self.rejected('period-mismatch', 'prose_evidence_presence_consistent')
+  File "/workspace/quarterguard/tests/test_explanation_prose_guards.py", line 36, in rejected
+    with self.assertRaises(pp.ExplanationRejected) as error:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ExplanationRejected not raised
+
+======================================================================
+FAIL: test_failed_prose_is_not_returned_or_cached_and_previous_cache_not_reused (test_explanation_prose_guards.ProseGuardTests.test_failed_prose_is_not_returned_or_cached_and_previous_cache_not_reused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_explanation_prose_guards.py", line 104, in test_failed_prose_is_not_returned_or_cached_and_previous_cache_not_reused
+    self.assertEqual(result['status'], 'failed')
+AssertionError: 'succeeded' != 'failed'
+- succeeded
++ failed
+
+
+======================================================================
+FAIL: test_internal_review_phrase_is_rejected_even_when_no_evidence_is_correct (test_explanation_prose_guards.ProseGuardTests.test_internal_review_phrase_is_rejected_even_when_no_evidence_is_correct)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_explanation_prose_guards.py", line 55, in test_internal_review_phrase_is_rejected_even_when_no_evidence_is_correct
+    self.rejected('no-evidence', 'prose_review_language_localized')
+  File "/workspace/quarterguard/tests/test_explanation_prose_guards.py", line 36, in rejected
+    with self.assertRaises(pp.ExplanationRejected) as error:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ExplanationRejected not raised
+
+======================================================================
+FAIL: test_multiple_documents_reject_v5_same_report_claim (test_explanation_prose_guards.ProseGuardTests.test_multiple_documents_reject_v5_same_report_claim)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_explanation_prose_guards.py", line 46, in test_multiple_documents_reject_v5_same_report_claim
+    self.rejected('citation-draft', 'prose_document_reference_unambiguous')
+  File "/workspace/quarterguard/tests/test_explanation_prose_guards.py", line 36, in rejected
+    with self.assertRaises(pp.ExplanationRejected) as error:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ExplanationRejected not raised
+
+======================================================================
+FAIL: test_percent_missing_is_rejected_independently_of_document_error (test_explanation_prose_guards.ProseGuardTests.test_percent_missing_is_rejected_independently_of_document_error) (text='매출 증가율은 6.7916입니다.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_explanation_prose_guards.py", line 52, in test_percent_missing_is_rejected_independently_of_document_error
+    self.rejected('normal-qoq', 'prose_rate_unit_explicit', text)
+  File "/workspace/quarterguard/tests/test_explanation_prose_guards.py", line 36, in rejected
+    with self.assertRaises(pp.ExplanationRejected) as error:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ExplanationRejected not raised
+
+======================================================================
+FAIL: test_percent_missing_is_rejected_independently_of_document_error (test_explanation_prose_guards.ProseGuardTests.test_percent_missing_is_rejected_independently_of_document_error) (text='매출 증가율은 6.79입니다.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_explanation_prose_guards.py", line 52, in test_percent_missing_is_rejected_independently_of_document_error
+    self.rejected('normal-qoq', 'prose_rate_unit_explicit', text)
+  File "/workspace/quarterguard/tests/test_explanation_prose_guards.py", line 36, in rejected
+    with self.assertRaises(pp.ExplanationRejected) as error:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ExplanationRejected not raised
+
+======================================================================
+FAIL: test_percent_missing_is_rejected_independently_of_document_error (test_explanation_prose_guards.ProseGuardTests.test_percent_missing_is_rejected_independently_of_document_error) (text='증가율은 6.7916%입니다. 다시 쓰면 6.7916입니다.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard/tests/test_explanation_prose_guards.py", line 52, in test_percent_missing_is_rejected_independently_of_document_error
+    self.rejected('normal-qoq', 'prose_rate_unit_explicit', text)
+  File "/workspace/quarterguard/tests/test_explanation_prose_guards.py", line 36, in rejected
+    with self.assertRaises(pp.ExplanationRejected) as error:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ExplanationRejected not raised
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.032s
+
+FAILED (failures=8)

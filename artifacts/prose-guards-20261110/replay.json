@@ -1,0 +1,112 @@
+{
+  "mode": "offline_replay_of_disclosed_v5_model_outputs",
+  "source": "artifacts/llm-guards-v5-20261110/report.json",
+  "source_sha256": "0368259c4f6a6e9ae0b83aebc5d39bbf82c8dd1720d7491b62c1d7e18add7f96",
+  "development_cases": true,
+  "heldout": false,
+  "new_model_calls": 0,
+  "new_pdf_or_mcp_runs": 0,
+  "new_human_reviews": 0,
+  "previous_gate_passed": 8,
+  "current_gate_passed": 5,
+  "semantic_accuracy": null,
+  "note": "Withholding previously accepted prose is a guard change, not better model generation. Existing b verdicts remain unchanged; no-evidence is still human-labelled true.",
+  "records": [
+    {
+      "case_id": "normal-qoq",
+      "original_text": "2024년 3분기 연결 매출의 전분기 대비 증감률은 6.7916%입니다. Samsung Electronics 2024 3Q Interim Business Report, PDF p.34의 Revenue / 2024 Q KRW는 79,098,731 백만 원입니다. Samsung Electronics 2024 Half-year Business Report, PDF p.48의 Revenue / 2024 Q KRW는 74,068,302 백만 원입니다. 두 값은 모두 3개월 연결 기준입니다.",
+      "previous_structured_gate_passed": true,
+      "current_gate_passed": true,
+      "prose_checks": {
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      }
+    },
+    {
+      "case_id": "normal-yoy",
+      "original_text": "2024년 3분기 연결 매출의 전년 동분기 대비 증감률은 17.3491%입니다. Samsung Electronics 2024 3Q Interim Business Report, PDF p.34에서 2024-07-01 ~ 2024-09-30 연결 매출은 79,098,731 백만 원입니다. 같은 보고서 PDF p.34에서 2023-07-01 ~ 2023-09-30 연결 매출은 67,404,652 백만 원입니다.",
+      "previous_structured_gate_passed": true,
+      "current_gate_passed": true,
+      "prose_checks": {
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      }
+    },
+    {
+      "case_id": "period-mismatch",
+      "original_text": "계산 보류입니다. 기간 조건이 맞지 않습니다. 비교 대상은 2024-01-01~2024-09-30의 9개월 누적 매출과 2023-07-01~2023-09-30의 3개월 매출입니다. 둘 다 연결(CFS) 기준입니다. 이 차이 때문에 성장률을 확정할 수 없습니다. 근거 문서는 Samsung Electronics 2024 3Q Interim Business Report이며, PDF 34쪽의 Revenue / 2024 YTD KRW와 Revenue / 2023 Q KRW입니다. 해당 검색 범위에서 확인할 수 없습니다.",
+      "previous_structured_gate_passed": true,
+      "current_gate_passed": false,
+      "prose_checks": {
+        "prose_evidence_presence_consistent": false,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      }
+    },
+    {
+      "case_id": "scope-mismatch",
+      "original_text": "계산 보류입니다. 연결·별도 범위가 달라 비교를 검증할 수 없습니다. 다른 분기라는 사실만으로는 보류 사유가 아닙니다. 근거: Samsung Electronics 2024 3Q Interim Business Report, PDF p.34, Revenue / 2024 Q KRW. 79,098,731 백만 원 · 통화 KRW · 2024-07-01 ~ 2024-09-30 · 3개월 · 연결. 근거: Samsung Electronics 2024 Half-year Business Report, PDF p.104, Revenue / 2024 Q KRW. 53,734,118 백만 원 · 통화 KRW · 2024-04-01 ~ 2024-06-30 · 3개월 · 별도.",
+      "previous_structured_gate_passed": true,
+      "current_gate_passed": true,
+      "prose_checks": {
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      }
+    },
+    {
+      "case_id": "unit-draft",
+      "original_text": "매출 증가율은 6.7916%입니다. 비교는 연결재무제표(CFS) 기준의 분기 매출입니다. 2024-07-01~2024-09-30 3개월 매출은 79,098,731 백만 원입니다. 근거 문서는 Samsung Electronics 2024 3Q Interim Business Report, PDF p.34의 Revenue / 2024 Q KRW입니다. 2024-04-01~2024-06-30 3개월 매출은 74,068,302 백만 원입니다. 근거 문서는 Samsung Electronics 2024 Half-year Business Report, PDF p.48의 Revenue / 2024 Q KRW입니다. 금액의 표시 단위는 백만 원입니다.",
+      "previous_structured_gate_passed": true,
+      "current_gate_passed": true,
+      "prose_checks": {
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      }
+    },
+    {
+      "case_id": "no-evidence",
+      "original_text": "해당 검색 범위에서 확인할 수 없습니다. 따라서 2025년 실적을 이 결과만으로는 확인할 수 없습니다. 기업의 실적 자체가 없다는 뜻은 아닙니다. 검색 조건과 수집 범위를 확인하세요. context needs review.",
+      "previous_structured_gate_passed": true,
+      "current_gate_passed": false,
+      "prose_checks": {
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": false
+      }
+    },
+    {
+      "case_id": "conflicting-number-draft",
+      "original_text": "연결 기준 매출 증가율은 6.7916%입니다. 2024년 3분기 연결 매출은 79,098,731 백만 원이며, Samsung Electronics 2024 3Q Interim Business Report의 PDF p.34에 있습니다. 2024년 2분기 연결 매출은 74,068,302 백만 원이며, Samsung Electronics 2024 Half-year Business Report의 PDF p.48에 있습니다. 두 분기 모두 3개월, 연결(CFS) 기준입니다.",
+      "previous_structured_gate_passed": true,
+      "current_gate_passed": true,
+      "prose_checks": {
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      }
+    },
+    {
+      "case_id": "citation-draft",
+      "original_text": "삼성전자 2024년 3분기 연결 매출은 79,098,731 백만 원입니다. 출처는 Samsung Electronics 2024 3Q Interim Business Report, PDF p.34입니다. 같은 보고서 기준 2024년 2분기 연결 매출은 74,068,302 백만 원입니다. 출처는 Samsung Electronics 2024 Half-year Business Report, PDF p.48입니다. 두 분기는 모두 3개월 연결 기준의 분기 실적입니다. 따라서 매출 증가율은 6.7916입니다.",
+      "previous_structured_gate_passed": true,
+      "current_gate_passed": false,
+      "prose_checks": {
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": false,
+        "prose_rate_unit_explicit": false,
+        "prose_review_language_localized": true
+      }
+    }
+  ]
+}

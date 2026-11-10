@@ -5,7 +5,7 @@ const targets={
  dart:{'s24q3-CFS':'2024년 3분기 · 연결','s24q3-OFS':'2024년 3분기 · 별도','s24q2-CFS':'2024년 반기 · 연결','s24q2-OFS':'2024년 반기 · 별도'},
  openai:{'qoq-revenue':'분기 매출 증감','ytd-trap':'누적·분기 혼동','no-evidence':'근거 부재','reconcile-revenue':'누적 차감 교차검증'}
 };
-const reasons={EXPLANATION_VALIDATION_REJECTED:'AI 응답의 수치·판정·근거 ID 검사 불일치 · 설명을 표시하지 않습니다',KEY_NOT_CONFIGURED:'API 키 미설정',PAID_APPROVAL_REQUIRED:'유료 호출 승인 미설정',DURABLE_LEDGER_REQUIRED:'재시작 후에도 유지되는 사용량 기록 필요',OPERATOR_DISABLED:'운영자가 호출 중지',LEDGER_UNAVAILABLE:'사용량 기록 연결 불가',QUOTA_EXHAUSTED:'공유 호출 한도 소진',COOLDOWN:'호출 간 대기 시간 미경과',BUSY_RETRY:'다른 검증 실행 중',MCP_FAILED:'선행 MCP 검증 실패',INPUT_TOO_LARGE:'입력 크기 제한 초과',UNKNOWN_TARGET:'지원하지 않는 대상',PROVIDER_SERVICE_UNAVAILABLE:'외부 검증 서비스 연결 불가',PROVIDER_REQUEST_FAILED_OR_VALIDATION_REJECTED:'외부 요청 실패 또는 응답 검증 불일치'};
+const reasons={EXPLANATION_VALIDATION_REJECTED:'AI 응답의 수치·판정·근거 ID 또는 설명 표현 검사 불일치 · 설명을 표시하지 않습니다',KEY_NOT_CONFIGURED:'API 키 미설정',PAID_APPROVAL_REQUIRED:'유료 호출 승인 미설정',DURABLE_LEDGER_REQUIRED:'재시작 후에도 유지되는 사용량 기록 필요',OPERATOR_DISABLED:'운영자가 호출 중지',LEDGER_UNAVAILABLE:'사용량 기록 연결 불가',QUOTA_EXHAUSTED:'공유 호출 한도 소진',COOLDOWN:'호출 간 대기 시간 미경과',BUSY_RETRY:'다른 검증 실행 중',MCP_FAILED:'선행 MCP 검증 실패',INPUT_TOO_LARGE:'입력 크기 제한 초과',UNKNOWN_TARGET:'지원하지 않는 대상',PROVIDER_SERVICE_UNAVAILABLE:'외부 검증 서비스 연결 불가',PROVIDER_REQUEST_FAILED_OR_VALIDATION_REJECTED:'외부 요청 실패 또는 응답 검증 불일치'};
 const reason=x=>reasons[x]||String(x);
 const time=x=>x&&Number.isFinite(Date.parse(x))?localTime(x):'기록 없음';
 const number=x=>Number.isFinite(x)?String(x):'확인 불가';
