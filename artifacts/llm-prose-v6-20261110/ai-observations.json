@@ -1,0 +1,36 @@
+{
+  "actor": "AI source/response inspection, not b or human adjudication",
+  "human_verdicts_created": false,
+  "structured_value_percent_suffix_cases": [
+    "normal-qoq",
+    "normal-yoy",
+    "unit-draft",
+    "conflicting-number-draft",
+    "citation-draft",
+    "s22-net-ytd-yoy",
+    "h25-op-yoy",
+    "h25-net-yoy"
+  ],
+  "structured_citations_exact": 16,
+  "negation_guard_case": {
+    "case_id": "s22-net-period",
+    "text": "근거가 없는 것은 아닙니다. 해당 항목들의 근거는 있지만, 기간이 달라 비교가 제한됩니다.",
+    "failed_check": "prose_evidence_presence_consistent",
+    "interpretation": "Observed match inside negation; candidate over-rejection, requires human review. No rule/label changed after the run."
+  },
+  "latency_ms": {
+    "paired_development": {
+      "median": 1975.413,
+      "min": 1559.947,
+      "max": 2830.404
+    },
+    "new_tasks_known_documents": {
+      "median": 1870.7800000000002,
+      "min": 1297.532,
+      "max": 2208.981
+    }
+  },
+  "paired_prose_patterns_no_flags": 8,
+  "causal_limitation": "The every-rate-percent instruction may have affected JSON value, but this single batch does not isolate causality.",
+  "no_overall_improvement_claim": true
+}

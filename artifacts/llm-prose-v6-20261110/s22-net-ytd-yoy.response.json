@@ -1,0 +1,11 @@
+{
+  "id": "resp_024f79258658830c016af2deb5666887d18175f687e492731b",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1548,
+    "output_tokens": 185,
+    "total_tokens": 1733
+  },
+  "output_text": "{\"status\":\"verified\",\"value\":\"9.4364%\",\"issues\":[],\"evidence_ids\":[\"s22q3-CFS-net_profit-2022-ytd-KRW\",\"s22q3-CFS-net_profit-2021-ytd-KRW\"],\"explanation_ko\":\"2022년 9개월 누적 연결 당기순이익은 31,812,631 백만 원입니다. 2021년 9개월 누적 연결 당기순이익은 29,069,502 백만 원입니다. 전년 동기 증감률은 9.4364%입니다. 근거는 Samsung Electronics 2022 Q3 Interim Report의 PDF p.37입니다. 같은 페이지의 Profit for the period 항목에서 2022 YTD KRW와 2021 YTD KRW가 확인됩니다.\"}"
+}

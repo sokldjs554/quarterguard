@@ -10,6 +10,19 @@ from quarterguard.store import ROOT
 
 
 class LatestProgressTests(unittest.TestCase):
+    def test_v6_regression_and_new_cohort_are_separate_from_v5_human_labels(self):
+        summary=TestClient(app).get('/api/evaluation/latest').json()['summary']
+        batch=summary['llm'].get('prose_batch')
+        self.assertIsNotNone(batch)
+        self.assertEqual(batch['calls'],16)
+        self.assertEqual(batch['paired']['structured_exact'],3)
+        self.assertEqual(batch['new_tasks']['structured_exact'],5)
+        self.assertEqual(batch['new_tasks']['production_gate_passed'],4)
+        self.assertFalse(batch['human_reviewed'])
+        self.assertEqual(batch['estimated_cost_usd'],'0.03177450')
+        self.assertEqual(summary['llm']['latest_guard_batch']['human_verdict_counts'],{'참':6,'모호':1,'거짓':1})
+        self.assertEqual(summary['participants']['unique_external_people'],2)
+
     def test_latest_is_separate_from_unchanged_historical_snapshot(self):
         c=TestClient(app)
         historical=c.get('/api/evaluation/current/progress').json()
