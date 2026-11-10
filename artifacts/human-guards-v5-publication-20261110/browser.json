@@ -1,0 +1,21 @@
+{
+  "mode": "local_HTTP_real_summary_API_with_injected_read_failures",
+  "checks_passed": 10,
+  "checks": [
+    "390:current_evidence_and_limits_separate_from_closed_history",
+    "390:original_history_and_failures_still_available",
+    "390:latest_failure_never_falls_back_to_old_summary",
+    "390:latest_retry_recovers_without_stale_error",
+    "390:historical_failure_does_not_hide_current_evidence",
+    "1440:current_evidence_and_limits_separate_from_closed_history",
+    "1440:original_history_and_failures_still_available",
+    "1440:latest_failure_never_falls_back_to_old_summary",
+    "1440:latest_retry_recovers_without_stale_error",
+    "1440:historical_failure_does_not_hide_current_evidence"
+  ],
+  "page_errors": [],
+  "provider_calls": 0,
+  "new_human_review": false,
+  "physical_mobile": false,
+  "direct_public_HTTPS": false
+}

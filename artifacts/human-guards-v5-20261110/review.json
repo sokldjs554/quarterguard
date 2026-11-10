@@ -1,0 +1,81 @@
+{
+  "source": "user supplied latest table; punctuation formatting normalized, verdicts preserved",
+  "response_report": "artifacts/llm-guards-v5-20261110/report.json",
+  "workflow_run_id": 42674807948,
+  "reviewer": "b",
+  "reviewed_at": "2026-11-10T16:43:00+09:00",
+  "environment": null,
+  "assistance": "none_reported_by_participant_via_user",
+  "publication_confirmed": {
+    "github": true,
+    "application": true,
+    "scope": "this supplied eight-case review"
+  },
+  "reported_counts": {
+    "참": 6,
+    "모호": 1,
+    "거짓": 1
+  },
+  "citation_ids_reported_matching": 8,
+  "previous_batch_reported_counts": {
+    "참": 7,
+    "모호": 1,
+    "거짓": 0
+  },
+  "records": [
+    {
+      "case_id": "normal-qoq",
+      "reported_verdict": "참",
+      "citation_id_verdict": "일치",
+      "reason": "두 분기 연결매출 79,098,731·74,068,302백만 원과 전분기 증가율 6.7916%가 맞습니다."
+    },
+    {
+      "case_id": "normal-yoy",
+      "reported_verdict": "참",
+      "citation_id_verdict": "일치",
+      "reason": "2024·2023년 3분기 금액과 전년 동분기 증가율 17.3491%가 맞습니다. 직전 배치에 있던 2023년 근거 ID의 KKR 오타도 이번 응답에서는 KRW로 반환됐습니다."
+    },
+    {
+      "case_id": "period-mismatch",
+      "reported_verdict": "모호",
+      "citation_id_verdict": "일치",
+      "reason": "9개월 누적과 3개월 매출을 비교해 계산을 보류한 이유는 맞습니다. 그러나 마지막의 “해당 검색 범위에서 확인할 수 없습니다”는 앞에서 두 근거를 제시한 뒤 무엇을 확인하지 못했다는 것인지 불분명합니다. 근거 자체를 찾지 못한 것으로 오해할 수 있습니다."
+    },
+    {
+      "case_id": "scope-mismatch",
+      "reported_verdict": "참",
+      "citation_id_verdict": "일치",
+      "reason": "연결매출과 별도매출의 범위 차이를 보류 이유로 제시했고, 다른 분기라는 사실만으로 보류하지 않는다고 명확히 설명했습니다. 금액·기간·단위도 맞습니다."
+    },
+    {
+      "case_id": "unit-draft",
+      "reported_verdict": "참",
+      "citation_id_verdict": "일치",
+      "reason": "두 분기의 연결매출과 증가율이 맞고 금액을 백만 원 단위로 표시했습니다."
+    },
+    {
+      "case_id": "no-evidence",
+      "reported_verdict": "참",
+      "citation_id_verdict": "빈 목록 일치",
+      "reason": "해당 검색 범위에서 실적을 확인하지 못했다는 뜻이며, 기업의 실적 자체가 없다는 뜻은 아니라고 설명했습니다. 끝의 context needs review는 사용자에게 뜻을 풀어 쓰는 편이 좋습니다."
+    },
+    {
+      "case_id": "conflicting-number-draft",
+      "reported_verdict": "참",
+      "citation_id_verdict": "일치",
+      "reason": "두 분기의 금액과 증가율이 맞고 각각의 보고서·페이지가 제시돼 있습니다."
+    },
+    {
+      "case_id": "citation-draft",
+      "reported_verdict": "거짓",
+      "citation_id_verdict": "일치",
+      "reason": "2분기 매출을 “같은 보고서 기준”이라고 했지만, 실제 근거는 앞 문장의 3분기 보고서가 아니라 반기 보고서입니다. 마지막 증가율 6.7916에는 %도 빠졌습니다. 금액 자체는 맞습니다."
+    }
+  ],
+  "new_provider_calls": 0,
+  "status": "confirmed_participant_report",
+  "time_basis": "User supplied 11/10 오후4시43분; year2026 and KST from conversation context. Start/end and duration not supplied.",
+  "participant_relationship": "same finance-domain friend b; not a new participant or company-authorized review",
+  "response_report_sha256": "0368259c4f6a6e9ae0b83aebc5d39bbf82c8dd1720d7491b62c1d7e18add7f96",
+  "semantic_certified": false
+}
