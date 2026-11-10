@@ -30,6 +30,8 @@ with sync_playwright() as pw:
   expect(current).to_contain_text('7/8 → 8/8')
   expect(current).to_contain_text('참 6·모호 1·거짓 1')
   expect(current).to_contain_text('전체 설명의 개선으로 해석하지 않습니다')
+  expect(current).to_contain_text('v6 검수 후 코드 보완')
+  expect(current).to_contain_text('새 모델 호출 0회·새 사람 검수 0건')
   expect(current).to_contain_text('v6 새 16회')
   expect(current).to_contain_text('8/8 → 3/8')
   expect(current).to_contain_text('새 과제: 구조 5/8, 제품 검사 4/8')

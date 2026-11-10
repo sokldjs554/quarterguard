@@ -64,6 +64,8 @@ def status():
 
 def build_payload(result, title):
     schema=copy.deepcopy(SCHEMA)
+    # Constrain the copy at generation time too; do not normalize bad outputs.
+    schema['properties']['value']['enum']=[result.get('growth_pct', result.get('derived_value'))]
     ids=[fact['id'] for fact in result.get('evidence', [])]
     field=schema['properties']['evidence_ids']
     field.update(minItems=len(ids), maxItems=len(ids))

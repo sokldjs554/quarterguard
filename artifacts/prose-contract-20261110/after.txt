@@ -1,0 +1,12 @@
+test_disclosed_negation_passes_without_changing_original_text (test_explanation_contract.OutputContractTests.test_disclosed_negation_passes_without_changing_original_text) ... ok
+test_duration_and_yoy_failures_are_distinguished (test_explanation_contract.OutputContractTests.test_duration_and_yoy_failures_are_distinguished) ... ok
+test_eight_archived_percent_values_still_fail_exact_validation (test_explanation_contract.OutputContractTests.test_eight_archived_percent_values_still_fail_exact_validation) ... ok
+test_payload_permits_only_exact_tool_value_including_null_and_derived (test_explanation_contract.OutputContractTests.test_payload_permits_only_exact_tool_value_including_null_and_derived) ... ok
+test_qoq_reports_date_adjacency_not_equal_months_as_failure (test_explanation_contract.OutputContractTests.test_qoq_reports_date_adjacency_not_equal_months_as_failure) ... ok
+test_supported_negation_does_not_hide_a_later_absence_claim (test_explanation_contract.OutputContractTests.test_supported_negation_does_not_hide_a_later_absence_claim) ... ok
+test_unknown_or_tampered_context_does_not_invent_period_diagnostics (test_explanation_contract.OutputContractTests.test_unknown_or_tampered_context_does_not_invent_period_diagnostics) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.012s
+
+OK

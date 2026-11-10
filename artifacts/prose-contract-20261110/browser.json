@@ -1,0 +1,23 @@
+{
+  "mode": "local_HTTP_archived_v6_with_intercepted_provider_routes",
+  "checks": [
+    "390:negation_passes_original_text_unchanged",
+    "390:percent_value_rejection_clears_previous_text_and_context",
+    "390:specific_context_with_unchanged_ambiguous_model_text",
+    "390:viewport_fits",
+    "390:target_change_clears_result",
+    "1440:negation_passes_original_text_unchanged",
+    "1440:percent_value_rejection_clears_previous_text_and_context",
+    "1440:specific_context_with_unchanged_ambiguous_model_text",
+    "1440:viewport_fits",
+    "1440:target_change_clears_result"
+  ],
+  "checks_passed": 10,
+  "page_errors": [],
+  "intercepted_posts": 6,
+  "actual_external_calls": 0,
+  "new_model_responses": 0,
+  "new_human_reviews": 0,
+  "physical_mobile": false,
+  "direct_public_HTTPS": false
+}

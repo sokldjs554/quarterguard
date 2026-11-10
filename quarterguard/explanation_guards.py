@@ -10,10 +10,14 @@ def check_prose(answer, result):
     text = str(answer.get('explanation_ko', ''))
     evidence = result.get('evidence') or []
     documents = {f.get('document_id') for f in evidence if f.get('document_id')}
-    # Even a qualified/negated reuse can be ambiguous: request explicit wording.
-    absence = re.search(
+    # Permit only two complete declarative negations of absence. Check every
+    # other occurrence separately, so a safe prefix cannot hide a contradiction.
+    absence_pattern = re.compile(
         r'(?:검색|수집)\s*범위[^.!?\n]{0,60}(?:확인|찾)[^.!?\n]{0,20}수\s*없'
-        r'|(?:근거|검색\s*결과)(?:가|를|는)?\s*(?:없|찾지\s*못)', text)
+        r'|(?:근거|검색\s*결과)(?:가|를|는)?\s*(?:없|찾지\s*못)')
+    absence = any(not (match.group().endswith('없') and re.match(
+        r'(?:는\s*것은|다는\s*뜻은)\s*아닙니다(?=$|[.!。\n])', text[match.end():]))
+        for match in absence_pattern.finditer(text))
     same_document = re.search(
         r'(?:같은|동일한?)\s*(?:보고서|문서)|\bsame\s+(?:report|document)\b', text, re.I)
     internal = re.search(r'\bcontext\s+needs\s+review\b|\bneeds_review\b', text, re.I)
