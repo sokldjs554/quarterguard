@@ -1,0 +1,11 @@
+{
+  "id": "resp_0923ecb411c31e55016af31e24ff5c87d1a56b3618ca32841f",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1720,
+    "output_tokens": 169,
+    "total_tokens": 1889
+  },
+  "output_text": "{\"status\":\"needs_review\",\"value\":null,\"issues\":[\"PERIOD_MISMATCH\"],\"evidence_ids\":[\"s22q3-CFS-net_profit-2022-q-KRW\",\"s22q3-CFS-net_profit-2021-ytd-KRW\"],\"explanation_ko\":\"비교가 보류되었습니다. 두 기간의 개월 수가 같지 않습니다. 하나는 3개월이고 다른 하나는 9개월입니다. 시작 월·일도 다릅니다. 따라서 동일한 기간의 YoY 비교로 확인할 수 없습니다. 근거는 있습니다. Samsung Electronics 2022 Q3 Interim Report, PDF p.37의 Profit for the period / 2022 Q KRW와 2021 YTD KRW에서 각각 확인됩니다.\"}"
+}

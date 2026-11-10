@@ -1,0 +1,11 @@
+{
+  "id": "resp_0bddf729151df4ec016af31e22c4e887d18d1665b6b0b11f0f",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1633,
+    "output_tokens": 239,
+    "total_tokens": 1872
+  },
+  "output_text": "{\"status\":\"verified\",\"value\":\"9.4364\",\"issues\":[],\"evidence_ids\":[\"s22q3-CFS-net_profit-2022-ytd-KRW\",\"s22q3-CFS-net_profit-2021-ytd-KRW\"],\"explanation_ko\":\"삼성전자 2022년 1월 1일~2022년 9월 30일 9개월 연결 당기순이익은 31,812,631 백만 원입니다. 출처는 Samsung Electronics 2022 Q3 Interim Report, PDF p.37의 Profit for the period / 2022 YTD KRW입니다. 삼성전자 2021년 1월 1일~2021년 9월 30일 9개월 연결 당기순이익은 29,069,502 백만 원입니다. 출처는 같은 보고서인 Samsung Electronics 2022 Q3 Interim Report, PDF p.37의 Profit for the period / 2021 YTD KRW입니다. 전년 동기 대비 증감률은 9.4364%입니다.\"}"
+}

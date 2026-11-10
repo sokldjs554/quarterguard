@@ -1,0 +1,11 @@
+{
+  "id": "resp_0954a345da5fe5de016af31e1838e087d19540419b23106991",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1670,
+    "output_tokens": 179,
+    "total_tokens": 1849
+  },
+  "output_text": "{\"status\":\"needs_review\",\"value\":null,\"issues\":[\"SCOPE_MISMATCH\"],\"evidence_ids\":[\"s24q3-CFS-revenue-2024-q-KRW\",\"s24q2-OFS-revenue-2024-q-KRW\"],\"explanation_ko\":\"연결과 별도의 범위가 달라 비교를 보류했습니다. Samsung Electronics 2024 3Q Interim Business Report, PDF p.34의 Revenue는 2024-07-01 ~ 2024-09-30, 3개월, 연결입니다. Samsung Electronics 2024 Half-year Business Report, PDF p.104의 Revenue는 2024-04-01 ~ 2024-06-30, 3개월, 별도입니다. 범위를 맞춘 뒤 다시 검증해야 합니다.\"}"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "resp_09385bd4449c40fb016af31e27122c87d1a4d4947045ba3ecd",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1678,
+    "output_tokens": 199,
+    "total_tokens": 1877
+  },
+  "output_text": "{\"status\":\"needs_review\",\"value\":null,\"issues\":[\"PERIOD_MISMATCH\"],\"evidence_ids\":[\"s22q3-CFS-operating_profit-2022-q-KRW\",\"s22q3-CFS-operating_profit-2021-q-KRW\"],\"explanation_ko\":\"계산을 보류합니다. QoQ는 인접한 분기끼리 비교해야 합니다. 그러나 2022-07-01 시작일이 2021-09-30 종료일의 다음 날이 아니어서 qoq_adjacent 조건을 만족하지 않습니다. 따라서 2022 Q3와 2021 Q3 연결 영업이익은 QoQ 비교에 사용할 수 없습니다. 근거 문서 제목은 Samsung Electronics 2022 Q3 Interim Report입니다. PDF p.37의 Operating profit / 2022 Q KRW와 Operating profit / 2021 Q KRW가 확인됩니다.\"}"
+}
