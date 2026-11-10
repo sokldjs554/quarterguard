@@ -1,0 +1,40 @@
+{
+  "actor": "AI local verification",
+  "input_origin": "saved v7 tool inputs; not new PDF parsing or live DART",
+  "new_paid_calls": 0,
+  "new_human_reviews": 0,
+  "checks": [
+    {
+      "id": "h25-op-period",
+      "actual_compare_matches_saved_result": true,
+      "issues": [
+        "PERIOD_MISMATCH"
+      ],
+      "growth_pct": null,
+      "diagnostic": {
+        "failed_conditions": [
+          "equal_months",
+          "yoy_start_month_day"
+        ],
+        "diagnostic_origin": "independent_recalculation",
+        "statement": "도구는 기간 불일치를 보고했습니다. 다음은 입력을 별도 재계산한 진단이며 도구의 조건 실행 이력이 아닙니다. 두 기간의 개월 수가 같지 않거나 완전한 월 단위 기간으로 확인되지 않습니다. 두 기간의 시작 월·일이 다릅니다. 계산을 보류합니다."
+      }
+    },
+    {
+      "id": "s22-op-qoq",
+      "actual_compare_matches_saved_result": true,
+      "issues": [
+        "PERIOD_MISMATCH"
+      ],
+      "growth_pct": null,
+      "diagnostic": {
+        "failed_conditions": [
+          "qoq_adjacent"
+        ],
+        "diagnostic_origin": "independent_recalculation",
+        "statement": "도구는 기간 불일치를 보고했습니다. 다음은 입력을 별도 재계산한 진단이며 도구의 조건 실행 이력이 아닙니다. A 시작일이 B 종료일 다음 날이 아니므로 인접한 분기 관계가 아닙니다. 계산을 보류합니다."
+      }
+    }
+  ],
+  "old_v7_approval_block": "FREEZE_CODE_MISMATCH"
+}

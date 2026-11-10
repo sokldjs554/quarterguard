@@ -1,0 +1,22 @@
+✔ source context escapes text and only links HTTPS publisher PDFs at the supplied page (7.986671ms)
+✔ empty, missing and unresolved context never show old source links (2.225468ms)
+✔ scope-only decision basis is separate, escaped, and absent from legacy context (0.941985ms)
+✔ current evidence separates product scope, reviewed responses, latest guard, and actors (1.312939ms)
+✔ historical failures are dated and never relabeled as current status (15.641071ms)
+✔ malformed current summary fails and text is escaped (0.538658ms)
+✔ latest model batch is separate from prior human labels and has unresolved prose warnings (0.328054ms)
+✔ confirmed v5 human verdicts do not become an overall accuracy improvement (0.243014ms)
+✔ v6 separates structural regression, new tasks, and still-pending human review (0.213969ms)
+✔ review context includes ordered evidence, mode and document version (3.001082ms)
+✔ review persists only valid fields; damaged storage is ignored (2.510593ms)
+✔ storage write failures propagate so UI cannot claim saved (0.72919ms)
+✔ CSV preserves numerical output and separates manual review from automated status (1.06393ms)
+✔ CSV neutralizes formula-like notes including leading whitespace (0.560986ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 178.374298
