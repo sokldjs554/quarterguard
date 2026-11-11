@@ -1,0 +1,21 @@
+{
+  "record_type": "authorship_confirmation_addendum",
+  "submission_path": "data/apple-submitted-20261112/submission.json",
+  "submission_sha256": "9e3586be3a3e5d2a666f3612710d83648763ed8c3a8b0f5cadec42fd531c2875",
+  "case_ids": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4",
+    "Q5",
+    "Q6",
+    "Q7"
+  ],
+  "author_role": "project_author",
+  "confirmation_source": "user_direct_reply",
+  "confirmation_quote": "본인이 AI 없이 직접 작성",
+  "ai_used_in_question_answer_authoring": false,
+  "confirmation_timing": "After the frozen first evaluation; exact confirmation time not separately collected.",
+  "scope_note": "User attestation about authorship. Subsequent AI source audit is separate; no new external participant or independent human review.",
+  "preservation_note": "Frozen submission, freeze manifest and first results remain unchanged; their pending authorship fields describe the state at execution."
+}
