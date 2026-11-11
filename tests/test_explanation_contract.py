@@ -3,7 +3,7 @@ import copy
 import json
 import unittest
 from quarterguard.store import ROOT, load_facts
-from quarterguard.core import compare, reconcile
+from quarterguard.core import Fact, compare, reconcile
 from quarterguard import public_providers as pp
 from quarterguard.explanation_guards import check_prose
 from quarterguard.evaluate_live_explanations_v6 import registry
@@ -54,6 +54,25 @@ class OutputContractTests(unittest.TestCase):
         self.assertIn('인접',basis['statement'])
         self.assertNotIn('기간 길이 또는',basis['statement'])
         self.assertIsNone(result['growth_pct'])
+
+    def test_period_diagnostics_are_not_reported_as_tool_execution_history(self):
+        for case in ('h25-op-period', 's22-op-qoq'):
+            row = self.rows[case]
+            with self.subTest(case=case), registry(row):
+                basis = next(x for x in pp.build_context(row['tool_result'])['decision_basis']
+                             if x['code'] == 'PERIOD_MISMATCH')
+                self.assertEqual(basis['diagnostic_origin'], 'independent_recalculation')
+                self.assertIn('별도 재계산', basis['statement'])
+                self.assertIn('실행 이력', basis['statement'])
+                self.assertEqual(row['tool_result']['issues'], ['PERIOD_MISMATCH'])
+                facts = [Fact(**{k: v for k, v in fact.items() if k != 'months'})
+                         for fact in row['tool_result']['evidence']]
+                actual = compare(*facts, row['tool_result']['mode'])
+                self.assertEqual(actual['issues'], ['PERIOD_MISMATCH'])
+                self.assertIsNone(actual['growth_pct'])
+                expected = (['equal_months', 'yoy_start_month_day'] if case == 'h25-op-period'
+                            else ['qoq_adjacent'])
+                self.assertEqual(basis['failed_conditions'], expected)
 
     def test_duration_and_yoy_failures_are_distinguished(self):
         period=self.rows['s22-net-period']

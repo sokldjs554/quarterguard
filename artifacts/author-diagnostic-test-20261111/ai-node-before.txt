@@ -1,0 +1,43 @@
+✔ source context escapes text and only links HTTPS publisher PDFs at the supplied page (7.624088ms)
+✔ empty, missing and unresolved context never show old source links (5.011847ms)
+✔ scope-only decision basis is separate, escaped, and absent from legacy context (0.651055ms)
+✖ current evidence separates product scope, reviewed responses, latest guard, and actors (25.580983ms)
+✔ historical failures are dated and never relabeled as current status (50.421475ms)
+✔ malformed current summary fails and text is escaped (0.902149ms)
+✔ latest model batch is separate from prior human labels and has unresolved prose warnings (0.347273ms)
+✔ confirmed v5 human verdicts do not become an overall accuracy improvement (0.284309ms)
+✔ v6 separates structural regression, new tasks, and still-pending human review (0.261739ms)
+✔ review context includes ordered evidence, mode and document version (3.37058ms)
+✔ review persists only valid fields; damaged storage is ignored (2.741459ms)
+✔ storage write failures propagate so UI cannot claim saved (0.891689ms)
+✔ CSV preserves numerical output and separates manual review from automated status (1.562456ms)
+✔ CSV neutralizes formula-like notes including leading whitespace (1.481077ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 13
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 249.231314
+
+✖ failing tests:
+
+test at tests/test_latest_progress.mjs:8:1
+✖ current evidence separates product scope, reviewed responses, latest guard, and actors (25.580983ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(html.includes('합계 5개'))
+  
+      at TestContext.<anonymous> (file:///workspace/quarterguard-test-submission/tests/test_latest_progress.mjs:12:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

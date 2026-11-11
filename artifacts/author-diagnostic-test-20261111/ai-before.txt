@@ -1,0 +1,26 @@
+test_period_diagnostics_are_not_reported_as_tool_execution_history (tests.test_explanation_contract.OutputContractTests.test_period_diagnostics_are_not_reported_as_tool_execution_history) ... 
+  test_period_diagnostics_are_not_reported_as_tool_execution_history (tests.test_explanation_contract.OutputContractTests.test_period_diagnostics_are_not_reported_as_tool_execution_history) (case='h25-op-period') ... ERROR
+  test_period_diagnostics_are_not_reported_as_tool_execution_history (tests.test_explanation_contract.OutputContractTests.test_period_diagnostics_are_not_reported_as_tool_execution_history) (case='s22-op-qoq') ... ERROR
+
+======================================================================
+ERROR: test_period_diagnostics_are_not_reported_as_tool_execution_history (tests.test_explanation_contract.OutputContractTests.test_period_diagnostics_are_not_reported_as_tool_execution_history) (case='h25-op-period')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-test-submission/tests/test_explanation_contract.py", line 64, in test_period_diagnostics_are_not_reported_as_tool_execution_history
+    self.assertEqual(basis['diagnostic_origin'], 'independent_recalculation')
+                     ~~~~~^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'diagnostic_origin'
+
+======================================================================
+ERROR: test_period_diagnostics_are_not_reported_as_tool_execution_history (tests.test_explanation_contract.OutputContractTests.test_period_diagnostics_are_not_reported_as_tool_execution_history) (case='s22-op-qoq')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-test-submission/tests/test_explanation_contract.py", line 64, in test_period_diagnostics_are_not_reported_as_tool_execution_history
+    self.assertEqual(basis['diagnostic_origin'], 'independent_recalculation')
+                     ~~~~~^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'diagnostic_origin'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.008s
+
+FAILED (errors=2)

@@ -1,0 +1,43 @@
+{
+  "received_on_kst": "2026-11-11",
+  "base_commit": "b67f8a48b19fbfc8142a0850b446d6a74831911c",
+  "file": "tests/test_explanation_contract.py",
+  "uploaded_sha256": "b8740d78a8404ef5d66a2ff0a447649e4ed365abd69003196da02dbcd48cb462",
+  "test_method": "OutputContractTests.test_period_diagnostics_are_not_reported_as_tool_execution_history",
+  "test_methods_added": 1,
+  "subtest_cases": [
+    "h25-op-period",
+    "s22-op-qoq"
+  ],
+  "implementation_changed": false,
+  "uploaded_file_modified_by_ai": false,
+  "prior_author_report": {
+    "targeted_tests": 24,
+    "full_tests": 239,
+    "full_skipped": 1,
+    "targeted_seconds": "0.481",
+    "full_seconds": "29.725",
+    "execution_date": null,
+    "environment": null,
+    "assistance": null,
+    "skip_identity": null
+  },
+  "ai_verification": {
+    "targeted_tests": 24,
+    "targeted_seconds": "0.566",
+    "full_tests": 239,
+    "full_seconds": "34.528",
+    "full_skipped": 1,
+    "full_failures": 0,
+    "full_errors": 0,
+    "skip_identity": "test_hyundai_parser.HyundaiParserTests.test_known_official_pdf_matches_all_sixteen_frozen_cells",
+    "skip_reason": "official PDF cache unavailable",
+    "before_fix_test_methods": 1,
+    "before_fix_subtest_errors": 2
+  },
+  "count_gap_resolved": true,
+  "role_note": "User supplied test and prior run report. AI reviewed, reran, documented and integrated; do not claim the AI run or GitHub commit was performed by the user.",
+  "new_paid_calls": 0,
+  "new_llm_outputs": 0,
+  "new_b_reviews": 0
+}
