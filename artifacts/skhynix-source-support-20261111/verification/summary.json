@@ -1,0 +1,20 @@
+{
+  "python": {
+    "ran": 279,
+    "skipped": 1,
+    "errors": 0,
+    "warnings": "StarletteDeprecationWarning, IncompleteFieldDefinitionWarning"
+  },
+  "node": {
+    "tests": 14,
+    "passed": 14
+  },
+  "initial_suite": {
+    "ran": 267,
+    "errors": 14,
+    "reason": "frozen MCP source hash mismatch; reverted old module and added extension server"
+  },
+  "source_test_methods": 14,
+  "historical_files_unchanged": 524,
+  "paid_calls": 0
+}

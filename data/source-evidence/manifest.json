@@ -1,0 +1,43 @@
+{
+  "id": "skh2024annual-in-2025oc",
+  "title": "SK hynix 2025 Offering Circular · 2024·2023 연결재무제표",
+  "url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+  "sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+  "pages": 291,
+  "company": "skhynix",
+  "scope": "CFS",
+  "currency": "KRW",
+  "scale": 1000000,
+  "years": [
+    2024,
+    2023
+  ],
+  "capabilities": [
+    "source_evidence_search"
+  ],
+  "calculation_supported": false,
+  "tables": [
+    {
+      "pdf_page": 191,
+      "printed_page": "F-73",
+      "table_id": "financial-position"
+    },
+    {
+      "pdf_page": 193,
+      "printed_page": "F-75",
+      "table_id": "income"
+    },
+    {
+      "pdf_page": 264,
+      "printed_page": "F-146",
+      "table_id": "note-24-2"
+    }
+  ],
+  "cells_count": 18,
+  "cells_sha256": "a53ffe13c349937e4102099c9a43ba5705f3f452068c1dea935c1ad8386363f4",
+  "extraction": "actual official PDF -> pypdf -> bounded source-table adapter",
+  "limitations": [
+    "Selected rows only; no general annual parser.",
+    "No annual, balance-change, product-share or inventory-ratio answer calculation."
+  ]
+}

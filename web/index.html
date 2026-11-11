@@ -18,7 +18,7 @@
  <div class="rail-heading"><span>검토 자료</span><span id="document-count">2</span></div>
  <div class="collection-name">삼성전자 <span>공개 예시</span></div>
  <div id="document-list"><p class="empty">문서 불러오는 중</p></div>
- <div class="rail-info"><strong>예시 자료 안내</strong><p>2024년 반기·3분기 영문 IR 보고서의 손익계산서입니다.</p><p>수집된 문서 2건 안에서 비교할 수 있습니다.</p><a href="https://github.com/sokldjs554/quarterguard/blob/main/docs/data.md" target="_blank" rel="noopener">데이터 범위 ↗</a></div>
+ <div class="rail-info"><strong>예시 자료 안내</strong><p>2024년 반기·3분기 영문 IR 보고서의 손익계산서입니다.</p><p>수집된 문서 2건 안에서 비교할 수 있습니다. 근거 검색에는 SK하이닉스 연결재무제표의 선택 항목도 있습니다.</p><a href="https://github.com/sokldjs554/quarterguard/blob/main/docs/data.md" target="_blank" rel="noopener">데이터 범위 ↗</a></div>
 </aside>
 <main id="main">
 <section id="work" class="view">
@@ -46,14 +46,21 @@
  <p class="work-footnote">공개 예시 자료 · 수집 수치의 자동 계산과 도구 재검증을 구분합니다. <span>외부 API는 검증 기록 화면에서 별도로 요청합니다. 이 작업지는 자동으로 호출하지 않습니다.</span></p>
 </section>
 <section id="search" class="view" hidden>
- <div class="title-line"><div><h1>근거 검색</h1></div><span class="page-context">192개 수치 · 기간과 범위 보존</span></div>
+ <div class="title-line"><div><h1>근거 검색</h1></div><span class="page-context">분기 수치 192개 · SK하이닉스 원문 근거 18개</span></div>
  <form id="search-form"><label for="query">기업 · 연도 · 분기 · 범위 · 항목 · 기간 · 통화 · 표시 단위</label><div class="search-input"><input id="query" maxlength="500" value="삼성전자 2024 3분기 연결 매출액 3개월 KRW 백만원"><button class="primary">근거 검색</button></div><p>한국어·영어로 검색 조건을 입력하세요. 빠진 조건이나 해석하지 못한 표현을 안내합니다. 현재 작업지의 수집 범위: 삼성전자 / 2023·2024 / Q2·Q3 / 연결·별도 / 6개 손익 항목.</p></form>
  <div id="search-results" aria-live="polite"><div class="empty">검색 결과는 검증 전 후보입니다. 후보를 직접 선택해 작업지에서 대조할 수 있습니다.</div></div>
- <section class="document-index"><h2>수집 문서</h2><div id="source-index"></div></section>
+ <section class="source-evidence-section" aria-labelledby="source-evidence-title">
+  <h2 id="source-evidence-title">SK하이닉스 · 선택 문서의 근거 찾기</h2>
+  <p>선택 문서: <strong>2025 Offering Circular에 수록된 2024·2023 연결재무제표</strong></p>
+  <p>현금·재고, 매출·매출원가·영업손익, 제품별 매출의 원문 근거 18개를 검색합니다. 통화는 KRW, 표시 단위는 백만 원입니다. 연간 비교·잔액 증감·제품 비중 계산은 아직 지원하지 않습니다.</p>
+  <form id="source-evidence-form"><label for="source-evidence-query">이 문서에서 확인할 항목과 연도</label><div class="search-input"><input id="source-evidence-query" maxlength="500" value="현금은 2023년 말보다 얼마나 늘었나?"><button class="primary">원문 근거 검색</button></div></form>
+  <div id="source-evidence-results" aria-live="polite"><p class="empty">문서의 조건을 함께 확인하세요. 검색 결과는 계산 전 근거 후보입니다.</p></div>
+ </section>
+ <section class="document-index"><h2>분기 비교 작업지 문서</h2><div id="source-index"></div></section>
 </section>
 <section id="review" class="view" hidden>
  <div class="title-line"><div><h1>검증 기록</h1></div><span class="page-context">측정 산출물 기반</span></div>
- <p class="scope-notice">현재 공개 작업지: 삼성전자 2024 문서 2건 · 정본 192개. 추가 문서 평가와 사람의 부분 검수 범위는 아래 최신 근거 요약에서 확인하세요. 과거 평가와 현재 제품 지원 범위를 구분합니다.</p>
+ <p class="scope-notice">현재 공개 작업지: 삼성전자 2024 문서 2건 · 정본 192개. 추가 문서 평가와 사람의 부분 검수 범위는 아래 최신 근거 요약에서 확인하세요. SK하이닉스는 근거 검색에서 별도 원문 셀 18개를 지원하며, 계산은 지원하지 않습니다. 과거 평가와 현재 제품 지원 범위를 구분합니다.</p>
  <section id="current-evaluation-content" class="review-section" aria-label="현재 보완 결과"></section><h2>이전 개발 회귀 기록 · 보존본</h2><div id="evaluation-content"></div>
  <section class="regression-section"><div class="section-bar"><h2>오류 유형별 재현</h2><span>준비 재생과 현재 실행 구분</span></div><div class="regression-controls"><label for="case-select">검증 사례 <select id="case-select"></select></label><button id="prepared-btn" class="secondary">저장 기록</button><button id="case-run-btn" class="primary">현재 재실행</button></div><div id="case-output" aria-live="polite">사례 선택 후 저장된 실행 기록 확인</div></section>
  <section id="heldout-content" class="review-section" aria-label="추가 문서 평가"></section>
@@ -66,4 +73,5 @@
 <footer><span>공개 문서 기반 검토 · 투자 추천이나 감사 의견이 아닙니다.</span><span id="version">버전 확인 중</span></footer>
 <dialog id="trace-dialog"><div class="dialog-heading"><h2>검증 실행 기록</h2><button id="close-trace" class="icon-button" aria-label="실행 기록 닫기">×</button></div><div id="trace-content"></div><button id="download-btn" class="secondary">실행 JSON 내려받기</button></dialog>
 <script type="module" src="/assets/app.js"></script>
+<script type="module" src="/assets/source-evidence.js"></script>
 </body></html>

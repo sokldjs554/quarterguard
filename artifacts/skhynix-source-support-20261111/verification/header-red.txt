@@ -1,0 +1,14 @@
+F
+======================================================================
+FAIL: test_rejects_ambiguous_or_incomplete_table (tests.test_skhynix_sources.SourceParserTests.test_rejects_ambiguous_or_incomplete_table) (text='SK hynix Inc. and Subsidiaries \nConsolidated Statements of Comprehensive Income ')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-skhynix-support/tests/test_skhynix_sources.py", line 44, in test_rejects_ambiguous_or_incomplete_table
+    with self.subTest(text=broken[:80]), self.assertRaises(ValueError):self.s.parse_page(broken,193)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.015s
+
+FAILED (failures=1)

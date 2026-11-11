@@ -1,0 +1,33 @@
+{
+  "checks": [
+    {
+      "viewport": [
+        1365,
+        900
+      ],
+      "source_search": true,
+      "literal_page_links": true,
+      "instant_duration_distinct": true,
+      "unsupported_clears_hits": true,
+      "503_clears_and_recovers": true,
+      "legacy_qoq": true,
+      "horizontal_overflow": false
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "source_search": true,
+      "literal_page_links": true,
+      "instant_duration_distinct": true,
+      "unsupported_clears_hits": true,
+      "503_clears_and_recovers": true,
+      "legacy_qoq": true,
+      "horizontal_overflow": false
+    }
+  ],
+  "backend": "actual local FastAPI",
+  "error_injection": "503 mocked; normal search and recovery use actual backend",
+  "paid_calls": 0
+}
