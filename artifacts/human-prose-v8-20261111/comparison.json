@@ -1,0 +1,131 @@
+{
+  "source": "user-reported b judgments; no LLM-as-judge",
+  "before": {
+    "참": 15,
+    "모호": 1,
+    "거짓": 0
+  },
+  "after": {
+    "참": 15,
+    "모호": 0,
+    "거짓": 1
+  },
+  "rows": [
+    {
+      "case_id": "normal-qoq",
+      "v7_human": "참",
+      "v8_human": "참",
+      "v8_product_passed": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "normal-yoy",
+      "v7_human": "참",
+      "v8_human": "참",
+      "v8_product_passed": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "period-mismatch",
+      "v7_human": "참",
+      "v8_human": "참",
+      "v8_product_passed": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "scope-mismatch",
+      "v7_human": "참",
+      "v8_human": "참",
+      "v8_product_passed": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "unit-draft",
+      "v7_human": "참",
+      "v8_human": "참",
+      "v8_product_passed": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "no-evidence",
+      "v7_human": "참",
+      "v8_human": "참",
+      "v8_product_passed": false,
+      "failed_checks": [
+        "prose_review_language_localized"
+      ]
+    },
+    {
+      "case_id": "conflicting-number-draft",
+      "v7_human": "참",
+      "v8_human": "참",
+      "v8_product_passed": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "citation-draft",
+      "v7_human": "참",
+      "v8_human": "참",
+      "v8_product_passed": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "s22-op-yoy",
+      "v7_human": "참",
+      "v8_human": "참",
+      "v8_product_passed": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "s22-net-ytd-yoy",
+      "v7_human": "참",
+      "v8_human": "참",
+      "v8_product_passed": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "s22-net-period",
+      "v7_human": "참",
+      "v8_human": "참",
+      "v8_product_passed": false,
+      "failed_checks": [
+        "prose_evidence_presence_consistent"
+      ]
+    },
+    {
+      "case_id": "s22-op-qoq",
+      "v7_human": "참",
+      "v8_human": "참",
+      "v8_product_passed": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "h25-op-yoy",
+      "v7_human": "참",
+      "v8_human": "참",
+      "v8_product_passed": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "h25-net-yoy",
+      "v7_human": "참",
+      "v8_human": "거짓",
+      "v8_product_passed": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "h25-op-period",
+      "v7_human": "모호",
+      "v8_human": "참",
+      "v8_product_passed": true,
+      "failed_checks": []
+    },
+    {
+      "case_id": "cross-company-period",
+      "v7_human": "참",
+      "v8_human": "참",
+      "v8_product_passed": true,
+      "failed_checks": []
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "reviewer": "b",
+  "reported_by": "project author via conversation",
+  "attribution_basis": "Ongoing b-review thread; prior user instruction says b performs subsequent reviews and publication is confirmed; do not repeat confirmation.",
+  "public_github_and_application_basis": "Standing confirmed scope from prior conversation; no new restriction reported.",
+  "report_received_date_kst": "2026-11-11",
+  "reviewed_at": null,
+  "environment": null,
+  "assistance": null,
+  "duration_minutes": null,
+  "missing_metadata_note": "Actual review date/time, environment and assistance were not supplied with this table; receipt date is not review date.",
+  "source_report": "artifacts/llm-prose-v8-20261111/report.json",
+  "source_report_sha256": "7ebb8103de576424cebd2e5f86a094ab554a1ced24bbca2ae08f53fa4a263128",
+  "new_participant": false,
+  "company_official_review": false,
+  "records": [
+    {
+      "case_id": "normal-qoq",
+      "cohort": "paired_development",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "reason": "2024년 2·3분기 연결매출과 전분기 증가율 6.7916%가 맞습니다."
+    },
+    {
+      "case_id": "normal-yoy",
+      "cohort": "paired_development",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "reason": "2024·2023년 3분기 연결매출과 전년 대비 17.3491%가 맞습니다."
+    },
+    {
+      "case_id": "period-mismatch",
+      "cohort": "paired_development",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "reason": "9개월 누적과 전년 3개월은 같은 기간 기준이 아니므로 보류한 설명이 맞습니다."
+    },
+    {
+      "case_id": "scope-mismatch",
+      "cohort": "paired_development",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "reason": "연결·별도 범위 차이와 두 금액이 맞습니다."
+    },
+    {
+      "case_id": "unit-draft",
+      "cohort": "paired_development",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "reason": "기준·비교 금액, 증가율과 백만 원 표시 단위가 맞습니다."
+    },
+    {
+      "case_id": "no-evidence",
+      "cohort": "paired_development",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "빈 목록 일치",
+      "reason": "해당 검색 범위에서 근거를 확인하지 못했다는 도구 결과와 맞습니다. `SEARCH_EMPTY`는 사용자에게 풀어서 설명하면 더 좋습니다."
+    },
+    {
+      "case_id": "conflicting-number-draft",
+      "cohort": "paired_development",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "reason": "두 분기 연결매출과 증가율 6.7916%가 맞습니다."
+    },
+    {
+      "case_id": "citation-draft",
+      "cohort": "paired_development",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "reason": "보고서별 금액, 기간과 증가율의 `%` 표기가 맞습니다."
+    },
+    {
+      "case_id": "s22-op-yoy",
+      "cohort": "new_tasks_known_documents",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "reason": "삼성전자 2022·2021년 3분기 영업이익과 -31.3923%가 맞습니다."
+    },
+    {
+      "case_id": "s22-net-ytd-yoy",
+      "cohort": "new_tasks_known_documents",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "reason": "삼성전자 9개월 누적 당기순이익과 9.4364%가 맞습니다."
+    },
+    {
+      "case_id": "s22-net-period",
+      "cohort": "new_tasks_known_documents",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "reason": "근거가 존재하지만 3개월과 9개월의 기간이 달라 보류됐다고 올바르게 구분합니다."
+    },
+    {
+      "case_id": "s22-op-qoq",
+      "cohort": "new_tasks_known_documents",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "reason": "두 값은 서로 다른 해의 같은 분기여서 인접 분기 비교가 아니라는 설명이 맞습니다."
+    },
+    {
+      "case_id": "h25-op-yoy",
+      "cohort": "new_tasks_known_documents",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "reason": "현대차 영업이익과 전년 동분기 증감률 -29.1445%가 맞습니다."
+    },
+    {
+      "case_id": "h25-net-yoy",
+      "cohort": "new_tasks_known_documents",
+      "explanation_verdict": "거짓",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "reason": "금액과 -20.5146%는 맞지만, 문장은 “2025년 대비 2024년”이라고 방향을 반대로 썼습니다."
+    },
+    {
+      "case_id": "h25-op-period",
+      "cohort": "new_tasks_known_documents",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "reason": "9개월과 3개월 비교를 보류했고, 개월 수·시작일 차이는 별도 재계산으로 구분했습니다."
+    },
+    {
+      "case_id": "cross-company-period",
+      "cohort": "new_tasks_known_documents",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "reason": "회사와 연도 조건이 달라 전년 동분기 비교가 안 된다는 설명이 맞습니다."
+    }
+  ],
+  "reported_counts": {
+    "참": 15,
+    "모호": 0,
+    "거짓": 1
+  },
+  "structured_exact": 16,
+  "evidence_ids_exact": 16,
+  "additional_paid_calls": 0,
+  "ai_role": "Transcription and comparison to saved outputs, not human adjudication.",
+  "retention": {
+    "anonymous_public_summary": "continuing retention permitted under standing confirmation",
+    "original_records": "30 days under prior policy; managed by project author",
+    "original_record_expiry_date": null
+  },
+  "cohort_note": "All16 were disclosed development cases; historical 8+8 names do not imply new holdout."
+}
