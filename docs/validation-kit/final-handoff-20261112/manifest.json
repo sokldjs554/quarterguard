@@ -1,0 +1,143 @@
+{
+  "purpose": "Review preparation only; no new generation or human verdict",
+  "product_baseline": "4ecdc3a7f84cd28416cf659aa34ce76be6c17dce",
+  "cases": [
+    {
+      "review_id": "P01",
+      "case_id": "qoq-revenue",
+      "text_sha256": "31cc5ab8e95e266d878430e1f4e3c561ede5e69c7b247aa8e373c5865d8b4ffc"
+    },
+    {
+      "review_id": "P02",
+      "case_id": "ytd-trap",
+      "text_sha256": "1fdaa69d20704551584b2fe117b9953fe7deb0076e834b21d921c3e5d53b1eb6"
+    },
+    {
+      "review_id": "P03",
+      "case_id": "no-evidence",
+      "text_sha256": "3249c7bafb5ff53479783a727768746aaa953717cf26d4f302f1f681fe0826b1"
+    },
+    {
+      "review_id": "P04",
+      "case_id": "reconcile-revenue",
+      "text_sha256": "4170915c0fc4f3c5ec442b1b7dca5304d670b5f0f0cdbc112300e2be677c268f"
+    },
+    {
+      "review_id": "V01",
+      "case_id": "normal-qoq",
+      "text_sha256": "4dcc21b4d839288753e0c5319cafe26d6c925829e645dfb92b34b1a72756b982"
+    },
+    {
+      "review_id": "V02",
+      "case_id": "normal-yoy",
+      "text_sha256": "aab2ae622f621a020cee2724bcf11e0b8f7dadd2582611438766d1bee8dc8b9c"
+    },
+    {
+      "review_id": "V03",
+      "case_id": "period-mismatch",
+      "text_sha256": "e54efc1d3e6290e9673fa2cf86bc0602d2f6e25201b6a75733d821ffce4fd1ae"
+    },
+    {
+      "review_id": "V04",
+      "case_id": "scope-mismatch",
+      "text_sha256": "04512852aed734a76a2694f603ed8bec787a783be3bce4823ea92d8476a4f5ae"
+    },
+    {
+      "review_id": "V05",
+      "case_id": "unit-draft",
+      "text_sha256": "f2be36a3eb5986964f4b6c2bf485b697e58d2dd9511006bfbdba019192bcf3d8"
+    },
+    {
+      "review_id": "V06",
+      "case_id": "no-evidence",
+      "text_sha256": "ad37ac00100d182e34a4b40ad3c15c66631d6befcd87bfbc7a067b762fda87dc"
+    },
+    {
+      "review_id": "V07",
+      "case_id": "conflicting-number-draft",
+      "text_sha256": "5f9071307f6ff42aabac94ba609f27502aeef23ed9dbd8e692b6d35dd5ebfe32"
+    },
+    {
+      "review_id": "V08",
+      "case_id": "citation-draft",
+      "text_sha256": "d16ebd68a2eb55f8c0db851a6d7890c7c0abfe8b9cce95bb18bca94badf687ff"
+    },
+    {
+      "review_id": "V09",
+      "case_id": "s22-op-yoy",
+      "text_sha256": "bab639370854d71ed1c6f1ca500296008a08914b0ea747cecadbfb864d85af6a"
+    },
+    {
+      "review_id": "V10",
+      "case_id": "s22-net-ytd-yoy",
+      "text_sha256": "f1de3cb08d72b74a2e0db8716682fc2336e64588d3e57ed251d331429ee3ef06"
+    },
+    {
+      "review_id": "V11",
+      "case_id": "s22-net-period",
+      "text_sha256": "4278959539776b1769cf8adb753298d0db5953e1000e514d2bcca295ab61d47d"
+    },
+    {
+      "review_id": "V12",
+      "case_id": "s22-op-qoq",
+      "text_sha256": "21b9a7e781391aa5b0c0d7f9a9c63a3fbe867e8152cc3a9f928b312c415caecc"
+    },
+    {
+      "review_id": "V13",
+      "case_id": "h25-op-yoy",
+      "text_sha256": "1ace4d433549f1bd1d45c8306671dd60c729d1699acd188e3210e24ffa26a755"
+    },
+    {
+      "review_id": "V14",
+      "case_id": "h25-net-yoy",
+      "text_sha256": "0680904cae7ab254a9c6254d73ea3a08e08e2eaaeab0e0586d21b1025523e495"
+    },
+    {
+      "review_id": "V15",
+      "case_id": "h25-op-period",
+      "text_sha256": "abbdd8edc864711eb885de5ef2ab39e5c1f7e6dbabf72e5349b64284d29824db"
+    },
+    {
+      "review_id": "V16",
+      "case_id": "cross-company-period",
+      "text_sha256": "feb2ce41e50e92449f85e0ed9fa049c2b04fd0aa66048965dc67b2153f8036b6"
+    }
+  ],
+  "raw_files": {
+    "artifacts/final-live-20261111/run/response-01.json": "d10e14880ae65c3042055e004723090e247c5d24b9011083b53d2c7b38bb7070",
+    "artifacts/final-live-20261111/run/response-02.json": "009adc7ce0e48fc843f782447808e98d90b68d9c4a8916c0a89fc5acc33e6f65",
+    "artifacts/final-live-20261111/run/response-03.json": "4b3c58f35c3c74c3bf67df713fda904b988b8c486fe36dfb072c84aa0c012140",
+    "artifacts/final-live-20261111/run/response-04.json": "6de4ccbfd2166ea1e9b9814099079b35f34261dcfe90f5cf27ce749251f45897",
+    "artifacts/llm-prose-v9-20261111/normal-qoq.response.json": "cedb23e86f822c88864efee616a63ca95e4c9fd5858b929ee117a14811e950e2",
+    "artifacts/llm-prose-v9-20261111/normal-yoy.response.json": "4ab8f473dfbda42ccf417f44f959eb9a7e21269ee19f9449d0ca1626b056fecd",
+    "artifacts/llm-prose-v9-20261111/period-mismatch.response.json": "829e08be2eeff0b6d9496812d8896c4f8a4efd290bfa75bccd8849056ea27c11",
+    "artifacts/llm-prose-v9-20261111/scope-mismatch.response.json": "369c00ff26a8e31ddde968da5e3922ccfae6e65c88f172a1bbd479d304529561",
+    "artifacts/llm-prose-v9-20261111/unit-draft.response.json": "74380e9cf4b109f1ec0a637ee683863498cfaa3d7cae2fbc1aacf27e02e69ec1",
+    "artifacts/llm-prose-v9-20261111/no-evidence.response.json": "008195fc91fe95f21ab0cdf181d676031bf351120e6e73c69aed15e0d671e492",
+    "artifacts/llm-prose-v9-20261111/conflicting-number-draft.response.json": "243de6a589ba70a56e8ad1dd5f6717463ea9dcc8d2ecd6478b1b3b05b47422ea",
+    "artifacts/llm-prose-v9-20261111/citation-draft.response.json": "a51196c7d5ea9d51a47a3652aa59b8f138e0d80534092cab2b31acc2e7a56e95",
+    "artifacts/llm-prose-v9-20261111/s22-op-yoy.response.json": "60b2bb0a08e01754fbe08576517444b1390aced967814aceb8d313c10dd0a4b1",
+    "artifacts/llm-prose-v9-20261111/s22-net-ytd-yoy.response.json": "ffa1f8d018677429f52d8b1108f90906d5245279cfe8251ecc041ec003da8918",
+    "artifacts/llm-prose-v9-20261111/s22-net-period.response.json": "9b05668ff24402067e0d1187054ae8ff2db10f533d12d1d3a772ac36f31551c2",
+    "artifacts/llm-prose-v9-20261111/s22-op-qoq.response.json": "468100cc2fe8ab05311770606ffe683d9c22987790d6d14783a20d3e06371522",
+    "artifacts/llm-prose-v9-20261111/h25-op-yoy.response.json": "12e019f58ba70c553a6dcdd21051ad0742a488ce54ad5a1439a0264a4241263e",
+    "artifacts/llm-prose-v9-20261111/h25-net-yoy.response.json": "4847da280bf75a01f5f7395aa719ae7050a39da89761f8755f8df7cc2bf4a972",
+    "artifacts/llm-prose-v9-20261111/h25-op-period.response.json": "d982a89897913e64c2f454e76def89c54c16eac3e1f07803bf8cbbc276fd3421",
+    "artifacts/llm-prose-v9-20261111/cross-company-period.response.json": "76e98dc696c1a16d90745517d12af40649bffe0a4e74e72a878e97dcbb7911b2"
+  },
+  "new_paid_calls": 0,
+  "new_human_reviews": 0,
+  "verification": {
+    "model_texts_exact": 20,
+    "blank_live_task_rows": 11,
+    "blank_llm_review_rows": 20,
+    "local_links_resolve": true,
+    "original_evidence_preserved": true
+  },
+  "posting_check": {
+    "url": "https://treasurer.recruit.roundhr.com/c/nLeVw9amBH",
+    "http_status": 200,
+    "retrieved_body_sha256": "65f6ba1fab3a13a005645748480663274ee50a83c13f1997ade9dd6372f28bcc",
+    "recorded_at_utc": "2026-11-11T18:06:12.075266+00:00"
+  }
+}

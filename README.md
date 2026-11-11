@@ -2,7 +2,9 @@
 
 공식 금융 문서의 **원문 근거·기간·연결 범위·통화·단위**를 확인해 계산하거나 보류하는 금융 검토 작업지입니다. AI 코딩 도구를 활용한 개인 프로젝트이며, 계산 판정은 규칙과 Decimal 연산으로 수행합니다.
 
-[공개 데모](https://quarterguard.onrender.com/) · [최신 지원 근거·공고 대조](docs/final-readiness-20261111.md) · [최종 사람 검수 묶음](docs/validation-kit/final-round-20261111.md) · [본인 코드 검토](docs/code-review-kit/README.md) · [서버 커밋 확인](https://quarterguard.onrender.com/health)
+[공개 데모](https://quarterguard.onrender.com/) · [최신 지원 근거·공고 대조](docs/application-evidence-20261112.md) · [최종 사람 검수 묶음](docs/validation-kit/final-handoff-20261112/README.md) · [본인 코드 검토](docs/code-review-kit/README.md) · [서버 커밋 확인](https://quarterguard.onrender.com/health)
+
+**최신 사람 확인·지원서 준비:** [실사용11과제·실제 LLM20건·빈 기록지](docs/validation-kit/final-handoff-20261112/README.md) · [확인된 근거로 쓴 지원서 초안](docs/application-evidence-20261112.md). 자료 준비 완료이며 새 실제 참여·검수 판정은 수신 전입니다. 새 유료 호출0회.
 
 ## 현재 제품 지원 범위
 
