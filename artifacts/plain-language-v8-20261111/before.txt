@@ -1,0 +1,61 @@
+test_internal_codes_in_prose_are_rejected_without_mutating_response (tests.test_plain_explanation_language.PlainExplanationLanguageTests.test_internal_codes_in_prose_are_rejected_without_mutating_response) ... 
+  test_internal_codes_in_prose_are_rejected_without_mutating_response (tests.test_plain_explanation_language.PlainExplanationLanguageTests.test_internal_codes_in_prose_are_rejected_without_mutating_response) (case='no-evidence') ... FAIL
+  test_internal_codes_in_prose_are_rejected_without_mutating_response (tests.test_plain_explanation_language.PlainExplanationLanguageTests.test_internal_codes_in_prose_are_rejected_without_mutating_response) (case='s22-op-qoq') ... FAIL
+test_korean_prose_keeps_machine_codes_and_financial_terms_intact (tests.test_plain_explanation_language.PlainExplanationLanguageTests.test_korean_prose_keeps_machine_codes_and_financial_terms_intact) ... 
+  test_korean_prose_keeps_machine_codes_and_financial_terms_intact (tests.test_plain_explanation_language.PlainExplanationLanguageTests.test_korean_prose_keeps_machine_codes_and_financial_terms_intact) (text='조건은 `qoq_adjacent`입니다.') ... FAIL
+  test_korean_prose_keeps_machine_codes_and_financial_terms_intact (tests.test_plain_explanation_language.PlainExplanationLanguageTests.test_korean_prose_keeps_machine_codes_and_financial_terms_intact) (text='원인은 SEARCH_EMPTY입니다.') ... FAIL
+  test_korean_prose_keeps_machine_codes_and_financial_terms_intact (tests.test_plain_explanation_language.PlainExplanationLanguageTests.test_korean_prose_keeps_machine_codes_and_financial_terms_intact) (text='Search_Empty: 확인 필요') ... FAIL
+  test_korean_prose_keeps_machine_codes_and_financial_terms_intact (tests.test_plain_explanation_language.PlainExplanationLanguageTests.test_korean_prose_keeps_machine_codes_and_financial_terms_intact) (text='(QOQ_ADJACENT) 조건 불일치') ... FAIL
+
+======================================================================
+FAIL: test_internal_codes_in_prose_are_rejected_without_mutating_response (tests.test_plain_explanation_language.PlainExplanationLanguageTests.test_internal_codes_in_prose_are_rejected_without_mutating_response) (case='no-evidence')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-language-eval/tests/test_plain_explanation_language.py", line 16, in test_internal_codes_in_prose_are_rejected_without_mutating_response
+    self.assertFalse(check_prose(row['generated'],row['tool_result'])['prose_review_language_localized'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_internal_codes_in_prose_are_rejected_without_mutating_response (tests.test_plain_explanation_language.PlainExplanationLanguageTests.test_internal_codes_in_prose_are_rejected_without_mutating_response) (case='s22-op-qoq')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-language-eval/tests/test_plain_explanation_language.py", line 16, in test_internal_codes_in_prose_are_rejected_without_mutating_response
+    self.assertFalse(check_prose(row['generated'],row['tool_result'])['prose_review_language_localized'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_korean_prose_keeps_machine_codes_and_financial_terms_intact (tests.test_plain_explanation_language.PlainExplanationLanguageTests.test_korean_prose_keeps_machine_codes_and_financial_terms_intact) (text='조건은 `qoq_adjacent`입니다.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-language-eval/tests/test_plain_explanation_language.py", line 27, in test_korean_prose_keeps_machine_codes_and_financial_terms_intact
+    self.assertFalse(check_prose(answer|{'explanation_ko':text},result)['prose_review_language_localized'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_korean_prose_keeps_machine_codes_and_financial_terms_intact (tests.test_plain_explanation_language.PlainExplanationLanguageTests.test_korean_prose_keeps_machine_codes_and_financial_terms_intact) (text='원인은 SEARCH_EMPTY입니다.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-language-eval/tests/test_plain_explanation_language.py", line 27, in test_korean_prose_keeps_machine_codes_and_financial_terms_intact
+    self.assertFalse(check_prose(answer|{'explanation_ko':text},result)['prose_review_language_localized'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_korean_prose_keeps_machine_codes_and_financial_terms_intact (tests.test_plain_explanation_language.PlainExplanationLanguageTests.test_korean_prose_keeps_machine_codes_and_financial_terms_intact) (text='Search_Empty: 확인 필요')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-language-eval/tests/test_plain_explanation_language.py", line 27, in test_korean_prose_keeps_machine_codes_and_financial_terms_intact
+    self.assertFalse(check_prose(answer|{'explanation_ko':text},result)['prose_review_language_localized'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_korean_prose_keeps_machine_codes_and_financial_terms_intact (tests.test_plain_explanation_language.PlainExplanationLanguageTests.test_korean_prose_keeps_machine_codes_and_financial_terms_intact) (text='(QOQ_ADJACENT) 조건 불일치')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-language-eval/tests/test_plain_explanation_language.py", line 27, in test_korean_prose_keeps_machine_codes_and_financial_terms_intact
+    self.assertFalse(check_prose(answer|{'explanation_ko':text},result)['prose_review_language_localized'])
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.004s
+
+FAILED (failures=6)

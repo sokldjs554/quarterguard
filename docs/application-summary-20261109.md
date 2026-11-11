@@ -1,5 +1,7 @@
 # QuarterGuard 지원 근거 — 현재 상태
 
+**11월11일 표현·추가 평가:** [내부 표현 정리·새 검색 질의8/8·기존 응답 재생14/16](plain-language-20261111.md). 새 유료 생성은 아직 실행하지 않았고 [별도16회 계약](llm-prose-v8-20261111.md)을 준비했습니다.
+
 **11월11일 테스트 수신:** [진단 테스트1개·관련24개/전체239개 재확인](code-review-kit/05-period-diagnostic-test-20261111.md). 본인 보고와 AI 재실행의 수량 차이는 해소됐고, 실행 시점·환경·주체는 계속 구분합니다.
 
 기술 기준: `a2df3950916d6629eb153bfff7cfd48d1fbb8d6e` / 2026-11-10. [현재 채용 공고](https://treasurer.recruit.roundhr.com/c/nLeVw9amBH)와 [요구사항 대조](job-fit-current-20261110.md). 과거 진행 문서는 [통합 전 원문](../artifacts/application-ready-20261110/application-summary.before-consolidation.md)에 바이트 그대로 보존했다. 원래 위치에서의 링크는 [기준 커밋 원문](https://github.com/sokldjs554/quarterguard/blob/a2df3950916d6629eb153bfff7cfd48d1fbb8d6e/docs/application-summary-20261109.md)으로 열 수 있다.
