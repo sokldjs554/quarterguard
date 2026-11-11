@@ -1,0 +1,16 @@
+{
+  "record_type": "followup_performer_confirmation",
+  "user_statement": "b가 수행했어 근데 ai 검토라니?",
+  "question_scope": [
+    "A1–S4 demo use",
+    "P01–P04 response review"
+  ],
+  "confirmed_performer": "b",
+  "actual_date": null,
+  "environment": null,
+  "assistance": null,
+  "publication_consent": "existing scope retained; not requested again",
+  "v9_status": "prior submission explicitly describes reformatted AI review; this answer to A/P performer question does not resolve or replace that statement",
+  "new_participants": 0,
+  "new_paid_calls": 0
+}
