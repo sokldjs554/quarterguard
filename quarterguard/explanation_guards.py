@@ -100,7 +100,14 @@ def check_prose(answer, result):
         rates += list(re.finditer(r'(?<![\d.,])'+re.escape(str(growth))+r'(?!\d|[.,]\d)', text))
     rate_units = all(re.match(r'\s*(?:[%％]|퍼센트|percent\b)', text[m.end():], re.I)
                      for m in rates)
+    # Disclosed production-model failures combined Korean large-number units
+    # with an additional million-won multiplier. Withhold this unsupported
+    # notation; never repair or silently reinterpret a financial amount.
+    mixed_million = re.search(
+        r'(?:[0-9][0-9,.]*\s*(?:조|억|만|천)\s*)+'
+        r'(?:[0-9][0-9,.]*\s*)?백만\s*원', text)
     return {
+        'prose_million_amount_unambiguous': mixed_million is None,
         'prose_evidence_presence_consistent': not (evidence and absence),
         'prose_document_reference_unambiguous': not (len(documents) > 1 and same_document),
         'prose_rate_unit_explicit': rate_units,

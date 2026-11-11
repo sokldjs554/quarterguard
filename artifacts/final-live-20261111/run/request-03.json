@@ -1,0 +1,64 @@
+{
+  "at": "2026-11-11T14:54:58.278944+00:00",
+  "payload": {
+    "model": "gpt-4.1-mini-2025-04-14",
+    "store": false,
+    "max_output_tokens": 700,
+    "instructions": "Explain in Korean. Copy status, issues and IDs in order. JSON value must exactly copy growth_pct or derived_value, or be null if absent; do not add units, commas or text, round or reformat it. Never override rejection, invent evidence, calculate or advise. Distinguish quarter/cumulative and consolidated/separate. Only issues and decision_basis justify withholding. Period failed_conditions are separate recalculations, not the tool execution trace; describe them as such. Adjacent three-month quarters can be compared; SCOPE_MISMATCH alone means scope, not date rejection. With evidence, never claim a search was empty. Only no_evidence permits 해당 검색 범위에서 확인할 수 없습니다; this does not mean results or reports do not exist. Describe all issue/status/diagnostic codes in plain Korean, never quote their labels. For rates, evidence order is current,base. Write base period 대비 current period. KRW is currency; use display_unit (e.g. 백만 원). scale is an internal multiplier, not a source heading. ONLY in explanation_ko prose, append % to every stated growth rate, including repeated values. For example JSON value \"6.7916\" and prose \"증가율 6.7916%\"; a withheld JSON value stays null. Name each fact's own document_title and PDF page from explanation_context in explanation_ko. With multiple document IDs, use explicit titles, never 같은 보고서/same report. Do not guess units or source locations. Use short Korean sentences.",
+    "input": "{\"task\": \"수집 범위 밖인 2025년 실적 조회\", \"tool_result\": {\"status\": \"needs_review\", \"issues\": [\"SEARCH_EMPTY\"], \"evidence\": []}, \"explanation_context\": {\"origin\": \"deterministic_tool_context\", \"status\": \"no_evidence\", \"comparison_status\": \"needs_review\", \"issues\": [\"SEARCH_EMPTY\"], \"evidence\": [], \"notice\": \"해당 검색 범위에서 근거를 확인할 수 없습니다. 기업의 실적 자체가 없다는 뜻은 아닙니다. 검색 조건과 수집 범위를 확인하세요.\", \"decision_basis\": [{\"code\": \"SEARCH_EMPTY\", \"statement\": \"현재 검색 조건으로 확인할 수 있는 근거를 찾지 못했습니다.\"}], \"decision_note\": \"도구의 문제 목록을 설명한 안내입니다. AI 문장 전체에 대한 의미 검증은 아닙니다.\"}}",
+    "text": {
+      "format": {
+        "type": "json_schema",
+        "name": "financial_explanation",
+        "strict": true,
+        "schema": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "verified",
+                "needs_review"
+              ]
+            },
+            "value": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                null
+              ]
+            },
+            "issues": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "evidence_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 0,
+              "maxItems": 0
+            },
+            "explanation_ko": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "value",
+            "issues",
+            "evidence_ids",
+            "explanation_ko"
+          ]
+        }
+      }
+    }
+  },
+  "sha256": "870e12fa8d17d40e7d5762a69a315d5252f615305633f2b61e7615c62e899284"
+}

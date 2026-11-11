@@ -1,0 +1,22 @@
+.E.F
+======================================================================
+ERROR: test_separate_explicit_conversion_is_not_confused_with_mixed_scale (tests.test_mixed_amount_prose.MixedAmountProseTests.test_separate_explicit_conversion_is_not_confused_with_mixed_scale)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-final/tests/test_mixed_amount_prose.py", line 18, in test_separate_explicit_conversion_is_not_confused_with_mixed_scale
+    self.assertTrue(check_prose({'explanation_ko':'1조 원은 1,000,000백만 원입니다.'},row['mcp']['result'])['prose_million_amount_unambiguous'])
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'prose_million_amount_unambiguous'
+
+======================================================================
+FAIL: test_two_actual_mixed_scale_responses_are_withheld (tests.test_mixed_amount_prose.MixedAmountProseTests.test_two_actual_mixed_scale_responses_are_withheld)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-final/tests/test_mixed_amount_prose.py", line 12, in test_two_actual_mixed_scale_responses_are_withheld
+    self.assertFalse(all(check_prose(row['output']['generated'],row['mcp']['result']).values()),row['case_id'])
+AssertionError: True is not false : qoq-revenue
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.016s
+
+FAILED (failures=1, errors=1)

@@ -1,0 +1,61 @@
+# QuarterGuard
+
+공식 금융 문서의 **원문 근거·기간·연결 범위·통화·단위**를 확인해 계산하거나 보류하는 금융 검토 작업지입니다. AI 코딩 도구를 활용한 개인 프로젝트이며, 계산 판정은 규칙과 Decimal 연산으로 수행합니다.
+
+[공개 데모](https://quarterguard.onrender.com/) · [최신 지원 근거·공고 대조](docs/final-readiness-20261111.md) · [최종 사람 검수 묶음](docs/validation-kit/final-round-20261111.md) · [본인 코드 검토](docs/code-review-kit/README.md) · [서버 커밋 확인](https://quarterguard.onrender.com/health)
+
+## 현재 제품 지원 범위
+
+|영역|실제 지원|제한|
+|---|---|---|
+|분기 비교 작업지|삼성전자2024 반기·3분기 문서2건, 정본192개. 기간·연결/별도·통화 검증, 누적 차감, 실제 MCP 실행|등록 자료에 한정. 임의 PDF 업로드·전체 기업 지원 아님|
+|SK하이닉스 근거 검색|2025 Offering Circular의2024·2023 연결 재무제표3쪽·18셀|선택 문서 조건을 명시. 검색 후보는 자동 계산 답변이 아님|
+|SK하이닉스 선택 계산|연간 실적, 전년 말 현금·재고 잔액, 같은 표의 제품 매출 비중|음수 기저는 차이만 제공하고 증감률 보류. 재고 개월분은 정의 확인|
+|현대차 등 추가 문서|공식 원문 파싱·격리 평가 기록|공개 기업 선택에 등록한 제품 기능은 아님|
+|LLM 설명|공개 경로 모델 GPT-4.1-mini-2025-04-14. 호출은 키·승인·영속 사용량 기록 조건 충족 시만 가능|구조/문장 규칙 통과가 모든 의미의 정확성을 보장하지 않음|
+|제한형 도구 선택 실험|두 명시적 검색 조건 안에서 검색·근거 조회·비교 도구 선택을 검사하는 별도 실행기|공개 자동 실행 기능 아님. 실제 모델 선택 실호출은 별도 승인 후 기록|
+
+## 현재 검증과 미완료 사항
+
+- **원문:** 삼성2문서4표192셀과 SK하이닉스3쪽18셀을 원문 PDF부터 다시 대조했습니다. [이번 원문·MCP 기록](artifacts/final-hardening-20261111/).
+- **회귀:** 이번 Python317개 실행, 실패0·1개 건너뜀. Node14개 통과. 최종 결과는 [완료 기록](docs/final-readiness-20261111.md)에서 확인합니다.
+- **LLM:** v9는 기존 개발16건에 대한 GPT-5.4 mini 새 생성입니다. 제품 검사16/16, **b의 v9 문장 재검수는 대기**입니다. 제품과 동일 모델·프롬프트·응답 검사를 사용하는 새 실호출 실행기는 준비했으며, 과거 v9와 구분합니다.
+- **사람:** 외부 고유 참여자2명(a대학생, b금융 분야3년 경력의 친구). 실제 사용·후속 검수 기록이 있습니다. 새 SK 계산 검수와 새 사람 작성 평가는 아직 미수행입니다. 기존 본인 작성 SK5문항은 수정에 사용한 개발 사례입니다.
+- **운영:** 공개 서버의 작은 순차 표본을 측정했습니다. 최초30초 접속 시간초과도 보존했습니다. 고객 트래픽·가용성 보장·금융기관 배포 경험으로 표현하지 않습니다.
+- **본인 수행:** 기간2개·DART3개·추가 진단1개 테스트와 기간 진단 구분 코드 기록을 AI 작업과 구분했습니다.
+
+## 5분 재현
+
+1. 작업지에서 삼성 A/B 매출의 원문·페이지·행·열을 확인하고 +6.7916%를 확인합니다.
+2. B를 누적 또는 별도로 변경해 계산 보류를 확인하고 수정 버튼으로 복구합니다.
+3. 비교 검증의 실행 기록에서 실제 MCP와 준비된 기록 재생을 구분합니다.
+4. 근거 검색 → SK하이닉스 → 선택 근거로 계산에서 현금 증감, DRAM 비중, 음수 기준값 보류를 확인합니다.
+5. JSON을 저장해 원문 위치·A/B 조건·판정·공식을 재확인합니다. 개인 확인 표시는 계산 승인이 아닙니다.
+
+## 로컬 실행
+
+Python3.12 권장. 기본 앱·회귀 테스트는 유료 API 호출 없이 실행합니다.
+
+```bash
+git clone https://github.com/sokldjs554/quarterguard.git
+cd quarterguard
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python -m uvicorn quarterguard.api:app --host 127.0.0.1 --port 8000
+```
+
+```bash
+python -m unittest discover -s tests
+node --test tests/*.mjs
+python scripts/check_artifacts.py
+python -m quarterguard.final_evaluation --dry-run --output work/new-free-mcp-run
+```
+
+`--dry-run`은 실제 MCP를 호출하지만 도구 선택은 준비된 테스트 순서이며 LLM 호출0회입니다. 출력 폴더는 새 경로를 사용합니다. PDF 캐시가 필요한 테스트는 캐시가 없으면 건너뜁니다.
+
+## 실패·평가 원기록
+
+[원문 평가](docs/evaluation-v2.md) · [현대차 별도 평가](docs/hyundai-holdout-20261109.md) · [청킹·임베딩·실제 리랭커 비교](docs/ranking-v2.md) · [v9 생성 원기록](docs/llm-prose-v9-results-20261111.md) · [SK 최초 실패](docs/skhynix-human-baseline-20261111.md) · [SK 파싱·검색](docs/skhynix-source-support-20261111.md) · [SK 계산](docs/skhynix-calculations-20261111.md)
+
+[이번 정리 전 README](artifacts/final-hardening-20261111/README.before.md)와 모든 과거 평가·사람 판정은 보존했습니다. 역사 문서의 당시 미완료 상태를 나중 결과로 덮어쓰지 않습니다. 실제 API 호출과 저장 응답 재생, 원문 파싱과 fixture, 사람 검수와 AI 검사를 구분합니다.

@@ -1,0 +1,9 @@
+test_actual_reconciliation_still_passes (tests.test_mixed_amount_prose.MixedAmountProseTests.test_actual_reconciliation_still_passes) ... ok
+test_separate_explicit_conversion_is_not_confused_with_mixed_scale (tests.test_mixed_amount_prose.MixedAmountProseTests.test_separate_explicit_conversion_is_not_confused_with_mixed_scale) ... ok
+test_supported_plain_million_notation_is_not_blocked (tests.test_mixed_amount_prose.MixedAmountProseTests.test_supported_plain_million_notation_is_not_blocked) ... ok
+test_two_actual_mixed_scale_responses_are_withheld (tests.test_mixed_amount_prose.MixedAmountProseTests.test_two_actual_mixed_scale_responses_are_withheld) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.013s
+
+OK

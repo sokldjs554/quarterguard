@@ -1,0 +1,149 @@
+{
+  "id": "resp_0e7ce700b0ca8ed1016af481bdad5087d18a8cc45093b6ac01",
+  "object": "response",
+  "created_at": 1794408893,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "developer"
+  },
+  "completed_at": 1794408896,
+  "error": null,
+  "frequency_penalty": 0.0,
+  "image": {
+    "context_compression": "disabled"
+  },
+  "incomplete_details": null,
+  "instructions": "Explain in Korean. Copy status, issues and IDs in order. JSON value must exactly copy growth_pct or derived_value, or be null if absent; do not add units, commas or text, round or reformat it. Never override rejection, invent evidence, calculate or advise. Distinguish quarter/cumulative and consolidated/separate. Only issues and decision_basis justify withholding. Period failed_conditions are separate recalculations, not the tool execution trace; describe them as such. Adjacent three-month quarters can be compared; SCOPE_MISMATCH alone means scope, not date rejection. With evidence, never claim a search was empty. Only no_evidence permits 해당 검색 범위에서 확인할 수 없습니다; this does not mean results or reports do not exist. Describe all issue/status/diagnostic codes in plain Korean, never quote their labels. For rates, evidence order is current,base. Write base period 대비 current period. KRW is currency; use display_unit (e.g. 백만 원). scale is an internal multiplier, not a source heading. ONLY in explanation_ko prose, append % to every stated growth rate, including repeated values. For example JSON value \"6.7916\" and prose \"증가율 6.7916%\"; a withheld JSON value stays null. Name each fact's own document_title and PDF page from explanation_context in explanation_ko. With multiple document IDs, use explicit titles, never 같은 보고서/same report. Do not guess units or source locations. Use short Korean sentences.",
+  "max_output_tokens": 700,
+  "max_tool_calls": null,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "moderation": null,
+  "output": [
+    {
+      "id": "msg_0e7ce700b0ca8ed1016af481be3d2c87d19aba8f954c69f811",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\"status\":\"needs_review\",\"value\":null,\"issues\":[\"PERIOD_MISMATCH\"],\"evidence_ids\":[\"s24q3-CFS-revenue-2024-ytd-KRW\",\"s24q3-CFS-revenue-2023-q-KRW\"],\"explanation_ko\":\"이번 비교는 2024년 1월 1일부터 9월 30일까지의 9개월 누적 매출과 2023년 7월 1일부터 9월 30일까지의 3개월 매출을 비교하고 있습니다. 삼성전자 2024년 3분기 중간보고서(2024 3Q Interim Business Report, PDF 34페이지)에서, 2024년 9개월 누적 매출은 2,250억 8263만 4천 백만 원이고, 2023년 3분기 3개월 매출은 674억 4652만 백만 원으로 나타납니다. 그러나 두 기간은 개월 수가 다르며, 시작 월과 일도 다르기 때문에 직접 비교할 경우 기간 불일치 문제로 인한 부정확함이 있습니다. 따라서 이 비교는 적절하지 않으며 계산을 보류하는 것이 합당합니다.\"}"
+        }
+      ],
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0.0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "in_memory",
+  "reasoning": {
+    "context": null,
+    "effort": null,
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1.0,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "financial_explanation",
+      "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "verified",
+              "needs_review"
+            ]
+          },
+          "value": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              null
+            ]
+          },
+          "issues": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "s24q3-CFS-revenue-2024-ytd-KRW",
+                "s24q3-CFS-revenue-2023-q-KRW"
+              ]
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "explanation_ko": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "status",
+          "value",
+          "issues",
+          "evidence_ids",
+          "explanation_ko"
+        ]
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 1.0,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 1719,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 265,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 1984
+  },
+  "user": null,
+  "metadata": {}
+}

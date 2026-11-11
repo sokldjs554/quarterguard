@@ -1,0 +1,10 @@
+{
+  "workflow_run": 43043004749,
+  "artifact_id": 13865093922,
+  "zip_sha256": "f2a461d413b7f74da8ee8537fc9a7ab5fe35cc3d142f9226943b16477c1c88a8",
+  "execution_commit": "b0ab0434598e28f31f0ddf9c0d3d3cba13e21ffb",
+  "approved_max_calls": 28,
+  "approved_budget_usd": "0.22",
+  "source": "Actual OpenAI responses and real MCP tool traces; no prepared-response replay",
+  "human_reviewed": false
+}
