@@ -1,0 +1,14 @@
+E
+======================================================================
+ERROR: test_preflight_blocks_wrong_math_before_spend (tests.test_final_evaluation.EvaluationBudgetTests.test_preflight_blocks_wrong_math_before_spend)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-final/tests/test_final_evaluation.py", line 54, in test_preflight_blocks_wrong_math_before_spend
+    self.assertTrue(e.matches_public_preflight(case,result))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'quarterguard.final_evaluation' has no attribute 'matches_public_preflight'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.008s
+
+FAILED (errors=1)

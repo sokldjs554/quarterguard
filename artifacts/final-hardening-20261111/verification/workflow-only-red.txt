@@ -1,0 +1,14 @@
+F
+======================================================================
+FAIL: test_real_transport_is_restricted_to_guarded_workflow (tests.test_final_evaluation.EvaluationBudgetTests.test_real_transport_is_restricted_to_guarded_workflow)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-final/tests/test_final_evaluation.py", line 60, in test_real_transport_is_restricted_to_guarded_workflow
+    with patch.dict('os.environ',{},clear=True), self.assertRaisesRegex(ValueError,'AUTHORIZED_WORKFLOW'):
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+
+FAILED (failures=1)

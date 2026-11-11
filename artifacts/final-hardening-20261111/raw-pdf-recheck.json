@@ -1,0 +1,11 @@
+{
+  "documents": 2,
+  "tables": 4,
+  "cells": 192,
+  "all_equal_registered": true,
+  "source_hashes": {
+    "s24q3": "b61121662d91ca74227be02ae4e4829a8b923ca7d3cf443c89768f400ba3ab5f",
+    "s24q2": "0a035c6790f9a89767988396372d5be5e84be219dabf228054657a60da084dd4"
+  },
+  "method": "actual PDF page text -> parse_statement -> exact canonical cell equality; no writes to historical facts"
+}

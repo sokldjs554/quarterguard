@@ -1,0 +1,13 @@
+F
+======================================================================
+FAIL: test_crashed_runtime_never_scores_as_successful_hold (tests.test_human_holdout.HoldoutTests.test_crashed_runtime_never_scores_as_successful_hold)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-final/tests/test_human_holdout.py", line 42, in test_crashed_runtime_never_scores_as_successful_hold
+    self.assertFalse(report['rows'][0]['score']['passed'])
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 1 test in 0.026s
+
+FAILED (failures=1)

@@ -1,0 +1,17 @@
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pydantic_settings/sources/utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+test_actual_tools_compute_only_after_retrieval_and_read (tests.test_bounded_planner.PlannerTests.test_actual_tools_compute_only_after_retrieval_and_read) ... ok
+test_empty_search_holds_without_more_decisions (tests.test_bounded_planner.PlannerTests.test_empty_search_holds_without_more_decisions) ... ok
+test_fake_search_id_and_numeric_output_block (tests.test_bounded_planner.PlannerTests.test_fake_search_id_and_numeric_output_block) ... ok
+test_repeated_action_stops (tests.test_bounded_planner.PlannerTests.test_repeated_action_stops) ... ok
+test_search_cannot_change_user_query (tests.test_bounded_planner.PlannerTests.test_search_cannot_change_user_query) ... ok
+test_timeout_and_transport_error_clear_result (tests.test_bounded_planner.PlannerTests.test_timeout_and_transport_error_clear_result) ... ok
+test_unknown_tool_and_extra_fields_block (tests.test_bounded_planner.PlannerTests.test_unknown_tool_and_extra_fields_block) ... ok
+test_unread_id_cannot_compute (tests.test_bounded_planner.PlannerTests.test_unread_id_cannot_compute) ... ok
+test_wrong_direction_and_mode_block (tests.test_bounded_planner.PlannerTests.test_wrong_direction_and_mode_block) ... Executing <Task finished name='Task-42' coro=<PlannerTests.test_wrong_direction_and_mode_block() done, defined at /workspace/quarterguard-final/tests/test_bounded_planner.py:40> result=None created at /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py:100> took 0.140 seconds
+ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.598s
+
+OK

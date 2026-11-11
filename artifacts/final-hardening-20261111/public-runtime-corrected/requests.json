@@ -1,0 +1,262 @@
+[
+  {
+    "sample": 1,
+    "endpoint": "health",
+    "at_utc": "2026-11-11T12:13:01.619696+00:00",
+    "method": "GET",
+    "path": "/health",
+    "http_status": 200,
+    "bytes": 97,
+    "ok": true,
+    "health": {
+      "status": "ok",
+      "facts": 192,
+      "commit": "1bb6a8229d0d512c7bd362d8f318cf5d4fb5ded2",
+      "version": "1.4.0"
+    },
+    "elapsed_ms": 277.126
+  },
+  {
+    "sample": 1,
+    "endpoint": "page",
+    "at_utc": "2026-11-11T12:13:01.897256+00:00",
+    "method": "GET",
+    "path": "/",
+    "http_status": 200,
+    "bytes": 12807,
+    "ok": true,
+    "elapsed_ms": 268.654
+  },
+  {
+    "sample": 1,
+    "endpoint": "search",
+    "at_utc": "2026-11-11T12:13:02.166330+00:00",
+    "method": "GET",
+    "path": "/api/search?q=samsung%202024%20Q3%20CFS%20revenue%20quarter%20KRW",
+    "http_status": 200,
+    "bytes": 580,
+    "ok": true,
+    "hits": 1,
+    "elapsed_ms": 423.374
+  },
+  {
+    "sample": 1,
+    "endpoint": "calculation",
+    "at_utc": "2026-11-11T12:13:02.590132+00:00",
+    "method": "POST",
+    "path": "/api/source-calculations",
+    "http_status": 200,
+    "bytes": 3133,
+    "ok": true,
+    "growth_pct": "47.6820",
+    "elapsed_ms": 292.596
+  },
+  {
+    "sample": 2,
+    "endpoint": "health",
+    "at_utc": "2026-11-11T12:13:02.883363+00:00",
+    "method": "GET",
+    "path": "/health",
+    "http_status": 200,
+    "bytes": 97,
+    "ok": true,
+    "health": {
+      "status": "ok",
+      "facts": 192,
+      "commit": "1bb6a8229d0d512c7bd362d8f318cf5d4fb5ded2",
+      "version": "1.4.0"
+    },
+    "elapsed_ms": 263.072
+  },
+  {
+    "sample": 2,
+    "endpoint": "page",
+    "at_utc": "2026-11-11T12:13:03.148029+00:00",
+    "method": "GET",
+    "path": "/",
+    "http_status": 200,
+    "bytes": 12807,
+    "ok": true,
+    "elapsed_ms": 420.861
+  },
+  {
+    "sample": 2,
+    "endpoint": "search",
+    "at_utc": "2026-11-11T12:13:03.569224+00:00",
+    "method": "GET",
+    "path": "/api/search?q=samsung%202024%20Q3%20CFS%20revenue%20quarter%20KRW",
+    "http_status": 200,
+    "bytes": 580,
+    "ok": true,
+    "hits": 1,
+    "elapsed_ms": 286.817
+  },
+  {
+    "sample": 2,
+    "endpoint": "calculation",
+    "at_utc": "2026-11-11T12:13:03.856478+00:00",
+    "method": "POST",
+    "path": "/api/source-calculations",
+    "http_status": 200,
+    "bytes": 3133,
+    "ok": true,
+    "growth_pct": "47.6820",
+    "elapsed_ms": 281.338
+  },
+  {
+    "sample": 3,
+    "endpoint": "health",
+    "at_utc": "2026-11-11T12:13:04.138192+00:00",
+    "method": "GET",
+    "path": "/health",
+    "http_status": 200,
+    "bytes": 97,
+    "ok": true,
+    "health": {
+      "status": "ok",
+      "facts": 192,
+      "commit": "1bb6a8229d0d512c7bd362d8f318cf5d4fb5ded2",
+      "version": "1.4.0"
+    },
+    "elapsed_ms": 261.411
+  },
+  {
+    "sample": 3,
+    "endpoint": "page",
+    "at_utc": "2026-11-11T12:13:04.399928+00:00",
+    "method": "GET",
+    "path": "/",
+    "http_status": 200,
+    "bytes": 12807,
+    "ok": true,
+    "elapsed_ms": 282.29
+  },
+  {
+    "sample": 3,
+    "endpoint": "search",
+    "at_utc": "2026-11-11T12:13:04.682529+00:00",
+    "method": "GET",
+    "path": "/api/search?q=samsung%202024%20Q3%20CFS%20revenue%20quarter%20KRW",
+    "http_status": 200,
+    "bytes": 580,
+    "ok": true,
+    "hits": 1,
+    "elapsed_ms": 275.833
+  },
+  {
+    "sample": 3,
+    "endpoint": "calculation",
+    "at_utc": "2026-11-11T12:13:04.958716+00:00",
+    "method": "POST",
+    "path": "/api/source-calculations",
+    "http_status": 200,
+    "bytes": 3133,
+    "ok": true,
+    "growth_pct": "47.6820",
+    "elapsed_ms": 269.124
+  },
+  {
+    "sample": 4,
+    "endpoint": "health",
+    "at_utc": "2026-11-11T12:13:05.228365+00:00",
+    "method": "GET",
+    "path": "/health",
+    "http_status": 200,
+    "bytes": 97,
+    "ok": true,
+    "health": {
+      "status": "ok",
+      "facts": 192,
+      "commit": "1bb6a8229d0d512c7bd362d8f318cf5d4fb5ded2",
+      "version": "1.4.0"
+    },
+    "elapsed_ms": 269.636
+  },
+  {
+    "sample": 4,
+    "endpoint": "page",
+    "at_utc": "2026-11-11T12:13:05.498396+00:00",
+    "method": "GET",
+    "path": "/",
+    "http_status": 200,
+    "bytes": 12807,
+    "ok": true,
+    "elapsed_ms": 263.795
+  },
+  {
+    "sample": 4,
+    "endpoint": "search",
+    "at_utc": "2026-11-11T12:13:05.763881+00:00",
+    "method": "GET",
+    "path": "/api/search?q=samsung%202024%20Q3%20CFS%20revenue%20quarter%20KRW",
+    "http_status": 200,
+    "bytes": 580,
+    "ok": true,
+    "hits": 1,
+    "elapsed_ms": 282.488
+  },
+  {
+    "sample": 4,
+    "endpoint": "calculation",
+    "at_utc": "2026-11-11T12:13:06.046583+00:00",
+    "method": "POST",
+    "path": "/api/source-calculations",
+    "http_status": 200,
+    "bytes": 3133,
+    "ok": true,
+    "growth_pct": "47.6820",
+    "elapsed_ms": 276.036
+  },
+  {
+    "sample": 5,
+    "endpoint": "health",
+    "at_utc": "2026-11-11T12:13:06.323189+00:00",
+    "method": "GET",
+    "path": "/health",
+    "http_status": 200,
+    "bytes": 97,
+    "ok": true,
+    "health": {
+      "status": "ok",
+      "facts": 192,
+      "commit": "1bb6a8229d0d512c7bd362d8f318cf5d4fb5ded2",
+      "version": "1.4.0"
+    },
+    "elapsed_ms": 295.947
+  },
+  {
+    "sample": 5,
+    "endpoint": "page",
+    "at_utc": "2026-11-11T12:13:06.619537+00:00",
+    "method": "GET",
+    "path": "/",
+    "http_status": 200,
+    "bytes": 12807,
+    "ok": true,
+    "elapsed_ms": 269.231
+  },
+  {
+    "sample": 5,
+    "endpoint": "search",
+    "at_utc": "2026-11-11T12:13:06.889376+00:00",
+    "method": "GET",
+    "path": "/api/search?q=samsung%202024%20Q3%20CFS%20revenue%20quarter%20KRW",
+    "http_status": 200,
+    "bytes": 580,
+    "ok": true,
+    "hits": 1,
+    "elapsed_ms": 268.84
+  },
+  {
+    "sample": 5,
+    "endpoint": "calculation",
+    "at_utc": "2026-11-11T12:13:07.158633+00:00",
+    "method": "POST",
+    "path": "/api/source-calculations",
+    "http_status": 200,
+    "bytes": 3133,
+    "ok": true,
+    "growth_pct": "47.6820",
+    "elapsed_ms": 264.222
+  }
+]

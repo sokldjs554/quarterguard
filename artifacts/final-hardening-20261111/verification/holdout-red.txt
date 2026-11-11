@@ -1,0 +1,18 @@
+E
+======================================================================
+ERROR: test_human_holdout (unittest.loader._FailedTest.test_human_holdout)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_human_holdout
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-final/tests/test_human_holdout.py", line 3, in <module>
+    from quarterguard import human_holdout as h
+ImportError: cannot import name 'human_holdout' from 'quarterguard' (/workspace/quarterguard-final/quarterguard/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
