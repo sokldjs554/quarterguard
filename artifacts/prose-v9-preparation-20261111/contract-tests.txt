@@ -1,0 +1,13 @@
+test_code_change_and_missing_approval_precede_any_http_or_journal (tests.test_live_explanations_v9.V9GenerationFollowupBatchTests.test_code_change_and_missing_approval_precede_any_http_or_journal) ... ok
+test_completed_sixteen_preserve_blank_human_labels_and_separate_cohorts (tests.test_live_explanations_v9.V9GenerationFollowupBatchTests.test_completed_sixteen_preserve_blank_human_labels_and_separate_cohorts) ... ok
+test_disclosed_bad_prose_is_preserved_and_current_product_gate_rejects (tests.test_live_explanations_v9.V9GenerationFollowupBatchTests.test_disclosed_bad_prose_is_preserved_and_current_product_gate_rejects) ... ok
+test_http_timeout_and_invalid_response_stop_without_retry_or_secret_leak (tests.test_live_explanations_v9.V9GenerationFollowupBatchTests.test_http_timeout_and_invalid_response_stop_without_retry_or_secret_leak) ... ok
+test_modified_inputs_fail_even_with_recomputed_digest (tests.test_live_explanations_v9.V9GenerationFollowupBatchTests.test_modified_inputs_fail_even_with_recomputed_digest) ... ok
+test_oversized_request_and_wrong_returned_model_fail_closed (tests.test_live_explanations_v9.V9GenerationFollowupBatchTests.test_oversized_request_and_wrong_returned_model_fail_closed) ... ok
+test_two_groups_use_frozen_product_without_registering_production_facts (tests.test_live_explanations_v9.V9GenerationFollowupBatchTests.test_two_groups_use_frozen_product_without_registering_production_facts) ... ok
+test_usage_over_limit_preserves_cost_and_stops (tests.test_live_explanations_v9.V9GenerationFollowupBatchTests.test_usage_over_limit_preserves_cost_and_stops) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.241s
+
+OK
