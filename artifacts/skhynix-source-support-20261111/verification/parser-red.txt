@@ -1,0 +1,32 @@
+test_product_subsection_required_and_total_arithmetic_checked (tests.test_skhynix_sources.SourceParserTests.test_product_subsection_required_and_total_arithmetic_checked) ... FAIL
+test_rejects_ambiguous_or_incomplete_table (tests.test_skhynix_sources.SourceParserTests.test_rejects_ambiguous_or_incomplete_table) ... FAIL
+test_three_tables_values_dates_columns_and_blank_total (tests.test_skhynix_sources.SourceParserTests.test_three_tables_values_dates_columns_and_blank_total) ... FAIL
+
+======================================================================
+FAIL: test_product_subsection_required_and_total_arithmetic_checked (tests.test_skhynix_sources.SourceParserTests.test_product_subsection_required_and_total_arithmetic_checked)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-skhynix-support/tests/test_skhynix_sources.py", line 11, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('quarterguard.source_evidence'),
+AssertionError: unexpectedly None : Source-evidence adapter is not implemented
+
+======================================================================
+FAIL: test_rejects_ambiguous_or_incomplete_table (tests.test_skhynix_sources.SourceParserTests.test_rejects_ambiguous_or_incomplete_table)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-skhynix-support/tests/test_skhynix_sources.py", line 11, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('quarterguard.source_evidence'),
+AssertionError: unexpectedly None : Source-evidence adapter is not implemented
+
+======================================================================
+FAIL: test_three_tables_values_dates_columns_and_blank_total (tests.test_skhynix_sources.SourceParserTests.test_three_tables_values_dates_columns_and_blank_total)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-skhynix-support/tests/test_skhynix_sources.py", line 11, in setUp
+    self.assertIsNotNone(importlib.util.find_spec('quarterguard.source_evidence'),
+AssertionError: unexpectedly None : Source-evidence adapter is not implemented
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=3)

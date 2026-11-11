@@ -1,0 +1,340 @@
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+.................................................E....E...............................s...................E...EEEEEEEEEEE......................................./opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pydantic_settings/sources/utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+Processing request of type ListToolsRequest
+Processing request of type CallToolRequest
+........./opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pydantic_settings/sources/utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type ListToolsRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+................................................................................./opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pydantic_settings/sources/utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+Processing request of type ListToolsRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+.................
+======================================================================
+ERROR: test_historical_policy_is_hash_checked_and_comparison_scores_unchanged (test_explanation_decision_guards.DecisionGuardTests.test_historical_policy_is_hash_checked_and_comparison_scores_unchanged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-skhynix-support/tests/test_explanation_decision_guards.py", line 87, in test_historical_policy_is_hash_checked_and_comparison_scores_unchanged
+    old=load_frozen_followup()
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/frozen_followup.py", line 38, in load_frozen_followup
+    audit.validate_freeze(frozen)
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v4.py", line 140, in validate_freeze
+    raise ValueError('FREEZE_CODE_OR_CONTRACT_MISMATCH')
+ValueError: FREEZE_CODE_OR_CONTRACT_MISMATCH
+
+======================================================================
+ERROR: test_explanation_followup_comparison (unittest.loader._FailedTest.test_explanation_followup_comparison)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_explanation_followup_comparison
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "/workspace/quarterguard-skhynix-support/tests/test_explanation_followup_comparison.py", line 13, in <module>
+    spec.loader.exec_module(comparison)
+  File "/workspace/quarterguard-skhynix-support/scripts/compare_explanation_followup.py", line 12, in <module>
+    frozen_policy = load_frozen_followup()
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/frozen_followup.py", line 38, in load_frozen_followup
+    audit.validate_freeze(frozen)
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v4.py", line 140, in validate_freeze
+    raise ValueError('FREEZE_CODE_OR_CONTRACT_MISMATCH')
+ValueError: FREEZE_CODE_OR_CONTRACT_MISMATCH
+
+
+======================================================================
+ERROR: test_frozen_cases_cover_all_dimensions_and_tampering_fails (test_live_explanations_v3.LiveExplanationV3Tests.test_frozen_cases_cover_all_dimensions_and_tampering_fails)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-skhynix-support/tests/test_live_explanations_v3.py", line 62, in test_frozen_cases_cover_all_dimensions_and_tampering_fails
+    m.validate_freeze(frozen)
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v3.py", line 175, in validate_freeze
+    raise ValueError('FREEZE_CODE_OR_CONTRACT_MISMATCH')
+ValueError: FREEZE_CODE_OR_CONTRACT_MISMATCH
+
+======================================================================
+ERROR: test_live_explanations_v4 (unittest.loader._FailedTest.test_live_explanations_v4)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_live_explanations_v4
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "/workspace/quarterguard-skhynix-support/tests/test_live_explanations_v4.py", line 11, in <module>
+    m = load_frozen_followup()
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/frozen_followup.py", line 38, in load_frozen_followup
+    audit.validate_freeze(frozen)
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v4.py", line 140, in validate_freeze
+    raise ValueError('FREEZE_CODE_OR_CONTRACT_MISMATCH')
+ValueError: FREEZE_CODE_OR_CONTRACT_MISMATCH
+
+
+======================================================================
+ERROR: test_approval_and_journal_prevent_calls_and_preserve_old_attempt (test_live_explanations_v5.CurrentGuardBatchTests.test_approval_and_journal_prevent_calls_and_preserve_old_attempt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-skhynix-support/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v5.py", line 123, in prepare_freeze
+    load_frozen_followup().validate_freeze(original)
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/frozen_followup.py", line 38, in load_frozen_followup
+    audit.validate_freeze(frozen)
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v4.py", line 140, in validate_freeze
+    raise ValueError('FREEZE_CODE_OR_CONTRACT_MISMATCH')
+ValueError: FREEZE_CODE_OR_CONTRACT_MISMATCH
+
+======================================================================
+ERROR: test_changed_source_blocks_before_reading_key_or_contacting_provider (test_live_explanations_v5.CurrentGuardBatchTests.test_changed_source_blocks_before_reading_key_or_contacting_provider)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-skhynix-support/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v5.py", line 123, in prepare_freeze
+    load_frozen_followup().validate_freeze(original)
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/frozen_followup.py", line 38, in load_frozen_followup
+    audit.validate_freeze(frozen)
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v4.py", line 140, in validate_freeze
+    raise ValueError('FREEZE_CODE_OR_CONTRACT_MISMATCH')
+ValueError: FREEZE_CODE_OR_CONTRACT_MISMATCH
+
+======================================================================
+ERROR: test_comparison_reaudits_both_batches_without_copying_human_labels (test_live_explanations_v5.CurrentGuardBatchTests.test_comparison_reaudits_both_batches_without_copying_human_labels)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-skhynix-support/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v5.py", line 123, in prepare_freeze
+    load_frozen_followup().validate_freeze(original)
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/frozen_followup.py", line 38, in load_frozen_followup
+    audit.validate_freeze(frozen)
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v4.py", line 140, in validate_freeze
+    raise ValueError('FREEZE_CODE_OR_CONTRACT_MISMATCH')
+ValueError: FREEZE_CODE_OR_CONTRACT_MISMATCH
+
+======================================================================
+ERROR: test_current_product_instructions_context_and_schema_reach_every_payload (test_live_explanations_v5.CurrentGuardBatchTests.test_current_product_instructions_context_and_schema_reach_every_payload)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-skhynix-support/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v5.py", line 123, in prepare_freeze
+    load_frozen_followup().validate_freeze(original)
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/frozen_followup.py", line 38, in load_frozen_followup
+    audit.validate_freeze(frozen)
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v4.py", line 140, in validate_freeze
+    raise ValueError('FREEZE_CODE_OR_CONTRACT_MISMATCH')
+ValueError: FREEZE_CODE_OR_CONTRACT_MISMATCH
+
+======================================================================
+ERROR: test_provider_schema_rejection_stops_once_and_preserves_http_failure (test_live_explanations_v5.CurrentGuardBatchTests.test_provider_schema_rejection_stops_once_and_preserves_http_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-skhynix-support/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v5.py", line 123, in prepare_freeze
+    load_frozen_followup().validate_freeze(original)
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/frozen_followup.py", line 38, in load_frozen_followup
+    audit.validate_freeze(frozen)
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v4.py", line 140, in validate_freeze
+    raise ValueError('FREEZE_CODE_OR_CONTRACT_MISMATCH')
+ValueError: FREEZE_CODE_OR_CONTRACT_MISMATCH
+
+======================================================================
+ERROR: test_same_disclosed_cases_preserve_previous_mcp_inputs_and_drafts (test_live_explanations_v5.CurrentGuardBatchTests.test_same_disclosed_cases_preserve_previous_mcp_inputs_and_drafts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-skhynix-support/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v5.py", line 123, in prepare_freeze
+    load_frozen_followup().validate_freeze(original)
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/frozen_followup.py", line 38, in load_frozen_followup
+    audit.validate_freeze(frozen)
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v4.py", line 140, in validate_freeze
+    raise ValueError('FREEZE_CODE_OR_CONTRACT_MISMATCH')
+ValueError: FREEZE_CODE_OR_CONTRACT_MISMATCH
+
+======================================================================
+ERROR: test_tampered_input_rejected_even_with_recomputed_freeze_digest (test_live_explanations_v5.CurrentGuardBatchTests.test_tampered_input_rejected_even_with_recomputed_freeze_digest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-skhynix-support/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v5.py", line 123, in prepare_freeze
+    load_frozen_followup().validate_freeze(original)
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/frozen_followup.py", line 38, in load_frozen_followup
+    audit.validate_freeze(frozen)
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v4.py", line 140, in validate_freeze
+    raise ValueError('FREEZE_CODE_OR_CONTRACT_MISMATCH')
+ValueError: FREEZE_CODE_OR_CONTRACT_MISMATCH
+
+======================================================================
+ERROR: test_timeout_stops_once_without_retry_or_exposing_key (test_live_explanations_v5.CurrentGuardBatchTests.test_timeout_stops_once_without_retry_or_exposing_key)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-skhynix-support/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v5.py", line 123, in prepare_freeze
+    load_frozen_followup().validate_freeze(original)
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/frozen_followup.py", line 38, in load_frozen_followup
+    audit.validate_freeze(frozen)
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v4.py", line 140, in validate_freeze
+    raise ValueError('FREEZE_CODE_OR_CONTRACT_MISMATCH')
+ValueError: FREEZE_CODE_OR_CONTRACT_MISMATCH
+
+======================================================================
+ERROR: test_usage_over_cap_stops_and_preserves_measured_cost (test_live_explanations_v5.CurrentGuardBatchTests.test_usage_over_cap_stops_and_preserves_measured_cost)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-skhynix-support/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v5.py", line 123, in prepare_freeze
+    load_frozen_followup().validate_freeze(original)
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/frozen_followup.py", line 38, in load_frozen_followup
+    audit.validate_freeze(frozen)
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v4.py", line 140, in validate_freeze
+    raise ValueError('FREEZE_CODE_OR_CONTRACT_MISMATCH')
+ValueError: FREEZE_CODE_OR_CONTRACT_MISMATCH
+
+======================================================================
+ERROR: test_wrong_id_is_preserved_for_audit_but_would_not_pass_product_gate (test_live_explanations_v5.CurrentGuardBatchTests.test_wrong_id_is_preserved_for_audit_but_would_not_pass_product_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-skhynix-support/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v5.py", line 123, in prepare_freeze
+    load_frozen_followup().validate_freeze(original)
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-skhynix-support/quarterguard/frozen_followup.py", line 38, in load_frozen_followup
+    audit.validate_freeze(frozen)
+  File "/workspace/quarterguard-skhynix-support/quarterguard/evaluate_live_explanations_v4.py", line 140, in validate_freeze
+    raise ValueError('FREEZE_CODE_OR_CONTRACT_MISMATCH')
+ValueError: FREEZE_CODE_OR_CONTRACT_MISMATCH
+
+----------------------------------------------------------------------
+Ran 267 tests in 35.142s
+
+FAILED (errors=14, skipped=1)

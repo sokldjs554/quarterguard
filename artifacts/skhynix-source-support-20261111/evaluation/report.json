@@ -1,0 +1,1852 @@
+{
+  "at_utc": "2026-11-11T08:52:53.234998+00:00",
+  "scope": "phase 1 source evidence; no calculated answers",
+  "raw_pdf": {
+    "sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+    "pages_attempted": 3,
+    "pages_parsed": 3,
+    "cells": 18,
+    "parse_elapsed_ms": 165.42435399605893,
+    "pdf_to_registered_cells_exact": true,
+    "source_discovery": "Three user-identified pages; selected rows, not entire report"
+  },
+  "preexisting_selected_cell_annotations": {
+    "origin": "User submitted values, AI source-reviewed before adapter development; not new human review",
+    "checks": [
+      {
+        "cell_id": "skh2024annual-in-2025oc:financial-position:cash:2024",
+        "passed": true,
+        "gold": {
+          "pdf_page": 191,
+          "printed_page": "F-73",
+          "literal_row_or_section": "Cash and cash equivalents",
+          "year_column": "2024",
+          "value_million_krw": "11205117",
+          "currency": "KRW",
+          "scale": 1000000,
+          "scope": "CFS",
+          "period_type": "instant",
+          "period": "2024-12-31",
+          "matches_submission": true
+        }
+      },
+      {
+        "cell_id": "skh2024annual-in-2025oc:financial-position:cash:2023",
+        "passed": true,
+        "gold": {
+          "pdf_page": 191,
+          "printed_page": "F-73",
+          "literal_row_or_section": "Cash and cash equivalents",
+          "year_column": "2023",
+          "value_million_krw": "7587329",
+          "currency": "KRW",
+          "scale": 1000000,
+          "scope": "CFS",
+          "period_type": "instant",
+          "period": "2023-12-31",
+          "matches_submission": true
+        }
+      },
+      {
+        "cell_id": "skh2024annual-in-2025oc:financial-position:inventory:2024",
+        "passed": true,
+        "gold": {
+          "pdf_page": 191,
+          "printed_page": "F-73",
+          "literal_row_or_section": "Inventories, net",
+          "year_column": "2024",
+          "value_million_krw": "13313937",
+          "currency": "KRW",
+          "scale": 1000000,
+          "scope": "CFS",
+          "period_type": "instant",
+          "period": "2024-12-31",
+          "matches_submission": true
+        }
+      },
+      {
+        "cell_id": "skh2024annual-in-2025oc:financial-position:inventory:2023",
+        "passed": true,
+        "gold": {
+          "pdf_page": 191,
+          "printed_page": "F-73",
+          "literal_row_or_section": "Inventories, net",
+          "year_column": "2023",
+          "value_million_krw": "13480659",
+          "currency": "KRW",
+          "scale": 1000000,
+          "scope": "CFS",
+          "period_type": "instant",
+          "period": "2023-12-31",
+          "matches_submission": true
+        }
+      },
+      {
+        "cell_id": "skh2024annual-in-2025oc:income:revenue:2024",
+        "passed": true,
+        "gold": {
+          "pdf_page": 193,
+          "printed_page": "F-75",
+          "literal_row_or_section": "Revenue",
+          "year_column": "2024",
+          "value_million_krw": "66192960",
+          "currency": "KRW",
+          "scale": 1000000,
+          "scope": "CFS",
+          "period_type": "duration",
+          "period": "2024-01-01/2024-12-31",
+          "matches_submission": true
+        }
+      },
+      {
+        "cell_id": "skh2024annual-in-2025oc:income:revenue:2023",
+        "passed": true,
+        "gold": {
+          "pdf_page": 193,
+          "printed_page": "F-75",
+          "literal_row_or_section": "Revenue",
+          "year_column": "2023",
+          "value_million_krw": "32765719",
+          "currency": "KRW",
+          "scale": 1000000,
+          "scope": "CFS",
+          "period_type": "duration",
+          "period": "2023-01-01/2023-12-31",
+          "matches_submission": true
+        }
+      },
+      {
+        "cell_id": "skh2024annual-in-2025oc:income:operating_profit:2024",
+        "passed": true,
+        "gold": {
+          "pdf_page": 193,
+          "printed_page": "F-75",
+          "literal_row_or_section": "Operating profit (loss)",
+          "year_column": "2024",
+          "value_million_krw": "23467319",
+          "currency": "KRW",
+          "scale": 1000000,
+          "scope": "CFS",
+          "period_type": "duration",
+          "period": "2024-01-01/2024-12-31",
+          "matches_submission": true
+        }
+      },
+      {
+        "cell_id": "skh2024annual-in-2025oc:income:operating_profit:2023",
+        "passed": true,
+        "gold": {
+          "pdf_page": 193,
+          "printed_page": "F-75",
+          "literal_row_or_section": "Operating profit (loss)",
+          "year_column": "2023",
+          "value_million_krw": "-7730313",
+          "currency": "KRW",
+          "scale": 1000000,
+          "scope": "CFS",
+          "period_type": "duration",
+          "period": "2023-01-01/2023-12-31",
+          "matches_submission": true
+        }
+      },
+      {
+        "cell_id": "skh2024annual-in-2025oc:note-24-2:dram:2024",
+        "passed": true,
+        "gold": {
+          "pdf_page": 264,
+          "printed_page": "F-146",
+          "literal_row_or_section": "24(2) DRAM",
+          "year_column": "2024",
+          "value_million_krw": "44731664",
+          "currency": "KRW",
+          "scale": 1000000,
+          "scope": "CFS",
+          "period_type": "duration",
+          "period": "2024-01-01/2024-12-31",
+          "matches_submission": true
+        }
+      },
+      {
+        "cell_id": "skh2024annual-in-2025oc:note-24-2:product_total:2024",
+        "passed": true,
+        "gold": {
+          "pdf_page": 264,
+          "printed_page": "F-146",
+          "literal_row_or_section": "24(2) unlabeled total row after Others",
+          "year_column": "2024",
+          "value_million_krw": "66192960",
+          "currency": "KRW",
+          "scale": 1000000,
+          "scope": "CFS",
+          "period_type": "duration",
+          "period": "2024-01-01/2024-12-31",
+          "matches_submission": true
+        }
+      }
+    ],
+    "passed": 10
+  },
+  "queries": [
+    {
+      "id": "SKH1",
+      "question": "현금은 2023년 말보다 얼마나 늘었나?",
+      "exact_required_cell_set": true,
+      "result": {
+        "status": "needs_clarification",
+        "answer_status": "not_calculated",
+        "calculated_answer": null,
+        "context": {
+          "source": "selected_document",
+          "document_id": "skh2024annual-in-2025oc",
+          "title": "SK hynix 2025 Offering Circular · 2024·2023 연결재무제표",
+          "company": "skhynix",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000,
+          "available_years": [
+            2024,
+            2023
+          ],
+          "note": "기업·연결·원화·백만 원은 선택한 문서의 조건입니다. 질문에서 모두 명시한 조건은 아닙니다."
+        },
+        "hits": [
+          {
+            "cell": {
+              "id": "skh2024annual-in-2025oc:financial-position:cash:2024",
+              "document_id": "skh2024annual-in-2025oc",
+              "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+              "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+              "company": "skhynix",
+              "scope": "CFS",
+              "currency": "KRW",
+              "scale": 1000000,
+              "metric": "cash",
+              "value": "11205117",
+              "raw_value": "11,205,117",
+              "year": 2024,
+              "period_kind": "instant",
+              "as_of": "2024-12-31",
+              "start": null,
+              "end": null,
+              "page": 191,
+              "printed_page": "F-73",
+              "table_id": "financial-position",
+              "table_title": "Consolidated Statements of Financial Position",
+              "row": "Cash and cash equivalents",
+              "row_role": "labelled",
+              "column": "2024",
+              "amount_column": 1,
+              "raw_line": "Cash and cash equivalents 5,6 W 11,205,117 W 7,587,329",
+              "text_sha256": "7f6f202eef7a7f0b47f45a4a3abb4e32dd802e5a621aa18ede5489e7879e9657"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "skh2024annual-in-2025oc:financial-position:cash:2023",
+              "document_id": "skh2024annual-in-2025oc",
+              "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+              "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+              "company": "skhynix",
+              "scope": "CFS",
+              "currency": "KRW",
+              "scale": 1000000,
+              "metric": "cash",
+              "value": "7587329",
+              "raw_value": "7,587,329",
+              "year": 2023,
+              "period_kind": "instant",
+              "as_of": "2023-12-31",
+              "start": null,
+              "end": null,
+              "page": 191,
+              "printed_page": "F-73",
+              "table_id": "financial-position",
+              "table_title": "Consolidated Statements of Financial Position",
+              "row": "Cash and cash equivalents",
+              "row_role": "labelled",
+              "column": "2023",
+              "amount_column": 2,
+              "raw_line": "Cash and cash equivalents 5,6 W 11,205,117 W 7,587,329",
+              "text_sha256": "7f6f202eef7a7f0b47f45a4a3abb4e32dd802e5a621aa18ede5489e7879e9657"
+            },
+            "role": "requested_evidence"
+          }
+        ],
+        "issues": [
+          "CURRENT_YEAR_CONFIRMATION"
+        ],
+        "messages": [
+          "질문에 기준 연도가 없어 문서의 2024·2023년 후보를 함께 표시합니다. 비교할 연도를 확인해 주세요."
+        ],
+        "blocked": false,
+        "unknown_terms": [],
+        "execution": "deterministic_source_retrieval"
+      },
+      "elapsed_ms": 12.292719002289232,
+      "human_authored_question": true,
+      "required_cell_mapping": "AI-authored from user evidence locations; development, not fresh holdout"
+    },
+    {
+      "id": "SKH2",
+      "question": "재고자산은 매출이 늘어난 2024년에 함께 증가했나?",
+      "exact_required_cell_set": true,
+      "result": {
+        "status": "needs_clarification",
+        "answer_status": "not_calculated",
+        "calculated_answer": null,
+        "context": {
+          "source": "selected_document",
+          "document_id": "skh2024annual-in-2025oc",
+          "title": "SK hynix 2025 Offering Circular · 2024·2023 연결재무제표",
+          "company": "skhynix",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000,
+          "available_years": [
+            2024,
+            2023
+          ],
+          "note": "기업·연결·원화·백만 원은 선택한 문서의 조건입니다. 질문에서 모두 명시한 조건은 아닙니다."
+        },
+        "hits": [
+          {
+            "cell": {
+              "id": "skh2024annual-in-2025oc:financial-position:inventory:2024",
+              "document_id": "skh2024annual-in-2025oc",
+              "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+              "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+              "company": "skhynix",
+              "scope": "CFS",
+              "currency": "KRW",
+              "scale": 1000000,
+              "metric": "inventory",
+              "value": "13313937",
+              "raw_value": "13,313,937",
+              "year": 2024,
+              "period_kind": "instant",
+              "as_of": "2024-12-31",
+              "start": null,
+              "end": null,
+              "page": 191,
+              "printed_page": "F-73",
+              "table_id": "financial-position",
+              "table_title": "Consolidated Statements of Financial Position",
+              "row": "Inventories, net",
+              "row_role": "labelled",
+              "column": "2024",
+              "amount_column": 1,
+              "raw_line": "Inventories, net 9 13,313,937 13,480,659",
+              "text_sha256": "7f6f202eef7a7f0b47f45a4a3abb4e32dd802e5a621aa18ede5489e7879e9657"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "skh2024annual-in-2025oc:financial-position:inventory:2023",
+              "document_id": "skh2024annual-in-2025oc",
+              "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+              "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+              "company": "skhynix",
+              "scope": "CFS",
+              "currency": "KRW",
+              "scale": 1000000,
+              "metric": "inventory",
+              "value": "13480659",
+              "raw_value": "13,480,659",
+              "year": 2023,
+              "period_kind": "instant",
+              "as_of": "2023-12-31",
+              "start": null,
+              "end": null,
+              "page": 191,
+              "printed_page": "F-73",
+              "table_id": "financial-position",
+              "table_title": "Consolidated Statements of Financial Position",
+              "row": "Inventories, net",
+              "row_role": "labelled",
+              "column": "2023",
+              "amount_column": 2,
+              "raw_line": "Inventories, net 9 13,313,937 13,480,659",
+              "text_sha256": "7f6f202eef7a7f0b47f45a4a3abb4e32dd802e5a621aa18ede5489e7879e9657"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "skh2024annual-in-2025oc:income:revenue:2024",
+              "document_id": "skh2024annual-in-2025oc",
+              "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+              "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+              "company": "skhynix",
+              "scope": "CFS",
+              "currency": "KRW",
+              "scale": 1000000,
+              "metric": "revenue",
+              "value": "66192960",
+              "raw_value": "66,192,960",
+              "year": 2024,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "page": 193,
+              "printed_page": "F-75",
+              "table_id": "income",
+              "table_title": "Consolidated Statements of Comprehensive Income (Loss)",
+              "row": "Revenue",
+              "row_role": "labelled",
+              "column": "2024",
+              "amount_column": 1,
+              "raw_line": "Revenue 4,24,31 W 66,192,960 W 32,765,719",
+              "text_sha256": "398c1b6e49dbb57ba4925ec236eccfe3ca79602fab86a358d65bf04e377e7be9"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "skh2024annual-in-2025oc:income:revenue:2023",
+              "document_id": "skh2024annual-in-2025oc",
+              "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+              "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+              "company": "skhynix",
+              "scope": "CFS",
+              "currency": "KRW",
+              "scale": 1000000,
+              "metric": "revenue",
+              "value": "32765719",
+              "raw_value": "32,765,719",
+              "year": 2023,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "page": 193,
+              "printed_page": "F-75",
+              "table_id": "income",
+              "table_title": "Consolidated Statements of Comprehensive Income (Loss)",
+              "row": "Revenue",
+              "row_role": "labelled",
+              "column": "2023",
+              "amount_column": 2,
+              "raw_line": "Revenue 4,24,31 W 66,192,960 W 32,765,719",
+              "text_sha256": "398c1b6e49dbb57ba4925ec236eccfe3ca79602fab86a358d65bf04e377e7be9"
+            },
+            "role": "requested_evidence"
+          }
+        ],
+        "issues": [
+          "COMPARATIVE_COLUMNS"
+        ],
+        "messages": [
+          "변화 질문에 문서의 두 연도 후보를 함께 표시합니다. 비교 조건을 확인해 주세요."
+        ],
+        "blocked": false,
+        "unknown_terms": [],
+        "execution": "deterministic_source_retrieval"
+      },
+      "elapsed_ms": 2.1276799961924553,
+      "human_authored_question": true,
+      "required_cell_mapping": "AI-authored from user evidence locations; development, not fresh holdout"
+    },
+    {
+      "id": "SKH3",
+      "question": "2024년 DRAM 매출은 전체 매출의 몇 %인가?",
+      "exact_required_cell_set": true,
+      "result": {
+        "status": "evidence_candidates",
+        "answer_status": "not_calculated",
+        "calculated_answer": null,
+        "context": {
+          "source": "selected_document",
+          "document_id": "skh2024annual-in-2025oc",
+          "title": "SK hynix 2025 Offering Circular · 2024·2023 연결재무제표",
+          "company": "skhynix",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000,
+          "available_years": [
+            2024,
+            2023
+          ],
+          "note": "기업·연결·원화·백만 원은 선택한 문서의 조건입니다. 질문에서 모두 명시한 조건은 아닙니다."
+        },
+        "hits": [
+          {
+            "cell": {
+              "id": "skh2024annual-in-2025oc:note-24-2:dram:2024",
+              "document_id": "skh2024annual-in-2025oc",
+              "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+              "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+              "company": "skhynix",
+              "scope": "CFS",
+              "currency": "KRW",
+              "scale": 1000000,
+              "metric": "dram",
+              "value": "44731664",
+              "raw_value": "44,731,664",
+              "year": 2024,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "page": 264,
+              "printed_page": "F-146",
+              "table_id": "note-24-2",
+              "table_title": "Notes to the Consolidated Financial Statements · 24. Revenue (2) product and service types",
+              "row": "DRAM",
+              "row_role": "labelled",
+              "column": "2024",
+              "amount_column": 1,
+              "raw_line": "DRAM W 44,731,664 W 20,768,662",
+              "text_sha256": "e52689c762458a8ad287e00fcf742b266feddb31437d3b56bb92f1b1f4aaab11"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "skh2024annual-in-2025oc:note-24-2:product_total:2024",
+              "document_id": "skh2024annual-in-2025oc",
+              "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+              "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+              "company": "skhynix",
+              "scope": "CFS",
+              "currency": "KRW",
+              "scale": 1000000,
+              "metric": "product_total",
+              "value": "66192960",
+              "raw_value": "66,192,960",
+              "year": 2024,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "page": 264,
+              "printed_page": "F-146",
+              "table_id": "note-24-2",
+              "table_title": "Notes to the Consolidated Financial Statements · 24. Revenue (2) product and service types",
+              "row": "",
+              "row_role": "total",
+              "column": "2024",
+              "amount_column": 1,
+              "raw_line": "W 66,192,960 W 32,765,719",
+              "text_sha256": "e52689c762458a8ad287e00fcf742b266feddb31437d3b56bb92f1b1f4aaab11"
+            },
+            "role": "requested_evidence"
+          }
+        ],
+        "issues": [],
+        "messages": [],
+        "blocked": false,
+        "unknown_terms": [],
+        "execution": "deterministic_source_retrieval"
+      },
+      "elapsed_ms": 2.292235993081704,
+      "human_authored_question": true,
+      "required_cell_mapping": "AI-authored from user evidence locations; development, not fresh holdout"
+    },
+    {
+      "id": "SKH4",
+      "question": "2024년 영업이익이 2023년보다 몇 % 증가했다고 표현해도 되나?",
+      "exact_required_cell_set": true,
+      "result": {
+        "status": "needs_clarification",
+        "answer_status": "not_calculated",
+        "calculated_answer": null,
+        "context": {
+          "source": "selected_document",
+          "document_id": "skh2024annual-in-2025oc",
+          "title": "SK hynix 2025 Offering Circular · 2024·2023 연결재무제표",
+          "company": "skhynix",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000,
+          "available_years": [
+            2024,
+            2023
+          ],
+          "note": "기업·연결·원화·백만 원은 선택한 문서의 조건입니다. 질문에서 모두 명시한 조건은 아닙니다."
+        },
+        "hits": [
+          {
+            "cell": {
+              "id": "skh2024annual-in-2025oc:income:operating_profit:2024",
+              "document_id": "skh2024annual-in-2025oc",
+              "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+              "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+              "company": "skhynix",
+              "scope": "CFS",
+              "currency": "KRW",
+              "scale": 1000000,
+              "metric": "operating_profit",
+              "value": "23467319",
+              "raw_value": "23,467,319",
+              "year": 2024,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2024-01-01",
+              "end": "2024-12-31",
+              "page": 193,
+              "printed_page": "F-75",
+              "table_id": "income",
+              "table_title": "Consolidated Statements of Comprehensive Income (Loss)",
+              "row": "Operating profit (loss)",
+              "row_role": "labelled",
+              "column": "2024",
+              "amount_column": 1,
+              "raw_line": "Operating profit (loss) 23,467,319  (7,730,313)",
+              "text_sha256": "398c1b6e49dbb57ba4925ec236eccfe3ca79602fab86a358d65bf04e377e7be9"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "skh2024annual-in-2025oc:income:operating_profit:2023",
+              "document_id": "skh2024annual-in-2025oc",
+              "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+              "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+              "company": "skhynix",
+              "scope": "CFS",
+              "currency": "KRW",
+              "scale": 1000000,
+              "metric": "operating_profit",
+              "value": "-7730313",
+              "raw_value": "(7,730,313)",
+              "year": 2023,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "page": 193,
+              "printed_page": "F-75",
+              "table_id": "income",
+              "table_title": "Consolidated Statements of Comprehensive Income (Loss)",
+              "row": "Operating profit (loss)",
+              "row_role": "labelled",
+              "column": "2023",
+              "amount_column": 2,
+              "raw_line": "Operating profit (loss) 23,467,319  (7,730,313)",
+              "text_sha256": "398c1b6e49dbb57ba4925ec236eccfe3ca79602fab86a358d65bf04e377e7be9"
+            },
+            "role": "requested_evidence"
+          }
+        ],
+        "issues": [
+          "NEGATIVE_BASE_POLICY"
+        ],
+        "messages": [
+          "문서에 음수인 영업손익이 있습니다. 음수 기준값의 증감률 해석은 확인이 필요하며 계산하지 않았습니다."
+        ],
+        "blocked": false,
+        "unknown_terms": [],
+        "execution": "deterministic_source_retrieval"
+      },
+      "elapsed_ms": 1.775472002918832,
+      "human_authored_question": true,
+      "required_cell_mapping": "AI-authored from user evidence locations; development, not fresh holdout"
+    },
+    {
+      "id": "SKH5",
+      "question": "2024년 재고가 2023년 매출의 몇 개월분인지 공시표만으로 단정할 수 있나?",
+      "exact_required_cell_set": true,
+      "result": {
+        "status": "needs_clarification",
+        "answer_status": "not_calculated",
+        "calculated_answer": null,
+        "context": {
+          "source": "selected_document",
+          "document_id": "skh2024annual-in-2025oc",
+          "title": "SK hynix 2025 Offering Circular · 2024·2023 연결재무제표",
+          "company": "skhynix",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000,
+          "available_years": [
+            2024,
+            2023
+          ],
+          "note": "기업·연결·원화·백만 원은 선택한 문서의 조건입니다. 질문에서 모두 명시한 조건은 아닙니다."
+        },
+        "hits": [
+          {
+            "cell": {
+              "id": "skh2024annual-in-2025oc:financial-position:inventory:2024",
+              "document_id": "skh2024annual-in-2025oc",
+              "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+              "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+              "company": "skhynix",
+              "scope": "CFS",
+              "currency": "KRW",
+              "scale": 1000000,
+              "metric": "inventory",
+              "value": "13313937",
+              "raw_value": "13,313,937",
+              "year": 2024,
+              "period_kind": "instant",
+              "as_of": "2024-12-31",
+              "start": null,
+              "end": null,
+              "page": 191,
+              "printed_page": "F-73",
+              "table_id": "financial-position",
+              "table_title": "Consolidated Statements of Financial Position",
+              "row": "Inventories, net",
+              "row_role": "labelled",
+              "column": "2024",
+              "amount_column": 1,
+              "raw_line": "Inventories, net 9 13,313,937 13,480,659",
+              "text_sha256": "7f6f202eef7a7f0b47f45a4a3abb4e32dd802e5a621aa18ede5489e7879e9657"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "skh2024annual-in-2025oc:income:revenue:2023",
+              "document_id": "skh2024annual-in-2025oc",
+              "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+              "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+              "company": "skhynix",
+              "scope": "CFS",
+              "currency": "KRW",
+              "scale": 1000000,
+              "metric": "revenue",
+              "value": "32765719",
+              "raw_value": "32,765,719",
+              "year": 2023,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "page": 193,
+              "printed_page": "F-75",
+              "table_id": "income",
+              "table_title": "Consolidated Statements of Comprehensive Income (Loss)",
+              "row": "Revenue",
+              "row_role": "labelled",
+              "column": "2023",
+              "amount_column": 2,
+              "raw_line": "Revenue 4,24,31 W 66,192,960 W 32,765,719",
+              "text_sha256": "398c1b6e49dbb57ba4925ec236eccfe3ca79602fab86a358d65bf04e377e7be9"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "skh2024annual-in-2025oc:income:cost_of_sales:2023",
+              "document_id": "skh2024annual-in-2025oc",
+              "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+              "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+              "company": "skhynix",
+              "scope": "CFS",
+              "currency": "KRW",
+              "scale": 1000000,
+              "metric": "cost_of_sales",
+              "value": "33299167",
+              "raw_value": "33,299,167",
+              "year": 2023,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2023-01-01",
+              "end": "2023-12-31",
+              "page": 193,
+              "printed_page": "F-75",
+              "table_id": "income",
+              "table_title": "Consolidated Statements of Comprehensive Income (Loss)",
+              "row": "Cost of sales",
+              "row_role": "labelled",
+              "column": "2023",
+              "amount_column": 2,
+              "raw_line": "Cost of sales 26,31  34,364,814  33,299,167",
+              "text_sha256": "398c1b6e49dbb57ba4925ec236eccfe3ca79602fab86a358d65bf04e377e7be9"
+            },
+            "role": "related_definition"
+          }
+        ],
+        "issues": [
+          "RATIO_DEFINITION_REQUIRED"
+        ],
+        "messages": [
+          "재고의 기준일·평균 여부와 분모의 기간·매출 또는 매출원가를 정해야 합니다. 비율은 계산하지 않았습니다."
+        ],
+        "blocked": false,
+        "unknown_terms": [],
+        "execution": "deterministic_source_retrieval"
+      },
+      "elapsed_ms": 2.076217999274377,
+      "human_authored_question": true,
+      "required_cell_mapping": "AI-authored from user evidence locations; development, not fresh holdout"
+    }
+  ],
+  "exact_evidence_sets_passed": 5,
+  "mcp": {
+    "execution": "actual stdio tools; deterministic caller sequence, no LLM planning",
+    "protocol": "2025-11-25",
+    "calls": 18,
+    "trace": [
+      {
+        "order": 1,
+        "tool": "search_source_evidence",
+        "input": {
+          "document_id": "skh2024annual-in-2025oc",
+          "query": "현금은 2023년 말보다 얼마나 늘었나?"
+        },
+        "output": {
+          "status": "needs_clarification",
+          "answer_status": "not_calculated",
+          "calculated_answer": null,
+          "context": {
+            "source": "selected_document",
+            "document_id": "skh2024annual-in-2025oc",
+            "title": "SK hynix 2025 Offering Circular · 2024·2023 연결재무제표",
+            "company": "skhynix",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "available_years": [
+              2024,
+              2023
+            ],
+            "note": "기업·연결·원화·백만 원은 선택한 문서의 조건입니다. 질문에서 모두 명시한 조건은 아닙니다."
+          },
+          "hits": [
+            {
+              "cell": {
+                "id": "skh2024annual-in-2025oc:financial-position:cash:2024",
+                "document_id": "skh2024annual-in-2025oc",
+                "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+                "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+                "company": "skhynix",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "metric": "cash",
+                "value": "11205117",
+                "raw_value": "11,205,117",
+                "year": 2024,
+                "period_kind": "instant",
+                "as_of": "2024-12-31",
+                "start": null,
+                "end": null,
+                "page": 191,
+                "printed_page": "F-73",
+                "table_id": "financial-position",
+                "table_title": "Consolidated Statements of Financial Position",
+                "row": "Cash and cash equivalents",
+                "row_role": "labelled",
+                "column": "2024",
+                "amount_column": 1,
+                "raw_line": "Cash and cash equivalents 5,6 W 11,205,117 W 7,587,329",
+                "text_sha256": "7f6f202eef7a7f0b47f45a4a3abb4e32dd802e5a621aa18ede5489e7879e9657"
+              },
+              "role": "requested_evidence"
+            },
+            {
+              "cell": {
+                "id": "skh2024annual-in-2025oc:financial-position:cash:2023",
+                "document_id": "skh2024annual-in-2025oc",
+                "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+                "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+                "company": "skhynix",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "metric": "cash",
+                "value": "7587329",
+                "raw_value": "7,587,329",
+                "year": 2023,
+                "period_kind": "instant",
+                "as_of": "2023-12-31",
+                "start": null,
+                "end": null,
+                "page": 191,
+                "printed_page": "F-73",
+                "table_id": "financial-position",
+                "table_title": "Consolidated Statements of Financial Position",
+                "row": "Cash and cash equivalents",
+                "row_role": "labelled",
+                "column": "2023",
+                "amount_column": 2,
+                "raw_line": "Cash and cash equivalents 5,6 W 11,205,117 W 7,587,329",
+                "text_sha256": "7f6f202eef7a7f0b47f45a4a3abb4e32dd802e5a621aa18ede5489e7879e9657"
+              },
+              "role": "requested_evidence"
+            }
+          ],
+          "issues": [
+            "CURRENT_YEAR_CONFIRMATION"
+          ],
+          "messages": [
+            "질문에 기준 연도가 없어 문서의 2024·2023년 후보를 함께 표시합니다. 비교할 연도를 확인해 주세요."
+          ],
+          "blocked": false,
+          "unknown_terms": [],
+          "execution": "deterministic_source_retrieval"
+        }
+      },
+      {
+        "order": 2,
+        "tool": "get_source_cell",
+        "input": {
+          "cell_id": "skh2024annual-in-2025oc:financial-position:cash:2024"
+        },
+        "output": {
+          "id": "skh2024annual-in-2025oc:financial-position:cash:2024",
+          "document_id": "skh2024annual-in-2025oc",
+          "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+          "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+          "company": "skhynix",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000,
+          "metric": "cash",
+          "value": "11205117",
+          "raw_value": "11,205,117",
+          "year": 2024,
+          "period_kind": "instant",
+          "as_of": "2024-12-31",
+          "start": null,
+          "end": null,
+          "page": 191,
+          "printed_page": "F-73",
+          "table_id": "financial-position",
+          "table_title": "Consolidated Statements of Financial Position",
+          "row": "Cash and cash equivalents",
+          "row_role": "labelled",
+          "column": "2024",
+          "amount_column": 1,
+          "raw_line": "Cash and cash equivalents 5,6 W 11,205,117 W 7,587,329",
+          "text_sha256": "7f6f202eef7a7f0b47f45a4a3abb4e32dd802e5a621aa18ede5489e7879e9657"
+        }
+      },
+      {
+        "order": 3,
+        "tool": "get_source_cell",
+        "input": {
+          "cell_id": "skh2024annual-in-2025oc:financial-position:cash:2023"
+        },
+        "output": {
+          "id": "skh2024annual-in-2025oc:financial-position:cash:2023",
+          "document_id": "skh2024annual-in-2025oc",
+          "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+          "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+          "company": "skhynix",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000,
+          "metric": "cash",
+          "value": "7587329",
+          "raw_value": "7,587,329",
+          "year": 2023,
+          "period_kind": "instant",
+          "as_of": "2023-12-31",
+          "start": null,
+          "end": null,
+          "page": 191,
+          "printed_page": "F-73",
+          "table_id": "financial-position",
+          "table_title": "Consolidated Statements of Financial Position",
+          "row": "Cash and cash equivalents",
+          "row_role": "labelled",
+          "column": "2023",
+          "amount_column": 2,
+          "raw_line": "Cash and cash equivalents 5,6 W 11,205,117 W 7,587,329",
+          "text_sha256": "7f6f202eef7a7f0b47f45a4a3abb4e32dd802e5a621aa18ede5489e7879e9657"
+        }
+      },
+      {
+        "order": 4,
+        "tool": "search_source_evidence",
+        "input": {
+          "document_id": "skh2024annual-in-2025oc",
+          "query": "재고자산은 매출이 늘어난 2024년에 함께 증가했나?"
+        },
+        "output": {
+          "status": "needs_clarification",
+          "answer_status": "not_calculated",
+          "calculated_answer": null,
+          "context": {
+            "source": "selected_document",
+            "document_id": "skh2024annual-in-2025oc",
+            "title": "SK hynix 2025 Offering Circular · 2024·2023 연결재무제표",
+            "company": "skhynix",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "available_years": [
+              2024,
+              2023
+            ],
+            "note": "기업·연결·원화·백만 원은 선택한 문서의 조건입니다. 질문에서 모두 명시한 조건은 아닙니다."
+          },
+          "hits": [
+            {
+              "cell": {
+                "id": "skh2024annual-in-2025oc:financial-position:inventory:2024",
+                "document_id": "skh2024annual-in-2025oc",
+                "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+                "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+                "company": "skhynix",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "metric": "inventory",
+                "value": "13313937",
+                "raw_value": "13,313,937",
+                "year": 2024,
+                "period_kind": "instant",
+                "as_of": "2024-12-31",
+                "start": null,
+                "end": null,
+                "page": 191,
+                "printed_page": "F-73",
+                "table_id": "financial-position",
+                "table_title": "Consolidated Statements of Financial Position",
+                "row": "Inventories, net",
+                "row_role": "labelled",
+                "column": "2024",
+                "amount_column": 1,
+                "raw_line": "Inventories, net 9 13,313,937 13,480,659",
+                "text_sha256": "7f6f202eef7a7f0b47f45a4a3abb4e32dd802e5a621aa18ede5489e7879e9657"
+              },
+              "role": "requested_evidence"
+            },
+            {
+              "cell": {
+                "id": "skh2024annual-in-2025oc:financial-position:inventory:2023",
+                "document_id": "skh2024annual-in-2025oc",
+                "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+                "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+                "company": "skhynix",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "metric": "inventory",
+                "value": "13480659",
+                "raw_value": "13,480,659",
+                "year": 2023,
+                "period_kind": "instant",
+                "as_of": "2023-12-31",
+                "start": null,
+                "end": null,
+                "page": 191,
+                "printed_page": "F-73",
+                "table_id": "financial-position",
+                "table_title": "Consolidated Statements of Financial Position",
+                "row": "Inventories, net",
+                "row_role": "labelled",
+                "column": "2023",
+                "amount_column": 2,
+                "raw_line": "Inventories, net 9 13,313,937 13,480,659",
+                "text_sha256": "7f6f202eef7a7f0b47f45a4a3abb4e32dd802e5a621aa18ede5489e7879e9657"
+              },
+              "role": "requested_evidence"
+            },
+            {
+              "cell": {
+                "id": "skh2024annual-in-2025oc:income:revenue:2024",
+                "document_id": "skh2024annual-in-2025oc",
+                "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+                "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+                "company": "skhynix",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "metric": "revenue",
+                "value": "66192960",
+                "raw_value": "66,192,960",
+                "year": 2024,
+                "period_kind": "duration",
+                "as_of": null,
+                "start": "2024-01-01",
+                "end": "2024-12-31",
+                "page": 193,
+                "printed_page": "F-75",
+                "table_id": "income",
+                "table_title": "Consolidated Statements of Comprehensive Income (Loss)",
+                "row": "Revenue",
+                "row_role": "labelled",
+                "column": "2024",
+                "amount_column": 1,
+                "raw_line": "Revenue 4,24,31 W 66,192,960 W 32,765,719",
+                "text_sha256": "398c1b6e49dbb57ba4925ec236eccfe3ca79602fab86a358d65bf04e377e7be9"
+              },
+              "role": "requested_evidence"
+            },
+            {
+              "cell": {
+                "id": "skh2024annual-in-2025oc:income:revenue:2023",
+                "document_id": "skh2024annual-in-2025oc",
+                "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+                "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+                "company": "skhynix",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "metric": "revenue",
+                "value": "32765719",
+                "raw_value": "32,765,719",
+                "year": 2023,
+                "period_kind": "duration",
+                "as_of": null,
+                "start": "2023-01-01",
+                "end": "2023-12-31",
+                "page": 193,
+                "printed_page": "F-75",
+                "table_id": "income",
+                "table_title": "Consolidated Statements of Comprehensive Income (Loss)",
+                "row": "Revenue",
+                "row_role": "labelled",
+                "column": "2023",
+                "amount_column": 2,
+                "raw_line": "Revenue 4,24,31 W 66,192,960 W 32,765,719",
+                "text_sha256": "398c1b6e49dbb57ba4925ec236eccfe3ca79602fab86a358d65bf04e377e7be9"
+              },
+              "role": "requested_evidence"
+            }
+          ],
+          "issues": [
+            "COMPARATIVE_COLUMNS"
+          ],
+          "messages": [
+            "변화 질문에 문서의 두 연도 후보를 함께 표시합니다. 비교 조건을 확인해 주세요."
+          ],
+          "blocked": false,
+          "unknown_terms": [],
+          "execution": "deterministic_source_retrieval"
+        }
+      },
+      {
+        "order": 5,
+        "tool": "get_source_cell",
+        "input": {
+          "cell_id": "skh2024annual-in-2025oc:financial-position:inventory:2024"
+        },
+        "output": {
+          "id": "skh2024annual-in-2025oc:financial-position:inventory:2024",
+          "document_id": "skh2024annual-in-2025oc",
+          "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+          "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+          "company": "skhynix",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000,
+          "metric": "inventory",
+          "value": "13313937",
+          "raw_value": "13,313,937",
+          "year": 2024,
+          "period_kind": "instant",
+          "as_of": "2024-12-31",
+          "start": null,
+          "end": null,
+          "page": 191,
+          "printed_page": "F-73",
+          "table_id": "financial-position",
+          "table_title": "Consolidated Statements of Financial Position",
+          "row": "Inventories, net",
+          "row_role": "labelled",
+          "column": "2024",
+          "amount_column": 1,
+          "raw_line": "Inventories, net 9 13,313,937 13,480,659",
+          "text_sha256": "7f6f202eef7a7f0b47f45a4a3abb4e32dd802e5a621aa18ede5489e7879e9657"
+        }
+      },
+      {
+        "order": 6,
+        "tool": "get_source_cell",
+        "input": {
+          "cell_id": "skh2024annual-in-2025oc:financial-position:inventory:2023"
+        },
+        "output": {
+          "id": "skh2024annual-in-2025oc:financial-position:inventory:2023",
+          "document_id": "skh2024annual-in-2025oc",
+          "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+          "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+          "company": "skhynix",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000,
+          "metric": "inventory",
+          "value": "13480659",
+          "raw_value": "13,480,659",
+          "year": 2023,
+          "period_kind": "instant",
+          "as_of": "2023-12-31",
+          "start": null,
+          "end": null,
+          "page": 191,
+          "printed_page": "F-73",
+          "table_id": "financial-position",
+          "table_title": "Consolidated Statements of Financial Position",
+          "row": "Inventories, net",
+          "row_role": "labelled",
+          "column": "2023",
+          "amount_column": 2,
+          "raw_line": "Inventories, net 9 13,313,937 13,480,659",
+          "text_sha256": "7f6f202eef7a7f0b47f45a4a3abb4e32dd802e5a621aa18ede5489e7879e9657"
+        }
+      },
+      {
+        "order": 7,
+        "tool": "get_source_cell",
+        "input": {
+          "cell_id": "skh2024annual-in-2025oc:income:revenue:2024"
+        },
+        "output": {
+          "id": "skh2024annual-in-2025oc:income:revenue:2024",
+          "document_id": "skh2024annual-in-2025oc",
+          "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+          "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+          "company": "skhynix",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000,
+          "metric": "revenue",
+          "value": "66192960",
+          "raw_value": "66,192,960",
+          "year": 2024,
+          "period_kind": "duration",
+          "as_of": null,
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "page": 193,
+          "printed_page": "F-75",
+          "table_id": "income",
+          "table_title": "Consolidated Statements of Comprehensive Income (Loss)",
+          "row": "Revenue",
+          "row_role": "labelled",
+          "column": "2024",
+          "amount_column": 1,
+          "raw_line": "Revenue 4,24,31 W 66,192,960 W 32,765,719",
+          "text_sha256": "398c1b6e49dbb57ba4925ec236eccfe3ca79602fab86a358d65bf04e377e7be9"
+        }
+      },
+      {
+        "order": 8,
+        "tool": "get_source_cell",
+        "input": {
+          "cell_id": "skh2024annual-in-2025oc:income:revenue:2023"
+        },
+        "output": {
+          "id": "skh2024annual-in-2025oc:income:revenue:2023",
+          "document_id": "skh2024annual-in-2025oc",
+          "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+          "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+          "company": "skhynix",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000,
+          "metric": "revenue",
+          "value": "32765719",
+          "raw_value": "32,765,719",
+          "year": 2023,
+          "period_kind": "duration",
+          "as_of": null,
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "page": 193,
+          "printed_page": "F-75",
+          "table_id": "income",
+          "table_title": "Consolidated Statements of Comprehensive Income (Loss)",
+          "row": "Revenue",
+          "row_role": "labelled",
+          "column": "2023",
+          "amount_column": 2,
+          "raw_line": "Revenue 4,24,31 W 66,192,960 W 32,765,719",
+          "text_sha256": "398c1b6e49dbb57ba4925ec236eccfe3ca79602fab86a358d65bf04e377e7be9"
+        }
+      },
+      {
+        "order": 9,
+        "tool": "search_source_evidence",
+        "input": {
+          "document_id": "skh2024annual-in-2025oc",
+          "query": "2024년 DRAM 매출은 전체 매출의 몇 %인가?"
+        },
+        "output": {
+          "status": "evidence_candidates",
+          "answer_status": "not_calculated",
+          "calculated_answer": null,
+          "context": {
+            "source": "selected_document",
+            "document_id": "skh2024annual-in-2025oc",
+            "title": "SK hynix 2025 Offering Circular · 2024·2023 연결재무제표",
+            "company": "skhynix",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "available_years": [
+              2024,
+              2023
+            ],
+            "note": "기업·연결·원화·백만 원은 선택한 문서의 조건입니다. 질문에서 모두 명시한 조건은 아닙니다."
+          },
+          "hits": [
+            {
+              "cell": {
+                "id": "skh2024annual-in-2025oc:note-24-2:dram:2024",
+                "document_id": "skh2024annual-in-2025oc",
+                "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+                "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+                "company": "skhynix",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "metric": "dram",
+                "value": "44731664",
+                "raw_value": "44,731,664",
+                "year": 2024,
+                "period_kind": "duration",
+                "as_of": null,
+                "start": "2024-01-01",
+                "end": "2024-12-31",
+                "page": 264,
+                "printed_page": "F-146",
+                "table_id": "note-24-2",
+                "table_title": "Notes to the Consolidated Financial Statements · 24. Revenue (2) product and service types",
+                "row": "DRAM",
+                "row_role": "labelled",
+                "column": "2024",
+                "amount_column": 1,
+                "raw_line": "DRAM W 44,731,664 W 20,768,662",
+                "text_sha256": "e52689c762458a8ad287e00fcf742b266feddb31437d3b56bb92f1b1f4aaab11"
+              },
+              "role": "requested_evidence"
+            },
+            {
+              "cell": {
+                "id": "skh2024annual-in-2025oc:note-24-2:product_total:2024",
+                "document_id": "skh2024annual-in-2025oc",
+                "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+                "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+                "company": "skhynix",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "metric": "product_total",
+                "value": "66192960",
+                "raw_value": "66,192,960",
+                "year": 2024,
+                "period_kind": "duration",
+                "as_of": null,
+                "start": "2024-01-01",
+                "end": "2024-12-31",
+                "page": 264,
+                "printed_page": "F-146",
+                "table_id": "note-24-2",
+                "table_title": "Notes to the Consolidated Financial Statements · 24. Revenue (2) product and service types",
+                "row": "",
+                "row_role": "total",
+                "column": "2024",
+                "amount_column": 1,
+                "raw_line": "W 66,192,960 W 32,765,719",
+                "text_sha256": "e52689c762458a8ad287e00fcf742b266feddb31437d3b56bb92f1b1f4aaab11"
+              },
+              "role": "requested_evidence"
+            }
+          ],
+          "issues": [],
+          "messages": [],
+          "blocked": false,
+          "unknown_terms": [],
+          "execution": "deterministic_source_retrieval"
+        }
+      },
+      {
+        "order": 10,
+        "tool": "get_source_cell",
+        "input": {
+          "cell_id": "skh2024annual-in-2025oc:note-24-2:dram:2024"
+        },
+        "output": {
+          "id": "skh2024annual-in-2025oc:note-24-2:dram:2024",
+          "document_id": "skh2024annual-in-2025oc",
+          "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+          "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+          "company": "skhynix",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000,
+          "metric": "dram",
+          "value": "44731664",
+          "raw_value": "44,731,664",
+          "year": 2024,
+          "period_kind": "duration",
+          "as_of": null,
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "page": 264,
+          "printed_page": "F-146",
+          "table_id": "note-24-2",
+          "table_title": "Notes to the Consolidated Financial Statements · 24. Revenue (2) product and service types",
+          "row": "DRAM",
+          "row_role": "labelled",
+          "column": "2024",
+          "amount_column": 1,
+          "raw_line": "DRAM W 44,731,664 W 20,768,662",
+          "text_sha256": "e52689c762458a8ad287e00fcf742b266feddb31437d3b56bb92f1b1f4aaab11"
+        }
+      },
+      {
+        "order": 11,
+        "tool": "get_source_cell",
+        "input": {
+          "cell_id": "skh2024annual-in-2025oc:note-24-2:product_total:2024"
+        },
+        "output": {
+          "id": "skh2024annual-in-2025oc:note-24-2:product_total:2024",
+          "document_id": "skh2024annual-in-2025oc",
+          "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+          "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+          "company": "skhynix",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000,
+          "metric": "product_total",
+          "value": "66192960",
+          "raw_value": "66,192,960",
+          "year": 2024,
+          "period_kind": "duration",
+          "as_of": null,
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "page": 264,
+          "printed_page": "F-146",
+          "table_id": "note-24-2",
+          "table_title": "Notes to the Consolidated Financial Statements · 24. Revenue (2) product and service types",
+          "row": "",
+          "row_role": "total",
+          "column": "2024",
+          "amount_column": 1,
+          "raw_line": "W 66,192,960 W 32,765,719",
+          "text_sha256": "e52689c762458a8ad287e00fcf742b266feddb31437d3b56bb92f1b1f4aaab11"
+        }
+      },
+      {
+        "order": 12,
+        "tool": "search_source_evidence",
+        "input": {
+          "document_id": "skh2024annual-in-2025oc",
+          "query": "2024년 영업이익이 2023년보다 몇 % 증가했다고 표현해도 되나?"
+        },
+        "output": {
+          "status": "needs_clarification",
+          "answer_status": "not_calculated",
+          "calculated_answer": null,
+          "context": {
+            "source": "selected_document",
+            "document_id": "skh2024annual-in-2025oc",
+            "title": "SK hynix 2025 Offering Circular · 2024·2023 연결재무제표",
+            "company": "skhynix",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "available_years": [
+              2024,
+              2023
+            ],
+            "note": "기업·연결·원화·백만 원은 선택한 문서의 조건입니다. 질문에서 모두 명시한 조건은 아닙니다."
+          },
+          "hits": [
+            {
+              "cell": {
+                "id": "skh2024annual-in-2025oc:income:operating_profit:2024",
+                "document_id": "skh2024annual-in-2025oc",
+                "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+                "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+                "company": "skhynix",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "metric": "operating_profit",
+                "value": "23467319",
+                "raw_value": "23,467,319",
+                "year": 2024,
+                "period_kind": "duration",
+                "as_of": null,
+                "start": "2024-01-01",
+                "end": "2024-12-31",
+                "page": 193,
+                "printed_page": "F-75",
+                "table_id": "income",
+                "table_title": "Consolidated Statements of Comprehensive Income (Loss)",
+                "row": "Operating profit (loss)",
+                "row_role": "labelled",
+                "column": "2024",
+                "amount_column": 1,
+                "raw_line": "Operating profit (loss) 23,467,319  (7,730,313)",
+                "text_sha256": "398c1b6e49dbb57ba4925ec236eccfe3ca79602fab86a358d65bf04e377e7be9"
+              },
+              "role": "requested_evidence"
+            },
+            {
+              "cell": {
+                "id": "skh2024annual-in-2025oc:income:operating_profit:2023",
+                "document_id": "skh2024annual-in-2025oc",
+                "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+                "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+                "company": "skhynix",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "metric": "operating_profit",
+                "value": "-7730313",
+                "raw_value": "(7,730,313)",
+                "year": 2023,
+                "period_kind": "duration",
+                "as_of": null,
+                "start": "2023-01-01",
+                "end": "2023-12-31",
+                "page": 193,
+                "printed_page": "F-75",
+                "table_id": "income",
+                "table_title": "Consolidated Statements of Comprehensive Income (Loss)",
+                "row": "Operating profit (loss)",
+                "row_role": "labelled",
+                "column": "2023",
+                "amount_column": 2,
+                "raw_line": "Operating profit (loss) 23,467,319  (7,730,313)",
+                "text_sha256": "398c1b6e49dbb57ba4925ec236eccfe3ca79602fab86a358d65bf04e377e7be9"
+              },
+              "role": "requested_evidence"
+            }
+          ],
+          "issues": [
+            "NEGATIVE_BASE_POLICY"
+          ],
+          "messages": [
+            "문서에 음수인 영업손익이 있습니다. 음수 기준값의 증감률 해석은 확인이 필요하며 계산하지 않았습니다."
+          ],
+          "blocked": false,
+          "unknown_terms": [],
+          "execution": "deterministic_source_retrieval"
+        }
+      },
+      {
+        "order": 13,
+        "tool": "get_source_cell",
+        "input": {
+          "cell_id": "skh2024annual-in-2025oc:income:operating_profit:2024"
+        },
+        "output": {
+          "id": "skh2024annual-in-2025oc:income:operating_profit:2024",
+          "document_id": "skh2024annual-in-2025oc",
+          "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+          "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+          "company": "skhynix",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000,
+          "metric": "operating_profit",
+          "value": "23467319",
+          "raw_value": "23,467,319",
+          "year": 2024,
+          "period_kind": "duration",
+          "as_of": null,
+          "start": "2024-01-01",
+          "end": "2024-12-31",
+          "page": 193,
+          "printed_page": "F-75",
+          "table_id": "income",
+          "table_title": "Consolidated Statements of Comprehensive Income (Loss)",
+          "row": "Operating profit (loss)",
+          "row_role": "labelled",
+          "column": "2024",
+          "amount_column": 1,
+          "raw_line": "Operating profit (loss) 23,467,319  (7,730,313)",
+          "text_sha256": "398c1b6e49dbb57ba4925ec236eccfe3ca79602fab86a358d65bf04e377e7be9"
+        }
+      },
+      {
+        "order": 14,
+        "tool": "get_source_cell",
+        "input": {
+          "cell_id": "skh2024annual-in-2025oc:income:operating_profit:2023"
+        },
+        "output": {
+          "id": "skh2024annual-in-2025oc:income:operating_profit:2023",
+          "document_id": "skh2024annual-in-2025oc",
+          "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+          "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+          "company": "skhynix",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000,
+          "metric": "operating_profit",
+          "value": "-7730313",
+          "raw_value": "(7,730,313)",
+          "year": 2023,
+          "period_kind": "duration",
+          "as_of": null,
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "page": 193,
+          "printed_page": "F-75",
+          "table_id": "income",
+          "table_title": "Consolidated Statements of Comprehensive Income (Loss)",
+          "row": "Operating profit (loss)",
+          "row_role": "labelled",
+          "column": "2023",
+          "amount_column": 2,
+          "raw_line": "Operating profit (loss) 23,467,319  (7,730,313)",
+          "text_sha256": "398c1b6e49dbb57ba4925ec236eccfe3ca79602fab86a358d65bf04e377e7be9"
+        }
+      },
+      {
+        "order": 15,
+        "tool": "search_source_evidence",
+        "input": {
+          "document_id": "skh2024annual-in-2025oc",
+          "query": "2024년 재고가 2023년 매출의 몇 개월분인지 공시표만으로 단정할 수 있나?"
+        },
+        "output": {
+          "status": "needs_clarification",
+          "answer_status": "not_calculated",
+          "calculated_answer": null,
+          "context": {
+            "source": "selected_document",
+            "document_id": "skh2024annual-in-2025oc",
+            "title": "SK hynix 2025 Offering Circular · 2024·2023 연결재무제표",
+            "company": "skhynix",
+            "scope": "CFS",
+            "currency": "KRW",
+            "scale": 1000000,
+            "available_years": [
+              2024,
+              2023
+            ],
+            "note": "기업·연결·원화·백만 원은 선택한 문서의 조건입니다. 질문에서 모두 명시한 조건은 아닙니다."
+          },
+          "hits": [
+            {
+              "cell": {
+                "id": "skh2024annual-in-2025oc:financial-position:inventory:2024",
+                "document_id": "skh2024annual-in-2025oc",
+                "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+                "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+                "company": "skhynix",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "metric": "inventory",
+                "value": "13313937",
+                "raw_value": "13,313,937",
+                "year": 2024,
+                "period_kind": "instant",
+                "as_of": "2024-12-31",
+                "start": null,
+                "end": null,
+                "page": 191,
+                "printed_page": "F-73",
+                "table_id": "financial-position",
+                "table_title": "Consolidated Statements of Financial Position",
+                "row": "Inventories, net",
+                "row_role": "labelled",
+                "column": "2024",
+                "amount_column": 1,
+                "raw_line": "Inventories, net 9 13,313,937 13,480,659",
+                "text_sha256": "7f6f202eef7a7f0b47f45a4a3abb4e32dd802e5a621aa18ede5489e7879e9657"
+              },
+              "role": "requested_evidence"
+            },
+            {
+              "cell": {
+                "id": "skh2024annual-in-2025oc:income:revenue:2023",
+                "document_id": "skh2024annual-in-2025oc",
+                "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+                "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+                "company": "skhynix",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "metric": "revenue",
+                "value": "32765719",
+                "raw_value": "32,765,719",
+                "year": 2023,
+                "period_kind": "duration",
+                "as_of": null,
+                "start": "2023-01-01",
+                "end": "2023-12-31",
+                "page": 193,
+                "printed_page": "F-75",
+                "table_id": "income",
+                "table_title": "Consolidated Statements of Comprehensive Income (Loss)",
+                "row": "Revenue",
+                "row_role": "labelled",
+                "column": "2023",
+                "amount_column": 2,
+                "raw_line": "Revenue 4,24,31 W 66,192,960 W 32,765,719",
+                "text_sha256": "398c1b6e49dbb57ba4925ec236eccfe3ca79602fab86a358d65bf04e377e7be9"
+              },
+              "role": "requested_evidence"
+            },
+            {
+              "cell": {
+                "id": "skh2024annual-in-2025oc:income:cost_of_sales:2023",
+                "document_id": "skh2024annual-in-2025oc",
+                "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+                "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+                "company": "skhynix",
+                "scope": "CFS",
+                "currency": "KRW",
+                "scale": 1000000,
+                "metric": "cost_of_sales",
+                "value": "33299167",
+                "raw_value": "33,299,167",
+                "year": 2023,
+                "period_kind": "duration",
+                "as_of": null,
+                "start": "2023-01-01",
+                "end": "2023-12-31",
+                "page": 193,
+                "printed_page": "F-75",
+                "table_id": "income",
+                "table_title": "Consolidated Statements of Comprehensive Income (Loss)",
+                "row": "Cost of sales",
+                "row_role": "labelled",
+                "column": "2023",
+                "amount_column": 2,
+                "raw_line": "Cost of sales 26,31  34,364,814  33,299,167",
+                "text_sha256": "398c1b6e49dbb57ba4925ec236eccfe3ca79602fab86a358d65bf04e377e7be9"
+              },
+              "role": "related_definition"
+            }
+          ],
+          "issues": [
+            "RATIO_DEFINITION_REQUIRED"
+          ],
+          "messages": [
+            "재고의 기준일·평균 여부와 분모의 기간·매출 또는 매출원가를 정해야 합니다. 비율은 계산하지 않았습니다."
+          ],
+          "blocked": false,
+          "unknown_terms": [],
+          "execution": "deterministic_source_retrieval"
+        }
+      },
+      {
+        "order": 16,
+        "tool": "get_source_cell",
+        "input": {
+          "cell_id": "skh2024annual-in-2025oc:financial-position:inventory:2024"
+        },
+        "output": {
+          "id": "skh2024annual-in-2025oc:financial-position:inventory:2024",
+          "document_id": "skh2024annual-in-2025oc",
+          "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+          "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+          "company": "skhynix",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000,
+          "metric": "inventory",
+          "value": "13313937",
+          "raw_value": "13,313,937",
+          "year": 2024,
+          "period_kind": "instant",
+          "as_of": "2024-12-31",
+          "start": null,
+          "end": null,
+          "page": 191,
+          "printed_page": "F-73",
+          "table_id": "financial-position",
+          "table_title": "Consolidated Statements of Financial Position",
+          "row": "Inventories, net",
+          "row_role": "labelled",
+          "column": "2024",
+          "amount_column": 1,
+          "raw_line": "Inventories, net 9 13,313,937 13,480,659",
+          "text_sha256": "7f6f202eef7a7f0b47f45a4a3abb4e32dd802e5a621aa18ede5489e7879e9657"
+        }
+      },
+      {
+        "order": 17,
+        "tool": "get_source_cell",
+        "input": {
+          "cell_id": "skh2024annual-in-2025oc:income:revenue:2023"
+        },
+        "output": {
+          "id": "skh2024annual-in-2025oc:income:revenue:2023",
+          "document_id": "skh2024annual-in-2025oc",
+          "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+          "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+          "company": "skhynix",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000,
+          "metric": "revenue",
+          "value": "32765719",
+          "raw_value": "32,765,719",
+          "year": 2023,
+          "period_kind": "duration",
+          "as_of": null,
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "page": 193,
+          "printed_page": "F-75",
+          "table_id": "income",
+          "table_title": "Consolidated Statements of Comprehensive Income (Loss)",
+          "row": "Revenue",
+          "row_role": "labelled",
+          "column": "2023",
+          "amount_column": 2,
+          "raw_line": "Revenue 4,24,31 W 66,192,960 W 32,765,719",
+          "text_sha256": "398c1b6e49dbb57ba4925ec236eccfe3ca79602fab86a358d65bf04e377e7be9"
+        }
+      },
+      {
+        "order": 18,
+        "tool": "get_source_cell",
+        "input": {
+          "cell_id": "skh2024annual-in-2025oc:income:cost_of_sales:2023"
+        },
+        "output": {
+          "id": "skh2024annual-in-2025oc:income:cost_of_sales:2023",
+          "document_id": "skh2024annual-in-2025oc",
+          "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+          "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+          "company": "skhynix",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000,
+          "metric": "cost_of_sales",
+          "value": "33299167",
+          "raw_value": "33,299,167",
+          "year": 2023,
+          "period_kind": "duration",
+          "as_of": null,
+          "start": "2023-01-01",
+          "end": "2023-12-31",
+          "page": 193,
+          "printed_page": "F-75",
+          "table_id": "income",
+          "table_title": "Consolidated Statements of Comprehensive Income (Loss)",
+          "row": "Cost of sales",
+          "row_role": "labelled",
+          "column": "2023",
+          "amount_column": 2,
+          "raw_line": "Cost of sales 26,31  34,364,814  33,299,167",
+          "text_sha256": "398c1b6e49dbb57ba4925ec236eccfe3ca79602fab86a358d65bf04e377e7be9"
+        }
+      }
+    ]
+  },
+  "baseline": "artifacts/skhynix-human-20261111/first-baseline/report.json",
+  "after_development_not_holdout": true,
+  "new_human_review": false,
+  "paid_api_calls": 0,
+  "new_model_generations": 0,
+  "answers_calculated": 0,
+  "limitations": [
+    "18 selected source cells; no general annual statement parser.",
+    "Document-scoped conditions from explicitly selected source; conservative rule vocabulary.",
+    "Original five questions used in development. No claim of general accuracy or five correct calculated answers.",
+    "Annual/instant/share calculation and inventory-ratio definition remain unsupported.",
+    "Latency is one local run, not production load or comparative performance evidence."
+  ],
+  "source_hashes": {
+    "quarterguard/source_evidence.py": "bb7c97193aa2a2651cb8e6e22f222397e1c011dd93e014773ddc225f46f98555",
+    "quarterguard/source_mcp_server.py": "2bb76a51e85afa5b16b73978e2fa45c37d0af193a08f8e667b451f842c72bc86",
+    "data/source-evidence/cells.json": "a53ffe13c349937e4102099c9a43ba5705f3f452068c1dea935c1ad8386363f4",
+    "data/source-evidence/manifest.json": "24ab33eaef643ab3c0a62e30c132954b621f2f8944051f389fd9729cf94888c4",
+    "scripts/evaluate_skhynix_source_support.py": "73302c6b9af45becc3ee42772bfc93b0f7a67e7c35414711aaf5a82696849a49"
+  }
+}

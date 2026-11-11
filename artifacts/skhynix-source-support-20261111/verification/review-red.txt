@@ -1,0 +1,41 @@
+test_conflicting_context_and_unknown_constraints_fail_closed (tests.test_skhynix_sources.SourceSearchTests.test_conflicting_context_and_unknown_constraints_fail_closed) ... ok
+test_explicit_dates_and_other_century_years_are_not_dropped (tests.test_skhynix_sources.SourceSearchTests.test_explicit_dates_and_other_century_years_are_not_dropped) ... FAIL
+test_new_ai_queries_preserve_year_metric_and_table (tests.test_skhynix_sources.SourceSearchTests.test_new_ai_queries_preserve_year_metric_and_table) ... ok
+test_original_questions_find_required_cells_without_calculating (tests.test_skhynix_sources.SourceSearchTests.test_original_questions_find_required_cells_without_calculating) ... ok
+test_product_keyword_does_not_erase_other_revenue (tests.test_skhynix_sources.SourceSearchTests.test_product_keyword_does_not_erase_other_revenue) ... FAIL
+test_shared_and_postpositive_years_do_not_misbind (tests.test_skhynix_sources.SourceSearchTests.test_shared_and_postpositive_years_do_not_misbind) ... FAIL
+
+======================================================================
+FAIL: test_explicit_dates_and_other_century_years_are_not_dropped (tests.test_skhynix_sources.SourceSearchTests.test_explicit_dates_and_other_century_years_are_not_dropped)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-skhynix-support/tests/test_skhynix_sources.py", line 105, in test_explicit_dates_and_other_century_years_are_not_dropped
+    self.assertTrue(r['blocked'],q);self.assertEqual(r['hits'],[],q)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : 2024-06-30 cash
+
+======================================================================
+FAIL: test_product_keyword_does_not_erase_other_revenue (tests.test_skhynix_sources.SourceSearchTests.test_product_keyword_does_not_erase_other_revenue)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-skhynix-support/tests/test_skhynix_sources.py", line 117, in test_product_keyword_does_not_erase_other_revenue
+    self.assertEqual(self.pairs(r),{('revenue',2024),('dram',2023)})
+AssertionError: Items in the first set but not the second:
+('dram', 2024)
+Items in the second set but not the first:
+('revenue', 2024)
+
+======================================================================
+FAIL: test_shared_and_postpositive_years_do_not_misbind (tests.test_skhynix_sources.SourceSearchTests.test_shared_and_postpositive_years_do_not_misbind)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-skhynix-support/tests/test_skhynix_sources.py", line 109, in test_shared_and_postpositive_years_do_not_misbind
+    self.assertEqual(self.pairs(r),{('inventory',2024),('inventory',2023),('revenue',2024),('revenue',2023)})
+AssertionError: Items in the second set but not the first:
+('revenue', 2024)
+('inventory', 2024)
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.022s
+
+FAILED (failures=3)

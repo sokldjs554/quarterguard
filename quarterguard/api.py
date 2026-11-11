@@ -46,6 +46,24 @@ async def run(case_id:str):
 @app.get('/api/search')
 def search(q:str=Query('',max_length=500)):
  return index().search_with_diagnostics(q,5)|{'configuration':'hybrid_meta'}
+def source_request(operation):
+ try:return operation()
+ except ValueError as exc:
+  if str(exc) in {'UNKNOWN_SOURCE_DOCUMENT','UNKNOWN_SOURCE_CELL'}:raise HTTPException(404,str(exc)) from None
+  raise HTTPException(503,'SOURCE_EVIDENCE_UNAVAILABLE') from None
+ except (OSError,KeyError,TypeError):raise HTTPException(503,'SOURCE_EVIDENCE_UNAVAILABLE') from None
+@app.get('/api/source-documents')
+def source_documents():
+ from .source_evidence import load_source
+ return source_request(lambda:[load_source()[0]])
+@app.get('/api/source-search')
+def source_search(document_id:str=Query(...,max_length=80),q:str=Query('',max_length=500)):
+ from .source_evidence import search_source
+ return source_request(lambda:search_source(document_id,q))
+@app.get('/api/source-cells/{cell_id}')
+def source_cell(cell_id:str):
+ from .source_evidence import get_cell
+ return source_request(lambda:get_cell(cell_id))
 @app.post('/api/worksheet')
 def worksheet(request:WorksheetRequest):return preview(request)
 @app.post('/api/worksheet/run')
