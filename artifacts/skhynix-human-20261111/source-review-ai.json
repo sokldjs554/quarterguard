@@ -1,0 +1,168 @@
+{
+  "reviewer": "assistant (AI), not b or a new human reviewer",
+  "method": "Read text and rendered images of the official PDF pages; hand-annotated selected evidence cells. NOT production parser output.",
+  "pdf_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+  "selected_submitted_cells": [
+    {
+      "pdf_page": 191,
+      "printed_page": "F-73",
+      "literal_row_or_section": "Cash and cash equivalents",
+      "year_column": "2024",
+      "value_million_krw": "11205117",
+      "currency": "KRW",
+      "scale": 1000000,
+      "scope": "CFS",
+      "period_type": "instant",
+      "period": "2024-12-31",
+      "matches_submission": true
+    },
+    {
+      "pdf_page": 191,
+      "printed_page": "F-73",
+      "literal_row_or_section": "Cash and cash equivalents",
+      "year_column": "2023",
+      "value_million_krw": "7587329",
+      "currency": "KRW",
+      "scale": 1000000,
+      "scope": "CFS",
+      "period_type": "instant",
+      "period": "2023-12-31",
+      "matches_submission": true
+    },
+    {
+      "pdf_page": 191,
+      "printed_page": "F-73",
+      "literal_row_or_section": "Inventories, net",
+      "year_column": "2024",
+      "value_million_krw": "13313937",
+      "currency": "KRW",
+      "scale": 1000000,
+      "scope": "CFS",
+      "period_type": "instant",
+      "period": "2024-12-31",
+      "matches_submission": true
+    },
+    {
+      "pdf_page": 191,
+      "printed_page": "F-73",
+      "literal_row_or_section": "Inventories, net",
+      "year_column": "2023",
+      "value_million_krw": "13480659",
+      "currency": "KRW",
+      "scale": 1000000,
+      "scope": "CFS",
+      "period_type": "instant",
+      "period": "2023-12-31",
+      "matches_submission": true
+    },
+    {
+      "pdf_page": 193,
+      "printed_page": "F-75",
+      "literal_row_or_section": "Revenue",
+      "year_column": "2024",
+      "value_million_krw": "66192960",
+      "currency": "KRW",
+      "scale": 1000000,
+      "scope": "CFS",
+      "period_type": "duration",
+      "period": "2024-01-01/2024-12-31",
+      "matches_submission": true
+    },
+    {
+      "pdf_page": 193,
+      "printed_page": "F-75",
+      "literal_row_or_section": "Revenue",
+      "year_column": "2023",
+      "value_million_krw": "32765719",
+      "currency": "KRW",
+      "scale": 1000000,
+      "scope": "CFS",
+      "period_type": "duration",
+      "period": "2023-01-01/2023-12-31",
+      "matches_submission": true
+    },
+    {
+      "pdf_page": 193,
+      "printed_page": "F-75",
+      "literal_row_or_section": "Operating profit (loss)",
+      "year_column": "2024",
+      "value_million_krw": "23467319",
+      "currency": "KRW",
+      "scale": 1000000,
+      "scope": "CFS",
+      "period_type": "duration",
+      "period": "2024-01-01/2024-12-31",
+      "matches_submission": true
+    },
+    {
+      "pdf_page": 193,
+      "printed_page": "F-75",
+      "literal_row_or_section": "Operating profit (loss)",
+      "year_column": "2023",
+      "value_million_krw": "-7730313",
+      "currency": "KRW",
+      "scale": 1000000,
+      "scope": "CFS",
+      "period_type": "duration",
+      "period": "2023-01-01/2023-12-31",
+      "matches_submission": true
+    },
+    {
+      "pdf_page": 264,
+      "printed_page": "F-146",
+      "literal_row_or_section": "24(2) DRAM",
+      "year_column": "2024",
+      "value_million_krw": "44731664",
+      "currency": "KRW",
+      "scale": 1000000,
+      "scope": "CFS",
+      "period_type": "duration",
+      "period": "2024-01-01/2024-12-31",
+      "matches_submission": true
+    },
+    {
+      "pdf_page": 264,
+      "printed_page": "F-146",
+      "literal_row_or_section": "24(2) unlabeled total row after Others",
+      "year_column": "2024",
+      "value_million_krw": "66192960",
+      "currency": "KRW",
+      "scale": 1000000,
+      "scope": "CFS",
+      "period_type": "duration",
+      "period": "2024-01-01/2024-12-31",
+      "matches_submission": true
+    }
+  ],
+  "additional_q5_context": {
+    "pdf_page": 193,
+    "printed_page": "F-75",
+    "row": "Cost of sales",
+    "year": "2023",
+    "value_million_krw": "33299167",
+    "origin": "AI source check of cited row; this value was not supplied as an answer and is not added to original gold"
+  },
+  "question_judgments": [
+    {
+      "id": "SKH1",
+      "assessment": "source amounts and difference match;47.6820% rounds to47.68%"
+    },
+    {
+      "id": "SKH2",
+      "assessment": "revenue increased and ending inventory decreased by166722; stock/flow distinction appropriate"
+    },
+    {
+      "id": "SKH3",
+      "assessment": "same-year consolidated DRAM/total revenue ratio67.5777% rounds to67.58%"
+    },
+    {
+      "id": "SKH4",
+      "assessment": "negative base; turnaround and difference31197632 match. Current compare policy blocks NEGATIVE_BASE, separately tested with manual fixture."
+    },
+    {
+      "id": "SKH5",
+      "assessment": "clarification required for metric definition and period alignment. This is a financial interpretation, not a numeric PDF cell or an automatic semantic certification."
+    }
+  ],
+  "new_human_review": false
+}

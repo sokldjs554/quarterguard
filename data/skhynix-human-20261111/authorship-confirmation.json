@@ -1,0 +1,12 @@
+{
+  "confirmed_at_utc": "2026-11-11T08:07:41.232373+00:00",
+  "author": "project_author_yoon_gihyeok",
+  "author_relationship": "project author; existing user, not new external participant",
+  "user_statement": "내가 직접 작성함, ai 사용 안함",
+  "ai_used_for_question_and_answer_authorship": false,
+  "basis": "explicit user report; not independently observed",
+  "authored_at": null,
+  "source_viewing_environment": null,
+  "assistant_later_work": "PDF download/text/image comparison, Decimal arithmetic, baseline execution and record formatting; not original question/answer authorship",
+  "freeze_sha256": "dcf52319ff784e86923a8478ddef4f5374de9e0e00c068459a18e51b3adb5cfc"
+}

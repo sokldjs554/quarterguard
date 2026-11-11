@@ -1,0 +1,15 @@
+{
+  "received_on_utc": "2026-11-11",
+  "frozen_at_utc": "2026-11-11T08:02:48.078650+00:00",
+  "base_commit": "4024c4e0d74d894bf912ad2d1ca45ad8f435e6b3",
+  "origin": "user_submitted_as_followup_to_human_authored_case_plan",
+  "author_identity": null,
+  "ai_assistance_report": null,
+  "provenance_status": "awaiting_author_and_assistance_confirmation",
+  "human_review_completed": false,
+  "files": {
+    "submitted.md": "4eee80cab037aad366ea226385bd4eb99cf221aa063e75af8581b22a7bb0d5fc",
+    "cases.json": "e38a2c6419d5a500e0df94b4402897c6d5fd815e4a44ba3ab255187e3f6172f6"
+  },
+  "notes": "Formatting-only transcription of the user submission. Questions, answers and printed F-page labels unchanged. Author identity and human-only authorship not inferred. Frozen before product evaluation; no product edits."
+}

@@ -1,0 +1,48 @@
+SK hynix Inc. and Subsidiaries 
+Consolidated Statements of Comprehensive Income (Loss) 
+Years ended December 31, 2024 and 2023 
+(In millions of Korean won, except per share information)  Notes  2024 2023 
+Revenue 4,24,31 W 66,192,960 W 32,765,719 
+Cost of sales 26,31  34,364,814  33,299,167 
+Gross profit (loss) 31,828,1 46  (533,448) 
+Selling and administrative expenses 25,26  8,360,827  7,196,865 
+Operating profit (loss) 23,467,3 19  (7,730,313) 
+Finance income 5,27  4,855,082  2,261,801 
+Finance expenses 5,27  5,707,997  6,093,167 
+Share of profit (loss) of equity-accounted investees 11 (38,245) 15,061 
+Other income 28 1,476,579  623,867 
+Other expenses 28  167,388  735,065 
+Profit (loss) before income tax 23,885,3 50  (11,657,816) 
+Income tax expense (benefit) 29 4,088,448  (2,520,269) 
+Profit (loss) for the year W 19,796,902 W (9,137,547) 
+Other comprehensive income (loss) 
+Item that will never be reclassified to profit or loss: 
+Remeasurements of defined benefit liability, net of tax 19 (273,610) (17,944) 
+Items that
+ are or may be reclassified to profit or loss: 
+Foreign op
+erations – foreign currency translation 
+differences, net of tax 1,374,587 132,561 
+Gain (lo
+ss) on valuation of derivatives, net of tax 21 637 (22,414) 
+Equity-accou
+nted investees – share of other 
+comprehensive income, net of tax 11 145,906 7,848 
+Other co
+mprehensive income for the year, net of tax  1,247,52 0  100,051 
+Total comprehensive income (loss) for the year W 21,044,422 W (9,037,496) 
+Profit (loss) attributable to: 
+Owners of the Parent Company  W  19,788,681 W  (9,112,428) 
+Non-controlling interests 8,221 (25,119) 
+To
+tal comprehensive income (loss) attributable to: 
+Owne
+rs of the Parent Company  W  21,033,123 W  (9,014,999) 
+Non-controlling interests 11,299 (22,497) 
+Earnings (loss) per s
+hare 30 
+Basic earning
+s (loss) per share (in won) W 28,732 W (13,244) 
+Diluted earnings (loss) per share (in won) W 28,419 W (13,244) 
+See accompanying notes to the consolidated financial statements.
+F-75
