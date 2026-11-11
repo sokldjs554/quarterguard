@@ -1,0 +1,204 @@
+{
+  "scope": "Supplement after first baseline; does not replace original literal/full-header results",
+  "queries": [
+    {
+      "id": "SKH1",
+      "origin": "original question with AI-added context prefix copied from user-provided company/scope/unit; no new question or gold",
+      "query": "SK하이닉스 연결 원화 백만원 현금은 2023년 말보다 얼마나 늘었나?",
+      "result": {
+        "filters": {
+          "year": "2023",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000
+        },
+        "issues": [
+          "UNSUPPORTED_TERMS",
+          "MISSING_COMPANY",
+          "MISSING_METRIC",
+          "MISSING_QUARTER",
+          "MISSING_KIND"
+        ],
+        "missing_fields": [
+          "company",
+          "metric",
+          "quarter",
+          "kind"
+        ],
+        "unknown_terms": [
+          "sk하이닉스",
+          "늘었나",
+          "말보다",
+          "얼마나",
+          "현금은"
+        ],
+        "blocked": true,
+        "trusted_query": false,
+        "hits": [],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 0
+      }
+    },
+    {
+      "id": "SKH2",
+      "origin": "original question with AI-added context prefix copied from user-provided company/scope/unit; no new question or gold",
+      "query": "SK하이닉스 연결 원화 백만원 재고자산은 매출이 늘어난 2024년에 함께 증가했나?",
+      "result": {
+        "filters": {
+          "metric": "revenue",
+          "year": "2024",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000
+        },
+        "issues": [
+          "UNSUPPORTED_TERMS",
+          "MISSING_COMPANY",
+          "MISSING_QUARTER",
+          "MISSING_KIND"
+        ],
+        "missing_fields": [
+          "company",
+          "quarter",
+          "kind"
+        ],
+        "unknown_terms": [
+          "sk하이닉스",
+          "늘어난",
+          "재고자산은",
+          "증가했나",
+          "함께"
+        ],
+        "blocked": true,
+        "trusted_query": false,
+        "hits": [],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 0
+      }
+    },
+    {
+      "id": "SKH3",
+      "origin": "original question with AI-added context prefix copied from user-provided company/scope/unit; no new question or gold",
+      "query": "SK하이닉스 연결 원화 백만원 2024년 DRAM 매출은 전체 매출의 몇 %인가?",
+      "result": {
+        "filters": {
+          "metric": "revenue",
+          "year": "2024",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000
+        },
+        "issues": [
+          "UNSUPPORTED_TERMS",
+          "MISSING_COMPANY",
+          "MISSING_QUARTER",
+          "MISSING_KIND"
+        ],
+        "missing_fields": [
+          "company",
+          "quarter",
+          "kind"
+        ],
+        "unknown_terms": [
+          "dram",
+          "sk하이닉스",
+          "몇",
+          "인가",
+          "전체",
+          "%"
+        ],
+        "blocked": true,
+        "trusted_query": false,
+        "hits": [],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 0
+      }
+    },
+    {
+      "id": "SKH4",
+      "origin": "original question with AI-added context prefix copied from user-provided company/scope/unit; no new question or gold",
+      "query": "SK하이닉스 연결 원화 백만원 2024년 영업이익이 2023년보다 몇 % 증가했다고 표현해도 되나?",
+      "result": {
+        "filters": {
+          "metric": "operating_profit",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000
+        },
+        "issues": [
+          "UNSUPPORTED_TERMS",
+          "CONFLICT_YEAR",
+          "MISSING_COMPANY",
+          "MISSING_QUARTER",
+          "MISSING_KIND"
+        ],
+        "missing_fields": [
+          "company",
+          "quarter",
+          "kind"
+        ],
+        "unknown_terms": [
+          "sk하이닉스",
+          "되나",
+          "몇",
+          "보다",
+          "증가했다고",
+          "표현해도",
+          "%"
+        ],
+        "blocked": true,
+        "trusted_query": false,
+        "hits": [],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 0
+      }
+    },
+    {
+      "id": "SKH5",
+      "origin": "original question with AI-added context prefix copied from user-provided company/scope/unit; no new question or gold",
+      "query": "SK하이닉스 연결 원화 백만원 2024년 재고가 2023년 매출의 몇 개월분인지 공시표만으로 단정할 수 있나?",
+      "result": {
+        "filters": {
+          "metric": "revenue",
+          "scope": "CFS",
+          "currency": "KRW",
+          "scale": 1000000
+        },
+        "issues": [
+          "UNSUPPORTED_TERMS",
+          "CONFLICT_YEAR",
+          "MISSING_COMPANY",
+          "MISSING_QUARTER",
+          "MISSING_KIND"
+        ],
+        "missing_fields": [
+          "company",
+          "quarter",
+          "kind"
+        ],
+        "unknown_terms": [
+          "sk하이닉스",
+          "개월분인지",
+          "공시표만으로",
+          "단정할",
+          "몇",
+          "수",
+          "있나",
+          "재고가"
+        ],
+        "blocked": true,
+        "trusted_query": false,
+        "hits": [],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 0
+      }
+    }
+  ],
+  "unique_original_cases": 5,
+  "new_model_calls": 0
+}

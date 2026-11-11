@@ -1,0 +1,37 @@
+SK hynix Inc. and Subsidiaries 
+Consolidated Statements of Financial Position 
+December 31, 2024 and 2023 
+(In millions of Korean won)  Notes 2024 2023 
+Assets 
+Current assets 
+Cash and cash equivalents 5,6 W 11,205,117 W 7,587,329 
+Short-term financial instruments 5,6,7 2,382,010 472,617 
+Short-term investment assets 5,6 569,236 860,972 
+Trade receivables, net 5,6,8,31 13,019,006 6,600,273 
+Loans and other receivables, net 5,6,8,31 293,061 357,641 
+Other financial assets 5,6,7 45,309 83,750 
+Inventories, net 9 13,313,937 13,480,659  
+Current tax assets 57,467 69,916  
+Assets held for sale - 29,441
+Other current assets 10 1,393,744 925,502 
+  42,278,887 30,468,100 
+Non-current assets 
+Investments in associates and joint ventures 11 1,940,663 1,367,348 
+Long-term investment assets 5,6 4,041,276 4,105,704 
+Loans and other receivables, net 5,6,8,31 444,286 475,013 
+Other financial assets 5,6,7,21 346,749 68,217  
+Property, plant and equipment, net 12,15,32 60,157,474 52,704,853  
+Right-of-use assets, net 13,31 2,486,871 2,694,844 
+Intangible assets, net 14 4,018,847 3,834,567 
+Investment property, net 
+ 
+200 211  
+Deferred tax assets 20,29 2,811,559 2,989,472 
+Employee benefit assets 19 1,154,255 1,404,014 
+Other non-current assets 10 174,142 217,822 
+77,576,322 69,862,065 
+To
+tal assets W 119,855,209 W 100,330,165 
+See accomp
+anying notes to the consolidated financial statements. 
+F-73
