@@ -27,6 +27,23 @@ class VerificationTests(unittest.TestCase):
     def test_cumulative_not_quarter(self):
         r=compare(fact(start='2024-01-01'),fact(start='2023-07-01',end='2023-09-30'),'yoy')
         self.assertIn('PERIOD_MISMATCH',r['issues'])
+
+    def test_q3_vs_half_year_ytd_blocks_growth(self):
+        from quarterguard.store import load_facts
+
+        facts = {f.id: f for f in load_facts()}
+        current = facts['s24q3-CFS-revenue-2024-q-KRW']
+        base = facts['s24q2-CFS-revenue-2024-ytd-KRW']
+
+        self.assertEqual(current.months, 3)
+        self.assertEqual(base.months, 6)
+
+        result = compare(current, base, 'qoq')
+
+        self.assertEqual(result['issues'], ['PERIOD_MISMATCH'])
+        self.assertEqual(result['status'], 'needs_review')
+        self.assertIsNone(result['growth_pct'])
+
     def test_nonadjacent_qoq(self):
         self.assertIn('PERIOD_MISMATCH',compare(fact(),fact(start='2023-07-01',end='2023-09-30'),'qoq')['issues'])
     def test_scale_conversion(self):
