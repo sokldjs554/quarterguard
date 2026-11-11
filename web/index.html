@@ -52,15 +52,24 @@
  <section class="source-evidence-section" aria-labelledby="source-evidence-title">
   <h2 id="source-evidence-title">SK하이닉스 · 선택 문서의 근거 찾기</h2>
   <p>선택 문서: <strong>2025 Offering Circular에 수록된 2024·2023 연결재무제표</strong></p>
-  <p>현금·재고, 매출·매출원가·영업손익, 제품별 매출의 원문 근거 18개를 검색합니다. 통화는 KRW, 표시 단위는 백만 원입니다. 연간 비교·잔액 증감·제품 비중 계산은 아직 지원하지 않습니다.</p>
+  <p>현금·재고, 매출·매출원가·영업손익, 제품별 매출의 원문 근거 18개를 검색합니다. 통화는 KRW, 표시 단위는 백만 원입니다. 선택 근거로 연간 비교·전년 말 잔액 증감·제품 비중을 계산할 수 있습니다. 재고 개월분은 정의 확인이 필요합니다.</p>
   <form id="source-evidence-form"><label for="source-evidence-query">이 문서에서 확인할 항목과 연도</label><div class="search-input"><input id="source-evidence-query" maxlength="500" value="현금은 2023년 말보다 얼마나 늘었나?"><button class="primary">원문 근거 검색</button></div></form>
+  <details id="source-calculator" class="source-calculator"><summary>선택 근거로 계산 · 연간 / 전년 말 / 제품 비중</summary>
+   <p>계산 방식과 A/B 근거를 직접 선택하세요. 아래 기본값은 예시이며 검색 질문에서 자동 확정한 조건이 아닙니다.</p>
+   <div id="source-calc-load-error" class="error-message" hidden><p id="source-calc-load-message" role="alert"></p><button id="source-calc-retry" type="button" class="secondary">계산 자료 다시 불러오기</button></div>
+   <form id="source-calc-form"><label for="source-calc-mode">계산 방식</label><select id="source-calc-mode" disabled><option value="balance_yoy">전년 말 잔액 증감</option><option value="annual_yoy">연간 실적 전년 대비</option><option value="product_share">제품 매출 비중</option><option value="inventory_months">재고 개월분 · 정의 확인</option></select>
+    <div class="source-calc-selectors"><div><label id="source-calc-current-label" for="source-calc-current">A · 기준 자료</label><select id="source-calc-current" disabled></select></div><div><label id="source-calc-base-label" for="source-calc-base">B · 비교 자료</label><select id="source-calc-base" disabled></select></div></div>
+    <div id="source-calc-selected" class="source-calc-selected"></div>
+    <button id="source-calc-submit" class="primary" disabled>조건 검증 후 계산</button><button id="source-calc-export" type="button" class="secondary" disabled>계산·근거 JSON 저장</button>
+   </form><div id="source-calc-result" aria-live="polite"><p class="empty">조건을 선택한 뒤 실행해 주세요.</p></div>
+  </details>
   <div id="source-evidence-results" aria-live="polite"><p class="empty">문서의 조건을 함께 확인하세요. 검색 결과는 계산 전 근거 후보입니다.</p></div>
  </section>
  <section class="document-index"><h2>분기 비교 작업지 문서</h2><div id="source-index"></div></section>
 </section>
 <section id="review" class="view" hidden>
  <div class="title-line"><div><h1>검증 기록</h1></div><span class="page-context">측정 산출물 기반</span></div>
- <p class="scope-notice">현재 공개 작업지: 삼성전자 2024 문서 2건 · 정본 192개. 추가 문서 평가와 사람의 부분 검수 범위는 아래 최신 근거 요약에서 확인하세요. SK하이닉스는 근거 검색에서 별도 원문 셀 18개를 지원하며, 계산은 지원하지 않습니다. 과거 평가와 현재 제품 지원 범위를 구분합니다.</p>
+ <p class="scope-notice">현재 공개 작업지: 삼성전자 2024 문서 2건 · 정본 192개. 추가 문서 평가와 사람의 부분 검수 범위는 아래 최신 근거 요약에서 확인하세요. SK하이닉스는 별도 원문 셀 18개의 근거 검색과 명시적으로 선택한 연간·잔액·제품 비중 계산을 지원합니다. 과거 평가와 현재 제품 지원 범위를 구분합니다.</p>
  <section id="current-evaluation-content" class="review-section" aria-label="현재 보완 결과"></section><h2>이전 개발 회귀 기록 · 보존본</h2><div id="evaluation-content"></div>
  <section class="regression-section"><div class="section-bar"><h2>오류 유형별 재현</h2><span>준비 재생과 현재 실행 구분</span></div><div class="regression-controls"><label for="case-select">검증 사례 <select id="case-select"></select></label><button id="prepared-btn" class="secondary">저장 기록</button><button id="case-run-btn" class="primary">현재 재실행</button></div><div id="case-output" aria-live="polite">사례 선택 후 저장된 실행 기록 확인</div></section>
  <section id="heldout-content" class="review-section" aria-label="추가 문서 평가"></section>

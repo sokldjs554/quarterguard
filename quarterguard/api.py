@@ -1,5 +1,7 @@
 import asyncio,json,os,subprocess
 from functools import lru_cache
+from typing import Literal
+from pydantic import BaseModel,ConfigDict,Field
 from fastapi import FastAPI,HTTPException,Query
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
@@ -54,8 +56,8 @@ def source_request(operation):
  except (OSError,KeyError,TypeError):raise HTTPException(503,'SOURCE_EVIDENCE_UNAVAILABLE') from None
 @app.get('/api/source-documents')
 def source_documents():
- from .source_evidence import load_source
- return source_request(lambda:[load_source()[0]])
+ from .source_calculations import options
+ return source_request(lambda:[options()['document']])
 @app.get('/api/source-search')
 def source_search(document_id:str=Query(...,max_length=80),q:str=Query('',max_length=500)):
  from .source_evidence import search_source
@@ -64,6 +66,19 @@ def source_search(document_id:str=Query(...,max_length=80),q:str=Query('',max_le
 def source_cell(cell_id:str):
  from .source_evidence import get_cell
  return source_request(lambda:get_cell(cell_id))
+class SourceCalculationRequest(BaseModel):
+ model_config=ConfigDict(extra='forbid')
+ current_id:str=Field(min_length=1,max_length=160,strict=True)
+ base_id:str=Field(min_length=1,max_length=160,strict=True)
+ mode:Literal['annual_yoy','balance_yoy','product_share','inventory_months']
+@app.get('/api/source-calculations/options')
+def source_calculation_options():
+ from .source_calculations import options
+ return source_request(options)
+@app.post('/api/source-calculations')
+def source_calculation(request:SourceCalculationRequest):
+ from .source_calculations import calculate_source_pair
+ return source_request(lambda:calculate_source_pair(request.current_id,request.base_id,request.mode))
 @app.post('/api/worksheet')
 def worksheet(request:WorksheetRequest):return preview(request)
 @app.post('/api/worksheet/run')

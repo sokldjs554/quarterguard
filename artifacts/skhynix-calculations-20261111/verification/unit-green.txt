@@ -1,0 +1,15 @@
+test_cash_balance_change_and_evidence (tests.test_source_calculations.SourceCalculationTests.test_cash_balance_change_and_evidence) ... ok
+test_inventory_and_annual_revenue_are_different_measurement_types (tests.test_source_calculations.SourceCalculationTests.test_inventory_and_annual_revenue_are_different_measurement_types) ... ok
+test_inventory_months_requires_definition (tests.test_source_calculations.SourceCalculationTests.test_inventory_months_requires_definition) ... ok
+test_negative_base_withholds_percent_but_keeps_valid_difference (tests.test_source_calculations.SourceCalculationTests.test_negative_base_withholds_percent_but_keeps_valid_difference) ... ok
+test_product_share_uses_same_table_total (tests.test_source_calculations.SourceCalculationTests.test_product_share_uses_same_table_total) ... ok
+test_synthetic_context_and_date_mutations_fail_closed (tests.test_source_calculations.SourceCalculationTests.test_synthetic_context_and_date_mutations_fail_closed) ... ok
+test_synthetic_share_invalid_part_and_zero_total (tests.test_source_calculations.SourceCalculationTests.test_synthetic_share_invalid_part_and_zero_total) ... ok
+test_synthetic_zero_base_and_equivalent_scales (tests.test_source_calculations.SourceCalculationTests.test_synthetic_zero_base_and_equivalent_scales) ... ok
+test_unknown_id_and_mode_fail (tests.test_source_calculations.SourceCalculationTests.test_unknown_id_and_mode_fail) ... ok
+test_wrong_mode_account_year_type_and_denominator_block_all_arithmetic (tests.test_source_calculations.SourceCalculationTests.test_wrong_mode_account_year_type_and_denominator_block_all_arithmetic) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.010s
+
+OK

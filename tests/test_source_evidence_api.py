@@ -8,7 +8,8 @@ class SourceAPITests(unittest.TestCase):
     def test_catalog_search_and_canonical_cell(self):
         r=self.client.get('/api/source-documents')
         self.assertEqual(r.status_code,200)
-        self.assertFalse(r.json()[0]['calculation_supported'])
+        self.assertTrue(r.json()[0]['calculation_supported'])
+        self.assertIn('balance_yoy',r.json()[0]['calculation_modes'])
         r=self.client.get('/api/source-search',params={'document_id':DOCUMENT_ID,'q':'2024년 DRAM 매출 비중'})
         self.assertEqual(r.status_code,200)
         self.assertEqual(len(r.json()['hits']),2)

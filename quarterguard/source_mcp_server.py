@@ -14,4 +14,9 @@ def get_source_cell(cell_id:str)->dict:
     """Read one canonical source cell with instant/duration, table, row and year column."""
     from .source_evidence import get_cell
     return get_cell(cell_id)
+@mcp.tool()
+def calculate_source_pair(current_id:str,base_id:str,mode:str)->dict:
+    """Calculate explicit registered annual/balance/share pairs; inventory months need definition."""
+    from .source_calculations import calculate_source_pair as calculate
+    return calculate(current_id,base_id,mode)
 if __name__=='__main__':mcp.run()
