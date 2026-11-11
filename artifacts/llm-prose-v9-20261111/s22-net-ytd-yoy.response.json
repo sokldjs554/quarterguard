@@ -1,0 +1,11 @@
+{
+  "id": "resp_017e8146692bd2bf016af411980bd487d09461b08bd231bd8c",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1615,
+    "output_tokens": 186,
+    "total_tokens": 1801
+  },
+  "output_text": "{\"status\":\"verified\",\"value\":\"9.4364\",\"issues\":[],\"evidence_ids\":[\"s22q3-CFS-net_profit-2022-ytd-KRW\",\"s22q3-CFS-net_profit-2021-ytd-KRW\"],\"explanation_ko\":\"삼성전자 2022년 9개월 누적 연결 당기순이익은 31,812,631 백만 원입니다. 2021년 9개월 누적 연결 당기순이익은 29,069,502 백만 원입니다. 기준 기간 대비 현재 기간 증가율은 9.4364%입니다. 출처는 Samsung Electronics 2022 Q3 Interim Report입니다. PDF 37페이지의 Profit for the period 항목입니다. 2022 YTD KRW와 2021 YTD KRW를 비교했습니다.\"}"
+}

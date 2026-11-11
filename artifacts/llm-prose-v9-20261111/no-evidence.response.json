@@ -1,0 +1,11 @@
+{
+  "id": "resp_0e7752897dd01967016af4118ad0f087d0acf92f650a98ed47",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 593,
+    "output_tokens": 113,
+    "total_tokens": 706
+  },
+  "output_text": "{\"status\":\"needs_review\",\"value\":null,\"issues\":[\"SEARCH_EMPTY\"],\"evidence_ids\":[],\"explanation_ko\":\"현재 검색 조건으로 확인할 수 있는 근거를 찾지 못했습니다. 해당 검색 범위에서 확인할 수 없습니다. 이는 기업의 실적 자체가 없다는 뜻은 아닙니다. 검색 조건과 수집 범위를 확인해야 합니다. 도구의 문제 목록을 설명한 안내입니다. AI 문장 전체에 대한 의미 검증은 아닙니다.\"}"
+}

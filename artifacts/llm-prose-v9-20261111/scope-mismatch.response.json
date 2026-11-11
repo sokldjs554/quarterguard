@@ -1,0 +1,11 @@
+{
+  "id": "resp_0ca84836c23499c7016af41187ba6087d0883b3ac7676b9336",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1652,
+    "output_tokens": 148,
+    "total_tokens": 1800
+  },
+  "output_text": "{\"status\":\"needs_review\",\"value\":null,\"issues\":[\"SCOPE_MISMATCH\"],\"evidence_ids\":[\"s24q3-CFS-revenue-2024-q-KRW\",\"s24q2-OFS-revenue-2024-q-KRW\"],\"explanation_ko\":\"연결과 별도 범위가 달라 비교를 보류했습니다. 연결 매출은 Samsung Electronics 2024 3Q Interim Business Report, PDF p.34입니다. 별도 매출은 Samsung Electronics 2024 Half-year Business Report, PDF p.104입니다. 두 사실은 같은 범위가 아닙니다. 따라서 증가율은 확정하지 않습니다.\"}"
+}
