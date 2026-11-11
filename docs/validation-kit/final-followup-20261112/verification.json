@@ -1,0 +1,12 @@
+{
+  "base_commit": "97ea038b264f1df8536979192ede9cb3ee7190d6",
+  "protected_existing_files_byte_identical": 777,
+  "submitted_counts_verified": true,
+  "new_v9_human_reviews": 0,
+  "old_v9_human_fields_untouched": true,
+  "local_links_valid": true,
+  "artifact_consistency": "passed",
+  "new_paid_calls": 0,
+  "runtime_tests_rerun": false,
+  "scope": "documentation only; no new live use or deployment verification"
+}
