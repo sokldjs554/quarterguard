@@ -1,0 +1,453 @@
+{
+  "code_commit": "60af1fdd76a6c52154e596fdae8c0ad683edf185",
+  "catalog": [
+    {
+      "id": "skh2024annual-in-2025oc",
+      "title": "SK hynix 2025 Offering Circular · 2024·2023 연결재무제표",
+      "url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+      "sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+      "pages": 291,
+      "company": "skhynix",
+      "scope": "CFS",
+      "currency": "KRW",
+      "scale": 1000000,
+      "years": [
+        2024,
+        2023
+      ],
+      "capabilities": [
+        "source_evidence_search"
+      ],
+      "calculation_supported": true,
+      "tables": [
+        {
+          "pdf_page": 191,
+          "printed_page": "F-73",
+          "table_id": "financial-position"
+        },
+        {
+          "pdf_page": 193,
+          "printed_page": "F-75",
+          "table_id": "income"
+        },
+        {
+          "pdf_page": 264,
+          "printed_page": "F-146",
+          "table_id": "note-24-2"
+        }
+      ],
+      "cells_count": 18,
+      "cells_sha256": "a53ffe13c349937e4102099c9a43ba5705f3f452068c1dea935c1ad8386363f4",
+      "extraction": "actual official PDF -> pypdf -> bounded source-table adapter",
+      "limitations": [
+        "Selected rows only; no general annual parser.",
+        "No annual, balance-change, product-share or inventory-ratio answer calculation."
+      ],
+      "calculation_modes": [
+        "annual_yoy",
+        "balance_yoy",
+        "product_share"
+      ],
+      "clarification_only_modes": [
+        "inventory_months"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "id": "Q1",
+      "unaltered_question": "2024회계연도에 제품과 서비스 중 어느 쪽의 매출총이익률이 더 높았나?",
+      "selected_document_http": 404,
+      "selected_document_response": {
+        "detail": "UNKNOWN_SOURCE_DOCUMENT"
+      },
+      "intake_adapter_result": {
+        "status": "needs_review",
+        "issues": [
+          "UNSUPPORTED_DOCUMENT"
+        ],
+        "hits": []
+      },
+      "current_search_http": 200,
+      "current_search_result": {
+        "filters": {
+          "metric": "gross_profit",
+          "year": "2024"
+        },
+        "issues": [
+          "UNSUPPORTED_TERMS",
+          "MISSING_COMPANY",
+          "MISSING_QUARTER",
+          "MISSING_KIND",
+          "MISSING_SCOPE",
+          "MISSING_CURRENCY",
+          "MISSING_SCALE"
+        ],
+        "missing_fields": [
+          "company",
+          "quarter",
+          "kind",
+          "scope",
+          "currency",
+          "scale"
+        ],
+        "unknown_terms": [
+          "높았나",
+          "더",
+          "률이",
+          "서비스",
+          "어느",
+          "제품과",
+          "중",
+          "쪽의",
+          "회계연도에"
+        ],
+        "blocked": true,
+        "trusted_query": false,
+        "hits": [],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 0,
+        "configuration": "hybrid_meta"
+      }
+    },
+    {
+      "id": "Q2",
+      "unaltered_question": "중국권 매출이 줄었는데도 전체 매출은 늘었나?",
+      "selected_document_http": 404,
+      "selected_document_response": {
+        "detail": "UNKNOWN_SOURCE_DOCUMENT"
+      },
+      "intake_adapter_result": {
+        "status": "needs_review",
+        "issues": [
+          "UNSUPPORTED_DOCUMENT"
+        ],
+        "hits": []
+      },
+      "current_search_http": 200,
+      "current_search_result": {
+        "filters": {
+          "metric": "revenue"
+        },
+        "issues": [
+          "UNSUPPORTED_TERMS",
+          "MISSING_COMPANY",
+          "MISSING_YEAR",
+          "MISSING_QUARTER",
+          "MISSING_KIND",
+          "MISSING_SCOPE",
+          "MISSING_CURRENCY",
+          "MISSING_SCALE"
+        ],
+        "missing_fields": [
+          "company",
+          "year",
+          "quarter",
+          "kind",
+          "scope",
+          "currency",
+          "scale"
+        ],
+        "unknown_terms": [
+          "늘었나",
+          "전체",
+          "줄었는데도",
+          "중국권"
+        ],
+        "blocked": true,
+        "trusted_query": false,
+        "hits": [],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 0,
+        "configuration": "hybrid_meta"
+      }
+    },
+    {
+      "id": "Q3",
+      "unaltered_question": "2024년 영업현금흐름에서 유형자산 취득액을 뺀 금액은 얼마인가?",
+      "selected_document_http": 404,
+      "selected_document_response": {
+        "detail": "UNKNOWN_SOURCE_DOCUMENT"
+      },
+      "intake_adapter_result": {
+        "status": "needs_review",
+        "issues": [
+          "UNSUPPORTED_DOCUMENT"
+        ],
+        "hits": []
+      },
+      "current_search_http": 200,
+      "current_search_result": {
+        "filters": {
+          "year": "2024"
+        },
+        "issues": [
+          "UNSUPPORTED_TERMS",
+          "MISSING_COMPANY",
+          "MISSING_METRIC",
+          "MISSING_QUARTER",
+          "MISSING_KIND",
+          "MISSING_SCOPE",
+          "MISSING_CURRENCY",
+          "MISSING_SCALE"
+        ],
+        "missing_fields": [
+          "company",
+          "metric",
+          "quarter",
+          "kind",
+          "scope",
+          "currency",
+          "scale"
+        ],
+        "unknown_terms": [
+          "금액은",
+          "뺀",
+          "영업현금흐름에서",
+          "유형자산",
+          "취득액을"
+        ],
+        "blocked": true,
+        "trusted_query": false,
+        "hits": [],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 0,
+        "configuration": "hybrid_meta"
+      }
+    },
+    {
+      "id": "Q4",
+      "unaltered_question": "2024년 자사주 매입에 쓴 현금은 2023년보다 얼마나 늘었나?",
+      "selected_document_http": 404,
+      "selected_document_response": {
+        "detail": "UNKNOWN_SOURCE_DOCUMENT"
+      },
+      "intake_adapter_result": {
+        "status": "needs_review",
+        "issues": [
+          "UNSUPPORTED_DOCUMENT"
+        ],
+        "hits": []
+      },
+      "current_search_http": 200,
+      "current_search_result": {
+        "filters": {},
+        "issues": [
+          "UNSUPPORTED_TERMS",
+          "CONFLICT_YEAR",
+          "MISSING_COMPANY",
+          "MISSING_METRIC",
+          "MISSING_QUARTER",
+          "MISSING_KIND",
+          "MISSING_SCOPE",
+          "MISSING_CURRENCY",
+          "MISSING_SCALE"
+        ],
+        "missing_fields": [
+          "company",
+          "metric",
+          "quarter",
+          "kind",
+          "scope",
+          "currency",
+          "scale"
+        ],
+        "unknown_terms": [
+          "늘었나",
+          "매입에",
+          "보다",
+          "쓴",
+          "얼마나",
+          "자사주",
+          "현금은"
+        ],
+        "blocked": true,
+        "trusted_query": false,
+        "hits": [],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 0,
+        "configuration": "hybrid_meta"
+      }
+    },
+    {
+      "id": "Q5",
+      "unaltered_question": "영업이익이 늘었는데 순이익은 줄어든 이유를 법인세 수치로 일부 설명할 수 있나?",
+      "selected_document_http": 404,
+      "selected_document_response": {
+        "detail": "UNKNOWN_SOURCE_DOCUMENT"
+      },
+      "intake_adapter_result": {
+        "status": "needs_review",
+        "issues": [
+          "UNSUPPORTED_DOCUMENT"
+        ],
+        "hits": []
+      },
+      "current_search_http": 200,
+      "current_search_result": {
+        "filters": {},
+        "issues": [
+          "UNSUPPORTED_TERMS",
+          "CONFLICT_METRIC",
+          "MISSING_COMPANY",
+          "MISSING_YEAR",
+          "MISSING_QUARTER",
+          "MISSING_KIND",
+          "MISSING_SCOPE",
+          "MISSING_CURRENCY",
+          "MISSING_SCALE"
+        ],
+        "missing_fields": [
+          "company",
+          "year",
+          "quarter",
+          "kind",
+          "scope",
+          "currency",
+          "scale"
+        ],
+        "unknown_terms": [
+          "늘었는데",
+          "법인세",
+          "설명할",
+          "수",
+          "수치로",
+          "이유를",
+          "일부",
+          "있나",
+          "줄어든"
+        ],
+        "blocked": true,
+        "trusted_query": false,
+        "hits": [],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 0,
+        "configuration": "hybrid_meta"
+      }
+    },
+    {
+      "id": "Q6",
+      "unaltered_question": "2024년 재무제표의 제품 매출총이익률이 서비스보다 낮으니, 모든 개별 제품도 모든 개별 서비스보다 수익성이 낮다고 볼 수 있나?",
+      "selected_document_http": 404,
+      "selected_document_response": {
+        "detail": "UNKNOWN_SOURCE_DOCUMENT"
+      },
+      "intake_adapter_result": {
+        "status": "needs_review",
+        "issues": [
+          "UNSUPPORTED_DOCUMENT"
+        ],
+        "hits": []
+      },
+      "current_search_http": 200,
+      "current_search_result": {
+        "filters": {
+          "metric": "gross_profit",
+          "year": "2024",
+          "scope": "OFS"
+        },
+        "issues": [
+          "UNSUPPORTED_TERMS",
+          "MISSING_COMPANY",
+          "MISSING_QUARTER",
+          "MISSING_KIND",
+          "MISSING_CURRENCY",
+          "MISSING_SCALE"
+        ],
+        "missing_fields": [
+          "company",
+          "quarter",
+          "kind",
+          "currency",
+          "scale"
+        ],
+        "unknown_terms": [
+          "낮다고",
+          "낮으니",
+          "률이",
+          "모든",
+          "볼",
+          "서비스보다",
+          "수",
+          "수익성이",
+          "있나",
+          "재무제표의",
+          "제품",
+          "제품도"
+        ],
+        "blocked": true,
+        "trusted_query": false,
+        "hits": [],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 0,
+        "configuration": "hybrid_meta"
+      }
+    },
+    {
+      "id": "Q7",
+      "unaltered_question": "2024년 중국권 매출 감소는 판매량 감소만으로 설명할 수 있나?",
+      "selected_document_http": 404,
+      "selected_document_response": {
+        "detail": "UNKNOWN_SOURCE_DOCUMENT"
+      },
+      "intake_adapter_result": {
+        "status": "needs_review",
+        "issues": [
+          "UNSUPPORTED_DOCUMENT"
+        ],
+        "hits": []
+      },
+      "current_search_http": 200,
+      "current_search_result": {
+        "filters": {
+          "metric": "revenue",
+          "year": "2024"
+        },
+        "issues": [
+          "UNSUPPORTED_TERMS",
+          "MISSING_COMPANY",
+          "MISSING_QUARTER",
+          "MISSING_KIND",
+          "MISSING_SCOPE",
+          "MISSING_CURRENCY",
+          "MISSING_SCALE"
+        ],
+        "missing_fields": [
+          "company",
+          "quarter",
+          "kind",
+          "scope",
+          "currency",
+          "scale"
+        ],
+        "unknown_terms": [
+          "감소는",
+          "감소만으로",
+          "설명할",
+          "수",
+          "있나",
+          "중국권",
+          "판매량"
+        ],
+        "blocked": true,
+        "trusted_query": false,
+        "hits": [],
+        "status": "needs_clarification",
+        "answer_status": "not_verified",
+        "candidate_fact_count": 0,
+        "configuration": "hybrid_meta"
+      }
+    }
+  ],
+  "new_llm_calls": 0,
+  "raw_pdf_parsed": false,
+  "fixture_answers_used_as_runtime_input": false,
+  "human_authorship_confirmed": false,
+  "first_attempt": true
+}
