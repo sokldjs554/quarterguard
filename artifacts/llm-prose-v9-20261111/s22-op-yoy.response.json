@@ -1,0 +1,11 @@
+{
+  "id": "resp_07fa614dabc054a4016af411962bbc87d0bfd4dde57cb49ac7",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1596,
+    "output_tokens": 194,
+    "total_tokens": 1790
+  },
+  "output_text": "{\"status\":\"verified\",\"value\":\"-31.3923\",\"issues\":[],\"evidence_ids\":[\"s22q3-CFS-operating_profit-2022-q-KRW\",\"s22q3-CFS-operating_profit-2021-q-KRW\"],\"explanation_ko\":\"삼성전자 2022년 3분기 연결 영업이익은 Samsung Electronics 2022 Q3 Interim Report, PDF p.37의 Operating profit / 2022 Q KRW에서 10,852,045 백만 원입니다. 2021년 3분기 연결 영업이익은 같은 문서의 PDF p.37의 Operating profit / 2021 Q KRW에서 15,817,531 백만 원입니다. 2021년 3분기 대비 2022년 3분기의 증감률은 -31.3923%입니다.\"}"
+}

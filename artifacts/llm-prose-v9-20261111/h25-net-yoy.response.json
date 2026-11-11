@@ -1,0 +1,11 @@
+{
+  "id": "resp_009879e7501e30a5016af411a004e487d0913ecbba833242a9",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1681,
+    "output_tokens": 227,
+    "total_tokens": 1908
+  },
+  "output_text": "{\"status\":\"verified\",\"value\":\"-20.5146\",\"issues\":[],\"evidence_ids\":[\"h25q3-CFS-net_profit-2025-q-KRW\",\"h25q3-CFS-net_profit-2024-q-KRW\"],\"explanation_ko\":\"Hyundai Motor Company 2025 Q3 interim consolidated financial statements, PDF p.8의 Profit for the period / 2025 Q KRW는 2025년 7월 1일~2025년 9월 30일 3개월 연결 기준 2,548,183 백만 원입니다. Hyundai Motor Company 2025 Q3 interim consolidated financial statements, PDF p.8의 Profit for the period / 2024 Q KRW는 2024년 7월 1일~2024년 9월 30일 3개월 연결 기준 3,205,850 백만 원입니다. 2024년 3분기 대비 2025년 3분기 증가율은 -20.5146%입니다.\"}"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "resp_02caa3710787b980016af411a6196c87d0b34b21748f672307",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1808,
+    "output_tokens": 273,
+    "total_tokens": 2081
+  },
+  "output_text": "{\"status\":\"needs_review\",\"value\":null,\"issues\":[\"COMPANY_MISMATCH\",\"PERIOD_MISMATCH\"],\"evidence_ids\":[\"s22q3-CFS-operating_profit-2022-q-KRW\",\"h25q3-CFS-operating_profit-2025-q-KRW\"],\"explanation_ko\":\"계산을 보류합니다. 회사가 달라서 같은 지표로 전년 동분기 비교를 할 수 없습니다. 기간도 다릅니다. 삼성전자 보고서는 Samsung Electronics 2022 Q3 Interim Report의 PDF p.37입니다. 여기에 2022-07-01 ~ 2022-09-30, 3개월, 연결 기준 영업이익이 나옵니다. 값은 10,852,045 백만 원입니다. 현대자동차 보고서는 Hyundai Motor Company 2025 Q3 interim consolidated financial statements의 PDF p.8입니다. 여기에 2025-07-01 ~ 2025-09-30, 3개월, 연결 기준 영업이익이 나옵니다. 값은 2,537,266 백만 원입니다. 기간 불일치 진단은 별도 재계산 결과입니다. 전년 동분기 조건은 충족하지 않습니다.\"}"
+}

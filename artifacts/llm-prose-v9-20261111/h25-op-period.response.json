@@ -1,0 +1,11 @@
+{
+  "id": "resp_0bc36e22a151b415016af411a425d887d0995717ffc90ac448",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1829,
+    "output_tokens": 252,
+    "total_tokens": 2081
+  },
+  "output_text": "{\"status\":\"needs_review\",\"value\":null,\"issues\":[\"PERIOD_MISMATCH\"],\"evidence_ids\":[\"h25q3-CFS-operating_profit-2025-ytd-KRW\",\"h25q3-CFS-operating_profit-2024-q-KRW\"],\"explanation_ko\":\"비교 제한이 있습니다. 기간 불일치입니다. 도구의 비교 제한을 유지합니다. 2025-01-01 ~ 2025-09-30 9개월 연결 영업이익은 Hyundai Motor Company 2025 Q3 interim consolidated financial statements, PDF p.8, Operating profit / 2025 YTD KRW에서 확인됩니다. 9,772,472 백만 원입니다. 2024-07-01 ~ 2024-09-30 3개월 연결 영업이익은 같은 문서의 PDF p.8, Operating profit / 2024 Q KRW에서 확인됩니다. 3,580,900 백만 원입니다. 두 기간의 개월 수가 같지 않습니다. 비교 기준이 다릅니다. 시작 월·일도 다릅니다. 따라서 증가율은 보류합니다.\"}"
+}

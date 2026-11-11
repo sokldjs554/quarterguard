@@ -1,0 +1,11 @@
+{
+  "id": "resp_02a5ead69292ac35016af411999ff487d09fac43a92a5c977c",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1748,
+    "output_tokens": 206,
+    "total_tokens": 1954
+  },
+  "output_text": "{\"status\":\"needs_review\",\"value\":null,\"issues\":[\"PERIOD_MISMATCH\"],\"evidence_ids\":[\"s22q3-CFS-net_profit-2022-q-KRW\",\"s22q3-CFS-net_profit-2021-ytd-KRW\"],\"explanation_ko\":\"비교가 보류되었습니다. 기간 불일치가 있습니다. 2022년 3개월 연결 순이익은 Samsung Electronics 2022 Q3 Interim Report, PDF p.37의 Profit for the period / 2022 Q KRW입니다. 2021년 9개월 연결 순이익은 같은 보고서의 PDF p.37의 Profit for the period / 2021 YTD KRW입니다. 3개월과 9개월은 같은 기간 길이가 아닙니다. 시작 월·일도 다릅니다. 따라서 증가율은 검증하지 않았습니다. 이는 근거가 없는 것이 아니라 기간 비교 제한입니다.\"}"
+}
