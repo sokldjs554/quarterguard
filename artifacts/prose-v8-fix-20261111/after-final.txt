@@ -1,0 +1,13 @@
+test_correct_direction_cannot_hide_later_reversed_claim (tests.test_v8_prose_regressions.V8ProseRegressions.test_correct_direction_cannot_hide_later_reversed_claim) ... ok
+test_current_and_base_are_resolved_for_yoy_qoq_and_english (tests.test_v8_prose_regressions.V8ProseRegressions.test_current_and_base_are_resolved_for_yoy_qoq_and_english) ... ok
+test_internal_issue_and_diagnostic_labels_are_not_prose (tests.test_v8_prose_regressions.V8ProseRegressions.test_internal_issue_and_diagnostic_labels_are_not_prose) ... ok
+test_negation_does_not_hide_contradiction_or_uncertainty (tests.test_v8_prose_regressions.V8ProseRegressions.test_negation_does_not_hide_contradiction_or_uncertainty) ... ok
+test_partial_year_match_does_not_accept_an_unsupported_period_suffix (tests.test_v8_prose_regressions.V8ProseRegressions.test_partial_year_match_does_not_accept_an_unsupported_period_suffix) ... ok
+test_provider_rejects_reversed_sentence_even_when_structure_matches (tests.test_v8_prose_regressions.V8ProseRegressions.test_provider_rejects_reversed_sentence_even_when_structure_matches) ... ok
+test_real_evidence_negation_is_allowed_without_mutation (tests.test_v8_prose_regressions.V8ProseRegressions.test_real_evidence_negation_is_allowed_without_mutation) ... ok
+test_real_reverse_direction_is_rejected_without_changing_response (tests.test_v8_prose_regressions.V8ProseRegressions.test_real_reverse_direction_is_rejected_without_changing_response) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.007s
+
+OK

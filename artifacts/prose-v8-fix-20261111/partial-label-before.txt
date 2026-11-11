@@ -1,0 +1,33 @@
+test_partial_year_match_does_not_accept_an_unsupported_period_suffix (tests.test_v8_prose_regressions.V8ProseRegressions.test_partial_year_match_does_not_accept_an_unsupported_period_suffix) ... 
+  test_partial_year_match_does_not_accept_an_unsupported_period_suffix (tests.test_v8_prose_regressions.V8ProseRegressions.test_partial_year_match_does_not_accept_an_unsupported_period_suffix) (text='2024년 대비 2025년 상반기 증감률은 -20.5146%입니다.') ... FAIL
+  test_partial_year_match_does_not_accept_an_unsupported_period_suffix (tests.test_v8_prose_regressions.V8ProseRegressions.test_partial_year_match_does_not_accept_an_unsupported_period_suffix) (text='2024년 대비 2025년 9개월 증감률은 -20.5146%입니다.') ... FAIL
+  test_partial_year_match_does_not_accept_an_unsupported_period_suffix (tests.test_v8_prose_regressions.V8ProseRegressions.test_partial_year_match_does_not_accept_an_unsupported_period_suffix) (text='From 2024 Q3 to 2025 Q9, change is -20.5146%.') ... FAIL
+
+======================================================================
+FAIL: test_partial_year_match_does_not_accept_an_unsupported_period_suffix (tests.test_v8_prose_regressions.V8ProseRegressions.test_partial_year_match_does_not_accept_an_unsupported_period_suffix) (text='2024년 대비 2025년 상반기 증감률은 -20.5146%입니다.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-v8-fix/tests/test_v8_prose_regressions.py", line 56, in test_partial_year_match_does_not_accept_an_unsupported_period_suffix
+    self.assertFalse(self.check('h25-net-yoy',text)['prose_comparison_direction_consistent'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_partial_year_match_does_not_accept_an_unsupported_period_suffix (tests.test_v8_prose_regressions.V8ProseRegressions.test_partial_year_match_does_not_accept_an_unsupported_period_suffix) (text='2024년 대비 2025년 9개월 증감률은 -20.5146%입니다.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-v8-fix/tests/test_v8_prose_regressions.py", line 56, in test_partial_year_match_does_not_accept_an_unsupported_period_suffix
+    self.assertFalse(self.check('h25-net-yoy',text)['prose_comparison_direction_consistent'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_partial_year_match_does_not_accept_an_unsupported_period_suffix (tests.test_v8_prose_regressions.V8ProseRegressions.test_partial_year_match_does_not_accept_an_unsupported_period_suffix) (text='From 2024 Q3 to 2025 Q9, change is -20.5146%.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-v8-fix/tests/test_v8_prose_regressions.py", line 56, in test_partial_year_match_does_not_accept_an_unsupported_period_suffix
+    self.assertFalse(self.check('h25-net-yoy',text)['prose_comparison_direction_consistent'])
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 1 test in 0.006s
+
+FAILED (failures=3)

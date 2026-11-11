@@ -1,0 +1,25 @@
+{
+  "mode": "local_HTTP_v8_archived_responses_intercepted_provider_routes",
+  "checks": [
+    "390:normal-qoq:original_prose_unchanged",
+    "390:h25-net-yoy:rejected_and_prior_success_cleared",
+    "390:s22-net-period:original_prose_unchanged",
+    "390:cross-company-period:rejected_and_prior_success_cleared",
+    "390:no-evidence:rejected_and_prior_success_cleared",
+    "390:viewport_fits",
+    "1440:normal-qoq:original_prose_unchanged",
+    "1440:h25-net-yoy:rejected_and_prior_success_cleared",
+    "1440:s22-net-period:original_prose_unchanged",
+    "1440:cross-company-period:rejected_and_prior_success_cleared",
+    "1440:no-evidence:rejected_and_prior_success_cleared",
+    "1440:viewport_fits"
+  ],
+  "checks_passed": 12,
+  "page_errors": [],
+  "intercepted_posts": 10,
+  "actual_external_calls": 0,
+  "new_model_responses": 0,
+  "new_human_reviews": 0,
+  "physical_mobile": false,
+  "direct_public_HTTPS": false
+}

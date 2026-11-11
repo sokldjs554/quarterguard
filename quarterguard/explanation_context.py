@@ -8,7 +8,7 @@ from datetime import date, timedelta
 from .core import Fact, source_facts, source_manifest
 
 INSTRUCTIONS = (
-    'Explain in Korean. Copy status, issues and evidence IDs in order. '
+    'Explain in Korean. Copy status, issues and IDs in order. '
     'JSON value must exactly copy growth_pct or derived_value, or be null if absent; do not add units, '
     'commas or text, round or reformat it. Never override rejection, invent evidence, calculate or advise. '
     'Distinguish quarter/cumulative and consolidated/separate. Only issues and decision_basis justify withholding. '
@@ -16,8 +16,8 @@ INSTRUCTIONS = (
     'Adjacent three-month quarters can be compared; SCOPE_MISMATCH alone means scope, not date rejection. '
     'With evidence, never claim a search was empty. Only no_evidence permits 해당 검색 범위에서 확인할 수 없습니다; '
     'this does not mean results or reports do not exist. '
-    'For needs_review context describe the missing source metadata in Korean, not English/internal status labels. '
-    'Never print SEARCH_EMPTY/qoq_adjacent in prose. '
+    'Describe all issue/status/diagnostic codes in plain Korean, never quote their labels. '
+    'For rates, evidence order is current,base. Write base period 대비 current period. '
     'KRW is currency; use display_unit (e.g. 백만 원). scale is an internal multiplier, not a source heading. '
     'ONLY in explanation_ko prose, append % to every stated growth rate, including repeated values. '
     'For example JSON value "6.7916" and prose "증가율 6.7916%"; a withheld JSON value stays null. '
@@ -77,13 +77,15 @@ def period_decision(result):
 def decision_context(result):
     """Describe reported issue codes, not a new comparison or prose verdict."""
     statements = {
+        'COMPANY_MISMATCH': '회사가 달라 계산을 보류합니다. 같은 회사의 수치를 선택하세요.',
+        'METRIC_MISMATCH': '재무 항목이 달라 계산을 보류합니다. 같은 항목의 수치를 선택하세요.',
         'SCOPE_MISMATCH': '연결·별도 범위가 달라 계산을 보류합니다. 양쪽 범위를 맞춘 뒤 다시 검증하세요.',
         'PERIOD_MISMATCH': '기간 길이 또는 선택한 비교 방식의 날짜 조건이 맞지 않아 계산을 보류합니다.',
         'CURRENCY_MISMATCH': '통화가 달라 계산을 보류합니다.',
         'SEARCH_EMPTY': '현재 검색 조건으로 확인할 수 있는 근거를 찾지 못했습니다.',
     }
     issues = result.get('issues', [])
-    basis = [{'code': code, 'statement': statements.get(code, f'확인 필요: 도구가 {code} 문제를 보고했습니다.')}
+    basis = [{'code': code, 'statement': statements.get(code, '확인 필요: 도구가 비교 조건을 확인하지 못했습니다. 실행 기록을 확인하세요.')}
              for code in issues]
     for entry in basis:
         if entry['code']=='PERIOD_MISMATCH':entry.update(period_decision(result))
