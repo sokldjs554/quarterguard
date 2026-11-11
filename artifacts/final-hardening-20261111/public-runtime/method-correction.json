@@ -1,0 +1,6 @@
+{
+  "initial_search_probe_error": "Used query= instead of documented q=; empty result is a probe error, not search accuracy evidence.",
+  "preserved": true,
+  "corrected_run": "../public-runtime-corrected",
+  "initial_health_timeout": "Real 30s transport timeout; root cause not established. Keep separate from corrected warm sample."
+}

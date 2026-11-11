@@ -1,0 +1,31 @@
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pydantic_settings/sources/utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+test_approval_required_and_restart_at_different_path_rejected (tests.test_final_evaluation.EvaluationBudgetTests.test_approval_required_and_restart_at_different_path_rejected) ... ok
+test_bad_model_and_oversize_never_sent (tests.test_final_evaluation.EvaluationBudgetTests.test_bad_model_and_oversize_never_sent) ... ok
+test_failure_reserved_before_call_and_no_retry (tests.test_final_evaluation.EvaluationBudgetTests.test_failure_reserved_before_call_and_no_retry) ... ok
+test_planner_rejects_text_or_wrong_model_or_multiple_tools (tests.test_final_evaluation.EvaluationBudgetTests.test_planner_rejects_text_or_wrong_model_or_multiple_tools) ... ok
+test_preflight_blocks_wrong_math_before_spend (tests.test_final_evaluation.EvaluationBudgetTests.test_preflight_blocks_wrong_math_before_spend) ... ok
+test_production_validator_is_executed_not_reimplemented (tests.test_final_evaluation.EvaluationBudgetTests.test_production_validator_is_executed_not_reimplemented) ... ok
+test_real_transport_is_restricted_to_guarded_workflow (tests.test_final_evaluation.EvaluationBudgetTests.test_real_transport_is_restricted_to_guarded_workflow) ... ok
+test_total_attempt_cap (tests.test_final_evaluation.EvaluationBudgetTests.test_total_attempt_cap) ... ok
+test_crashed_runtime_never_scores_as_successful_hold (tests.test_human_holdout.HoldoutTests.test_crashed_runtime_never_scores_as_successful_hold) ... ok
+test_empty_gold_does_not_pass_unexpected_evidence (tests.test_human_holdout.HoldoutTests.test_empty_gold_does_not_pass_unexpected_evidence) ... ok
+test_gold_never_passed_to_runtime (tests.test_human_holdout.HoldoutTests.test_gold_never_passed_to_runtime) ... ok
+test_gold_value_mismatch_is_failure (tests.test_human_holdout.HoldoutTests.test_gold_value_mismatch_is_failure) ... ok
+test_mutation_rejected_and_first_run_cannot_be_repeated (tests.test_human_holdout.HoldoutTests.test_mutation_rejected_and_first_run_cannot_be_repeated) ... ok
+test_provenance_and_duplicate_ids_reject (tests.test_human_holdout.HoldoutTests.test_provenance_and_duplicate_ids_reject) ... ok
+test_actual_tools_compute_only_after_retrieval_and_read (tests.test_bounded_planner.PlannerTests.test_actual_tools_compute_only_after_retrieval_and_read) ... ok
+test_empty_search_holds_without_more_decisions (tests.test_bounded_planner.PlannerTests.test_empty_search_holds_without_more_decisions) ... ok
+test_fake_search_id_and_numeric_output_block (tests.test_bounded_planner.PlannerTests.test_fake_search_id_and_numeric_output_block) ... ok
+test_repeated_action_stops (tests.test_bounded_planner.PlannerTests.test_repeated_action_stops) ... ok
+test_search_cannot_change_user_query (tests.test_bounded_planner.PlannerTests.test_search_cannot_change_user_query) ... ok
+test_timeout_and_transport_error_clear_result (tests.test_bounded_planner.PlannerTests.test_timeout_and_transport_error_clear_result) ... ok
+test_unknown_tool_and_extra_fields_block (tests.test_bounded_planner.PlannerTests.test_unknown_tool_and_extra_fields_block) ... Executing <Task finished name='Task-32' coro=<PlannerTests.test_unknown_tool_and_extra_fields_block() done, defined at /workspace/quarterguard-final/tests/test_bounded_planner.py:34> result=None created at /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py:100> took 0.106 seconds
+ok
+test_unread_id_cannot_compute (tests.test_bounded_planner.PlannerTests.test_unread_id_cannot_compute) ... ok
+test_wrong_direction_and_mode_block (tests.test_bounded_planner.PlannerTests.test_wrong_direction_and_mode_block) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.661s
+
+OK

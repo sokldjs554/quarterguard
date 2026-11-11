@@ -1,0 +1,11 @@
+test_approval_required_and_restart_at_different_path_rejected (tests.test_final_evaluation.EvaluationBudgetTests.test_approval_required_and_restart_at_different_path_rejected) ... ok
+test_bad_model_and_oversize_never_sent (tests.test_final_evaluation.EvaluationBudgetTests.test_bad_model_and_oversize_never_sent) ... ok
+test_failure_reserved_before_call_and_no_retry (tests.test_final_evaluation.EvaluationBudgetTests.test_failure_reserved_before_call_and_no_retry) ... ok
+test_planner_rejects_text_or_wrong_model_or_multiple_tools (tests.test_final_evaluation.EvaluationBudgetTests.test_planner_rejects_text_or_wrong_model_or_multiple_tools) ... ok
+test_production_validator_is_executed_not_reimplemented (tests.test_final_evaluation.EvaluationBudgetTests.test_production_validator_is_executed_not_reimplemented) ... ok
+test_total_attempt_cap (tests.test_final_evaluation.EvaluationBudgetTests.test_total_attempt_cap) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.061s
+
+OK

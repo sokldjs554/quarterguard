@@ -1,0 +1,41 @@
+{
+  "results": {
+    "health": {
+      "requests": 5,
+      "successful": 5,
+      "first_observed_ms": 277.126,
+      "p50_ms": 269.636,
+      "p95_ms": 295.947
+    },
+    "page": {
+      "requests": 5,
+      "successful": 5,
+      "first_observed_ms": 268.654,
+      "p50_ms": 269.231,
+      "p95_ms": 420.861
+    },
+    "search": {
+      "requests": 5,
+      "successful": 5,
+      "first_observed_ms": 423.374,
+      "p50_ms": 282.488,
+      "p95_ms": 423.374
+    },
+    "calculation": {
+      "requests": 5,
+      "successful": 5,
+      "first_observed_ms": 292.596,
+      "p50_ms": 276.036,
+      "p95_ms": 292.596
+    }
+  },
+  "method": "5 sequential samples per endpoint, one HTTPS client, TLS verified, nearest-rank percentiles",
+  "paid_calls": 0,
+  "limitations": [
+    "Not customer traffic or load test",
+    "Cold start not forced or verified",
+    "Includes network/proxy transit",
+    "Five samples make p95 the maximum; not a stable population estimate",
+    "No availability SLA inferred"
+  ]
+}

@@ -1,0 +1,28 @@
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pydantic_settings/sources/utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+Processing request of type CallToolRequest
+Processing request of type ListToolsRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+{"raw_pdf_pages": 3, "cells": 18, "operations_passed": 6, "actual_mcp_calls": 24, "paid_calls": 0}

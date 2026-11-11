@@ -1,0 +1,7 @@
+{
+  "probe_first_health": "30s transport timeout",
+  "render_app_startup_utc": "2026-11-11T12:12:26.33137139Z",
+  "next_observed_health_200_utc": "2026-11-11T12:12:51.489195232Z",
+  "interpretation": "Process startup overlaps the measurement window. Cold-start/platform/network components are not separately measured. No paid plan change or fabricated uptime claim.",
+  "logs_source": "Render list_logs, app logs, 2026-11-11T12:10Z to 12:14Z; IP addresses excluded"
+}

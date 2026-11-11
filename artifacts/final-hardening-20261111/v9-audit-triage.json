@@ -1,0 +1,64 @@
+{
+  "cases": 16,
+  "issue_counts": {
+    "UNBOUND_NUMBER_REQUIRES_REVIEW": 15,
+    "NEGATION_REQUIRES_REVIEW": 6,
+    "AMOUNT_ATTRIBUTION_REQUIRES_REVIEW": 1
+  },
+  "case_issues": {
+    "normal-qoq": [
+      "UNBOUND_NUMBER_REQUIRES_REVIEW"
+    ],
+    "normal-yoy": [
+      "UNBOUND_NUMBER_REQUIRES_REVIEW"
+    ],
+    "period-mismatch": [
+      "NEGATION_REQUIRES_REVIEW",
+      "UNBOUND_NUMBER_REQUIRES_REVIEW"
+    ],
+    "scope-mismatch": [
+      "NEGATION_REQUIRES_REVIEW",
+      "UNBOUND_NUMBER_REQUIRES_REVIEW"
+    ],
+    "unit-draft": [
+      "UNBOUND_NUMBER_REQUIRES_REVIEW"
+    ],
+    "no-evidence": [],
+    "conflicting-number-draft": [
+      "UNBOUND_NUMBER_REQUIRES_REVIEW"
+    ],
+    "citation-draft": [
+      "UNBOUND_NUMBER_REQUIRES_REVIEW"
+    ],
+    "s22-op-yoy": [
+      "UNBOUND_NUMBER_REQUIRES_REVIEW"
+    ],
+    "s22-net-ytd-yoy": [
+      "UNBOUND_NUMBER_REQUIRES_REVIEW"
+    ],
+    "s22-net-period": [
+      "NEGATION_REQUIRES_REVIEW",
+      "UNBOUND_NUMBER_REQUIRES_REVIEW"
+    ],
+    "s22-op-qoq": [
+      "NEGATION_REQUIRES_REVIEW",
+      "UNBOUND_NUMBER_REQUIRES_REVIEW"
+    ],
+    "h25-op-yoy": [
+      "UNBOUND_NUMBER_REQUIRES_REVIEW"
+    ],
+    "h25-net-yoy": [
+      "AMOUNT_ATTRIBUTION_REQUIRES_REVIEW",
+      "UNBOUND_NUMBER_REQUIRES_REVIEW"
+    ],
+    "h25-op-period": [
+      "NEGATION_REQUIRES_REVIEW",
+      "UNBOUND_NUMBER_REQUIRES_REVIEW"
+    ],
+    "cross-company-period": [
+      "NEGATION_REQUIRES_REVIEW",
+      "UNBOUND_NUMBER_REQUIRES_REVIEW"
+    ]
+  },
+  "resolution": "Human adjudication pending. Flags do not mean false prose; no historical verdict modified."
+}

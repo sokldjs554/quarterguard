@@ -1,0 +1,10 @@
+test_empty_gold_does_not_pass_unexpected_evidence (tests.test_human_holdout.HoldoutTests.test_empty_gold_does_not_pass_unexpected_evidence) ... ok
+test_gold_never_passed_to_runtime (tests.test_human_holdout.HoldoutTests.test_gold_never_passed_to_runtime) ... ok
+test_gold_value_mismatch_is_failure (tests.test_human_holdout.HoldoutTests.test_gold_value_mismatch_is_failure) ... ok
+test_mutation_rejected_and_first_run_cannot_be_repeated (tests.test_human_holdout.HoldoutTests.test_mutation_rejected_and_first_run_cannot_be_repeated) ... ok
+test_provenance_and_duplicate_ids_reject (tests.test_human_holdout.HoldoutTests.test_provenance_and_duplicate_ids_reject) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.037s
+
+OK
