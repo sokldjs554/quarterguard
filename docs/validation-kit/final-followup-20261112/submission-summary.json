@@ -1,0 +1,293 @@
+{
+  "record_type": "user_submission_reconciliation",
+  "record_label": "final-followup-20261112",
+  "actual_performance_date": null,
+  "actual_performance_environment": null,
+  "received_help": null,
+  "performer_for_live_and_p": null,
+  "performer_status": "clarification_pending",
+  "publication_consent": "existing_authorization_not_requested_again",
+  "source": "user message; AI-transcribed summary, not verbatim transcript",
+  "new_paid_calls": 0,
+  "new_llm_generations": 0,
+  "live": [
+    {
+      "id": "A1",
+      "status": "reported",
+      "submitted_observation": "제품 37.1806%, 서비스 73.8804%; 매출 294,866/96,169, 원가 185,233/25,119. 인쇄 29쪽 집계 매출총이익률.",
+      "original_source_check": "as_submitted_not_independently_reverified"
+    },
+    {
+      "id": "A2",
+      "status": "reported",
+      "submitted_observation": "중국권 −5,607, 전체 +7,750. 2023→2024 선택과 52/53주 차이 안내. 인쇄 22쪽.",
+      "original_source_check": "as_submitted_not_independently_reverified"
+    },
+    {
+      "id": "A3",
+      "status": "reported",
+      "submitted_observation": "118,254 − 9,447 = 108,807. 원문 지급액 −9,447, 회사 공식 지표와 동일하다고 단정하지 않음. 인쇄 33쪽.",
+      "original_source_check": "as_submitted_not_independently_reverified"
+    },
+    {
+      "id": "A4",
+      "status": "reported",
+      "submitted_observation": "지출액 77,550→94,949, 증가 17,399; 부호 유지 변화 −17,399. 역방향 질문은 비교 방향 확인 필요로 보류.",
+      "original_source_check": "as_submitted_not_independently_reverified"
+    },
+    {
+      "id": "A5",
+      "status": "reported",
+      "submitted_observation": "영업이익 +8,915, 법인세비용 +13,008, 순이익 −3,259; 국가보조금 결정 영향 10,246. 일부 요인, 세금 현금 납부액과 구분.",
+      "original_source_check": "as_submitted_not_independently_reverified"
+    },
+    {
+      "id": "A6",
+      "status": "reported",
+      "submitted_observation": "집계 비율에서 모든 개별 제품·서비스 수익성을 확정할 수 없어 보류. 개별 매출·대응 원가·배분 기준 필요.",
+      "original_source_check": "as_submitted_not_independently_reverified"
+    },
+    {
+      "id": "A7",
+      "status": "partial",
+      "submitted_observation": "판매량 감소만으로 설명할 수 없어 보류. 제품 매출·환율 영향 확인. JSON 저장·재열기와 질문 변경 후 상태 미확인.",
+      "original_source_check": "as_submitted_not_independently_reverified"
+    },
+    {
+      "id": "S1",
+      "status": "reported",
+      "submitted_observation": "연말 현금 11,205,117/7,587,329; 차이 3,617,788, 47.6820%. 화면 PDF191/F-73.",
+      "original_source_check": "demo_screen_only_explicitly_disclosed"
+    },
+    {
+      "id": "S2",
+      "status": "reported",
+      "submitted_observation": "DRAM 44,731,664/66,192,960 = 67.5777%. B를 2023년으로 변경 시 보류, 2024년 복구 성공. 화면 PDF264/F-146.",
+      "original_source_check": "demo_screen_only_explicitly_disclosed"
+    },
+    {
+      "id": "S3",
+      "status": "reported",
+      "submitted_observation": "23,467,319 vs −7,730,313; 차이 31,197,632, 흑자 전환. 일반 성장률 —. 화면 PDF193/F-75.",
+      "original_source_check": "demo_screen_only_explicitly_disclosed"
+    },
+    {
+      "id": "S4",
+      "status": "partial",
+      "submitted_observation": "재고 개월분 정의 확인으로 보류. JSON 버튼 클릭만 확인, 다운로드 완료·파일 내용 미확인.",
+      "original_source_check": "demo_screen_only_explicitly_disclosed"
+    }
+  ],
+  "product_reviews": [
+    {
+      "id": "P01",
+      "submitted_explanation_verdict": "false",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "한국어 혼합 단위 표현이 원문의 79,098,731·74,068,302백만 원과 다름. 증가율과 페이지는 맞음.",
+      "reviewer": null,
+      "human_review_attribution": "pending"
+    },
+    {
+      "id": "P02",
+      "submitted_explanation_verdict": "false",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "기간 보류는 타당하지만 혼합 단위 금액이 원문 225,082,634·67,404,652백만 원과 다름.",
+      "reviewer": null,
+      "human_review_attribution": "pending"
+    },
+    {
+      "id": "P03",
+      "submitted_explanation_verdict": "true",
+      "structured_fields": "mismatch",
+      "evidence_ids": "empty_match",
+      "note": "검색 범위 근거 없음 설명은 맞음. issues 한국어 문장은 도구 SEARCH_EMPTY와 문자열 불일치. 개별 원문 근거 없음.",
+      "reviewer": null,
+      "human_review_attribution": "pending"
+    },
+    {
+      "id": "P04",
+      "submitted_explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "225,082,634 − 145,983,903 = 79,098,731백만 원. 문서·쪽 일치.",
+      "reviewer": null,
+      "human_review_attribution": "pending"
+    }
+  ],
+  "v9_reviews": [
+    {
+      "id": "V01",
+      "submitted_explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "삼성 분기 매출·6.7916% 부합.",
+      "provenance": "prior_ai_review_reformatted",
+      "new_independent_human_review": false,
+      "original_image_recheck_by_case": "not_recorded"
+    },
+    {
+      "id": "V02",
+      "submitted_explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "삼성 전년 동분기 매출·17.3491% 부합.",
+      "provenance": "prior_ai_review_reformatted",
+      "new_independent_human_review": false,
+      "original_image_recheck_by_case": "not_recorded"
+    },
+    {
+      "id": "V03",
+      "submitted_explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "9개월·3개월 보류와 별도 재계산 언급.",
+      "provenance": "prior_ai_review_reformatted",
+      "new_independent_human_review": false,
+      "original_image_recheck_by_case": "not_recorded"
+    },
+    {
+      "id": "V04",
+      "submitted_explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "연결·별도 범위 차이로 보류.",
+      "provenance": "prior_ai_review_reformatted",
+      "new_independent_human_review": false,
+      "original_image_recheck_by_case": "not_recorded"
+    },
+    {
+      "id": "V05",
+      "submitted_explanation_verdict": "ambiguous",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "연결 범위·각 분기 미명시로 비교 대상 불명확.",
+      "provenance": "prior_ai_review_reformatted",
+      "new_independent_human_review": false,
+      "original_image_recheck_by_case": "not_recorded"
+    },
+    {
+      "id": "V06",
+      "submitted_explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "empty_match",
+      "note": "검색 범위 근거 없음과 실적 부재 구분.",
+      "provenance": "prior_ai_review_reformatted",
+      "new_independent_human_review": false,
+      "original_image_recheck_by_case": "not_recorded"
+    },
+    {
+      "id": "V07",
+      "submitted_explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "금액·기간·6.7916% 부합.",
+      "provenance": "prior_ai_review_reformatted",
+      "new_independent_human_review": false,
+      "original_image_recheck_by_case": "not_recorded"
+    },
+    {
+      "id": "V08",
+      "submitted_explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "문서·쪽·행·열·금액 부합.",
+      "provenance": "prior_ai_review_reformatted",
+      "new_independent_human_review": false,
+      "original_image_recheck_by_case": "not_recorded"
+    },
+    {
+      "id": "V09",
+      "submitted_explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "삼성 영업이익·−31.3923% 부합.",
+      "provenance": "prior_ai_review_reformatted",
+      "new_independent_human_review": false,
+      "original_image_recheck_by_case": "not_recorded"
+    },
+    {
+      "id": "V10",
+      "submitted_explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "누적 순이익·9.4364% 부합.",
+      "provenance": "prior_ai_review_reformatted",
+      "new_independent_human_review": false,
+      "original_image_recheck_by_case": "not_recorded"
+    },
+    {
+      "id": "V11",
+      "submitted_explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "3개월·9개월 제한 설명.",
+      "provenance": "prior_ai_review_reformatted",
+      "new_independent_human_review": false,
+      "original_image_recheck_by_case": "not_recorded"
+    },
+    {
+      "id": "V12",
+      "submitted_explanation_verdict": "ambiguous",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "도구 기간 불일치와 별도 재계산 진단의 지시 대상 불명확.",
+      "provenance": "prior_ai_review_reformatted",
+      "new_independent_human_review": false,
+      "original_image_recheck_by_case": "not_recorded"
+    },
+    {
+      "id": "V13",
+      "submitted_explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "현대 영업이익·−29.1445% 부합.",
+      "provenance": "prior_ai_review_reformatted",
+      "new_independent_human_review": false,
+      "original_image_recheck_by_case": "not_recorded"
+    },
+    {
+      "id": "V14",
+      "submitted_explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "현대 순이익 금액 귀속·−20.5146% 부합.",
+      "provenance": "prior_ai_review_reformatted",
+      "new_independent_human_review": false,
+      "original_image_recheck_by_case": "not_recorded"
+    },
+    {
+      "id": "V15",
+      "submitted_explanation_verdict": "ambiguous",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "도구 제한과 별도 시작 월·일 진단을 명확히 구분하지 않음.",
+      "provenance": "prior_ai_review_reformatted",
+      "new_independent_human_review": false,
+      "original_image_recheck_by_case": "not_recorded"
+    },
+    {
+      "id": "V16",
+      "submitted_explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "다른 회사 간 비교 제한과 별도 진단 구분.",
+      "provenance": "prior_ai_review_reformatted",
+      "new_independent_human_review": false,
+      "original_image_recheck_by_case": "not_recorded"
+    }
+  ],
+  "counts": {
+    "live_reported_without_listed_followup": 9,
+    "live_partial": 2,
+    "product_explanation_true": 2,
+    "product_explanation_false": 2,
+    "product_structure_match": 3,
+    "product_structure_mismatch": 1,
+    "product_ids_match_including_empty": 4,
+    "v9_prior_ai_true": 13,
+    "v9_prior_ai_ambiguous": 3,
+    "new_v9_human_reviews": 0
+  }
+}
