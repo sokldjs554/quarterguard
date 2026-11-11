@@ -1,0 +1,11 @@
+{
+  "id": "resp_031837567a75a248016af401bcaa8087d183a536e5b90fffa3",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1825,
+    "output_tokens": 216,
+    "total_tokens": 2041
+  },
+  "output_text": "{\"status\":\"needs_review\",\"value\":null,\"issues\":[\"PERIOD_MISMATCH\"],\"evidence_ids\":[\"h25q3-CFS-operating_profit-2025-ytd-KRW\",\"h25q3-CFS-operating_profit-2024-q-KRW\"],\"explanation_ko\":\"계산을 보류합니다. 기간이 다릅니다. 2025년 9개월 누적은 Hyundai Motor Company 2025 Q3 interim consolidated financial statements, PDF p.8의 Operating profit / 2025 YTD KRW입니다. 2024년 단독 3개월은 Hyundai Motor Company 2025 Q3 interim consolidated financial statements, PDF p.8의 Operating profit / 2024 Q KRW입니다. 누적과 단독 3개월은 직접 비교 제한이 있습니다. 도구가 기간 불일치를 보고했습니다. 별도 재계산 기준으로도 개월 수가 같지 않고 시작 월·일이 같지 않아 보류합니다.\"}"
+}

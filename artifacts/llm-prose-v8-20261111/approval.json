@@ -1,0 +1,15 @@
+{
+  "source": "user explicit approval in current conversation",
+  "approval": "이 범위의 새 16회 호출과 기존 키 재사용 승인",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "max_requests": 16,
+  "max_input_admission_tokens": 8500,
+  "max_output_tokens": 700,
+  "retries": 0,
+  "max_estimated_cost_usd": "0.1524",
+  "budget_usd_before_tax": "0.16",
+  "key": "existing GitHub Actions OPENAI_API_KEY; value not read",
+  "commit": "0de00624880eb698b552b916fd040f81ae1564d1",
+  "freeze_sha256": "1ac00891e6a563ad200d699312a7302b728d5a698cb0df9359b1458dc8f8c3a7",
+  "workflow_run": 42968080018
+}

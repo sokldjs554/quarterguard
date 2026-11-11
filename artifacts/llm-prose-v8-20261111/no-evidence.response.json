@@ -1,0 +1,11 @@
+{
+  "id": "resp_03bb29ee27e89f57016af401ad24a487d190c59b84dec4d5a0",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 589,
+    "output_tokens": 99,
+    "total_tokens": 688
+  },
+  "output_text": "{\"status\":\"needs_review\",\"value\":null,\"issues\":[\"SEARCH_EMPTY\"],\"evidence_ids\":[],\"explanation_ko\":\"해당 검색 범위에서 확인할 수 없습니다. 수집 범위 밖인 2025년 실적 조회라서 근거를 확인하지 못했습니다. 문서 메타데이터가 없어 특정 보고서명과 PDF 페이지를 적을 수 없습니다. 결정 근거는 SEARCH_EMPTY입니다.\"}"
+}
