@@ -1,0 +1,130 @@
+{
+  "kind": "Same actual responses replayed through one new conservative notation check; no new generation",
+  "pairs": [
+    {
+      "case_id": "qoq-revenue",
+      "generated_unchanged": {
+        "status": "verified",
+        "value": "6.7916",
+        "issues": [],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q2-CFS-revenue-2024-q-KRW"
+        ],
+        "explanation_ko": "2024년 3분기 삼성전자 연결 재무제표 매출은 7조 9,098,731백만 원으로, 2024년 2분기 연결 매출 7조 4,068,302백만 원 대비 약 6.7916% 증가하였습니다. 근거 자료는 'Samsung Electronics 2024 3Q Interim Business Report' PDF 34페이지와 'Samsung Electronics 2024 Half-year Business Report' PDF 48페이지에 각각 보고된 매출액입니다."
+      },
+      "original_gate_passed": true,
+      "current_replay_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_million_amount_unambiguous": false,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "current_replay_passed": false,
+      "new_model_calls_for_replay": 0,
+      "human_verdict": null
+    },
+    {
+      "case_id": "ytd-trap",
+      "generated_unchanged": {
+        "status": "needs_review",
+        "value": null,
+        "issues": [
+          "PERIOD_MISMATCH"
+        ],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-ytd-KRW",
+          "s24q3-CFS-revenue-2023-q-KRW"
+        ],
+        "explanation_ko": "이번 비교는 2024년 1월 1일부터 9월 30일까지의 9개월 누적 매출과 2023년 7월 1일부터 9월 30일까지의 3개월 매출을 비교하고 있습니다. 삼성전자 2024년 3분기 중간보고서(2024 3Q Interim Business Report, PDF 34페이지)에서, 2024년 9개월 누적 매출은 2,250억 8263만 4천 백만 원이고, 2023년 3분기 3개월 매출은 674억 4652만 백만 원으로 나타납니다. 그러나 두 기간은 개월 수가 다르며, 시작 월과 일도 다르기 때문에 직접 비교할 경우 기간 불일치 문제로 인한 부정확함이 있습니다. 따라서 이 비교는 적절하지 않으며 계산을 보류하는 것이 합당합니다."
+      },
+      "original_gate_passed": true,
+      "current_replay_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_million_amount_unambiguous": false,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "current_replay_passed": false,
+      "new_model_calls_for_replay": 0,
+      "human_verdict": null
+    },
+    {
+      "case_id": "no-evidence",
+      "generated_unchanged": {
+        "status": "needs_review",
+        "value": null,
+        "issues": [
+          "해당 검색 조건에 맞는 실적 데이터가 없습니다."
+        ],
+        "evidence_ids": [],
+        "explanation_ko": "2025년 실적에 대해 해당 범위 내에서는 관련 근거를 확인할 수 없습니다. 이는 기업 실적 데이터가 전혀 없다는 의미가 아니라, 현재 검색 조건과 수집 범위에서 자료가 없음을 뜻합니다. 결정 근거는 '현재 검색 조건으로 확인할 수 있는 근거를 찾지 못했습니다.'라는 점이며, 이에 따라 AI 분석 문장 전체에 대한 의미 검증은 진행되지 않았습니다."
+      },
+      "original_gate_passed": false,
+      "current_replay_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": false,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_million_amount_unambiguous": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "current_replay_passed": false,
+      "new_model_calls_for_replay": 0,
+      "human_verdict": null
+    },
+    {
+      "case_id": "reconcile-revenue",
+      "generated_unchanged": {
+        "status": "verified",
+        "value": "79098731",
+        "issues": [],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-ytd-KRW",
+          "s24q2-CFS-revenue-2024-ytd-KRW",
+          "s24q3-CFS-revenue-2024-q-KRW"
+        ],
+        "explanation_ko": "삼성전자의 2024년 3분기 누적 매출은 225,082,634백만 원(2024년 1월 1일부터 9월 30일까지, 연결기준)이며, 이는 'Samsung Electronics 2024 3Q Interim Business Report' PDF 34페이지에서 확인할 수 있습니다. 반기 누적 매출은 145,983,903백만 원(2024년 1월 1일부터 6월 30일까지, 연결기준)으로, 'Samsung Electronics 2024 Half-year Business Report' PDF 48페이지에서 보고되었습니다. 이 두 값의 차이인 79,098,731백만 원이 2024년 3분기 매출과 일치하며, 이는 동일한 34페이지에 명시된 2024년 3분기 매출 수치입니다. 따라서 9개월 누적 매출에서 반기 누적 매출을 뺀 값과 직접 공시된 3분기 매출은 완전히 일치합니다."
+      },
+      "original_gate_passed": true,
+      "current_replay_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_million_amount_unambiguous": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "current_replay_passed": true,
+      "new_model_calls_for_replay": 0,
+      "human_verdict": null
+    }
+  ],
+  "before_accepted": 3,
+  "after_accepted": 1,
+  "human_reviewed": false
+}
