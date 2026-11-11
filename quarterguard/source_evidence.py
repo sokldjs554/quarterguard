@@ -113,6 +113,9 @@ def load_source():
 
 
 def get_cell(cell_id):
+    if cell_id.startswith('apple-2024-10k:'):
+        from .apple_source import get_cell as apple_cell
+        return apple_cell(cell_id)
     for cell in load_source()[1]:
         if cell['id']==cell_id: return cell
     raise ValueError('UNKNOWN_SOURCE_CELL')
@@ -144,6 +147,9 @@ def search_source(document_id,query):
     Does not infer a verified answer or calculate ratios. Human questions are
     development inputs; conditions outside this bounded vocabulary block hits.
     """
+    if document_id=='apple-2024-10k':
+        from .apple_review import search
+        return search(query)
     if document_id!=DOCUMENT_ID: raise ValueError('UNKNOWN_SOURCE_DOCUMENT')
     if not isinstance(query,str) or len(query)>500: raise ValueError('INVALID_QUERY')
     manifest,cells=load_source()

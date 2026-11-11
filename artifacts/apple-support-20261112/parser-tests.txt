@@ -1,0 +1,11 @@
+test_company_currency_period_dimension_corruption_blocks (tests.test_apple_source.AppleSourceTests.test_company_currency_period_dimension_corruption_blocks) ... ok
+test_corrupt_snapshot_blocks (tests.test_apple_source.AppleSourceTests.test_corrupt_snapshot_blocks) ... ok
+test_duplicate_rows_block (tests.test_apple_source.AppleSourceTests.test_duplicate_rows_block) ... ok
+test_raw_source_reproduces_snapshot (tests.test_apple_source.AppleSourceTests.test_raw_source_reproduces_snapshot) ... ok
+test_raw_unknown_hash_blocks (tests.test_apple_source.AppleSourceTests.test_raw_unknown_hash_blocks) ... ok
+test_year_header_corruption_blocks (tests.test_apple_source.AppleSourceTests.test_year_header_corruption_blocks) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.964s
+
+OK

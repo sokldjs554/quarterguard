@@ -1,0 +1,32 @@
+{
+  "id": "apple-2024-10k",
+  "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+  "sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+  "format": "SEC_HTML",
+  "evidence_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+  "cells_count": 25,
+  "narratives_count": 2,
+  "company": "apple",
+  "scope": "CFS",
+  "currency": "USD",
+  "scale": 1000000,
+  "years": [
+    2024,
+    2023
+  ],
+  "extraction": "raw_official_html_to_product_parser",
+  "calculation_supported": true,
+  "calculation_modes": [
+    "gross_margin",
+    "regional_change",
+    "operating_cash_less_capex",
+    "buyback_change",
+    "tax_bridge"
+  ],
+  "clarification_only_modes": [
+    "aggregate_limit",
+    "china_causality"
+  ],
+  "support_note": "Selected FY2024 SEC HTML tables only; no general SEC importer or PDF parsing."
+}

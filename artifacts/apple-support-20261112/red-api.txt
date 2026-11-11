@@ -1,0 +1,63 @@
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+FFFFFF
+======================================================================
+FAIL: test_bad_request_contract (tests.test_apple_review.AppleReviewTests.test_bad_request_contract)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_apple_review.py", line 53, in test_bad_request_contract
+    self.assertEqual(self.client.post('/api/source-review',json={'document_id':DOC,'query':'x','amount':'10'}).status_code,422)
+AssertionError: 404 != 422
+
+======================================================================
+FAIL: test_catalog_and_original_seven (tests.test_apple_review.AppleReviewTests.test_catalog_and_original_seven)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_apple_review.py", line 16, in test_catalog_and_original_seven
+    self.assertIn(DOC,[x['id'] for x in self.client.get('/api/source-documents').json()])
+AssertionError: 'apple-2024-10k' not found in ['skh2024annual-in-2025oc']
+
+======================================================================
+FAIL: test_english_and_missing_year (tests.test_apple_review.AppleReviewTests.test_english_and_missing_year)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_apple_review.py", line 46, in test_english_and_missing_year
+    r=self.review('2024 products services gross margin');self.assertEqual(r['values']['services_margin_pct'],'73.8804')
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/tests/test_apple_review.py", line 13, in review
+    self.assertEqual(r.status_code,200,r.text)
+AssertionError: 404 != 200 : {"detail":"Not Found"}
+
+======================================================================
+FAIL: test_search_candidates_and_canonical_source (tests.test_apple_review.AppleReviewTests.test_search_candidates_and_canonical_source)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_apple_review.py", line 34, in test_search_candidates_and_canonical_source
+    self.assertEqual(r.get('answer_status'),'not_calculated')
+AssertionError: None != 'not_calculated'
+
+======================================================================
+FAIL: test_supported_document_default_is_explicit (tests.test_apple_review.AppleReviewTests.test_supported_document_default_is_explicit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_apple_review.py", line 49, in test_supported_document_default_is_explicit
+    r=self.review('중국권 매출이 줄었는데도 전체 매출은 늘었나?')
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/tests/test_apple_review.py", line 13, in review
+    self.assertEqual(r.status_code,200,r.text)
+AssertionError: 404 != 200 : {"detail":"Not Found"}
+
+======================================================================
+FAIL: test_unsupported_conditions_never_use_previous_answer (tests.test_apple_review.AppleReviewTests.test_unsupported_conditions_never_use_previous_answer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_apple_review.py", line 41, in test_unsupported_conditions_never_use_previous_answer
+    self.review('2024 제품 서비스 매출총이익률')
+  File "/workspace/quarterguard-apple-evaluation/tests/test_apple_review.py", line 13, in review
+    self.assertEqual(r.status_code,200,r.text)
+AssertionError: 404 != 200 : {"detail":"Not Found"}
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.026s
+
+FAILED (failures=6)

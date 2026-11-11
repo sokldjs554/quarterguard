@@ -1,0 +1,26 @@
+✔ Apple cards preserve USD, fiscal dates, printed HTML location and signed outflows (44.169001ms)
+✔ wrong unit, scope, origin and link reject before render (0.70437ms)
+✔ raw source row labels are escaped (0.344207ms)
+✔ stale review cannot render for new question (0.458837ms)
+✔ source context escapes text and only links HTTPS publisher PDFs at the supplied page (4.537931ms)
+✔ empty, missing and unresolved context never show old source links (14.401931ms)
+✔ scope-only decision basis is separate, escaped, and absent from legacy context (0.656087ms)
+✔ current evidence separates product scope, reviewed responses, latest guard, and actors (1.918087ms)
+✔ historical failures are dated and never relabeled as current status (50.727637ms)
+✔ malformed current summary fails and text is escaped (0.855971ms)
+✔ latest model batch is separate from prior human labels and has unresolved prose warnings (0.689726ms)
+✔ confirmed v5 human verdicts do not become an overall accuracy improvement (0.395114ms)
+✔ v6 separates structural regression, new tasks, and still-pending human review (0.391573ms)
+✔ review context includes ordered evidence, mode and document version (0.941343ms)
+✔ review persists only valid fields; damaged storage is ignored (1.079589ms)
+✔ storage write failures propagate so UI cannot claim saved (0.442004ms)
+✔ CSV preserves numerical output and separates manual review from automated status (0.565397ms)
+✔ CSV neutralizes formula-like notes including leading whitespace (0.955209ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 318.930186

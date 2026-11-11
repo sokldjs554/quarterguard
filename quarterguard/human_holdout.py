@@ -38,7 +38,7 @@ def freeze(data):
 
 def retrieve(question,document_id):
     if document_id:
-        if document_id!=DOCUMENT_ID:return {'status':'needs_review','issues':['UNSUPPORTED_DOCUMENT'],'hits':[]}
+        if document_id not in {DOCUMENT_ID,'apple-2024-10k'}:return {'status':'needs_review','issues':['UNSUPPORTED_DOCUMENT'],'hits':[]}
         return search_source(document_id,question)
     return SearchIndex(load_facts(),'hybrid_meta').search_with_diagnostics(question,3)
 

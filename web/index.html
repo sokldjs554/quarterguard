@@ -46,14 +46,15 @@
  <p class="work-footnote">공개 예시 자료 · 수집 수치의 자동 계산과 도구 재검증을 구분합니다. <span>외부 API는 검증 기록 화면에서 별도로 요청합니다. 이 작업지는 자동으로 호출하지 않습니다.</span></p>
 </section>
 <section id="search" class="view" hidden>
- <div class="title-line"><div><h1>근거 검색</h1></div><span class="page-context">분기 수치 192개 · SK하이닉스 원문 근거 18개</span></div>
+ <div class="title-line"><div><h1>근거 검색</h1></div><span class="page-context">분기 수치 192개 · SK하이닉스 18개 · Apple 수치 25개</span></div>
  <form id="search-form"><label for="query">기업 · 연도 · 분기 · 범위 · 항목 · 기간 · 통화 · 표시 단위</label><div class="search-input"><input id="query" maxlength="500" value="삼성전자 2024 3분기 연결 매출액 3개월 KRW 백만원"><button class="primary">근거 검색</button></div><p>한국어·영어로 검색 조건을 입력하세요. 빠진 조건이나 해석하지 못한 표현을 안내합니다. 현재 작업지의 수집 범위: 삼성전자 / 2023·2024 / Q2·Q3 / 연결·별도 / 6개 손익 항목.</p></form>
  <div id="search-results" aria-live="polite"><div class="empty">검색 결과는 검증 전 후보입니다. 후보를 직접 선택해 작업지에서 대조할 수 있습니다.</div></div>
  <section class="source-evidence-section" aria-labelledby="source-evidence-title">
-  <h2 id="source-evidence-title">SK하이닉스 · 선택 문서의 근거 찾기</h2>
-  <p>선택 문서: <strong>2025 Offering Circular에 수록된 2024·2023 연결재무제표</strong></p>
-  <p>현금·재고, 매출·매출원가·영업손익, 제품별 매출의 원문 근거 18개를 검색합니다. 통화는 KRW, 표시 단위는 백만 원입니다. 선택 근거로 연간 비교·전년 말 잔액 증감·제품 비중을 계산할 수 있습니다. 재고 개월분은 정의 확인이 필요합니다.</p>
+  <h2 id="source-evidence-title">선택 문서의 근거 찾기</h2>
+  <label for="source-document">검토 문서</label><select id="source-document"><option value="skh2024annual-in-2025oc">SK하이닉스 · 2024·2023 연결재무제표 · KRW</option><option value="apple-2024-10k">Apple · FY2024 Form 10-K · USD</option></select>
+  <p id="source-document-description">현금·재고, 매출·매출원가·영업손익, 제품별 매출의 원문 근거 18개를 검색합니다. 통화는 KRW, 표시 단위는 백만 원입니다. 선택 근거로 연간 비교·전년 말 잔액 증감·제품 비중을 계산할 수 있습니다. 재고 개월분은 정의 확인이 필요합니다.</p>
   <form id="source-evidence-form"><label for="source-evidence-query">이 문서에서 확인할 항목과 연도</label><div class="search-input"><input id="source-evidence-query" maxlength="500" value="현금은 2023년 말보다 얼마나 늘었나?"><button class="primary">원문 근거 검색</button></div></form>
+  <div id="apple-review-actions" hidden><p>Apple FY2024 공식 HTML의 선택 표만 지원합니다. 기업·연결·USD·백만 달러는 선택 문서 기준이며, 비교 연도 생략 시 2023년 대비 2024년을 명시해 표시합니다. 검색은 근거 후보만 찾습니다.</p><button id="apple-review-submit" type="button" class="primary">질문의 근거·계산 검증</button> <button id="apple-review-export" type="button" class="secondary" disabled>검토 결과·근거 JSON 저장</button><div id="apple-review-result" aria-live="polite"></div></div>
   <details id="source-calculator" class="source-calculator"><summary>선택 근거로 계산 · 연간 / 전년 말 / 제품 비중</summary>
    <p>계산 방식과 A/B 근거를 직접 선택하세요. 아래 기본값은 예시이며 검색 질문에서 자동 확정한 조건이 아닙니다.</p>
    <div id="source-calc-load-error" class="error-message" hidden><p id="source-calc-load-message" role="alert"></p><button id="source-calc-retry" type="button" class="secondary">계산 자료 다시 불러오기</button></div>
