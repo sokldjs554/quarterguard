@@ -1,0 +1,11 @@
+{
+  "origin": "AI-authored exhaustive combinations over current registered18cells, not new documents or human queries",
+  "combinations": 1296,
+  "counts": {
+    "verified": 10,
+    "difference_only": 1,
+    "blocked": 1285
+  },
+  "all_expected": true,
+  "paid_calls": 0
+}

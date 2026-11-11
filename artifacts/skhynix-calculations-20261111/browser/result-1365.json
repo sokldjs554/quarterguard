@@ -1,0 +1,137 @@
+{
+  "mode": "balance_yoy",
+  "status": "verified",
+  "issues": [],
+  "checks": [
+    {
+      "condition": "COMPANY_MISMATCH",
+      "passed": true
+    },
+    {
+      "condition": "SCOPE_MISMATCH",
+      "passed": true
+    },
+    {
+      "condition": "CURRENCY_MISMATCH",
+      "passed": true
+    },
+    {
+      "condition": "SOURCE_MISMATCH",
+      "passed": true
+    },
+    {
+      "condition": "UNKNOWN_UNIT",
+      "passed": true
+    },
+    {
+      "condition": "INVALID_VALUE",
+      "passed": true
+    },
+    {
+      "condition": "METRIC_MISMATCH",
+      "passed": true
+    },
+    {
+      "condition": "MEASUREMENT_MISMATCH",
+      "passed": true
+    },
+    {
+      "condition": "PERIOD_MISMATCH",
+      "passed": true
+    },
+    {
+      "condition": "ZERO_BASE",
+      "passed": true
+    },
+    {
+      "condition": "NEGATIVE_BASE",
+      "passed": true
+    }
+  ],
+  "messages": [],
+  "difference": {
+    "value": "3617788",
+    "currency": "KRW",
+    "scale": 1000000,
+    "unit_label": "백만 원"
+  },
+  "difference_status": "calculated",
+  "growth_pct": "47.6820",
+  "share_pct": null,
+  "percentage_status": "calculated",
+  "transition": null,
+  "normalized_inputs": [
+    "11205117000000",
+    "7587329000000"
+  ],
+  "normalized_currency": "KRW",
+  "normalized_scale": 1,
+  "display_scale": 1000000,
+  "evidence": [
+    {
+      "id": "skh2024annual-in-2025oc:financial-position:cash:2024",
+      "document_id": "skh2024annual-in-2025oc",
+      "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+      "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+      "company": "skhynix",
+      "scope": "CFS",
+      "currency": "KRW",
+      "scale": 1000000,
+      "metric": "cash",
+      "value": "11205117",
+      "raw_value": "11,205,117",
+      "year": 2024,
+      "period_kind": "instant",
+      "as_of": "2024-12-31",
+      "start": null,
+      "end": null,
+      "page": 191,
+      "printed_page": "F-73",
+      "table_id": "financial-position",
+      "table_title": "Consolidated Statements of Financial Position",
+      "row": "Cash and cash equivalents",
+      "row_role": "labelled",
+      "column": "2024",
+      "amount_column": 1,
+      "raw_line": "Cash and cash equivalents 5,6 W 11,205,117 W 7,587,329",
+      "text_sha256": "7f6f202eef7a7f0b47f45a4a3abb4e32dd802e5a621aa18ede5489e7879e9657"
+    },
+    {
+      "id": "skh2024annual-in-2025oc:financial-position:cash:2023",
+      "document_id": "skh2024annual-in-2025oc",
+      "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+      "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+      "company": "skhynix",
+      "scope": "CFS",
+      "currency": "KRW",
+      "scale": 1000000,
+      "metric": "cash",
+      "value": "7587329",
+      "raw_value": "7,587,329",
+      "year": 2023,
+      "period_kind": "instant",
+      "as_of": "2023-12-31",
+      "start": null,
+      "end": null,
+      "page": 191,
+      "printed_page": "F-73",
+      "table_id": "financial-position",
+      "table_title": "Consolidated Statements of Financial Position",
+      "row": "Cash and cash equivalents",
+      "row_role": "labelled",
+      "column": "2023",
+      "amount_column": 2,
+      "raw_line": "Cash and cash equivalents 5,6 W 11,205,117 W 7,587,329",
+      "text_sha256": "7f6f202eef7a7f0b47f45a4a3abb4e32dd802e5a621aa18ede5489e7879e9657"
+    }
+  ],
+  "formula": "(current_normalized_KRW / base_normalized_KRW - 1) * 100",
+  "difference_formula": "(current_normalized_KRW - base_normalized_KRW) / 1000000",
+  "execution": "deterministic_decimal",
+  "rounding": {
+    "decimal_places": 4,
+    "mode": "ROUND_HALF_EVEN"
+  },
+  "source_integrity": "registered_snapshot",
+  "source_snapshot_sha256": "a53ffe13c349937e4102099c9a43ba5705f3f452068c1dea935c1ad8386363f4"
+}

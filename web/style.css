@@ -349,3 +349,13 @@ dialog::backdrop { background:#1f251966; }
 .source-cell-value small{font-size:13px;font-weight:400}.source-cell-card dl{display:grid;grid-template-columns:90px 1fr;gap:8px;font-size:13px;line-height:1.6}
 .source-cell-card dt{color:#68717c}.source-cell-card dd{margin:0;min-width:0}
 @media(max-width:600px){.source-evidence-section{padding:14px}.source-cell-card dl{grid-template-columns:70px 1fr}.source-cell-card>div{gap:8px}}
+
+.source-calculator{margin:20px 0;padding:16px;border:1px solid #cbd5cb;border-radius:8px;background:#f7f9f6}
+.source-calculator>summary{font-weight:650;cursor:pointer;line-height:1.6}
+.source-calculator select{display:block;width:100%;min-width:0;max-width:100%;padding:9px;background:#fff;border:1px solid #cbd5cb;border-radius:5px;margin:6px 0 12px}
+.source-calc-selectors,.source-calc-selected{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.source-selected{min-width:0;padding:12px;background:#fff;border:1px solid #dde3da;border-radius:6px;overflow-wrap:anywhere;font-size:13px;line-height:1.6;margin-bottom:12px}
+.source-selected p{margin:6px 0}.source-output-values strong{font-size:22px;font-variant-numeric:tabular-nums}
+.source-candidate-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+#source-calc-export{margin:8px 0 8px 8px}
+@media(max-width:600px){.source-calc-selectors,.source-calc-selected{grid-template-columns:1fr}.source-calculator{padding:12px}#source-calc-export{margin-left:0}}
