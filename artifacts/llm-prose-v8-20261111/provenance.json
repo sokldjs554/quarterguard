@@ -1,0 +1,32 @@
+{
+  "workflow_run": 42968080018,
+  "job": 130349870431,
+  "artifact_id": 13832241754,
+  "execution_commit": "0de00624880eb698b552b916fd040f81ae1564d1",
+  "attempt": 1,
+  "dispatches": 1,
+  "zip_sha256": "cc12b916883d12728c3590c11bca32e82eeab68f3c1788f85d64ebf57419b6b0",
+  "original_files_sha256": {
+    "cross-company-period.response.json": "aacfec99f2638563bee42c6983f0cc79c6c98c23b0d6186c4a5f5da921ac7183",
+    "comparison.json": "808770cab50624c787df0e1d2323349990d67c72ff1e76a31d3f81c36a99489a",
+    "normal-qoq.response.json": "579ce129e0a423c36e79ec4880054ac1d70ae8948c402a0e0fa61ebeeff0ef55",
+    "s22-net-ytd-yoy.response.json": "f890136c005e113e541f5e3ef3deb8ed930405bbfb9c2b302cc9c90acdda8f34",
+    "normal-yoy.response.json": "b9704a991b9885a66d92b7a083638aaa383b4ea574368f737d4c20a427679ec7",
+    "h25-net-yoy.response.json": "ab5c9087547c5ba250aa9986db5e491d814b4e4a72a7360446958bf15f60c4e5",
+    "human-review.json": "7b9e75852e75a3c7733689445f03b16cc625c18dd7f5ba96d6cb94f476c6d6d3",
+    "s22-op-yoy.response.json": "4fb6d20ada6c93027cfe81d0898fa2dcc69afe575ba00598bf6bfd43b01e5d23",
+    "conflicting-number-draft.response.json": "ce65d91cfcc3e9d139bd6a5e56b33cfa431aebfc2eb298b0c6af9af9164eadeb",
+    "citation-draft.response.json": "e0c60ce7ef5a117675e7c57d24db401a529765f14806e9c0ee10849fa88cd871",
+    "period-mismatch.response.json": "ece149cd027f8b0b74429ec0d562d529fd54ac8e5cd0e0547f93abeeb7b63307",
+    "no-evidence.response.json": "74b7eb72304adbf60d1ae914cf9eee2266830b2c41d29896198a9dbcc39a1920",
+    "report.json": "7ebb8103de576424cebd2e5f86a094ab554a1ced24bbca2ae08f53fa4a263128",
+    "scope-mismatch.response.json": "15d2e26321362be8c3a4c776677f27329ba575bd0367c834c0a81dfdf24cf2a6",
+    "s22-net-period.response.json": "00b12637c52e0baeda0e7e971a952fd430cb168cdbb99c0cef81590a1be37117",
+    "h25-op-period.response.json": "1c4d4cc772fa02c2f14d3d6c047f538d348b769f0a499a90a4c8f87e6649d681",
+    "attempts.jsonl": "afe8906ca9da6450212360957f7ac98c18397c7bed1894a161cbd4e1aa8180b0",
+    "s22-op-qoq.response.json": "8ea5be8e73d915939598ba1c4d5005f9bf56c933322eb5a45dd40dd5f0222121",
+    "unit-draft.response.json": "6ac04b8e017e9aee00f59a8fe0c2e15ec77a049ba7c1c4333acdf1169533a400",
+    "h25-op-yoy.response.json": "02ef34f78f0de2c6fcffde6816006deb207017468d7f11937779df4732acee04"
+  },
+  "download_note": "GitHub connector archive downloaded; CLI redirect download failed with Forbidden and produced an empty local file. No provider retry."
+}

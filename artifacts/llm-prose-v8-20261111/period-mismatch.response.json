@@ -1,0 +1,11 @@
+{
+  "id": "resp_08b3a0d043a7306b016af401a58e1887d19cd66c5d57577868",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1709,
+    "output_tokens": 207,
+    "total_tokens": 1916
+  },
+  "output_text": "{\"status\":\"needs_review\",\"value\":null,\"issues\":[\"PERIOD_MISMATCH\"],\"evidence_ids\":[\"s24q3-CFS-revenue-2024-ytd-KRW\",\"s24q3-CFS-revenue-2023-q-KRW\"],\"explanation_ko\":\"계산 보류입니다. 기간 불일치가 있습니다. 2024 3Q Interim Business Report, PDF p.34의 Revenue / 2024 YTD KRW는 2024-01-01 ~ 2024-09-30, 9개월, 연결입니다. 2024 3Q Interim Business Report, PDF p.34의 Revenue / 2023 Q KRW는 2023-07-01 ~ 2023-09-30, 3개월, 연결입니다. 9개월 누적과 전년 3개월은 직접 비교 기준이 맞지 않습니다. 따라서 증가율은 확정하지 않습니다.\"}"
+}

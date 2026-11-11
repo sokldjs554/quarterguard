@@ -1,0 +1,11 @@
+{
+  "id": "resp_05617b5f58fdc7a5016af401a7cdbc87d19b07ca81b20ee192",
+  "model": "gpt-5.4-mini-2026-03-17",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1648,
+    "output_tokens": 205,
+    "total_tokens": 1853
+  },
+  "output_text": "{\"status\":\"needs_review\",\"value\":null,\"issues\":[\"SCOPE_MISMATCH\"],\"evidence_ids\":[\"s24q3-CFS-revenue-2024-q-KRW\",\"s24q2-OFS-revenue-2024-q-KRW\"],\"explanation_ko\":\"연결 매출과 별도 매출의 범위가 다릅니다. 비교를 보류합니다. 확인된 근거는 Samsung Electronics 2024 3Q Interim Business Report, PDF p.34의 Revenue / 2024 Q KRW와 Samsung Electronics 2024 Half-year Business Report, PDF p.104의 Revenue / 2024 Q KRW입니다. 전자는 2024-07-01~2024-09-30 연결 79,098,731 백만 원입니다. 후자는 2024-04-01~2024-06-30 별도 53,734,118 백만 원입니다.\"}"
+}

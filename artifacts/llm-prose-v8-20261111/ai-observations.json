@@ -1,0 +1,38 @@
+{
+  "actor": "AI",
+  "human_reviewed": false,
+  "semantic_verdicts_assigned": false,
+  "llm_as_judge": false,
+  "items": [
+    {
+      "case_id": "no-evidence",
+      "type": "internal_label_remains",
+      "detail": "SEARCH_EMPTY still appears despite instruction. Current gate rejects it; original response retained."
+    },
+    {
+      "case_id": "s22-op-qoq",
+      "type": "targeted_label_removed",
+      "detail": "qoq_adjacent is absent; text says 바로 이어지는 분기가 아닙니다. Not a new human truth label."
+    },
+    {
+      "case_id": "s22-net-period",
+      "type": "suspected_false_positive_gate",
+      "detail": "근거가 없는 것이 아니라 ... 근거는 있습니다 is an assertion that evidence exists. Narrow negation allowlist misses 것이 아니라 and rejects prose_evidence_presence_consistent."
+    },
+    {
+      "case_id": "h25-net-yoy",
+      "type": "comparison_direction_wording",
+      "detail": "2025년 3분기 대비 2024년 3분기 ... -20.5146% reverses the natural-language current/base direction. Tool current is2025 and base2024. Numeric value matches the tool; automatic gate passes. Human review required."
+    },
+    {
+      "case_id": "h25-op-period",
+      "type": "diagnostic_attribution",
+      "detail": "Text now says 별도 재계산 기준 for months/start date diagnostics; b must assess whether wording distinguishes this from tool execution history."
+    },
+    {
+      "case_id": "cross-company-period",
+      "type": "other_internal_labels",
+      "detail": "COMPANY_MISMATCH and PERIOD_MISMATCH remain. Current language rule targets SEARCH_EMPTY/qoq_adjacent, not all possible issue labels."
+    }
+  ]
+}
