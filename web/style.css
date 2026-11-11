@@ -359,3 +359,8 @@ dialog::backdrop { background:#1f251966; }
 .source-candidate-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 #source-calc-export{margin:8px 0 8px 8px}
 @media(max-width:600px){.source-calc-selectors,.source-calc-selected{grid-template-columns:1fr}.source-calculator{padding:12px}#source-calc-export{margin-left:0}}
+/* Selected-document review keeps source context readable on narrow screens. */
+#source-document{max-width:100%;margin:8px 0 12px;padding:10px;font:inherit}
+#apple-review-actions pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:280px;overflow:auto;font:11px/1.6 var(--mono)}
+#apple-review-actions blockquote{margin:12px 0;padding:12px;border-left:3px solid var(--line);overflow-wrap:anywhere;line-height:1.7}
+#apple-review-actions .finding{margin:16px 0}

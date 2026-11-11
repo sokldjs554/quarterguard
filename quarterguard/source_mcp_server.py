@@ -19,4 +19,11 @@ def calculate_source_pair(current_id:str,base_id:str,mode:str)->dict:
     """Calculate explicit registered annual/balance/share pairs; inventory months need definition."""
     from .source_calculations import calculate_source_pair as calculate
     return calculate(current_id,base_id,mode)
+@mcp.tool()
+def review_source_document(document_id:str,query:str)->dict:
+    """Run bounded rule-based Apple evidence/context/calculation review, not LLM planning."""
+    from .apple_source import DOCUMENT_ID
+    from .apple_review import review
+    if document_id!=DOCUMENT_ID:raise ValueError('UNKNOWN_SOURCE_DOCUMENT')
+    return review(query)
 if __name__=='__main__':mcp.run()

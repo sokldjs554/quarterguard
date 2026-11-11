@@ -1,0 +1,4823 @@
+{
+  "baseline_commit": "ba689ddf7bc3a8768b546155042276e6a47739f3",
+  "execution_head": "ba689ddf7bc3a8768b546155042276e6a47739f3",
+  "worktree_code_sha256": {
+    "quarterguard/explanation_guards.py": "ceb8464c8cc5a9583ffad5333c063331f15833beb8bda89b7f4a6750cb73f551",
+    "quarterguard/orchestrator.py": "a75d311477411fa47aecf4b879f7768c77eb92e870aa90b8f0d68658d99164ad",
+    "quarterguard/human_holdout.py": "73bda5059775a537362c1ef8f13f21f2630fa96130f2389515ef5e2a77ff3a7b",
+    "quarterguard/heldout_evaluation.py": "e1369d1584605d847d6cfdaf12947ed73bf9a10590ca0959cd7154007fa22a19",
+    "quarterguard/source_calculations.py": "77ede9609fcefd15a97639da2802bfa1cb98ae2c2377c43b0c20a9bc9033a33e",
+    "quarterguard/ranking_evaluation_v2.py": "872518cb55fa2e9bc28236cfd53f8f83cc90944335e7a4cba25a740aff6d84fa",
+    "quarterguard/worksheet.py": "b716e71cf14d8e6fea40968068cb42d72b897f12f6aa8b307a7f9ef5b73394a1",
+    "quarterguard/__init__.py": "13996412da99b8f4d5ad2cca3645bcca24c08e00aad90dd6fc5f49a995c1f3ec",
+    "quarterguard/live_verification.py": "08cbbdb916458f1cbbe7507447d7f9dee69ec85ce4b9627b7b5106d6aba2c4b4",
+    "quarterguard/evaluate_live_explanations_v7.py": "6fe20a8d5274818d35f1e37f0ba3c0c85610925b45fffaf3c63e69f0a35a7190",
+    "quarterguard/evaluate_live_explanations_v6.py": "510fbe376fc4e46955fcc379af8d0330e0ba8a301768485b5c74c9c81310de81",
+    "quarterguard/apple_source.py": "2308c24db6e9b3cf6aabc605a78952e831c462577fcbd84ebf4afd9a7e48a1ad",
+    "quarterguard/ingest.py": "0a6e8708680658cf725ecfa7f679ce9c18a933cb536888a1b66c216c320756ff",
+    "quarterguard/evaluate.py": "1c106bdaa0bc602830cd4d60192cd3fc45d3482ed1faec97b4f1e4255fd6bb59",
+    "quarterguard/mcp_server.py": "db3dad369219c3221ccc9a1a37e9be24c3e4394923469d499bb7b2705131b43d",
+    "quarterguard/apple_review.py": "393c937d6fc570349f36086e1a0ae91aa1a18942650f03e8ff00c8960ae068bc",
+    "quarterguard/query.py": "22799afcf36ffb935aa4e772bfb507f9899e36e5b73264082a02bf5da310acf6",
+    "quarterguard/public_providers.py": "820c1e96ae59432ddbb2d7bf5bf4caeb21819084fcd33e575f84fa5400378371",
+    "quarterguard/hyundai_ingest.py": "28edef7e0ed80bd1dd64ab582ff9756c044a78946a9b10b39a3933b7814b5515",
+    "quarterguard/latest_progress.py": "c57b730276d5c54948bc0aa5f687ca99150eb676ed620817ab062e4672390b6d",
+    "quarterguard/evaluate_live_explanations_v8.py": "f90c553db3e195c93a619f6169441fbf3e0a85192087328f3e427828bc7c7533",
+    "quarterguard/core.py": "dbe42039fae2619484df0a79bd5b893ee58e0efc40468570a672da79c877830e",
+    "quarterguard/provider_controls.py": "415cc875ce236616e57bcc63d9e4199965a757615cf32fa50fbf70383fd8f7ae",
+    "quarterguard/bounded_planner.py": "62a3ed3ec4cb822d3cac37d0e659cb976e3848156c789d04a69b180e67c91f03",
+    "quarterguard/source_mcp_server.py": "34fae7bcd5859a0f20e22b020aa43ebc3d19c3e4f7662ec90d59de9eeaa3e491",
+    "quarterguard/explanation_context.py": "833ddaa08498a03a4ba99848bbe1454e0c58cfaf9c7bd6fa2643b1b722eb853a",
+    "quarterguard/search.py": "03e36e985309f85d5b9d62980ba65793dfd1876f4ab715a1bd76b2acc557c379",
+    "quarterguard/evaluate_live_explanations_v3.py": "e2fc23297595e4ba47259aa6d2cd6c2e8086f421dc3e8becb62ab3b844457526",
+    "quarterguard/dart.py": "643502d04d642517489dccf5c5d41128fdfd5ad0c5643a04b603d31bfef26057",
+    "quarterguard/frozen_followup.py": "a90532e205ada7b84fc886cb63ad9b881818078475fe1194caf0009794fbbed6",
+    "quarterguard/explanation_audit.py": "811741feecf2025d707caba8b0839cf44b80f287e509684ea09c71a096b3e063",
+    "quarterguard/evaluate_live_explanations_v9.py": "68fed599f886589598951d874690fe8c7e876efe007177fe23cac994cfa726b8",
+    "quarterguard/final_evaluation.py": "3ff94a3746134121b0064381eddfa58bf95109c05a8f917d475b5db0fbc3e3fb",
+    "quarterguard/source_evidence.py": "db912f29e07b48500096de3c3299b93cec6182178c0e3ca7faa83ced93035523",
+    "quarterguard/store.py": "7979c1adf244e3c833cb5a8ca6ac172a29c073f8110968d2b932d206bab8708e",
+    "quarterguard/evaluate_live_explanations_v5.py": "de17fa3fcca0353b89764d1531a0b55c600efc5d065e437e6e6eeddac54fccbb",
+    "quarterguard/evaluate_explanations_v2.py": "0a857656ca7efc9a8a11d476f48249e66530a52d3b7952079d4632d9293b0651",
+    "quarterguard/evaluation_v2.py": "4a94bc3b9ad403e3be5c6b015af2af6c9aa59315de58bafe6b671124d820d687",
+    "quarterguard/evaluate_live_explanations_v4.py": "870c68cc430f453ec14d75fb0b93646115c6c211abc9b1a00e8b91e7f32681b4",
+    "quarterguard/api.py": "5d002696612d99a038fa5f5838e4c4c4a7a25601548116b3fda3999e047dd948"
+  },
+  "dataset_kind": "human-authored development/regression; original pre-fix 0/7 preserved",
+  "authorship_confirmation": "data/apple-submitted-20261112/authorship-confirmation.json",
+  "source": {
+    "format": "original SEC HTML, no PDF",
+    "raw_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+    "numeric_cells_parsed": 25,
+    "narratives_parsed": 2,
+    "matched_user_value_cells": [
+      {
+        "row": "Products",
+        "section": "Net sales",
+        "year": 2024,
+        "page": 29,
+        "passed": true,
+        "actual_ids": [
+          "apple-2024-10k:products_sales:2024"
+        ]
+      },
+      {
+        "row": "Services",
+        "section": "Net sales",
+        "year": 2024,
+        "page": 29,
+        "passed": true,
+        "actual_ids": [
+          "apple-2024-10k:services_sales:2024"
+        ]
+      },
+      {
+        "row": "Products",
+        "section": "Cost of sales",
+        "year": 2024,
+        "page": 29,
+        "passed": true,
+        "actual_ids": [
+          "apple-2024-10k:products_cost:2024"
+        ]
+      },
+      {
+        "row": "Services",
+        "section": "Cost of sales",
+        "year": 2024,
+        "page": 29,
+        "passed": true,
+        "actual_ids": [
+          "apple-2024-10k:services_cost:2024"
+        ]
+      },
+      {
+        "row": "Greater China",
+        "section": null,
+        "year": 2024,
+        "page": 22,
+        "passed": true,
+        "actual_ids": [
+          "apple-2024-10k:china_sales:2024"
+        ]
+      },
+      {
+        "row": "Greater China",
+        "section": null,
+        "year": 2023,
+        "page": 22,
+        "passed": true,
+        "actual_ids": [
+          "apple-2024-10k:china_sales:2023"
+        ]
+      },
+      {
+        "row": "Total net sales",
+        "section": null,
+        "year": 2024,
+        "page": 22,
+        "passed": true,
+        "actual_ids": [
+          "apple-2024-10k:total_sales:2024"
+        ]
+      },
+      {
+        "row": "Total net sales",
+        "section": null,
+        "year": 2023,
+        "page": 22,
+        "passed": true,
+        "actual_ids": [
+          "apple-2024-10k:total_sales:2023"
+        ]
+      },
+      {
+        "row": "Cash generated by operating activities",
+        "section": null,
+        "year": 2024,
+        "page": 33,
+        "passed": true,
+        "actual_ids": [
+          "apple-2024-10k:operating_cash:2024"
+        ]
+      },
+      {
+        "row": "Payments for acquisition of property, plant and equipment",
+        "section": null,
+        "year": 2024,
+        "page": 33,
+        "passed": true,
+        "actual_ids": [
+          "apple-2024-10k:capex_payment:2024"
+        ]
+      },
+      {
+        "row": "Repurchases of common stock",
+        "section": null,
+        "year": 2024,
+        "page": 33,
+        "passed": true,
+        "actual_ids": [
+          "apple-2024-10k:buyback_payment:2024"
+        ]
+      },
+      {
+        "row": "Repurchases of common stock",
+        "section": null,
+        "year": 2023,
+        "page": 33,
+        "passed": true,
+        "actual_ids": [
+          "apple-2024-10k:buyback_payment:2023"
+        ]
+      },
+      {
+        "row": "Operating income",
+        "section": null,
+        "year": 2024,
+        "page": 29,
+        "passed": true,
+        "actual_ids": [
+          "apple-2024-10k:operating_profit:2024"
+        ]
+      },
+      {
+        "row": "Operating income",
+        "section": null,
+        "year": 2023,
+        "page": 29,
+        "passed": true,
+        "actual_ids": [
+          "apple-2024-10k:operating_profit:2023"
+        ]
+      },
+      {
+        "row": "Provision for income taxes",
+        "section": null,
+        "year": 2024,
+        "page": 29,
+        "passed": true,
+        "actual_ids": [
+          "apple-2024-10k:tax_expense:2024"
+        ]
+      },
+      {
+        "row": "Provision for income taxes",
+        "section": null,
+        "year": 2023,
+        "page": 29,
+        "passed": true,
+        "actual_ids": [
+          "apple-2024-10k:tax_expense:2023"
+        ]
+      },
+      {
+        "row": "Net income",
+        "section": null,
+        "year": 2024,
+        "page": 29,
+        "passed": true,
+        "actual_ids": [
+          "apple-2024-10k:net_income:2024"
+        ]
+      },
+      {
+        "row": "Net income",
+        "section": null,
+        "year": 2023,
+        "page": 29,
+        "passed": true,
+        "actual_ids": [
+          "apple-2024-10k:net_income:2023"
+        ]
+      },
+      {
+        "row": "Impact of the State Aid Decision",
+        "section": null,
+        "year": 2024,
+        "page": 40,
+        "passed": true,
+        "actual_ids": [
+          "apple-2024-10k:state_aid_tax:2024"
+        ]
+      }
+    ]
+  },
+  "rows": [
+    {
+      "id": "Q1",
+      "query": "2024회계연도에 제품과 서비스 중 어느 쪽의 매출총이익률이 더 높았나?",
+      "search": {
+        "status": "evidence_candidates",
+        "answer_status": "not_calculated",
+        "calculated_answer": null,
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": null,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "hits": [
+          {
+            "cell": {
+              "id": "apple-2024-10k:products_sales:2024",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "products_sales",
+              "value": "294866",
+              "raw_value": "294,866",
+              "year": 2024,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "fiscal_weeks": 52,
+              "page": null,
+              "printed_page": 29,
+              "table_id": "apple-p29",
+              "table_title": "Consolidated Statements of Operations",
+              "section": "Net sales",
+              "row": "Products",
+              "column": "2024",
+              "amount_column": 1,
+              "row_role": "labelled",
+              "table_xpath": "/html/body/div[512]/table",
+              "cell_xpath": "/html/body/div[512]/table/tr[5]/td[3]",
+              "logical_column_span": [
+                3,
+                6
+              ],
+              "xbrl_name": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_ref": "c-13",
+              "fact_id": "f-60",
+              "source_locator": "#f-60",
+              "unit_basis": "USD inline XBRL scale=6"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "apple-2024-10k:services_sales:2024",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "services_sales",
+              "value": "96169",
+              "raw_value": "96,169",
+              "year": 2024,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "fiscal_weeks": 52,
+              "page": null,
+              "printed_page": 29,
+              "table_id": "apple-p29",
+              "table_title": "Consolidated Statements of Operations",
+              "section": "Net sales",
+              "row": "Services",
+              "column": "2024",
+              "amount_column": 1,
+              "row_role": "labelled",
+              "table_xpath": "/html/body/div[512]/table",
+              "cell_xpath": "/html/body/div[512]/table/tr[6]/td[2]",
+              "logical_column_span": [
+                3,
+                6
+              ],
+              "xbrl_name": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_ref": "c-16",
+              "fact_id": "f-63",
+              "source_locator": "#f-63",
+              "unit_basis": "USD inline XBRL scale=6"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "apple-2024-10k:products_cost:2024",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "products_cost",
+              "value": "185233",
+              "raw_value": "185,233",
+              "year": 2024,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "fiscal_weeks": 52,
+              "page": null,
+              "printed_page": 29,
+              "table_id": "apple-p29",
+              "table_title": "Consolidated Statements of Operations",
+              "section": "Cost of sales",
+              "row": "Products",
+              "column": "2024",
+              "amount_column": 1,
+              "row_role": "labelled",
+              "table_xpath": "/html/body/div[512]/table",
+              "cell_xpath": "/html/body/div[512]/table/tr[10]/td[2]",
+              "logical_column_span": [
+                3,
+                6
+              ],
+              "xbrl_name": "us-gaap:CostOfGoodsAndServicesSold",
+              "context_ref": "c-13",
+              "fact_id": "f-69",
+              "source_locator": "#f-69",
+              "unit_basis": "USD inline XBRL scale=6"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "apple-2024-10k:services_cost:2024",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "services_cost",
+              "value": "25119",
+              "raw_value": "25,119",
+              "year": 2024,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "fiscal_weeks": 52,
+              "page": null,
+              "printed_page": 29,
+              "table_id": "apple-p29",
+              "table_title": "Consolidated Statements of Operations",
+              "section": "Cost of sales",
+              "row": "Services",
+              "column": "2024",
+              "amount_column": 1,
+              "row_role": "labelled",
+              "table_xpath": "/html/body/div[512]/table",
+              "cell_xpath": "/html/body/div[512]/table/tr[11]/td[2]",
+              "logical_column_span": [
+                3,
+                6
+              ],
+              "xbrl_name": "us-gaap:CostOfGoodsAndServicesSold",
+              "context_ref": "c-16",
+              "fact_id": "f-72",
+              "source_locator": "#f-72",
+              "unit_basis": "USD inline XBRL scale=6"
+            },
+            "role": "requested_evidence"
+          }
+        ],
+        "narratives": [
+          {
+            "id": "apple-2024-10k:text:fiscal_weeks",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "printed_page": 34,
+            "page": null,
+            "text": "The Company’s fiscal year is the 52- or 53-week period that ends on the last Saturday of September. An additional week is included in the first fiscal quarter every five or six years to realign the Company’s fiscal quarters with calendar quarters, which occurred in the first fiscal quarter of 2023. The Company’s fiscal years 2024 and 2022 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks. Unless otherwise stated, references to particular years, quarters, months and periods refer to the Company’s fiscal years ended in September and the associated quarters, months and periods of those fiscal years.",
+            "xpath": "/html/body/ix:continuation[1]/ix:nonnumeric[2]/div/span",
+            "key": "fiscal_weeks"
+          }
+        ],
+        "issues": [],
+        "messages": [],
+        "unknown_terms": [],
+        "blocked": false,
+        "operation": "gross_margin",
+        "operation_label": "제품·서비스 매출총이익률",
+        "execution": "deterministic_source_retrieval",
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7"
+      },
+      "review": {
+        "document_id": "apple-2024-10k",
+        "query": "2024회계연도에 제품과 서비스 중 어느 쪽의 매출총이익률이 더 높았나?",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": null,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "gross_margin",
+        "operation_label": "제품·서비스 매출총이익률",
+        "status": "verified",
+        "issues": [],
+        "messages": [],
+        "unknown_terms": [],
+        "warnings": [],
+        "values": {
+          "products_margin_pct": "37.1806",
+          "services_margin_pct": "73.8804"
+        },
+        "formulas": [
+          {
+            "key": "products_margin_pct",
+            "formula": "(sales - cost_of_sales) / sales * 100",
+            "input_ids": [
+              "apple-2024-10k:products_sales:2024",
+              "apple-2024-10k:products_cost:2024"
+            ],
+            "unit": "percent"
+          },
+          {
+            "key": "services_margin_pct",
+            "formula": "(sales - cost_of_sales) / sales * 100",
+            "input_ids": [
+              "apple-2024-10k:services_sales:2024",
+              "apple-2024-10k:services_cost:2024"
+            ],
+            "unit": "percent"
+          }
+        ],
+        "explanation": [
+          "2024 회계연도 제품 집계 매출총이익률은 37.1806%, 서비스 집계는 73.8804%입니다. 순이익률이나 개별 항목 수익성은 아닙니다."
+        ],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [
+          {
+            "id": "apple-2024-10k:products_sales:2024",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "products_sales",
+            "value": "294866",
+            "raw_value": "294,866",
+            "year": 2024,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "fiscal_weeks": 52,
+            "page": null,
+            "printed_page": 29,
+            "table_id": "apple-p29",
+            "table_title": "Consolidated Statements of Operations",
+            "section": "Net sales",
+            "row": "Products",
+            "column": "2024",
+            "amount_column": 1,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[512]/table",
+            "cell_xpath": "/html/body/div[512]/table/tr[5]/td[3]",
+            "logical_column_span": [
+              3,
+              6
+            ],
+            "xbrl_name": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "context_ref": "c-13",
+            "fact_id": "f-60",
+            "source_locator": "#f-60",
+            "unit_basis": "USD inline XBRL scale=6"
+          },
+          {
+            "id": "apple-2024-10k:services_sales:2024",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "services_sales",
+            "value": "96169",
+            "raw_value": "96,169",
+            "year": 2024,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "fiscal_weeks": 52,
+            "page": null,
+            "printed_page": 29,
+            "table_id": "apple-p29",
+            "table_title": "Consolidated Statements of Operations",
+            "section": "Net sales",
+            "row": "Services",
+            "column": "2024",
+            "amount_column": 1,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[512]/table",
+            "cell_xpath": "/html/body/div[512]/table/tr[6]/td[2]",
+            "logical_column_span": [
+              3,
+              6
+            ],
+            "xbrl_name": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "context_ref": "c-16",
+            "fact_id": "f-63",
+            "source_locator": "#f-63",
+            "unit_basis": "USD inline XBRL scale=6"
+          },
+          {
+            "id": "apple-2024-10k:products_cost:2024",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "products_cost",
+            "value": "185233",
+            "raw_value": "185,233",
+            "year": 2024,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "fiscal_weeks": 52,
+            "page": null,
+            "printed_page": 29,
+            "table_id": "apple-p29",
+            "table_title": "Consolidated Statements of Operations",
+            "section": "Cost of sales",
+            "row": "Products",
+            "column": "2024",
+            "amount_column": 1,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[512]/table",
+            "cell_xpath": "/html/body/div[512]/table/tr[10]/td[2]",
+            "logical_column_span": [
+              3,
+              6
+            ],
+            "xbrl_name": "us-gaap:CostOfGoodsAndServicesSold",
+            "context_ref": "c-13",
+            "fact_id": "f-69",
+            "source_locator": "#f-69",
+            "unit_basis": "USD inline XBRL scale=6"
+          },
+          {
+            "id": "apple-2024-10k:services_cost:2024",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "services_cost",
+            "value": "25119",
+            "raw_value": "25,119",
+            "year": 2024,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "fiscal_weeks": 52,
+            "page": null,
+            "printed_page": 29,
+            "table_id": "apple-p29",
+            "table_title": "Consolidated Statements of Operations",
+            "section": "Cost of sales",
+            "row": "Services",
+            "column": "2024",
+            "amount_column": 1,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[512]/table",
+            "cell_xpath": "/html/body/div[512]/table/tr[11]/td[2]",
+            "logical_column_span": [
+              3,
+              6
+            ],
+            "xbrl_name": "us-gaap:CostOfGoodsAndServicesSold",
+            "context_ref": "c-16",
+            "fact_id": "f-72",
+            "source_locator": "#f-72",
+            "unit_basis": "USD inline XBRL scale=6"
+          }
+        ],
+        "narratives": [
+          {
+            "id": "apple-2024-10k:text:fiscal_weeks",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "printed_page": 34,
+            "page": null,
+            "text": "The Company’s fiscal year is the 52- or 53-week period that ends on the last Saturday of September. An additional week is included in the first fiscal quarter every five or six years to realign the Company’s fiscal quarters with calendar quarters, which occurred in the first fiscal quarter of 2023. The Company’s fiscal years 2024 and 2022 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks. Unless otherwise stated, references to particular years, quarters, months and periods refer to the Company’s fiscal years ended in September and the associated quarters, months and periods of those fiscal years.",
+            "xpath": "/html/body/ix:continuation[1]/ix:nonnumeric[2]/div/span",
+            "key": "fiscal_weeks"
+          }
+        ],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "completed",
+            "evidence_ids": [
+              "apple-2024-10k:products_sales:2024",
+              "apple-2024-10k:services_sales:2024",
+              "apple-2024-10k:products_cost:2024",
+              "apple-2024-10k:services_cost:2024"
+            ]
+          },
+          {
+            "stage": "get_source_cell",
+            "status": "completed",
+            "evidence_ids": [
+              "apple-2024-10k:products_sales:2024",
+              "apple-2024-10k:services_sales:2024",
+              "apple-2024-10k:products_cost:2024",
+              "apple-2024-10k:services_cost:2024"
+            ]
+          },
+          {
+            "stage": "validate_source_context",
+            "status": "passed"
+          },
+          {
+            "stage": "calculate_or_withhold",
+            "status": "verified",
+            "operation": "gross_margin"
+          }
+        ]
+      },
+      "latency_ms": 13.87,
+      "passed": true,
+      "rubric": "numeric exact match + expected decision + canonical evidence lookup; qualitative rules not human grading"
+    },
+    {
+      "id": "Q2",
+      "query": "중국권 매출이 줄었는데도 전체 매출은 늘었나?",
+      "search": {
+        "status": "evidence_candidates",
+        "answer_status": "not_calculated",
+        "calculated_answer": null,
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": 2023,
+          "years_origin": "selected_document_comparative_columns",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "hits": [
+          {
+            "cell": {
+              "id": "apple-2024-10k:china_sales:2024",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "china_sales",
+              "value": "66952",
+              "raw_value": "66,952",
+              "year": 2024,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "fiscal_weeks": 52,
+              "page": null,
+              "printed_page": 22,
+              "table_id": "apple-p22",
+              "table_title": "Net sales by reportable segment",
+              "section": null,
+              "row": "Greater China",
+              "column": "2024",
+              "amount_column": 1,
+              "row_role": "labelled",
+              "table_xpath": "/html/body/div[380]/table",
+              "cell_xpath": "/html/body/div[380]/table/tr[5]/td[2]",
+              "logical_column_span": [
+                3,
+                6
+              ],
+              "xbrl_name": null,
+              "context_ref": null,
+              "fact_id": null,
+              "source_locator": "",
+              "unit_basis": "regional table introduction: dollars in millions"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "apple-2024-10k:china_sales:2023",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "china_sales",
+              "value": "72559",
+              "raw_value": "72,559",
+              "year": 2023,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2022-09-25",
+              "end": "2023-09-30",
+              "fiscal_weeks": 53,
+              "page": null,
+              "printed_page": 22,
+              "table_id": "apple-p22",
+              "table_title": "Net sales by reportable segment",
+              "section": null,
+              "row": "Greater China",
+              "column": "2023",
+              "amount_column": 2,
+              "row_role": "labelled",
+              "table_xpath": "/html/body/div[380]/table",
+              "cell_xpath": "/html/body/div[380]/table/tr[5]/td[8]",
+              "logical_column_span": [
+                15,
+                18
+              ],
+              "xbrl_name": null,
+              "context_ref": null,
+              "fact_id": null,
+              "source_locator": "",
+              "unit_basis": "regional table introduction: dollars in millions"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "apple-2024-10k:total_sales:2024",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "total_sales",
+              "value": "391035",
+              "raw_value": "391,035",
+              "year": 2024,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "fiscal_weeks": 52,
+              "page": null,
+              "printed_page": 22,
+              "table_id": "apple-p22",
+              "table_title": "Net sales by reportable segment",
+              "section": null,
+              "row": "Total net sales",
+              "column": "2024",
+              "amount_column": 1,
+              "row_role": "labelled",
+              "table_xpath": "/html/body/div[380]/table",
+              "cell_xpath": "/html/body/div[380]/table/tr[8]/td[3]",
+              "logical_column_span": [
+                3,
+                6
+              ],
+              "xbrl_name": null,
+              "context_ref": null,
+              "fact_id": null,
+              "source_locator": "",
+              "unit_basis": "regional table introduction: dollars in millions"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "apple-2024-10k:total_sales:2023",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "total_sales",
+              "value": "383285",
+              "raw_value": "383,285",
+              "year": 2023,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2022-09-25",
+              "end": "2023-09-30",
+              "fiscal_weeks": 53,
+              "page": null,
+              "printed_page": 22,
+              "table_id": "apple-p22",
+              "table_title": "Net sales by reportable segment",
+              "section": null,
+              "row": "Total net sales",
+              "column": "2023",
+              "amount_column": 2,
+              "row_role": "labelled",
+              "table_xpath": "/html/body/div[380]/table",
+              "cell_xpath": "/html/body/div[380]/table/tr[8]/td[10]",
+              "logical_column_span": [
+                15,
+                18
+              ],
+              "xbrl_name": null,
+              "context_ref": null,
+              "fact_id": null,
+              "source_locator": "",
+              "unit_basis": "regional table introduction: dollars in millions"
+            },
+            "role": "requested_evidence"
+          }
+        ],
+        "narratives": [
+          {
+            "id": "apple-2024-10k:text:fiscal_weeks",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "printed_page": 34,
+            "page": null,
+            "text": "The Company’s fiscal year is the 52- or 53-week period that ends on the last Saturday of September. An additional week is included in the first fiscal quarter every five or six years to realign the Company’s fiscal quarters with calendar quarters, which occurred in the first fiscal quarter of 2023. The Company’s fiscal years 2024 and 2022 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks. Unless otherwise stated, references to particular years, quarters, months and periods refer to the Company’s fiscal years ended in September and the associated quarters, months and periods of those fiscal years.",
+            "xpath": "/html/body/ix:continuation[1]/ix:nonnumeric[2]/div/span",
+            "key": "fiscal_weeks"
+          }
+        ],
+        "issues": [],
+        "messages": [],
+        "unknown_terms": [],
+        "blocked": false,
+        "operation": "regional_change",
+        "operation_label": "중국권·전체 보고 매출 변화",
+        "execution": "deterministic_source_retrieval",
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7"
+      },
+      "review": {
+        "document_id": "apple-2024-10k",
+        "query": "중국권 매출이 줄었는데도 전체 매출은 늘었나?",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": 2023,
+          "years_origin": "selected_document_comparative_columns",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "regional_change",
+        "operation_label": "중국권·전체 보고 매출 변화",
+        "status": "verified",
+        "issues": [],
+        "messages": [],
+        "unknown_terms": [],
+        "warnings": [
+          "2024 회계연도는 52주, 2023 회계연도는 53주입니다. 아래는 보고금액 변화이며 같은 주수로 조정한 성장 비교가 아닙니다.",
+          "질문에 연도가 없어 선택 문서의 2023년 대비 2024년 열을 사용했습니다. 의도한 비교 연도인지 확인해 주세요."
+        ],
+        "values": {
+          "china_difference": "-5607",
+          "total_difference": "7750"
+        },
+        "formulas": [
+          {
+            "key": "china_difference",
+            "formula": "FY2024 - FY2023",
+            "input_ids": [
+              "apple-2024-10k:china_sales:2024",
+              "apple-2024-10k:china_sales:2023"
+            ],
+            "unit": "USD_million"
+          },
+          {
+            "key": "total_difference",
+            "formula": "FY2024 - FY2023",
+            "input_ids": [
+              "apple-2024-10k:total_sales:2024",
+              "apple-2024-10k:total_sales:2023"
+            ],
+            "unit": "USD_million"
+          }
+        ],
+        "explanation": [
+          "2023년 대비 2024년 중국권 매출 변화는 -5607백만 달러, 전체 매출 변화는 7750백만 달러입니다."
+        ],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [
+          {
+            "id": "apple-2024-10k:china_sales:2024",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "china_sales",
+            "value": "66952",
+            "raw_value": "66,952",
+            "year": 2024,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "fiscal_weeks": 52,
+            "page": null,
+            "printed_page": 22,
+            "table_id": "apple-p22",
+            "table_title": "Net sales by reportable segment",
+            "section": null,
+            "row": "Greater China",
+            "column": "2024",
+            "amount_column": 1,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[380]/table",
+            "cell_xpath": "/html/body/div[380]/table/tr[5]/td[2]",
+            "logical_column_span": [
+              3,
+              6
+            ],
+            "xbrl_name": null,
+            "context_ref": null,
+            "fact_id": null,
+            "source_locator": "",
+            "unit_basis": "regional table introduction: dollars in millions"
+          },
+          {
+            "id": "apple-2024-10k:china_sales:2023",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "china_sales",
+            "value": "72559",
+            "raw_value": "72,559",
+            "year": 2023,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2022-09-25",
+            "end": "2023-09-30",
+            "fiscal_weeks": 53,
+            "page": null,
+            "printed_page": 22,
+            "table_id": "apple-p22",
+            "table_title": "Net sales by reportable segment",
+            "section": null,
+            "row": "Greater China",
+            "column": "2023",
+            "amount_column": 2,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[380]/table",
+            "cell_xpath": "/html/body/div[380]/table/tr[5]/td[8]",
+            "logical_column_span": [
+              15,
+              18
+            ],
+            "xbrl_name": null,
+            "context_ref": null,
+            "fact_id": null,
+            "source_locator": "",
+            "unit_basis": "regional table introduction: dollars in millions"
+          },
+          {
+            "id": "apple-2024-10k:total_sales:2024",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "total_sales",
+            "value": "391035",
+            "raw_value": "391,035",
+            "year": 2024,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "fiscal_weeks": 52,
+            "page": null,
+            "printed_page": 22,
+            "table_id": "apple-p22",
+            "table_title": "Net sales by reportable segment",
+            "section": null,
+            "row": "Total net sales",
+            "column": "2024",
+            "amount_column": 1,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[380]/table",
+            "cell_xpath": "/html/body/div[380]/table/tr[8]/td[3]",
+            "logical_column_span": [
+              3,
+              6
+            ],
+            "xbrl_name": null,
+            "context_ref": null,
+            "fact_id": null,
+            "source_locator": "",
+            "unit_basis": "regional table introduction: dollars in millions"
+          },
+          {
+            "id": "apple-2024-10k:total_sales:2023",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "total_sales",
+            "value": "383285",
+            "raw_value": "383,285",
+            "year": 2023,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2022-09-25",
+            "end": "2023-09-30",
+            "fiscal_weeks": 53,
+            "page": null,
+            "printed_page": 22,
+            "table_id": "apple-p22",
+            "table_title": "Net sales by reportable segment",
+            "section": null,
+            "row": "Total net sales",
+            "column": "2023",
+            "amount_column": 2,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[380]/table",
+            "cell_xpath": "/html/body/div[380]/table/tr[8]/td[10]",
+            "logical_column_span": [
+              15,
+              18
+            ],
+            "xbrl_name": null,
+            "context_ref": null,
+            "fact_id": null,
+            "source_locator": "",
+            "unit_basis": "regional table introduction: dollars in millions"
+          }
+        ],
+        "narratives": [
+          {
+            "id": "apple-2024-10k:text:fiscal_weeks",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "printed_page": 34,
+            "page": null,
+            "text": "The Company’s fiscal year is the 52- or 53-week period that ends on the last Saturday of September. An additional week is included in the first fiscal quarter every five or six years to realign the Company’s fiscal quarters with calendar quarters, which occurred in the first fiscal quarter of 2023. The Company’s fiscal years 2024 and 2022 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks. Unless otherwise stated, references to particular years, quarters, months and periods refer to the Company’s fiscal years ended in September and the associated quarters, months and periods of those fiscal years.",
+            "xpath": "/html/body/ix:continuation[1]/ix:nonnumeric[2]/div/span",
+            "key": "fiscal_weeks"
+          }
+        ],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "completed",
+            "evidence_ids": [
+              "apple-2024-10k:china_sales:2024",
+              "apple-2024-10k:china_sales:2023",
+              "apple-2024-10k:total_sales:2024",
+              "apple-2024-10k:total_sales:2023"
+            ]
+          },
+          {
+            "stage": "get_source_cell",
+            "status": "completed",
+            "evidence_ids": [
+              "apple-2024-10k:china_sales:2024",
+              "apple-2024-10k:china_sales:2023",
+              "apple-2024-10k:total_sales:2024",
+              "apple-2024-10k:total_sales:2023"
+            ]
+          },
+          {
+            "stage": "validate_source_context",
+            "status": "passed"
+          },
+          {
+            "stage": "calculate_or_withhold",
+            "status": "verified",
+            "operation": "regional_change"
+          }
+        ]
+      },
+      "latency_ms": 5.308,
+      "passed": true,
+      "rubric": "numeric exact match + expected decision + canonical evidence lookup; qualitative rules not human grading"
+    },
+    {
+      "id": "Q3",
+      "query": "2024년 영업현금흐름에서 유형자산 취득액을 뺀 금액은 얼마인가?",
+      "search": {
+        "status": "evidence_candidates",
+        "answer_status": "not_calculated",
+        "calculated_answer": null,
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": null,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "hits": [
+          {
+            "cell": {
+              "id": "apple-2024-10k:operating_cash:2024",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "operating_cash",
+              "value": "118254",
+              "raw_value": "118,254",
+              "year": 2024,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "fiscal_weeks": 52,
+              "page": null,
+              "printed_page": 33,
+              "table_id": "apple-p33",
+              "table_title": "Consolidated Statements of Cash Flows",
+              "section": null,
+              "row": "Cash generated by operating activities",
+              "column": "2024",
+              "amount_column": 1,
+              "row_role": "labelled",
+              "table_xpath": "/html/body/div[547]/table",
+              "cell_xpath": "/html/body/div[547]/table/tr[20]/td[2]",
+              "logical_column_span": [
+                3,
+                6
+              ],
+              "xbrl_name": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_ref": "c-1",
+              "fact_id": "f-295",
+              "source_locator": "#f-295",
+              "unit_basis": "USD inline XBRL scale=6"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "apple-2024-10k:capex_payment:2024",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "capex_payment",
+              "value": "-9447",
+              "raw_value": "(9,447)",
+              "year": 2024,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "fiscal_weeks": 52,
+              "page": null,
+              "printed_page": 33,
+              "table_id": "apple-p33",
+              "table_title": "Consolidated Statements of Cash Flows",
+              "section": null,
+              "row": "Payments for acquisition of property, plant and equipment",
+              "column": "2024",
+              "amount_column": 1,
+              "row_role": "cash_outflow",
+              "table_xpath": "/html/body/div[547]/table",
+              "cell_xpath": "/html/body/div[547]/table/tr[26]/td[2]",
+              "logical_column_span": [
+                3,
+                6
+              ],
+              "xbrl_name": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_ref": "c-1",
+              "fact_id": "f-307",
+              "source_locator": "#f-307",
+              "unit_basis": "USD inline XBRL scale=6"
+            },
+            "role": "requested_evidence"
+          }
+        ],
+        "narratives": [
+          {
+            "id": "apple-2024-10k:text:fiscal_weeks",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "printed_page": 34,
+            "page": null,
+            "text": "The Company’s fiscal year is the 52- or 53-week period that ends on the last Saturday of September. An additional week is included in the first fiscal quarter every five or six years to realign the Company’s fiscal quarters with calendar quarters, which occurred in the first fiscal quarter of 2023. The Company’s fiscal years 2024 and 2022 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks. Unless otherwise stated, references to particular years, quarters, months and periods refer to the Company’s fiscal years ended in September and the associated quarters, months and periods of those fiscal years.",
+            "xpath": "/html/body/ix:continuation[1]/ix:nonnumeric[2]/div/span",
+            "key": "fiscal_weeks"
+          }
+        ],
+        "issues": [],
+        "messages": [],
+        "unknown_terms": [],
+        "blocked": false,
+        "operation": "operating_cash_less_capex",
+        "operation_label": "영업현금흐름에서 유형자산 취득 지출 차감",
+        "execution": "deterministic_source_retrieval",
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7"
+      },
+      "review": {
+        "document_id": "apple-2024-10k",
+        "query": "2024년 영업현금흐름에서 유형자산 취득액을 뺀 금액은 얼마인가?",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": null,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "operating_cash_less_capex",
+        "operation_label": "영업현금흐름에서 유형자산 취득 지출 차감",
+        "status": "verified",
+        "issues": [],
+        "messages": [],
+        "unknown_terms": [],
+        "warnings": [],
+        "values": {
+          "operating_cash_less_capex": "108807"
+        },
+        "formulas": [
+          {
+            "key": "operating_cash_less_capex",
+            "formula": "operating_cash + signed_capex_payment = operating_cash - abs(capex_payment)",
+            "input_ids": [
+              "apple-2024-10k:operating_cash:2024",
+              "apple-2024-10k:capex_payment:2024"
+            ],
+            "unit": "USD_million"
+          }
+        ],
+        "explanation": [
+          "2024 회계연도 영업현금흐름 118,254에서 취득 지출액 9,447을 빼면 108,807백만 달러입니다. 원문 지급액은 -9,447이며 현금 유출입니다. 질문에서 정한 계산으로, 회사가 정의한 특정 지표와 같다고 단정하지 않습니다."
+        ],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [
+          {
+            "id": "apple-2024-10k:operating_cash:2024",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "operating_cash",
+            "value": "118254",
+            "raw_value": "118,254",
+            "year": 2024,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "fiscal_weeks": 52,
+            "page": null,
+            "printed_page": 33,
+            "table_id": "apple-p33",
+            "table_title": "Consolidated Statements of Cash Flows",
+            "section": null,
+            "row": "Cash generated by operating activities",
+            "column": "2024",
+            "amount_column": 1,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[547]/table",
+            "cell_xpath": "/html/body/div[547]/table/tr[20]/td[2]",
+            "logical_column_span": [
+              3,
+              6
+            ],
+            "xbrl_name": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "context_ref": "c-1",
+            "fact_id": "f-295",
+            "source_locator": "#f-295",
+            "unit_basis": "USD inline XBRL scale=6"
+          },
+          {
+            "id": "apple-2024-10k:capex_payment:2024",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "capex_payment",
+            "value": "-9447",
+            "raw_value": "(9,447)",
+            "year": 2024,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "fiscal_weeks": 52,
+            "page": null,
+            "printed_page": 33,
+            "table_id": "apple-p33",
+            "table_title": "Consolidated Statements of Cash Flows",
+            "section": null,
+            "row": "Payments for acquisition of property, plant and equipment",
+            "column": "2024",
+            "amount_column": 1,
+            "row_role": "cash_outflow",
+            "table_xpath": "/html/body/div[547]/table",
+            "cell_xpath": "/html/body/div[547]/table/tr[26]/td[2]",
+            "logical_column_span": [
+              3,
+              6
+            ],
+            "xbrl_name": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+            "context_ref": "c-1",
+            "fact_id": "f-307",
+            "source_locator": "#f-307",
+            "unit_basis": "USD inline XBRL scale=6"
+          }
+        ],
+        "narratives": [
+          {
+            "id": "apple-2024-10k:text:fiscal_weeks",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "printed_page": 34,
+            "page": null,
+            "text": "The Company’s fiscal year is the 52- or 53-week period that ends on the last Saturday of September. An additional week is included in the first fiscal quarter every five or six years to realign the Company’s fiscal quarters with calendar quarters, which occurred in the first fiscal quarter of 2023. The Company’s fiscal years 2024 and 2022 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks. Unless otherwise stated, references to particular years, quarters, months and periods refer to the Company’s fiscal years ended in September and the associated quarters, months and periods of those fiscal years.",
+            "xpath": "/html/body/ix:continuation[1]/ix:nonnumeric[2]/div/span",
+            "key": "fiscal_weeks"
+          }
+        ],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "completed",
+            "evidence_ids": [
+              "apple-2024-10k:operating_cash:2024",
+              "apple-2024-10k:capex_payment:2024"
+            ]
+          },
+          {
+            "stage": "get_source_cell",
+            "status": "completed",
+            "evidence_ids": [
+              "apple-2024-10k:operating_cash:2024",
+              "apple-2024-10k:capex_payment:2024"
+            ]
+          },
+          {
+            "stage": "validate_source_context",
+            "status": "passed"
+          },
+          {
+            "stage": "calculate_or_withhold",
+            "status": "verified",
+            "operation": "operating_cash_less_capex"
+          }
+        ]
+      },
+      "latency_ms": 4.897,
+      "passed": true,
+      "rubric": "numeric exact match + expected decision + canonical evidence lookup; qualitative rules not human grading"
+    },
+    {
+      "id": "Q4",
+      "query": "2024년 자사주 매입에 쓴 현금은 2023년보다 얼마나 늘었나?",
+      "search": {
+        "status": "evidence_candidates",
+        "answer_status": "not_calculated",
+        "calculated_answer": null,
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": 2023,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "hits": [
+          {
+            "cell": {
+              "id": "apple-2024-10k:buyback_payment:2024",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "buyback_payment",
+              "value": "-94949",
+              "raw_value": "(94,949)",
+              "year": 2024,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "fiscal_weeks": 52,
+              "page": null,
+              "printed_page": 33,
+              "table_id": "apple-p33",
+              "table_title": "Consolidated Statements of Cash Flows",
+              "section": null,
+              "row": "Repurchases of common stock",
+              "column": "2024",
+              "amount_column": 1,
+              "row_role": "cash_outflow",
+              "table_xpath": "/html/body/div[547]/table",
+              "cell_xpath": "/html/body/div[547]/table/tr[34]/td[2]",
+              "logical_column_span": [
+                3,
+                6
+              ],
+              "xbrl_name": "us-gaap:PaymentsForRepurchaseOfCommonStock",
+              "context_ref": "c-1",
+              "fact_id": "f-322",
+              "source_locator": "#f-322",
+              "unit_basis": "USD inline XBRL scale=6"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "apple-2024-10k:buyback_payment:2023",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "buyback_payment",
+              "value": "-77550",
+              "raw_value": "(77,550)",
+              "year": 2023,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2022-09-25",
+              "end": "2023-09-30",
+              "fiscal_weeks": 53,
+              "page": null,
+              "printed_page": 33,
+              "table_id": "apple-p33",
+              "table_title": "Consolidated Statements of Cash Flows",
+              "section": null,
+              "row": "Repurchases of common stock",
+              "column": "2023",
+              "amount_column": 2,
+              "row_role": "cash_outflow",
+              "table_xpath": "/html/body/div[547]/table",
+              "cell_xpath": "/html/body/div[547]/table/tr[34]/td[5]",
+              "logical_column_span": [
+                9,
+                12
+              ],
+              "xbrl_name": "us-gaap:PaymentsForRepurchaseOfCommonStock",
+              "context_ref": "c-19",
+              "fact_id": "f-323",
+              "source_locator": "#f-323",
+              "unit_basis": "USD inline XBRL scale=6"
+            },
+            "role": "requested_evidence"
+          }
+        ],
+        "narratives": [
+          {
+            "id": "apple-2024-10k:text:fiscal_weeks",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "printed_page": 34,
+            "page": null,
+            "text": "The Company’s fiscal year is the 52- or 53-week period that ends on the last Saturday of September. An additional week is included in the first fiscal quarter every five or six years to realign the Company’s fiscal quarters with calendar quarters, which occurred in the first fiscal quarter of 2023. The Company’s fiscal years 2024 and 2022 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks. Unless otherwise stated, references to particular years, quarters, months and periods refer to the Company’s fiscal years ended in September and the associated quarters, months and periods of those fiscal years.",
+            "xpath": "/html/body/ix:continuation[1]/ix:nonnumeric[2]/div/span",
+            "key": "fiscal_weeks"
+          }
+        ],
+        "issues": [],
+        "messages": [],
+        "unknown_terms": [],
+        "blocked": false,
+        "operation": "buyback_change",
+        "operation_label": "자사주 매입 지출액 변화",
+        "execution": "deterministic_source_retrieval",
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7"
+      },
+      "review": {
+        "document_id": "apple-2024-10k",
+        "query": "2024년 자사주 매입에 쓴 현금은 2023년보다 얼마나 늘었나?",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": 2023,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "buyback_change",
+        "operation_label": "자사주 매입 지출액 변화",
+        "status": "verified",
+        "issues": [],
+        "messages": [],
+        "unknown_terms": [],
+        "warnings": [
+          "2024 회계연도는 52주, 2023 회계연도는 53주입니다. 아래는 보고금액 변화이며 같은 주수로 조정한 성장 비교가 아닙니다."
+        ],
+        "values": {
+          "spending_increase": "17399",
+          "signed_cash_flow_change": "-17399"
+        },
+        "formulas": [
+          {
+            "key": "spending_increase",
+            "formula": "abs(FY2024 outflow) - abs(FY2023 outflow)",
+            "input_ids": [
+              "apple-2024-10k:buyback_payment:2024",
+              "apple-2024-10k:buyback_payment:2023"
+            ],
+            "unit": "USD_million"
+          },
+          {
+            "key": "signed_cash_flow_change",
+            "formula": "FY2024 - FY2023",
+            "input_ids": [
+              "apple-2024-10k:buyback_payment:2024",
+              "apple-2024-10k:buyback_payment:2023"
+            ],
+            "unit": "USD_million"
+          }
+        ],
+        "explanation": [
+          "지출액 기준 77,550에서 94,949백만 달러로 17,399백만 달러 변했습니다. 부호를 유지한 현금흐름 변화는 -17,399백만 달러입니다. 매입 주식 수는 이 금액만으로 알 수 없습니다."
+        ],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [
+          {
+            "id": "apple-2024-10k:buyback_payment:2024",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "buyback_payment",
+            "value": "-94949",
+            "raw_value": "(94,949)",
+            "year": 2024,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "fiscal_weeks": 52,
+            "page": null,
+            "printed_page": 33,
+            "table_id": "apple-p33",
+            "table_title": "Consolidated Statements of Cash Flows",
+            "section": null,
+            "row": "Repurchases of common stock",
+            "column": "2024",
+            "amount_column": 1,
+            "row_role": "cash_outflow",
+            "table_xpath": "/html/body/div[547]/table",
+            "cell_xpath": "/html/body/div[547]/table/tr[34]/td[2]",
+            "logical_column_span": [
+              3,
+              6
+            ],
+            "xbrl_name": "us-gaap:PaymentsForRepurchaseOfCommonStock",
+            "context_ref": "c-1",
+            "fact_id": "f-322",
+            "source_locator": "#f-322",
+            "unit_basis": "USD inline XBRL scale=6"
+          },
+          {
+            "id": "apple-2024-10k:buyback_payment:2023",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "buyback_payment",
+            "value": "-77550",
+            "raw_value": "(77,550)",
+            "year": 2023,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2022-09-25",
+            "end": "2023-09-30",
+            "fiscal_weeks": 53,
+            "page": null,
+            "printed_page": 33,
+            "table_id": "apple-p33",
+            "table_title": "Consolidated Statements of Cash Flows",
+            "section": null,
+            "row": "Repurchases of common stock",
+            "column": "2023",
+            "amount_column": 2,
+            "row_role": "cash_outflow",
+            "table_xpath": "/html/body/div[547]/table",
+            "cell_xpath": "/html/body/div[547]/table/tr[34]/td[5]",
+            "logical_column_span": [
+              9,
+              12
+            ],
+            "xbrl_name": "us-gaap:PaymentsForRepurchaseOfCommonStock",
+            "context_ref": "c-19",
+            "fact_id": "f-323",
+            "source_locator": "#f-323",
+            "unit_basis": "USD inline XBRL scale=6"
+          }
+        ],
+        "narratives": [
+          {
+            "id": "apple-2024-10k:text:fiscal_weeks",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "printed_page": 34,
+            "page": null,
+            "text": "The Company’s fiscal year is the 52- or 53-week period that ends on the last Saturday of September. An additional week is included in the first fiscal quarter every five or six years to realign the Company’s fiscal quarters with calendar quarters, which occurred in the first fiscal quarter of 2023. The Company’s fiscal years 2024 and 2022 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks. Unless otherwise stated, references to particular years, quarters, months and periods refer to the Company’s fiscal years ended in September and the associated quarters, months and periods of those fiscal years.",
+            "xpath": "/html/body/ix:continuation[1]/ix:nonnumeric[2]/div/span",
+            "key": "fiscal_weeks"
+          }
+        ],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "completed",
+            "evidence_ids": [
+              "apple-2024-10k:buyback_payment:2024",
+              "apple-2024-10k:buyback_payment:2023"
+            ]
+          },
+          {
+            "stage": "get_source_cell",
+            "status": "completed",
+            "evidence_ids": [
+              "apple-2024-10k:buyback_payment:2024",
+              "apple-2024-10k:buyback_payment:2023"
+            ]
+          },
+          {
+            "stage": "validate_source_context",
+            "status": "passed"
+          },
+          {
+            "stage": "calculate_or_withhold",
+            "status": "verified",
+            "operation": "buyback_change"
+          }
+        ]
+      },
+      "latency_ms": 5.291,
+      "passed": true,
+      "rubric": "numeric exact match + expected decision + canonical evidence lookup; qualitative rules not human grading"
+    },
+    {
+      "id": "Q5",
+      "query": "영업이익이 늘었는데 순이익은 줄어든 이유를 법인세 수치로 일부 설명할 수 있나?",
+      "search": {
+        "status": "evidence_candidates",
+        "answer_status": "not_calculated",
+        "calculated_answer": null,
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": 2023,
+          "years_origin": "selected_document_comparative_columns",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "hits": [
+          {
+            "cell": {
+              "id": "apple-2024-10k:operating_profit:2024",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "operating_profit",
+              "value": "123216",
+              "raw_value": "123,216",
+              "year": 2024,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "fiscal_weeks": 52,
+              "page": null,
+              "printed_page": 29,
+              "table_id": "apple-p29",
+              "table_title": "Consolidated Statements of Operations",
+              "section": null,
+              "row": "Operating income",
+              "column": "2024",
+              "amount_column": 1,
+              "row_role": "labelled",
+              "table_xpath": "/html/body/div[512]/table",
+              "cell_xpath": "/html/body/div[512]/table/tr[20]/td[2]",
+              "logical_column_span": [
+                3,
+                6
+              ],
+              "xbrl_name": "us-gaap:OperatingIncomeLoss",
+              "context_ref": "c-1",
+              "fact_id": "f-90",
+              "source_locator": "#f-90",
+              "unit_basis": "USD inline XBRL scale=6"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "apple-2024-10k:operating_profit:2023",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "operating_profit",
+              "value": "114301",
+              "raw_value": "114,301",
+              "year": 2023,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2022-09-25",
+              "end": "2023-09-30",
+              "fiscal_weeks": 53,
+              "page": null,
+              "printed_page": 29,
+              "table_id": "apple-p29",
+              "table_title": "Consolidated Statements of Operations",
+              "section": null,
+              "row": "Operating income",
+              "column": "2023",
+              "amount_column": 2,
+              "row_role": "labelled",
+              "table_xpath": "/html/body/div[512]/table",
+              "cell_xpath": "/html/body/div[512]/table/tr[20]/td[5]",
+              "logical_column_span": [
+                9,
+                12
+              ],
+              "xbrl_name": "us-gaap:OperatingIncomeLoss",
+              "context_ref": "c-19",
+              "fact_id": "f-91",
+              "source_locator": "#f-91",
+              "unit_basis": "USD inline XBRL scale=6"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "apple-2024-10k:tax_expense:2024",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "tax_expense",
+              "value": "29749",
+              "raw_value": "29,749",
+              "year": 2024,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "fiscal_weeks": 52,
+              "page": null,
+              "printed_page": 29,
+              "table_id": "apple-p29",
+              "table_title": "Consolidated Statements of Operations",
+              "section": null,
+              "row": "Provision for income taxes",
+              "column": "2024",
+              "amount_column": 1,
+              "row_role": "labelled",
+              "table_xpath": "/html/body/div[512]/table",
+              "cell_xpath": "/html/body/div[512]/table/tr[23]/td[2]",
+              "logical_column_span": [
+                3,
+                6
+              ],
+              "xbrl_name": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_ref": "c-1",
+              "fact_id": "f-99",
+              "source_locator": "#f-99",
+              "unit_basis": "USD inline XBRL scale=6"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "apple-2024-10k:tax_expense:2023",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "tax_expense",
+              "value": "16741",
+              "raw_value": "16,741",
+              "year": 2023,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2022-09-25",
+              "end": "2023-09-30",
+              "fiscal_weeks": 53,
+              "page": null,
+              "printed_page": 29,
+              "table_id": "apple-p29",
+              "table_title": "Consolidated Statements of Operations",
+              "section": null,
+              "row": "Provision for income taxes",
+              "column": "2023",
+              "amount_column": 2,
+              "row_role": "labelled",
+              "table_xpath": "/html/body/div[512]/table",
+              "cell_xpath": "/html/body/div[512]/table/tr[23]/td[5]",
+              "logical_column_span": [
+                9,
+                12
+              ],
+              "xbrl_name": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_ref": "c-19",
+              "fact_id": "f-100",
+              "source_locator": "#f-100",
+              "unit_basis": "USD inline XBRL scale=6"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "apple-2024-10k:net_income:2024",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "net_income",
+              "value": "93736",
+              "raw_value": "93,736",
+              "year": 2024,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "fiscal_weeks": 52,
+              "page": null,
+              "printed_page": 29,
+              "table_id": "apple-p29",
+              "table_title": "Consolidated Statements of Operations",
+              "section": null,
+              "row": "Net income",
+              "column": "2024",
+              "amount_column": 1,
+              "row_role": "labelled",
+              "table_xpath": "/html/body/div[512]/table",
+              "cell_xpath": "/html/body/div[512]/table/tr[24]/td[3]",
+              "logical_column_span": [
+                3,
+                6
+              ],
+              "xbrl_name": "us-gaap:NetIncomeLoss",
+              "context_ref": "c-1",
+              "fact_id": "f-102",
+              "source_locator": "#f-102",
+              "unit_basis": "USD inline XBRL scale=6"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "apple-2024-10k:net_income:2023",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "net_income",
+              "value": "96995",
+              "raw_value": "96,995",
+              "year": 2023,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2022-09-25",
+              "end": "2023-09-30",
+              "fiscal_weeks": 53,
+              "page": null,
+              "printed_page": 29,
+              "table_id": "apple-p29",
+              "table_title": "Consolidated Statements of Operations",
+              "section": null,
+              "row": "Net income",
+              "column": "2023",
+              "amount_column": 2,
+              "row_role": "labelled",
+              "table_xpath": "/html/body/div[512]/table",
+              "cell_xpath": "/html/body/div[512]/table/tr[24]/td[7]",
+              "logical_column_span": [
+                9,
+                12
+              ],
+              "xbrl_name": "us-gaap:NetIncomeLoss",
+              "context_ref": "c-19",
+              "fact_id": "f-103",
+              "source_locator": "#f-103",
+              "unit_basis": "USD inline XBRL scale=6"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "apple-2024-10k:state_aid_tax:2024",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "state_aid_tax",
+              "value": "10246",
+              "raw_value": "10,246",
+              "year": 2024,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "fiscal_weeks": 52,
+              "page": null,
+              "printed_page": 40,
+              "table_id": "apple-p40",
+              "table_title": "Income tax reconciliation",
+              "section": null,
+              "row": "Impact of the State Aid Decision",
+              "column": "2024",
+              "amount_column": 1,
+              "row_role": "labelled",
+              "table_xpath": "/html/body/ix:continuation[11]/ix:nonnumeric[2]/div[2]/table",
+              "cell_xpath": "/html/body/ix:continuation[11]/ix:nonnumeric[2]/div[2]/table/tr[5]/td[2]",
+              "logical_column_span": [
+                3,
+                6
+              ],
+              "xbrl_name": "aapl:EffectiveIncomeTaxRateReconciliationImpactOfTheStateAidDecisionAmount",
+              "context_ref": "c-1",
+              "fact_id": "f-742",
+              "source_locator": "#f-742",
+              "unit_basis": "USD inline XBRL scale=6"
+            },
+            "role": "requested_evidence"
+          }
+        ],
+        "narratives": [
+          {
+            "id": "apple-2024-10k:text:fiscal_weeks",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "printed_page": 34,
+            "page": null,
+            "text": "The Company’s fiscal year is the 52- or 53-week period that ends on the last Saturday of September. An additional week is included in the first fiscal quarter every five or six years to realign the Company’s fiscal quarters with calendar quarters, which occurred in the first fiscal quarter of 2023. The Company’s fiscal years 2024 and 2022 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks. Unless otherwise stated, references to particular years, quarters, months and periods refer to the Company’s fiscal years ended in September and the associated quarters, months and periods of those fiscal years.",
+            "xpath": "/html/body/ix:continuation[1]/ix:nonnumeric[2]/div/span",
+            "key": "fiscal_weeks"
+          }
+        ],
+        "issues": [],
+        "messages": [],
+        "unknown_terms": [],
+        "blocked": false,
+        "operation": "tax_bridge",
+        "operation_label": "영업이익·법인세비용·순이익 변화 대조",
+        "execution": "deterministic_source_retrieval",
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7"
+      },
+      "review": {
+        "document_id": "apple-2024-10k",
+        "query": "영업이익이 늘었는데 순이익은 줄어든 이유를 법인세 수치로 일부 설명할 수 있나?",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": 2023,
+          "years_origin": "selected_document_comparative_columns",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "tax_bridge",
+        "operation_label": "영업이익·법인세비용·순이익 변화 대조",
+        "status": "verified",
+        "issues": [],
+        "messages": [],
+        "unknown_terms": [],
+        "warnings": [
+          "2024 회계연도는 52주, 2023 회계연도는 53주입니다. 아래는 보고금액 변화이며 같은 주수로 조정한 성장 비교가 아닙니다.",
+          "질문에 연도가 없어 선택 문서의 2023년 대비 2024년 열을 사용했습니다. 의도한 비교 연도인지 확인해 주세요."
+        ],
+        "values": {
+          "operating_profit_change": "8915",
+          "tax_expense_change": "13008",
+          "net_income_change": "-3259",
+          "state_aid_tax": "10246"
+        },
+        "formulas": [
+          {
+            "key": "operating_profit_change",
+            "formula": "FY2024 - FY2023",
+            "input_ids": [
+              "apple-2024-10k:operating_profit:2024",
+              "apple-2024-10k:operating_profit:2023"
+            ],
+            "unit": "USD_million"
+          },
+          {
+            "key": "tax_expense_change",
+            "formula": "FY2024 - FY2023",
+            "input_ids": [
+              "apple-2024-10k:tax_expense:2024",
+              "apple-2024-10k:tax_expense:2023"
+            ],
+            "unit": "USD_million"
+          },
+          {
+            "key": "net_income_change",
+            "formula": "FY2024 - FY2023",
+            "input_ids": [
+              "apple-2024-10k:net_income:2024",
+              "apple-2024-10k:net_income:2023"
+            ],
+            "unit": "USD_million"
+          },
+          {
+            "key": "state_aid_tax",
+            "formula": "reported tax reconciliation amount",
+            "input_ids": [
+              "apple-2024-10k:state_aid_tax:2024"
+            ],
+            "unit": "USD_million"
+          }
+        ],
+        "explanation": [
+          "2023년 대비 2024년 영업이익 변화 8915, 법인세비용 변화 13008, 순이익 변화 -3259백만 달러입니다. 국가보조금 결정의 세액조정 영향은 10246백만 달러입니다. 법인세비용 증가는 순이익 감소의 일부 설명 요인이며, 다른 세전 항목도 있으므로 유일한 원인으로 단정하지 않습니다. 법인세비용은 현금 납부액과 다릅니다."
+        ],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [
+          {
+            "id": "apple-2024-10k:operating_profit:2024",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "operating_profit",
+            "value": "123216",
+            "raw_value": "123,216",
+            "year": 2024,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "fiscal_weeks": 52,
+            "page": null,
+            "printed_page": 29,
+            "table_id": "apple-p29",
+            "table_title": "Consolidated Statements of Operations",
+            "section": null,
+            "row": "Operating income",
+            "column": "2024",
+            "amount_column": 1,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[512]/table",
+            "cell_xpath": "/html/body/div[512]/table/tr[20]/td[2]",
+            "logical_column_span": [
+              3,
+              6
+            ],
+            "xbrl_name": "us-gaap:OperatingIncomeLoss",
+            "context_ref": "c-1",
+            "fact_id": "f-90",
+            "source_locator": "#f-90",
+            "unit_basis": "USD inline XBRL scale=6"
+          },
+          {
+            "id": "apple-2024-10k:operating_profit:2023",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "operating_profit",
+            "value": "114301",
+            "raw_value": "114,301",
+            "year": 2023,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2022-09-25",
+            "end": "2023-09-30",
+            "fiscal_weeks": 53,
+            "page": null,
+            "printed_page": 29,
+            "table_id": "apple-p29",
+            "table_title": "Consolidated Statements of Operations",
+            "section": null,
+            "row": "Operating income",
+            "column": "2023",
+            "amount_column": 2,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[512]/table",
+            "cell_xpath": "/html/body/div[512]/table/tr[20]/td[5]",
+            "logical_column_span": [
+              9,
+              12
+            ],
+            "xbrl_name": "us-gaap:OperatingIncomeLoss",
+            "context_ref": "c-19",
+            "fact_id": "f-91",
+            "source_locator": "#f-91",
+            "unit_basis": "USD inline XBRL scale=6"
+          },
+          {
+            "id": "apple-2024-10k:tax_expense:2024",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "tax_expense",
+            "value": "29749",
+            "raw_value": "29,749",
+            "year": 2024,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "fiscal_weeks": 52,
+            "page": null,
+            "printed_page": 29,
+            "table_id": "apple-p29",
+            "table_title": "Consolidated Statements of Operations",
+            "section": null,
+            "row": "Provision for income taxes",
+            "column": "2024",
+            "amount_column": 1,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[512]/table",
+            "cell_xpath": "/html/body/div[512]/table/tr[23]/td[2]",
+            "logical_column_span": [
+              3,
+              6
+            ],
+            "xbrl_name": "us-gaap:IncomeTaxExpenseBenefit",
+            "context_ref": "c-1",
+            "fact_id": "f-99",
+            "source_locator": "#f-99",
+            "unit_basis": "USD inline XBRL scale=6"
+          },
+          {
+            "id": "apple-2024-10k:tax_expense:2023",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "tax_expense",
+            "value": "16741",
+            "raw_value": "16,741",
+            "year": 2023,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2022-09-25",
+            "end": "2023-09-30",
+            "fiscal_weeks": 53,
+            "page": null,
+            "printed_page": 29,
+            "table_id": "apple-p29",
+            "table_title": "Consolidated Statements of Operations",
+            "section": null,
+            "row": "Provision for income taxes",
+            "column": "2023",
+            "amount_column": 2,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[512]/table",
+            "cell_xpath": "/html/body/div[512]/table/tr[23]/td[5]",
+            "logical_column_span": [
+              9,
+              12
+            ],
+            "xbrl_name": "us-gaap:IncomeTaxExpenseBenefit",
+            "context_ref": "c-19",
+            "fact_id": "f-100",
+            "source_locator": "#f-100",
+            "unit_basis": "USD inline XBRL scale=6"
+          },
+          {
+            "id": "apple-2024-10k:net_income:2024",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "net_income",
+            "value": "93736",
+            "raw_value": "93,736",
+            "year": 2024,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "fiscal_weeks": 52,
+            "page": null,
+            "printed_page": 29,
+            "table_id": "apple-p29",
+            "table_title": "Consolidated Statements of Operations",
+            "section": null,
+            "row": "Net income",
+            "column": "2024",
+            "amount_column": 1,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[512]/table",
+            "cell_xpath": "/html/body/div[512]/table/tr[24]/td[3]",
+            "logical_column_span": [
+              3,
+              6
+            ],
+            "xbrl_name": "us-gaap:NetIncomeLoss",
+            "context_ref": "c-1",
+            "fact_id": "f-102",
+            "source_locator": "#f-102",
+            "unit_basis": "USD inline XBRL scale=6"
+          },
+          {
+            "id": "apple-2024-10k:net_income:2023",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "net_income",
+            "value": "96995",
+            "raw_value": "96,995",
+            "year": 2023,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2022-09-25",
+            "end": "2023-09-30",
+            "fiscal_weeks": 53,
+            "page": null,
+            "printed_page": 29,
+            "table_id": "apple-p29",
+            "table_title": "Consolidated Statements of Operations",
+            "section": null,
+            "row": "Net income",
+            "column": "2023",
+            "amount_column": 2,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[512]/table",
+            "cell_xpath": "/html/body/div[512]/table/tr[24]/td[7]",
+            "logical_column_span": [
+              9,
+              12
+            ],
+            "xbrl_name": "us-gaap:NetIncomeLoss",
+            "context_ref": "c-19",
+            "fact_id": "f-103",
+            "source_locator": "#f-103",
+            "unit_basis": "USD inline XBRL scale=6"
+          },
+          {
+            "id": "apple-2024-10k:state_aid_tax:2024",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "state_aid_tax",
+            "value": "10246",
+            "raw_value": "10,246",
+            "year": 2024,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "fiscal_weeks": 52,
+            "page": null,
+            "printed_page": 40,
+            "table_id": "apple-p40",
+            "table_title": "Income tax reconciliation",
+            "section": null,
+            "row": "Impact of the State Aid Decision",
+            "column": "2024",
+            "amount_column": 1,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/ix:continuation[11]/ix:nonnumeric[2]/div[2]/table",
+            "cell_xpath": "/html/body/ix:continuation[11]/ix:nonnumeric[2]/div[2]/table/tr[5]/td[2]",
+            "logical_column_span": [
+              3,
+              6
+            ],
+            "xbrl_name": "aapl:EffectiveIncomeTaxRateReconciliationImpactOfTheStateAidDecisionAmount",
+            "context_ref": "c-1",
+            "fact_id": "f-742",
+            "source_locator": "#f-742",
+            "unit_basis": "USD inline XBRL scale=6"
+          }
+        ],
+        "narratives": [
+          {
+            "id": "apple-2024-10k:text:fiscal_weeks",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "printed_page": 34,
+            "page": null,
+            "text": "The Company’s fiscal year is the 52- or 53-week period that ends on the last Saturday of September. An additional week is included in the first fiscal quarter every five or six years to realign the Company’s fiscal quarters with calendar quarters, which occurred in the first fiscal quarter of 2023. The Company’s fiscal years 2024 and 2022 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks. Unless otherwise stated, references to particular years, quarters, months and periods refer to the Company’s fiscal years ended in September and the associated quarters, months and periods of those fiscal years.",
+            "xpath": "/html/body/ix:continuation[1]/ix:nonnumeric[2]/div/span",
+            "key": "fiscal_weeks"
+          }
+        ],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "completed",
+            "evidence_ids": [
+              "apple-2024-10k:operating_profit:2024",
+              "apple-2024-10k:operating_profit:2023",
+              "apple-2024-10k:tax_expense:2024",
+              "apple-2024-10k:tax_expense:2023",
+              "apple-2024-10k:net_income:2024",
+              "apple-2024-10k:net_income:2023",
+              "apple-2024-10k:state_aid_tax:2024"
+            ]
+          },
+          {
+            "stage": "get_source_cell",
+            "status": "completed",
+            "evidence_ids": [
+              "apple-2024-10k:operating_profit:2024",
+              "apple-2024-10k:operating_profit:2023",
+              "apple-2024-10k:tax_expense:2024",
+              "apple-2024-10k:tax_expense:2023",
+              "apple-2024-10k:net_income:2024",
+              "apple-2024-10k:net_income:2023",
+              "apple-2024-10k:state_aid_tax:2024"
+            ]
+          },
+          {
+            "stage": "validate_source_context",
+            "status": "passed"
+          },
+          {
+            "stage": "calculate_or_withhold",
+            "status": "verified",
+            "operation": "tax_bridge"
+          }
+        ]
+      },
+      "latency_ms": 6.306,
+      "passed": true,
+      "rubric": "numeric exact match + expected decision + canonical evidence lookup; qualitative rules not human grading"
+    },
+    {
+      "id": "Q6",
+      "query": "2024년 재무제표의 제품 매출총이익률이 서비스보다 낮으니, 모든 개별 제품도 모든 개별 서비스보다 수익성이 낮다고 볼 수 있나?",
+      "search": {
+        "status": "evidence_candidates",
+        "answer_status": "not_calculated",
+        "calculated_answer": null,
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": null,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "hits": [
+          {
+            "cell": {
+              "id": "apple-2024-10k:products_sales:2024",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "products_sales",
+              "value": "294866",
+              "raw_value": "294,866",
+              "year": 2024,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "fiscal_weeks": 52,
+              "page": null,
+              "printed_page": 29,
+              "table_id": "apple-p29",
+              "table_title": "Consolidated Statements of Operations",
+              "section": "Net sales",
+              "row": "Products",
+              "column": "2024",
+              "amount_column": 1,
+              "row_role": "labelled",
+              "table_xpath": "/html/body/div[512]/table",
+              "cell_xpath": "/html/body/div[512]/table/tr[5]/td[3]",
+              "logical_column_span": [
+                3,
+                6
+              ],
+              "xbrl_name": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_ref": "c-13",
+              "fact_id": "f-60",
+              "source_locator": "#f-60",
+              "unit_basis": "USD inline XBRL scale=6"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "apple-2024-10k:services_sales:2024",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "services_sales",
+              "value": "96169",
+              "raw_value": "96,169",
+              "year": 2024,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "fiscal_weeks": 52,
+              "page": null,
+              "printed_page": 29,
+              "table_id": "apple-p29",
+              "table_title": "Consolidated Statements of Operations",
+              "section": "Net sales",
+              "row": "Services",
+              "column": "2024",
+              "amount_column": 1,
+              "row_role": "labelled",
+              "table_xpath": "/html/body/div[512]/table",
+              "cell_xpath": "/html/body/div[512]/table/tr[6]/td[2]",
+              "logical_column_span": [
+                3,
+                6
+              ],
+              "xbrl_name": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_ref": "c-16",
+              "fact_id": "f-63",
+              "source_locator": "#f-63",
+              "unit_basis": "USD inline XBRL scale=6"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "apple-2024-10k:products_cost:2024",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "products_cost",
+              "value": "185233",
+              "raw_value": "185,233",
+              "year": 2024,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "fiscal_weeks": 52,
+              "page": null,
+              "printed_page": 29,
+              "table_id": "apple-p29",
+              "table_title": "Consolidated Statements of Operations",
+              "section": "Cost of sales",
+              "row": "Products",
+              "column": "2024",
+              "amount_column": 1,
+              "row_role": "labelled",
+              "table_xpath": "/html/body/div[512]/table",
+              "cell_xpath": "/html/body/div[512]/table/tr[10]/td[2]",
+              "logical_column_span": [
+                3,
+                6
+              ],
+              "xbrl_name": "us-gaap:CostOfGoodsAndServicesSold",
+              "context_ref": "c-13",
+              "fact_id": "f-69",
+              "source_locator": "#f-69",
+              "unit_basis": "USD inline XBRL scale=6"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "apple-2024-10k:services_cost:2024",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "services_cost",
+              "value": "25119",
+              "raw_value": "25,119",
+              "year": 2024,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "fiscal_weeks": 52,
+              "page": null,
+              "printed_page": 29,
+              "table_id": "apple-p29",
+              "table_title": "Consolidated Statements of Operations",
+              "section": "Cost of sales",
+              "row": "Services",
+              "column": "2024",
+              "amount_column": 1,
+              "row_role": "labelled",
+              "table_xpath": "/html/body/div[512]/table",
+              "cell_xpath": "/html/body/div[512]/table/tr[11]/td[2]",
+              "logical_column_span": [
+                3,
+                6
+              ],
+              "xbrl_name": "us-gaap:CostOfGoodsAndServicesSold",
+              "context_ref": "c-16",
+              "fact_id": "f-72",
+              "source_locator": "#f-72",
+              "unit_basis": "USD inline XBRL scale=6"
+            },
+            "role": "requested_evidence"
+          }
+        ],
+        "narratives": [
+          {
+            "id": "apple-2024-10k:text:fiscal_weeks",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "printed_page": 34,
+            "page": null,
+            "text": "The Company’s fiscal year is the 52- or 53-week period that ends on the last Saturday of September. An additional week is included in the first fiscal quarter every five or six years to realign the Company’s fiscal quarters with calendar quarters, which occurred in the first fiscal quarter of 2023. The Company’s fiscal years 2024 and 2022 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks. Unless otherwise stated, references to particular years, quarters, months and periods refer to the Company’s fiscal years ended in September and the associated quarters, months and periods of those fiscal years.",
+            "xpath": "/html/body/ix:continuation[1]/ix:nonnumeric[2]/div/span",
+            "key": "fiscal_weeks"
+          }
+        ],
+        "issues": [],
+        "messages": [],
+        "unknown_terms": [],
+        "blocked": false,
+        "operation": "aggregate_limit",
+        "operation_label": "집계 수익성의 개별 항목 일반화 한계",
+        "execution": "deterministic_source_retrieval",
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7"
+      },
+      "review": {
+        "document_id": "apple-2024-10k",
+        "query": "2024년 재무제표의 제품 매출총이익률이 서비스보다 낮으니, 모든 개별 제품도 모든 개별 서비스보다 수익성이 낮다고 볼 수 있나?",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": null,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "aggregate_limit",
+        "operation_label": "집계 수익성의 개별 항목 일반화 한계",
+        "status": "needs_review",
+        "issues": [
+          "AGGREGATE_NOT_INDIVIDUAL"
+        ],
+        "messages": [
+          "집계 매출총이익률만으로 모든 개별 제품이 모든 개별 서비스보다 수익성이 낮다고 확정할 수 없습니다."
+        ],
+        "unknown_terms": [],
+        "warnings": [],
+        "values": {
+          "products_margin_pct": "37.1806",
+          "services_margin_pct": "73.8804"
+        },
+        "formulas": [
+          {
+            "key": "products_margin_pct",
+            "formula": "(sales - cost_of_sales) / sales * 100",
+            "input_ids": [
+              "apple-2024-10k:products_sales:2024",
+              "apple-2024-10k:products_cost:2024"
+            ],
+            "unit": "percent"
+          },
+          {
+            "key": "services_margin_pct",
+            "formula": "(sales - cost_of_sales) / sales * 100",
+            "input_ids": [
+              "apple-2024-10k:services_sales:2024",
+              "apple-2024-10k:services_cost:2024"
+            ],
+            "unit": "percent"
+          }
+        ],
+        "explanation": [
+          "2024 회계연도 제품 집계 매출총이익률은 37.1806%, 서비스 집계는 73.8804%입니다. 순이익률이나 개별 항목 수익성은 아닙니다.",
+          "집계 매출총이익률만으로 모든 개별 제품이 모든 개별 서비스보다 수익성이 낮다고 확정할 수 없습니다."
+        ],
+        "required_information": [
+          "개별 제품·서비스 매출과 직접 대응 원가",
+          "공통비 배분 기준"
+        ],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [
+          {
+            "id": "apple-2024-10k:products_sales:2024",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "products_sales",
+            "value": "294866",
+            "raw_value": "294,866",
+            "year": 2024,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "fiscal_weeks": 52,
+            "page": null,
+            "printed_page": 29,
+            "table_id": "apple-p29",
+            "table_title": "Consolidated Statements of Operations",
+            "section": "Net sales",
+            "row": "Products",
+            "column": "2024",
+            "amount_column": 1,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[512]/table",
+            "cell_xpath": "/html/body/div[512]/table/tr[5]/td[3]",
+            "logical_column_span": [
+              3,
+              6
+            ],
+            "xbrl_name": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "context_ref": "c-13",
+            "fact_id": "f-60",
+            "source_locator": "#f-60",
+            "unit_basis": "USD inline XBRL scale=6"
+          },
+          {
+            "id": "apple-2024-10k:services_sales:2024",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "services_sales",
+            "value": "96169",
+            "raw_value": "96,169",
+            "year": 2024,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "fiscal_weeks": 52,
+            "page": null,
+            "printed_page": 29,
+            "table_id": "apple-p29",
+            "table_title": "Consolidated Statements of Operations",
+            "section": "Net sales",
+            "row": "Services",
+            "column": "2024",
+            "amount_column": 1,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[512]/table",
+            "cell_xpath": "/html/body/div[512]/table/tr[6]/td[2]",
+            "logical_column_span": [
+              3,
+              6
+            ],
+            "xbrl_name": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "context_ref": "c-16",
+            "fact_id": "f-63",
+            "source_locator": "#f-63",
+            "unit_basis": "USD inline XBRL scale=6"
+          },
+          {
+            "id": "apple-2024-10k:products_cost:2024",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "products_cost",
+            "value": "185233",
+            "raw_value": "185,233",
+            "year": 2024,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "fiscal_weeks": 52,
+            "page": null,
+            "printed_page": 29,
+            "table_id": "apple-p29",
+            "table_title": "Consolidated Statements of Operations",
+            "section": "Cost of sales",
+            "row": "Products",
+            "column": "2024",
+            "amount_column": 1,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[512]/table",
+            "cell_xpath": "/html/body/div[512]/table/tr[10]/td[2]",
+            "logical_column_span": [
+              3,
+              6
+            ],
+            "xbrl_name": "us-gaap:CostOfGoodsAndServicesSold",
+            "context_ref": "c-13",
+            "fact_id": "f-69",
+            "source_locator": "#f-69",
+            "unit_basis": "USD inline XBRL scale=6"
+          },
+          {
+            "id": "apple-2024-10k:services_cost:2024",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "services_cost",
+            "value": "25119",
+            "raw_value": "25,119",
+            "year": 2024,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "fiscal_weeks": 52,
+            "page": null,
+            "printed_page": 29,
+            "table_id": "apple-p29",
+            "table_title": "Consolidated Statements of Operations",
+            "section": "Cost of sales",
+            "row": "Services",
+            "column": "2024",
+            "amount_column": 1,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[512]/table",
+            "cell_xpath": "/html/body/div[512]/table/tr[11]/td[2]",
+            "logical_column_span": [
+              3,
+              6
+            ],
+            "xbrl_name": "us-gaap:CostOfGoodsAndServicesSold",
+            "context_ref": "c-16",
+            "fact_id": "f-72",
+            "source_locator": "#f-72",
+            "unit_basis": "USD inline XBRL scale=6"
+          }
+        ],
+        "narratives": [
+          {
+            "id": "apple-2024-10k:text:fiscal_weeks",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "printed_page": 34,
+            "page": null,
+            "text": "The Company’s fiscal year is the 52- or 53-week period that ends on the last Saturday of September. An additional week is included in the first fiscal quarter every five or six years to realign the Company’s fiscal quarters with calendar quarters, which occurred in the first fiscal quarter of 2023. The Company’s fiscal years 2024 and 2022 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks. Unless otherwise stated, references to particular years, quarters, months and periods refer to the Company’s fiscal years ended in September and the associated quarters, months and periods of those fiscal years.",
+            "xpath": "/html/body/ix:continuation[1]/ix:nonnumeric[2]/div/span",
+            "key": "fiscal_weeks"
+          }
+        ],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "completed",
+            "evidence_ids": [
+              "apple-2024-10k:products_sales:2024",
+              "apple-2024-10k:services_sales:2024",
+              "apple-2024-10k:products_cost:2024",
+              "apple-2024-10k:services_cost:2024"
+            ]
+          },
+          {
+            "stage": "get_source_cell",
+            "status": "completed",
+            "evidence_ids": [
+              "apple-2024-10k:products_sales:2024",
+              "apple-2024-10k:services_sales:2024",
+              "apple-2024-10k:products_cost:2024",
+              "apple-2024-10k:services_cost:2024"
+            ]
+          },
+          {
+            "stage": "validate_source_context",
+            "status": "passed"
+          },
+          {
+            "stage": "calculate_or_withhold",
+            "status": "needs_review",
+            "operation": "aggregate_limit"
+          }
+        ]
+      },
+      "latency_ms": 5.59,
+      "passed": true,
+      "rubric": "numeric exact match + expected decision + canonical evidence lookup; qualitative rules not human grading"
+    },
+    {
+      "id": "Q7",
+      "query": "2024년 중국권 매출 감소는 판매량 감소만으로 설명할 수 있나?",
+      "search": {
+        "status": "evidence_candidates",
+        "answer_status": "not_calculated",
+        "calculated_answer": null,
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": 2023,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "hits": [
+          {
+            "cell": {
+              "id": "apple-2024-10k:china_sales:2024",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "china_sales",
+              "value": "66952",
+              "raw_value": "66,952",
+              "year": 2024,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2023-10-01",
+              "end": "2024-09-28",
+              "fiscal_weeks": 52,
+              "page": null,
+              "printed_page": 22,
+              "table_id": "apple-p22",
+              "table_title": "Net sales by reportable segment",
+              "section": null,
+              "row": "Greater China",
+              "column": "2024",
+              "amount_column": 1,
+              "row_role": "labelled",
+              "table_xpath": "/html/body/div[380]/table",
+              "cell_xpath": "/html/body/div[380]/table/tr[5]/td[2]",
+              "logical_column_span": [
+                3,
+                6
+              ],
+              "xbrl_name": null,
+              "context_ref": null,
+              "fact_id": null,
+              "source_locator": "",
+              "unit_basis": "regional table introduction: dollars in millions"
+            },
+            "role": "requested_evidence"
+          },
+          {
+            "cell": {
+              "id": "apple-2024-10k:china_sales:2023",
+              "document_id": "apple-2024-10k",
+              "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+              "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+              "source_format": "SEC_HTML",
+              "company": "apple",
+              "scope": "CFS",
+              "currency": "USD",
+              "scale": 1000000,
+              "metric": "china_sales",
+              "value": "72559",
+              "raw_value": "72,559",
+              "year": 2023,
+              "period_kind": "duration",
+              "as_of": null,
+              "start": "2022-09-25",
+              "end": "2023-09-30",
+              "fiscal_weeks": 53,
+              "page": null,
+              "printed_page": 22,
+              "table_id": "apple-p22",
+              "table_title": "Net sales by reportable segment",
+              "section": null,
+              "row": "Greater China",
+              "column": "2023",
+              "amount_column": 2,
+              "row_role": "labelled",
+              "table_xpath": "/html/body/div[380]/table",
+              "cell_xpath": "/html/body/div[380]/table/tr[5]/td[8]",
+              "logical_column_span": [
+                15,
+                18
+              ],
+              "xbrl_name": null,
+              "context_ref": null,
+              "fact_id": null,
+              "source_locator": "",
+              "unit_basis": "regional table introduction: dollars in millions"
+            },
+            "role": "requested_evidence"
+          }
+        ],
+        "narratives": [
+          {
+            "id": "apple-2024-10k:text:fiscal_weeks",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "printed_page": 34,
+            "page": null,
+            "text": "The Company’s fiscal year is the 52- or 53-week period that ends on the last Saturday of September. An additional week is included in the first fiscal quarter every five or six years to realign the Company’s fiscal quarters with calendar quarters, which occurred in the first fiscal quarter of 2023. The Company’s fiscal years 2024 and 2022 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks. Unless otherwise stated, references to particular years, quarters, months and periods refer to the Company’s fiscal years ended in September and the associated quarters, months and periods of those fiscal years.",
+            "xpath": "/html/body/ix:continuation[1]/ix:nonnumeric[2]/div/span",
+            "key": "fiscal_weeks"
+          },
+          {
+            "id": "apple-2024-10k:text:china_drivers",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "printed_page": 22,
+            "page": null,
+            "text": "Greater China net sales decreased during 2024 compared to 2023 due primarily to lower net sales of iPhone and iPad. The weakness in the renminbi relative to the U.S. dollar had an unfavorable year-over-year impact on Greater China net sales during 2024.",
+            "xpath": "/html/body/div[389]/span",
+            "key": "china_drivers"
+          }
+        ],
+        "issues": [],
+        "messages": [],
+        "unknown_terms": [],
+        "blocked": false,
+        "operation": "china_causality",
+        "operation_label": "중국권 매출 감소의 판매량 단독 원인 판단",
+        "execution": "deterministic_source_retrieval",
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7"
+      },
+      "review": {
+        "document_id": "apple-2024-10k",
+        "query": "2024년 중국권 매출 감소는 판매량 감소만으로 설명할 수 있나?",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": 2023,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "china_causality",
+        "operation_label": "중국권 매출 감소의 판매량 단독 원인 판단",
+        "status": "needs_review",
+        "issues": [
+          "CAUSAL_DECOMPOSITION_REQUIRED"
+        ],
+        "messages": [
+          "중국권 매출 감소를 판매량 감소만으로 설명할 수 없습니다. 원문은 제품 매출 감소와 환율 영향을 함께 언급하며 요인별 기여도를 제공하지 않습니다."
+        ],
+        "unknown_terms": [],
+        "warnings": [
+          "2024 회계연도는 52주, 2023 회계연도는 53주입니다. 아래는 보고금액 변화이며 같은 주수로 조정한 성장 비교가 아닙니다."
+        ],
+        "values": {},
+        "formulas": [],
+        "explanation": [
+          "중국권 매출 감소를 판매량 감소만으로 설명할 수 없습니다. 원문은 제품 매출 감소와 환율 영향을 함께 언급하며 요인별 기여도를 제공하지 않습니다."
+        ],
+        "required_information": [
+          "판매량·판매가격·제품 구성·환율 효과별 기여도"
+        ],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [
+          {
+            "id": "apple-2024-10k:china_sales:2024",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "china_sales",
+            "value": "66952",
+            "raw_value": "66,952",
+            "year": 2024,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "fiscal_weeks": 52,
+            "page": null,
+            "printed_page": 22,
+            "table_id": "apple-p22",
+            "table_title": "Net sales by reportable segment",
+            "section": null,
+            "row": "Greater China",
+            "column": "2024",
+            "amount_column": 1,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[380]/table",
+            "cell_xpath": "/html/body/div[380]/table/tr[5]/td[2]",
+            "logical_column_span": [
+              3,
+              6
+            ],
+            "xbrl_name": null,
+            "context_ref": null,
+            "fact_id": null,
+            "source_locator": "",
+            "unit_basis": "regional table introduction: dollars in millions"
+          },
+          {
+            "id": "apple-2024-10k:china_sales:2023",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "china_sales",
+            "value": "72559",
+            "raw_value": "72,559",
+            "year": 2023,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2022-09-25",
+            "end": "2023-09-30",
+            "fiscal_weeks": 53,
+            "page": null,
+            "printed_page": 22,
+            "table_id": "apple-p22",
+            "table_title": "Net sales by reportable segment",
+            "section": null,
+            "row": "Greater China",
+            "column": "2023",
+            "amount_column": 2,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[380]/table",
+            "cell_xpath": "/html/body/div[380]/table/tr[5]/td[8]",
+            "logical_column_span": [
+              15,
+              18
+            ],
+            "xbrl_name": null,
+            "context_ref": null,
+            "fact_id": null,
+            "source_locator": "",
+            "unit_basis": "regional table introduction: dollars in millions"
+          }
+        ],
+        "narratives": [
+          {
+            "id": "apple-2024-10k:text:fiscal_weeks",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "printed_page": 34,
+            "page": null,
+            "text": "The Company’s fiscal year is the 52- or 53-week period that ends on the last Saturday of September. An additional week is included in the first fiscal quarter every five or six years to realign the Company’s fiscal quarters with calendar quarters, which occurred in the first fiscal quarter of 2023. The Company’s fiscal years 2024 and 2022 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks. Unless otherwise stated, references to particular years, quarters, months and periods refer to the Company’s fiscal years ended in September and the associated quarters, months and periods of those fiscal years.",
+            "xpath": "/html/body/ix:continuation[1]/ix:nonnumeric[2]/div/span",
+            "key": "fiscal_weeks"
+          },
+          {
+            "id": "apple-2024-10k:text:china_drivers",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "printed_page": 22,
+            "page": null,
+            "text": "Greater China net sales decreased during 2024 compared to 2023 due primarily to lower net sales of iPhone and iPad. The weakness in the renminbi relative to the U.S. dollar had an unfavorable year-over-year impact on Greater China net sales during 2024.",
+            "xpath": "/html/body/div[389]/span",
+            "key": "china_drivers"
+          }
+        ],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "completed",
+            "evidence_ids": [
+              "apple-2024-10k:china_sales:2024",
+              "apple-2024-10k:china_sales:2023"
+            ]
+          },
+          {
+            "stage": "get_source_cell",
+            "status": "completed",
+            "evidence_ids": [
+              "apple-2024-10k:china_sales:2024",
+              "apple-2024-10k:china_sales:2023"
+            ]
+          },
+          {
+            "stage": "validate_source_context",
+            "status": "passed"
+          },
+          {
+            "stage": "calculate_or_withhold",
+            "status": "needs_review",
+            "operation": "china_causality"
+          }
+        ]
+      },
+      "latency_ms": 4.917,
+      "passed": true,
+      "rubric": "numeric exact match + expected decision + canonical evidence lookup; qualitative rules not human grading"
+    }
+  ],
+  "passed": 7,
+  "total": 7,
+  "synthetic_variations": [
+    {
+      "query": "2023 products services gross margin",
+      "expected_status": "verified",
+      "actual": {
+        "document_id": "apple-2024-10k",
+        "query": "2023 products services gross margin",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2023,
+          "base_year": null,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "gross_margin",
+        "operation_label": "제품·서비스 매출총이익률",
+        "status": "verified",
+        "issues": [],
+        "messages": [],
+        "unknown_terms": [],
+        "warnings": [],
+        "values": {
+          "products_margin_pct": "36.5007",
+          "services_margin_pct": "70.8275"
+        },
+        "formulas": [
+          {
+            "key": "products_margin_pct",
+            "formula": "(sales - cost_of_sales) / sales * 100",
+            "input_ids": [
+              "apple-2024-10k:products_sales:2023",
+              "apple-2024-10k:products_cost:2023"
+            ],
+            "unit": "percent"
+          },
+          {
+            "key": "services_margin_pct",
+            "formula": "(sales - cost_of_sales) / sales * 100",
+            "input_ids": [
+              "apple-2024-10k:services_sales:2023",
+              "apple-2024-10k:services_cost:2023"
+            ],
+            "unit": "percent"
+          }
+        ],
+        "explanation": [
+          "2023 회계연도 제품 집계 매출총이익률은 36.5007%, 서비스 집계는 70.8275%입니다. 순이익률이나 개별 항목 수익성은 아닙니다."
+        ],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [
+          {
+            "id": "apple-2024-10k:products_sales:2023",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "products_sales",
+            "value": "298085",
+            "raw_value": "298,085",
+            "year": 2023,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2022-09-25",
+            "end": "2023-09-30",
+            "fiscal_weeks": 53,
+            "page": null,
+            "printed_page": 29,
+            "table_id": "apple-p29",
+            "table_title": "Consolidated Statements of Operations",
+            "section": "Net sales",
+            "row": "Products",
+            "column": "2023",
+            "amount_column": 2,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[512]/table",
+            "cell_xpath": "/html/body/div[512]/table/tr[5]/td[7]",
+            "logical_column_span": [
+              9,
+              12
+            ],
+            "xbrl_name": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "context_ref": "c-14",
+            "fact_id": "f-61",
+            "source_locator": "#f-61",
+            "unit_basis": "USD inline XBRL scale=6"
+          },
+          {
+            "id": "apple-2024-10k:services_sales:2023",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "services_sales",
+            "value": "85200",
+            "raw_value": "85,200",
+            "year": 2023,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2022-09-25",
+            "end": "2023-09-30",
+            "fiscal_weeks": 53,
+            "page": null,
+            "printed_page": 29,
+            "table_id": "apple-p29",
+            "table_title": "Consolidated Statements of Operations",
+            "section": "Net sales",
+            "row": "Services",
+            "column": "2023",
+            "amount_column": 2,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[512]/table",
+            "cell_xpath": "/html/body/div[512]/table/tr[6]/td[5]",
+            "logical_column_span": [
+              9,
+              12
+            ],
+            "xbrl_name": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "context_ref": "c-17",
+            "fact_id": "f-64",
+            "source_locator": "#f-64",
+            "unit_basis": "USD inline XBRL scale=6"
+          },
+          {
+            "id": "apple-2024-10k:products_cost:2023",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "products_cost",
+            "value": "189282",
+            "raw_value": "189,282",
+            "year": 2023,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2022-09-25",
+            "end": "2023-09-30",
+            "fiscal_weeks": 53,
+            "page": null,
+            "printed_page": 29,
+            "table_id": "apple-p29",
+            "table_title": "Consolidated Statements of Operations",
+            "section": "Cost of sales",
+            "row": "Products",
+            "column": "2023",
+            "amount_column": 2,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[512]/table",
+            "cell_xpath": "/html/body/div[512]/table/tr[10]/td[5]",
+            "logical_column_span": [
+              9,
+              12
+            ],
+            "xbrl_name": "us-gaap:CostOfGoodsAndServicesSold",
+            "context_ref": "c-14",
+            "fact_id": "f-70",
+            "source_locator": "#f-70",
+            "unit_basis": "USD inline XBRL scale=6"
+          },
+          {
+            "id": "apple-2024-10k:services_cost:2023",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "services_cost",
+            "value": "24855",
+            "raw_value": "24,855",
+            "year": 2023,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2022-09-25",
+            "end": "2023-09-30",
+            "fiscal_weeks": 53,
+            "page": null,
+            "printed_page": 29,
+            "table_id": "apple-p29",
+            "table_title": "Consolidated Statements of Operations",
+            "section": "Cost of sales",
+            "row": "Services",
+            "column": "2023",
+            "amount_column": 2,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[512]/table",
+            "cell_xpath": "/html/body/div[512]/table/tr[11]/td[5]",
+            "logical_column_span": [
+              9,
+              12
+            ],
+            "xbrl_name": "us-gaap:CostOfGoodsAndServicesSold",
+            "context_ref": "c-17",
+            "fact_id": "f-73",
+            "source_locator": "#f-73",
+            "unit_basis": "USD inline XBRL scale=6"
+          }
+        ],
+        "narratives": [
+          {
+            "id": "apple-2024-10k:text:fiscal_weeks",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "printed_page": 34,
+            "page": null,
+            "text": "The Company’s fiscal year is the 52- or 53-week period that ends on the last Saturday of September. An additional week is included in the first fiscal quarter every five or six years to realign the Company’s fiscal quarters with calendar quarters, which occurred in the first fiscal quarter of 2023. The Company’s fiscal years 2024 and 2022 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks. Unless otherwise stated, references to particular years, quarters, months and periods refer to the Company’s fiscal years ended in September and the associated quarters, months and periods of those fiscal years.",
+            "xpath": "/html/body/ix:continuation[1]/ix:nonnumeric[2]/div/span",
+            "key": "fiscal_weeks"
+          }
+        ],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "completed",
+            "evidence_ids": [
+              "apple-2024-10k:products_sales:2023",
+              "apple-2024-10k:services_sales:2023",
+              "apple-2024-10k:products_cost:2023",
+              "apple-2024-10k:services_cost:2023"
+            ]
+          },
+          {
+            "stage": "get_source_cell",
+            "status": "completed",
+            "evidence_ids": [
+              "apple-2024-10k:products_sales:2023",
+              "apple-2024-10k:services_sales:2023",
+              "apple-2024-10k:products_cost:2023",
+              "apple-2024-10k:services_cost:2023"
+            ]
+          },
+          {
+            "stage": "validate_source_context",
+            "status": "passed"
+          },
+          {
+            "stage": "calculate_or_withhold",
+            "status": "verified",
+            "operation": "gross_margin"
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "query": "2024 operating cash flow minus capex",
+      "expected_status": "verified",
+      "actual": {
+        "document_id": "apple-2024-10k",
+        "query": "2024 operating cash flow minus capex",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": null,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "operating_cash_less_capex",
+        "operation_label": "영업현금흐름에서 유형자산 취득 지출 차감",
+        "status": "needs_review",
+        "issues": [
+          "UNSUPPORTED_TERMS"
+        ],
+        "messages": [
+          "해석하지 못한 표현이 있어 계산을 보류했습니다. 지원 작업과 조건을 확인해 주세요."
+        ],
+        "unknown_terms": [
+          "minus"
+        ],
+        "warnings": [],
+        "values": {},
+        "formulas": [],
+        "explanation": [],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [],
+        "narratives": [],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "blocked",
+            "evidence_ids": []
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "query": "2024 buyback spending increase",
+      "expected_status": "verified",
+      "actual": {
+        "document_id": "apple-2024-10k",
+        "query": "2024 buyback spending increase",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": 2023,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "buyback_change",
+        "operation_label": "자사주 매입 지출액 변화",
+        "status": "needs_review",
+        "issues": [
+          "UNSUPPORTED_TERMS"
+        ],
+        "messages": [
+          "해석하지 못한 표현이 있어 계산을 보류했습니다. 지원 작업과 조건을 확인해 주세요."
+        ],
+        "unknown_terms": [
+          "increase"
+        ],
+        "warnings": [],
+        "values": {},
+        "formulas": [],
+        "explanation": [],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [],
+        "narratives": [],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "blocked",
+            "evidence_ids": []
+          }
+        ]
+      },
+      "passed": false
+    },
+    {
+      "query": "2024 greater china sales decline volume only",
+      "expected_status": "needs_review",
+      "actual": {
+        "document_id": "apple-2024-10k",
+        "query": "2024 greater china sales decline volume only",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": 2023,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "china_causality",
+        "operation_label": "중국권 매출 감소의 판매량 단독 원인 판단",
+        "status": "needs_review",
+        "issues": [
+          "CAUSAL_DECOMPOSITION_REQUIRED"
+        ],
+        "messages": [
+          "중국권 매출 감소를 판매량 감소만으로 설명할 수 없습니다. 원문은 제품 매출 감소와 환율 영향을 함께 언급하며 요인별 기여도를 제공하지 않습니다."
+        ],
+        "unknown_terms": [],
+        "warnings": [
+          "2024 회계연도는 52주, 2023 회계연도는 53주입니다. 아래는 보고금액 변화이며 같은 주수로 조정한 성장 비교가 아닙니다."
+        ],
+        "values": {},
+        "formulas": [],
+        "explanation": [
+          "중국권 매출 감소를 판매량 감소만으로 설명할 수 없습니다. 원문은 제품 매출 감소와 환율 영향을 함께 언급하며 요인별 기여도를 제공하지 않습니다."
+        ],
+        "required_information": [
+          "판매량·판매가격·제품 구성·환율 효과별 기여도"
+        ],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [
+          {
+            "id": "apple-2024-10k:china_sales:2024",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "china_sales",
+            "value": "66952",
+            "raw_value": "66,952",
+            "year": 2024,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2023-10-01",
+            "end": "2024-09-28",
+            "fiscal_weeks": 52,
+            "page": null,
+            "printed_page": 22,
+            "table_id": "apple-p22",
+            "table_title": "Net sales by reportable segment",
+            "section": null,
+            "row": "Greater China",
+            "column": "2024",
+            "amount_column": 1,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[380]/table",
+            "cell_xpath": "/html/body/div[380]/table/tr[5]/td[2]",
+            "logical_column_span": [
+              3,
+              6
+            ],
+            "xbrl_name": null,
+            "context_ref": null,
+            "fact_id": null,
+            "source_locator": "",
+            "unit_basis": "regional table introduction: dollars in millions"
+          },
+          {
+            "id": "apple-2024-10k:china_sales:2023",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "company": "apple",
+            "scope": "CFS",
+            "currency": "USD",
+            "scale": 1000000,
+            "metric": "china_sales",
+            "value": "72559",
+            "raw_value": "72,559",
+            "year": 2023,
+            "period_kind": "duration",
+            "as_of": null,
+            "start": "2022-09-25",
+            "end": "2023-09-30",
+            "fiscal_weeks": 53,
+            "page": null,
+            "printed_page": 22,
+            "table_id": "apple-p22",
+            "table_title": "Net sales by reportable segment",
+            "section": null,
+            "row": "Greater China",
+            "column": "2023",
+            "amount_column": 2,
+            "row_role": "labelled",
+            "table_xpath": "/html/body/div[380]/table",
+            "cell_xpath": "/html/body/div[380]/table/tr[5]/td[8]",
+            "logical_column_span": [
+              15,
+              18
+            ],
+            "xbrl_name": null,
+            "context_ref": null,
+            "fact_id": null,
+            "source_locator": "",
+            "unit_basis": "regional table introduction: dollars in millions"
+          }
+        ],
+        "narratives": [
+          {
+            "id": "apple-2024-10k:text:fiscal_weeks",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "printed_page": 34,
+            "page": null,
+            "text": "The Company’s fiscal year is the 52- or 53-week period that ends on the last Saturday of September. An additional week is included in the first fiscal quarter every five or six years to realign the Company’s fiscal quarters with calendar quarters, which occurred in the first fiscal quarter of 2023. The Company’s fiscal years 2024 and 2022 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks. Unless otherwise stated, references to particular years, quarters, months and periods refer to the Company’s fiscal years ended in September and the associated quarters, months and periods of those fiscal years.",
+            "xpath": "/html/body/ix:continuation[1]/ix:nonnumeric[2]/div/span",
+            "key": "fiscal_weeks"
+          },
+          {
+            "id": "apple-2024-10k:text:china_drivers",
+            "document_id": "apple-2024-10k",
+            "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+            "source_format": "SEC_HTML",
+            "printed_page": 22,
+            "page": null,
+            "text": "Greater China net sales decreased during 2024 compared to 2023 due primarily to lower net sales of iPhone and iPad. The weakness in the renminbi relative to the U.S. dollar had an unfavorable year-over-year impact on Greater China net sales during 2024.",
+            "xpath": "/html/body/div[389]/span",
+            "key": "china_drivers"
+          }
+        ],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "completed",
+            "evidence_ids": [
+              "apple-2024-10k:china_sales:2024",
+              "apple-2024-10k:china_sales:2023"
+            ]
+          },
+          {
+            "stage": "get_source_cell",
+            "status": "completed",
+            "evidence_ids": [
+              "apple-2024-10k:china_sales:2024",
+              "apple-2024-10k:china_sales:2023"
+            ]
+          },
+          {
+            "stage": "validate_source_context",
+            "status": "passed"
+          },
+          {
+            "stage": "calculate_or_withhold",
+            "status": "needs_review",
+            "operation": "china_causality"
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "query": "2024 products services gross margin adjusted",
+      "expected_status": "needs_review",
+      "actual": {
+        "document_id": "apple-2024-10k",
+        "query": "2024 products services gross margin adjusted",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": null,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "gross_margin",
+        "operation_label": "제품·서비스 매출총이익률",
+        "status": "needs_review",
+        "issues": [
+          "UNSUPPORTED_CONTEXT",
+          "UNSUPPORTED_TERMS"
+        ],
+        "messages": [
+          "선택 문서는 Apple의 2024·2023 회계연도 연결·USD·백만 달러 자료입니다. 다른 기업·기간·범위·단위 조건은 지원하지 않습니다.",
+          "해석하지 못한 표현이 있어 계산을 보류했습니다. 지원 작업과 조건을 확인해 주세요."
+        ],
+        "unknown_terms": [
+          "adjusted"
+        ],
+        "warnings": [],
+        "values": {},
+        "formulas": [],
+        "explanation": [],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [],
+        "narratives": [],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "blocked",
+            "evidence_ids": []
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "query": "2024 products services gross margin KRW",
+      "expected_status": "needs_review",
+      "actual": {
+        "document_id": "apple-2024-10k",
+        "query": "2024 products services gross margin KRW",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": null,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "gross_margin",
+        "operation_label": "제품·서비스 매출총이익률",
+        "status": "needs_review",
+        "issues": [
+          "UNSUPPORTED_CONTEXT",
+          "UNSUPPORTED_TERMS"
+        ],
+        "messages": [
+          "선택 문서는 Apple의 2024·2023 회계연도 연결·USD·백만 달러 자료입니다. 다른 기업·기간·범위·단위 조건은 지원하지 않습니다.",
+          "해석하지 못한 표현이 있어 계산을 보류했습니다. 지원 작업과 조건을 확인해 주세요."
+        ],
+        "unknown_terms": [
+          "krw"
+        ],
+        "warnings": [],
+        "values": {},
+        "formulas": [],
+        "explanation": [],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [],
+        "narratives": [],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "blocked",
+            "evidence_ids": []
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "query": "2024 products services gross margin separate",
+      "expected_status": "needs_review",
+      "actual": {
+        "document_id": "apple-2024-10k",
+        "query": "2024 products services gross margin separate",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": null,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "gross_margin",
+        "operation_label": "제품·서비스 매출총이익률",
+        "status": "needs_review",
+        "issues": [
+          "UNSUPPORTED_CONTEXT",
+          "UNSUPPORTED_TERMS"
+        ],
+        "messages": [
+          "선택 문서는 Apple의 2024·2023 회계연도 연결·USD·백만 달러 자료입니다. 다른 기업·기간·범위·단위 조건은 지원하지 않습니다.",
+          "해석하지 못한 표현이 있어 계산을 보류했습니다. 지원 작업과 조건을 확인해 주세요."
+        ],
+        "unknown_terms": [
+          "separate"
+        ],
+        "warnings": [],
+        "values": {},
+        "formulas": [],
+        "explanation": [],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [],
+        "narratives": [],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "blocked",
+            "evidence_ids": []
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "query": "2025 products services gross margin",
+      "expected_status": "needs_review",
+      "actual": {
+        "document_id": "apple-2024-10k",
+        "query": "2025 products services gross margin",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2025,
+          "base_year": null,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "gross_margin",
+        "operation_label": "제품·서비스 매출총이익률",
+        "status": "needs_review",
+        "issues": [
+          "UNSUPPORTED_CONTEXT"
+        ],
+        "messages": [
+          "선택 문서는 Apple의 2024·2023 회계연도 연결·USD·백만 달러 자료입니다. 다른 기업·기간·범위·단위 조건은 지원하지 않습니다."
+        ],
+        "unknown_terms": [],
+        "warnings": [],
+        "values": {},
+        "formulas": [],
+        "explanation": [],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [],
+        "narratives": [],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "blocked",
+            "evidence_ids": []
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "query": "2024 products services gross margin quarter",
+      "expected_status": "needs_review",
+      "actual": {
+        "document_id": "apple-2024-10k",
+        "query": "2024 products services gross margin quarter",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": null,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "gross_margin",
+        "operation_label": "제품·서비스 매출총이익률",
+        "status": "needs_review",
+        "issues": [
+          "UNSUPPORTED_CONTEXT",
+          "UNSUPPORTED_TERMS"
+        ],
+        "messages": [
+          "선택 문서는 Apple의 2024·2023 회계연도 연결·USD·백만 달러 자료입니다. 다른 기업·기간·범위·단위 조건은 지원하지 않습니다.",
+          "해석하지 못한 표현이 있어 계산을 보류했습니다. 지원 작업과 조건을 확인해 주세요."
+        ],
+        "unknown_terms": [
+          "quarter"
+        ],
+        "warnings": [],
+        "values": {},
+        "formulas": [],
+        "explanation": [],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [],
+        "narratives": [],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "blocked",
+            "evidence_ids": []
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "query": "products services gross margin",
+      "expected_status": "needs_review",
+      "actual": {
+        "document_id": "apple-2024-10k",
+        "query": "products services gross margin",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": null,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "gross_margin",
+        "operation_label": "제품·서비스 매출총이익률",
+        "status": "needs_review",
+        "issues": [
+          "YEAR_REQUIRED"
+        ],
+        "messages": [
+          "2024 또는 2023 회계연도를 명시해 주세요."
+        ],
+        "unknown_terms": [],
+        "warnings": [],
+        "values": {},
+        "formulas": [],
+        "explanation": [],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [],
+        "narratives": [],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "blocked",
+            "evidence_ids": []
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "query": "2024 products services gross margin forecast",
+      "expected_status": "needs_review",
+      "actual": {
+        "document_id": "apple-2024-10k",
+        "query": "2024 products services gross margin forecast",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": null,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "gross_margin",
+        "operation_label": "제품·서비스 매출총이익률",
+        "status": "needs_review",
+        "issues": [
+          "UNSUPPORTED_CONTEXT",
+          "UNSUPPORTED_TERMS"
+        ],
+        "messages": [
+          "선택 문서는 Apple의 2024·2023 회계연도 연결·USD·백만 달러 자료입니다. 다른 기업·기간·범위·단위 조건은 지원하지 않습니다.",
+          "해석하지 못한 표현이 있어 계산을 보류했습니다. 지원 작업과 조건을 확인해 주세요."
+        ],
+        "unknown_terms": [
+          "forecast"
+        ],
+        "warnings": [],
+        "values": {},
+        "formulas": [],
+        "explanation": [],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [],
+        "narratives": [],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "blocked",
+            "evidence_ids": []
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "query": "2024 products services gross margin not services",
+      "expected_status": "needs_review",
+      "actual": {
+        "document_id": "apple-2024-10k",
+        "query": "2024 products services gross margin not services",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": null,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "gross_margin",
+        "operation_label": "제품·서비스 매출총이익률",
+        "status": "needs_review",
+        "issues": [
+          "UNSUPPORTED_CONTEXT",
+          "UNSUPPORTED_TERMS"
+        ],
+        "messages": [
+          "선택 문서는 Apple의 2024·2023 회계연도 연결·USD·백만 달러 자료입니다. 다른 기업·기간·범위·단위 조건은 지원하지 않습니다.",
+          "해석하지 못한 표현이 있어 계산을 보류했습니다. 지원 작업과 조건을 확인해 주세요."
+        ],
+        "unknown_terms": [
+          "not"
+        ],
+        "warnings": [],
+        "values": {},
+        "formulas": [],
+        "explanation": [],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [],
+        "narratives": [],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "blocked",
+            "evidence_ids": []
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "query": "2023년 자사주 매입에 쓴 현금은 2024년보다 얼마나 늘었나?",
+      "expected_status": "needs_review",
+      "actual": {
+        "document_id": "apple-2024-10k",
+        "query": "2023년 자사주 매입에 쓴 현금은 2024년보다 얼마나 늘었나?",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": 2023,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "buyback_change",
+        "operation_label": "자사주 매입 지출액 변화",
+        "status": "needs_review",
+        "issues": [
+          "YEAR_DIRECTION_REQUIRED"
+        ],
+        "messages": [
+          "비교 방향을 확정할 수 없습니다. 2023년 대비 2024년의 변화를 지정해 주세요."
+        ],
+        "unknown_terms": [],
+        "warnings": [],
+        "values": {},
+        "formulas": [],
+        "explanation": [],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [],
+        "narratives": [],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "blocked",
+            "evidence_ids": []
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "query": "2023 buyback spending increase versus 2024",
+      "expected_status": "needs_review",
+      "actual": {
+        "document_id": "apple-2024-10k",
+        "query": "2023 buyback spending increase versus 2024",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": 2023,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "buyback_change",
+        "operation_label": "자사주 매입 지출액 변화",
+        "status": "needs_review",
+        "issues": [
+          "UNSUPPORTED_TERMS",
+          "YEAR_DIRECTION_REQUIRED"
+        ],
+        "messages": [
+          "해석하지 못한 표현이 있어 계산을 보류했습니다. 지원 작업과 조건을 확인해 주세요.",
+          "비교 방향을 확정할 수 없습니다. 2023년 대비 2024년의 변화를 지정해 주세요."
+        ],
+        "unknown_terms": [
+          "increase"
+        ],
+        "warnings": [],
+        "values": {},
+        "formulas": [],
+        "explanation": [],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [],
+        "narratives": [],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "blocked",
+            "evidence_ids": []
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "query": "2024 capex minus operating cash flow",
+      "expected_status": "needs_review",
+      "actual": {
+        "document_id": "apple-2024-10k",
+        "query": "2024 capex minus operating cash flow",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": null,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "operating_cash_less_capex",
+        "operation_label": "영업현금흐름에서 유형자산 취득 지출 차감",
+        "status": "needs_review",
+        "issues": [
+          "UNSUPPORTED_TERMS",
+          "UNSUPPORTED_OPERATION"
+        ],
+        "messages": [
+          "해석하지 못한 표현이 있어 계산을 보류했습니다. 지원 작업과 조건을 확인해 주세요.",
+          "이 질문의 계산·판단 방식을 지원 범위에서 확정하지 못했습니다."
+        ],
+        "unknown_terms": [
+          "minus"
+        ],
+        "warnings": [],
+        "values": {},
+        "formulas": [],
+        "explanation": [],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [],
+        "narratives": [],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "blocked",
+            "evidence_ids": []
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "query": "2024 subtract operating cash flow from capex",
+      "expected_status": "needs_review",
+      "actual": {
+        "document_id": "apple-2024-10k",
+        "query": "2024 subtract operating cash flow from capex",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": null,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "operating_cash_less_capex",
+        "operation_label": "영업현금흐름에서 유형자산 취득 지출 차감",
+        "status": "needs_review",
+        "issues": [
+          "UNSUPPORTED_TERMS",
+          "UNSUPPORTED_OPERATION"
+        ],
+        "messages": [
+          "해석하지 못한 표현이 있어 계산을 보류했습니다. 지원 작업과 조건을 확인해 주세요.",
+          "이 질문의 계산·판단 방식을 지원 범위에서 확정하지 못했습니다."
+        ],
+        "unknown_terms": [
+          "subtract"
+        ],
+        "warnings": [],
+        "values": {},
+        "formulas": [],
+        "explanation": [],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [],
+        "narratives": [],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "blocked",
+            "evidence_ids": []
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "query": "2024 제품 서비스 매출총이익률 공통비 차감",
+      "expected_status": "needs_review",
+      "actual": {
+        "document_id": "apple-2024-10k",
+        "query": "2024 제품 서비스 매출총이익률 공통비 차감",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": null,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "gross_margin",
+        "operation_label": "제품·서비스 매출총이익률",
+        "status": "needs_review",
+        "issues": [
+          "UNSUPPORTED_TERMS"
+        ],
+        "messages": [
+          "해석하지 못한 표현이 있어 계산을 보류했습니다. 지원 작업과 조건을 확인해 주세요."
+        ],
+        "unknown_terms": [
+          "공통비",
+          "차감"
+        ],
+        "warnings": [],
+        "values": {},
+        "formulas": [],
+        "explanation": [],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [],
+        "narratives": [],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "blocked",
+            "evidence_ids": []
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "query": "2024 products services gross margin less tax",
+      "expected_status": "needs_review",
+      "actual": {
+        "document_id": "apple-2024-10k",
+        "query": "2024 products services gross margin less tax",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": null,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "gross_margin",
+        "operation_label": "제품·서비스 매출총이익률",
+        "status": "needs_review",
+        "issues": [
+          "UNSUPPORTED_TERMS"
+        ],
+        "messages": [
+          "해석하지 못한 표현이 있어 계산을 보류했습니다. 지원 작업과 조건을 확인해 주세요."
+        ],
+        "unknown_terms": [
+          "less",
+          "tax"
+        ],
+        "warnings": [],
+        "values": {},
+        "formulas": [],
+        "explanation": [],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [],
+        "narratives": [],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "blocked",
+            "evidence_ids": []
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "query": "2024 products services gross margin and operating cash flow minus capex",
+      "expected_status": "needs_review",
+      "actual": {
+        "document_id": "apple-2024-10k",
+        "query": "2024 products services gross margin and operating cash flow minus capex",
+        "context": {
+          "document_id": "apple-2024-10k",
+          "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+          "company": "apple",
+          "scope": "CFS",
+          "currency": "USD",
+          "scale": 1000000,
+          "current_year": 2024,
+          "base_year": null,
+          "years_origin": "query",
+          "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+        },
+        "operation": "gross_margin",
+        "operation_label": "제품·서비스 매출총이익률",
+        "status": "needs_review",
+        "issues": [
+          "UNSUPPORTED_TERMS"
+        ],
+        "messages": [
+          "해석하지 못한 표현이 있어 계산을 보류했습니다. 지원 작업과 조건을 확인해 주세요."
+        ],
+        "unknown_terms": [
+          "operating",
+          "cash",
+          "flow",
+          "minus",
+          "capex"
+        ],
+        "warnings": [],
+        "values": {},
+        "formulas": [],
+        "explanation": [],
+        "required_information": [],
+        "currency": "USD",
+        "scale": 1000000,
+        "unit_label": "백만 미국 달러",
+        "evidence": [],
+        "narratives": [],
+        "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+        "source_integrity": "registered_snapshot",
+        "execution": "deterministic_source_review",
+        "trace_kind": "internal_rule_stages_not_MCP_calls",
+        "steps": [
+          {
+            "stage": "search_source_evidence",
+            "status": "blocked",
+            "evidence_ids": []
+          }
+        ]
+      },
+      "passed": true
+    }
+  ],
+  "synthetic_passed": 17,
+  "new_paid_calls": 0,
+  "new_llm_generations": 0,
+  "new_human_reviews": 0,
+  "cost_usd": 0,
+  "billing_queried": false
+}

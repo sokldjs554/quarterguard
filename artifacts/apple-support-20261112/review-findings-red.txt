@@ -1,0 +1,43 @@
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+FFF
+======================================================================
+FAIL: test_reversed_years_are_not_answered_in_opposite_direction (tests.test_apple_review.AppleReviewTests.test_reversed_years_are_not_answered_in_opposite_direction)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_apple_review.py", line 59, in test_reversed_years_are_not_answered_in_opposite_direction
+    r=self.review(q);self.assertEqual(r['status'],'needs_review');self.assertEqual(r['values'],{})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'verified' != 'needs_review'
+- verified
++ needs_review
+
+
+======================================================================
+FAIL: test_reversed_subtraction_does_not_reverse_user_operands (tests.test_apple_review.AppleReviewTests.test_reversed_subtraction_does_not_reverse_user_operands)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_apple_review.py", line 62, in test_reversed_subtraction_does_not_reverse_user_operands
+    r=self.review(q);self.assertEqual(r['status'],'needs_review');self.assertEqual(r['values'],{})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'verified' != 'needs_review'
+- verified
++ needs_review
+
+
+======================================================================
+FAIL: test_other_operation_qualifiers_and_multiple_intents_block (tests.test_apple_review.AppleReviewTests.test_other_operation_qualifiers_and_multiple_intents_block)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_apple_review.py", line 65, in test_other_operation_qualifiers_and_multiple_intents_block
+    r=self.review(q);self.assertEqual(r['status'],'needs_review');self.assertEqual(r['values'],{})
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'verified' != 'needs_review'
+- verified
++ needs_review
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.036s
+
+FAILED (failures=3)

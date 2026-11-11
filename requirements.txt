@@ -5,3 +5,4 @@ pypdf==6.10.0
 scikit-learn==1.8.0
 httpx==0.28.1
 numpy==2.2.6
+lxml==6.1.1

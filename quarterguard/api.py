@@ -57,7 +57,8 @@ def source_request(operation):
 @app.get('/api/source-documents')
 def source_documents():
  from .source_calculations import options
- return source_request(lambda:[options()['document']])
+ from .apple_source import load_source as apple_source
+ return source_request(lambda:[options()['document'],apple_source()[0]])
 @app.get('/api/source-search')
 def source_search(document_id:str=Query(...,max_length=80),q:str=Query('',max_length=500)):
  from .source_evidence import search_source
@@ -66,6 +67,16 @@ def source_search(document_id:str=Query(...,max_length=80),q:str=Query('',max_le
 def source_cell(cell_id:str):
  from .source_evidence import get_cell
  return source_request(lambda:get_cell(cell_id))
+class SourceReviewRequest(BaseModel):
+ model_config=ConfigDict(extra='forbid')
+ document_id:str=Field(min_length=1,max_length=80,strict=True)
+ query:str=Field(min_length=1,max_length=500,strict=True)
+@app.post('/api/source-review')
+def source_review(request:SourceReviewRequest):
+ from .apple_source import DOCUMENT_ID
+ from .apple_review import review
+ if request.document_id!=DOCUMENT_ID:raise HTTPException(404,'UNKNOWN_SOURCE_DOCUMENT')
+ return source_request(lambda:review(request.query))
 class SourceCalculationRequest(BaseModel):
  model_config=ConfigDict(extra='forbid')
  current_id:str=Field(min_length=1,max_length=160,strict=True)

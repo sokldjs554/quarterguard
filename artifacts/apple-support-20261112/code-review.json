@@ -1,0 +1,27 @@
+{
+  "reviewer": "independent AI code reviewer; not human review",
+  "findings": [
+    {
+      "id": "year_direction",
+      "severity": "important",
+      "description": "Reversed 2023-vs-2024 questions answered with FY2024 minus FY2023.",
+      "resolution": "Bind supported year direction or hold; tests.test_apple_review test_reversed_years_are_not_answered_in_opposite_direction RED to GREEN."
+    },
+    {
+      "id": "subtraction_order",
+      "severity": "important",
+      "description": "capex minus operating cash flow interpreted as the reverse operation.",
+      "resolution": "Require ordered single subtraction expression; test_reversed_subtraction_does_not_reverse_user_operands RED to GREEN."
+    },
+    {
+      "id": "unbound_qualifiers",
+      "severity": "important",
+      "description": "Global vocabulary dropped tax/common-cost/extra-operation qualifiers.",
+      "resolution": "Per-operation field grammar and reject residual intent; test_other_operation_qualifiers_and_multiple_intents_block RED to GREEN."
+    }
+  ],
+  "minor_limitations": [
+    "Narrow grammar abstains on unsupported paraphrases; disclosed bounded support, no broad NLP claim."
+  ],
+  "intermediate_regression": "Stricter grammar initially rejected two supported English phrases (17/19). Kept evaluation-final/results.json; fixed per-operation operator words, added regression test; evaluation-reviewed is 19/19."
+}
