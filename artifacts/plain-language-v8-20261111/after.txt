@@ -1,0 +1,7 @@
+test_internal_codes_in_prose_are_rejected_without_mutating_response (tests.test_plain_explanation_language.PlainExplanationLanguageTests.test_internal_codes_in_prose_are_rejected_without_mutating_response) ... ok
+test_korean_prose_keeps_machine_codes_and_financial_terms_intact (tests.test_plain_explanation_language.PlainExplanationLanguageTests.test_korean_prose_keeps_machine_codes_and_financial_terms_intact) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.003s
+
+OK

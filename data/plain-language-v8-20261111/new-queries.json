@@ -1,0 +1,62 @@
+{
+  "authored_by": "AI before first execution",
+  "human_reviewed": false,
+  "stage": "new wordings on known documents; not independent new-document evaluation",
+  "execution_origin": "Saved facts from previous raw-PDF evaluation used as fixture; no new PDF parsing",
+  "source": "data/llm-prose-v6-20261110/new-inputs.json",
+  "source_sha256": "1a7db85eca54fb616346aee0d60680bdbdc0951ba0beb14ad7ba3ca85b814e9c",
+  "code_sha256": {
+    "quarterguard/search.py": "03e36e985309f85d5b9d62980ba65793dfd1876f4ab715a1bd76b2acc557c379",
+    "quarterguard/query.py": "22799afcf36ffb935aa4e772bfb507f9899e36e5b73264082a02bf5da310acf6"
+  },
+  "cases": [
+    {
+      "id": "new-ko-h25-gross-q",
+      "query": "현대자동차 2025년 3분기 당분기 연결 원화 백만원 매출총이익",
+      "expected_status": "ready",
+      "expected_fact_id": "h25q3-CFS-gross_profit-2025-q-KRW"
+    },
+    {
+      "id": "new-en-h24-gross-ytd",
+      "query": "Please show Hyundai Motor consolidated gross profit for the first nine months of 2024 in KRW million.",
+      "expected_status": "ready",
+      "expected_fact_id": "h25q3-CFS-gross_profit-2024-ytd-KRW"
+    },
+    {
+      "id": "new-ko-s21-gross-ytd",
+      "query": "삼성전자 2021년 3분기 누적 연결 백만원 매출총이익",
+      "expected_status": "ready",
+      "expected_fact_id": "s22q3-CFS-gross_profit-2021-ytd-KRW"
+    },
+    {
+      "id": "new-en-s22-net-q",
+      "query": "What was Samsung Electronics consolidated net income for Q3 2022 quarter only in KRW million?",
+      "expected_status": "ready",
+      "expected_fact_id": "s22q3-CFS-net_profit-2022-q-KRW"
+    },
+    {
+      "id": "new-en-kind-missing",
+      "query": "Hyundai Motor 2025 Q3 consolidated gross profit in KRW million",
+      "expected_status": "needs_clarification",
+      "expected_fact_id": null
+    },
+    {
+      "id": "new-ko-scope-missing",
+      "query": "삼성전자 2022년 3분기 당분기 원화 백만원 영업이익",
+      "expected_status": "needs_clarification",
+      "expected_fact_id": null
+    },
+    {
+      "id": "new-ko-scope-conflict",
+      "query": "현대자동차 2025년 3분기 연결 별도 당분기 원화 백만원 매출액",
+      "expected_status": "needs_clarification",
+      "expected_fact_id": null
+    },
+    {
+      "id": "new-en-usd-unavailable",
+      "query": "Hyundai Motor 2025 Q3 quarter consolidated gross profit in USD million",
+      "expected_status": "no_results",
+      "expected_fact_id": null
+    }
+  ]
+}

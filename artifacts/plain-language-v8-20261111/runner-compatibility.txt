@@ -1,0 +1,234 @@
+======================================================================
+ERROR: test_approval_and_journal_prevent_calls_and_preserve_old_attempt (tests.test_live_explanations_v5.CurrentGuardBatchTests.test_approval_and_journal_prevent_calls_and_preserve_old_attempt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-language-eval/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-language-eval/quarterguard/evaluate_live_explanations_v5.py", line 131, in prepare_freeze
+    payload = make_payload(case)
+              ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-language-eval/quarterguard/evaluate_live_explanations_v5.py", line 114, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_changed_source_blocks_before_reading_key_or_contacting_provider (tests.test_live_explanations_v5.CurrentGuardBatchTests.test_changed_source_blocks_before_reading_key_or_contacting_provider)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-language-eval/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-language-eval/quarterguard/evaluate_live_explanations_v5.py", line 131, in prepare_freeze
+    payload = make_payload(case)
+              ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-language-eval/quarterguard/evaluate_live_explanations_v5.py", line 114, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_comparison_reaudits_both_batches_without_copying_human_labels (tests.test_live_explanations_v5.CurrentGuardBatchTests.test_comparison_reaudits_both_batches_without_copying_human_labels)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-language-eval/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-language-eval/quarterguard/evaluate_live_explanations_v5.py", line 131, in prepare_freeze
+    payload = make_payload(case)
+              ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-language-eval/quarterguard/evaluate_live_explanations_v5.py", line 114, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_current_product_instructions_context_and_schema_reach_every_payload (tests.test_live_explanations_v5.CurrentGuardBatchTests.test_current_product_instructions_context_and_schema_reach_every_payload)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-language-eval/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-language-eval/quarterguard/evaluate_live_explanations_v5.py", line 131, in prepare_freeze
+    payload = make_payload(case)
+              ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-language-eval/quarterguard/evaluate_live_explanations_v5.py", line 114, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_provider_schema_rejection_stops_once_and_preserves_http_failure (tests.test_live_explanations_v5.CurrentGuardBatchTests.test_provider_schema_rejection_stops_once_and_preserves_http_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-language-eval/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-language-eval/quarterguard/evaluate_live_explanations_v5.py", line 131, in prepare_freeze
+    payload = make_payload(case)
+              ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-language-eval/quarterguard/evaluate_live_explanations_v5.py", line 114, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_same_disclosed_cases_preserve_previous_mcp_inputs_and_drafts (tests.test_live_explanations_v5.CurrentGuardBatchTests.test_same_disclosed_cases_preserve_previous_mcp_inputs_and_drafts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-language-eval/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-language-eval/quarterguard/evaluate_live_explanations_v5.py", line 131, in prepare_freeze
+    payload = make_payload(case)
+              ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-language-eval/quarterguard/evaluate_live_explanations_v5.py", line 114, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_tampered_input_rejected_even_with_recomputed_freeze_digest (tests.test_live_explanations_v5.CurrentGuardBatchTests.test_tampered_input_rejected_even_with_recomputed_freeze_digest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-language-eval/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-language-eval/quarterguard/evaluate_live_explanations_v5.py", line 131, in prepare_freeze
+    payload = make_payload(case)
+              ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-language-eval/quarterguard/evaluate_live_explanations_v5.py", line 114, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_timeout_stops_once_without_retry_or_exposing_key (tests.test_live_explanations_v5.CurrentGuardBatchTests.test_timeout_stops_once_without_retry_or_exposing_key)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-language-eval/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-language-eval/quarterguard/evaluate_live_explanations_v5.py", line 131, in prepare_freeze
+    payload = make_payload(case)
+              ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-language-eval/quarterguard/evaluate_live_explanations_v5.py", line 114, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_usage_over_cap_stops_and_preserves_measured_cost (tests.test_live_explanations_v5.CurrentGuardBatchTests.test_usage_over_cap_stops_and_preserves_measured_cost)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-language-eval/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-language-eval/quarterguard/evaluate_live_explanations_v5.py", line 131, in prepare_freeze
+    payload = make_payload(case)
+              ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-language-eval/quarterguard/evaluate_live_explanations_v5.py", line 114, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_wrong_id_is_preserved_for_audit_but_would_not_pass_product_gate (tests.test_live_explanations_v5.CurrentGuardBatchTests.test_wrong_id_is_preserved_for_audit_but_would_not_pass_product_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-language-eval/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-language-eval/quarterguard/evaluate_live_explanations_v5.py", line 131, in prepare_freeze
+    payload = make_payload(case)
+              ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-language-eval/quarterguard/evaluate_live_explanations_v5.py", line 114, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+----------------------------------------------------------------------
+Ran 26 tests in 1.507s
+
+FAILED (errors=10)

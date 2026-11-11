@@ -8,7 +8,7 @@ from datetime import date, timedelta
 from .core import Fact, source_facts, source_manifest
 
 INSTRUCTIONS = (
-    'Explain the financial result in Korean. Copy status, issues and evidence IDs in order. '
+    'Explain in Korean. Copy status, issues and evidence IDs in order. '
     'JSON value must exactly copy growth_pct or derived_value, or be null if absent; do not add units, '
     'commas or text, round or reformat it. Never override rejection, invent evidence, calculate or advise. '
     'Distinguish quarter/cumulative and consolidated/separate. Only issues and decision_basis justify withholding. '
@@ -17,6 +17,7 @@ INSTRUCTIONS = (
     'With evidence, never claim a search was empty. Only no_evidence permits 해당 검색 범위에서 확인할 수 없습니다; '
     'this does not mean results or reports do not exist. '
     'For needs_review context describe the missing source metadata in Korean, not English/internal status labels. '
+    'Never print SEARCH_EMPTY/qoq_adjacent in prose. '
     'KRW is currency; use display_unit (e.g. 백만 원). scale is an internal multiplier, not a source heading. '
     'ONLY in explanation_ko prose, append % to every stated growth rate, including repeated values. '
     'For example JSON value "6.7916" and prose "증가율 6.7916%"; a withheld JSON value stays null. '
@@ -62,7 +63,7 @@ def period_decision(result):
     statements={
         'equal_months':'두 기간의 개월 수가 같지 않거나 완전한 월 단위 기간으로 확인되지 않습니다.',
         'qoq_three_months':'현재 기간이 3개월 단독 분기가 아닙니다.',
-        'qoq_adjacent':'A 시작일이 B 종료일 다음 날이 아니므로 인접한 분기 관계가 아닙니다.',
+        'qoq_adjacent':'비교한 두 기간이 바로 이어지는 분기(인접 분기)가 아닙니다.',
         'yoy_year':'A 종료 연도가 B 종료 연도의 바로 다음 해가 아닙니다.',
         'yoy_end_month':'두 기간의 종료 월이 다릅니다.',
         'yoy_start_month_day':'두 기간의 시작 월·일이 다릅니다.',
@@ -79,7 +80,7 @@ def decision_context(result):
         'SCOPE_MISMATCH': '연결·별도 범위가 달라 계산을 보류합니다. 양쪽 범위를 맞춘 뒤 다시 검증하세요.',
         'PERIOD_MISMATCH': '기간 길이 또는 선택한 비교 방식의 날짜 조건이 맞지 않아 계산을 보류합니다.',
         'CURRENCY_MISMATCH': '통화가 달라 계산을 보류합니다.',
-        'SEARCH_EMPTY': '해당 검색 범위에서 근거를 확인할 수 없습니다.',
+        'SEARCH_EMPTY': '현재 검색 조건으로 확인할 수 있는 근거를 찾지 못했습니다.',
     }
     issues = result.get('issues', [])
     basis = [{'code': code, 'statement': statements.get(code, f'확인 필요: 도구가 {code} 문제를 보고했습니다.')}

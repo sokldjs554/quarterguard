@@ -20,7 +20,9 @@ def check_prose(answer, result):
         for match in absence_pattern.finditer(text))
     same_document = re.search(
         r'(?:같은|동일한?)\s*(?:보고서|문서)|\bsame\s+(?:report|document)\b', text, re.I)
-    internal = re.search(r'\bcontext\s+needs\s+review\b|\bneeds_review\b', text, re.I)
+    internal = re.search(
+        r'\bcontext\s+needs\s+review\b|\bneeds_review\b'
+        r'|(?<![A-Za-z0-9_])(?:SEARCH_EMPTY|qoq_adjacent)(?![A-Za-z0-9_])', text, re.I)
     # Rate-labelled numbers, plus every occurrence of the exact tool growth value.
     # Rounded rates are checked when labelled. No numeric claim => no unit check.
     number = r'[+-]?\d+(?:\.\d+)?'
