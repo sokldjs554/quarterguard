@@ -58,7 +58,7 @@ class LatestProgressTests(unittest.TestCase):
         response=c.get('/api/evaluation/latest')
         self.assertEqual(response.status_code,200)
         r=response.json()
-        self.assertEqual(r['summary']['as_of_kst'],'2026-11-10')
+        self.assertEqual(r['summary']['as_of_kst'],'2026-11-11')
         self.assertIn('runtime_commit',r)
         self.assertEqual(r['summary']['human_review']['followup'],{'참':7,'모호':1})
         self.assertEqual(r['summary']['llm']['calls_per_batch'],[8,8])
@@ -89,7 +89,15 @@ class LatestProgressTests(unittest.TestCase):
         for key in ['참','모호']:
             self.assertEqual(r['human_review']['baseline'][key],old['verdict_counts'][key])
             self.assertEqual(r['human_review']['followup'][key],new['reported_counts'][key])
-        self.assertEqual(r['personal_review']['added_tests'],5)
+        self.assertEqual(r['personal_review']['added_tests'],6)
+        self.assertEqual(r['personal_review']['diagnostic_tests'],1)
+        followup=r['llm']['period_diagnostic_fix']['test_followup']
+        record=json.loads((ROOT/followup['record']).read_text())
+        self.assertTrue(record['count_gap_resolved'])
+        self.assertEqual(followup['ai_full_tests'],record['ai_verification']['full_tests'])
+        prior=json.loads((ROOT/'data/latest-progress-period-diagnostic-20261110.json').read_text())
+        self.assertFalse(prior['llm']['period_diagnostic_fix']['test_patch_received'])
+        self.assertEqual(prior['personal_review']['added_tests'],5)
         self.assertEqual(r['verification']['python_tests'],191)
         self.assertIn('Ran 191 tests',(ROOT/r['verification']['log']).read_text())
 

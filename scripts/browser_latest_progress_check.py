@@ -43,7 +43,7 @@ with sync_playwright() as pw:
   expect(current).to_contain_text('기존 8건 참 8·모호 0, 새 8건 참 7·모호 1')
   expect(current).to_contain_text('구조 실패와 자동 제품 판정은 그대로 유지')
   expect(current).not_to_contain_text('변경 후 새 실호출·b 재검수는 아직 없습니다')
-  expect(current).to_contain_text('합계 5개')
+  expect(current).to_contain_text('합계 6개')
   expect(current).to_contain_text('직전 기능 변경(f5377ad)')
   expect(past).not_to_have_attribute('open','')
   checks.append(f'{width}:current_evidence_and_limits_separate_from_closed_history')
