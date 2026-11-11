@@ -1,0 +1,42 @@
+{
+  "checks": [
+    {
+      "viewport": [
+        1365,
+        900
+      ],
+      "human_development_cases": 7,
+      "real_backend": "http://127.0.0.1:8783",
+      "exports": true,
+      "injected_503_recovery": true,
+      "injected_transport_timeout": true,
+      "late_delivery_after_edit_ignored": true,
+      "document_switch": true,
+      "sk_balance": true,
+      "samsung_quarter": true,
+      "page_errors": []
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "human_development_cases": 7,
+      "real_backend": "http://127.0.0.1:8783",
+      "exports": true,
+      "injected_503_recovery": true,
+      "injected_transport_timeout": true,
+      "late_delivery_after_edit_ignored": true,
+      "document_switch": true,
+      "sk_balance": true,
+      "samsung_quarter": true,
+      "page_errors": []
+    }
+  ],
+  "tls_note": "Local HTTP unless URL explicitly HTTPS; browser never ignores HTTPS certificate errors.",
+  "new_paid_calls": 0,
+  "backend": "https://quarterguard.onrender.com through fixed-origin local HTTP QA relay",
+  "upstream_tls_verification": true,
+  "direct_https_browser": false,
+  "tested_product_commit": "91135119539387e023f0e08c4232ed38ab6f5caa"
+}

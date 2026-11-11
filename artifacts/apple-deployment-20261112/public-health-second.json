@@ -1,0 +1,12 @@
+{
+  "method": "HTTPS client with TLS verification",
+  "started_at_utc": "2026-11-11T17:46:48.936609+00:00",
+  "status": 200,
+  "response": {
+    "status": "ok",
+    "facts": 192,
+    "commit": "91135119539387e023f0e08c4232ed38ab6f5caa",
+    "version": "1.4.0"
+  },
+  "elapsed_seconds": 0.523
+}

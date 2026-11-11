@@ -1,0 +1,5 @@
+{
+  "method": "direct Chromium HTTPS",
+  "error": "Page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://quarterguard.onrender.com/\nCall log:\n  - navigating to \"https://quarterguard.onrender.com/\", waiting until \"load\"\n",
+  "ignore_https_errors": false
+}
