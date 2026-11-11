@@ -1,0 +1,155 @@
+{
+  "record_type": "user_confirmed_provenance_correction",
+  "question": "V01~V16에 적힌 이미 수행한 AI 검토를 정리한 것이라는 문구도 오류인가요? 이 16건 역시 b가 원응답과 근거를 직접 대조해 판정한 것인지 알려주세요.",
+  "answer": "확인해보니까 오류였어",
+  "corrected_performer": "b",
+  "corrected_provenance": "direct_human_review_confirmed_by_user",
+  "replaces_classification_only": true,
+  "original_submission_preserved": "submission-summary.json",
+  "previous_performer_confirmation_preserved": "performer-confirmation.json",
+  "actual_review_date": null,
+  "environment": null,
+  "assistance": null,
+  "original_image_recheck_by_case": "not_recorded",
+  "new_participants": 0,
+  "new_paid_calls": 0,
+  "new_generation": false,
+  "counts": {
+    "reviewed": 16,
+    "true": 13,
+    "ambiguous": 3,
+    "false": 0,
+    "structured_fields_match": 16,
+    "evidence_ids_match_including_one_empty": 16
+  },
+  "reviews": [
+    {
+      "id": "V01",
+      "reviewer": "b",
+      "explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "삼성 분기 매출·6.7916% 부합."
+    },
+    {
+      "id": "V02",
+      "reviewer": "b",
+      "explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "삼성 전년 동분기 매출·17.3491% 부합."
+    },
+    {
+      "id": "V03",
+      "reviewer": "b",
+      "explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "9개월·3개월 보류와 별도 재계산 언급."
+    },
+    {
+      "id": "V04",
+      "reviewer": "b",
+      "explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "연결·별도 범위 차이로 보류."
+    },
+    {
+      "id": "V05",
+      "reviewer": "b",
+      "explanation_verdict": "ambiguous",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "연결 범위·각 분기 미명시로 비교 대상 불명확."
+    },
+    {
+      "id": "V06",
+      "reviewer": "b",
+      "explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "empty_match",
+      "note": "검색 범위 근거 없음과 실적 부재 구분."
+    },
+    {
+      "id": "V07",
+      "reviewer": "b",
+      "explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "금액·기간·6.7916% 부합."
+    },
+    {
+      "id": "V08",
+      "reviewer": "b",
+      "explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "문서·쪽·행·열·금액 부합."
+    },
+    {
+      "id": "V09",
+      "reviewer": "b",
+      "explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "삼성 영업이익·−31.3923% 부합."
+    },
+    {
+      "id": "V10",
+      "reviewer": "b",
+      "explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "누적 순이익·9.4364% 부합."
+    },
+    {
+      "id": "V11",
+      "reviewer": "b",
+      "explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "3개월·9개월 제한 설명."
+    },
+    {
+      "id": "V12",
+      "reviewer": "b",
+      "explanation_verdict": "ambiguous",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "도구 기간 불일치와 별도 재계산 진단의 지시 대상 불명확."
+    },
+    {
+      "id": "V13",
+      "reviewer": "b",
+      "explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "현대 영업이익·−29.1445% 부합."
+    },
+    {
+      "id": "V14",
+      "reviewer": "b",
+      "explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "현대 순이익 금액 귀속·−20.5146% 부합."
+    },
+    {
+      "id": "V15",
+      "reviewer": "b",
+      "explanation_verdict": "ambiguous",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "도구 제한과 별도 시작 월·일 진단을 명확히 구분하지 않음."
+    },
+    {
+      "id": "V16",
+      "reviewer": "b",
+      "explanation_verdict": "true",
+      "structured_fields": "match",
+      "evidence_ids": "match",
+      "note": "다른 회사 간 비교 제한과 별도 진단 구분."
+    }
+  ]
+}
