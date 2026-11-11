@@ -1,0 +1,10 @@
+{
+  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+  "status": 200,
+  "bytes": 1503888,
+  "sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+  "fetched_at_utc": "2026-11-11T16:10:27.994517+00:00",
+  "user_facing_date_kst": "2026-11-12",
+  "format": "HTML, not PDF",
+  "tls_verification": true
+}

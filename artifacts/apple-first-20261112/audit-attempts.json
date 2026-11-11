@@ -1,0 +1,6 @@
+{
+  "initial_audit": "Stopped at Greater China: expected inline XBRL fact not found in table14",
+  "cause": "Regional MD&A presentation table is untagged HTML",
+  "followup": "Resolve logical colspan/year header positions; preserve4cell display values and unit basis",
+  "product_baseline_changed": false
+}
