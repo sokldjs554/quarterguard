@@ -1,0 +1,1158 @@
+{
+  "mode": "archived_v8_replay_and_AI_authored_synthetic_sentences",
+  "new_paid_calls": 0,
+  "new_model_generations": 0,
+  "new_pdf_parsing": false,
+  "new_human_reviews": 0,
+  "source_sha256": "7ebb8103de576424cebd2e5f86a094ab554a1ced24bbca2ae08f53fa4a263128",
+  "synthetic_freeze_sha256": "52e23bd6d3c01c41762338564787feb8d085540f4d4c0a780cb35c319ea3553b",
+  "before_guard_sha256": "cc42eaaff436bd7efa745ae926ba5b81ed913dda426795b705cfd04f6389f9ca",
+  "after_guard_sha256": "57a932c578f168333eb1cb9ea6ab9acedc9a556283c7e255ca4ba7da73cede7d",
+  "replay": [
+    {
+      "case_id": "normal-qoq",
+      "original_response": {
+        "status": "verified",
+        "value": "6.7916",
+        "issues": [],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q2-CFS-revenue-2024-q-KRW"
+        ],
+        "explanation_ko": "연결 기준 2024년 3분기 매출은 79,098,731 백만 원입니다. Samsung Electronics 2024 3Q Interim Business Report, PDF p.34의 Revenue / 2024 Q KRW 항목입니다. 연결 기준 2024년 2분기 매출은 74,068,302 백만 원입니다. Samsung Electronics 2024 Half-year Business Report, PDF p.48의 Revenue / 2024 Q KRW 항목입니다. 전분기 대비 증가율은 6.7916%입니다."
+      },
+      "b_v8_verdict_unchanged": "참",
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": true,
+      "after_passed": true,
+      "after_check_ms": 2.572
+    },
+    {
+      "case_id": "normal-yoy",
+      "original_response": {
+        "status": "verified",
+        "value": "17.3491",
+        "issues": [],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q3-CFS-revenue-2023-q-KRW"
+        ],
+        "explanation_ko": "Samsung Electronics 2024 3Q Interim Business Report, PDF p.34의 Revenue / 2024 Q KRW 기준 연결 매출은 79,098,731 백만 원입니다. 같은 보고서 PDF p.34의 Revenue / 2023 Q KRW 기준 연결 매출은 67,404,652 백만 원입니다. 전년 동분기 대비 증감률은 17.3491%입니다."
+      },
+      "b_v8_verdict_unchanged": "참",
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": true,
+      "after_passed": true,
+      "after_check_ms": 0.376
+    },
+    {
+      "case_id": "period-mismatch",
+      "original_response": {
+        "status": "needs_review",
+        "value": null,
+        "issues": [
+          "PERIOD_MISMATCH"
+        ],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-ytd-KRW",
+          "s24q3-CFS-revenue-2023-q-KRW"
+        ],
+        "explanation_ko": "계산 보류입니다. 기간 불일치가 있습니다. 2024 3Q Interim Business Report, PDF p.34의 Revenue / 2024 YTD KRW는 2024-01-01 ~ 2024-09-30, 9개월, 연결입니다. 2024 3Q Interim Business Report, PDF p.34의 Revenue / 2023 Q KRW는 2023-07-01 ~ 2023-09-30, 3개월, 연결입니다. 9개월 누적과 전년 3개월은 직접 비교 기준이 맞지 않습니다. 따라서 증가율은 확정하지 않습니다."
+      },
+      "b_v8_verdict_unchanged": "참",
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": true,
+      "after_passed": true,
+      "after_check_ms": 0.171
+    },
+    {
+      "case_id": "scope-mismatch",
+      "original_response": {
+        "status": "needs_review",
+        "value": null,
+        "issues": [
+          "SCOPE_MISMATCH"
+        ],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q2-OFS-revenue-2024-q-KRW"
+        ],
+        "explanation_ko": "연결 매출과 별도 매출의 범위가 다릅니다. 비교를 보류합니다. 확인된 근거는 Samsung Electronics 2024 3Q Interim Business Report, PDF p.34의 Revenue / 2024 Q KRW와 Samsung Electronics 2024 Half-year Business Report, PDF p.104의 Revenue / 2024 Q KRW입니다. 전자는 2024-07-01~2024-09-30 연결 79,098,731 백만 원입니다. 후자는 2024-04-01~2024-06-30 별도 53,734,118 백만 원입니다."
+      },
+      "b_v8_verdict_unchanged": "참",
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": true,
+      "after_passed": true,
+      "after_check_ms": 0.199
+    },
+    {
+      "case_id": "unit-draft",
+      "original_response": {
+        "status": "verified",
+        "value": "6.7916",
+        "issues": [],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q2-CFS-revenue-2024-q-KRW"
+        ],
+        "explanation_ko": "증가율 6.7916%입니다. 연결 기준 매출입니다. 기준은 Samsung Electronics 2024 Half-year Business Report, PDF p.48의 Revenue / 2024 Q KRW입니다. 금액은 74,068,302 백만 원입니다. 비교 대상은 Samsung Electronics 2024 3Q Interim Business Report, PDF p.34의 Revenue / 2024 Q KRW입니다. 금액은 79,098,731 백만 원입니다. 둘 다 통화는 KRW이고 표시 단위는 백만 원입니다."
+      },
+      "b_v8_verdict_unchanged": "참",
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": true,
+      "after_passed": true,
+      "after_check_ms": 0.158
+    },
+    {
+      "case_id": "no-evidence",
+      "original_response": {
+        "status": "needs_review",
+        "value": null,
+        "issues": [
+          "SEARCH_EMPTY"
+        ],
+        "evidence_ids": [],
+        "explanation_ko": "해당 검색 범위에서 확인할 수 없습니다. 수집 범위 밖인 2025년 실적 조회라서 근거를 확인하지 못했습니다. 문서 메타데이터가 없어 특정 보고서명과 PDF 페이지를 적을 수 없습니다. 결정 근거는 SEARCH_EMPTY입니다."
+      },
+      "b_v8_verdict_unchanged": "참",
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": false
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": false,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": false,
+      "after_passed": false,
+      "after_check_ms": 0.357
+    },
+    {
+      "case_id": "conflicting-number-draft",
+      "original_response": {
+        "status": "verified",
+        "value": "6.7916",
+        "issues": [],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q2-CFS-revenue-2024-q-KRW"
+        ],
+        "explanation_ko": "Samsung Electronics 2024 3Q Interim Business Report의 PDF p.34에서 연결 매출은 2024-07-01~2024-09-30, 3개월, 79,098,731 백만 원입니다. Samsung Electronics 2024 Half-year Business Report의 PDF p.48에서 연결 매출은 2024-04-01~2024-06-30, 3개월, 74,068,302 백만 원입니다. 이 두 분기 비교의 증가율은 6.7916%입니다."
+      },
+      "b_v8_verdict_unchanged": "참",
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": true,
+      "after_passed": true,
+      "after_check_ms": 0.148
+    },
+    {
+      "case_id": "citation-draft",
+      "original_response": {
+        "status": "verified",
+        "value": "6.7916",
+        "issues": [],
+        "evidence_ids": [
+          "s24q3-CFS-revenue-2024-q-KRW",
+          "s24q2-CFS-revenue-2024-q-KRW"
+        ],
+        "explanation_ko": "연결 기준 매출 증가율은 6.7916%입니다. 2024년 3분기 매출은 Samsung Electronics 2024 3Q Interim Business Report, PDF p.34의 Revenue / 2024 Q KRW에서 79,098,731 백만 원입니다. 2024년 2분기 매출은 Samsung Electronics 2024 Half-year Business Report, PDF p.48의 Revenue / 2024 Q KRW에서 74,068,302 백만 원입니다. 비교 기간은 각각 3개월입니다. 따라서 2024년 3분기 연결 매출 증가율은 6.7916%입니다."
+      },
+      "b_v8_verdict_unchanged": "참",
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": true,
+      "after_passed": true,
+      "after_check_ms": 0.228
+    },
+    {
+      "case_id": "s22-op-yoy",
+      "original_response": {
+        "status": "verified",
+        "value": "-31.3923",
+        "issues": [],
+        "evidence_ids": [
+          "s22q3-CFS-operating_profit-2022-q-KRW",
+          "s22q3-CFS-operating_profit-2021-q-KRW"
+        ],
+        "explanation_ko": "삼성전자의 연결 영업이익은 2022년 3분기 10,852,045 백만 원입니다. Samsung Electronics 2022 Q3 Interim Report, PDF p.37의 Operating profit / 2022 Q KRW 기준입니다. 2021년 3분기 연결 영업이익은 15,817,531 백만 원입니다. 같은 문서의 PDF p.37, Operating profit / 2021 Q KRW 기준입니다. 전년 동분기 증감률은 -31.3923%입니다."
+      },
+      "b_v8_verdict_unchanged": "참",
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": true,
+      "after_passed": true,
+      "after_check_ms": 0.241
+    },
+    {
+      "case_id": "s22-net-ytd-yoy",
+      "original_response": {
+        "status": "verified",
+        "value": "9.4364",
+        "issues": [],
+        "evidence_ids": [
+          "s22q3-CFS-net_profit-2022-ytd-KRW",
+          "s22q3-CFS-net_profit-2021-ytd-KRW"
+        ],
+        "explanation_ko": "삼성전자 2022년 1월~9월 연결 당기순이익은 31,812,631 백만 원입니다. 삼성전자 2021년 1월~9월 연결 당기순이익은 29,069,502 백만 원입니다. 전년 동기 증감률은 9.4364%입니다. 출처는 Samsung Electronics 2022 Q3 Interim Report입니다. PDF p.37의 Profit for the period 항목에서 2022 YTD KRW와 2021 YTD KRW를 확인했습니다."
+      },
+      "b_v8_verdict_unchanged": "참",
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": true,
+      "after_passed": true,
+      "after_check_ms": 0.27
+    },
+    {
+      "case_id": "s22-net-period",
+      "original_response": {
+        "status": "needs_review",
+        "value": null,
+        "issues": [
+          "PERIOD_MISMATCH"
+        ],
+        "evidence_ids": [
+          "s22q3-CFS-net_profit-2022-q-KRW",
+          "s22q3-CFS-net_profit-2021-ytd-KRW"
+        ],
+        "explanation_ko": "비교 제한이 있습니다. 도구가 기간 불일치를 보고했습니다. 2022년 3개월과 2021년 9개월은 같은 기간 길이가 아닙니다. 그래서 증가율은 보류됩니다. 이건 근거가 없는 것이 아니라, 서로 다른 기간을 비교해 검증을 멈춘 경우입니다. 근거는 있습니다. Samsung Electronics 2022 Q3 Interim Report, PDF p.37의 Profit for the period / 2022 Q KRW는 2022-07-01 ~ 2022-09-30, 3개월, 연결입니다. 같은 보고서 PDF p.37의 Profit for the period / 2021 YTD KRW는 2021-01-01 ~ 2021-09-30, 9개월, 연결입니다. 다만 기간이 달라 직접 비교를 확정할 수 없습니다."
+      },
+      "b_v8_verdict_unchanged": "참",
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": false,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": false,
+      "after_passed": true,
+      "after_check_ms": 0.15
+    },
+    {
+      "case_id": "s22-op-qoq",
+      "original_response": {
+        "status": "needs_review",
+        "value": null,
+        "issues": [
+          "PERIOD_MISMATCH"
+        ],
+        "evidence_ids": [
+          "s22q3-CFS-operating_profit-2022-q-KRW",
+          "s22q3-CFS-operating_profit-2021-q-KRW"
+        ],
+        "explanation_ko": "2022 Q3와 2021 Q3의 연결 영업이익은 QoQ용으로 쓸 수 없습니다. 도구가 기간 불일치로 보류했습니다. 비교한 두 기간은 바로 이어지는 분기가 아닙니다. 따라서 인접 분기 기준이 맞지 않습니다. Samsung Electronics 2022 Q3 Interim Report, PDF p.37의 2022 Q KRW는 2022-07-01 ~ 2022-09-30, 3개월, 연결입니다. 같은 문서의 PDF p.37의 2021 Q KRW는 2021-07-01 ~ 2021-09-30, 3개월, 연결입니다. 두 값은 서로 다른 연도의 같은 분기입니다. QoQ 비교 조건을 충족하지 않습니다."
+      },
+      "b_v8_verdict_unchanged": "참",
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": true,
+      "after_passed": true,
+      "after_check_ms": 0.882
+    },
+    {
+      "case_id": "h25-op-yoy",
+      "original_response": {
+        "status": "verified",
+        "value": "-29.1445",
+        "issues": [],
+        "evidence_ids": [
+          "h25q3-CFS-operating_profit-2025-q-KRW",
+          "h25q3-CFS-operating_profit-2024-q-KRW"
+        ],
+        "explanation_ko": "현대자동차 연결 3분기 영업이익의 전년 동분기 증감률은 -29.1445%입니다. 2025년 3분기 영업이익은 2,537,266 백만 원입니다. 근거 문서는 Hyundai Motor Company 2025 Q3 interim consolidated financial statements이며 PDF p.8의 Operating profit / 2025 Q KRW입니다. 2024년 3분기 영업이익은 3,580,900 백만 원입니다. 같은 문서의 PDF p.8의 Operating profit / 2024 Q KRW입니다."
+      },
+      "b_v8_verdict_unchanged": "참",
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": true,
+      "after_passed": true,
+      "after_check_ms": 0.29
+    },
+    {
+      "case_id": "h25-net-yoy",
+      "original_response": {
+        "status": "verified",
+        "value": "-20.5146",
+        "issues": [],
+        "evidence_ids": [
+          "h25q3-CFS-net_profit-2025-q-KRW",
+          "h25q3-CFS-net_profit-2024-q-KRW"
+        ],
+        "explanation_ko": "현대자동차의 2025년 3분기 연결 순이익은 2,548,183 백만 원입니다. 근거 문서는 Hyundai Motor Company 2025 Q3 interim consolidated financial statements이며 PDF 8쪽의 Profit for the period / 2025 Q KRW입니다. 2024년 3분기 연결 순이익은 3,205,850 백만 원입니다. 같은 문서의 PDF 8쪽 Profit for the period / 2024 Q KRW입니다. 2025년 3분기 대비 2024년 3분기 순이익 증가율은 -20.5146%입니다."
+      },
+      "b_v8_verdict_unchanged": "거짓",
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": false
+      },
+      "before_passed": true,
+      "after_passed": false,
+      "after_check_ms": 1.013
+    },
+    {
+      "case_id": "h25-op-period",
+      "original_response": {
+        "status": "needs_review",
+        "value": null,
+        "issues": [
+          "PERIOD_MISMATCH"
+        ],
+        "evidence_ids": [
+          "h25q3-CFS-operating_profit-2025-ytd-KRW",
+          "h25q3-CFS-operating_profit-2024-q-KRW"
+        ],
+        "explanation_ko": "계산을 보류합니다. 기간이 다릅니다. 2025년 9개월 누적은 Hyundai Motor Company 2025 Q3 interim consolidated financial statements, PDF p.8의 Operating profit / 2025 YTD KRW입니다. 2024년 단독 3개월은 Hyundai Motor Company 2025 Q3 interim consolidated financial statements, PDF p.8의 Operating profit / 2024 Q KRW입니다. 누적과 단독 3개월은 직접 비교 제한이 있습니다. 도구가 기간 불일치를 보고했습니다. 별도 재계산 기준으로도 개월 수가 같지 않고 시작 월·일이 같지 않아 보류합니다."
+      },
+      "b_v8_verdict_unchanged": "참",
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": true,
+      "after_passed": true,
+      "after_check_ms": 0.122
+    },
+    {
+      "case_id": "cross-company-period",
+      "original_response": {
+        "status": "needs_review",
+        "value": null,
+        "issues": [
+          "COMPANY_MISMATCH",
+          "PERIOD_MISMATCH"
+        ],
+        "evidence_ids": [
+          "s22q3-CFS-operating_profit-2022-q-KRW",
+          "h25q3-CFS-operating_profit-2025-q-KRW"
+        ],
+        "explanation_ko": "비교할 수 없는 이유는 두 가지입니다. 첫째, 회사가 다릅니다. 삼성전자 2022년 3분기와 현대자동차 2025년 3분기는 같은 회사의 전년 동분기 비교가 아닙니다. 둘째, 기간도 다릅니다. Samsung Electronics 2022 Q3 Interim Report의 PDF p.37에서 영업이익은 2022-07-01 ~ 2022-09-30, 3개월, 연결입니다. Hyundai Motor Company 2025 Q3 interim consolidated financial statements의 PDF p.8에서 영업이익은 2025-07-01 ~ 2025-09-30, 3개월, 연결입니다. 따라서 전년 동분기 비교 조건을 충족하지 못합니다. 도구가 COMPANY_MISMATCH와 PERIOD_MISMATCH를 보고했으며, 기간 문제는 종료 연도 기준의 재계산 진단에서 확인된 것입니다. 각 보고서의 값은 삼성전자 10,852,045 백만 원, 현대자동차 2,537,266 백만 원입니다."
+      },
+      "b_v8_verdict_unchanged": "참",
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": false,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": true,
+      "after_passed": false,
+      "after_check_ms": 0.166
+    }
+  ],
+  "synthetic": [
+    {
+      "id": "new-ko-year-only",
+      "source_case": "h25-op-yoy",
+      "text": "2024년 대비 2025년 영업이익 증감률은 -29.1445%입니다.",
+      "expected_product_pass": true,
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": true,
+      "after_passed": true,
+      "after_check_ms": 0.109,
+      "before_matches_expectation": true,
+      "after_matches_expectation": true
+    },
+    {
+      "id": "new-ko-qoq-short",
+      "source_case": "normal-qoq",
+      "text": "2분기에 비해 3분기 매출 증가율은 6.7916%입니다.",
+      "expected_product_pass": true,
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": true,
+      "after_passed": true,
+      "after_check_ms": 0.067,
+      "before_matches_expectation": true,
+      "after_matches_expectation": true
+    },
+    {
+      "id": "new-ko-qoq-reverse",
+      "source_case": "normal-qoq",
+      "text": "2024년 3분기에 비해 2024년 2분기 증가율은 6.7916%입니다.",
+      "expected_product_pass": false,
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": false
+      },
+      "before_passed": true,
+      "after_passed": false,
+      "after_check_ms": 0.057,
+      "before_matches_expectation": false,
+      "after_matches_expectation": true
+    },
+    {
+      "id": "new-en-year-before-quarter",
+      "source_case": "h25-op-yoy",
+      "text": "2025 Q3 compared to 2024 Q3: -29.1445%.",
+      "expected_product_pass": true,
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": true,
+      "after_passed": true,
+      "after_check_ms": 0.077,
+      "before_matches_expectation": true,
+      "after_matches_expectation": true
+    },
+    {
+      "id": "new-en-reverse",
+      "source_case": "h25-op-yoy",
+      "text": "2024 Q3 compared to 2025 Q3: -29.1445%.",
+      "expected_product_pass": false,
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": false
+      },
+      "before_passed": true,
+      "after_passed": false,
+      "after_check_ms": 0.072,
+      "before_matches_expectation": false,
+      "after_matches_expectation": true
+    },
+    {
+      "id": "new-en-from",
+      "source_case": "h25-net-yoy",
+      "text": "From Q3 2024 to Q3 2025, the change is -20.5146%.",
+      "expected_product_pass": true,
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": true,
+      "after_passed": true,
+      "after_check_ms": 0.066,
+      "before_matches_expectation": true,
+      "after_matches_expectation": true
+    },
+    {
+      "id": "new-ko-unknown-quarter",
+      "source_case": "normal-qoq",
+      "text": "2024년 1분기 대비 2024년 3분기 증가율은 6.7916%입니다.",
+      "expected_product_pass": false,
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": false
+      },
+      "before_passed": true,
+      "after_passed": false,
+      "after_check_ms": 0.06,
+      "before_matches_expectation": false,
+      "after_matches_expectation": true
+    },
+    {
+      "id": "new-ko-ambiguous-quarter",
+      "source_case": "normal-yoy",
+      "text": "3분기 대비 3분기 증가율은 17.3491%입니다.",
+      "expected_product_pass": false,
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": false
+      },
+      "before_passed": true,
+      "after_passed": false,
+      "after_check_ms": 0.047,
+      "before_matches_expectation": false,
+      "after_matches_expectation": true
+    },
+    {
+      "id": "new-ko-unsupported-half",
+      "source_case": "normal-yoy",
+      "text": "2023년 반기 대비 2024년 반기 증가율은 17.3491%입니다.",
+      "expected_product_pass": false,
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": false
+      },
+      "before_passed": true,
+      "after_passed": false,
+      "after_check_ms": 0.052,
+      "before_matches_expectation": false,
+      "after_matches_expectation": true
+    },
+    {
+      "id": "new-negation-search-result",
+      "source_case": "s22-net-period",
+      "text": "검색 결과가 없는 것이 아니라, 비교 기간이 다릅니다. 근거는 있습니다.",
+      "expected_product_pass": true,
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": false,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": false,
+      "after_passed": true,
+      "after_check_ms": 0.047,
+      "before_matches_expectation": false,
+      "after_matches_expectation": true
+    },
+    {
+      "id": "new-negation-contradiction",
+      "source_case": "s22-net-period",
+      "text": "검색 결과가 없는 것이 아니라, 기간이 다릅니다. 그러나 검색 결과가 없습니다.",
+      "expected_product_pass": false,
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": false,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": false,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": false,
+      "after_passed": false,
+      "after_check_ms": 0.057,
+      "before_matches_expectation": true,
+      "after_matches_expectation": true
+    },
+    {
+      "id": "new-internal-diagnostic",
+      "source_case": "s22-op-qoq",
+      "text": "qoq_three_months는 맞지만 qoq_adjacent가 아닙니다.",
+      "expected_product_pass": false,
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": false
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": false,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": false,
+      "after_passed": false,
+      "after_check_ms": 0.028,
+      "before_matches_expectation": true,
+      "after_matches_expectation": true
+    },
+    {
+      "id": "new-internal-issue",
+      "source_case": "cross-company-period",
+      "text": "회사 불일치(COMPANY_MISMATCH)입니다.",
+      "expected_product_pass": false,
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": false,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": true,
+      "after_passed": false,
+      "after_check_ms": 0.029,
+      "before_matches_expectation": false,
+      "after_matches_expectation": true
+    },
+    {
+      "id": "new-korean-no-evidence",
+      "source_case": "no-evidence",
+      "text": "현재 검색 조건으로 근거를 찾지 못했습니다. 기업 실적 자체가 없다는 뜻은 아닙니다.",
+      "expected_product_pass": true,
+      "before_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true
+      },
+      "after_checks": {
+        "status_exact": true,
+        "value_exact": true,
+        "issues_exact": true,
+        "citations_exact": true,
+        "explanation_present": true,
+        "prose_evidence_presence_consistent": true,
+        "prose_document_reference_unambiguous": true,
+        "prose_rate_unit_explicit": true,
+        "prose_review_language_localized": true,
+        "prose_comparison_direction_consistent": true
+      },
+      "before_passed": true,
+      "after_passed": true,
+      "after_check_ms": 0.038,
+      "before_matches_expectation": true,
+      "after_matches_expectation": true
+    }
+  ],
+  "replay_summary": {
+    "total": 16,
+    "before_passed": 14,
+    "after_passed": 13
+  },
+  "synthetic_summary": {
+    "total": 14,
+    "before_matched": 7,
+    "after_matched": 14
+  },
+  "limitations": [
+    "Known v8 cases were used in fixes. Replay is not a new generation.",
+    "Additional synthetic cases were AI-authored before implementation, not independently human reviewed or blind.",
+    "Direction grammar is bounded; no explicit pair does not establish semantic correctness."
+  ]
+}

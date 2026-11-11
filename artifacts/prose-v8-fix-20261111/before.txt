@@ -1,0 +1,179 @@
+test_correct_direction_cannot_hide_later_reversed_claim (tests.test_v8_prose_regressions.V8ProseRegressions.test_correct_direction_cannot_hide_later_reversed_claim) ... FAIL
+test_current_and_base_are_resolved_for_yoy_qoq_and_english (tests.test_v8_prose_regressions.V8ProseRegressions.test_current_and_base_are_resolved_for_yoy_qoq_and_english) ... 
+  test_current_and_base_are_resolved_for_yoy_qoq_and_english (tests.test_v8_prose_regressions.V8ProseRegressions.test_current_and_base_are_resolved_for_yoy_qoq_and_english) (text='2025년 대비 2024년 증감률은 -20.5146%입니다.') ... FAIL
+  test_current_and_base_are_resolved_for_yoy_qoq_and_english (tests.test_v8_prose_regressions.V8ProseRegressions.test_current_and_base_are_resolved_for_yoy_qoq_and_english) (text='3분기 대비 2분기 증가율은 6.7916%입니다.') ... FAIL
+  test_current_and_base_are_resolved_for_yoy_qoq_and_english (tests.test_v8_prose_regressions.V8ProseRegressions.test_current_and_base_are_resolved_for_yoy_qoq_and_english) (text='2024년 대비 2024년 증가율은 6.7916%입니다.') ... FAIL
+  test_current_and_base_are_resolved_for_yoy_qoq_and_english (tests.test_v8_prose_regressions.V8ProseRegressions.test_current_and_base_are_resolved_for_yoy_qoq_and_english) (text='From 2024 Q3 to 2023 Q3, growth is 17.3491%.') ... FAIL
+  test_current_and_base_are_resolved_for_yoy_qoq_and_english (tests.test_v8_prose_regressions.V8ProseRegressions.test_current_and_base_are_resolved_for_yoy_qoq_and_english) (text='Q3 2023 compared with Q3 2024: 17.3491%.') ... FAIL
+  test_current_and_base_are_resolved_for_yoy_qoq_and_english (tests.test_v8_prose_regressions.V8ProseRegressions.test_current_and_base_are_resolved_for_yoy_qoq_and_english) (text='2024년 상반기 대비 2023년 상반기 증가율은 17.3491%입니다.') ... FAIL
+test_internal_issue_and_diagnostic_labels_are_not_prose (tests.test_v8_prose_regressions.V8ProseRegressions.test_internal_issue_and_diagnostic_labels_are_not_prose) ... 
+  test_internal_issue_and_diagnostic_labels_are_not_prose (tests.test_v8_prose_regressions.V8ProseRegressions.test_internal_issue_and_diagnostic_labels_are_not_prose) (code='COMPANY_MISMATCH') ... FAIL
+  test_internal_issue_and_diagnostic_labels_are_not_prose (tests.test_v8_prose_regressions.V8ProseRegressions.test_internal_issue_and_diagnostic_labels_are_not_prose) (code='PERIOD_MISMATCH') ... FAIL
+  test_internal_issue_and_diagnostic_labels_are_not_prose (tests.test_v8_prose_regressions.V8ProseRegressions.test_internal_issue_and_diagnostic_labels_are_not_prose) (code='SCOPE_MISMATCH') ... FAIL
+  test_internal_issue_and_diagnostic_labels_are_not_prose (tests.test_v8_prose_regressions.V8ProseRegressions.test_internal_issue_and_diagnostic_labels_are_not_prose) (code='equal_months') ... FAIL
+  test_internal_issue_and_diagnostic_labels_are_not_prose (tests.test_v8_prose_regressions.V8ProseRegressions.test_internal_issue_and_diagnostic_labels_are_not_prose) (code='yoy_year') ... FAIL
+  test_internal_issue_and_diagnostic_labels_are_not_prose (tests.test_v8_prose_regressions.V8ProseRegressions.test_internal_issue_and_diagnostic_labels_are_not_prose) (code='yoy_start_month_day') ... FAIL
+  test_internal_issue_and_diagnostic_labels_are_not_prose (tests.test_v8_prose_regressions.V8ProseRegressions.test_internal_issue_and_diagnostic_labels_are_not_prose) (code='UNKNOWN_UNIT') ... FAIL
+test_internal_issue_and_diagnostic_labels_are_not_prose (tests.test_v8_prose_regressions.V8ProseRegressions.test_internal_issue_and_diagnostic_labels_are_not_prose) ... FAIL
+test_negation_does_not_hide_contradiction_or_uncertainty (tests.test_v8_prose_regressions.V8ProseRegressions.test_negation_does_not_hide_contradiction_or_uncertainty) ... FAIL
+test_provider_rejects_reversed_sentence_even_when_structure_matches (tests.test_v8_prose_regressions.V8ProseRegressions.test_provider_rejects_reversed_sentence_even_when_structure_matches) ... FAIL
+test_real_evidence_negation_is_allowed_without_mutation (tests.test_v8_prose_regressions.V8ProseRegressions.test_real_evidence_negation_is_allowed_without_mutation) ... FAIL
+test_real_reverse_direction_is_rejected_without_changing_response (tests.test_v8_prose_regressions.V8ProseRegressions.test_real_reverse_direction_is_rejected_without_changing_response) ... FAIL
+
+======================================================================
+FAIL: test_correct_direction_cannot_hide_later_reversed_claim (tests.test_v8_prose_regressions.V8ProseRegressions.test_correct_direction_cannot_hide_later_reversed_claim)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-v8-fix/tests/test_v8_prose_regressions.py", line 49, in test_correct_direction_cannot_hide_later_reversed_claim
+    self.assertFalse(self.check('h25-net-yoy',text).get('prose_comparison_direction_consistent',True))
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_current_and_base_are_resolved_for_yoy_qoq_and_english (tests.test_v8_prose_regressions.V8ProseRegressions.test_current_and_base_are_resolved_for_yoy_qoq_and_english) (text='2025년 대비 2024년 증감률은 -20.5146%입니다.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-v8-fix/tests/test_v8_prose_regressions.py", line 45, in test_current_and_base_are_resolved_for_yoy_qoq_and_english
+    self.assertEqual(self.check(case,text).get('prose_comparison_direction_consistent',True),expected)
+AssertionError: True != False
+
+======================================================================
+FAIL: test_current_and_base_are_resolved_for_yoy_qoq_and_english (tests.test_v8_prose_regressions.V8ProseRegressions.test_current_and_base_are_resolved_for_yoy_qoq_and_english) (text='3분기 대비 2분기 증가율은 6.7916%입니다.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-v8-fix/tests/test_v8_prose_regressions.py", line 45, in test_current_and_base_are_resolved_for_yoy_qoq_and_english
+    self.assertEqual(self.check(case,text).get('prose_comparison_direction_consistent',True),expected)
+AssertionError: True != False
+
+======================================================================
+FAIL: test_current_and_base_are_resolved_for_yoy_qoq_and_english (tests.test_v8_prose_regressions.V8ProseRegressions.test_current_and_base_are_resolved_for_yoy_qoq_and_english) (text='2024년 대비 2024년 증가율은 6.7916%입니다.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-v8-fix/tests/test_v8_prose_regressions.py", line 45, in test_current_and_base_are_resolved_for_yoy_qoq_and_english
+    self.assertEqual(self.check(case,text).get('prose_comparison_direction_consistent',True),expected)
+AssertionError: True != False
+
+======================================================================
+FAIL: test_current_and_base_are_resolved_for_yoy_qoq_and_english (tests.test_v8_prose_regressions.V8ProseRegressions.test_current_and_base_are_resolved_for_yoy_qoq_and_english) (text='From 2024 Q3 to 2023 Q3, growth is 17.3491%.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-v8-fix/tests/test_v8_prose_regressions.py", line 45, in test_current_and_base_are_resolved_for_yoy_qoq_and_english
+    self.assertEqual(self.check(case,text).get('prose_comparison_direction_consistent',True),expected)
+AssertionError: True != False
+
+======================================================================
+FAIL: test_current_and_base_are_resolved_for_yoy_qoq_and_english (tests.test_v8_prose_regressions.V8ProseRegressions.test_current_and_base_are_resolved_for_yoy_qoq_and_english) (text='Q3 2023 compared with Q3 2024: 17.3491%.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-v8-fix/tests/test_v8_prose_regressions.py", line 45, in test_current_and_base_are_resolved_for_yoy_qoq_and_english
+    self.assertEqual(self.check(case,text).get('prose_comparison_direction_consistent',True),expected)
+AssertionError: True != False
+
+======================================================================
+FAIL: test_current_and_base_are_resolved_for_yoy_qoq_and_english (tests.test_v8_prose_regressions.V8ProseRegressions.test_current_and_base_are_resolved_for_yoy_qoq_and_english) (text='2024년 상반기 대비 2023년 상반기 증가율은 17.3491%입니다.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-v8-fix/tests/test_v8_prose_regressions.py", line 45, in test_current_and_base_are_resolved_for_yoy_qoq_and_english
+    self.assertEqual(self.check(case,text).get('prose_comparison_direction_consistent',True),expected)
+AssertionError: True != False
+
+======================================================================
+FAIL: test_internal_issue_and_diagnostic_labels_are_not_prose (tests.test_v8_prose_regressions.V8ProseRegressions.test_internal_issue_and_diagnostic_labels_are_not_prose) (code='COMPANY_MISMATCH')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-v8-fix/tests/test_v8_prose_regressions.py", line 70, in test_internal_issue_and_diagnostic_labels_are_not_prose
+    self.assertFalse(self.check('cross-company-period',code+'입니다.')['prose_review_language_localized'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_internal_issue_and_diagnostic_labels_are_not_prose (tests.test_v8_prose_regressions.V8ProseRegressions.test_internal_issue_and_diagnostic_labels_are_not_prose) (code='PERIOD_MISMATCH')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-v8-fix/tests/test_v8_prose_regressions.py", line 70, in test_internal_issue_and_diagnostic_labels_are_not_prose
+    self.assertFalse(self.check('cross-company-period',code+'입니다.')['prose_review_language_localized'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_internal_issue_and_diagnostic_labels_are_not_prose (tests.test_v8_prose_regressions.V8ProseRegressions.test_internal_issue_and_diagnostic_labels_are_not_prose) (code='SCOPE_MISMATCH')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-v8-fix/tests/test_v8_prose_regressions.py", line 70, in test_internal_issue_and_diagnostic_labels_are_not_prose
+    self.assertFalse(self.check('cross-company-period',code+'입니다.')['prose_review_language_localized'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_internal_issue_and_diagnostic_labels_are_not_prose (tests.test_v8_prose_regressions.V8ProseRegressions.test_internal_issue_and_diagnostic_labels_are_not_prose) (code='equal_months')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-v8-fix/tests/test_v8_prose_regressions.py", line 70, in test_internal_issue_and_diagnostic_labels_are_not_prose
+    self.assertFalse(self.check('cross-company-period',code+'입니다.')['prose_review_language_localized'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_internal_issue_and_diagnostic_labels_are_not_prose (tests.test_v8_prose_regressions.V8ProseRegressions.test_internal_issue_and_diagnostic_labels_are_not_prose) (code='yoy_year')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-v8-fix/tests/test_v8_prose_regressions.py", line 70, in test_internal_issue_and_diagnostic_labels_are_not_prose
+    self.assertFalse(self.check('cross-company-period',code+'입니다.')['prose_review_language_localized'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_internal_issue_and_diagnostic_labels_are_not_prose (tests.test_v8_prose_regressions.V8ProseRegressions.test_internal_issue_and_diagnostic_labels_are_not_prose) (code='yoy_start_month_day')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-v8-fix/tests/test_v8_prose_regressions.py", line 70, in test_internal_issue_and_diagnostic_labels_are_not_prose
+    self.assertFalse(self.check('cross-company-period',code+'입니다.')['prose_review_language_localized'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_internal_issue_and_diagnostic_labels_are_not_prose (tests.test_v8_prose_regressions.V8ProseRegressions.test_internal_issue_and_diagnostic_labels_are_not_prose) (code='UNKNOWN_UNIT')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-v8-fix/tests/test_v8_prose_regressions.py", line 70, in test_internal_issue_and_diagnostic_labels_are_not_prose
+    self.assertFalse(self.check('cross-company-period',code+'입니다.')['prose_review_language_localized'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_internal_issue_and_diagnostic_labels_are_not_prose (tests.test_v8_prose_regressions.V8ProseRegressions.test_internal_issue_and_diagnostic_labels_are_not_prose)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-v8-fix/tests/test_v8_prose_regressions.py", line 75, in test_internal_issue_and_diagnostic_labels_are_not_prose
+    self.assertNotIn(row['code'],row['statement'])
+AssertionError: 'COMPANY_MISMATCH' unexpectedly found in '확인 필요: 도구가 COMPANY_MISMATCH 문제를 보고했습니다.'
+
+======================================================================
+FAIL: test_negation_does_not_hide_contradiction_or_uncertainty (tests.test_v8_prose_regressions.V8ProseRegressions.test_negation_does_not_hide_contradiction_or_uncertainty)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-v8-fix/tests/test_v8_prose_regressions.py", line 58, in test_negation_does_not_hide_contradiction_or_uncertainty
+    self.assertTrue(self.check('s22-net-period',good)['prose_evidence_presence_consistent'])
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_provider_rejects_reversed_sentence_even_when_structure_matches (tests.test_v8_prose_regressions.V8ProseRegressions.test_provider_rejects_reversed_sentence_even_when_structure_matches)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-v8-fix/tests/test_v8_prose_regressions.py", line 83, in test_provider_rejects_reversed_sentence_even_when_structure_matches
+    with self.assertRaises(pp.ExplanationRejected) as error:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ExplanationRejected not raised
+
+======================================================================
+FAIL: test_real_evidence_negation_is_allowed_without_mutation (tests.test_v8_prose_regressions.V8ProseRegressions.test_real_evidence_negation_is_allowed_without_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-v8-fix/tests/test_v8_prose_regressions.py", line 53, in test_real_evidence_negation_is_allowed_without_mutation
+    self.assertTrue(check_prose(row['generated'],row['tool_result'])['prose_evidence_presence_consistent'])
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_real_reverse_direction_is_rejected_without_changing_response (tests.test_v8_prose_regressions.V8ProseRegressions.test_real_reverse_direction_is_rejected_without_changing_response)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-v8-fix/tests/test_v8_prose_regressions.py", line 27, in test_real_reverse_direction_is_rejected_without_changing_response
+    self.assertFalse(checks.get('prose_comparison_direction_consistent',True))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.011s
+
+FAILED (failures=19)

@@ -1,0 +1,93 @@
+{
+  "created_by": "AI before product implementation and before first evaluation execution",
+  "human_reviewed": false,
+  "scope": "Additional synthetic wordings on known v8 tool results, not new model generations or an independent human/blind holdout.",
+  "source": "artifacts/llm-prose-v8-20261111/report.json",
+  "source_sha256": "7ebb8103de576424cebd2e5f86a094ab554a1ced24bbca2ae08f53fa4a263128",
+  "cases": [
+    {
+      "id": "new-ko-year-only",
+      "source_case": "h25-op-yoy",
+      "text": "2024년 대비 2025년 영업이익 증감률은 -29.1445%입니다.",
+      "expected_product_pass": true
+    },
+    {
+      "id": "new-ko-qoq-short",
+      "source_case": "normal-qoq",
+      "text": "2분기에 비해 3분기 매출 증가율은 6.7916%입니다.",
+      "expected_product_pass": true
+    },
+    {
+      "id": "new-ko-qoq-reverse",
+      "source_case": "normal-qoq",
+      "text": "2024년 3분기에 비해 2024년 2분기 증가율은 6.7916%입니다.",
+      "expected_product_pass": false
+    },
+    {
+      "id": "new-en-year-before-quarter",
+      "source_case": "h25-op-yoy",
+      "text": "2025 Q3 compared to 2024 Q3: -29.1445%.",
+      "expected_product_pass": true
+    },
+    {
+      "id": "new-en-reverse",
+      "source_case": "h25-op-yoy",
+      "text": "2024 Q3 compared to 2025 Q3: -29.1445%.",
+      "expected_product_pass": false
+    },
+    {
+      "id": "new-en-from",
+      "source_case": "h25-net-yoy",
+      "text": "From Q3 2024 to Q3 2025, the change is -20.5146%.",
+      "expected_product_pass": true
+    },
+    {
+      "id": "new-ko-unknown-quarter",
+      "source_case": "normal-qoq",
+      "text": "2024년 1분기 대비 2024년 3분기 증가율은 6.7916%입니다.",
+      "expected_product_pass": false
+    },
+    {
+      "id": "new-ko-ambiguous-quarter",
+      "source_case": "normal-yoy",
+      "text": "3분기 대비 3분기 증가율은 17.3491%입니다.",
+      "expected_product_pass": false
+    },
+    {
+      "id": "new-ko-unsupported-half",
+      "source_case": "normal-yoy",
+      "text": "2023년 반기 대비 2024년 반기 증가율은 17.3491%입니다.",
+      "expected_product_pass": false
+    },
+    {
+      "id": "new-negation-search-result",
+      "source_case": "s22-net-period",
+      "text": "검색 결과가 없는 것이 아니라, 비교 기간이 다릅니다. 근거는 있습니다.",
+      "expected_product_pass": true
+    },
+    {
+      "id": "new-negation-contradiction",
+      "source_case": "s22-net-period",
+      "text": "검색 결과가 없는 것이 아니라, 기간이 다릅니다. 그러나 검색 결과가 없습니다.",
+      "expected_product_pass": false
+    },
+    {
+      "id": "new-internal-diagnostic",
+      "source_case": "s22-op-qoq",
+      "text": "qoq_three_months는 맞지만 qoq_adjacent가 아닙니다.",
+      "expected_product_pass": false
+    },
+    {
+      "id": "new-internal-issue",
+      "source_case": "cross-company-period",
+      "text": "회사 불일치(COMPANY_MISMATCH)입니다.",
+      "expected_product_pass": false
+    },
+    {
+      "id": "new-korean-no-evidence",
+      "source_case": "no-evidence",
+      "text": "현재 검색 조건으로 근거를 찾지 못했습니다. 기업 실적 자체가 없다는 뜻은 아닙니다.",
+      "expected_product_pass": true
+    }
+  ]
+}
