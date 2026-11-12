@@ -1,0 +1,149 @@
+..FFFFFFFFFFFFFFFF....
+======================================================================
+FAIL: test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning) (review=13, change='3개월, 연결)가 아닙니다.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 108, in test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning
+    with self.subTest(review=n,change=new):self.assertFalse(all(self.checks(n,original.replace(old,new)).values()))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning) (review=18, change='3개월, 연결)가 아닙니다.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 108, in test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning
+    with self.subTest(review=n,change=new):self.assertFalse(all(self.checks(n,original.replace(old,new)).values()))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning) (review=5, change='3개월, 연결)가 아닙니다.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 108, in test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning
+    with self.subTest(review=n,change=new):self.assertFalse(all(self.checks(n,original.replace(old,new)).values()))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning) (review=14, change='2021년 동기간 단독')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 108, in test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning
+    with self.subTest(review=n,change=new):self.assertFalse(all(self.checks(n,original.replace(old,new)).values()))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning) (review=17, change='3분기 누계 연결')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 108, in test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning
+    with self.subTest(review=n,change=new):self.assertFalse(all(self.checks(n,original.replace(old,new)).values()))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning) (review=17, change='2025년 3분기 및 4분기 연결')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 108, in test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning
+    with self.subTest(review=n,change=new):self.assertFalse(all(self.checks(n,original.replace(old,new)).values()))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning) (review=14, change='2021년 동기간 연간 누적')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 108, in test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning
+    with self.subTest(review=n,change=new):self.assertFalse(all(self.checks(n,original.replace(old,new)).values()))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning) (review=19, change='3개월 누적 연결')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 108, in test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning
+    with self.subTest(review=n,change=new):self.assertFalse(all(self.checks(n,original.replace(old,new)).values()))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning) (review=13, change='3개월, 연결)이 아니라 잘못된 수치입니다.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 108, in test_inherited_period_and_post_parenthesis_negation_cannot_change_meaning
+    with self.subTest(review=n,change=new):self.assertFalse(all(self.checks(n,original.replace(old,new)).values()))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_new_binding_grammar_rejects_identity_and_uncovered_page_conflicts (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_new_binding_grammar_rejects_identity_and_uncovered_page_conflicts) (review=17, change='매출')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 94, in test_new_binding_grammar_rejects_identity_and_uncovered_page_conflicts
+    with self.subTest(review=n,change=new):self.assertFalse(all(self.checks(n,original.replace(old,new)).values()))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_new_binding_grammar_rejects_identity_and_uncovered_page_conflicts (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_new_binding_grammar_rejects_identity_and_uncovered_page_conflicts) (review=17, change='삼성전자')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 94, in test_new_binding_grammar_rejects_identity_and_uncovered_page_conflicts
+    with self.subTest(review=n,change=new):self.assertFalse(all(self.checks(n,original.replace(old,new)).values()))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_new_binding_grammar_rejects_identity_and_uncovered_page_conflicts (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_new_binding_grammar_rejects_identity_and_uncovered_page_conflicts) (review=11, change='현대자동차')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 94, in test_new_binding_grammar_rejects_identity_and_uncovered_page_conflicts
+    with self.subTest(review=n,change=new):self.assertFalse(all(self.checks(n,original.replace(old,new)).values()))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_new_binding_grammar_rejects_identity_and_uncovered_page_conflicts (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_new_binding_grammar_rejects_identity_and_uncovered_page_conflicts) (review=20, change='현대자동차')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 94, in test_new_binding_grammar_rejects_identity_and_uncovered_page_conflicts
+    with self.subTest(review=n,change=new):self.assertFalse(all(self.checks(n,original.replace(old,new)).values()))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_new_binding_grammar_rejects_identity_and_uncovered_page_conflicts (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_new_binding_grammar_rejects_identity_and_uncovered_page_conflicts) (review=17, change='PDF p.8 및 PDF p.99')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 94, in test_new_binding_grammar_rejects_identity_and_uncovered_page_conflicts
+    with self.subTest(review=n,change=new):self.assertFalse(all(self.checks(n,original.replace(old,new)).values()))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_new_binding_grammar_rejects_identity_and_uncovered_page_conflicts (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_new_binding_grammar_rejects_identity_and_uncovered_page_conflicts) (review=20, change='PDF 37페이지 및 PDF 8페이지')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 94, in test_new_binding_grammar_rejects_identity_and_uncovered_page_conflicts
+    with self.subTest(review=n,change=new):self.assertFalse(all(self.checks(n,original.replace(old,new)).values()))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_new_binding_grammar_rejects_identity_and_uncovered_page_conflicts (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_new_binding_grammar_rejects_identity_and_uncovered_page_conflicts) (review=17, change='USD 연결 영업이익')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 94, in test_new_binding_grammar_rejects_identity_and_uncovered_page_conflicts
+    with self.subTest(review=n,change=new):self.assertFalse(all(self.checks(n,original.replace(old,new)).values()))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.171s
+
+FAILED (failures=16)

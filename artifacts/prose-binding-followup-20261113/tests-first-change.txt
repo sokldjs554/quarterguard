@@ -1,0 +1,22 @@
+FF....
+======================================================================
+FAIL: test_all_seventeen_human_true_responses_pass_without_rewriting (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_all_seventeen_human_true_responses_pass_without_rewriting) (review=19)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 29, in test_all_seventeen_human_true_responses_pass_without_rewriting
+    c=self.checks(n);self.assertTrue(all(c.values()),[k for k,v in c.items() if not v])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ['prose_evidence_anchors_present']
+
+======================================================================
+FAIL: test_date_scope_unit_amount_and_source_counterexamples_remain_withheld (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_date_scope_unit_amount_and_source_counterexamples_remain_withheld) (review=13, change=('3개월, 연결', '3개월, 연결이 아닙니다'))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 62, in test_date_scope_unit_amount_and_source_counterexamples_remain_withheld
+    self.assertFalse(all(self.checks(n,original.replace(old,new,1)).values()))
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.129s
+
+FAILED (failures=2)

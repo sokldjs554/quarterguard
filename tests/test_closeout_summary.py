@@ -49,3 +49,14 @@ class CloseoutSummaryTests(unittest.TestCase):
         self.assertEqual(s['closeout']['human_ambiguous_withheld'],3)
         self.assertEqual(s['fresh_batch']['passed'],8)
 
+
+    def test_latest_binding_replay_preserves_original_generation_and_review(self):
+        s=TestClient(app).get('/api/evaluation/latest').json()['summary']['current_status']
+        followup=s['prose_binding_followup']
+        self.assertEqual((followup['before_passed'],followup['after_passed']),(7,17))
+        self.assertEqual(followup['human_true_withheld'],0)
+        self.assertEqual(followup['human_ambiguous_withheld'],3)
+        self.assertEqual(followup['new_paid_calls'],0)
+        self.assertEqual(followup['new_human_reviews'],0)
+        self.assertEqual(s['fresh_batch']['passed'],8)
+        self.assertEqual(s['closeout']['replay_passed'],7)

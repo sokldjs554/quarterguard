@@ -73,3 +73,10 @@ test('v6 separates structural regression, new tasks, and still-pending human rev
  for(const text of ['v6 새 16회','8/8 → 3/8','새 과제: 구조 5/8','제품 검사 4/8','새 응답의 사람 검수는 미수행','value','부정문','0.03177450'])assert.ok(html.includes(text),text);
  assert.ok(html.includes('참 5·모호 3 → 참 7·모호 1'));
 });
+
+test('binding followup separates offline recovery from generation and preserves human labels',()=>{
+ const current=JSON.parse(fs.readFileSync(new URL('../data/latest-progress-prose-binding-20261113.json',import.meta.url)));
+ const html=renderLatestProgress({summary:current,runtime_commit:'bindings'});
+ for(const value of ['정답 설명의 과도한 보류 보완','7/20 → 17/20','정답 10건의 보류 해소','모호 3건은 계속 보류','새 생성·사람 검수 0건','AI 합성 80/80','당시 제품 검사 8/20'])assert.ok(html.includes(value),value);
+ assert.ok(html.includes('직전 무료 재검사7/20'));
+});

@@ -1,0 +1,14 @@
+..F.......
+======================================================================
+FAIL: test_cache_version_changes_when_new_binding_rules_change (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_cache_version_changes_when_new_binding_rules_change)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 137, in test_cache_version_changes_when_new_binding_rules_change
+    with patch.object(Path,'read_bytes',changed):self.assertNotEqual(verification_version(),before)
+                                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '044d637b9b0f48a1af527218c4d130b9c76cbcd03299d17b0f77cdb0b1bcafd2' == '044d637b9b0f48a1af527218c4d130b9c76cbcd03299d17b0f77cdb0b1bcafd2'
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.186s
+
+FAILED (failures=1)

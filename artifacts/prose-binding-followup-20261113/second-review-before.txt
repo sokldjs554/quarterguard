@@ -1,0 +1,41 @@
+.......FFFF...
+======================================================================
+FAIL: test_profit_loss_reversal_and_trailing_scope_contradiction_are_rejected (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_profit_loss_reversal_and_trailing_scope_contradiction_are_rejected) (review=17, change='영업손실')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 144, in test_profit_loss_reversal_and_trailing_scope_contradiction_are_rejected
+    with self.subTest(review=n,change=new):self.assertFalse(all(self.checks(n,original.replace(old,new)).values()))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_profit_loss_reversal_and_trailing_scope_contradiction_are_rejected (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_profit_loss_reversal_and_trailing_scope_contradiction_are_rejected) (review=13, change='영업손실')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 144, in test_profit_loss_reversal_and_trailing_scope_contradiction_are_rejected
+    with self.subTest(review=n,change=new):self.assertFalse(all(self.checks(n,original.replace(old,new)).values()))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_profit_loss_reversal_and_trailing_scope_contradiction_are_rejected (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_profit_loss_reversal_and_trailing_scope_contradiction_are_rejected) (review=14, change='당기순손실')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 144, in test_profit_loss_reversal_and_trailing_scope_contradiction_are_rejected
+    with self.subTest(review=n,change=new):self.assertFalse(all(self.checks(n,original.replace(old,new)).values()))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_profit_loss_reversal_and_trailing_scope_contradiction_are_rejected (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_profit_loss_reversal_and_trailing_scope_contradiction_are_rejected) (review=13, change='3개월, 연결), 별도 기준입니다.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 144, in test_profit_loss_reversal_and_trailing_scope_contradiction_are_rejected
+    with self.subTest(review=n,change=new):self.assertFalse(all(self.checks(n,original.replace(old,new)).values()))
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.233s
+
+FAILED (failures=4)

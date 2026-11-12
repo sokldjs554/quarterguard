@@ -1,0 +1,20 @@
+{
+  "baseline_commit": "0daca4e0f516a2333e397facee225da669a390aa",
+  "python_run": 406,
+  "python_skipped": 1,
+  "python_failures": 0,
+  "node_passed": 30,
+  "local_http_chromium_checks": 6,
+  "direct_public_https_browser": false,
+  "new_paid_calls": 0,
+  "new_human_reviews": 0,
+  "new_model_responses": 0,
+  "current_human_true_accepted": 17,
+  "current_human_ambiguous_withheld": 3,
+  "historical_false_withheld": 4,
+  "historical_ambiguous_withheld": 5,
+  "historical_true_withheld": 1,
+  "synthetic_matched": 80,
+  "synthetic_total": 80,
+  "protected_inputs_unchanged": true
+}

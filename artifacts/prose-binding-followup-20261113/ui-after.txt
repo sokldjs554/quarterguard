@@ -1,0 +1,18 @@
+✔ current closeout shows completed human work and separates fresh generation from replay (4.573382ms)
+✔ fresh paid batch displays poorer gate result without inventing human approval (0.877868ms)
+✔ final human review is visible with remaining overblocking and no new generation claim (0.733481ms)
+✔ current evidence separates product scope, reviewed responses, latest guard, and actors (0.313562ms)
+✔ historical failures are dated and never relabeled as current status (16.066782ms)
+✔ malformed current summary fails and text is escaped (0.646803ms)
+✔ latest model batch is separate from prior human labels and has unresolved prose warnings (0.371688ms)
+✔ confirmed v5 human verdicts do not become an overall accuracy improvement (0.229769ms)
+✔ v6 separates structural regression, new tasks, and still-pending human review (0.643903ms)
+✔ binding followup separates offline recovery from generation and preserves human labels (1.208253ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 137.682457
