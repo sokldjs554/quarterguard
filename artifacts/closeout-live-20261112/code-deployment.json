@@ -1,0 +1,35 @@
+{
+  "commit": "55c2b64a6bca56cc07ab8d0e2575662dcd16ee28",
+  "render_deploy_id": "dep-dbqoopjrjlhs7385j6kg",
+  "render_status": "live",
+  "https_health": {
+    "path": "/health",
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "facts": 192,
+      "commit": "55c2b64a6bca56cc07ab8d0e2575662dcd16ee28",
+      "version": "1.4.0"
+    },
+    "tls_verified": true
+  },
+  "https_latest_summary_status": 200,
+  "direct_https_browser": {
+    "target": "https://quarterguard.onrender.com/",
+    "mode": "direct_https_chromium",
+    "tls_verification_disabled": false,
+    "loaded": false,
+    "error": "Page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://quarterguard.onrender.com/"
+  },
+  "first_request": {
+    "phase": "first_request_while_deploy_building",
+    "url": "https://quarterguard.onrender.com/health",
+    "tls_verified": true,
+    "timeout_seconds": 30,
+    "outcome": "httpx.ReadTimeout",
+    "note": "Do not infer a permanent outage or final deploy success from this request."
+  },
+  "source_catalog_status": 200,
+  "main_ci": "https://github.com/sokldjs554/quarterguard/actions/runs/43195331548",
+  "main_ci_conclusion": "success"
+}

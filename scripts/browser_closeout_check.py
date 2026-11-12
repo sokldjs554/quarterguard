@@ -20,12 +20,16 @@ with sync_playwright() as pw:
             request.continue_()
         context.route('**/api/**',route)
         page=context.new_page();page.on('pageerror',lambda error:errors.append(str(error)))
-        page.goto('http://127.0.0.1:8795',wait_until='networkidle')
+        page.goto(os.getenv('CLOSEOUT_DEMO_URL','http://127.0.0.1:8795'),wait_until='networkidle')
         page.locator('[data-view="review"]').click()
         section=page.locator('#latest-evidence-summary')
         for text in ('SK 5개 + Apple 7개','참 11·거짓 4·모호 5','JSON 다운로드·내용 대조 완료',
-                     '10건 통과','사람 참 차단 1건','테스트 6개','새 유료 호출 0회'):
+                     '10건 통과','사람 참 차단 1건','테스트 6개'):
             expect(section).to_contain_text(text)
+        if os.getenv('CLOSEOUT_EXPECT_LIVE')=='1':
+            for text in ('새 실제 생성 20건','8/20','12건 보류','이번 응답의 사람 판정은 아직 없습니다'):
+                expect(section).to_contain_text(text)
+        else:expect(section).to_contain_text('새 유료 호출 0회')
         expect(section).not_to_contain_text('아직 미수신')
         assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
         section.scroll_into_view_if_needed()

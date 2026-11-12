@@ -1,0 +1,8 @@
+{
+  "http_response_completed": 20,
+  "payloads_equal_approved_freeze": 20,
+  "raw_packet_equal_downloaded": true,
+  "human_verdicts_fabricated": 0,
+  "provider_retries": 0,
+  "same_input_before_after": true
+}

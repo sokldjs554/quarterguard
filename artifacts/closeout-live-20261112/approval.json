@@ -1,0 +1,28 @@
+{
+  "contract": {
+    "id": "final-closeout-explanations-20261112",
+    "model": "gpt-4.1-mini-2025-04-14",
+    "max_calls": 20,
+    "explanations": 20,
+    "planner_calls": 0,
+    "new_mcp_calls": 0,
+    "max_input_admission_tokens": 16000,
+    "max_output_tokens": 700,
+    "retries": 0,
+    "input_admission": "Entire payload UTF8 bytes + 1024 framing reserve; conservative admission, not a provider token-limit parameter.",
+    "input_usd_per_million": "0.4",
+    "output_usd_per_million": "1.6",
+    "estimated_max_usd": "0.15040",
+    "approval_budget_usd": "0.16",
+    "billed_cost_usd": null,
+    "pricing_url": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+    "pricing_checked": "2026-11-12",
+    "lifecycle": "Deprecated model; stop on unavailability, no substitution or retry.",
+    "sampling": "Same 20 development cases and stored tool inputs as prior completion batch; no new documents or holdout."
+  },
+  "freeze_sha256": "bf9245f40e6ed8f95e590f295eca085fab60ac0dbcbb0e11f2b7f95de362b2f9",
+  "approved_statement": "이 범위의 새 20회 호출과 기존 Actions 키 재사용 승인",
+  "approval_source": "user explicit reply in this conversation",
+  "main_commit": "55c2b64a6bca56cc07ab8d0e2575662dcd16ee28",
+  "do_not_reuse_old_approval": true
+}
