@@ -67,9 +67,21 @@ def check_grounding(answer, result):
     supported = known and all((Decimal(number.replace(',', '')), compact(unit)) in allowed
                               for number, unit in amounts)
     exact_rates = rates_match_tool(text,result.get('growth_pct'))
+    # A verified reconciliation must answer whether the derived and directly
+    # reported amounts agree; a list of correct cells alone is incomplete.
+    # Support only affirmative explicit conclusion forms, not general semantics.
+    conclusion = True
+    if derived is not None and result.get('status') == 'verified':
+        value = re.escape(format(Decimal(derived), ',f'))
+        conclusion = bool(re.search(
+            r'(?:차감(?:한)?(?:결과|값)|뺀값)(?:이|은|는|가)(?:[1-4]분기)?'
+            r'직접공시(?:된)?(?:매출|금액|값|수치)(?:과|와)일치'
+            r'(?:합니다|했습니다|하여'+value+r'백만원임을확인하였습니다)(?:[.!。]|$)',
+            compact(text)))
     return {'prose_evidence_anchors_present': bool(anchors),
             'prose_decision_basis_present': basis, 'prose_amounts_supported': bool(supported) and not unsupported_large_unit,
-            'prose_rates_match_tool': bool(exact_rates)}
+            'prose_rates_match_tool': bool(exact_rates),
+            'prose_reconciliation_conclusion_present': conclusion}
 
 
 def explicit_evidence_binding(text, row, rows):

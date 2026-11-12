@@ -26,7 +26,11 @@ with sync_playwright() as pw:
         for text in ('SK 5개 + Apple 7개','참 11·거짓 4·모호 5','JSON 다운로드·내용 대조 완료',
                      '10건 통과','사람 참 차단 1건','테스트 6개'):
             expect(section).to_contain_text(text)
-        if os.getenv('CLOSEOUT_EXPECT_LIVE')=='1':
+        if os.getenv('CLOSEOUT_EXPECT_REVIEWED')=='1':
+            for text in ('참 17·모호 3·거짓 0','합의한 세 가지 보완 완료','7/20','참 10건','모호 3건'):
+                expect(section).to_contain_text(text)
+            expect(section).not_to_contain_text('이번 응답의 사람 판정은 아직 없습니다')
+        elif os.getenv('CLOSEOUT_EXPECT_LIVE')=='1':
             for text in ('새 실제 생성 20건','8/20','12건 보류','이번 응답의 사람 판정은 아직 없습니다'):
                 expect(section).to_contain_text(text)
         else:expect(section).to_contain_text('새 유료 호출 0회')

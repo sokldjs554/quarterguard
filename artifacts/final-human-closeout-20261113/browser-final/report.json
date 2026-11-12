@@ -1,0 +1,15 @@
+{
+  "mode": "local_http_chromium_automated",
+  "checks": [
+    "390:completed_work_and_replay_scope_visible",
+    "390:failure_does_not_display_stale_summary",
+    "390:retry_restores_current_summary",
+    "1440:completed_work_and_replay_scope_visible",
+    "1440:failure_does_not_display_stale_summary",
+    "1440:retry_restores_current_summary"
+  ],
+  "page_errors": [],
+  "provider_posts": [],
+  "new_human_review": false,
+  "direct_https_browser": false
+}

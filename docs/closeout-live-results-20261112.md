@@ -1,5 +1,7 @@
 # 마지막 새 생성20건 결과 — 원응답과 보류 보존
 
+> 2026-11-13 후속: N01–N20의 b 검수(참17·모호3·거짓0)를 수신하고 잔여 보류를 정리해 합의한 보완을 완료했습니다. [최종 기록](https://github.com/sokldjs554/quarterguard/blob/main/docs/final-human-closeout-20261113.md). 아래 생성·준비 단계의 대기 표시는 당시 상태입니다.
+
 사용자가 새 계약을 승인한 뒤 [Actions43195569426](https://github.com/sokldjs554/quarterguard/actions/runs/43195569426)을 한 번 실행했다. 실행 커밋은 `55c2b64a6bca56cc07ab8d0e2575662dcd16ee28`, 모델은 `gpt-4.1-mini-2025-04-14`다. 재시도·대체 모델 호출은 없다.
 
 **새 생성은 완료했고, 이번 N01–N20 응답에 대한 b의 새 검수는 아직 받지 않았다.** 기존 b의 여러 검수 기록은 완료된 사실로 유지한다.

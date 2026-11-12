@@ -1,0 +1,207 @@
+{
+  "record_type": "user_submitted_followup_human_review",
+  "reviewer_id": "b",
+  "attribution_basis": "Continuing the requested N01–N20 review by existing b; standing user confirmation/publication consent; not a new participant.",
+  "received_on": "2026-11-13",
+  "received_date_timezone": "Asia/Seoul",
+  "reviewed_at": null,
+  "environment": null,
+  "assistance": null,
+  "metadata_note": "Actual review time, environment and assistance were not supplied with this table; do not copy them from older sessions.",
+  "transcription": "User table normalized to rows; Markdown emphasis removed; no verdict or reason invented.",
+  "counts": {
+    "모호": 3,
+    "참": 17,
+    "거짓": 0
+  },
+  "structured_fields_match": 20,
+  "evidence_ids_match": 20,
+  "prose_source_match": 18,
+  "prose_source_not_applicable": 2,
+  "new_participants": 0,
+  "new_paid_calls": 0,
+  "raw_responses_path": "artifacts/closeout-live-20261112/raw/closeout-live/human-review.json",
+  "raw_responses_sha256": "8f12c115579f905d9a1460273c46622ca6a6182cf74ccc4453f718b3aa732308",
+  "rows": [
+    {
+      "review_id": "N01",
+      "case_id": "qoq-revenue",
+      "explanation_verdict": "모호",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason": "삼성24Q3·삼성24H1 연결 매출 금액과 기간은 맞음. 다만 질문이 요구한 전분기 대비 6.7916%가 설명에 없음. 구조 값에는 들어 있음."
+    },
+    {
+      "review_id": "N02",
+      "case_id": "ytd-trap",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason": "삼성24Q3의 9개월·3개월 금액과 기간이 부합. 도구의 기간 불일치 및 계산 보류를 설명하고, 세부 조건의 실행 순서를 단정하지 않음."
+    },
+    {
+      "review_id": "N03",
+      "case_id": "no-evidence",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치: 빈 목록",
+      "prose_source": "해당 없음",
+      "reason": "현재 검색 범위에서 근거가 없다는 뜻으로 한정하며, 기업 실적 자체의 부재로 단정하지 않음."
+    },
+    {
+      "review_id": "N04",
+      "case_id": "reconcile-revenue",
+      "explanation_verdict": "모호",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason": "삼성24Q3·삼성24H1의 세 금액은 맞고, 실제로 225,082,634 − 145,983,903 = 79,098,731임. 그러나 설명은 세 수치를 나열할 뿐 차감값과 직접 공시값이 일치한다는 결론을 말하지 않음."
+    },
+    {
+      "review_id": "N05",
+      "case_id": "replay-normal-qoq",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason": "삼성24Q3·삼성24H1 매출과 전분기 증감률 6.7916%가 부합."
+    },
+    {
+      "review_id": "N06",
+      "case_id": "replay-normal-yoy",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason": "삼성24Q3 Revenue의 2024·2023년 3개월 KRW 값과 전년 동분기 증가율 17.3491%가 부합."
+    },
+    {
+      "review_id": "N07",
+      "case_id": "replay-period-mismatch",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason": "9개월 누적·전년 3개월 금액과 기간 불일치 보류가 부합하며, 세부 실행 순서를 확인할 수 없다고 명시."
+    },
+    {
+      "review_id": "N08",
+      "case_id": "replay-scope-mismatch",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason": "삼성24Q3 연결 매출과 삼성24H1 별도 매출 53,734,118백만 원을 구분하고 범위 불일치로 보류."
+    },
+    {
+      "review_id": "N09",
+      "case_id": "replay-unit-draft",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason": "두 분기 매출의 백만 원 단위와 6.7916% 계산이 부합. 오도 초안의 천 원 단위를 따르지 않음."
+    },
+    {
+      "review_id": "N10",
+      "case_id": "replay-no-evidence",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치: 빈 목록",
+      "prose_source": "해당 없음",
+      "reason": "검색 범위의 근거 부재와 기업 실적 자체의 부재를 구분."
+    },
+    {
+      "review_id": "N11",
+      "case_id": "replay-conflicting-number-draft",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason": "삼성24Q3·삼성24H1 매출과 6.7916% 증가가 부합. 문서·쪽은 적었으나 행·열은 본문에서 생략."
+    },
+    {
+      "review_id": "N12",
+      "case_id": "replay-citation-draft",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason": "두 분기의 연결 매출·기간·문서 쪽수와 전분기 증가율 6.7916%가 부합. 행·열은 본문에서 생략."
+    },
+    {
+      "review_id": "N13",
+      "case_id": "replay-s22-op-yoy",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason": "삼성22Q3 영업이익 10,852,045 / 15,817,531백만 원 및 전년 동분기 31.3923% 감소가 부합."
+    },
+    {
+      "review_id": "N14",
+      "case_id": "replay-s22-net-ytd-yoy",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason": "삼성22Q3 당기순이익의 두 9개월 누적 값 31,812,631 / 29,069,502백만 원과 증가율 9.4364%가 부합."
+    },
+    {
+      "review_id": "N15",
+      "case_id": "replay-s22-net-period",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason": "삼성22Q3 당기순이익의 3개월·9개월 금액과 도구의 기간 불일치 보류가 부합. 세부 실행 순서를 단정하지 않음."
+    },
+    {
+      "review_id": "N16",
+      "case_id": "replay-s22-op-qoq",
+      "explanation_verdict": "모호",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason": "2022년과 2021년 3분기가 인접 분기가 아니므로 QoQ로 비교할 수 없다는 결론은 맞음. 다만 “두 분기의 기간이 동일한 분기”는 연도가 다른 기간이 실제로 동일하다는 뜻으로 읽힐 수 있음."
+    },
+    {
+      "review_id": "N17",
+      "case_id": "replay-h25-op-yoy",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason": "현대25Q3 영업이익 2,537,266 / 3,580,900백만 원과 29.1445% 감소가 부합."
+    },
+    {
+      "review_id": "N18",
+      "case_id": "replay-h25-net-yoy",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason": "현대25Q3 당기순이익 2,548,183 / 3,205,850백만 원과 20.5146% 감소가 부합."
+    },
+    {
+      "review_id": "N19",
+      "case_id": "replay-h25-op-period",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason": "현대25Q3의 2025년 9개월·2024년 3개월 영업이익과 기간 불일치 보류가 부합. 별도 시작일 진단을 도구 실행 이력으로 주장하지 않음."
+    },
+    {
+      "review_id": "N20",
+      "case_id": "replay-cross-company-period",
+      "explanation_verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason": "삼성과 현대의 금액·기간·출처가 부합. 서로 다른 회사의 수치로 동일 회사의 성장률을 계산할 수 없고, 도구가 기간 불일치도 보고했다고 설명함."
+    }
+  ]
+}
