@@ -1,0 +1,16 @@
+✔ real A7 export retains question, source location and withholding on reopen (2.729946ms)
+✔ real S4 export retains both inputs, source locations and no computed ratio (0.964584ms)
+✔ whitespace and object key order do not imply different JSON values (3.093004ms)
+✔ changed question, amount, missing field, extra field and evidence order differ (1.73246ms)
+✔ without a current result, a readable file is not claimed to match (0.583209ms)
+✔ malformed, oversized, unsupported and excessively nested files fail (11.166373ms)
+✔ all loaded strings remain literal data including HTML and script-like URLs (1.271125ms)
+✔ unsafe numeric values cannot be silently rounded into a match (0.580888ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 156.196419

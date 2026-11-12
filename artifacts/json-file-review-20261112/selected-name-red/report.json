@@ -1,0 +1,13 @@
+{
+  "actor": "AI-operated Playwright",
+  "human_participation": false,
+  "transport": "local_http",
+  "url": "http://127.0.0.1:8782",
+  "new_paid_calls": 0,
+  "started_at_kst": "2026-11-12T10:51:35.644183+09:00",
+  "checks": [],
+  "status": "failed",
+  "browser_version": "156.0.8078.79",
+  "error": "AssertionError: Selected file name must remain visible after reading",
+  "finished_at_kst": "2026-11-12T10:51:38.244618+09:00"
+}

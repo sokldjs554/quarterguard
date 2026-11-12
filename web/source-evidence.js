@@ -1,3 +1,4 @@
+import {setJSONReviewReference} from './json-file-review.js';
 import {selectCalculationCell} from './source-calculator.js';
 import {esc,api,errorText,download} from './shared.js';
 import {APPLE,appleCards,renderAppleReview} from './apple-review.js';
@@ -38,6 +39,7 @@ form.addEventListener('submit',async event=>{
 box.addEventListener('click',event=>{const button=event.target.closest('[data-calc-side]');if(button)selectCalculationCell(button.dataset.cellId,button.dataset.calcSide);});
 
 function invalidate(){
+ setJSONReviewReference(null);
  ticket++;lastReview=null;exportButton.disabled=true;reviewButton.disabled=false;
  box.innerHTML='<p class="empty">현재 문서·질문으로 다시 검색해 주세요. 이전 근거는 표시하지 않습니다.</p>';
  reviewBox.innerHTML='<p class="empty">현재 문서·질문으로 검증해 주세요. 이전 결과는 표시하지 않습니다.</p>';
@@ -57,7 +59,7 @@ reviewButton.addEventListener('click',async()=>{
  try{
   const result=await api('/api/source-review',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({document_id:doc,query:text})});
   if(current!==ticket)return;
-  reviewBox.innerHTML=renderAppleReview(result,text);box.innerHTML='<p class="empty">검토에 사용한 근거는 위의 결과에 표시했습니다.</p>';lastReview=result;exportButton.disabled=false;
+  reviewBox.innerHTML=renderAppleReview(result,text);box.innerHTML='<p class="empty">검토에 사용한 근거는 위의 결과에 표시했습니다.</p>';lastReview=result;setJSONReviewReference(result);exportButton.disabled=false;
  }catch(error){if(current===ticket){lastReview=null;exportButton.disabled=true;reviewBox.innerHTML=`<p class="error-message" role="alert">${esc(errorText(error))} · 이전 결과를 표시하지 않습니다. 다시 실행해 주세요.</p>`;}}
  finally{if(current===ticket)reviewButton.disabled=false;}
 });

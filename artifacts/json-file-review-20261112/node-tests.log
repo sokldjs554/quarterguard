@@ -1,0 +1,34 @@
+✔ Apple cards preserve USD, fiscal dates, printed HTML location and signed outflows (31.553418ms)
+✔ wrong unit, scope, origin and link reject before render (0.473702ms)
+✔ raw source row labels are escaped (0.289085ms)
+✔ stale review cannot render for new question (0.643081ms)
+✔ source context escapes text and only links HTTPS publisher PDFs at the supplied page (5.514189ms)
+✔ empty, missing and unresolved context never show old source links (3.661691ms)
+✔ scope-only decision basis is separate, escaped, and absent from legacy context (0.66867ms)
+✔ real A7 export retains question, source location and withholding on reopen (3.491956ms)
+✔ real S4 export retains both inputs, source locations and no computed ratio (0.632878ms)
+✔ whitespace and object key order do not imply different JSON values (3.446461ms)
+✔ changed question, amount, missing field, extra field and evidence order differ (2.289962ms)
+✔ without a current result, a readable file is not claimed to match (0.637593ms)
+✔ malformed, oversized, unsupported and excessively nested files fail (13.566164ms)
+✔ all loaded strings remain literal data including HTML and script-like URLs (1.447898ms)
+✔ unsafe numeric values cannot be silently rounded into a match (0.657397ms)
+✔ current evidence separates product scope, reviewed responses, latest guard, and actors (2.900049ms)
+✔ historical failures are dated and never relabeled as current status (25.68636ms)
+✔ malformed current summary fails and text is escaped (1.273113ms)
+✔ latest model batch is separate from prior human labels and has unresolved prose warnings (0.371756ms)
+✔ confirmed v5 human verdicts do not become an overall accuracy improvement (0.443877ms)
+✔ v6 separates structural regression, new tasks, and still-pending human review (0.255328ms)
+✔ review context includes ordered evidence, mode and document version (1.596411ms)
+✔ review persists only valid fields; damaged storage is ignored (1.223564ms)
+✔ storage write failures propagate so UI cannot claim saved (0.434652ms)
+✔ CSV preserves numerical output and separates manual review from automated status (1.277792ms)
+✔ CSV neutralizes formula-like notes including leading whitespace (1.306186ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 252.881392
