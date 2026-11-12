@@ -65,6 +65,14 @@
    </form><div id="source-calc-result" aria-live="polite"><p class="empty">조건을 선택한 뒤 실행해 주세요.</p></div>
   </details>
   <div id="source-evidence-results" aria-live="polite"><p class="empty">문서의 조건을 함께 확인하세요. 검색 결과는 계산 전 근거 후보입니다.</p></div>
+  <details id="saved-json-reader" class="saved-json-reader"><summary>저장한 JSON 파일 확인</summary>
+   <p>JSON 저장 후 아래에서 내려받은 파일을 선택하세요. 별도 앱이나 file:// 주소로 열 필요 없이 이 화면에서 읽을 수 있습니다. 파일은 서버로 보내지 않고 이 브라우저에서만 읽습니다.</p>
+   <label for="saved-json-file">내려받은 JSON 파일 선택</label><input id="saved-json-file" type="file" accept=".json,application/json">
+   <button id="saved-json-clear" type="button" class="secondary">파일 내용 닫기</button>
+   <p id="saved-json-status" role="status">파일을 선택하면 이 화면에서 내용을 읽을 수 있습니다.</p>
+   <p id="saved-json-error" class="error-message" role="alert" hidden></p>
+   <div id="saved-json-content" hidden><p>파일에 기록된 내용입니다. 현재 결과와의 값 대조는 공백·객체 키 순서를 제외하며, 원문 정확성이나 파일 출처의 진위를 확인한 것은 아닙니다.</p><pre id="saved-json-summary"></pre><details><summary>선택한 파일 전체 내용</summary><pre id="saved-json-raw"></pre></details></div>
+  </details>
  </section>
  <section class="document-index"><h2>분기 비교 작업지 문서</h2><div id="source-index"></div></section>
 </section>

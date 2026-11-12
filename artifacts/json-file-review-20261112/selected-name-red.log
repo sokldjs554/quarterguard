@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/scripts/browser_json_file_review.py", line 68, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/scripts/browser_json_file_review.py", line 28, in main
+    assert field.evaluate('(el)=>el.files[0]?.name')==saved.name, 'Selected file name must remain visible after reading'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Selected file name must remain visible after reading

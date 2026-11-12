@@ -364,3 +364,10 @@ dialog::backdrop { background:#1f251966; }
 #apple-review-actions pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:280px;overflow:auto;font:11px/1.6 var(--mono)}
 #apple-review-actions blockquote{margin:12px 0;padding:12px;border-left:3px solid var(--line);overflow-wrap:anywhere;line-height:1.7}
 #apple-review-actions .finding{margin:16px 0}
+
+.saved-json-reader{margin:20px 0;padding:14px;border:1px solid var(--line);border-radius:8px;min-width:0}
+.saved-json-reader>summary{cursor:pointer;font-weight:600;line-height:1.6}
+.saved-json-reader p{line-height:1.7;overflow-wrap:anywhere;white-space:pre-line}
+.saved-json-reader label{display:block;margin-top:12px}
+.saved-json-reader input[type=file]{display:block;max-width:100%;margin:8px 0 12px}
+.saved-json-reader pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:420px;overflow:auto;font:12px/1.7 var(--mono);padding:12px;background:var(--bg,#f7f9f6)}

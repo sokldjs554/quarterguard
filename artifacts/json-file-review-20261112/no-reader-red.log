@@ -1,0 +1,73 @@
+Traceback (most recent call last):
+  File "<stdin>", line 4, in <module>
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 23332, in to_be_visible
+    self._sync(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 852, in to_be_visible
+    await self._expect_impl(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 128, in _expect_impl
+    _record_soft_or_raise(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 60, in _record_soft_or_raise
+    raise error
+AssertionError: Locator expected to be visible
+Actual value: None
+Error: element(s) not found 
+Call log:
+  - Expect "to_be_visible" with timeout 1500ms
+  - waiting for get_by_label("내려받은 JSON 파일 선택")
+
+Aria snapshot:
+- link "작업 영역으로 이동":
+  - /url: "#main"
+- banner:
+  - link "QuarterGuard 홈":
+    - /url: /
+    - text: QuarterGuard
+  - navigation "주 메뉴":
+    - button "공시 검토"
+    - button "근거 검색"
+    - button "검증 기록"
+  - link "프로젝트 정보 ↗":
+    - /url: https://github.com/sokldjs554/quarterguard
+- complementary "검토 자료":
+  - text: 검토 자료 2 삼성전자 공개 예시
+  - button "2024년 3분기 179쪽 · 영문 IR" [pressed]:
+    - strong: 2024년 3분기
+    - text: 179쪽 · 영문 IR
+  - button "2024년 반기 287쪽 · 영문 IR":
+    - strong: 2024년 반기
+    - text: 287쪽 · 영문 IR
+  - strong: 예시 자료 안내
+  - paragraph: 2024년 반기·3분기 영문 IR 보고서의 손익계산서입니다.
+  - paragraph: 수집된 문서 2건 안에서 비교할 수 있습니다. 근거 검색에는 SK하이닉스 연결재무제표의 선택 항목도 있습니다.
+  - link "데이터 범위 ↗":
+    - /url: https://github.com/sokldjs554/quarterguard/blob/main/docs/data.md
+- main:
+  - heading "근거 검색" [level=1]
+  - text: 분기 수치 192개 · SK하이닉스 18개 · Apple 수치 25개 기업 · 연도 · 분기 · 범위 · 항목 · 기간 · 통화 · 표시 단위
+  - textbox "기업 · 연도 · 분기 · 범위 · 항목 · 기간 · 통화 · 표시 단위": 삼성전자 2024 3분기 연결 매출액 3개월 KRW 백만원
+  - button "근거 검색"
+  - paragraph: "한국어·영어로 검색 조건을 입력하세요. 빠진 조건이나 해석하지 못한 표현을 안내합니다. 현재 작업지의 수집 범위: 삼성전자 / 2023·2024 / Q2·Q3 / 연결·별도 / 6개 손익 항목."
+  - text: 검색 결과는 검증 전 후보입니다. 후보를 직접 선택해 작업지에서 대조할 수 있습니다.
+  - region "선택 문서의 근거 찾기":
+    - heading "선택 문서의 근거 찾기" [level=2]
+    - text: 검토 문서
+    - combobox "검토 문서":
+      - option "SK하이닉스 · 2024·2023 연결재무제표 · KRW" [selected]
+      - option "Apple · FY2024 Form 10-K · USD"
+    - paragraph: 현금·재고, 매출·매출원가·영업손익, 제품별 매출의 원문 근거 18개를 검색합니다. 통화는 KRW, 표시 단위는 백만 원입니다. 선택 근거로 연간 비교·전년 말 잔액 증감·제품 비중을 계산할 수 있습니다. 재고 개월분은 정의 확인이 필요합니다.
+    - text: 이 문서에서 확인할 항목과 연도
+    - textbox "이 문서에서 확인할 항목과 연도": 현금은 2023년 말보다 얼마나 늘었나?
+    - button "원문 근거 검색"
+    - group: 선택 근거로 계산 · 연간 / 전년 말 / 제품 비중
+    - paragraph: 문서의 조건을 함께 확인하세요. 검색 결과는 계산 전 근거 후보입니다.
+  - heading "분기 비교 작업지 문서" [level=2]
+  - link "2024년 3분기 보고서 · Samsung Electronics ↗":
+    - /url: https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf
+  - text: 179 pages · 2024-09-30
+  - link "2024년 반기 보고서 · Samsung Electronics ↗":
+    - /url: https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_Half_Interim_Report.pdf
+  - text: 287 pages · 2024-06-30
+- contentinfo: 공개 문서 기반 검토 · 투자 추천이나 감사 의견이 아닙니다. v1.4.0 · 20c15d5

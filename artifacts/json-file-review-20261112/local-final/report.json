@@ -1,0 +1,13 @@
+{
+  "actor": "AI-operated Playwright",
+  "human_participation": false,
+  "transport": "local_http",
+  "url": "http://127.0.0.1:8782",
+  "new_paid_calls": 0,
+  "started_at_kst": "2026-11-12T10:52:03.407919+09:00",
+  "checks": [],
+  "status": "failed",
+  "browser_version": "156.0.8078.79",
+  "error": "AssertionError: Locator expected to contain text '읽는 중'\nActual value: 파일 선택을 취소했습니다. \nCall log:\n  - Expect \"to_contain_text\" with timeout 5000ms\n  - waiting for locator(\"#saved-json-status\")\n    14 × locator resolved to <p role=\"status\" id=\"saved-json-status\">파일 선택을 취소했습니다.</p>\n       - unexpected value \"파일 선택을 취소했습니다.\"\n\nAria snapshot:\n- status: 파일 선택을 취소했습니다.",
+  "finished_at_kst": "2026-11-12T10:52:11.479191+09:00"
+}

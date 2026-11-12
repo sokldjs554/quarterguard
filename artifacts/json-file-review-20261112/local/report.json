@@ -1,0 +1,13 @@
+{
+  "actor": "AI-operated Playwright",
+  "human_participation": false,
+  "transport": "local_http",
+  "url": "http://127.0.0.1:8782",
+  "new_paid_calls": 0,
+  "started_at_kst": "2026-11-12T10:49:35.884243+09:00",
+  "checks": [],
+  "status": "failed",
+  "browser_version": "156.0.8078.79",
+  "error": "Error: Page.evaluate: Error: injected read failure\n    at File.text (eval at evaluate (:311:30), <anonymous>:1:98)\n    at UtilityScript.evaluate (<anonymous>:318:18)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+  "finished_at_kst": "2026-11-12T10:49:39.018728+09:00"
+}

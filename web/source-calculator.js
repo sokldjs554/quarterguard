@@ -1,3 +1,4 @@
+import {setJSONReviewReference} from './json-file-review.js';
 import {esc,api,errorText,download} from './shared.js';
 
 const root=document.querySelector('#source-calculator');
@@ -14,6 +15,7 @@ const number=v=>Number(v).toLocaleString('en-US',{maximumFractionDigits:12});
 const dateLabel=c=>c.period_kind==='instant'?`${c.as_of} 기준 잔액`:`${c.start} — ${c.end} · 연간 실적`;
 const label=c=>`${c.year} · ${names[c.metric]} · ${number(c.value)}백만 원 · ${c.period_kind==='instant'?'연말 잔액':'연간'}`;
 function invalidate(){
+ setJSONReviewReference(null);
  sequence++;lastResult=null;exportButton.disabled=true;submit.disabled=!data;
  resultBox.innerHTML='<p class="empty">현재 조건으로 확인해 주세요. 이전 계산 결과는 표시하지 않습니다.</p>';
 }
@@ -76,7 +78,7 @@ document.querySelector('#source-calc-form').addEventListener('submit',async even
  try{
   const r=await api('/api/source-calculations',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(request)});
   if(ticket!==sequence)return;
-  resultBox.innerHTML=renderResult(r,request);lastResult=r;exportButton.disabled=false;
+  resultBox.innerHTML=renderResult(r,request);lastResult=r;setJSONReviewReference(r);exportButton.disabled=false;
  }catch(error){if(ticket===sequence){lastResult=null;exportButton.disabled=true;resultBox.innerHTML=`<p class="error-message" role="alert">${esc(errorText(error))} · 이전 계산 결과는 표시하지 않습니다. 다시 실행해 주세요.</p>`;}}
  finally{if(ticket===sequence)submit.disabled=false;}
 });

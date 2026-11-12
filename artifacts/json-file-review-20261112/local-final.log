@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/scripts/browser_json_file_review.py", line 68, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/scripts/browser_json_file_review.py", line 47, in main
+    field.set_input_files(saved);expect(status).to_contain_text('읽는 중');q.fill('2024 제품 서비스 매출총이익률');page.evaluate('window.releaseFileRead()');page.evaluate('() => {File.prototype.text=window.originalFileText}')
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 22016, in to_contain_text
+    self._sync(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 303, in to_contain_text
+    await self._expect_impl(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 128, in _expect_impl
+    _record_soft_or_raise(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 60, in _record_soft_or_raise
+    raise error
+AssertionError: Locator expected to contain text '읽는 중'
+Actual value: 파일 선택을 취소했습니다. 
+Call log:
+  - Expect "to_contain_text" with timeout 5000ms
+  - waiting for locator("#saved-json-status")
+    14 × locator resolved to <p role="status" id="saved-json-status">파일 선택을 취소했습니다.</p>
+       - unexpected value "파일 선택을 취소했습니다."
+
+Aria snapshot:
+- status: 파일 선택을 취소했습니다.
