@@ -1,0 +1,281 @@
+{
+  "record_type": "submitted_human_review",
+  "reviewer_id": "b",
+  "participant": "existing participant, not a newly recruited person",
+  "reviewed_at_as_submitted": "2026-11-12 17:10",
+  "timezone_explicit_in_submission": null,
+  "environment_as_submitted": "원격 Linux 환경. PDF는 웹에서 추출된 텍스트와 페이지 정보를 확인했습니다.",
+  "assistance_as_submitted": "제공된 원응답·도구 결과·전체 결과 보고서와 공식 PDF.",
+  "review_basis": "PDF extracted text and page information; full results report available; not a blinded independent review",
+  "original_page_image_recheck": "not reported",
+  "new_model_calls": 0,
+  "reported_aggregate": {
+    "참": 13,
+    "거짓": 4,
+    "모호": 3
+  },
+  "counts_from_individual_rows": {
+    "참": 11,
+    "거짓": 4,
+    "모호": 5
+  },
+  "aggregate_conflict": true,
+  "resolution": "Keep every individual verdict unchanged; use row-derived counts for summary; preserve submitted aggregate separately.",
+  "structured_fields_match": 20,
+  "evidence_ids_match": 20,
+  "empty_evidence_cases": [
+    "R03",
+    "R10"
+  ],
+  "prose_source_match": 18,
+  "prose_source_not_applicable": 2,
+  "gate_cross_tab": {
+    "execution_gate_passed": {
+      "true": {
+        "거짓": 1,
+        "참": 2,
+        "모호": 1
+      },
+      "false": {
+        "참": 9,
+        "모호": 4,
+        "거짓": 3
+      }
+    },
+    "offline_gate_passed": {
+      "true": {
+        "참": 3,
+        "모호": 1
+      },
+      "false": {
+        "참": 8,
+        "거짓": 4,
+        "모호": 4
+      }
+    }
+  },
+  "rows": [
+    {
+      "review_id": "R01",
+      "case_id": "qoq-revenue",
+      "verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason_as_submitted": "삼성24Q3·삼성24H1 연결 Revenue의 분기 금액 **79,098,731 / 74,068,302백만 원**, 증감률 6.7916%가 부합.",
+      "execution_gate_passed": false,
+      "offline_gate_passed": false
+    },
+    {
+      "review_id": "R02",
+      "case_id": "ytd-trap",
+      "verdict": "거짓",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason_as_submitted": "삼성24Q3의 9개월·3개월 금액과 보류는 맞지만, **시작 월·일 조건도 도구 실행 이력에서 확인한 것처럼 주장**함. 뒤의 별도 진단 안내가 앞의 잘못된 실행 이력 주장을 바로잡지는 못함.",
+      "execution_gate_passed": true,
+      "offline_gate_passed": false
+    },
+    {
+      "review_id": "R03",
+      "case_id": "no-evidence",
+      "verdict": "모호",
+      "structured_fields": "일치",
+      "evidence_ids": "일치: 빈 목록",
+      "prose_source": "해당 없음",
+      "reason_as_submitted": "도구는 현재 검색 조건에 대해 `SEARCH_EMPTY`를 반환함. 검색 결과가 없다는 사실만으로 **2025년 실적 데이터 전체가 수집 범위 밖**이라고 단정한 부분은 도구 결과만으로 확인되지 않음.",
+      "execution_gate_passed": false,
+      "offline_gate_passed": false
+    },
+    {
+      "review_id": "R04",
+      "case_id": "reconcile-revenue",
+      "verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason_as_submitted": "삼성24Q3 9개월 **225,082,634** − 삼성24H1 6개월 **145,983,903** = 직접 공시된 3분기 **79,098,731백만 원**.",
+      "execution_gate_passed": false,
+      "offline_gate_passed": false
+    },
+    {
+      "review_id": "R05",
+      "case_id": "replay-normal-qoq",
+      "verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason_as_submitted": "삼성24Q3·삼성24H1 Revenue의 기간·범위·금액과 6.7916%가 부합.",
+      "execution_gate_passed": false,
+      "offline_gate_passed": false
+    },
+    {
+      "review_id": "R06",
+      "case_id": "replay-normal-yoy",
+      "verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason_as_submitted": "삼성24Q3 Revenue의 2024·2023년 3개월 KRW 열과 전년 동분기 증감률 17.3491%가 부합.",
+      "execution_gate_passed": false,
+      "offline_gate_passed": false
+    },
+    {
+      "review_id": "R07",
+      "case_id": "replay-period-mismatch",
+      "verdict": "모호",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason_as_submitted": "9개월·3개월 차이와 보류는 맞음. 다만 시작 월·일을 `decision_basis`에 귀속한 앞부분과 **별도 재계산이며 실행 이력이 아니라는** 뒤 설명의 관계가 불분명함.",
+      "execution_gate_passed": false,
+      "offline_gate_passed": false
+    },
+    {
+      "review_id": "R08",
+      "case_id": "replay-scope-mismatch",
+      "verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason_as_submitted": "삼성24Q3 연결 Revenue와 삼성24H1 **별도** Revenue를 구분하고 범위 차이로 보류. 별도 금액은 **53,734,118백만 원**.",
+      "execution_gate_passed": true,
+      "offline_gate_passed": true
+    },
+    {
+      "review_id": "R09",
+      "case_id": "replay-unit-draft",
+      "verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason_as_submitted": "두 금액과 단위는 백만 원. “천 원”을 **잘못된 초안에 근거가 없다는 뜻**으로 부정했으며, 실제 근거 전체가 없다고 말한 것은 아님.",
+      "execution_gate_passed": false,
+      "offline_gate_passed": false
+    },
+    {
+      "review_id": "R10",
+      "case_id": "replay-no-evidence",
+      "verdict": "모호",
+      "structured_fields": "일치",
+      "evidence_ids": "일치: 빈 목록",
+      "prose_source": "해당 없음",
+      "reason_as_submitted": "현재 검색 조건에서 근거를 찾지 못한 것은 맞음. 그러나 **수집된 자료 전체에 해당 근거가 존재하지 않는다**는 범위까지는 제시된 도구 결과만으로 확인하기 어려움.",
+      "execution_gate_passed": true,
+      "offline_gate_passed": true
+    },
+    {
+      "review_id": "R11",
+      "case_id": "replay-conflicting-number-draft",
+      "verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason_as_submitted": "삼성24Q3·삼성24H1 금액과 계산식, 2분기 대비 3분기 증가율 6.7916%가 부합.",
+      "execution_gate_passed": false,
+      "offline_gate_passed": false
+    },
+    {
+      "review_id": "R12",
+      "case_id": "replay-citation-draft",
+      "verdict": "모호",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason_as_submitted": "금액·방향·최종 **6.7916%**는 맞지만, 앞 문장에서 계산 결과를 **6.7916**이라고만 써 단위를 빠뜨림. 뒤 문장에서 `%`를 명시함.",
+      "execution_gate_passed": false,
+      "offline_gate_passed": false
+    },
+    {
+      "review_id": "R13",
+      "case_id": "replay-s22-op-yoy",
+      "verdict": "거짓",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason_as_submitted": "삼성22Q3 영업이익 금액과 전년 동분기 **−31.3923%**는 맞지만, 이를 **연평균 성장률**이라고 잘못 명명함.",
+      "execution_gate_passed": false,
+      "offline_gate_passed": false
+    },
+    {
+      "review_id": "R14",
+      "case_id": "replay-s22-net-ytd-yoy",
+      "verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason_as_submitted": "삼성22Q3 당기순이익의 2022·2021년 **9개월 누적** 금액과 9.4364%가 부합.",
+      "execution_gate_passed": true,
+      "offline_gate_passed": true
+    },
+    {
+      "review_id": "R15",
+      "case_id": "replay-s22-net-period",
+      "verdict": "모호",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason_as_submitted": "삼성22Q3의 3개월·9개월 금액과 보류는 맞음. 다만 **독립 재계산이 비교 계산을 보류했다**는 표현은 도구가 실제로 보류한 사실과 진단의 역할을 혼동할 수 있음.",
+      "execution_gate_passed": false,
+      "offline_gate_passed": false
+    },
+    {
+      "review_id": "R16",
+      "case_id": "replay-s22-op-qoq",
+      "verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason_as_submitted": "삼성22Q3의 2022년과 2021년 3분기는 인접 분기가 아니므로 QoQ 비교를 보류한다는 설명에 부합.",
+      "execution_gate_passed": false,
+      "offline_gate_passed": false
+    },
+    {
+      "review_id": "R17",
+      "case_id": "replay-h25-op-yoy",
+      "verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason_as_submitted": "현대25Q3 영업이익 **2,537,266 / 3,580,900백만 원**과 **29.1445% 감소**가 부합. 감소 크기를 양수로 쓴 표현은 음수 증감률과 모순되지 않음.",
+      "execution_gate_passed": false,
+      "offline_gate_passed": false
+    },
+    {
+      "review_id": "R18",
+      "case_id": "replay-h25-net-yoy",
+      "verdict": "참",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason_as_submitted": "현대25Q3 순이익 **2,548,183 / 3,205,850백만 원**, 20.5146% 감소와 증감률 −20.5146%가 부합.",
+      "execution_gate_passed": false,
+      "offline_gate_passed": true
+    },
+    {
+      "review_id": "R19",
+      "case_id": "replay-h25-op-period",
+      "verdict": "거짓",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason_as_submitted": "현대25Q3의 금액과 보류는 맞지만, **시작 월·일 차이까지 도구가 문제를 제기한 이유처럼 서술**함. 도구는 개월 수 불일치에서 비교를 제한했고, 시작 월·일은 별도 진단임.",
+      "execution_gate_passed": false,
+      "offline_gate_passed": false
+    },
+    {
+      "review_id": "R20",
+      "case_id": "replay-cross-company-period",
+      "verdict": "거짓",
+      "structured_fields": "일치",
+      "evidence_ids": "일치",
+      "prose_source": "일치",
+      "reason_as_submitted": "서로 다른 회사·연도이므로 **같은 회사의 전년 동분기 비교**가 아니라는 결론은 맞음. 그러나 다른 회사라는 이유만으로 영업이익의 **모든 직접 비교가 불가능하다**고 단정하는 것은 지나침.",
+      "execution_gate_passed": false,
+      "offline_gate_passed": false
+    }
+  ],
+  "source_file": "submission.md",
+  "source_sha256": "98689a3facc59a326b3c21a533dcead44ebced8451fee4f9e14a647c3b05b589"
+}

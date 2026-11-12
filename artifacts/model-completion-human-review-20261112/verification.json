@@ -1,0 +1,15 @@
+{
+  "rows": 20,
+  "row_verdict_counts": {
+    "참": 11,
+    "거짓": 4,
+    "모호": 5
+  },
+  "aggregate_discrepancy_preserved": true,
+  "csv_json_match": true,
+  "original_model_artifacts_and_empty_forms_unchanged": true,
+  "product_code_changed": false,
+  "new_paid_calls": 0,
+  "new_participants": 0,
+  "source_sha256": "98689a3facc59a326b3c21a533dcead44ebced8451fee4f9e14a647c3b05b589"
+}

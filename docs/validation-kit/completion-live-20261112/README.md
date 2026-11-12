@@ -1,5 +1,7 @@
 # 새 모델 응답 검수 자료
 
+**후속 접수:** [b의 새 응답20건 검수](../completion-human-review-20261112/README.md)를 받았다. 개별 판정 기준 참11·거짓4·모호5이며, 제출 마지막 집계와의 차이를 별도로 보존했다. 아래 안내·빈 양식·ZIP은 준비 당시 자료로 유지한다.
+
 [새 원응답20건과 원문·도구 근거](responses.md)를 먼저 읽고 [빈 판정표](review.csv)에 기록해 주세요. 다운로드가 불편하면 표를 채팅에 그대로 적어도 됩니다.
 
 [ZIP 다운로드](https://raw.githubusercontent.com/sokldjs554/quarterguard/main/docs/validation-kit/completion-live-20261112/quarterguard-completion-review-pack.zip)에는 원응답, 도구 결과, 공식 원문 링크, 빈 판정표와 메모가 들어 있습니다. PDF 원본 파일 자체는 포함하지 않았습니다. 저장한 파일을 브라우저에서 열기 어렵다면 위 GitHub 문서를 바로 읽으면 됩니다.

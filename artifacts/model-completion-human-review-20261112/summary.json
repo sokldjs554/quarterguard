@@ -1,0 +1,59 @@
+{
+  "record_type": "submitted_human_review",
+  "reviewer_id": "b",
+  "participant": "existing participant, not a newly recruited person",
+  "reviewed_at_as_submitted": "2026-11-12 17:10",
+  "timezone_explicit_in_submission": null,
+  "environment_as_submitted": "원격 Linux 환경. PDF는 웹에서 추출된 텍스트와 페이지 정보를 확인했습니다.",
+  "assistance_as_submitted": "제공된 원응답·도구 결과·전체 결과 보고서와 공식 PDF.",
+  "review_basis": "PDF extracted text and page information; full results report available; not a blinded independent review",
+  "original_page_image_recheck": "not reported",
+  "new_model_calls": 0,
+  "reported_aggregate": {
+    "참": 13,
+    "거짓": 4,
+    "모호": 3
+  },
+  "counts_from_individual_rows": {
+    "참": 11,
+    "거짓": 4,
+    "모호": 5
+  },
+  "aggregate_conflict": true,
+  "resolution": "Keep every individual verdict unchanged; use row-derived counts for summary; preserve submitted aggregate separately.",
+  "structured_fields_match": 20,
+  "evidence_ids_match": 20,
+  "empty_evidence_cases": [
+    "R03",
+    "R10"
+  ],
+  "prose_source_match": 18,
+  "prose_source_not_applicable": 2,
+  "gate_cross_tab": {
+    "execution_gate_passed": {
+      "true": {
+        "거짓": 1,
+        "참": 2,
+        "모호": 1
+      },
+      "false": {
+        "참": 9,
+        "모호": 4,
+        "거짓": 3
+      }
+    },
+    "offline_gate_passed": {
+      "true": {
+        "참": 3,
+        "모호": 1
+      },
+      "false": {
+        "참": 8,
+        "거짓": 4,
+        "모호": 4
+      }
+    }
+  },
+  "source_file": "submission.md",
+  "source_sha256": "98689a3facc59a326b3c21a533dcead44ebced8451fee4f9e14a647c3b05b589"
+}
