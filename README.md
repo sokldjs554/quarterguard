@@ -4,11 +4,11 @@
 
 [공개 데모](https://quarterguard.onrender.com/) · [최신 지원 근거·공고 대조](docs/application-evidence-20261112.md) · [최종 사람 검수 묶음](docs/validation-kit/final-handoff-20261112/README.md) · [본인 코드 검토](docs/code-review-kit/README.md) · [서버 커밋 확인](https://quarterguard.onrender.com/health)
 
-**최신 사람 확인·지원서 준비:** [실사용11과제·실제 LLM20건·빈 기록지](docs/validation-kit/final-handoff-20261112/README.md) · [확인된 근거로 쓴 지원서 초안](docs/application-evidence-20261112.md). [후속 제출 기록](docs/validation-kit/final-followup-20261112/README.md)을 받았습니다. 기존 참여자 b가 데모11과제와 실제 응답20건을 직접 확인했다고 후속 확인됐습니다. 후속 확인에서 b의 A7·S4 다운로드·파일 내용 대조가 완료됐고, A7 질문 변경 후 상태 확인은 별도로 남아 있습니다. 제품 응답4건은 설명 참2·거짓2로 판정됐고, v9 16건은 참13·모호3입니다. 최초 제출의 AI 검토 표기는 사용자 확인에 따라 정정했고 원기록은 보존했습니다. 새 유료 호출0회.
+**최신 사람 확인·지원서 준비:** [실사용11과제·실제 LLM20건·빈 기록지](docs/validation-kit/final-handoff-20261112/README.md) · [확인된 근거로 쓴 지원서 초안](docs/application-evidence-20261112.md). [후속 제출 기록](docs/validation-kit/final-followup-20261112/README.md)을 받았습니다. 기존 참여자 b가 데모11과제와 실제 응답20건을 직접 확인했다고 후속 확인됐습니다. 후속 확인에서 b의 A7·S4 다운로드·파일 내용 대조가 완료됐고, A7 질문 변경 후 이전 결과 제거·저장 비활성화도 사용자 확인을 받아 이번 후속 체크리스트를 완료했습니다. 제품 응답4건은 설명 참2·거짓2로 판정됐고, v9 16건은 참13·모호3입니다. 최초 제출의 AI 검토 표기는 사용자 확인에 따라 정정했고 원기록은 보존했습니다. 새 유료 호출0회.
 
 **남은 저장 동작 기술 점검:** [A7·S4 다운로드·질문 변경 후 상태](docs/final-export-verification-20261112.md)를 PC·모바일 크기의 자동 브라우저로 확인했습니다. S4가 연간 증감률처럼 보이는 문구도 수정하고 공개 배포 후 두 화면 크기에서 재확인했습니다. b의 실기기 저장 재확인과는 구분합니다.
 
-**저장 파일 열기 보완:** [JSON 파일을 데모에서 다시 읽는 기능과 사용법](docs/json-file-review-20261112.md)을 추가했습니다. 파일 선택으로 브라우저 안에서만 읽고 현재 결과와 대조합니다. b가 보고한 file:// 열기 실패는 보존합니다. 이후 [A7·S4 파일 내용 네 항목과 화면의 일치 보고](docs/validation-kit/json-content-followup-20261112/README.md)를 받았으며, 다운로드·내용 검수 모두 b의 직접 수행으로 확인됐습니다. 파일을 연 방법·실제 환경은 미제공입니다. A7 질문 변경 후 상태는 이 후속 표에 없습니다.
+**저장 파일 열기 보완:** [JSON 파일을 데모에서 다시 읽는 기능과 사용법](docs/json-file-review-20261112.md)을 추가했습니다. 파일 선택으로 브라우저 안에서만 읽고 현재 결과와 대조합니다. b가 보고한 file:// 열기 실패는 보존합니다. 이후 [A7·S4 파일 내용 네 항목과 화면의 일치 보고](docs/validation-kit/json-content-followup-20261112/README.md)를 받았으며, 다운로드·내용 검수 모두 b의 직접 수행으로 확인됐습니다. 파일을 연 방법·실제 환경은 미제공입니다. A7 질문 변경 후 상태는 별도의 사용자 확인 메시지로 연결했습니다.
 
 ## 현재 제품 지원 범위
 

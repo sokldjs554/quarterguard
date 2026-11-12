@@ -1,0 +1,15 @@
+{
+  "record_type": "question_edit_state_confirmation",
+  "reporter": "project author via chat",
+  "user_statement": "응 이전 결과는 사라지고 저장 버튼 비활성화 되는거 확인했어",
+  "task": "A7 question edit before rerunning",
+  "previous_result_cleared": true,
+  "export_button_disabled": true,
+  "actual_operator": null,
+  "operator_note": "이번 짧은 확인은 실제 조작자를 별도로 명시하지 않았으므로 b의 단독 수행으로 추가 귀속하지 않는다.",
+  "actual_date": null,
+  "environment": null,
+  "new_paid_calls": 0,
+  "new_unique_participants": 0,
+  "scope": "Completes the reported A7/S4 follow-up checklist; not a new source audit, model generation or customer deployment."
+}
