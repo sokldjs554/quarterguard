@@ -13,6 +13,12 @@ test('current closeout shows completed human work and separates fresh generation
  const bad=structuredClone(current);bad.current_status.fresh_batch_status='<script>alert(1)</script>';
  assert.ok(!renderLatestProgress({summary:bad}).includes('<script>'));
 });
+test('fresh paid batch displays poorer gate result without inventing human approval',()=>{
+ const current=JSON.parse(fs.readFileSync(new URL('../data/latest-progress-closeout-live-20261112.json',import.meta.url)));
+ const html=renderLatestProgress({summary:current,runtime_commit:'newrun'});
+ for(const value of ['새 실제 생성 20건','8/20','12건 보류','0.0189500','이번 응답의 사람 판정은 아직 없습니다'])assert.ok(html.includes(value),value);
+ assert.ok(!html.includes('별도 승인 대기'));
+});
 test('current evidence separates product scope, reviewed responses, latest guard, and actors',()=>{
  const html=renderLatestProgress({summary,runtime_commit:'abcdef123'});
  for(const text of ['최신 근거 요약','현대차는 공개 작업지에 미등록','참 5·모호 3 → 참 7·모호 1','8/8 → 7/8','변경 후 새 실호출·b 재검수는 아직 없습니다','직전 기능 변경(f5377ad)','실행 주체는 AI','현재 서버 abcdef1'])assert.ok(html.includes(text),text);

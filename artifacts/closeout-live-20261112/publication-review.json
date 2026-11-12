@@ -1,0 +1,16 @@
+{
+  "reviewer": "AI code-review subagent, not b",
+  "findings": [],
+  "verified": [
+    "20 requests equal approved freeze",
+    "20 raw responses equal human-kit JSON and Markdown",
+    "ZIP members equal kit files",
+    "summary source hashes match",
+    "all automatic checks reproduced",
+    "input31635/output3935/cost0.0189500",
+    "new human review fields remain null",
+    "prior vs new results remain separate"
+  ],
+  "new_paid_calls_by_review": 0,
+  "new_human_verdicts": 0
+}

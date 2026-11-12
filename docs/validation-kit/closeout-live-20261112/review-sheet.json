@@ -1,0 +1,228 @@
+{
+  "reviewer": null,
+  "reviewed_at": null,
+  "environment": null,
+  "assistance": null,
+  "rows": [
+    {
+      "review_id": "N01",
+      "case_id": "qoq-revenue",
+      "reviewer": null,
+      "reviewed_at": null,
+      "explanation_verdict": null,
+      "structured_fields": null,
+      "evidence_ids": null,
+      "prose_source": null,
+      "reason": null
+    },
+    {
+      "review_id": "N02",
+      "case_id": "ytd-trap",
+      "reviewer": null,
+      "reviewed_at": null,
+      "explanation_verdict": null,
+      "structured_fields": null,
+      "evidence_ids": null,
+      "prose_source": null,
+      "reason": null
+    },
+    {
+      "review_id": "N03",
+      "case_id": "no-evidence",
+      "reviewer": null,
+      "reviewed_at": null,
+      "explanation_verdict": null,
+      "structured_fields": null,
+      "evidence_ids": null,
+      "prose_source": null,
+      "reason": null
+    },
+    {
+      "review_id": "N04",
+      "case_id": "reconcile-revenue",
+      "reviewer": null,
+      "reviewed_at": null,
+      "explanation_verdict": null,
+      "structured_fields": null,
+      "evidence_ids": null,
+      "prose_source": null,
+      "reason": null
+    },
+    {
+      "review_id": "N05",
+      "case_id": "replay-normal-qoq",
+      "reviewer": null,
+      "reviewed_at": null,
+      "explanation_verdict": null,
+      "structured_fields": null,
+      "evidence_ids": null,
+      "prose_source": null,
+      "reason": null
+    },
+    {
+      "review_id": "N06",
+      "case_id": "replay-normal-yoy",
+      "reviewer": null,
+      "reviewed_at": null,
+      "explanation_verdict": null,
+      "structured_fields": null,
+      "evidence_ids": null,
+      "prose_source": null,
+      "reason": null
+    },
+    {
+      "review_id": "N07",
+      "case_id": "replay-period-mismatch",
+      "reviewer": null,
+      "reviewed_at": null,
+      "explanation_verdict": null,
+      "structured_fields": null,
+      "evidence_ids": null,
+      "prose_source": null,
+      "reason": null
+    },
+    {
+      "review_id": "N08",
+      "case_id": "replay-scope-mismatch",
+      "reviewer": null,
+      "reviewed_at": null,
+      "explanation_verdict": null,
+      "structured_fields": null,
+      "evidence_ids": null,
+      "prose_source": null,
+      "reason": null
+    },
+    {
+      "review_id": "N09",
+      "case_id": "replay-unit-draft",
+      "reviewer": null,
+      "reviewed_at": null,
+      "explanation_verdict": null,
+      "structured_fields": null,
+      "evidence_ids": null,
+      "prose_source": null,
+      "reason": null
+    },
+    {
+      "review_id": "N10",
+      "case_id": "replay-no-evidence",
+      "reviewer": null,
+      "reviewed_at": null,
+      "explanation_verdict": null,
+      "structured_fields": null,
+      "evidence_ids": null,
+      "prose_source": null,
+      "reason": null
+    },
+    {
+      "review_id": "N11",
+      "case_id": "replay-conflicting-number-draft",
+      "reviewer": null,
+      "reviewed_at": null,
+      "explanation_verdict": null,
+      "structured_fields": null,
+      "evidence_ids": null,
+      "prose_source": null,
+      "reason": null
+    },
+    {
+      "review_id": "N12",
+      "case_id": "replay-citation-draft",
+      "reviewer": null,
+      "reviewed_at": null,
+      "explanation_verdict": null,
+      "structured_fields": null,
+      "evidence_ids": null,
+      "prose_source": null,
+      "reason": null
+    },
+    {
+      "review_id": "N13",
+      "case_id": "replay-s22-op-yoy",
+      "reviewer": null,
+      "reviewed_at": null,
+      "explanation_verdict": null,
+      "structured_fields": null,
+      "evidence_ids": null,
+      "prose_source": null,
+      "reason": null
+    },
+    {
+      "review_id": "N14",
+      "case_id": "replay-s22-net-ytd-yoy",
+      "reviewer": null,
+      "reviewed_at": null,
+      "explanation_verdict": null,
+      "structured_fields": null,
+      "evidence_ids": null,
+      "prose_source": null,
+      "reason": null
+    },
+    {
+      "review_id": "N15",
+      "case_id": "replay-s22-net-period",
+      "reviewer": null,
+      "reviewed_at": null,
+      "explanation_verdict": null,
+      "structured_fields": null,
+      "evidence_ids": null,
+      "prose_source": null,
+      "reason": null
+    },
+    {
+      "review_id": "N16",
+      "case_id": "replay-s22-op-qoq",
+      "reviewer": null,
+      "reviewed_at": null,
+      "explanation_verdict": null,
+      "structured_fields": null,
+      "evidence_ids": null,
+      "prose_source": null,
+      "reason": null
+    },
+    {
+      "review_id": "N17",
+      "case_id": "replay-h25-op-yoy",
+      "reviewer": null,
+      "reviewed_at": null,
+      "explanation_verdict": null,
+      "structured_fields": null,
+      "evidence_ids": null,
+      "prose_source": null,
+      "reason": null
+    },
+    {
+      "review_id": "N18",
+      "case_id": "replay-h25-net-yoy",
+      "reviewer": null,
+      "reviewed_at": null,
+      "explanation_verdict": null,
+      "structured_fields": null,
+      "evidence_ids": null,
+      "prose_source": null,
+      "reason": null
+    },
+    {
+      "review_id": "N19",
+      "case_id": "replay-h25-op-period",
+      "reviewer": null,
+      "reviewed_at": null,
+      "explanation_verdict": null,
+      "structured_fields": null,
+      "evidence_ids": null,
+      "prose_source": null,
+      "reason": null
+    },
+    {
+      "review_id": "N20",
+      "case_id": "replay-cross-company-period",
+      "reviewer": null,
+      "reviewed_at": null,
+      "explanation_verdict": null,
+      "structured_fields": null,
+      "evidence_ids": null,
+      "prose_source": null,
+      "reason": null
+    }
+  ]
+}

@@ -5,7 +5,7 @@ from .store import ROOT
 
 
 def load_latest_progress():
-    summary = json.loads((ROOT/'data/latest-progress-closeout-20261112.json').read_text())
+    summary = json.loads((ROOT/'data/latest-progress-closeout-live-20261112.json').read_text())
     if summary.get('schema_version') != 1 or not summary.get('source_sha256'):
         raise ValueError('SUMMARY_SCHEMA_MISMATCH')
     for name, expected in summary['source_sha256'].items():

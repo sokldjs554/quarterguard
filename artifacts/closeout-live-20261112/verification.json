@@ -1,0 +1,11 @@
+{
+  "python_run": 388,
+  "python_skipped": 1,
+  "python_failures": 0,
+  "node_passed": 28,
+  "local_browser_checks": 6,
+  "new_model_calls": 20,
+  "new_human_verdicts": 0,
+  "actual_execution_commit": "55c2b64a6bca56cc07ab8d0e2575662dcd16ee28",
+  "source": "Final report/display changes; model/guards not changed after generation."
+}
