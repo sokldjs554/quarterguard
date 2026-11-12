@@ -49,6 +49,16 @@ python scripts/browser_final_export_check.py --url http://127.0.0.1:8000 --trans
 
 Python339개 실행·실패0·1skip, Node18개 통과. [Python 로그](../artifacts/final-export-check-20261112/python-tests.log)에는 기존 의존성 경고·테스트 로그도 그대로 남겼다. [Node 로그](../artifacts/final-export-check-20261112/node-tests.log), [보존·다운로드 동일성 확인](../artifacts/final-export-check-20261112/verification.json).
 
+## 공개 배포 후 확인
+
+수정 PR [#67](https://github.com/sokldjs554/quarterguard/pull/67)의 병합 커밋 `161ae0bb528b4e43498697f6862e659035b2dd6f`가 GitHub main·Render live 배포·공개 health에 일치했다. Render 배포 ID는 `dep-dbqguujrjlhs73fsei5g`다.
+
+- [배포 후 공개 브라우저 검사](../artifacts/final-export-check-20261112/public-fixed/browser/report.json): PC·모바일 크기 A7/S4 저장, 편집 후 이전 결과 제거, 새 결과 저장, 수정된 S4 문구 모두 통과. TLS 검증 중계 경로이다.
+- [Render 배포](../artifacts/final-export-check-20261112/public-fixed/render-deploy.json), [공개 코드·health 대조](../artifacts/final-export-check-20261112/public-fixed/assets-health.json): 배포된 JavaScript 두 파일이 검토한 로컬 파일과 바이트 단위로 같음.
+- [최종 A7 JSON](../artifacts/final-export-check-20261112/public-fixed/browser/A7-390.json), [최종 S4 JSON](../artifacts/final-export-check-20261112/public-fixed/browser/S4-390.json), [최종 S4 모바일 크기 화면](../artifacts/final-export-check-20261112/public-fixed/browser/S4-390.png).
+
+수정 전·로컬 수정 후·배포 후의 다운로드 내용도 일치했다. 배포 대기 중 이전 커밋을 응답한 기록은 [health 폴링](../artifacts/final-export-check-20261112/public-fixed/health-polls.json)에 남겼다. 이후 이 결과를 게시하는 문서·캡처 커밋은 제품 코드 변경이 아니며, 위 브라우저 캡처의 기준 커밋을 새 커밋으로 바꾸어 적지 않는다.
+
 ## 사람이 남길 부분
 
 기술적인 다운로드·내용·상태 검사는 위와 같이 수행했다. b의 A7·S4 직접 기기 확인은 여전히 미확인이다. [두 과제 기록 양식](validation-kit/final-followup-20261112/remaining-checks.md)에 실제 결과만 추가하면 된다. 자동 검사 결과를 b의 수행 결과로 옮기지 않는다.

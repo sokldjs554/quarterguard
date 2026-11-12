@@ -1,0 +1,25 @@
+{
+  "health": {
+    "status": "ok",
+    "facts": 192,
+    "commit": "161ae0bb528b4e43498697f6862e659035b2dd6f",
+    "version": "1.4.0"
+  },
+  "assets": [
+    {
+      "asset": "source-calculator.js",
+      "http_status": 200,
+      "sha256": "2c206ae5cdf7ba23ede526f32c22dbf056ef6dd9db951b8b7b8f8083a9321e53",
+      "matches_local": true,
+      "tls_verified": true
+    },
+    {
+      "asset": "source-evidence.js",
+      "http_status": 200,
+      "sha256": "630fd96d05ed7afdd7a4854402a47952e075ea151219c4fd0d6779b6203d14af",
+      "matches_local": true,
+      "tls_verified": true
+    }
+  ],
+  "download_json_unchanged_from_before_label_fix": true
+}
