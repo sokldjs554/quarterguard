@@ -6,7 +6,7 @@ references are withheld rather than repaired. Historical model text is immutable
 import re
 from datetime import date
 from decimal import Decimal
-from .explanation_context import build_context
+from .explanation_context import build_context, build_generation_context
 
 
 def rates_match_tool(text, growth):
@@ -46,7 +46,7 @@ def check_grounding(answer, result):
     Contradictory nonnumeric prose still requires human review.
     """
     text = str(answer.get('explanation_ko', ''))
-    context = build_context(result)
+    context = build_generation_context(result)
     compact = lambda value: re.sub(r'\s+', '', value)
     unsupported_large_unit = re.search(r'\d[\d,.]*\s*(?:조|억|만|천)', text)
     if context['status'] == 'no_evidence':
@@ -135,6 +135,40 @@ def comparison_direction_consistent(text,result):
     return True
 
 
+def diagnostic_origin_consistent(text, result):
+    """Reject disclosed attribution patterns, not arbitrary causal semantics.
+
+    Strip only complete registered legacy statements before checking additional
+    assertions. A copied disclaimer cannot hide a contradictory extra sentence.
+    """
+    if 'PERIOD_MISMATCH' not in result.get('issues', []):
+        return True
+    for entry in build_context(result)['decision_basis']:
+        text = text.replace(entry['statement'], '')
+    if re.search(r'도구(?:의)?\s*(?:조건\s*)?실행\s*이력(?:에\s*따르면|을\s*(?:보면|통해)|상)', text):
+        return False
+    for sentence in re.split(r'[.!?。\n](?!\d)', text):
+        starts = re.search(r'시작\s*월[·\s]*일|시작\s*월(?:과|및)\s*일|시작\s*일자', sentence)
+        tool_cause = re.search(r'도구(?:의|에서)?', sentence) and re.search(
+            r'decision_basis|때문|이유|제기|따라|보류', sentence)
+        diagnostic_action = re.search(r'(?:독립(?:적인)?|별도)\s*재계산', sentence) and re.search(
+            r'보류(?:하였|했|합니다|한다)|보류를\s*결정', sentence)
+        if (starts and tool_cause) or diagnostic_action:
+            return False
+    return True
+
+
+def company_comparison_bounded(text, result):
+    """Narrow rejection of blanket bans; other free-text claims need review."""
+    if 'COMPANY_MISMATCH' not in result.get('issues', []):
+        return True
+    pattern = r'(?:직접\s*비교|모든\s*비교)(?:가|는|도)?\s*(?:불가능|불가)'
+    for match in re.finditer(pattern, text):
+        if not re.match(r'(?:하다는\s*뜻은|한\s*것은)\s*아닙니다(?=$|[.!?。\s])', text[match.end():]):
+            return False
+    return True
+
+
 def check_prose(answer, result):
     text = str(answer.get('explanation_ko', ''))
     evidence = result.get('evidence') or []
@@ -172,8 +206,8 @@ def check_prose(answer, result):
         r'(?:[0-9][0-9,.]*\s*)?백만\s*원', text)
     # The tool reports PERIOD_MISMATCH, not which short-circuited predicate ran.
     # A copied safe disclaimer cannot erase a separate assertion of execution history.
-    diagnostic_trace_claim = 'PERIOD_MISMATCH' in result.get('issues',[]) and re.search(
-        r'도구(?:의)?\s*(?:조건\s*)?실행\s*이력(?:에\s*따르면|을\s*(?:보면|통해)|상)',text)
+    context = build_generation_context(result)
+    search_scope_bounded = context['status'] != 'no_evidence' or text == context['notice']
     annualized_term = r'연평균\s*(?:성장률|증가율|증감률)|(?<![A-Za-z])CAGR(?![A-Za-z])|\bannualized\b'
     annualized_claim = result.get('mode') in ('qoq','yoy') and any(
         not re.match(r'\s*(?:(?:이나|또는|및|/|·)\s*(?:'+annualized_term+r')\s*)?'
@@ -181,7 +215,9 @@ def check_prose(answer, result):
                      text[match.end():],re.I)
         for match in re.finditer(annualized_term,text,re.I))
     return {
-        'prose_diagnostic_origin_consistent': not diagnostic_trace_claim,
+        'prose_diagnostic_origin_consistent': diagnostic_origin_consistent(text, result),
+        'prose_search_scope_bounded': search_scope_bounded,
+        'prose_company_comparison_bounded': company_comparison_bounded(text, result),
         'prose_growth_kind_consistent': not annualized_claim,
         'prose_million_amount_unambiguous': mixed_million is None,
         'prose_evidence_presence_consistent': not (evidence and absence),

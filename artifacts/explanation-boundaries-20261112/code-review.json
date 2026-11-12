@@ -1,0 +1,15 @@
+{
+  "reviewer": "independent AI code reviewer",
+  "human_review": false,
+  "important_issue_found": "Reconcile holds were mislabeled as growth; added real reconcile regression and mode-aware wording.",
+  "additional_changes": [
+    "Explicit empty-search exception to general prompt copying",
+    "Common explicit company-comparison negation with contradictory-tail test"
+  ],
+  "final_result": "No remaining important findings within disclosed narrow scope",
+  "limitations": [
+    "Conservative false blocking",
+    "Incomplete natural-language coverage"
+  ],
+  "new_paid_calls": 0
+}

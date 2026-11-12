@@ -1,0 +1,14 @@
+test_cross_company_growth_hold_does_not_prohibit_every_comparison (tests.test_review_boundary_regressions.ReviewBoundaryRegressions.test_cross_company_growth_hold_does_not_prohibit_every_comparison) ... FAIL
+
+======================================================================
+FAIL: test_cross_company_growth_hold_does_not_prohibit_every_comparison (tests.test_review_boundary_regressions.ReviewBoundaryRegressions.test_cross_company_growth_hold_does_not_prohibit_every_comparison)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_review_boundary_regressions.py", line 98, in test_cross_company_growth_hold_does_not_prohibit_every_comparison
+    self.assertTrue(check_prose({'explanation_ko': text}, row['tool_result']).get(
+AssertionError: False is not true : 다른 회사의 모든 비교가 불가능한 것은 아닙니다.
+
+----------------------------------------------------------------------
+Ran 1 test in 0.008s
+
+FAILED (failures=1)

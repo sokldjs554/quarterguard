@@ -1,0 +1,87 @@
+test_cross_company_growth_hold_does_not_prohibit_every_comparison (tests.test_review_boundary_regressions.ReviewBoundaryRegressions.test_cross_company_growth_hold_does_not_prohibit_every_comparison) ... FAIL
+test_disclosed_diagnostic_attribution_failures_are_rejected (tests.test_review_boundary_regressions.ReviewBoundaryRegressions.test_disclosed_diagnostic_attribution_failures_are_rejected) ... FAIL
+test_empty_search_schema_and_runtime_both_reject_added_claims (tests.test_review_boundary_regressions.ReviewBoundaryRegressions.test_empty_search_schema_and_runtime_both_reject_added_claims) ... FAIL
+test_growth_hold_note_is_scoped_to_the_selected_operation (tests.test_review_boundary_regressions.ReviewBoundaryRegressions.test_growth_hold_note_is_scoped_to_the_selected_operation) ... FAIL
+test_independent_observation_is_not_a_decision_or_trace (tests.test_review_boundary_regressions.ReviewBoundaryRegressions.test_independent_observation_is_not_a_decision_or_trace) ... FAIL
+test_model_input_omits_independent_predicates_but_review_context_preserves_them (tests.test_review_boundary_regressions.ReviewBoundaryRegressions.test_model_input_omits_independent_predicates_but_review_context_preserves_them) ... FAIL
+test_model_reported_only_period_explanation_is_accepted_without_diagnostic_copy (tests.test_review_boundary_regressions.ReviewBoundaryRegressions.test_model_reported_only_period_explanation_is_accepted_without_diagnostic_copy) ... FAIL
+test_provider_withholds_previously_passed_r10_without_rewriting (tests.test_review_boundary_regressions.ReviewBoundaryRegressions.test_provider_withholds_previously_passed_r10_without_rewriting) ... FAIL
+test_search_empty_cannot_claim_absence_from_entire_corpus (tests.test_review_boundary_regressions.ReviewBoundaryRegressions.test_search_empty_cannot_claim_absence_from_entire_corpus) ... FAIL
+
+======================================================================
+FAIL: test_cross_company_growth_hold_does_not_prohibit_every_comparison (tests.test_review_boundary_regressions.ReviewBoundaryRegressions.test_cross_company_growth_hold_does_not_prohibit_every_comparison)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_review_boundary_regressions.py", line 91, in test_cross_company_growth_hold_does_not_prohibit_every_comparison
+    self.assertFalse(check_prose(row['raw_generated'], row['tool_result']).get(
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_disclosed_diagnostic_attribution_failures_are_rejected (tests.test_review_boundary_regressions.ReviewBoundaryRegressions.test_disclosed_diagnostic_attribution_failures_are_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_review_boundary_regressions.py", line 77, in test_disclosed_diagnostic_attribution_failures_are_rejected
+    self.assertFalse(check_prose(row['raw_generated'], row['tool_result'])[
+AssertionError: True is not false : replay-period-mismatch
+
+======================================================================
+FAIL: test_empty_search_schema_and_runtime_both_reject_added_claims (tests.test_review_boundary_regressions.ReviewBoundaryRegressions.test_empty_search_schema_and_runtime_both_reject_added_claims)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_review_boundary_regressions.py", line 37, in test_empty_search_schema_and_runtime_both_reject_added_claims
+    self.assertFalse(schema.is_valid(bad))
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_growth_hold_note_is_scoped_to_the_selected_operation (tests.test_review_boundary_regressions.ReviewBoundaryRegressions.test_growth_hold_note_is_scoped_to_the_selected_operation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_review_boundary_regressions.py", line 103, in test_growth_hold_note_is_scoped_to_the_selected_operation
+    self.assertIn('같은 회사의 성장률', basis['statement'])
+AssertionError: '같은 회사의 성장률' not found in '회사가 달라 계산을 보류합니다. 같은 회사의 수치를 선택하세요.'
+
+======================================================================
+FAIL: test_independent_observation_is_not_a_decision_or_trace (tests.test_review_boundary_regressions.ReviewBoundaryRegressions.test_independent_observation_is_not_a_decision_or_trace)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_review_boundary_regressions.py", line 87, in test_independent_observation_is_not_a_decision_or_trace
+    self.assertFalse(check_prose({'explanation_ko': unsafe}, result)['prose_diagnostic_origin_consistent'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_model_input_omits_independent_predicates_but_review_context_preserves_them (tests.test_review_boundary_regressions.ReviewBoundaryRegressions.test_model_input_omits_independent_predicates_but_review_context_preserves_them)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_review_boundary_regressions.py", line 60, in test_model_input_omits_independent_predicates_but_review_context_preserves_them
+    self.assertNotIn('failed_conditions', basis)
+AssertionError: 'failed_conditions' unexpectedly found in {'code': 'PERIOD_MISMATCH', 'statement': '도구는 기간 불일치를 보고했습니다. 다음은 입력을 별도 재계산한 진단이며 도구의 조건 실행 이력이 아닙니다. 두 기간의 개월 수가 같지 않거나 완전한 월 단위 기간으로 확인되지 않습니다. 두 기간의 시작 월·일이 다릅니다. 계산을 보류합니다.', 'failed_conditions': ['equal_months', 'yoy_start_month_day'], 'diagnostic_origin': 'independent_recalculation'}
+
+======================================================================
+FAIL: test_model_reported_only_period_explanation_is_accepted_without_diagnostic_copy (tests.test_review_boundary_regressions.ReviewBoundaryRegressions.test_model_reported_only_period_explanation_is_accepted_without_diagnostic_copy)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_review_boundary_regressions.py", line 72, in test_model_reported_only_period_explanation_is_accepted_without_diagnostic_copy
+    self.assertTrue(all(check_grounding({'explanation_ko': text}, result).values()))
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_provider_withholds_previously_passed_r10_without_rewriting (tests.test_review_boundary_regressions.ReviewBoundaryRegressions.test_provider_withholds_previously_passed_r10_without_rewriting)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_review_boundary_regressions.py", line 50, in test_provider_withholds_previously_passed_r10_without_rewriting
+    with self.assertRaises(pp.ExplanationRejected) as caught:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ExplanationRejected not raised
+
+======================================================================
+FAIL: test_search_empty_cannot_claim_absence_from_entire_corpus (tests.test_review_boundary_regressions.ReviewBoundaryRegressions.test_search_empty_cannot_claim_absence_from_entire_corpus)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_review_boundary_regressions.py", line 24, in test_search_empty_cannot_claim_absence_from_entire_corpus
+    self.assertFalse(check_prose(row['raw_generated'], row['tool_result']).get(
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.017s
+
+FAILED (failures=9)

@@ -68,7 +68,8 @@ class ProseGuardTests(unittest.TestCase):
     def test_authored_corrected_phrases_pass_without_rewriting(self):
         texts = {
             'period-mismatch': '근거는 확인했으나 9개월 누적과 3개월의 기간이 달라 성장률 계산을 보류합니다.',
-            'no-evidence': '해당 검색 범위에서 근거를 확인할 수 없습니다. 검색 조건과 수집 범위를 확인하세요.',
+            # The empty-search product contract now allows only this bounded notice.
+            'no-evidence': '해당 검색 범위에서 근거를 확인할 수 없습니다. 기업의 실적 자체가 없다는 뜻은 아닙니다. 검색 조건과 수집 범위를 확인하세요.',
             'citation-draft': '3분기 보고서 PDF p.34와 반기 보고서 PDF p.48을 비교한 증가율은 6.7916%입니다.',
         }
         for case, text in texts.items():
