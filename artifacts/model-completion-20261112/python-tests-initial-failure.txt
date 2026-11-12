@@ -1,0 +1,1131 @@
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pydantic_settings/sources/utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+HTTP Request: GET http://testserver/api/connectors/dart "HTTP/1.1 200 OK"
+.HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+.HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+.HTTP Request: GET http://testserver/api/search?q=samsung+2025+Q3+CFS+revenue+quarter+KRW "HTTP/1.1 200 OK"
+.HTTP Request: GET http://testserver/api/search?q=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx "HTTP/1.1 422 Unprocessable Entity"
+.HTTP Request: GET http://testserver/api/sources "HTTP/1.1 200 OK"
+.HTTP Request: POST http://testserver/api/run/unknown "HTTP/1.1 404 Not Found"
+.HTTP Request: GET http://testserver/api/prepared/unknown "HTTP/1.1 404 Not Found"
+.HTTP Request: POST http://testserver/api/run/qoq-revenue "HTTP/1.1 429 Too Many Requests"
+.HTTP Request: POST http://test/api/run/qoq-profit "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST http://test/api/run/qoq-revenue "HTTP/1.1 200 OK"
+.HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 422 Unprocessable Entity"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 422 Unprocessable Entity"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 404 Not Found"
+.HTTP Request: GET http://testserver/api/source-documents "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+.HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+.HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+.HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+.HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+.HTTP Request: GET http://testserver/api/source-search?document_id=apple-2024-10k&q=2024+%EC%A0%9C%ED%92%88+%EC%84%9C%EB%B9%84%EC%8A%A4+%EB%A7%A4%EC%B6%9C%EC%B4%9D%EC%9D%B4%EC%9D%B5%EB%A5%A0 "HTTP/1.1 200 OK"
+HTTP Request: GET http://testserver/api/source-cells/apple-2024-10k:products_sales:2024 "HTTP/1.1 200 OK"
+HTTP Request: GET http://testserver/api/source-cells/apple-2024-10k:services_sales:2024 "HTTP/1.1 200 OK"
+HTTP Request: GET http://testserver/api/source-cells/apple-2024-10k:products_cost:2024 "HTTP/1.1 200 OK"
+HTTP Request: GET http://testserver/api/source-cells/apple-2024-10k:services_cost:2024 "HTTP/1.1 200 OK"
+.HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 503 Service Unavailable"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+.HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+.HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+.HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+.HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-review "HTTP/1.1 200 OK"
+..........................................E.....................EEEE..F...EEEEE..........................................s...........HTTP Request: GET http://testserver/api/evaluation/current/progress "HTTP/1.1 200 OK"
+HTTP Request: GET http://testserver/api/evaluation/latest "HTTP/1.1 200 OK"
+.HTTP Request: GET http://testserver/api/evaluation/latest "HTTP/1.1 503 Service Unavailable"
+.HTTP Request: GET http://testserver/api/evaluation/latest "HTTP/1.1 200 OK"
+.HTTP Request: GET http://testserver/api/evaluation/latest "HTTP/1.1 200 OK"
+.HTTP Request: GET http://testserver/api/evaluation/latest "HTTP/1.1 200 OK"
+...............EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE.......execute program '/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python': <_UnixSubprocessTransport pid=2385 running stdin=<_UnixWritePipeTransport fd=7 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=8 polling>>
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pydantic_settings/sources/utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+Processing request of type ListToolsRequest
+Processing request of type CallToolRequest
+<_UnixReadPipeTransport fd=8 polling> was closed by peer
+<_UnixSubprocessTransport pid=2385 running stdin=<_UnixWritePipeTransport closed fd=7 closed> stdout=<_UnixReadPipeTransport closed fd=8 closed>> exited with return code 0
+.execute program '/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python': <_UnixSubprocessTransport pid=2396 running stdin=<_UnixWritePipeTransport fd=8 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=9 polling>>
+<_UnixReadPipeTransport fd=9 polling> was closed by peer
+<_UnixSubprocessTransport pid=2396 running stdin=<_UnixWritePipeTransport closed fd=8 closed> stdout=<_UnixReadPipeTransport closed fd=9 closed>> exited with return code 0
+.execute program '/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python': <_UnixSubprocessTransport pid=2407 running stdin=<_UnixWritePipeTransport fd=8 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=9 polling>>
+<_UnixReadPipeTransport fd=9 polling> was closed by peer
+<_UnixSubprocessTransport pid=2407 running stdin=<_UnixWritePipeTransport closed fd=8 closed> stdout=<_UnixReadPipeTransport closed fd=9 closed>> exited with return code 0
+......execute program '/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python': <_UnixSubprocessTransport pid=2431 running stdin=<_UnixWritePipeTransport fd=8 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=9 polling>>
+<_UnixReadPipeTransport fd=9 polling> was closed by peer
+<_UnixSubprocessTransport pid=2431 running stdin=<_UnixWritePipeTransport closed fd=8 closed> stdout=<_UnixReadPipeTransport closed fd=9 closed>> exited with return code 0
+execute program '/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python': <_UnixSubprocessTransport pid=2442 running stdin=<_UnixWritePipeTransport fd=8 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=9 polling>>
+<_UnixReadPipeTransport fd=9 polling> was closed by peer
+<_UnixSubprocessTransport pid=2442 running stdin=<_UnixWritePipeTransport closed fd=8 closed> stdout=<_UnixReadPipeTransport closed fd=9 closed>> exited with return code 0
+execute program '/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python': <_UnixSubprocessTransport pid=2453 running stdin=<_UnixWritePipeTransport fd=8 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=9 polling>>
+<_UnixReadPipeTransport fd=9 polling> was closed by peer
+<_UnixSubprocessTransport pid=2453 running stdin=<_UnixWritePipeTransport closed fd=8 closed> stdout=<_UnixReadPipeTransport closed fd=9 closed>> exited with return code 0
+execute program '/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python': <_UnixSubprocessTransport pid=2464 running stdin=<_UnixWritePipeTransport fd=8 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=9 polling>>
+<_UnixReadPipeTransport fd=9 polling> was closed by peer
+<_UnixSubprocessTransport pid=2464 running stdin=<_UnixWritePipeTransport closed fd=8 closed> stdout=<_UnixReadPipeTransport closed fd=9 closed>> exited with return code 0
+execute program '/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python': <_UnixSubprocessTransport pid=2482 running stdin=<_UnixWritePipeTransport fd=8 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=9 polling>>
+<_UnixReadPipeTransport fd=9 polling> was closed by peer
+<_UnixSubprocessTransport pid=2482 running stdin=<_UnixWritePipeTransport closed fd=8 closed> stdout=<_UnixReadPipeTransport closed fd=9 closed>> exited with return code 0
+execute program '/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python': <_UnixSubprocessTransport pid=2501 running stdin=<_UnixWritePipeTransport fd=8 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=9 polling>>
+<_UnixReadPipeTransport fd=9 polling> was closed by peer
+<_UnixSubprocessTransport pid=2501 running stdin=<_UnixWritePipeTransport closed fd=8 closed> stdout=<_UnixReadPipeTransport closed fd=9 closed>> exited with return code 0
+execute program '/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python': <_UnixSubprocessTransport pid=2512 running stdin=<_UnixWritePipeTransport fd=8 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=9 polling>>
+<_UnixReadPipeTransport fd=9 polling> was closed by peer
+<_UnixSubprocessTransport pid=2512 running stdin=<_UnixWritePipeTransport closed fd=8 closed> stdout=<_UnixReadPipeTransport closed fd=9 closed>> exited with return code 0
+execute program '/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python': <_UnixSubprocessTransport pid=2523 running stdin=<_UnixWritePipeTransport fd=8 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=9 polling>>
+<_UnixReadPipeTransport fd=9 polling> was closed by peer
+<_UnixSubprocessTransport pid=2523 running stdin=<_UnixWritePipeTransport closed fd=8 closed> stdout=<_UnixReadPipeTransport closed fd=9 closed>> exited with return code 0
+.execute program '/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python': <_UnixSubprocessTransport pid=2534 running stdin=<_UnixWritePipeTransport fd=7 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=8 polling>>
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pydantic_settings/sources/utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type ListToolsRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+<_UnixReadPipeTransport fd=8 polling> was closed by peer
+<_UnixSubprocessTransport pid=2534 running stdin=<_UnixWritePipeTransport closed fd=7 closed> stdout=<_UnixReadPipeTransport closed fd=8 closed>> exited with return code 0
+.........................................E.....E........................................HTTP Request: POST http://testserver/api/source-calculations "HTTP/1.1 503 Service Unavailable"
+HTTP Request: POST http://testserver/api/source-calculations "HTTP/1.1 200 OK"
+.HTTP Request: GET http://testserver/api/source-search?document_id=skh2024annual-in-2025oc&q=2024+%ED%98%84%EA%B8%88 "HTTP/1.1 200 OK"
+.HTTP Request: GET http://testserver/api/source-calculations/options "HTTP/1.1 200 OK"
+HTTP Request: GET http://testserver/api/source-documents "HTTP/1.1 200 OK"
+HTTP Request: POST http://testserver/api/source-calculations "HTTP/1.1 200 OK"
+.HTTP Request: POST http://testserver/api/source-calculations "HTTP/1.1 422 Unprocessable Entity"
+HTTP Request: POST http://testserver/api/source-calculations "HTTP/1.1 422 Unprocessable Entity"
+HTTP Request: POST http://testserver/api/source-calculations "HTTP/1.1 422 Unprocessable Entity"
+HTTP Request: POST http://testserver/api/source-calculations "HTTP/1.1 422 Unprocessable Entity"
+HTTP Request: POST http://testserver/api/source-calculations "HTTP/1.1 404 Not Found"
+.execute program '/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python': <_UnixSubprocessTransport pid=2580 running stdin=<_UnixWritePipeTransport fd=7 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=8 polling>>
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pydantic_settings/sources/utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+Processing request of type ListToolsRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+<_UnixReadPipeTransport fd=8 polling> was closed by peer
+<_UnixSubprocessTransport pid=2580 running stdin=<_UnixWritePipeTransport closed fd=7 closed> stdout=<_UnixReadPipeTransport closed fd=8 closed>> exited with return code 0
+...........HTTP Request: GET http://testserver/api/source-search?document_id=fake&q=%EB%A7%A4%EC%B6%9C "HTTP/1.1 404 Not Found"
+HTTP Request: GET http://testserver/api/source-search?document_id=skh2024annual-in-2025oc&q=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa "HTTP/1.1 422 Unprocessable Entity"
+HTTP Request: GET http://testserver/api/source-cells/fake "HTTP/1.1 404 Not Found"
+HTTP Request: GET http://testserver/api/facts "HTTP/1.1 200 OK"
+HTTP Request: GET http://testserver/api/sources "HTTP/1.1 200 OK"
+.HTTP Request: GET http://testserver/api/source-documents "HTTP/1.1 200 OK"
+HTTP Request: GET http://testserver/api/source-search?document_id=skh2024annual-in-2025oc&q=2024%EB%85%84+DRAM+%EB%A7%A4%EC%B6%9C+%EB%B9%84%EC%A4%91 "HTTP/1.1 200 OK"
+HTTP Request: GET http://testserver/api/source-cells/skh2024annual-in-2025oc:note-24-2:dram:2024 "HTTP/1.1 200 OK"
+.HTTP Request: GET http://testserver/api/source-search?document_id=skh2024annual-in-2025oc&q=2024+%EB%A7%A4%EC%B6%9C "HTTP/1.1 503 Service Unavailable"
+HTTP Request: GET http://testserver/api/source-search?document_id=skh2024annual-in-2025oc&q=2024+%EB%A7%A4%EC%B6%9C "HTTP/1.1 200 OK"
+..execute program '/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python': <_UnixSubprocessTransport pid=2610 running stdin=<_UnixWritePipeTransport fd=7 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=8 polling>>
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pydantic_settings/sources/utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+Processing request of type ListToolsRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+Processing request of type CallToolRequest
+<_UnixReadPipeTransport fd=8 polling> was closed by peer
+<_UnixSubprocessTransport pid=2610 running stdin=<_UnixWritePipeTransport closed fd=7 closed> stdout=<_UnixReadPipeTransport closed fd=8 closed>> exited with return code 0
+..........execute program '/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python': <_UnixSubprocessTransport pid=2656 running stdin=<_UnixWritePipeTransport fd=8 idle bufsize=0> stdout=<_UnixReadPipeTransport fd=9 polling>>
+<_UnixReadPipeTransport fd=9 polling> was closed by peer
+<_UnixSubprocessTransport pid=2656 running stdin=<_UnixWritePipeTransport closed fd=8 closed> stdout=<_UnixReadPipeTransport closed fd=9 closed>> exited with return code 0
+..HTTP Request: POST http://testserver/api/worksheet "HTTP/1.1 422 Unprocessable Entity"
+HTTP Request: POST http://testserver/api/worksheet "HTTP/1.1 422 Unprocessable Entity"
+HTTP Request: POST http://testserver/api/worksheet "HTTP/1.1 422 Unprocessable Entity"
+HTTP Request: POST http://testserver/api/worksheet "HTTP/1.1 422 Unprocessable Entity"
+...HTTP Request: POST http://testserver/api/worksheet/run "HTTP/1.1 429 Too Many Requests"
+HTTP Request: POST http://testserver/api/worksheet "HTTP/1.1 200 OK"
+..
+======================================================================
+ERROR: test_provider_keeps_actual_prose_separate_from_deterministic_context (test_explanation_context.ExplanationContextTests.test_provider_keeps_actual_prose_separate_from_deterministic_context)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_explanation_context.py", line 84, in test_provider_keeps_actual_prose_separate_from_deterministic_context
+    result = pp.generate_public(pp.build_payload(row['tool_result'], '검토'), row['tool_result'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/public_providers.py", line 95, in generate_public
+    if not all(checks.values()): raise ExplanationRejected(checks)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+quarterguard.public_providers.ExplanationRejected: OPENAI_RESPONSE_FAILED_OR_REJECTED
+
+======================================================================
+ERROR: test_authored_corrected_phrases_pass_without_rewriting (test_explanation_prose_guards.ProseGuardTests.test_authored_corrected_phrases_pass_without_rewriting) (case='period-mismatch')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_explanation_prose_guards.py", line 74, in test_authored_corrected_phrases_pass_without_rewriting
+    self.assertEqual(self.generate(case, text)['generated']['explanation_ko'], text)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/tests/test_explanation_prose_guards.py", line 33, in generate
+    return pp.generate_public({}, row['tool_result'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/public_providers.py", line 95, in generate_public
+    if not all(checks.values()): raise ExplanationRejected(checks)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+quarterguard.public_providers.ExplanationRejected: OPENAI_RESPONSE_FAILED_OR_REJECTED
+
+======================================================================
+ERROR: test_authored_corrected_phrases_pass_without_rewriting (test_explanation_prose_guards.ProseGuardTests.test_authored_corrected_phrases_pass_without_rewriting) (case='no-evidence')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_explanation_prose_guards.py", line 74, in test_authored_corrected_phrases_pass_without_rewriting
+    self.assertEqual(self.generate(case, text)['generated']['explanation_ko'], text)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/tests/test_explanation_prose_guards.py", line 33, in generate
+    return pp.generate_public({}, row['tool_result'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/public_providers.py", line 95, in generate_public
+    if not all(checks.values()): raise ExplanationRejected(checks)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+quarterguard.public_providers.ExplanationRejected: OPENAI_RESPONSE_FAILED_OR_REJECTED
+
+======================================================================
+ERROR: test_authored_corrected_phrases_pass_without_rewriting (test_explanation_prose_guards.ProseGuardTests.test_authored_corrected_phrases_pass_without_rewriting) (case='citation-draft')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_explanation_prose_guards.py", line 74, in test_authored_corrected_phrases_pass_without_rewriting
+    self.assertEqual(self.generate(case, text)['generated']['explanation_ko'], text)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/tests/test_explanation_prose_guards.py", line 33, in generate
+    return pp.generate_public({}, row['tool_result'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/public_providers.py", line 95, in generate_public
+    if not all(checks.values()): raise ExplanationRejected(checks)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+quarterguard.public_providers.ExplanationRejected: OPENAI_RESPONSE_FAILED_OR_REJECTED
+
+======================================================================
+ERROR: test_authored_corrected_phrases_pass_without_rewriting (test_explanation_prose_guards.ProseGuardTests.test_authored_corrected_phrases_pass_without_rewriting)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_explanation_prose_guards.py", line 77, in test_authored_corrected_phrases_pass_without_rewriting
+    self.assertEqual(self.generate('normal-qoq', text)['generated']['explanation_ko'], text)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/tests/test_explanation_prose_guards.py", line 33, in generate
+    return pp.generate_public({}, row['tool_result'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/public_providers.py", line 95, in generate_public
+    if not all(checks.values()): raise ExplanationRejected(checks)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+quarterguard.public_providers.ExplanationRejected: OPENAI_RESPONSE_FAILED_OR_REJECTED
+
+======================================================================
+ERROR: test_same_document_yoy_and_other_v5_prose_are_not_blocked (test_explanation_prose_guards.ProseGuardTests.test_same_document_yoy_and_other_v5_prose_are_not_blocked) (case='normal-qoq')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_explanation_prose_guards.py", line 62, in test_same_document_yoy_and_other_v5_prose_are_not_blocked
+    outcome = self.generate(case)
+              ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/tests/test_explanation_prose_guards.py", line 33, in generate
+    return pp.generate_public({}, row['tool_result'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/public_providers.py", line 95, in generate_public
+    if not all(checks.values()): raise ExplanationRejected(checks)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+quarterguard.public_providers.ExplanationRejected: OPENAI_RESPONSE_FAILED_OR_REJECTED
+
+======================================================================
+ERROR: test_same_document_yoy_and_other_v5_prose_are_not_blocked (test_explanation_prose_guards.ProseGuardTests.test_same_document_yoy_and_other_v5_prose_are_not_blocked) (case='normal-yoy')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_explanation_prose_guards.py", line 62, in test_same_document_yoy_and_other_v5_prose_are_not_blocked
+    outcome = self.generate(case)
+              ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/tests/test_explanation_prose_guards.py", line 33, in generate
+    return pp.generate_public({}, row['tool_result'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/public_providers.py", line 95, in generate_public
+    if not all(checks.values()): raise ExplanationRejected(checks)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+quarterguard.public_providers.ExplanationRejected: OPENAI_RESPONSE_FAILED_OR_REJECTED
+
+======================================================================
+ERROR: test_same_document_yoy_and_other_v5_prose_are_not_blocked (test_explanation_prose_guards.ProseGuardTests.test_same_document_yoy_and_other_v5_prose_are_not_blocked) (case='scope-mismatch')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_explanation_prose_guards.py", line 62, in test_same_document_yoy_and_other_v5_prose_are_not_blocked
+    outcome = self.generate(case)
+              ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/tests/test_explanation_prose_guards.py", line 33, in generate
+    return pp.generate_public({}, row['tool_result'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/public_providers.py", line 95, in generate_public
+    if not all(checks.values()): raise ExplanationRejected(checks)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+quarterguard.public_providers.ExplanationRejected: OPENAI_RESPONSE_FAILED_OR_REJECTED
+
+======================================================================
+ERROR: test_same_document_yoy_and_other_v5_prose_are_not_blocked (test_explanation_prose_guards.ProseGuardTests.test_same_document_yoy_and_other_v5_prose_are_not_blocked) (case='unit-draft')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_explanation_prose_guards.py", line 62, in test_same_document_yoy_and_other_v5_prose_are_not_blocked
+    outcome = self.generate(case)
+              ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/tests/test_explanation_prose_guards.py", line 33, in generate
+    return pp.generate_public({}, row['tool_result'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/public_providers.py", line 95, in generate_public
+    if not all(checks.values()): raise ExplanationRejected(checks)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+quarterguard.public_providers.ExplanationRejected: OPENAI_RESPONSE_FAILED_OR_REJECTED
+
+======================================================================
+ERROR: test_same_document_yoy_and_other_v5_prose_are_not_blocked (test_explanation_prose_guards.ProseGuardTests.test_same_document_yoy_and_other_v5_prose_are_not_blocked) (case='conflicting-number-draft')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_explanation_prose_guards.py", line 62, in test_same_document_yoy_and_other_v5_prose_are_not_blocked
+    outcome = self.generate(case)
+              ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/tests/test_explanation_prose_guards.py", line 33, in generate
+    return pp.generate_public({}, row['tool_result'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/public_providers.py", line 95, in generate_public
+    if not all(checks.values()): raise ExplanationRejected(checks)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+quarterguard.public_providers.ExplanationRejected: OPENAI_RESPONSE_FAILED_OR_REJECTED
+
+======================================================================
+ERROR: test_approval_and_journal_prevent_calls_and_preserve_old_attempt (test_live_explanations_v5.CurrentGuardBatchTests.test_approval_and_journal_prevent_calls_and_preserve_old_attempt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v5.py", line 131, in prepare_freeze
+    payload = make_payload(case)
+              ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v5.py", line 114, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_changed_source_blocks_before_reading_key_or_contacting_provider (test_live_explanations_v5.CurrentGuardBatchTests.test_changed_source_blocks_before_reading_key_or_contacting_provider)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v5.py", line 131, in prepare_freeze
+    payload = make_payload(case)
+              ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v5.py", line 114, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_comparison_reaudits_both_batches_without_copying_human_labels (test_live_explanations_v5.CurrentGuardBatchTests.test_comparison_reaudits_both_batches_without_copying_human_labels)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v5.py", line 131, in prepare_freeze
+    payload = make_payload(case)
+              ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v5.py", line 114, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_current_product_instructions_context_and_schema_reach_every_payload (test_live_explanations_v5.CurrentGuardBatchTests.test_current_product_instructions_context_and_schema_reach_every_payload)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v5.py", line 131, in prepare_freeze
+    payload = make_payload(case)
+              ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v5.py", line 114, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_provider_schema_rejection_stops_once_and_preserves_http_failure (test_live_explanations_v5.CurrentGuardBatchTests.test_provider_schema_rejection_stops_once_and_preserves_http_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v5.py", line 131, in prepare_freeze
+    payload = make_payload(case)
+              ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v5.py", line 114, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_same_disclosed_cases_preserve_previous_mcp_inputs_and_drafts (test_live_explanations_v5.CurrentGuardBatchTests.test_same_disclosed_cases_preserve_previous_mcp_inputs_and_drafts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v5.py", line 131, in prepare_freeze
+    payload = make_payload(case)
+              ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v5.py", line 114, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_tampered_input_rejected_even_with_recomputed_freeze_digest (test_live_explanations_v5.CurrentGuardBatchTests.test_tampered_input_rejected_even_with_recomputed_freeze_digest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v5.py", line 131, in prepare_freeze
+    payload = make_payload(case)
+              ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v5.py", line 114, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_timeout_stops_once_without_retry_or_exposing_key (test_live_explanations_v5.CurrentGuardBatchTests.test_timeout_stops_once_without_retry_or_exposing_key)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v5.py", line 131, in prepare_freeze
+    payload = make_payload(case)
+              ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v5.py", line 114, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_usage_over_cap_stops_and_preserves_measured_cost (test_live_explanations_v5.CurrentGuardBatchTests.test_usage_over_cap_stops_and_preserves_measured_cost)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v5.py", line 131, in prepare_freeze
+    payload = make_payload(case)
+              ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v5.py", line 114, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_wrong_id_is_preserved_for_audit_but_would_not_pass_product_gate (test_live_explanations_v5.CurrentGuardBatchTests.test_wrong_id_is_preserved_for_audit_but_would_not_pass_product_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v5.py", line 20, in setUp
+    self.frozen=asyncio.run(m.prepare_freeze())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v5.py", line 131, in prepare_freeze
+    payload = make_payload(case)
+              ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v5.py", line 114, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_code_change_and_missing_approval_precede_any_http_or_journal (test_live_explanations_v6.ProseBatchTests.test_code_change_and_missing_approval_precede_any_http_or_journal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v6.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 93, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 85, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 75, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_completed_sixteen_preserve_blank_human_labels_and_separate_cohorts (test_live_explanations_v6.ProseBatchTests.test_completed_sixteen_preserve_blank_human_labels_and_separate_cohorts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v6.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 93, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 85, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 75, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_disclosed_bad_prose_is_preserved_and_current_product_gate_rejects (test_live_explanations_v6.ProseBatchTests.test_disclosed_bad_prose_is_preserved_and_current_product_gate_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v6.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 93, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 85, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 75, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_http_timeout_and_invalid_response_stop_without_retry_or_secret_leak (test_live_explanations_v6.ProseBatchTests.test_http_timeout_and_invalid_response_stop_without_retry_or_secret_leak)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v6.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 93, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 85, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 75, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_modified_inputs_fail_even_with_recomputed_digest (test_live_explanations_v6.ProseBatchTests.test_modified_inputs_fail_even_with_recomputed_digest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v6.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 93, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 85, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 75, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_oversized_request_and_wrong_returned_model_fail_closed (test_live_explanations_v6.ProseBatchTests.test_oversized_request_and_wrong_returned_model_fail_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v6.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 93, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 85, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 75, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_two_groups_use_frozen_product_without_registering_production_facts (test_live_explanations_v6.ProseBatchTests.test_two_groups_use_frozen_product_without_registering_production_facts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v6.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 93, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 85, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 75, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_usage_over_limit_preserves_cost_and_stops (test_live_explanations_v6.ProseBatchTests.test_usage_over_limit_preserves_cost_and_stops)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v6.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 93, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 85, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v6.py", line 75, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_code_change_and_missing_approval_precede_any_http_or_journal (test_live_explanations_v7.SchemaFollowupBatchTests.test_code_change_and_missing_approval_precede_any_http_or_journal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v7.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_completed_sixteen_preserve_blank_human_labels_and_separate_cohorts (test_live_explanations_v7.SchemaFollowupBatchTests.test_completed_sixteen_preserve_blank_human_labels_and_separate_cohorts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v7.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_disclosed_bad_prose_is_preserved_and_current_product_gate_rejects (test_live_explanations_v7.SchemaFollowupBatchTests.test_disclosed_bad_prose_is_preserved_and_current_product_gate_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v7.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_http_timeout_and_invalid_response_stop_without_retry_or_secret_leak (test_live_explanations_v7.SchemaFollowupBatchTests.test_http_timeout_and_invalid_response_stop_without_retry_or_secret_leak)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v7.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_modified_inputs_fail_even_with_recomputed_digest (test_live_explanations_v7.SchemaFollowupBatchTests.test_modified_inputs_fail_even_with_recomputed_digest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v7.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_oversized_request_and_wrong_returned_model_fail_closed (test_live_explanations_v7.SchemaFollowupBatchTests.test_oversized_request_and_wrong_returned_model_fail_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v7.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_two_groups_use_frozen_product_without_registering_production_facts (test_live_explanations_v7.SchemaFollowupBatchTests.test_two_groups_use_frozen_product_without_registering_production_facts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v7.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_usage_over_limit_preserves_cost_and_stops (test_live_explanations_v7.SchemaFollowupBatchTests.test_usage_over_limit_preserves_cost_and_stops)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v7.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v7.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_code_change_and_missing_approval_precede_any_http_or_journal (test_live_explanations_v8.PlainLanguageFollowupBatchTests.test_code_change_and_missing_approval_precede_any_http_or_journal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v8.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_completed_sixteen_preserve_blank_human_labels_and_separate_cohorts (test_live_explanations_v8.PlainLanguageFollowupBatchTests.test_completed_sixteen_preserve_blank_human_labels_and_separate_cohorts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v8.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_disclosed_bad_prose_is_preserved_and_current_product_gate_rejects (test_live_explanations_v8.PlainLanguageFollowupBatchTests.test_disclosed_bad_prose_is_preserved_and_current_product_gate_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v8.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_http_timeout_and_invalid_response_stop_without_retry_or_secret_leak (test_live_explanations_v8.PlainLanguageFollowupBatchTests.test_http_timeout_and_invalid_response_stop_without_retry_or_secret_leak)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v8.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_modified_inputs_fail_even_with_recomputed_digest (test_live_explanations_v8.PlainLanguageFollowupBatchTests.test_modified_inputs_fail_even_with_recomputed_digest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v8.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_oversized_request_and_wrong_returned_model_fail_closed (test_live_explanations_v8.PlainLanguageFollowupBatchTests.test_oversized_request_and_wrong_returned_model_fail_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v8.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_two_groups_use_frozen_product_without_registering_production_facts (test_live_explanations_v8.PlainLanguageFollowupBatchTests.test_two_groups_use_frozen_product_without_registering_production_facts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v8.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_usage_over_limit_preserves_cost_and_stops (test_live_explanations_v8.PlainLanguageFollowupBatchTests.test_usage_over_limit_preserves_cost_and_stops)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v8.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v8.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_code_change_and_missing_approval_precede_any_http_or_journal (test_live_explanations_v9.V9GenerationFollowupBatchTests.test_code_change_and_missing_approval_precede_any_http_or_journal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v9.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_completed_sixteen_preserve_blank_human_labels_and_separate_cohorts (test_live_explanations_v9.V9GenerationFollowupBatchTests.test_completed_sixteen_preserve_blank_human_labels_and_separate_cohorts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v9.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_disclosed_bad_prose_is_preserved_and_current_product_gate_rejects (test_live_explanations_v9.V9GenerationFollowupBatchTests.test_disclosed_bad_prose_is_preserved_and_current_product_gate_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v9.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_http_timeout_and_invalid_response_stop_without_retry_or_secret_leak (test_live_explanations_v9.V9GenerationFollowupBatchTests.test_http_timeout_and_invalid_response_stop_without_retry_or_secret_leak)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v9.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_modified_inputs_fail_even_with_recomputed_digest (test_live_explanations_v9.V9GenerationFollowupBatchTests.test_modified_inputs_fail_even_with_recomputed_digest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v9.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_oversized_request_and_wrong_returned_model_fail_closed (test_live_explanations_v9.V9GenerationFollowupBatchTests.test_oversized_request_and_wrong_returned_model_fail_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v9.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_two_groups_use_frozen_product_without_registering_production_facts (test_live_explanations_v9.V9GenerationFollowupBatchTests.test_two_groups_use_frozen_product_without_registering_production_facts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v9.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_usage_over_limit_preserves_cost_and_stops (test_live_explanations_v9.V9GenerationFollowupBatchTests.test_usage_over_limit_preserves_cost_and_stops)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_live_explanations_v9.py", line 17, in setUp
+    self.frozen = m.prepare_freeze()
+                  ^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 102, in prepare_freeze
+    'cases':cases(),'new_model_calls':0,'human_reviewed':False,'semantic_certified':False,
+            ^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 94, in cases
+    payload=make_payload(c)
+            ^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/evaluate_live_explanations_v9.py", line 76, in make_payload
+    raise ValueError('INPUT_ADMISSION_LIMIT')
+ValueError: INPUT_ADMISSION_LIMIT
+
+======================================================================
+ERROR: test_structured_mismatch_is_rejected_and_usage_is_measured (test_public_providers.GeneratedResponseTests.test_structured_mismatch_is_rejected_and_usage_is_measured)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_public_providers.py", line 57, in test_structured_mismatch_is_rejected_and_usage_is_measured
+    value=pp.generate_public(pp.build_payload(result,'fixed'),result)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/public_providers.py", line 95, in generate_public
+    if not all(checks.values()): raise ExplanationRejected(checks)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+quarterguard.public_providers.ExplanationRejected: OPENAI_RESPONSE_FAILED_OR_REJECTED
+
+======================================================================
+ERROR: test_payload_cap_precedes_network (test_public_providers.ProviderTests.test_payload_cap_precedes_network)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_public_providers.py", line 42, in test_payload_cap_precedes_network
+    with self.assertRaises(Blocked):pp.build_payload({'x':'a'*13000},'title')
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/quarterguard/public_providers.py", line 69, in build_payload
+    schema['properties']['status']['enum']=[result['status']]
+                                            ~~~~~~^^^^^^^^^^
+KeyError: 'status'
+
+======================================================================
+FAIL: test_failed_prose_is_not_returned_or_cached_and_previous_cache_not_reused (test_explanation_prose_guards.ProseGuardTests.test_failed_prose_is_not_returned_or_cached_and_previous_cache_not_reused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_explanation_prose_guards.py", line 100, in test_failed_prose_is_not_returned_or_cached_and_previous_cache_not_reused
+    self.assertEqual(pp.execute('openai', 'qoq-revenue')['status'], 'succeeded')
+AssertionError: 'failed' != 'succeeded'
+- failed
++ succeeded
+
+
+----------------------------------------------------------------------
+Ran 348 tests in 37.706s
+
+FAILED (failures=1, errors=54, skipped=1)

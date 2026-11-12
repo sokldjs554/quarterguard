@@ -1,0 +1,9 @@
+{
+  "reviewer_type": "independent_ai_code_review",
+  "paid_api_calls": 0,
+  "human_review": false,
+  "finding": "Joined Korean monetary units such as 999조원 could bypass the new literal-amount guard.",
+  "severity": "P2",
+  "resolution": "Removed the Korean-letter boundary exclusion; regression covers 79조 원, 79조원, and 7억9000만원.",
+  "other_important_findings": 0
+}

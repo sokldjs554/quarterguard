@@ -5,6 +5,44 @@ references are withheld rather than repaired. Historical model text is immutable
 """
 import re
 from datetime import date
+from decimal import Decimal
+from .explanation_context import build_context
+
+
+def check_grounding(answer, result):
+    """Check literal evidence bindings, not the meaning of unrestricted prose.
+
+    The raw model response must include these claims itself. No substitution,
+    normalization of financial values, or deterministic fallback is performed.
+    Contradictory nonnumeric prose still requires human review.
+    """
+    text = str(answer.get('explanation_ko', ''))
+    context = build_context(result)
+    compact = lambda value: re.sub(r'\s+', '', value)
+    unsupported_large_unit = re.search(r'\d[\d,.]*\s*(?:조|억|만|천)', text)
+    if context['status'] == 'no_evidence':
+        return {'prose_evidence_anchors_present': True,
+                'prose_decision_basis_present': compact(context['notice']) in compact(text),
+                'prose_amounts_supported': not unsupported_large_unit and not re.search(r'\d[\d,.]*\s*(?:백만\s*원|백만\s*USD|천\s*원|원)', text),
+                'prose_rates_match_tool': not re.search(r'\d[\d,.]*\s*(?:[%％]|퍼센트|percent\b)', text, re.I)}
+    rows = context['evidence']
+    known = context['status'] == 'available' and bool(rows)
+    anchors = known and all(compact(row['required_claim']) in compact(text) for row in rows)
+    basis = all(compact(row['statement']) in compact(text) for row in context['decision_basis'])
+    allowed = {(Decimal(row['value']), compact(row['display_unit'])) for row in rows}
+    derived = result.get('derived_value')
+    if derived is not None and len({row['display_unit'] for row in rows}) == 1:
+        allowed.add((Decimal(derived), compact(rows[0]['display_unit'])))
+    amounts = re.findall(r'(?<![\d.,])([+-]?\d[\d,]*(?:\.\d+)?)\s*(백만\s*원|백만\s*USD|천\s*원|원)', text)
+    supported = known and all((Decimal(number.replace(',', '')), compact(unit)) in allowed
+                              for number, unit in amounts)
+    rates = re.findall(r'(?<![\d.,])([+-]?\d[\d,]*(?:\.\d+)?)\s*(?:[%％]|퍼센트|percent\b)', text, re.I)
+    growth = result.get('growth_pct')
+    exact_rates = (not rates if growth is None else bool(rates) and all(
+        Decimal(value.replace(',', '')) == Decimal(growth) for value in rates))
+    return {'prose_evidence_anchors_present': bool(anchors),
+            'prose_decision_basis_present': basis, 'prose_amounts_supported': bool(supported) and not unsupported_large_unit,
+            'prose_rates_match_tool': bool(exact_rates)}
 
 
 _LABEL = (r'(?:20\d{2}(?:\s*년)?(?:\s*(?:[1-4]\s*분기|Q\s*[1-4]))?'

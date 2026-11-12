@@ -1,0 +1,60 @@
+name: model completion and explanation grounding
+on:
+  workflow_dispatch:
+    inputs:
+      approved_contract:
+        description: 'New approval: GPT-4.1-mini-2025-04-14, 20 explanations + 4 planners, at most 52 calls, 16000 input / 700 output, $0.40 before tax'
+        type: boolean
+        required: true
+        default: false
+      freeze_sha256:
+        description: Exact approved data/completion-evaluation-freeze.json sha256
+        type: string
+        required: true
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: model-completion-20261112
+  cancel-in-progress: false
+jobs:
+  evaluate:
+    if: inputs.approved_contract == true
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Reject prior dispatch or rerun before exposing key
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/$GITHUB_REPOSITORY/actions/workflows/completion-evaluation.yml/runs?event=workflow_dispatch&per_page=100" > /tmp/completion-runs.json
+          python - <<'PY'
+          import json,os
+          if os.environ['GITHUB_RUN_ATTEMPT']!='1':raise SystemExit('No paid retries')
+          runs=json.load(open('/tmp/completion-runs.json'))['workflow_runs']
+          if any(str(r['id'])!=os.environ['GITHUB_RUN_ID'] for r in runs):raise SystemExit('Prior dispatch exists; new contract required')
+          PY
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Execute approved frozen batch
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          APPROVED_SHA: ${{ inputs.freeze_sha256 }}
+        run: python -m quarterguard.completion_evaluation --execute-approved --approved-sha256 "$APPROVED_SHA" --output work/completion-live
+      - name: Preserve successes and failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: completion-live-${{ github.run_id }}
+          path: |
+            work/completion-live/
+            work/completion-paid-ledger/
+          if-no-files-found: warn
+          retention-days: 30

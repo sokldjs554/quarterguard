@@ -16,7 +16,7 @@ from .dart import fetch
 from .store import ROOT, load_facts
 from .orchestrator import run_case, cases
 from .explanation_context import INSTRUCTIONS, build_context
-from .explanation_guards import check_prose
+from .explanation_guards import check_prose, check_grounding
 
 DART_TARGETS = {'s24q3-CFS':('11014','s24q3','CFS'),'s24q3-OFS':('11014','s24q3','OFS'),
                 's24q2-CFS':('11012','s24q2','CFS'),'s24q2-OFS':('11012','s24q2','OFS')}
@@ -63,9 +63,14 @@ def status():
     return out
 
 def build_payload(result, title):
+    if len(json.dumps(result,ensure_ascii=False).encode())>12000:raise Blocked('INPUT_TOO_LARGE')
     schema=copy.deepcopy(SCHEMA)
     # Constrain the copy at generation time too; do not normalize bad outputs.
     schema['properties']['value']['enum']=[result.get('growth_pct', result.get('derived_value'))]
+    schema['properties']['status']['enum']=[result['status']]
+    issue_field=schema['properties']['issues']
+    issue_field.update(minItems=len(result['issues']), maxItems=len(result['issues']))
+    if result['issues']:issue_field['items']['enum']=list(dict.fromkeys(result['issues']))
     ids=[fact['id'] for fact in result.get('evidence', [])]
     field=schema['properties']['evidence_ids']
     field.update(minItems=len(ids), maxItems=len(ids))
@@ -87,7 +92,7 @@ def generate_public(payload, result):
         if not isinstance(answer,dict) or set(answer)!=set(SCHEMA['required']): raise ValueError()
         usage=body['usage'];inp=usage['input_tokens'];output=usage['output_tokens']
         if type(inp) is not int or type(output) is not int or inp<0 or output<0 or body.get('model')!=MODEL: raise ValueError()
-        checks=check_explanation(answer,result) | check_prose(answer,result)
+        checks=check_explanation(answer,result) | check_prose(answer,result) | check_grounding(answer,result)
         if not all(checks.values()): raise ExplanationRejected(checks)
         return {'generated':answer,'checks':checks,'model':body['model'],'input_tokens':inp,'output_tokens':output,
                 'estimated_cost_usd':str((Decimal(inp)*Decimal('.4')+Decimal(output)*Decimal('1.6'))/1000000),

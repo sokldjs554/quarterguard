@@ -10,6 +10,7 @@ from unittest.mock import AsyncMock, patch
 import httpx
 from quarterguard import public_providers as pp
 from quarterguard.store import ROOT
+from quarterguard.explanation_guards import check_prose
 
 
 class ProseGuardTests(unittest.TestCase):
@@ -55,13 +56,14 @@ class ProseGuardTests(unittest.TestCase):
     def test_internal_review_phrase_is_rejected_even_when_no_evidence_is_correct(self):
         self.rejected('no-evidence', 'prose_review_language_localized')
 
-    def test_same_document_yoy_and_other_v5_prose_are_not_blocked(self):
+    def test_same_document_yoy_and_other_v5_prose_pass_narrow_pattern_checks(self):
         for case in ['normal-qoq', 'normal-yoy', 'scope-mismatch', 'unit-draft',
                      'conflicting-number-draft']:
             with self.subTest(case=case):
-                outcome = self.generate(case)
-                self.assertEqual(outcome['generated'], self.rows[case]['generated'])
-                self.assertFalse(outcome['prose_semantics_verified'])
+                row = self.rows[case]
+                self.assertTrue(all(check_prose(row['generated'], row['tool_result']).values()))
+                # Historical text remains unchanged; the new evidence-binding gate
+                # can still reject it independently of these narrow pattern checks.
 
     def test_authored_corrected_phrases_pass_without_rewriting(self):
         texts = {
@@ -71,10 +73,10 @@ class ProseGuardTests(unittest.TestCase):
         }
         for case, text in texts.items():
             with self.subTest(case=case):
-                self.assertEqual(self.generate(case, text)['generated']['explanation_ko'], text)
+                self.assertTrue(all(check_prose({'explanation_ko': text}, self.rows[case]['tool_result']).values()))
         for text in ['증가율은 6.79%입니다.', '증가율은 6.7916 퍼센트입니다.',
                      '증가율은 +6.7916％입니다.']:
-            self.assertEqual(self.generate('normal-qoq', text)['generated']['explanation_ko'], text)
+            self.assertTrue(all(check_prose({'explanation_ko': text}, self.rows['normal-qoq']['tool_result']).values()))
 
     def test_failed_prose_is_not_returned_or_cached_and_previous_cache_not_reused(self):
         row = self.rows['citation-draft']
@@ -83,7 +85,8 @@ class ProseGuardTests(unittest.TestCase):
                     'expected_status': row['tool_result']['status'],
                     'expected_evidence': row['tool_result']['evidence'],
                     'expected_value': row['tool_result']['growth_pct']}
-        good = self.rows['normal-qoq']['generated']
+        good = copy.deepcopy(self.rows['normal-qoq']['generated'])
+        good['explanation_ko'] = '\n'.join(x['required_claim'] for x in pp.build_context(row['tool_result'])['evidence']) + ' 증가율 6.7916%.'
         def response(answer):
             return httpx.Response(200, json={'status': 'completed', 'model': pp.MODEL,
                 'usage': {'input_tokens': 100, 'output_tokens': 100},
