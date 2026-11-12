@@ -1,0 +1,14 @@
+test_reconciliation_hold_is_not_misnamed_as_growth (tests.test_review_boundary_regressions.ReviewBoundaryRegressions.test_reconciliation_hold_is_not_misnamed_as_growth) ... FAIL
+
+======================================================================
+FAIL: test_reconciliation_hold_is_not_misnamed_as_growth (tests.test_review_boundary_regressions.ReviewBoundaryRegressions.test_reconciliation_hold_is_not_misnamed_as_growth)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_review_boundary_regressions.py", line 117, in test_reconciliation_hold_is_not_misnamed_as_growth
+    self.assertNotIn('성장률', statement)
+AssertionError: '성장률' unexpectedly found in '도구가 기간 불일치를 보고하여 선택한 방식의 성장률 계산을 보류했습니다. 세부 조건의 실행 순서는 이 결과만으로 확인할 수 없습니다.'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.008s
+
+FAILED (failures=1)

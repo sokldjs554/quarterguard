@@ -1,0 +1,24 @@
+{
+  "protected_historical_paths_unchanged": [
+    "artifacts/model-completion-live-20261112",
+    "artifacts/model-completion-human-review-20261112",
+    "docs/validation-kit/completion-human-review-20261112",
+    "docs/validation-kit/completion-live-20261112",
+    "data/completion-evaluation-freeze.json",
+    "data/llm-prose-v9-20261111/freeze.json"
+  ],
+  "replay_source_hashes_verified": true,
+  "new_paid_calls": 0,
+  "new_human_verdicts": 0,
+  "python_tests": 372,
+  "python_skipped": 1,
+  "python_failures": 0,
+  "node_tests": 26,
+  "node_failures": 0,
+  "existing_mcp_cases": 8,
+  "existing_mcp_case_accuracy": 1.0,
+  "replay_passed": 3,
+  "human_false_or_ambiguous_withheld": 9,
+  "human_true_withheld": 8,
+  "fresh_generation_effect": "not evaluated"
+}

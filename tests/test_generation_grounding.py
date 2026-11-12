@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 from jsonschema import Draft202012Validator
 from quarterguard.public_providers import build_payload
-from quarterguard.explanation_context import build_context
+from quarterguard.explanation_context import build_context, build_generation_context
 from quarterguard.explanation_guards import check_grounding
 
 
@@ -44,9 +44,9 @@ class GenerationGroundingTests(unittest.TestCase):
         for amount in ('79조 원', '79조원', '7억9000만원'):
             self.assertFalse(check_grounding({'explanation_ko':text+' 금액은 '+amount+'입니다.'},self.result)['prose_amounts_supported'])
 
-    def test_period_explanation_requires_independent_diagnostic_statement(self):
+    def test_period_explanation_requires_reported_issue_statement(self):
         result = self.rows[1]['mcp']['result']
-        context = build_context(result)
+        context = build_generation_context(result)
         text = '\n'.join(f['required_claim'] for f in context['evidence'])
         self.assertFalse(check_grounding({'explanation_ko': text}, result)['prose_decision_basis_present'])
         text += '\n' + '\n'.join(x['statement'] for x in context['decision_basis'])

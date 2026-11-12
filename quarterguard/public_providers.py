@@ -15,7 +15,7 @@ from .live_verification import SCHEMA, MODEL, CASE_IDS, check_explanation, check
 from .dart import fetch
 from .store import ROOT, load_facts
 from .orchestrator import run_case, cases
-from .explanation_context import INSTRUCTIONS, build_context
+from .explanation_context import INSTRUCTIONS, build_context, build_generation_context
 from .explanation_guards import check_prose, check_grounding
 
 DART_TARGETS = {'s24q3-CFS':('11014','s24q3','CFS'),'s24q3-OFS':('11014','s24q3','OFS'),
@@ -75,9 +75,12 @@ def build_payload(result, title):
     field=schema['properties']['evidence_ids']
     field.update(minItems=len(ids), maxItems=len(ids))
     if ids: field['items']['enum']=list(dict.fromkeys(ids))
+    context=build_generation_context(result)
+    if context['status']=='no_evidence':
+        schema['properties']['explanation_ko']['enum']=[context['notice']]
     payload={'model':MODEL,'store':False,'max_output_tokens':700,
         'instructions':INSTRUCTIONS,
-        'input':json.dumps({'task':title,'tool_result':result,'explanation_context':build_context(result)},ensure_ascii=False),
+        'input':json.dumps({'task':title,'tool_result':result,'explanation_context':context},ensure_ascii=False),
         'text':{'format':{'type':'json_schema','name':'financial_explanation','strict':True,'schema':schema}}}
     if len(json.dumps(payload,ensure_ascii=False).encode())>12000: raise Blocked('INPUT_TOO_LARGE')
     return payload

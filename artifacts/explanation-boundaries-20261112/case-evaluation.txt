@@ -1,0 +1,140 @@
+{
+  "retrieval": {
+    "fixed_word": {
+      "n": 36,
+      "recall_at_1": 0.08333333333333333,
+      "recall_at_3": 0.25,
+      "mrr_at_5": 0.16666666666666666,
+      "latency_p50_ms": 0.8435345000634697,
+      "latency_p95_ms": 1.353075250051461
+    },
+    "cell_word": {
+      "n": 36,
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "mrr_at_5": 1.0,
+      "latency_p50_ms": 0.9562600000663224,
+      "latency_p95_ms": 1.1332980000702264
+    },
+    "cell_char": {
+      "n": 36,
+      "recall_at_1": 0.8888888888888888,
+      "recall_at_3": 1.0,
+      "mrr_at_5": 0.9398148148148149,
+      "latency_p50_ms": 1.1012395000307151,
+      "latency_p95_ms": 1.361159749876606
+    },
+    "hybrid_meta": {
+      "n": 36,
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "mrr_at_5": 1.0,
+      "latency_p50_ms": 1.1744480000288604,
+      "latency_p95_ms": 1.7551597499618765
+    },
+    "BAAI/bge-small-en-v1.5": {
+      "n": 36,
+      "recall_at_1": 0.4444444444444444,
+      "recall_at_3": 0.8055555555555556,
+      "mrr_at_5": 0.6490740740740741,
+      "latency_p50_ms": 7.663937999950576,
+      "latency_p95_ms": 10.408685499839976
+    },
+    "sentence-transformers/all-MiniLM-L6-v2": {
+      "n": 36,
+      "recall_at_1": 0.4722222222222222,
+      "recall_at_3": 0.7777777777777778,
+      "mrr_at_5": 0.6523148148148148,
+      "latency_p50_ms": 2.7354629999081226,
+      "latency_p95_ms": 4.5123590000457625
+    }
+  },
+  "workflow": {
+    "checks": [
+      {
+        "case_id": "qoq-revenue",
+        "status_correct": true,
+        "value_correct": true,
+        "issue_correct": null,
+        "source_valid": true,
+        "workflow_success": true,
+        "case_correct": true
+      },
+      {
+        "case_id": "ytd-trap",
+        "status_correct": true,
+        "value_correct": null,
+        "issue_correct": true,
+        "source_valid": true,
+        "workflow_success": true,
+        "case_correct": true
+      },
+      {
+        "case_id": "scope-trap",
+        "status_correct": true,
+        "value_correct": null,
+        "issue_correct": true,
+        "source_valid": true,
+        "workflow_success": true,
+        "case_correct": true
+      },
+      {
+        "case_id": "currency-trap",
+        "status_correct": true,
+        "value_correct": null,
+        "issue_correct": true,
+        "source_valid": true,
+        "workflow_success": true,
+        "case_correct": true
+      },
+      {
+        "case_id": "reconcile-revenue",
+        "status_correct": true,
+        "value_correct": true,
+        "issue_correct": null,
+        "source_valid": true,
+        "workflow_success": true,
+        "case_correct": true
+      },
+      {
+        "case_id": "qoq-profit",
+        "status_correct": true,
+        "value_correct": true,
+        "issue_correct": null,
+        "source_valid": true,
+        "workflow_success": true,
+        "case_correct": true
+      },
+      {
+        "case_id": "negative-base",
+        "status_correct": true,
+        "value_correct": null,
+        "issue_correct": true,
+        "source_valid": true,
+        "workflow_success": true,
+        "case_correct": true
+      },
+      {
+        "case_id": "no-evidence",
+        "status_correct": true,
+        "value_correct": null,
+        "issue_correct": true,
+        "source_valid": true,
+        "workflow_success": true,
+        "case_correct": true
+      }
+    ],
+    "case_accuracy": 1.0,
+    "workflow_success_rate": 1.0,
+    "citation_exact_match": 1.0,
+    "issue_accuracy": 1.0,
+    "status_accuracy": 1.0,
+    "numeric_accuracy": 1.0,
+    "tool_success_rate": 1.0,
+    "latency_p50_ms": 2227.474,
+    "latency_p95_ms": 2624.8352999999997,
+    "model_calls": 0,
+    "provider_api_cost_usd": 0,
+    "cost_scope": "Paid model API only, excludes hosting/CPU/download costs"
+  }
+}
