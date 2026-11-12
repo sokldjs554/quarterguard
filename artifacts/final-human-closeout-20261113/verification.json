@@ -1,0 +1,32 @@
+{
+  "python_run": 392,
+  "python_skipped": 1,
+  "python_failures": 0,
+  "node_passed": 29,
+  "local_browser_checks": 6,
+  "new_paid_calls": 0,
+  "new_model_responses": 0,
+  "received_human_verdicts": 20,
+  "human_true": 17,
+  "human_ambiguous": 3,
+  "human_false": 0,
+  "execution_gate_passed_preserved": 8,
+  "offline_replay_passed": 7,
+  "human_true_withheld": 10,
+  "human_ambiguous_withheld": 3,
+  "protected_paths_unchanged": [
+    "artifacts/closeout-live-20261112",
+    "artifacts/model-completion-live-20261112",
+    "data/closeout-evaluation-freeze-20261112.json",
+    "data/latest-progress-closeout-live-20261112.json",
+    "docs/validation-kit/closeout-live-20261112",
+    "tests/test_my_period_review.py",
+    "tests/test_my_dart_review.py",
+    "tests/test_explanation_contract.py"
+  ],
+  "review_findings_fixed": [
+    "generation/review stage label no longer implies execution after the final guard change",
+    "current verification counters updated"
+  ],
+  "guard_sha256": "ba10a6f47ea9a50ab8daadefad3b07efce8bca2cd97a89f89518311515732c08"
+}

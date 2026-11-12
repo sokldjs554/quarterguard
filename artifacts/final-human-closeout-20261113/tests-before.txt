@@ -1,0 +1,46 @@
+test_actual_n04_listing_values_without_conclusion_is_withheld (tests.test_reconciliation_completion.ReconciliationCompletionTests.test_actual_n04_listing_values_without_conclusion_is_withheld) ... FAIL
+test_explicit_positive_conclusion_is_supported_without_changing_tool_result (tests.test_reconciliation_completion.ReconciliationCompletionTests.test_explicit_positive_conclusion_is_supported_without_changing_tool_result) ... ok
+test_negated_or_hypothetical_conclusion_is_not_a_completed_answer (tests.test_reconciliation_completion.ReconciliationCompletionTests.test_negated_or_hypothetical_conclusion_is_not_a_completed_answer) ... 
+  test_negated_or_hypothetical_conclusion_is_not_a_completed_answer (tests.test_reconciliation_completion.ReconciliationCompletionTests.test_negated_or_hypothetical_conclusion_is_not_a_completed_answer) (phrase='누적 차감 결과가 직접 공시 값과 일치하지 않습니다.') ... FAIL
+  test_negated_or_hypothetical_conclusion_is_not_a_completed_answer (tests.test_reconciliation_completion.ReconciliationCompletionTests.test_negated_or_hypothetical_conclusion_is_not_a_completed_answer) (phrase='누적 차감 결과가 직접 공시 값과 일치할 수 있습니다.') ... FAIL
+  test_negated_or_hypothetical_conclusion_is_not_a_completed_answer (tests.test_reconciliation_completion.ReconciliationCompletionTests.test_negated_or_hypothetical_conclusion_is_not_a_completed_answer) (phrase='누적 차감 결과가 직접 공시 값과 일치합니다라는 주장은 틀렸습니다.') ... FAIL
+
+======================================================================
+FAIL: test_actual_n04_listing_values_without_conclusion_is_withheld (tests.test_reconciliation_completion.ReconciliationCompletionTests.test_actual_n04_listing_values_without_conclusion_is_withheld)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_reconciliation_completion.py", line 15, in test_actual_n04_listing_values_without_conclusion_is_withheld
+    self.assertFalse(all(checks.values()))
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_negated_or_hypothetical_conclusion_is_not_a_completed_answer (tests.test_reconciliation_completion.ReconciliationCompletionTests.test_negated_or_hypothetical_conclusion_is_not_a_completed_answer) (phrase='누적 차감 결과가 직접 공시 값과 일치하지 않습니다.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_reconciliation_completion.py", line 29, in test_negated_or_hypothetical_conclusion_is_not_a_completed_answer
+    with self.subTest(phrase=phrase):self.assertFalse(all(check_grounding(answer,self.row['tool_result']).values()))
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_negated_or_hypothetical_conclusion_is_not_a_completed_answer (tests.test_reconciliation_completion.ReconciliationCompletionTests.test_negated_or_hypothetical_conclusion_is_not_a_completed_answer) (phrase='누적 차감 결과가 직접 공시 값과 일치할 수 있습니다.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_reconciliation_completion.py", line 29, in test_negated_or_hypothetical_conclusion_is_not_a_completed_answer
+    with self.subTest(phrase=phrase):self.assertFalse(all(check_grounding(answer,self.row['tool_result']).values()))
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_negated_or_hypothetical_conclusion_is_not_a_completed_answer (tests.test_reconciliation_completion.ReconciliationCompletionTests.test_negated_or_hypothetical_conclusion_is_not_a_completed_answer) (phrase='누적 차감 결과가 직접 공시 값과 일치합니다라는 주장은 틀렸습니다.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_reconciliation_completion.py", line 29, in test_negated_or_hypothetical_conclusion_is_not_a_completed_answer
+    with self.subTest(phrase=phrase):self.assertFalse(all(check_grounding(answer,self.row['tool_result']).values()))
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.007s
+
+FAILED (failures=4)

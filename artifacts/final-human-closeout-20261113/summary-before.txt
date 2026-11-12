@@ -1,0 +1,41 @@
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+test_current_summary_includes_confirmed_work_without_rewriting_history (tests.test_closeout_summary.CloseoutSummaryTests.test_current_summary_includes_confirmed_work_without_rewriting_history) ... FAIL
+test_final_replay_distinguishes_execution_pass_from_human_review (tests.test_closeout_summary.CloseoutSummaryTests.test_final_replay_distinguishes_execution_pass_from_human_review) ... ERROR
+test_new_generation_review_is_added_without_rewriting_unreviewed_snapshot (tests.test_closeout_summary.CloseoutSummaryTests.test_new_generation_review_is_added_without_rewriting_unreviewed_snapshot) ... FAIL
+test_sk_current_catalog_matches_supported_calculations (tests.test_closeout_summary.CloseoutSummaryTests.test_sk_current_catalog_matches_supported_calculations) ... ok
+
+======================================================================
+ERROR: test_final_replay_distinguishes_execution_pass_from_human_review (tests.test_closeout_summary.CloseoutSummaryTests.test_final_replay_distinguishes_execution_pass_from_human_review)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_closeout_summary.py", line 46, in test_final_replay_distinguishes_execution_pass_from_human_review
+    self.assertEqual(s['closeout']['status'],'completed')
+                     ~^^^^^^^^^^^^
+KeyError: 'closeout'
+
+======================================================================
+FAIL: test_current_summary_includes_confirmed_work_without_rewriting_history (tests.test_closeout_summary.CloseoutSummaryTests.test_current_summary_includes_confirmed_work_without_rewriting_history)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_closeout_summary.py", line 11, in test_current_summary_includes_confirmed_work_without_rewriting_history
+    self.assertEqual(summary['as_of_kst'], '2026-11-13')
+AssertionError: '2026-11-12' != '2026-11-13'
+- 2026-11-12
+?          ^
++ 2026-11-13
+?          ^
+
+
+======================================================================
+FAIL: test_new_generation_review_is_added_without_rewriting_unreviewed_snapshot (tests.test_closeout_summary.CloseoutSummaryTests.test_new_generation_review_is_added_without_rewriting_unreviewed_snapshot)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_closeout_summary.py", line 34, in test_new_generation_review_is_added_without_rewriting_unreviewed_snapshot
+    self.assertTrue(batch['human_reviewed'])
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.098s
+
+FAILED (failures=2, errors=1)

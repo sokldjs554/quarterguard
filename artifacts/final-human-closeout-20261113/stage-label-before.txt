@@ -1,0 +1,40 @@
+✔ current closeout shows completed human work and separates fresh generation from replay (5.845738ms)
+✔ fresh paid batch displays poorer gate result without inventing human approval (0.747257ms)
+✖ final human review is visible with remaining overblocking and no new generation claim (6.307737ms)
+✔ current evidence separates product scope, reviewed responses, latest guard, and actors (0.232575ms)
+✔ historical failures are dated and never relabeled as current status (28.344983ms)
+✔ malformed current summary fails and text is escaped (0.475767ms)
+✔ latest model batch is separate from prior human labels and has unresolved prose warnings (0.30765ms)
+✔ confirmed v5 human verdicts do not become an overall accuracy improvement (0.267733ms)
+✔ v6 separates structural regression, new tasks, and still-pending human review (0.371759ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 8
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 126.354887
+
+✖ failing tests:
+
+test at tests/test_latest_progress.mjs:22:1
+✖ final human review is visible with remaining overblocking and no new generation claim (6.307737ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(!html.includes('마지막 코드 수정 후 새 생성'))
+  
+      at TestContext.<anonymous> (file:///workspace/quarterguard-apple-evaluation/tests/test_latest_progress.mjs:28:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

@@ -1,5 +1,7 @@
 # 실제 사용자 검증 준비 키트
 
+> 최신 완료: [N01–N20의 실제 b 검수](final-human-closeout-20261113/README.md)를 수신했습니다. 참17·모호3·거짓0이며, [합의한 세 가지 보완을 종료](../final-human-closeout-20261113.md)했습니다. 같은 b의 후속 검수이고 추가 참여자로 세지 않습니다.
+
 > 최신 완료 상태: b의 v9 직접 검수, Apple·SK 사용 및 A7·S4 파일 대조, 입력 변경 후 상태 초기화는 확인되었습니다. [현재 마무리 기록](https://github.com/sokldjs554/quarterguard/blob/main/docs/final-closeout-20261112.md)을 먼저 보세요. 아래 과거 단계의 대기 표시는 당시 기록이며 현재 미완료 목록이 아닙니다.
 
 최신 새 응답은 [2026-11-12 완료 평가20건 검수 자료](completion-live-20261112/README.md)에서 확인합니다. 이후 [같은 b의 후속 검수](completion-human-review-20261112/README.md)를 받았습니다. 개별 판정 기준 참11·거짓4·모호5이며, 제출 마지막 집계와의 차이는 보존했습니다. 준비 당시 빈 양식은 그대로 둡니다.

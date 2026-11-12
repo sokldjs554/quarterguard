@@ -19,6 +19,14 @@ test('fresh paid batch displays poorer gate result without inventing human appro
  for(const value of ['새 실제 생성 20건','8/20','12건 보류','0.0189500','이번 응답의 사람 판정은 아직 없습니다'])assert.ok(html.includes(value),value);
  assert.ok(!html.includes('별도 승인 대기'));
 });
+test('final human review is visible with remaining overblocking and no new generation claim',()=>{
+ const current=JSON.parse(fs.readFileSync(new URL('../data/latest-progress-final-human-20261113.json',import.meta.url)));
+ const html=renderLatestProgress({summary:current,runtime_commit:'final'});
+ for(const value of ['참 17·모호 3·거짓 0','당시 제품 검사 8/20','7/20','참 10건','모호 3건','합의한 세 가지 보완 완료'])assert.ok(html.includes(value),value);
+ assert.ok(!html.includes('이번 응답의 사람 판정은 아직 없습니다'));
+ assert.ok(!html.includes('검수 대기'));
+ assert.ok(!html.includes('마지막 코드 수정 후 새 생성'));
+});
 test('current evidence separates product scope, reviewed responses, latest guard, and actors',()=>{
  const html=renderLatestProgress({summary,runtime_commit:'abcdef123'});
  for(const text of ['최신 근거 요약','현대차는 공개 작업지에 미등록','참 5·모호 3 → 참 7·모호 1','8/8 → 7/8','변경 후 새 실호출·b 재검수는 아직 없습니다','직전 기능 변경(f5377ad)','실행 주체는 AI','현재 서버 abcdef1'])assert.ok(html.includes(text),text);

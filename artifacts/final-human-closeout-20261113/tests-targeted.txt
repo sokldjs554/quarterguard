@@ -1,0 +1,16 @@
+test_actual_n04_listing_values_without_conclusion_is_withheld (tests.test_reconciliation_completion.ReconciliationCompletionTests.test_actual_n04_listing_values_without_conclusion_is_withheld) ... ok
+test_explicit_positive_conclusion_is_supported_without_changing_tool_result (tests.test_reconciliation_completion.ReconciliationCompletionTests.test_explicit_positive_conclusion_is_supported_without_changing_tool_result) ... ok
+test_negated_or_hypothetical_conclusion_is_not_a_completed_answer (tests.test_reconciliation_completion.ReconciliationCompletionTests.test_negated_or_hypothetical_conclusion_is_not_a_completed_answer) ... ok
+test_conflicting_page_before_amount_is_also_rejected (tests.test_closeout_grounding.CloseoutGroundingTests.test_conflicting_page_before_amount_is_also_rejected) ... ok
+test_draft_rejection_does_not_hide_an_additional_evidence_absence_claim (tests.test_closeout_grounding.CloseoutGroundingTests.test_draft_rejection_does_not_hide_an_additional_evidence_absence_claim) ... ok
+test_explicit_correct_bindings_do_not_require_verbatim_sentences (tests.test_closeout_grounding.CloseoutGroundingTests.test_explicit_correct_bindings_do_not_require_verbatim_sentences) ... ok
+test_internal_codes_still_require_plain_language (tests.test_closeout_grounding.CloseoutGroundingTests.test_internal_codes_still_require_plain_language) ... ok
+test_known_false_and_ambiguous_prose_remains_blocked (tests.test_closeout_grounding.CloseoutGroundingTests.test_known_false_and_ambiguous_prose_remains_blocked) ... ok
+test_negated_or_conflicting_fields_never_count_as_positive_context (tests.test_closeout_grounding.CloseoutGroundingTests.test_negated_or_conflicting_fields_never_count_as_positive_context) ... ok
+test_wrong_date_scope_page_or_amount_stays_blocked (tests.test_closeout_grounding.CloseoutGroundingTests.test_wrong_date_scope_page_or_amount_stays_blocked) ... ok
+test_wrong_explicit_page_cannot_inherit_a_correct_reference (tests.test_closeout_grounding.CloseoutGroundingTests.test_wrong_explicit_page_cannot_inherit_a_correct_reference) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.054s
+
+OK
