@@ -42,3 +42,14 @@
 [최종 로컬 브라우저 결과](../artifacts/json-file-review-20261112/local-native-picker/report.json): 1365×900 및 390×844 통과. [기존 다운로드 회귀](../artifacts/json-file-review-20261112/export-regression/report.json)도 두 크기 통과. 모바일 크기 Chromium이며 실제 안드로이드 사용자 검사가 아니다.
 
 Python339개 실행·실패0·1skip, Node26개 통과(파일 읽기8개 추가). [Python 로그](../artifacts/json-file-review-20261112/python-tests.log)의 기존 Starlette/Pydantic 경고도 보존한다. [Node 최종 로그](../artifacts/json-file-review-20261112/node-native-picker.log). 새 유료 호출0회, 새 b 참여 기록0건.
+
+
+## 공개 배포 확인
+
+[PR69](https://github.com/sokldjs554/quarterguard/pull/69)의 제품 커밋 `bfc3d498cc4493eaead62f55807f94eb2051fe4a`가 GitHub main·Render live·공개 health에 일치했다. 브라우저에서 내려받은 A7/S4 파일을 실제 파일 선택창으로 다시 읽는 [공개 검사](../artifacts/json-file-review-20261112/public/browser/report.json)를 PC·모바일 크기에서 통과했다. 파일 읽기 네트워크 요청0건, 내용 일치·변조 불일치·오류 및 조건 변경 후 이전 상태 제거를 확인했다.
+
+[배포 기록](../artifacts/json-file-review-20261112/public/render-deploy.json) · [공개 코드/health 대조](../artifacts/json-file-review-20261112/public/code-health.json) · [Apple 모바일 크기 캡처](../artifacts/json-file-review-20261112/public/browser/A7-reopened-390.png) · [SK 모바일 크기 캡처](../artifacts/json-file-review-20261112/public/browser/S4-reopened-390.png).
+
+이 환경의 직접 Chromium HTTPS는 [인증서 오류](../artifacts/json-file-review-20261112/public/direct-https.json)로 실패해 TLS 검증 중계를 사용했다. 인증서 검증을 해제하지 않았으며, 직접 HTTPS 브라우저 또는 b의 실기기 성공으로 표현하지 않는다. 이는 b가 전달한 file:// 열기 실패와 별개의 검사 환경 문제다. [배포 대기 health 기록](../artifacts/json-file-review-20261112/public/health-polls.json)의 첫 시간초과도 보존한다. 뒤따르는 검증 문서 커밋은 제품 코드와 별개이며 위 캡처의 제품 기준 커밋을 바꾸지 않는다.
+
+b의 파일 내용 미확인 기록은 여전히 보존돼 있다. 위 사용 순서로 실제 파일을 읽은 뒤 그 결과를 받아야 후속 사람 확인으로 기록할 수 있다.
