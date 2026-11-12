@@ -1,0 +1,13 @@
+F
+======================================================================
+FAIL: test_wrong_explicit_page_cannot_inherit_a_correct_reference (tests.test_closeout_grounding.CloseoutGroundingTests.test_wrong_explicit_page_cannot_inherit_a_correct_reference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_closeout_grounding.py", line 56, in test_wrong_explicit_page_cannot_inherit_a_correct_reference
+    self.assertFalse(self.checks(6, wrong)['prose_evidence_anchors_present'])
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 1 test in 0.010s
+
+FAILED (failures=1)

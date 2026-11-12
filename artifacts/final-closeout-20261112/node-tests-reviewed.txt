@@ -1,0 +1,35 @@
+✔ Apple cards preserve USD, fiscal dates, printed HTML location and signed outflows (32.89715ms)
+✔ wrong unit, scope, origin and link reject before render (0.451157ms)
+✔ raw source row labels are escaped (0.262854ms)
+✔ stale review cannot render for new question (0.349275ms)
+✔ source context escapes text and only links HTTPS publisher PDFs at the supplied page (4.68919ms)
+✔ empty, missing and unresolved context never show old source links (6.573267ms)
+✔ scope-only decision basis is separate, escaped, and absent from legacy context (0.721226ms)
+✔ real A7 export retains question, source location and withholding on reopen (5.074112ms)
+✔ real S4 export retains both inputs, source locations and no computed ratio (1.568821ms)
+✔ whitespace and object key order do not imply different JSON values (5.983341ms)
+✔ changed question, amount, missing field, extra field and evidence order differ (6.631531ms)
+✔ without a current result, a readable file is not claimed to match (0.796617ms)
+✔ malformed, oversized, unsupported and excessively nested files fail (15.454017ms)
+✔ all loaded strings remain literal data including HTML and script-like URLs (0.529504ms)
+✔ unsafe numeric values cannot be silently rounded into a match (0.335656ms)
+✔ current closeout shows completed human work and separates fresh generation from replay (6.27905ms)
+✔ current evidence separates product scope, reviewed responses, latest guard, and actors (0.217192ms)
+✔ historical failures are dated and never relabeled as current status (22.328639ms)
+✔ malformed current summary fails and text is escaped (0.435449ms)
+✔ latest model batch is separate from prior human labels and has unresolved prose warnings (0.225068ms)
+✔ confirmed v5 human verdicts do not become an overall accuracy improvement (0.254773ms)
+✔ v6 separates structural regression, new tasks, and still-pending human review (0.236907ms)
+✔ review context includes ordered evidence, mode and document version (1.424317ms)
+✔ review persists only valid fields; damaged storage is ignored (1.235028ms)
+✔ storage write failures propagate so UI cannot claim saved (0.419804ms)
+✔ CSV preserves numerical output and separates manual review from automated status (0.970909ms)
+✔ CSV neutralizes formula-like notes including leading whitespace (0.915347ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 372.5966

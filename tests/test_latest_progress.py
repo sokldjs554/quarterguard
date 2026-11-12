@@ -58,7 +58,7 @@ class LatestProgressTests(unittest.TestCase):
         response=c.get('/api/evaluation/latest')
         self.assertEqual(response.status_code,200)
         r=response.json()
-        self.assertEqual(r['summary']['as_of_kst'],'2026-11-11')
+        self.assertEqual(r['summary']['as_of_kst'],'2026-11-12')
         self.assertIn('runtime_commit',r)
         self.assertEqual(r['summary']['human_review']['followup'],{'참':7,'모호':1})
         self.assertEqual(r['summary']['llm']['calls_per_batch'],[8,8])

@@ -129,7 +129,11 @@ def calculate_source_pair(current_id,base_id,mode):
 
 def options():
     manifest,cells=source.load_source()
-    runtime=manifest|{'calculation_supported':True,'calculation_modes':['annual_yoy','balance_yoy','product_share'],'clarification_only_modes':['inventory_months']}
+    runtime=manifest|{'calculation_supported':True,'calculation_modes':['annual_yoy','balance_yoy','product_share'],'clarification_only_modes':['inventory_months'],
+        'limitations':['Selected rows only; no general annual parser.',
+                       'Registered cells support annual comparison, year-end balance change and product share.',
+                       'Inventory months requires an explicit definition and is not calculated.',
+                       'Zero or negative bases withhold percentage growth; compatible differences remain available.']}
     return {'document':runtime,'cells':cells,'modes':list(MODES),
         'calculation_modes':['annual_yoy','balance_yoy','product_share'],
         'clarification_only_modes':['inventory_months']}

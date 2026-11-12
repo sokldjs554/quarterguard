@@ -5,6 +5,14 @@ import {renderLatestProgress} from '../web/latest-progress.js';
 import {renderHistoricalProgress} from '../web/progress.js';
 const summary=JSON.parse(fs.readFileSync(new URL('../data/latest-progress-20261110.json',import.meta.url)));
 const history=JSON.parse(fs.readFileSync(new URL('../artifacts/progress-v2-final.json',import.meta.url)));
+test('current closeout shows completed human work and separates fresh generation from replay',()=>{
+ const current=JSON.parse(fs.readFileSync(new URL('../data/latest-progress-closeout-20261112.json',import.meta.url)));
+ const html=renderLatestProgress({summary:current,runtime_commit:'closeout123'});
+ for(const value of ['SK 5개 + Apple 7개','참 11·거짓 4·모호 5','A7·S4 JSON 다운로드·내용 대조 완료','10건 통과','사람 참 차단 1건','새 유료 호출 0회','테스트 6개'])assert.ok(html.includes(value),value);
+ for(const value of ['질문·정답은 아직 미수신','새 b 검수는 대기'])assert.ok(!html.includes(value),value);
+ const bad=structuredClone(current);bad.current_status.fresh_batch_status='<script>alert(1)</script>';
+ assert.ok(!renderLatestProgress({summary:bad}).includes('<script>'));
+});
 test('current evidence separates product scope, reviewed responses, latest guard, and actors',()=>{
  const html=renderLatestProgress({summary,runtime_commit:'abcdef123'});
  for(const text of ['최신 근거 요약','현대차는 공개 작업지에 미등록','참 5·모호 3 → 참 7·모호 1','8/8 → 7/8','변경 후 새 실호출·b 재검수는 아직 없습니다','직전 기능 변경(f5377ad)','실행 주체는 AI','현재 서버 abcdef1'])assert.ok(html.includes(text),text);

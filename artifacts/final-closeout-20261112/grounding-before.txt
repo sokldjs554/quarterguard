@@ -1,0 +1,81 @@
+test_draft_rejection_does_not_hide_an_additional_evidence_absence_claim (tests.test_closeout_grounding.CloseoutGroundingTests.test_draft_rejection_does_not_hide_an_additional_evidence_absence_claim) ... FAIL
+test_explicit_correct_bindings_do_not_require_verbatim_sentences (tests.test_closeout_grounding.CloseoutGroundingTests.test_explicit_correct_bindings_do_not_require_verbatim_sentences) ... 
+  test_explicit_correct_bindings_do_not_require_verbatim_sentences (tests.test_closeout_grounding.CloseoutGroundingTests.test_explicit_correct_bindings_do_not_require_verbatim_sentences) (review=1) ... FAIL
+  test_explicit_correct_bindings_do_not_require_verbatim_sentences (tests.test_closeout_grounding.CloseoutGroundingTests.test_explicit_correct_bindings_do_not_require_verbatim_sentences) (review=4) ... FAIL
+  test_explicit_correct_bindings_do_not_require_verbatim_sentences (tests.test_closeout_grounding.CloseoutGroundingTests.test_explicit_correct_bindings_do_not_require_verbatim_sentences) (review=5) ... FAIL
+  test_explicit_correct_bindings_do_not_require_verbatim_sentences (tests.test_closeout_grounding.CloseoutGroundingTests.test_explicit_correct_bindings_do_not_require_verbatim_sentences) (review=6) ... FAIL
+  test_explicit_correct_bindings_do_not_require_verbatim_sentences (tests.test_closeout_grounding.CloseoutGroundingTests.test_explicit_correct_bindings_do_not_require_verbatim_sentences) (review=9) ... FAIL
+  test_explicit_correct_bindings_do_not_require_verbatim_sentences (tests.test_closeout_grounding.CloseoutGroundingTests.test_explicit_correct_bindings_do_not_require_verbatim_sentences) (review=11) ... FAIL
+  test_explicit_correct_bindings_do_not_require_verbatim_sentences (tests.test_closeout_grounding.CloseoutGroundingTests.test_explicit_correct_bindings_do_not_require_verbatim_sentences) (review=17) ... FAIL
+test_internal_codes_still_require_plain_language (tests.test_closeout_grounding.CloseoutGroundingTests.test_internal_codes_still_require_plain_language) ... ok
+test_known_false_and_ambiguous_prose_remains_blocked (tests.test_closeout_grounding.CloseoutGroundingTests.test_known_false_and_ambiguous_prose_remains_blocked) ... ok
+test_wrong_date_scope_page_or_amount_stays_blocked (tests.test_closeout_grounding.CloseoutGroundingTests.test_wrong_date_scope_page_or_amount_stays_blocked) ... ok
+
+======================================================================
+FAIL: test_draft_rejection_does_not_hide_an_additional_evidence_absence_claim (tests.test_closeout_grounding.CloseoutGroundingTests.test_draft_rejection_does_not_hide_an_additional_evidence_absence_claim)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_closeout_grounding.py", line 41, in test_draft_rejection_does_not_hide_an_additional_evidence_absence_claim
+    self.assertTrue(self.checks(9)['prose_evidence_presence_consistent'])
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_explicit_correct_bindings_do_not_require_verbatim_sentences (tests.test_closeout_grounding.CloseoutGroundingTests.test_explicit_correct_bindings_do_not_require_verbatim_sentences) (review=1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_closeout_grounding.py", line 28, in test_explicit_correct_bindings_do_not_require_verbatim_sentences
+    self.assertTrue(all(checks.values()), [k for k, v in checks.items() if not v])
+AssertionError: False is not true : ['prose_evidence_anchors_present']
+
+======================================================================
+FAIL: test_explicit_correct_bindings_do_not_require_verbatim_sentences (tests.test_closeout_grounding.CloseoutGroundingTests.test_explicit_correct_bindings_do_not_require_verbatim_sentences) (review=4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_closeout_grounding.py", line 28, in test_explicit_correct_bindings_do_not_require_verbatim_sentences
+    self.assertTrue(all(checks.values()), [k for k, v in checks.items() if not v])
+AssertionError: False is not true : ['prose_evidence_anchors_present']
+
+======================================================================
+FAIL: test_explicit_correct_bindings_do_not_require_verbatim_sentences (tests.test_closeout_grounding.CloseoutGroundingTests.test_explicit_correct_bindings_do_not_require_verbatim_sentences) (review=5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_closeout_grounding.py", line 28, in test_explicit_correct_bindings_do_not_require_verbatim_sentences
+    self.assertTrue(all(checks.values()), [k for k, v in checks.items() if not v])
+AssertionError: False is not true : ['prose_evidence_anchors_present']
+
+======================================================================
+FAIL: test_explicit_correct_bindings_do_not_require_verbatim_sentences (tests.test_closeout_grounding.CloseoutGroundingTests.test_explicit_correct_bindings_do_not_require_verbatim_sentences) (review=6)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_closeout_grounding.py", line 28, in test_explicit_correct_bindings_do_not_require_verbatim_sentences
+    self.assertTrue(all(checks.values()), [k for k, v in checks.items() if not v])
+AssertionError: False is not true : ['prose_evidence_anchors_present']
+
+======================================================================
+FAIL: test_explicit_correct_bindings_do_not_require_verbatim_sentences (tests.test_closeout_grounding.CloseoutGroundingTests.test_explicit_correct_bindings_do_not_require_verbatim_sentences) (review=9)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_closeout_grounding.py", line 28, in test_explicit_correct_bindings_do_not_require_verbatim_sentences
+    self.assertTrue(all(checks.values()), [k for k, v in checks.items() if not v])
+AssertionError: False is not true : ['prose_evidence_anchors_present', 'prose_evidence_presence_consistent']
+
+======================================================================
+FAIL: test_explicit_correct_bindings_do_not_require_verbatim_sentences (tests.test_closeout_grounding.CloseoutGroundingTests.test_explicit_correct_bindings_do_not_require_verbatim_sentences) (review=11)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_closeout_grounding.py", line 28, in test_explicit_correct_bindings_do_not_require_verbatim_sentences
+    self.assertTrue(all(checks.values()), [k for k, v in checks.items() if not v])
+AssertionError: False is not true : ['prose_evidence_anchors_present']
+
+======================================================================
+FAIL: test_explicit_correct_bindings_do_not_require_verbatim_sentences (tests.test_closeout_grounding.CloseoutGroundingTests.test_explicit_correct_bindings_do_not_require_verbatim_sentences) (review=17)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_closeout_grounding.py", line 28, in test_explicit_correct_bindings_do_not_require_verbatim_sentences
+    self.assertTrue(all(checks.values()), [k for k, v in checks.items() if not v])
+AssertionError: False is not true : ['prose_evidence_anchors_present']
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.045s
+
+FAILED (failures=8)

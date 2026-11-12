@@ -1,0 +1,14 @@
+F
+======================================================================
+FAIL: test_conflicting_page_before_amount_is_also_rejected (tests.test_closeout_grounding.CloseoutGroundingTests.test_conflicting_page_before_amount_is_also_rejected) (page='p. 48')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_closeout_grounding.py", line 69, in test_conflicting_page_before_amount_is_also_rejected
+    with self.subTest(page=page):self.assertFalse(all(self.checks(1,wrong).values()))
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 1 test in 0.010s
+
+FAILED (failures=1)

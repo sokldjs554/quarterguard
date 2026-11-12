@@ -1,0 +1,18 @@
+E
+======================================================================
+ERROR: test_closeout_evaluation (unittest.loader._FailedTest.test_closeout_evaluation)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_closeout_evaluation
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/quarterguard-apple-evaluation/tests/test_closeout_evaluation.py", line 7, in <module>
+    from quarterguard import closeout_evaluation as e
+ImportError: cannot import name 'closeout_evaluation' from 'quarterguard' (/workspace/quarterguard-apple-evaluation/quarterguard/__init__.py)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
