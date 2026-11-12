@@ -1,0 +1,2 @@
+77 raw files match original artifact ZIP; 20 packet responses and tools match raw; human fields blank; offline replay4/20; ZIP content verified.
+Artifact consistency: corpus hash, gold hash, 8 cases, exact canonical citations verified

@@ -1,0 +1,29 @@
+{
+  "recorded_at": "2026-11-12T07:34:19.000844+00:00",
+  "user_confirmation": "응 실행해도 돼",
+  "contract": {
+    "id": "model-completion-20261112",
+    "model": "gpt-4.1-mini-2025-04-14",
+    "explanations": 20,
+    "live_mcp_explanations": 4,
+    "replayed_explanations": 16,
+    "planner_tasks": 4,
+    "max_planner_decisions_per_task": 8,
+    "max_calls": 52,
+    "max_input_admission_tokens": 16000,
+    "input_admission": "serialized entire payload UTF8 bytes + 1024 framing reserve; conservative admission, not provider hard input cap",
+    "max_output_tokens": 700,
+    "retries": 0,
+    "input_usd_per_million": "0.4",
+    "output_usd_per_million": "1.6",
+    "estimated_max_usd": "0.39104",
+    "approval_budget_usd": "0.40",
+    "billed_cost_usd": null,
+    "pricing_url": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+    "pricing_checked": "2026-11-12",
+    "model_lifecycle": "Official model page marks deprecated; do not substitute or retry if unavailable."
+  },
+  "freeze_sha256": "0bd61535f81eef282cf7b0858f1c0b853fe2b06a27d34b2e447df24d8b63e50c",
+  "execution_commit": "8937726193d9c755916d8341533ac62e6b58dbde",
+  "existing_actions_key_reuse": true
+}

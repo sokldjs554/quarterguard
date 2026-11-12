@@ -1,0 +1,15 @@
+{
+  "reviewer_type": "independent_ai_code_review",
+  "human_review": false,
+  "paid_calls": 0,
+  "important_findings": [
+    "Unsigned decline magnitude allowed a negated decline.",
+    "Annualized term detection rejected explicit negation."
+  ],
+  "resolutions": [
+    "Reject direct negation and explicit positive signed decline; preserve negative growth vs unsigned magnitude distinction.",
+    "Recognize narrow per-occurrence negations and retain rejection for a separate positive annualized claim."
+  ],
+  "followup_status": "Both fixes confirmed; no critical/important findings remaining within reviewed scope.",
+  "raw_files_verified_unchanged": 77
+}

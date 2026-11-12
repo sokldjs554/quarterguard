@@ -4,7 +4,7 @@
 
 [공개 데모](https://quarterguard.onrender.com/) · [최신 지원 근거·공고 대조](docs/application-evidence-20261112.md) · [최종 사람 검수 묶음](docs/validation-kit/final-handoff-20261112/README.md) · [본인 코드 검토](docs/code-review-kit/README.md) · [서버 커밋 확인](https://quarterguard.onrender.com/health)
 
-**모델 실행·설명 후속 보완:** [조회 누락 복구와 근거별 설명 검사](docs/model-completion-20261112.md)를 추가했습니다. 실제 MCP를 사용한 준비된 테스트 순서는4/4 기준 일치이며 새 LLM 호출은0회입니다. 새 모델 생성·사람 판정은 승인 후 별도 평가합니다. 금융 업무 경험자 b의 실제 사용·검수는 이미 확보했으며 회사 내부 환경 배포와 구분합니다.
+**모델 실행·설명 후속 결과:** [새 실호출36회 결과](docs/model-completion-live-results-20261112.md): 실제 모델 도구 선택4과제4/4 일치, 설명20건 구조·근거ID20/20 일치, 실행 당시 제품 검사4/20 통과·16/20 차단입니다. 추정 비용$0.0294128, 청구액 미조회. 형식 오탐과 자동 통과 문장의 의미 문제를 구분했으며 [새 원응답 검수 자료](docs/validation-kit/completion-live-20261112/README.md)를 준비했습니다. 새 사람 판정은 아직 없고, 금융 업무 경험자 b의 기존 실제 사용·검수는 이미 확보된 경험입니다.
 
 **최신 사람 확인·지원서 준비:** [실사용11과제·실제 LLM20건·빈 기록지](docs/validation-kit/final-handoff-20261112/README.md) · [확인된 근거로 쓴 지원서 초안](docs/application-evidence-20261112.md). [후속 제출 기록](docs/validation-kit/final-followup-20261112/README.md)을 받았습니다. 기존 참여자 b가 데모11과제와 실제 응답20건을 직접 확인했다고 후속 확인됐습니다. 후속 확인에서 b의 A7·S4 다운로드·파일 내용 대조가 완료됐고, A7 질문 변경 후 이전 결과 제거·저장 비활성화도 사용자 확인을 받아 이번 후속 체크리스트를 완료했습니다. 제품 응답4건은 설명 참2·거짓2로 판정됐고, v9 16건은 참13·모호3입니다. 최초 제출의 AI 검토 표기는 사용자 확인에 따라 정정했고 원기록은 보존했습니다. 새 유료 호출0회.
 
