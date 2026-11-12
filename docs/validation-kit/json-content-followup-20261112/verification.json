@@ -1,0 +1,14 @@
+{
+  "baseline_commit": "c80d64775d689a4df921997314d4ecc564e565d9",
+  "existing_evidence_files_unchanged": 915,
+  "submitted_items_matched": 4,
+  "tasks": 2,
+  "confirmed_downloader": "b",
+  "confirmed_content_reviewer": "b",
+  "new_participants": 0,
+  "new_paid_calls": 0,
+  "new_ai_file_read": false,
+  "remaining_human_check": "A7 state after question edit",
+  "links_valid": true,
+  "artifact_consistency": "passed"
+}

@@ -1,0 +1,52 @@
+{
+  "record_type": "submitted_json_content_screen_comparison",
+  "source": "user-supplied table; AI transcription",
+  "record_label_date": "2026-11-12",
+  "actual_performance_date": null,
+  "downloader": null,
+  "content_reviewer": null,
+  "environment": null,
+  "file_opening_method": null,
+  "assistance": null,
+  "performer_attribution": "awaiting clarification",
+  "raw_file_provided_in_this_submission": false,
+  "new_ai_file_inspection": false,
+  "items": [
+    {
+      "id": "A7-result",
+      "item": "Apple A7",
+      "reported_content": "질문은 “2024년 중국권 매출 감소는 판매량 감소만으로 설명할 수 있나?”입니다. 판정은 needs_review이며, 제품 매출 감소와 환율 영향을 함께 언급하지만 요인별 기여도가 없어 단독 원인을 확정할 수 없다고 기록돼 있습니다.",
+      "screen_comparison": "match"
+    },
+    {
+      "id": "A7-source",
+      "item": "Apple 원문 위치",
+      "reported_content": "SEC HTML 인쇄 22쪽, Net sales by reportable segment 표의 Greater China 행. 2024년 66,952, 2023년 72,559백만 달러가 각각의 열과 함께 들어 있습니다. 2024년 52주·2023년 53주 경고도 있습니다.",
+      "screen_comparison": "match"
+    },
+    {
+      "id": "S4-result",
+      "item": "SK하이닉스 S4",
+      "reported_content": "계산 방식은 inventory_months, 판정은 needs_review입니다. 기말·평균 재고, 분모의 매출·매출원가, 대상 기간을 정해야 하므로 자동 계산하지 않는다고 기록돼 있습니다.",
+      "screen_comparison": "match"
+    },
+    {
+      "id": "S4-source",
+      "item": "SK하이닉스 원문 위치",
+      "reported_content": "A: 2024년 말 재고 13,313,937백만 원, Inventories, net, PDF191쪽 / 인쇄 F-73. B: 2023년 연간 매출 32,765,719백만 원, Revenue, PDF193쪽 / 인쇄 F-75. 계산 결과는 null로 남아 있습니다.",
+      "screen_comparison": "match"
+    }
+  ],
+  "counts": {
+    "tasks": 2,
+    "comparison_items": 4,
+    "reported_match": 4
+  },
+  "remaining_unconfirmed": [
+    "A7 question-edit state and export availability in human use",
+    "performer, download/open method and actual date/environment"
+  ],
+  "new_paid_calls": 0,
+  "new_llm_reviews": 0,
+  "new_participant_count": 0
+}
