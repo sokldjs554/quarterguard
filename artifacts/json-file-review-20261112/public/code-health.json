@@ -1,0 +1,26 @@
+{
+  "health": {
+    "status": "ok",
+    "facts": 192,
+    "commit": "bfc3d498cc4493eaead62f55807f94eb2051fe4a",
+    "version": "1.4.0"
+  },
+  "assets": [
+    {
+      "file": "json-file-review.js",
+      "sha256": "7ebf0e2c26b1c46f45e8a1720e68623cf69c813c7300d91dd00f5168ce206fe7",
+      "matches_tested_code": true
+    },
+    {
+      "file": "source-evidence.js",
+      "sha256": "3fa26a7b5ac72d546945b8f1bc3899a273f1760bfae60bbd29247c104f9889ad",
+      "matches_tested_code": true
+    },
+    {
+      "file": "source-calculator.js",
+      "sha256": "c5dab808172b064d35b9821f7f898305e1cfb7c728a306f638edd3838f47c003",
+      "matches_tested_code": true
+    }
+  ],
+  "tls_verified": true
+}

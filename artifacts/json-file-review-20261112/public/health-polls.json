@@ -1,0 +1,32 @@
+[
+  {
+    "error": "The read operation timed out"
+  },
+  {
+    "status": 200,
+    "health": {
+      "status": "ok",
+      "facts": 192,
+      "commit": "20c15d5aad1ddeb5aee27a3169658604790687e4",
+      "version": "1.4.0"
+    }
+  },
+  {
+    "status": 200,
+    "health": {
+      "status": "ok",
+      "facts": 192,
+      "commit": "20c15d5aad1ddeb5aee27a3169658604790687e4",
+      "version": "1.4.0"
+    }
+  },
+  {
+    "status": 200,
+    "health": {
+      "status": "ok",
+      "facts": 192,
+      "commit": "bfc3d498cc4493eaead62f55807f94eb2051fe4a",
+      "version": "1.4.0"
+    }
+  }
+]

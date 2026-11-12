@@ -1,0 +1,16 @@
+[
+  {
+    "commit": {
+      "createdAt": "2026-11-12T01:56:56Z",
+      "id": "bfc3d498cc4493eaead62f55807f94eb2051fe4a",
+      "message": "Merge pull request #69 from sokldjs554/fix/local-json-review\n\nRead saved financial review JSON locally without file URL navigation"
+    },
+    "createdAt": "2026-11-12T01:56:58.844838Z",
+    "finishedAt": "2026-11-12T01:58:10.101979Z",
+    "id": "dep-dbqhpqnf3r2c73f6l6e0",
+    "startedAt": "2026-11-12T01:56:58.820516Z",
+    "status": "live",
+    "trigger": "new_commit",
+    "updatedAt": "2026-11-12T01:58:33.472091Z"
+  }
+]
