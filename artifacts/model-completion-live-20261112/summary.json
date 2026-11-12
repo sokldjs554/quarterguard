@@ -1,0 +1,31 @@
+{
+  "execution_commit": "8937726193d9c755916d8341533ac62e6b58dbde",
+  "workflow_run": 43176244586,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "paid_calls": 36,
+  "explanation_calls": 20,
+  "planner_calls": 16,
+  "input_tokens": 43872,
+  "output_tokens": 7415,
+  "estimated_cost_usd": "0.0294128",
+  "billed_cost_usd": null,
+  "unknown_cost_attempts": 0,
+  "provider_completed_explanations": 20,
+  "structured_fields_all_exact": 20,
+  "product_gate_passed": 4,
+  "product_gate_rejected": 16,
+  "failed_check_counts": {
+    "prose_evidence_anchors_present": 12,
+    "prose_review_language_localized": 6,
+    "prose_evidence_presence_consistent": 1,
+    "prose_rate_unit_explicit": 2,
+    "prose_rates_match_tool": 3,
+    "prose_decision_basis_present": 2
+  },
+  "planner_matches": 4,
+  "planner_recoveries_observed": 0,
+  "new_human_reviews": 0,
+  "semantic_accuracy": null,
+  "sampling": "All20 development cases. 4 live MCP results +16 frozen result replays; no new raw PDF parse. Prior v9 model differs.",
+  "warning": "Literal template checks can reject true paraphrases, and passing templates can coexist with contradictory prose. Gate success is not semantic accuracy."
+}

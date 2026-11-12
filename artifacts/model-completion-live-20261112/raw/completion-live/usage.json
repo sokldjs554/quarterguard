@@ -1,0 +1,290 @@
+[
+  {
+    "attempt": 1,
+    "http_status": 200,
+    "input_tokens": 1571,
+    "output_tokens": 296,
+    "estimated_cost_usd": "0.001102",
+    "latency_ms": 4520.95280799999
+  },
+  {
+    "attempt": 2,
+    "http_status": 200,
+    "input_tokens": 1737,
+    "output_tokens": 579,
+    "estimated_cost_usd": "0.0016212",
+    "latency_ms": 5856.0487910000065
+  },
+  {
+    "attempt": 3,
+    "http_status": 200,
+    "input_tokens": 510,
+    "output_tokens": 201,
+    "estimated_cost_usd": "0.0005256",
+    "latency_ms": 2650.058718999986
+  },
+  {
+    "attempt": 4,
+    "http_status": 200,
+    "input_tokens": 2102,
+    "output_tokens": 379,
+    "estimated_cost_usd": "0.0014472",
+    "latency_ms": 3595.5704599999763
+  },
+  {
+    "attempt": 5,
+    "http_status": 200,
+    "input_tokens": 1571,
+    "output_tokens": 255,
+    "estimated_cost_usd": "0.0010364",
+    "latency_ms": 3020.0456079999753
+  },
+  {
+    "attempt": 6,
+    "http_status": 200,
+    "input_tokens": 1584,
+    "output_tokens": 265,
+    "estimated_cost_usd": "0.0010576",
+    "latency_ms": 2644.5598370000025
+  },
+  {
+    "attempt": 7,
+    "http_status": 200,
+    "input_tokens": 1733,
+    "output_tokens": 454,
+    "estimated_cost_usd": "0.0014196",
+    "latency_ms": 4255.460818999978
+  },
+  {
+    "attempt": 8,
+    "http_status": 200,
+    "input_tokens": 1671,
+    "output_tokens": 360,
+    "estimated_cost_usd": "0.0012444",
+    "latency_ms": 3038.2285399999773
+  },
+  {
+    "attempt": 9,
+    "http_status": 200,
+    "input_tokens": 1594,
+    "output_tokens": 277,
+    "estimated_cost_usd": "0.0010808",
+    "latency_ms": 2973.0130279999967
+  },
+  {
+    "attempt": 10,
+    "http_status": 200,
+    "input_tokens": 510,
+    "output_tokens": 119,
+    "estimated_cost_usd": "0.0003944",
+    "latency_ms": 1435.4804959999967
+  },
+  {
+    "attempt": 11,
+    "http_status": 200,
+    "input_tokens": 1604,
+    "output_tokens": 308,
+    "estimated_cost_usd": "0.0011344",
+    "latency_ms": 2784.831201999992
+  },
+  {
+    "attempt": 12,
+    "http_status": 200,
+    "input_tokens": 1601,
+    "output_tokens": 329,
+    "estimated_cost_usd": "0.0011668",
+    "latency_ms": 2960.8818600000004
+  },
+  {
+    "attempt": 13,
+    "http_status": 200,
+    "input_tokens": 1602,
+    "output_tokens": 336,
+    "estimated_cost_usd": "0.0011784",
+    "latency_ms": 3048.4181159999935
+  },
+  {
+    "attempt": 14,
+    "http_status": 200,
+    "input_tokens": 1621,
+    "output_tokens": 451,
+    "estimated_cost_usd": "0.00137",
+    "latency_ms": 3951.809228000002
+  },
+  {
+    "attempt": 15,
+    "http_status": 200,
+    "input_tokens": 1764,
+    "output_tokens": 358,
+    "estimated_cost_usd": "0.0012784",
+    "latency_ms": 2683.522670000002
+  },
+  {
+    "attempt": 16,
+    "http_status": 200,
+    "input_tokens": 1719,
+    "output_tokens": 327,
+    "estimated_cost_usd": "0.0012108",
+    "latency_ms": 2982.5341449999883
+  },
+  {
+    "attempt": 17,
+    "http_status": 200,
+    "input_tokens": 1703,
+    "output_tokens": 290,
+    "estimated_cost_usd": "0.0011452",
+    "latency_ms": 2822.9834779999974
+  },
+  {
+    "attempt": 18,
+    "http_status": 200,
+    "input_tokens": 1693,
+    "output_tokens": 354,
+    "estimated_cost_usd": "0.0012436",
+    "latency_ms": 3282.463174000014
+  },
+  {
+    "attempt": 19,
+    "http_status": 200,
+    "input_tokens": 1851,
+    "output_tokens": 465,
+    "estimated_cost_usd": "0.0014844",
+    "latency_ms": 3753.3781839999847
+  },
+  {
+    "attempt": 20,
+    "http_status": 200,
+    "input_tokens": 1833,
+    "output_tokens": 487,
+    "estimated_cost_usd": "0.0015124",
+    "latency_ms": 3973.9013740000073
+  },
+  {
+    "attempt": 21,
+    "http_status": 200,
+    "input_tokens": 257,
+    "output_tokens": 27,
+    "estimated_cost_usd": "0.000146",
+    "latency_ms": 1140.2236689999938
+  },
+  {
+    "attempt": 22,
+    "http_status": 200,
+    "input_tokens": 525,
+    "output_tokens": 27,
+    "estimated_cost_usd": "0.0002532",
+    "latency_ms": 913.9184119999868
+  },
+  {
+    "attempt": 23,
+    "http_status": 200,
+    "input_tokens": 795,
+    "output_tokens": 29,
+    "estimated_cost_usd": "0.0003644",
+    "latency_ms": 779.0622999999925
+  },
+  {
+    "attempt": 24,
+    "http_status": 200,
+    "input_tokens": 1075,
+    "output_tokens": 29,
+    "estimated_cost_usd": "0.0004764",
+    "latency_ms": 710.1775050000185
+  },
+  {
+    "attempt": 25,
+    "http_status": 200,
+    "input_tokens": 1350,
+    "output_tokens": 53,
+    "estimated_cost_usd": "0.0006248",
+    "latency_ms": 922.507214999996
+  },
+  {
+    "attempt": 26,
+    "http_status": 200,
+    "input_tokens": 258,
+    "output_tokens": 28,
+    "estimated_cost_usd": "0.000148",
+    "latency_ms": 1300.0992249999967
+  },
+  {
+    "attempt": 27,
+    "http_status": 200,
+    "input_tokens": 531,
+    "output_tokens": 27,
+    "estimated_cost_usd": "0.0002556",
+    "latency_ms": 865.0336839999966
+  },
+  {
+    "attempt": 28,
+    "http_status": 200,
+    "input_tokens": 801,
+    "output_tokens": 30,
+    "estimated_cost_usd": "0.0003684",
+    "latency_ms": 723.5187240000016
+  },
+  {
+    "attempt": 29,
+    "http_status": 200,
+    "input_tokens": 1084,
+    "output_tokens": 29,
+    "estimated_cost_usd": "0.00048",
+    "latency_ms": 820.891166999985
+  },
+  {
+    "attempt": 30,
+    "http_status": 200,
+    "input_tokens": 1363,
+    "output_tokens": 54,
+    "estimated_cost_usd": "0.0006316",
+    "latency_ms": 1199.307392999998
+  },
+  {
+    "attempt": 31,
+    "http_status": 200,
+    "input_tokens": 257,
+    "output_tokens": 27,
+    "estimated_cost_usd": "0.000146",
+    "latency_ms": 1117.590316000019
+  },
+  {
+    "attempt": 32,
+    "http_status": 200,
+    "input_tokens": 525,
+    "output_tokens": 27,
+    "estimated_cost_usd": "0.0002532",
+    "latency_ms": 721.3265449999824
+  },
+  {
+    "attempt": 33,
+    "http_status": 200,
+    "input_tokens": 795,
+    "output_tokens": 29,
+    "estimated_cost_usd": "0.0003644",
+    "latency_ms": 845.2545500000213
+  },
+  {
+    "attempt": 34,
+    "http_status": 200,
+    "input_tokens": 1075,
+    "output_tokens": 29,
+    "estimated_cost_usd": "0.0004764",
+    "latency_ms": 703.3457959999794
+  },
+  {
+    "attempt": 35,
+    "http_status": 200,
+    "input_tokens": 1350,
+    "output_tokens": 53,
+    "estimated_cost_usd": "0.0006248",
+    "latency_ms": 927.81899000002
+  },
+  {
+    "attempt": 36,
+    "http_status": 200,
+    "input_tokens": 257,
+    "output_tokens": 27,
+    "estimated_cost_usd": "0.000146",
+    "latency_ms": 686.3026229999889
+  }
+]

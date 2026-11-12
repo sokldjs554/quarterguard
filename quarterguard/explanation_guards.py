@@ -9,6 +9,35 @@ from decimal import Decimal
 from .explanation_context import build_context
 
 
+def rates_match_tool(text, growth):
+    """Signed rates or explicit Korean increase/decrease magnitudes only.
+
+    A positive decrease magnitude can describe a negative tool rate. Bare
+    positive numbers cannot. Negative magnitudes with 'decrease' abstain.
+    This does not infer which company/period a rate describes.
+    """
+    rates=list(re.finditer(r'(?<![\d.,])([+-]?\d[\d,]*(?:\.\d+)?)\s*(?:[%％]|퍼센트|percent\b)',text,re.I))
+    if growth is None:return not rates
+    if not rates:return False
+    expected=Decimal(growth)
+    for match in rates:
+        value=Decimal(match[1].replace(',',''))
+        suffix=re.match(r'\s*(?:만큼\s*)?(감소|하락|증가|상승)',text[match.end():])
+        prefix=re.search(r'(감소율|하락률)(?:은|는|이|가)?\s*(?:약\s*)?$',text[max(0,match.start()-20):match.start()])
+        directions=[]
+        for marker in (suffix,prefix):
+            if marker:directions.append(-1 if marker[1].startswith(('감소','하락')) else 1)
+        if len(set(directions))>1:return False
+        if directions:
+            tail=text[match.end()+suffix.end():] if suffix else text[match.end():]
+            if re.match(r'\s*(?:하지\s*(?:않|못)|한\s*것(?:은|이)?\s*(?:아니|아닙)|'
+                        r'(?:가|는)?\s*(?:아니|아닙)|했다고\s*할\s*수\s*없)',tail):return False
+            if directions[0]<0 and match[1].startswith('+'):return False
+            if value<0 or value*directions[0]!=expected:return False
+        elif value!=expected:return False
+    return True
+
+
 def check_grounding(answer, result):
     """Check literal evidence bindings, not the meaning of unrestricted prose.
 
@@ -36,10 +65,7 @@ def check_grounding(answer, result):
     amounts = re.findall(r'(?<![\d.,])([+-]?\d[\d,]*(?:\.\d+)?)\s*(백만\s*원|백만\s*USD|천\s*원|원)', text)
     supported = known and all((Decimal(number.replace(',', '')), compact(unit)) in allowed
                               for number, unit in amounts)
-    rates = re.findall(r'(?<![\d.,])([+-]?\d[\d,]*(?:\.\d+)?)\s*(?:[%％]|퍼센트|percent\b)', text, re.I)
-    growth = result.get('growth_pct')
-    exact_rates = (not rates if growth is None else bool(rates) and all(
-        Decimal(value.replace(',', '')) == Decimal(growth) for value in rates))
+    exact_rates = rates_match_tool(text,result.get('growth_pct'))
     return {'prose_evidence_anchors_present': bool(anchors),
             'prose_decision_basis_present': basis, 'prose_amounts_supported': bool(supported) and not unsupported_large_unit,
             'prose_rates_match_tool': bool(exact_rates)}
@@ -144,7 +170,19 @@ def check_prose(answer, result):
     mixed_million = re.search(
         r'(?:[0-9][0-9,.]*\s*(?:조|억|만|천)\s*)+'
         r'(?:[0-9][0-9,.]*\s*)?백만\s*원', text)
+    # The tool reports PERIOD_MISMATCH, not which short-circuited predicate ran.
+    # A copied safe disclaimer cannot erase a separate assertion of execution history.
+    diagnostic_trace_claim = 'PERIOD_MISMATCH' in result.get('issues',[]) and re.search(
+        r'도구(?:의)?\s*(?:조건\s*)?실행\s*이력(?:에\s*따르면|을\s*(?:보면|통해)|상)',text)
+    annualized_term = r'연평균\s*(?:성장률|증가율|증감률)|(?<![A-Za-z])CAGR(?![A-Za-z])|\bannualized\b'
+    annualized_claim = result.get('mode') in ('qoq','yoy') and any(
+        not re.match(r'\s*(?:(?:이나|또는|및|/|·)\s*(?:'+annualized_term+r')\s*)?'
+                     r'(?:이|가|은|는)?\s*(?:아닙니다(?=$|[.!?。\s])|아니라(?=$|[\s,]))',
+                     text[match.end():],re.I)
+        for match in re.finditer(annualized_term,text,re.I))
     return {
+        'prose_diagnostic_origin_consistent': not diagnostic_trace_claim,
+        'prose_growth_kind_consistent': not annualized_claim,
         'prose_million_amount_unambiguous': mixed_million is None,
         'prose_evidence_presence_consistent': not (evidence and absence),
         'prose_document_reference_unambiguous': not (len(documents) > 1 and same_document),

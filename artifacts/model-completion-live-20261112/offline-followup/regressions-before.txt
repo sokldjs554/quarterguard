@@ -1,0 +1,38 @@
+======================================================================
+ERROR: test_actual_trace_attribution_is_rejected_even_with_correct_disclaimer (tests.test_completion_response_regressions.CompletionResponseRegressions.test_actual_trace_attribution_is_rejected_even_with_correct_disclaimer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_completion_response_regressions.py", line 36, in test_actual_trace_attribution_is_rejected_even_with_correct_disclaimer
+    self.assertFalse(check_prose(row['raw_generated'],row['tool_result'])['prose_diagnostic_origin_consistent'])
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'prose_diagnostic_origin_consistent'
+
+======================================================================
+ERROR: test_quarter_yoy_is_not_annualized_growth (tests.test_completion_response_regressions.CompletionResponseRegressions.test_quarter_yoy_is_not_annualized_growth)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_completion_response_regressions.py", line 42, in test_quarter_yoy_is_not_annualized_growth
+    self.assertFalse(check_prose(row['raw_generated'],row['tool_result'])['prose_growth_kind_consistent'])
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'prose_growth_kind_consistent'
+
+======================================================================
+FAIL: test_actual_decline_magnitude_is_not_wrong_sign (tests.test_completion_response_regressions.CompletionResponseRegressions.test_actual_decline_magnitude_is_not_wrong_sign)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_completion_response_regressions.py", line 21, in test_actual_decline_magnitude_is_not_wrong_sign
+    self.assertTrue(check_grounding(row['raw_generated'],row['tool_result'])['prose_rates_match_tool'])
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_wrong_direction_wrong_number_and_bare_positive_rate_still_rejected (tests.test_completion_response_regressions.CompletionResponseRegressions.test_wrong_direction_wrong_number_and_bare_positive_rate_still_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_completion_response_regressions.py", line 31, in test_wrong_direction_wrong_number_and_bare_positive_rate_still_rejected
+    self.assertFalse(check_grounding(row['raw_generated']|{'explanation_ko':changed},row['tool_result'])['prose_rates_match_tool'])
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.020s
+
+FAILED (failures=2, errors=2)

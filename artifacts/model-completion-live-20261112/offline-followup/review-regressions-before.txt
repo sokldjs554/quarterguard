@@ -1,0 +1,20 @@
+======================================================================
+FAIL: test_annualized_negation_does_not_hide_a_separate_positive_claim (tests.test_completion_response_regressions.CompletionResponseRegressions.test_annualized_negation_does_not_hide_a_separate_positive_claim)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_completion_response_regressions.py", line 60, in test_annualized_negation_does_not_hide_a_separate_positive_claim
+    self.assertFalse(check_prose({'explanation_ko':text+' 그러나 CAGR은 -31.3923%입니다.'},row['tool_result'])['prose_growth_kind_consistent'])
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_negated_declines_and_explicit_positive_sign_abstain (tests.test_completion_response_regressions.CompletionResponseRegressions.test_negated_declines_and_explicit_positive_sign_abstain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_completion_response_regressions.py", line 53, in test_negated_declines_and_explicit_positive_sign_abstain
+    self.assertFalse(rates_match_tool(text,'-20'),text)
+AssertionError: True is not false : 20% 감소하지 않았습니다.
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.028s
+
+FAILED (failures=2)
