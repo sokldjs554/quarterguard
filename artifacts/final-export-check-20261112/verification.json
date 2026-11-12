@@ -1,0 +1,28 @@
+{
+  "baseline_commit": "4989b288adf884005dc1a650c1c4b2b144a57d37",
+  "old_evidence_files_unchanged": 783,
+  "download_content_unchanged_by_label_fix": true,
+  "python": {
+    "run": 339,
+    "skipped": 1,
+    "failures": 0
+  },
+  "node": {
+    "tests": 18,
+    "passed": 18
+  },
+  "local_browser_viewports": [
+    [
+      1365,
+      900
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "new_paid_calls": 0,
+  "new_human_records": 0,
+  "script_sha256": "79b06467c51a301bf3ea33585ac756bdf1c0a83b9594ebd185cc6e75dbd46bba",
+  "source_calculator_sha256": "2c206ae5cdf7ba23ede526f32c22dbf056ef6dd9db951b8b7b8f8083a9321e53"
+}

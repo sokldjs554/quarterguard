@@ -1,0 +1,15 @@
+{
+  "started_at_kst": "2026-11-12T09:55:20.630715+09:00",
+  "actor": "AI-operated automated Playwright",
+  "human_participation": false,
+  "browser_url": "http://127.0.0.1:8782",
+  "transport": "local_http",
+  "ignore_https_errors": false,
+  "new_paid_calls": 0,
+  "mocked_responses": false,
+  "checks": [],
+  "status": "failed",
+  "browser_version": "156.0.8078.79",
+  "error": "AssertionError: Locator expected to contain text '재고 개월분 · 선택한 A/B 자료의 정의 확인'\nActual value: 계산 보류2023년 대비 2024년 연간 실적재고 개월분은 기말·평균 재고, 분모의 매출·매출원가와 대상 기간을 먼저 정해야 합니다. 자동 계산하지 않습니다.증감률 —선택한 두 근거와 조건에 대한 규칙 기반 계산입니다. 자연어 질문 전체의 자동 답변이나 감사 의견이 아닙니다.실행한 조건 확인기업 · 충족연결 범위 · 충족통화 · 충족문서·해시·연도 열 · 충족단위 배율 · 충족금액 형식 · 충족재고 개월분의 정의 · 확인 필요 \nCall log:\n  - Expect \"to_contain_text\" with timeout 5000ms\n  - waiting for locator(\"#source-calc-result\")\n    14 × locator resolved to <div aria-live=\"polite\" id=\"source-calc-result\">…</div>\n       - unexpected value \"계산 보류2023년 대비 2024년 연간 실적재고 개월분은 기말·평균 재고, 분모의 매출·매출원가와 대상 기간을 먼저 정해야 합니다. 자동 계산하지 않습니다.증감률 —선택한 두 근거와 조건에 대한 규칙 기반 계산입니다. 자연어 질문 전체의 자동 답변이나 감사 의견이 아닙니다.실행한 조건 확인기업 · 충족연결 범위 · 충족통화 · 충족문서·해시·연도 열 · 충족단위 배율 · 충족금액 형식 · 충족재고 개월분의 정의 · 확인 필요\"\n\nAria snapshot:\n- heading \"계산 보류\" [level=3]\n- paragraph: 2023년 대비 2024년 연간 실적\n- paragraph: 재고 개월분은 기말·평균 재고, 분모의 매출·매출원가와 대상 기간을 먼저 정해야 합니다. 자동 계산하지 않습니다.\n- paragraph:\n  - text: 증감률\n  - strong: —\n- paragraph: 선택한 두 근거와 조건에 대한 규칙 기반 계산입니다. 자연어 질문 전체의 자동 답변이나 감사 의견이 아닙니다.\n- group: 실행한 조건 확인",
+  "finished_at_kst": "2026-11-12T09:55:28.189877+09:00"
+}
