@@ -1,0 +1,16 @@
+[
+  {
+    "commit": {
+      "createdAt": "2026-11-12T00:59:36Z",
+      "id": "161ae0bb528b4e43498697f6862e659035b2dd6f",
+      "message": "Merge pull request #67 from sokldjs554/test/final-export-verification\n\nVerify A7/S4 exports and correct inventory withholding labels"
+    },
+    "createdAt": "2026-11-12T00:59:39.008366Z",
+    "finishedAt": "2026-11-12T01:00:49.964245Z",
+    "id": "dep-dbqguujrjlhs73fsei5g",
+    "startedAt": "2026-11-12T00:59:38.981228Z",
+    "status": "live",
+    "trigger": "new_commit",
+    "updatedAt": "2026-11-12T01:00:49.964555Z"
+  }
+]

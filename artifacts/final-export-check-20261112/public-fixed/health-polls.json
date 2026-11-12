@@ -1,0 +1,52 @@
+[
+  {
+    "at_utc": "2026-11-12T00:59:54.974831+00:00",
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "facts": 192,
+      "commit": "4989b288adf884005dc1a650c1c4b2b144a57d37",
+      "version": "1.4.0"
+    }
+  },
+  {
+    "at_utc": "2026-11-12T01:00:10.534192+00:00",
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "facts": 192,
+      "commit": "4989b288adf884005dc1a650c1c4b2b144a57d37",
+      "version": "1.4.0"
+    }
+  },
+  {
+    "at_utc": "2026-11-12T01:00:25.958623+00:00",
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "facts": 192,
+      "commit": "4989b288adf884005dc1a650c1c4b2b144a57d37",
+      "version": "1.4.0"
+    }
+  },
+  {
+    "at_utc": "2026-11-12T01:00:41.375754+00:00",
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "facts": 192,
+      "commit": "4989b288adf884005dc1a650c1c4b2b144a57d37",
+      "version": "1.4.0"
+    }
+  },
+  {
+    "at_utc": "2026-11-12T01:00:56.821940+00:00",
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "facts": 192,
+      "commit": "161ae0bb528b4e43498697f6862e659035b2dd6f",
+      "version": "1.4.0"
+    }
+  }
+]
