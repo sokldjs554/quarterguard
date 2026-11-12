@@ -1,0 +1,60 @@
+name: final closeout explanation generation
+on:
+  workflow_dispatch:
+    inputs:
+      approved_contract:
+        description: 'NEW approval: GPT-4.1-mini-2025-04-14, same 20 explanations, at most 20 calls, input 16000 / output 700, max estimate $0.15040, budget $0.16 excluding tax'
+        type: boolean
+        required: true
+        default: false
+      freeze_sha256:
+        description: 'Exact approved data/closeout-evaluation-freeze-20261112.json sha256 field'
+        type: string
+        required: true
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: final-closeout-explanations-20261112
+  cancel-in-progress: false
+jobs:
+  evaluate:
+    if: inputs.approved_contract == true
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Reject prior dispatch or retry before exposing key
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/$GITHUB_REPOSITORY/actions/workflows/closeout-explanations.yml/runs?event=workflow_dispatch&per_page=100" > /tmp/closeout-runs.json
+          python - <<'PY'
+          import json,os
+          if os.environ['GITHUB_RUN_ATTEMPT']!='1':raise SystemExit('No paid retries')
+          runs=json.load(open('/tmp/closeout-runs.json'))['workflow_runs']
+          if any(str(r['id'])!=os.environ['GITHUB_RUN_ID'] for r in runs):raise SystemExit('Prior dispatch exists; new approval required')
+          PY
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Run approved frozen explanation batch
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          APPROVED_SHA: ${{ inputs.freeze_sha256 }}
+        run: python -m quarterguard.closeout_evaluation --execute-approved --approved-sha256 "$APPROVED_SHA" --output work/closeout-live
+      - name: Preserve raw responses, failures and blank human review packet
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: closeout-live-${{ github.run_id }}
+          path: |
+            work/closeout-live/
+            work/closeout-paid-ledger/
+          if-no-files-found: warn
+          retention-days: 30

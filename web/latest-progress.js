@@ -5,6 +5,7 @@ const fraction=x=>`${x.passed}/${x.total}`;
 export function renderLatestProgress(envelope) {
  const s=envelope.summary;
  if(s?.schema_version!==1||!s.source_sha256)throw Error('INVALID_LATEST_SUMMARY');
+ if(s.current_status)return renderCloseout(s,envelope.runtime_commit);
  const h=s.hyundai,b=s.human_review,l=s.llm,p=s.personal_review,v=s.verification,g=l.latest_guard_batch,n=l.prose_batch,f=l.prose_contract_fix,z=l.schema_batch;
  return `<section id="latest-evidence-summary" aria-label="최신 근거 요약"><h2>최신 근거 요약 · ${esc(s.as_of_kst)} KST 기준</h2>
  <p class="scope-notice">공개 작업지: 삼성전자 ${s.production.year}년 문서 ${s.production.documents}건 · 정본 ${s.production.facts}개. 평가에서 새로 처리한 문서는 작업지에 자동 등록되지 않습니다.</p>
@@ -26,4 +27,21 @@ export function renderLatestProgress(envelope) {
  <p class="review-caption">공개 API 사용 가능 여부는 아래 연결 상태에서 따로 확인하세요. 실호출 평가는 GPT-5.4 mini이며 공개 제품의 GPT-4.1 mini와 구분합니다.</p>
  <p class="review-caption">직전 기능 변경(${esc(v.code_commit.slice(0,7))}) 검증: Python ${v.python_tests}개 · Node ${v.node_tests}개 · 로컬 브라우저 재생 ${v.browser_replay_checks}개 · 실제 MCP ${v.actual_mcp_cases}개 사례 통과. 실행 주체는 AI입니다. 물리 휴대폰·새 LLM 응답 검증으로 바꾸어 세지 않습니다. ${link(v.link,'당시 검사 기록')}</p>
  <p class="review-caption">요약 근거 기준 ${esc(s.evidence_basis_commit.slice(0,7))} · 현재 서버 ${esc(envelope.runtime_commit?.slice(0,7)||'확인 불가')}. 현재 서버 커밋이 모든 과거 평가의 실행 커밋이라는 뜻은 아닙니다. <a href="/api/evaluation/latest" target="_blank" rel="noopener">요약·근거 해시 JSON ↗</a></p></section>`;
+}
+
+function renderCloseout(s,commit){
+ const c=s.current_status,h=c.human_completion_counts,r=c.latest_boundary_replay;
+ return `<section id="latest-evidence-summary" aria-label="최신 근거 요약"><h2>최신 근거 요약 · ${esc(s.as_of_kst)} KST 기준</h2>
+ <div class="table-overflow"><table class="evaluation-table"><thead><tr><th>항목</th><th>확인한 결과</th><th>범위</th></tr></thead><tbody>
+ <tr><td>현재 제품 지원</td><td>삼성 분기 정본 ${c.public_source_cells.samsung}개 · SK하이닉스 원문 수치 ${c.public_source_cells.skhynix}개 · Apple 수치 ${c.public_source_cells.apple}개와 문단 ${c.apple_paragraphs}개</td><td>삼성 비교 작업지와 SK·Apple 원문 검토 흐름을 구분합니다. 현대차는 격리 평가에 사용했으며 공개 작업지에 미등록입니다.</td></tr>
+ <tr><td>본인 코드·평가 작성</td><td>직접 보강·실행한 테스트 ${c.personal_tests}개. AI 없이 작성한 질문·답안: SK ${c.author_questions.skhynix}개 + Apple ${c.author_questions.apple}개.</td><td>본인 당시 전체 Python 239개 실행(1개 건너뜀)·Node 14개와 AI 통합 검사를 구분합니다. 사람 작성 사례도 수정에 사용한 뒤에는 개발 사례입니다.</td></tr>
+ <tr><td>실제 사용자 확인</td><td>b의 Apple 7개·SK 4개 과제, A7·S4 JSON 다운로드·내용 대조 완료. 질문 변경 후 이전 결과 제거·저장 비활성화도 확인되었습니다.</td><td>a는 작성자 시연을 본 대학생, b는 금융 경력 3년인 친구입니다. 외부 참여자 2명. 금융회사 내부 배포는 없습니다.</td></tr>
+ <tr><td>모델의 실제 도구 실행</td><td>제한된 과제 ${c.model_completion.completed}/${c.model_completion.tasks} 완료 · 모델 호출 ${c.model_completion.calls}회</td><td>실제 MCP 실행입니다. 이번 모델 실행의 오류 후 자연 복구 관찰은 ${c.model_completion.natural_recoveries}건이며, 준비된 실패 재생과 구분합니다.</td></tr>
+ <tr><td>LLM 실제 생성·사람 검수</td><td>v9: b 검수 참 13·모호 3. 이후 제품 동일 모델 ${esc(c.completion_batch.model)} 새 설명 20건: 참 ${h['참']}·거짓 ${h['거짓']}·모호 ${h['모호']}. 구조·근거 ID 20/20 일치.</td><td>개별 판정 합계를 사용하며 제출 말미의 다른 합계도 보존합니다. 설명 20회+도구 계획 16회 비용 추정 $${esc(c.completion_batch.estimated_cost_usd)}, 청구액 미조회. 구조 일치는 문장 정확도 보장이 아닙니다.</td></tr>
+ <tr><td>현재 설명 검사 재평가</td><td>기존 응답 20건 중 ${r.passed}건 통과. 사람 참 차단 ${r.human_true_blocked}건, 거짓·모호 차단 ${r.human_false_or_ambiguous_blocked}건.</td><td>기존 원응답 재검사이며 새 생성 효과가 아닙니다. 마지막 코드 수정 후 새 생성·사람 재검수 상태: ${esc(c.fresh_batch_status||'준비 중 · 새 유료 호출 0회')}.</td></tr>
+ ${c.verification?`<tr><td>이번 자동 회귀 검사</td><td>Python ${c.verification.python_run}개 실행(${c.verification.python_skipped}개 건너뜀), Node ${c.verification.node_passed}개 통과, PC·모바일 요약 화면 ${c.verification.local_browser_checks}개 확인</td><td>AI가 실행한 로컬 테스트·HTTP Chromium 검사입니다. 본인의 직접 실행과 새 사람 검수, 공개 HTTPS 브라우저 검사로 세지 않습니다.</td></tr>`:''}
+ </tbody></table></div>
+ <p>${link(c.link,'이번 마무리·검증 기록')} · ${link('docs/validation-kit/README.md','참여·검수 기록')} · ${link('docs/code-review-kit/README.md','본인 코드 기록')}</p>
+ <details><summary>과거 평가·실패 기록 보기</summary><p>아래 자료는 당시 상태를 보존한 이력입니다. 현재 완료 상태는 위 요약을 기준으로 읽어 주세요.</p><p>${link(s.previous_summary,'11월 11일 요약 보존본')} · ${link('docs/model-completion-live-results-20261112.md','20건 실제 생성·실패')} · ${link('docs/explanation-boundaries-20261112.md','직전 검사 결과')}</p></details>
+ <p class="review-caption">공개 API 사용 가능 여부는 연결 상태에서 별도 확인하세요. Actions 실호출 기록이 공개 서버의 유료 기능 활성화를 뜻하지 않습니다. 현재 서버 ${esc(commit?.slice(0,7)||'확인 불가')}. <a href="/api/evaluation/latest" target="_blank" rel="noopener">요약·근거 해시 JSON ↗</a></p></section>`;
 }

@@ -1,0 +1,10 @@
+{
+  "url": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+  "status": 200,
+  "sha256": "4ef5875395cf9b3834505134d485e8dc4305253891a8035e14dd7ebfbc18833d",
+  "input_price_found": true,
+  "output_price_found": true,
+  "deprecated": true,
+  "tls_verified": true,
+  "billed_cost_queried": false
+}

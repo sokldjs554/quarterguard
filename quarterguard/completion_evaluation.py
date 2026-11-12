@@ -42,14 +42,18 @@ def freeze():
     return d|{'sha256':digest(d)}
 
 class PaidClient:
+    CONTRACT=CONTRACT
+    CONTRACT_ID=CONTRACT_ID
+    MAX_CALLS=MAX_CALLS
+    WORKFLOW='completion-evaluation.yml'
     def __init__(self,output,ledger,*,approved=False,transport=None):
         if not approved:raise ValueError('APPROVAL_REQUIRED')
-        if transport is None and not (os.getenv('GITHUB_ACTIONS')=='true' and os.getenv('GITHUB_REPOSITORY')=='sokldjs554/quarterguard' and os.getenv('GITHUB_RUN_ATTEMPT')=='1' and os.getenv('GITHUB_WORKFLOW_REF')=='sokldjs554/quarterguard/.github/workflows/completion-evaluation.yml@refs/heads/main'):
+        if transport is None and not (os.getenv('GITHUB_ACTIONS')=='true' and os.getenv('GITHUB_REPOSITORY')=='sokldjs554/quarterguard' and os.getenv('GITHUB_RUN_ATTEMPT')=='1' and os.getenv('GITHUB_WORKFLOW_REF')==f'sokldjs554/quarterguard/.github/workflows/{self.WORKFLOW}@refs/heads/main'):
             raise ValueError('AUTHORIZED_WORKFLOW_REQUIRED')
         self.output=Path(output);self.ledger=Path(ledger);self.ledger.mkdir(parents=True,exist_ok=True)
         # Fixed contract identity, not output path. Exclusive marker remains on any failure.
-        with (self.ledger/(CONTRACT_ID+'.json')).open('x') as f:
-            json.dump({'reserved_at':now(),'output':str(self.output),'contract':CONTRACT},f);f.flush();os.fsync(f.fileno())
+        with (self.ledger/(self.CONTRACT_ID+'.json')).open('x') as f:
+            json.dump({'reserved_at':now(),'output':str(self.output),'contract':self.CONTRACT},f);f.flush();os.fsync(f.fileno())
         self.output.mkdir(parents=True,exist_ok=False)
         self.attempts=0;self.lock=threading.Lock();self.transport=transport;self.usage=[];self.stopped=False
     def post(self,url,*,json,**unused):
@@ -59,10 +63,10 @@ class PaidClient:
         if len(__import__('json').dumps(payload,ensure_ascii=False).encode())+1024>16000:raise ValueError('INPUT_ADMISSION_LIMIT')
         with self.lock:
             if self.stopped:raise ValueError('BATCH_STOPPED')
-            if self.attempts>=MAX_CALLS:raise ValueError('CALL_LIMIT')
+            if self.attempts>=self.MAX_CALLS:raise ValueError('CALL_LIMIT')
             self.attempts+=1;n=self.attempts
             dump(self.output/f'request-{n:02}.json',{'at':now(),'payload':payload,'sha256':digest(payload)})
-            with (self.ledger/(CONTRACT_ID+'.attempts.jsonl')).open('a') as f:
+            with (self.ledger/(self.CONTRACT_ID+'.attempts.jsonl')).open('a') as f:
                 f.write(__import__('json').dumps({'attempt':n,'reserved_at':now(),'payload_sha256':digest(payload)})+'\n');f.flush();os.fsync(f.fileno())
         started=time.perf_counter()
         try:

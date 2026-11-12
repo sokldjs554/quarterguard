@@ -1,0 +1,51 @@
+test_conflicting_page_before_amount_is_also_rejected (tests.test_closeout_grounding.CloseoutGroundingTests.test_conflicting_page_before_amount_is_also_rejected) ... FAIL
+test_draft_rejection_does_not_hide_an_additional_evidence_absence_claim (tests.test_closeout_grounding.CloseoutGroundingTests.test_draft_rejection_does_not_hide_an_additional_evidence_absence_claim) ... ok
+test_explicit_correct_bindings_do_not_require_verbatim_sentences (tests.test_closeout_grounding.CloseoutGroundingTests.test_explicit_correct_bindings_do_not_require_verbatim_sentences) ... ok
+test_internal_codes_still_require_plain_language (tests.test_closeout_grounding.CloseoutGroundingTests.test_internal_codes_still_require_plain_language) ... ok
+test_known_false_and_ambiguous_prose_remains_blocked (tests.test_closeout_grounding.CloseoutGroundingTests.test_known_false_and_ambiguous_prose_remains_blocked) ... ok
+test_negated_or_conflicting_fields_never_count_as_positive_context (tests.test_closeout_grounding.CloseoutGroundingTests.test_negated_or_conflicting_fields_never_count_as_positive_context) ... 
+  test_negated_or_conflicting_fields_never_count_as_positive_context (tests.test_closeout_grounding.CloseoutGroundingTests.test_negated_or_conflicting_fields_never_count_as_positive_context) (change='3개월이 아닌 6개월, 연결)') ... FAIL
+  test_negated_or_conflicting_fields_never_count_as_positive_context (tests.test_closeout_grounding.CloseoutGroundingTests.test_negated_or_conflicting_fields_never_count_as_positive_context) (change='3개월, 연결이 아닙니다)') ... FAIL
+  test_negated_or_conflicting_fields_never_count_as_positive_context (tests.test_closeout_grounding.CloseoutGroundingTests.test_negated_or_conflicting_fields_never_count_as_positive_context) (change='2024-07-01~2024-09-30가 아닌 2024-01-01~2024-09-30,') ... FAIL
+test_wrong_date_scope_page_or_amount_stays_blocked (tests.test_closeout_grounding.CloseoutGroundingTests.test_wrong_date_scope_page_or_amount_stays_blocked) ... ok
+test_wrong_explicit_page_cannot_inherit_a_correct_reference (tests.test_closeout_grounding.CloseoutGroundingTests.test_wrong_explicit_page_cannot_inherit_a_correct_reference) ... ok
+
+======================================================================
+FAIL: test_conflicting_page_before_amount_is_also_rejected (tests.test_closeout_grounding.CloseoutGroundingTests.test_conflicting_page_before_amount_is_also_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_closeout_grounding.py", line 68, in test_conflicting_page_before_amount_is_also_rejected
+    self.assertFalse(all(self.checks(1,wrong).values()))
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_negated_or_conflicting_fields_never_count_as_positive_context (tests.test_closeout_grounding.CloseoutGroundingTests.test_negated_or_conflicting_fields_never_count_as_positive_context) (change='3개월이 아닌 6개월, 연결)')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_closeout_grounding.py", line 63, in test_negated_or_conflicting_fields_never_count_as_positive_context
+    with self.subTest(change=new):self.assertFalse(all(self.checks(1,text.replace(old,new,1)).values()))
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_negated_or_conflicting_fields_never_count_as_positive_context (tests.test_closeout_grounding.CloseoutGroundingTests.test_negated_or_conflicting_fields_never_count_as_positive_context) (change='3개월, 연결이 아닙니다)')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_closeout_grounding.py", line 63, in test_negated_or_conflicting_fields_never_count_as_positive_context
+    with self.subTest(change=new):self.assertFalse(all(self.checks(1,text.replace(old,new,1)).values()))
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_negated_or_conflicting_fields_never_count_as_positive_context (tests.test_closeout_grounding.CloseoutGroundingTests.test_negated_or_conflicting_fields_never_count_as_positive_context) (change='2024-07-01~2024-09-30가 아닌 2024-01-01~2024-09-30,')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_closeout_grounding.py", line 63, in test_negated_or_conflicting_fields_never_count_as_positive_context
+    with self.subTest(change=new):self.assertFalse(all(self.checks(1,text.replace(old,new,1)).values()))
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.043s
+
+FAILED (failures=4)

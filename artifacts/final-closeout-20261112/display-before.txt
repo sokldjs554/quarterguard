@@ -1,0 +1,33 @@
+✖ current closeout shows completed human work and separates fresh generation from replay (6.204206ms)
+✔ current evidence separates product scope, reviewed responses, latest guard, and actors (0.4899ms)
+✔ historical failures are dated and never relabeled as current status (36.805392ms)
+✔ malformed current summary fails and text is escaped (2.687709ms)
+✔ latest model batch is separate from prior human labels and has unresolved prose warnings (0.451059ms)
+✔ confirmed v5 human verdicts do not become an overall accuracy improvement (0.356762ms)
+✔ v6 separates structural regression, new tasks, and still-pending human review (0.391435ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 6
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 166.976082
+
+✖ failing tests:
+
+test at tests/test_latest_progress.mjs:8:1
+✖ current closeout shows completed human work and separates fresh generation from replay (6.204206ms)
+  AssertionError [ERR_ASSERTION]: 10건 통과
+      at TestContext.<anonymous> (file:///workspace/quarterguard-apple-evaluation/tests/test_latest_progress.mjs:11:137)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

@@ -56,7 +56,8 @@ def check_grounding(answer, result):
                 'prose_rates_match_tool': not re.search(r'\d[\d,.]*\s*(?:[%％]|퍼센트|percent\b)', text, re.I)}
     rows = context['evidence']
     known = context['status'] == 'available' and bool(rows)
-    anchors = known and all(compact(row['required_claim']) in compact(text) for row in rows)
+    anchors = known and all(compact(row['required_claim']) in compact(text) or
+                            explicit_evidence_binding(text, row, rows) for row in rows)
     basis = all(compact(row['statement']) in compact(text) for row in context['decision_basis'])
     allowed = {(Decimal(row['value']), compact(row['display_unit'])) for row in rows}
     derived = result.get('derived_value')
@@ -69,6 +70,68 @@ def check_grounding(answer, result):
     return {'prose_evidence_anchors_present': bool(anchors),
             'prose_decision_basis_present': basis, 'prose_amounts_supported': bool(supported) and not unsupported_large_unit,
             'prose_rates_match_tool': bool(exact_rates)}
+
+
+def explicit_evidence_binding(text, row, rows):
+    """Accept bounded surface variants, never a bag of numbers across the prose.
+
+    Bind a scalar amount to its adjacent date/month/scope group, and the exact
+    registered title/page in the same passage. A single-document result may
+    inherit an explicit document reference elsewhere; multiple documents may not.
+    No model judgment, amount conversion, or raw-response rewriting occurs.
+    Unsupported ellipsis and unrestricted attribution remain reviewable.
+    """
+    number = re.escape(format(Decimal(row['value']), ',f'))
+    unit = r'\s*'.join(map(re.escape, row['display_unit'].split()))
+    amount = re.compile(r'(?<![\d.,])'+number+r'\s*'+unit+r'(?![A-Za-z])')
+    all_amounts = re.compile(r'(?<![\d.,])[+-]?\d[\d,]*(?:\.\d+)?\s*(?:백만\s*원|백만\s*USD|천\s*원|원)')
+    scope = {'CFS':'연결','OFS':'별도'}[row['scope']]
+    def date_range(group):
+        # ISO dates, or a full Korean start date and optionally inherited end year.
+        group=re.sub(r'^기간\s*:\s*','',group.strip())
+        iso = re.fullmatch(r'(20\d{2}-\d{2}-\d{2})\s*(?:~|부터)\s*(20\d{2}-\d{2}-\d{2})(?:까지)?', group)
+        if iso:return iso[1],iso[2]
+        ko = re.fullmatch(r'(20\d{2})년\s*(\d{1,2})월\s*(\d{1,2})일(?:부터)?\s*(?:~\s*)?(?:(20\d{2})년\s*)?(\d{1,2})월\s*(\d{1,2})일(?:까지)?', group)
+        if ko:return f'{ko[1]}-{int(ko[2]):02}-{int(ko[3]):02}',f'{ko[4] or ko[1]}-{int(ko[5]):02}-{int(ko[6]):02}'
+        return None
+    title = re.escape(row['document_title'])
+    page = re.escape(str(row['page']))
+    source = re.compile(title+r'[\s,\"\']*PDF\s*(?:p\.\s*'+page+r'(?!\d)|'+page+r'\s*(?:페이지|쪽))')
+    one_document = len({r['document_id'] for r in rows}) == 1
+    for match in amount.finditer(text):
+        following = text[match.end():]
+        group = re.match(r'\s*\(([^)]*)\)', following)
+        if group:
+            context = group[1]
+        else:
+            # Prefix context must belong to this amount's sentence, without
+            # a preceding financial amount that could supply someone else's dates.
+            prefix = re.split(r'(?<![pP])[.!?。]\s+', text[:match.start()])[-1]
+            if all_amounts.search(prefix):continue
+            prefix_group = re.search(r'\(([^()]*)\)[^()]*$',prefix)
+            if not prefix_group:continue
+            context = prefix_group[1]
+        # Parse exactly one affirmative range, month count and scope. Merely
+        # containing the correct token inside a negation is never sufficient.
+        fields=context.split(',',2)
+        if len(fields)!=3 or date_range(fields[0]) != (row['start'],row['end']):continue
+        if not re.fullmatch(str(row['months'])+r'\s*개월',fields[1].strip()):continue
+        scope_fields=fields[2].split(',',1)
+        if not re.fullmatch(scope+r'(?:\s*기준)?',scope_fields[0].strip()):continue
+        if len(scope_fields)>1 and not source.fullmatch(scope_fields[1].strip()):continue
+        next_amount = all_amounts.search(text, match.end())
+        sentence_start=max((m.end() for m in re.finditer(r'(?<![pP])[.!?。]\s+',text[:match.start()])),default=0)
+        previous=list(all_amounts.finditer(text,sentence_start,match.start()))
+        if previous:
+            # Exclude the prior amount's own parenthesized source context.
+            end=text.find(')',previous[-1].end(),match.start())
+            sentence_start=end+1 if end>=0 else match.start()
+        passage = text[sentence_start:next_amount.start() if next_amount else len(text)]
+        explicit_pages = re.findall(r'PDF\s*(?:p\.\s*(\d+)|(\d+)\s*(?:페이지|쪽))',passage)
+        if any((a or b)!=str(row['page']) for a,b in explicit_pages):continue
+        if source.search(passage) or (one_document and not explicit_pages and source.search(text)):
+            return True
+    return False
 
 
 _LABEL = (r'(?:20\d{2}(?:\s*년)?(?:\s*(?:[1-4]\s*분기|Q\s*[1-4]))?'
@@ -178,10 +241,13 @@ def check_prose(answer, result):
     absence_pattern = re.compile(
         r'(?:검색|수집)\s*범위[^.!?\n]{0,60}(?:확인|찾)[^.!?\n]{0,20}수\s*없'
         r'|(?:근거|검색\s*결과)(?:가|를|는)?\s*(?:없|찾지\s*못)')
+    # Only this explicit draft-scoped rejection is exempt. Other occurrences
+    # in the same answer are still checked, even after a safe draft disclaimer.
+    absence_text = re.sub(r"['\"][^'\"\n]*['\"]라는\s*(?:비증거\s*)?임의\s*초안\s*내용은\s*근거가\s*없습니다[.]", '', text)
     absence = any(not (match.group().endswith('없') and re.match(
         r'(?:(?:는\s*것은|다는\s*뜻은)\s*아닙니다(?=$|[.!。\n])'
-        r'|는\s*것이\s*아니라(?=[,\s]))', text[match.end():]))
-        for match in absence_pattern.finditer(text))
+        r'|는\s*것이\s*아니라(?=[,\s]))', absence_text[match.end():]))
+        for match in absence_pattern.finditer(absence_text))
     same_document = re.search(
         r'(?:같은|동일한?)\s*(?:보고서|문서)|\bsame\s+(?:report|document)\b', text, re.I)
     labels=_INTERNAL_LABELS|{s for s in result.get('issues',[]) if isinstance(s,str) and s}
