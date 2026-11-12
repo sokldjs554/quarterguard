@@ -113,7 +113,7 @@ def verification_version():
     for name in ('data/facts.json','data/sources.json','data/cases.json',
                  'quarterguard/core.py','quarterguard/dart.py','quarterguard/live_verification.py',
                  'quarterguard/orchestrator.py','quarterguard/mcp_server.py','quarterguard/search.py','quarterguard/query.py','quarterguard/public_providers.py',
-                 'quarterguard/explanation_context.py','quarterguard/explanation_guards.py'):
+                 'quarterguard/explanation_context.py','quarterguard/explanation_guards.py','quarterguard/prose_bindings.py'):
         digest.update(name.encode());digest.update((ROOT/name).read_bytes())
     return digest.hexdigest()
 

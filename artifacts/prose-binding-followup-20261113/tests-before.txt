@@ -1,0 +1,95 @@
+FFFFFFFFFF.....
+======================================================================
+FAIL: test_all_seventeen_human_true_responses_pass_without_rewriting (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_all_seventeen_human_true_responses_pass_without_rewriting) (review=5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 29, in test_all_seventeen_human_true_responses_pass_without_rewriting
+    c=self.checks(n);self.assertTrue(all(c.values()),[k for k,v in c.items() if not v])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ['prose_evidence_anchors_present']
+
+======================================================================
+FAIL: test_all_seventeen_human_true_responses_pass_without_rewriting (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_all_seventeen_human_true_responses_pass_without_rewriting) (review=9)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 29, in test_all_seventeen_human_true_responses_pass_without_rewriting
+    c=self.checks(n);self.assertTrue(all(c.values()),[k for k,v in c.items() if not v])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ['prose_rate_unit_explicit', 'prose_evidence_anchors_present']
+
+======================================================================
+FAIL: test_all_seventeen_human_true_responses_pass_without_rewriting (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_all_seventeen_human_true_responses_pass_without_rewriting) (review=11)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 29, in test_all_seventeen_human_true_responses_pass_without_rewriting
+    c=self.checks(n);self.assertTrue(all(c.values()),[k for k,v in c.items() if not v])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ['prose_evidence_anchors_present']
+
+======================================================================
+FAIL: test_all_seventeen_human_true_responses_pass_without_rewriting (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_all_seventeen_human_true_responses_pass_without_rewriting) (review=12)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 29, in test_all_seventeen_human_true_responses_pass_without_rewriting
+    c=self.checks(n);self.assertTrue(all(c.values()),[k for k,v in c.items() if not v])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ['prose_evidence_anchors_present']
+
+======================================================================
+FAIL: test_all_seventeen_human_true_responses_pass_without_rewriting (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_all_seventeen_human_true_responses_pass_without_rewriting) (review=13)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 29, in test_all_seventeen_human_true_responses_pass_without_rewriting
+    c=self.checks(n);self.assertTrue(all(c.values()),[k for k,v in c.items() if not v])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ['prose_evidence_anchors_present']
+
+======================================================================
+FAIL: test_all_seventeen_human_true_responses_pass_without_rewriting (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_all_seventeen_human_true_responses_pass_without_rewriting) (review=14)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 29, in test_all_seventeen_human_true_responses_pass_without_rewriting
+    c=self.checks(n);self.assertTrue(all(c.values()),[k for k,v in c.items() if not v])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ['prose_evidence_anchors_present']
+
+======================================================================
+FAIL: test_all_seventeen_human_true_responses_pass_without_rewriting (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_all_seventeen_human_true_responses_pass_without_rewriting) (review=17)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 29, in test_all_seventeen_human_true_responses_pass_without_rewriting
+    c=self.checks(n);self.assertTrue(all(c.values()),[k for k,v in c.items() if not v])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ['prose_evidence_anchors_present']
+
+======================================================================
+FAIL: test_all_seventeen_human_true_responses_pass_without_rewriting (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_all_seventeen_human_true_responses_pass_without_rewriting) (review=18)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 29, in test_all_seventeen_human_true_responses_pass_without_rewriting
+    c=self.checks(n);self.assertTrue(all(c.values()),[k for k,v in c.items() if not v])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ['prose_evidence_anchors_present']
+
+======================================================================
+FAIL: test_all_seventeen_human_true_responses_pass_without_rewriting (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_all_seventeen_human_true_responses_pass_without_rewriting) (review=19)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 29, in test_all_seventeen_human_true_responses_pass_without_rewriting
+    c=self.checks(n);self.assertTrue(all(c.values()),[k for k,v in c.items() if not v])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ['prose_evidence_anchors_present', 'prose_decision_basis_present']
+
+======================================================================
+FAIL: test_all_seventeen_human_true_responses_pass_without_rewriting (tests.test_prose_binding_followup.ProseBindingFollowupTests.test_all_seventeen_human_true_responses_pass_without_rewriting) (review=20)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/quarterguard-apple-evaluation/tests/test_prose_binding_followup.py", line 29, in test_all_seventeen_human_true_responses_pass_without_rewriting
+    c=self.checks(n);self.assertTrue(all(c.values()),[k for k,v in c.items() if not v])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ['prose_review_language_localized', 'prose_evidence_anchors_present', 'prose_decision_basis_present']
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.115s
+
+FAILED (failures=10)

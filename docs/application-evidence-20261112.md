@@ -1,5 +1,7 @@
 # QuarterGuard 지원서 근거와 문안 — 제출 출처와 미확인 범위 구분
 
+> 2026-11-13 추가 보완: [정답 설명의 과도한 보류](prose-binding-followup-20261113.md). 같은20건의 정답 통과7→17, 모호3건 보류 유지. 아래 직전 결과는 당시 기록으로 보존합니다.
+
 [저장소](https://github.com/sokldjs554/quarterguard) · [데모](https://quarterguard.onrender.com/) · [트레져러 공고](https://treasurer.recruit.roundhr.com/c/nLeVw9amBH)
 
 공식 공고를2026-11-12 KST에 HTTPS GET200으로 다시 읽고 주요업무·자격요건·우대사항과 대조했다.

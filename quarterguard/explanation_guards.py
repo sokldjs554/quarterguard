@@ -7,6 +7,7 @@ import re
 from datetime import date
 from decimal import Decimal
 from .explanation_context import build_context, build_generation_context
+from .prose_bindings import evidence_bindings, checked_formula_spans, reported_decision_present, remove_explained_issue_codes
 
 
 def rates_match_tool(text, growth):
@@ -58,7 +59,9 @@ def check_grounding(answer, result):
     known = context['status'] == 'available' and bool(rows)
     anchors = known and all(compact(row['required_claim']) in compact(text) or
                             explicit_evidence_binding(text, row, rows) for row in rows)
-    basis = all(compact(row['statement']) in compact(text) for row in context['decision_basis'])
+    anchors = anchors or (known and evidence_bindings(text, rows))
+    basis = all(compact(row['statement']) in compact(text) or reported_decision_present(text, row['code'])
+                for row in context['decision_basis'])
     allowed = {(Decimal(row['value']), compact(row['display_unit'])) for row in rows}
     derived = result.get('derived_value')
     if derived is not None and len({row['display_unit'] for row in rows}) == 1:
@@ -263,14 +266,18 @@ def check_prose(answer, result):
     same_document = re.search(
         r'(?:같은|동일한?)\s*(?:보고서|문서)|\bsame\s+(?:report|document)\b', text, re.I)
     labels=_INTERNAL_LABELS|{s for s in result.get('issues',[]) if isinstance(s,str) and s}
+    readable_text = remove_explained_issue_codes(text, result.get('issues', []))
     internal = re.search(r'\bcontext\s+needs\s+review\b|(?<![A-Za-z0-9_])(?:'+
-                         '|'.join(re.escape(s) for s in sorted(labels))+r')(?![A-Za-z0-9_])',text,re.I)
+                         '|'.join(re.escape(s) for s in sorted(labels))+r')(?![A-Za-z0-9_])',readable_text,re.I)
     # Rate-labelled numbers, plus every occurrence of the exact tool growth value.
     # Rounded rates are checked when labelled. No numeric claim => no unit check.
     number = r'[+-]?\d+(?:\.\d+)?'
+    rate_text = text
+    for start,end in reversed(checked_formula_spans(text,result)):
+        rate_text=rate_text[:start]+' '*(end-start)+rate_text[end:]
     rates = list(re.finditer(
         r'(?:증가율|증감률|감소율|성장률|growth\s*rate|change\s*rate)'
-        r'[^\d.!?\n]{0,32}(?P<rate>'+number+r')', text, re.I))
+        r'[^\d.!?\n]{0,32}(?P<rate>'+number+r')', rate_text, re.I))
     growth = result.get('growth_pct')
     if growth is not None:
         rates += list(re.finditer(r'(?<![\d.,])'+re.escape(str(growth))+r'(?!\d|[.,]\d)', text))
