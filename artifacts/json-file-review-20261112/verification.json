@@ -1,0 +1,12 @@
+{
+  "baseline_commit": "20c15d5aad1ddeb5aee27a3169658604790687e4",
+  "historical_evidence_files_unchanged": 848,
+  "new_human_records": 0,
+  "new_paid_calls": 0,
+  "python_run": 339,
+  "python_skipped": 1,
+  "node_passed": 26,
+  "browser": "local actual downloads + native picker + File API, desktop/mobile viewports",
+  "file_read_network_requests": 0,
+  "module_sha256": "7ebf0e2c26b1c46f45e8a1720e68623cf69c813c7300d91dd00f5168ce206fe7"
+}

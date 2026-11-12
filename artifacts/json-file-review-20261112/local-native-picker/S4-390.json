@@ -1,0 +1,120 @@
+{
+  "mode": "inventory_months",
+  "status": "needs_review",
+  "issues": [
+    "RATIO_DEFINITION_REQUIRED"
+  ],
+  "checks": [
+    {
+      "condition": "COMPANY_MISMATCH",
+      "passed": true
+    },
+    {
+      "condition": "SCOPE_MISMATCH",
+      "passed": true
+    },
+    {
+      "condition": "CURRENCY_MISMATCH",
+      "passed": true
+    },
+    {
+      "condition": "SOURCE_MISMATCH",
+      "passed": true
+    },
+    {
+      "condition": "UNKNOWN_UNIT",
+      "passed": true
+    },
+    {
+      "condition": "INVALID_VALUE",
+      "passed": true
+    },
+    {
+      "condition": "RATIO_DEFINITION_REQUIRED",
+      "passed": false
+    }
+  ],
+  "messages": [
+    "재고 개월분은 기말·평균 재고, 분모의 매출·매출원가와 대상 기간을 먼저 정해야 합니다. 자동 계산하지 않습니다."
+  ],
+  "difference": null,
+  "difference_status": "not_calculated",
+  "growth_pct": null,
+  "share_pct": null,
+  "percentage_status": "not_calculated",
+  "transition": null,
+  "normalized_inputs": [
+    "13313937000000",
+    "32765719000000"
+  ],
+  "normalized_currency": "KRW",
+  "normalized_scale": 1,
+  "display_scale": 1000000,
+  "evidence": [
+    {
+      "id": "skh2024annual-in-2025oc:financial-position:inventory:2024",
+      "document_id": "skh2024annual-in-2025oc",
+      "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+      "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+      "company": "skhynix",
+      "scope": "CFS",
+      "currency": "KRW",
+      "scale": 1000000,
+      "metric": "inventory",
+      "value": "13313937",
+      "raw_value": "13,313,937",
+      "year": 2024,
+      "period_kind": "instant",
+      "as_of": "2024-12-31",
+      "start": null,
+      "end": null,
+      "page": 191,
+      "printed_page": "F-73",
+      "table_id": "financial-position",
+      "table_title": "Consolidated Statements of Financial Position",
+      "row": "Inventories, net",
+      "row_role": "labelled",
+      "column": "2024",
+      "amount_column": 1,
+      "raw_line": "Inventories, net 9 13,313,937 13,480,659",
+      "text_sha256": "7f6f202eef7a7f0b47f45a4a3abb4e32dd802e5a621aa18ede5489e7879e9657"
+    },
+    {
+      "id": "skh2024annual-in-2025oc:income:revenue:2023",
+      "document_id": "skh2024annual-in-2025oc",
+      "document_sha256": "3b06e43298560053e2b6d9a79861c1ef505880879142242200e2d2ce06421f7c",
+      "source_url": "https://links.sgx.com/FileOpen/SK%20hynix%20Inc._2025%20-%20Final%20Offering%20Circular%20%289.4.25%29.ashx?App=Prospectus&FileID=67332",
+      "company": "skhynix",
+      "scope": "CFS",
+      "currency": "KRW",
+      "scale": 1000000,
+      "metric": "revenue",
+      "value": "32765719",
+      "raw_value": "32,765,719",
+      "year": 2023,
+      "period_kind": "duration",
+      "as_of": null,
+      "start": "2023-01-01",
+      "end": "2023-12-31",
+      "page": 193,
+      "printed_page": "F-75",
+      "table_id": "income",
+      "table_title": "Consolidated Statements of Comprehensive Income (Loss)",
+      "row": "Revenue",
+      "row_role": "labelled",
+      "column": "2023",
+      "amount_column": 2,
+      "raw_line": "Revenue 4,24,31 W 66,192,960 W 32,765,719",
+      "text_sha256": "398c1b6e49dbb57ba4925ec236eccfe3ca79602fab86a358d65bf04e377e7be9"
+    }
+  ],
+  "formula": null,
+  "difference_formula": null,
+  "execution": "deterministic_decimal",
+  "rounding": {
+    "decimal_places": 4,
+    "mode": "ROUND_HALF_EVEN"
+  },
+  "source_integrity": "registered_snapshot",
+  "source_snapshot_sha256": "a53ffe13c349937e4102099c9a43ba5705f3f452068c1dea935c1ad8386363f4"
+}

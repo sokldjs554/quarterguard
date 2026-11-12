@@ -36,8 +36,9 @@
 - [브라우저 검사](../scripts/browser_json_file_review.py): 로컬 실제 서버에서 새 다운로드를 만들고 파일 선택으로 읽는다. 읽기 시 네트워크 요청0건을 확인한다. 다른 파일·잘못된 JSON·큰 파일, HTML 문자열, 읽기 실패·늦은 완료, 질문·문서·계산 조건 변경 후 상태를 확인한다.
 - 읽기 실패·늦은 완료·취소 이벤트는 명시적 주입이다. b에게 발생한 실제 실패나 고객 사용 건수로 세지 않는다.
 - 파일 읽기 최초 브라우저 검사는 테스트의 실패 주입 함수를 Playwright가 즉시 실행하는 테스트 코드 오류로 중단됐다. [실패 로그](../artifacts/json-file-review-20261112/local.log)를 보존하고 주입 함수를 수정했다. 제품의 실사용 실패로 집계하지 않는다.
+- 파일명 유지 후 이전 자동화가 클릭 없이 동일 파일을 재설정하자 브라우저가 취소 이벤트를 반환했다. [중간 검사 실패](../artifacts/json-file-review-20261112/local-final/report.json)를 보존하고, 실제 사용자처럼 파일 선택창을 열어 고르는 검사로 수정했다. 최종 검사는 같은 파일 재선택도 통과했다.
 - 초기 구현에서 파일을 읽은 뒤 선택창의 파일명이 비워지는 문제를 [실패 검사](../artifacts/json-file-review-20261112/selected-name-red.log)로 확인하고, 읽은 파일명이 유지되도록 수정했다.
 
-[최종 로컬 브라우저 결과](../artifacts/json-file-review-20261112/local-final/report.json): 1365×900 및 390×844 통과. [기존 다운로드 회귀](../artifacts/json-file-review-20261112/export-regression/report.json)도 두 크기 통과. 모바일 크기 Chromium이며 실제 안드로이드 사용자 검사가 아니다.
+[최종 로컬 브라우저 결과](../artifacts/json-file-review-20261112/local-native-picker/report.json): 1365×900 및 390×844 통과. [기존 다운로드 회귀](../artifacts/json-file-review-20261112/export-regression/report.json)도 두 크기 통과. 모바일 크기 Chromium이며 실제 안드로이드 사용자 검사가 아니다.
 
-Python339개 실행·실패0·1skip, Node26개 통과(파일 읽기8개 추가). [Python 로그](../artifacts/json-file-review-20261112/python-tests.log)의 기존 Starlette/Pydantic 경고도 보존한다. [Node 최종 로그](../artifacts/json-file-review-20261112/node-final.log). 새 유료 호출0회, 새 b 참여 기록0건.
+Python339개 실행·실패0·1skip, Node26개 통과(파일 읽기8개 추가). [Python 로그](../artifacts/json-file-review-20261112/python-tests.log)의 기존 Starlette/Pydantic 경고도 보존한다. [Node 최종 로그](../artifacts/json-file-review-20261112/node-native-picker.log). 새 유료 호출0회, 새 b 참여 기록0건.
