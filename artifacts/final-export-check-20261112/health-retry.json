@@ -1,0 +1,11 @@
+{
+  "status": 200,
+  "body": {
+    "status": "ok",
+    "facts": 192,
+    "commit": "4989b288adf884005dc1a650c1c4b2b144a57d37",
+    "version": "1.4.0"
+  },
+  "seconds": 0.803,
+  "tls_verified": true
+}

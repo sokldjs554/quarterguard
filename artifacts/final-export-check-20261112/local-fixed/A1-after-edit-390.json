@@ -1,0 +1,265 @@
+{
+  "document_id": "apple-2024-10k",
+  "query": "2024회계연도에 제품과 서비스 중 어느 쪽의 매출총이익률이 더 높았나?",
+  "context": {
+    "document_id": "apple-2024-10k",
+    "title": "Apple FY2024 Form 10-K · 2024·2023 연결재무제표",
+    "company": "apple",
+    "scope": "CFS",
+    "currency": "USD",
+    "scale": 1000000,
+    "current_year": 2024,
+    "base_year": null,
+    "years_origin": "query",
+    "note": "기업·연결·USD·백만 달러는 선택한 문서의 조건입니다. 비교 질문에서 생략된 연도는 선택 문서의 2024·2023 열로 표시합니다."
+  },
+  "operation": "gross_margin",
+  "operation_label": "제품·서비스 매출총이익률",
+  "status": "verified",
+  "issues": [],
+  "messages": [],
+  "unknown_terms": [],
+  "warnings": [],
+  "values": {
+    "products_margin_pct": "37.1806",
+    "services_margin_pct": "73.8804"
+  },
+  "formulas": [
+    {
+      "key": "products_margin_pct",
+      "formula": "(sales - cost_of_sales) / sales * 100",
+      "input_ids": [
+        "apple-2024-10k:products_sales:2024",
+        "apple-2024-10k:products_cost:2024"
+      ],
+      "unit": "percent"
+    },
+    {
+      "key": "services_margin_pct",
+      "formula": "(sales - cost_of_sales) / sales * 100",
+      "input_ids": [
+        "apple-2024-10k:services_sales:2024",
+        "apple-2024-10k:services_cost:2024"
+      ],
+      "unit": "percent"
+    }
+  ],
+  "explanation": [
+    "2024 회계연도 제품 집계 매출총이익률은 37.1806%, 서비스 집계는 73.8804%입니다. 순이익률이나 개별 항목 수익성은 아닙니다."
+  ],
+  "required_information": [],
+  "currency": "USD",
+  "scale": 1000000,
+  "unit_label": "백만 미국 달러",
+  "evidence": [
+    {
+      "id": "apple-2024-10k:products_sales:2024",
+      "document_id": "apple-2024-10k",
+      "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+      "source_format": "SEC_HTML",
+      "company": "apple",
+      "scope": "CFS",
+      "currency": "USD",
+      "scale": 1000000,
+      "metric": "products_sales",
+      "value": "294866",
+      "raw_value": "294,866",
+      "year": 2024,
+      "period_kind": "duration",
+      "as_of": null,
+      "start": "2023-10-01",
+      "end": "2024-09-28",
+      "fiscal_weeks": 52,
+      "page": null,
+      "printed_page": 29,
+      "table_id": "apple-p29",
+      "table_title": "Consolidated Statements of Operations",
+      "section": "Net sales",
+      "row": "Products",
+      "column": "2024",
+      "amount_column": 1,
+      "row_role": "labelled",
+      "table_xpath": "/html/body/div[512]/table",
+      "cell_xpath": "/html/body/div[512]/table/tr[5]/td[3]",
+      "logical_column_span": [
+        3,
+        6
+      ],
+      "xbrl_name": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ref": "c-13",
+      "fact_id": "f-60",
+      "source_locator": "#f-60",
+      "unit_basis": "USD inline XBRL scale=6"
+    },
+    {
+      "id": "apple-2024-10k:services_sales:2024",
+      "document_id": "apple-2024-10k",
+      "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+      "source_format": "SEC_HTML",
+      "company": "apple",
+      "scope": "CFS",
+      "currency": "USD",
+      "scale": 1000000,
+      "metric": "services_sales",
+      "value": "96169",
+      "raw_value": "96,169",
+      "year": 2024,
+      "period_kind": "duration",
+      "as_of": null,
+      "start": "2023-10-01",
+      "end": "2024-09-28",
+      "fiscal_weeks": 52,
+      "page": null,
+      "printed_page": 29,
+      "table_id": "apple-p29",
+      "table_title": "Consolidated Statements of Operations",
+      "section": "Net sales",
+      "row": "Services",
+      "column": "2024",
+      "amount_column": 1,
+      "row_role": "labelled",
+      "table_xpath": "/html/body/div[512]/table",
+      "cell_xpath": "/html/body/div[512]/table/tr[6]/td[2]",
+      "logical_column_span": [
+        3,
+        6
+      ],
+      "xbrl_name": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "context_ref": "c-16",
+      "fact_id": "f-63",
+      "source_locator": "#f-63",
+      "unit_basis": "USD inline XBRL scale=6"
+    },
+    {
+      "id": "apple-2024-10k:products_cost:2024",
+      "document_id": "apple-2024-10k",
+      "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+      "source_format": "SEC_HTML",
+      "company": "apple",
+      "scope": "CFS",
+      "currency": "USD",
+      "scale": 1000000,
+      "metric": "products_cost",
+      "value": "185233",
+      "raw_value": "185,233",
+      "year": 2024,
+      "period_kind": "duration",
+      "as_of": null,
+      "start": "2023-10-01",
+      "end": "2024-09-28",
+      "fiscal_weeks": 52,
+      "page": null,
+      "printed_page": 29,
+      "table_id": "apple-p29",
+      "table_title": "Consolidated Statements of Operations",
+      "section": "Cost of sales",
+      "row": "Products",
+      "column": "2024",
+      "amount_column": 1,
+      "row_role": "labelled",
+      "table_xpath": "/html/body/div[512]/table",
+      "cell_xpath": "/html/body/div[512]/table/tr[10]/td[2]",
+      "logical_column_span": [
+        3,
+        6
+      ],
+      "xbrl_name": "us-gaap:CostOfGoodsAndServicesSold",
+      "context_ref": "c-13",
+      "fact_id": "f-69",
+      "source_locator": "#f-69",
+      "unit_basis": "USD inline XBRL scale=6"
+    },
+    {
+      "id": "apple-2024-10k:services_cost:2024",
+      "document_id": "apple-2024-10k",
+      "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+      "source_format": "SEC_HTML",
+      "company": "apple",
+      "scope": "CFS",
+      "currency": "USD",
+      "scale": 1000000,
+      "metric": "services_cost",
+      "value": "25119",
+      "raw_value": "25,119",
+      "year": 2024,
+      "period_kind": "duration",
+      "as_of": null,
+      "start": "2023-10-01",
+      "end": "2024-09-28",
+      "fiscal_weeks": 52,
+      "page": null,
+      "printed_page": 29,
+      "table_id": "apple-p29",
+      "table_title": "Consolidated Statements of Operations",
+      "section": "Cost of sales",
+      "row": "Services",
+      "column": "2024",
+      "amount_column": 1,
+      "row_role": "labelled",
+      "table_xpath": "/html/body/div[512]/table",
+      "cell_xpath": "/html/body/div[512]/table/tr[11]/td[2]",
+      "logical_column_span": [
+        3,
+        6
+      ],
+      "xbrl_name": "us-gaap:CostOfGoodsAndServicesSold",
+      "context_ref": "c-16",
+      "fact_id": "f-72",
+      "source_locator": "#f-72",
+      "unit_basis": "USD inline XBRL scale=6"
+    }
+  ],
+  "narratives": [
+    {
+      "id": "apple-2024-10k:text:fiscal_weeks",
+      "document_id": "apple-2024-10k",
+      "document_sha256": "5699ae3d9c78d05cef529647ecb478b73f7b4616e37ae80dccef3a51c5837469",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/aapl-20240928.htm",
+      "source_format": "SEC_HTML",
+      "printed_page": 34,
+      "page": null,
+      "text": "The Company’s fiscal year is the 52- or 53-week period that ends on the last Saturday of September. An additional week is included in the first fiscal quarter every five or six years to realign the Company’s fiscal quarters with calendar quarters, which occurred in the first fiscal quarter of 2023. The Company’s fiscal years 2024 and 2022 spanned 52 weeks each, whereas fiscal year 2023 spanned 53 weeks. Unless otherwise stated, references to particular years, quarters, months and periods refer to the Company’s fiscal years ended in September and the associated quarters, months and periods of those fiscal years.",
+      "xpath": "/html/body/ix:continuation[1]/ix:nonnumeric[2]/div/span",
+      "key": "fiscal_weeks"
+    }
+  ],
+  "source_snapshot_sha256": "6b502d10c31cd96df70daa9f27caa8fef7d5618c3e135298c28356f1f483c6f7",
+  "source_integrity": "registered_snapshot",
+  "execution": "deterministic_source_review",
+  "trace_kind": "internal_rule_stages_not_MCP_calls",
+  "steps": [
+    {
+      "stage": "search_source_evidence",
+      "status": "completed",
+      "evidence_ids": [
+        "apple-2024-10k:products_sales:2024",
+        "apple-2024-10k:services_sales:2024",
+        "apple-2024-10k:products_cost:2024",
+        "apple-2024-10k:services_cost:2024"
+      ]
+    },
+    {
+      "stage": "get_source_cell",
+      "status": "completed",
+      "evidence_ids": [
+        "apple-2024-10k:products_sales:2024",
+        "apple-2024-10k:services_sales:2024",
+        "apple-2024-10k:products_cost:2024",
+        "apple-2024-10k:services_cost:2024"
+      ]
+    },
+    {
+      "stage": "validate_source_context",
+      "status": "passed"
+    },
+    {
+      "stage": "calculate_or_withhold",
+      "status": "verified",
+      "operation": "gross_margin"
+    }
+  ]
+}
