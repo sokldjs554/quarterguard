@@ -49,8 +49,9 @@ if __name__=='__main__':unittest.main()
 class GeneratedResponseTests(unittest.TestCase):
  def test_structured_mismatch_is_rejected_and_usage_is_measured(self):
   import httpx
-  result={'status':'verified','growth_pct':'1.0000','issues':[],'evidence':[{'id':'fact-1'}]}
-  answer={'status':'verified','value':'1.0000','issues':[],'evidence_ids':['fact-1'],'explanation_ko':'공개 수치에 근거한 설명입니다.'}
+  result={'status':'needs_review','issues':['SEARCH_EMPTY'],'evidence':[]}
+  answer={'status':'needs_review','value':None,'issues':['SEARCH_EMPTY'],'evidence_ids':[],
+          'explanation_ko':pp.build_context(result)['notice']}
   def response():
    return httpx.Response(200,json={'status':'completed','model':pp.MODEL,'usage':{'input_tokens':100,'output_tokens':20},'output':[{'type':'message','content':[{'type':'output_text','text':json.dumps(answer)}]}]})
   with patch.dict(os.environ,{'OPENAI_API_KEY':'TEST-NOT-A-KEY'}),patch.object(pp.httpx,'post',side_effect=lambda *a,**k:response()) as post:

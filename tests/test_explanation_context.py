@@ -73,7 +73,10 @@ class ExplanationContextTests(unittest.TestCase):
 
     def test_provider_keeps_actual_prose_separate_from_deterministic_context(self):
         row = self.rows['unit-draft']
-        answer = row['generated']
+        # Synthetic valid response, not a rewritten historical model artifact.
+        answer = copy.deepcopy(row['generated'])
+        answer['explanation_ko'] = '\n'.join(x['required_claim'] for x in
+                                              pp.build_context(row['tool_result'])['evidence']) + ' 증가율 6.7916%.'
         response = httpx.Response(200, json={
             'status': 'completed', 'model': pp.MODEL,
             'usage': {'input_tokens': 600, 'output_tokens': 200},

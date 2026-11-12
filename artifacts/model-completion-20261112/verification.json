@@ -1,0 +1,18 @@
+{
+  "paid_calls": 0,
+  "scripted_real_mcp_cases": 4,
+  "scripted_real_mcp_matches": 4,
+  "scripted_scope_recoveries": 1,
+  "new_human_verdicts": 0,
+  "python_tests": 355,
+  "python_skipped": 1,
+  "python_failures": 0,
+  "node_tests": 26,
+  "node_failures": 0,
+  "freeze_sha256": "0bd61535f81eef282cf7b0858f1c0b853fe2b06a27d34b2e447df24d8b63e50c",
+  "initial_regression_failures_preserved": true,
+  "latest_minor_change_targeted_tests": 16,
+  "deployment_checked_this_step": false,
+  "final_dry_report": "reviewed-dry-run/report.json",
+  "final_full_tests": "python-tests-reviewed.txt"
+}

@@ -1,0 +1,7 @@
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/pydantic_settings/sources/utils.py:47: IncompleteFieldDefinitionWarning: Field 'lifespan' has an incomplete definition: its annotation contains an unresolved forward reference, so settings sources may fail to correctly resolve its value. Call `model_rebuild()` on the model where the field is defined, once all the referenced types are defined.
+  warnings.warn(
+Executing <Task finished name='Task-2' coro=<PlannerRecoveryTests.test_missing_reads_are_observed_then_model_can_retry_comparison() done, defined at /workspace/quarterguard-apple-evaluation/tests/test_planner_recovery.py:10> result=None created at /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/asyncio/runners.py:100> took 0.130 seconds
+----------------------------------------------------------------------
+Ran 16 tests in 0.488s
+
+OK
