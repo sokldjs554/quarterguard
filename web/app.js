@@ -1,3 +1,4 @@
+import {canRetainTable} from './verification-state.mjs';
 import {renderFinance,clearFinance,openFinanceSources,mountFinanceSources} from './finance-view.js';
 import {view,showStage,mountNavigation} from './navigation.js';
 import {mountProgress} from './progress.js';
@@ -111,14 +112,34 @@ function setBusy(value) {
  reviewControls();
  $('#execution-status').classList.toggle('busy-pulse',value);
 }
+function verificationProgress(state, retained=false) {
+ const box=$('#verification-progress');box.hidden=false;box.dataset.state=state;
+ const waiting=state==='waiting',failed=state==='failed';
+ box.innerHTML=`<strong>${waiting?(retained?'이전 결과 · 재검증 중':'새 조건 검증 중'):failed?'검증 실패 · 이전 결과 사용 불가':'새 결과 반영 완료'}</strong><ol aria-label="검증 진행"><li>1. 요청 전송</li><li ${waiting?'aria-current="step"':''}>2. ${failed?'응답 실패':waiting?'응답 대기 중':'응답 수신'}</li><li ${state==='done'?'aria-current="step"':''}>3. ${state==='done'?'결과 반영 완료':'결과 반영 대기'}</li></ol><span>${waiting?'서버의 최종 응답을 기다립니다. 도구별 진행률은 제공되지 않습니다.':failed?'조건을 확인한 뒤 다시 검증하세요.':'완료된 실행 상세에서 실제 도구 기록을 확인할 수 있습니다.'}</span>`;
+}
 async function execute(live) {
  const token=++requestId,request=selection(),focusId=document.activeElement?.id;
- clearNote();current=null;clearRecovery();clearFinance();$('#workbook-mobile-context').textContent='새 비교 조건 대조 중';$('#finding-details').open=false;$('#comparison-overview').hidden=false;
- $('#comparison-overview').innerHTML='<p role="status">선택한 조건의 수치를 대조하고 있습니다.</p>';updateContext();$('#work-alert').hidden=true;$('#trace-btn').disabled=true;$('#trace-dialog').close();setBusy(true);
- $('#execution-status').textContent=live?'근거 조회·문맥 대조 진행 중 · 실제 MCP 실행':'선택한 자료의 표 계산 중';
- $('#table-summary').textContent='자료 대조 중';
- $('#worksheet-rows').innerHTML='<tr><td colspan="6" class="empty" role="status">선택한 자료의 근거 대조 중</td></tr>';
- $('#finding').innerHTML='<h3>결과 대기</h3><p class="calculation-note">새 설정의 계산이 완료되면 검토 결과를 표시합니다.</p>';
+ const retained=canRetainTable(live,current,request);
+ clearNote();current=null;clearRecovery();
+ $('#finance-source-dialog').close();$('#finance-source-content').replaceChildren();
+ $('#finance-source-btn').disabled=true;
+ $('#comparison-chart').inert=true;$('#finding-details').inert=true;
+ $('#worksheet-rows').classList.toggle('reverifying',retained);
+ $('#desk').dataset.previous=String(retained);
+ if(!retained) {
+  clearFinance();$('#workbook-mobile-context').textContent='새 비교 조건 대조 중';
+  $('#finding-details').open=false;$('#comparison-overview').hidden=false;
+  $('#comparison-overview').innerHTML='<p role="status">선택한 조건의 수치를 대조하고 있습니다.</p>';
+  $('#worksheet-rows').innerHTML='<tr><td colspan="6" class="empty" role="status">선택한 자료의 근거 대조 중</td></tr>';
+  $('#finding').innerHTML='<h3>결과 대기</h3><p class="calculation-note">새 설정의 계산이 완료되면 검토 결과를 표시합니다.</p>';
+ } else {
+  $('#worksheet-rows').querySelectorAll('.status-cell').forEach(cell=>cell.textContent='재검증 중');
+  $('#worksheet-rows').querySelectorAll('button').forEach(button=>button.disabled=true);
+ }
+ updateContext();$('#work-alert').hidden=true;$('#trace-btn').disabled=true;$('#trace-dialog').close();setBusy(true);
+ if(live)verificationProgress('waiting',retained);else $('#verification-progress').hidden=true;
+ $('#execution-status').textContent=live?'재검증 요청 전송 · 서버 응답 대기 중':'선택한 자료의 표 계산 중';
+ $('#table-summary').textContent=retained?'이전 결과 · 재검증 중':'자료 대조 중';
  inspector?.clear();$('#source-counter').textContent='—';
  try {
   const result=await api(live?'/api/worksheet/run':'/api/worksheet',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(request)});
@@ -127,16 +148,26 @@ async function execute(live) {
    current=result;$('#trace-btn').disabled=false;
    throw Error((result.issues||[]).map(x=>issues[x]?.[0]||x).join(' · ')||'재검증 실패');
   }
+  if(!Array.isArray(result.rows)||!result.rows.length)throw Error('검증 응답에 비교 수치가 없습니다.');
   current={...result,selection:request};render();
+  if(live)verificationProgress('done');
  } catch(e) {
   if(token!==requestId)return;
-  clearRecovery();
+  if(current?.workflow_success)current=null;
+  clearRecovery();clearFinance();inspector?.clear();
+  $('#workbook-mobile-context').textContent='현재 조건의 검증 결과 없음';
   $('#work-alert').textContent=errorText(e)+' · 설정 초기화 또는 근거 재검증으로 다시 시도할 수 있습니다.';$('#work-alert').hidden=false;
   $('#worksheet-rows').innerHTML='<tr><td colspan="6" class="empty">현재 설정의 결과 없음</td></tr>';
   $('#finding').innerHTML='<h3>검토 결과 없음</h3><p class="calculation-note">이전 결과를 현재 설정의 결과로 표시하지 않습니다.</p>';
+  $('#comparison-overview').hidden=false;
   $('#comparison-overview').innerHTML='<p>현재 설정의 비교 결과가 없습니다. 조건을 확인하고 다시 실행하세요.</p>';
   $('#table-summary').textContent='대조 미완료';$('#execution-status').textContent='실행 미완료 · 성공 판정 없음';
- } finally {if(token===requestId){setBusy(false);if(focusId&&document.activeElement===document.body)document.getElementById(focusId)?.focus({preventScroll:true});}}
+  if(live)verificationProgress('failed');
+ } finally {if(token===requestId){
+  $('#worksheet-rows').classList.remove('reverifying');$('#desk').dataset.previous='false';
+  $('#comparison-chart').inert=false;$('#finding-details').inert=false;
+  setBusy(false);if(focusId&&document.activeElement===document.body)document.getElementById(focusId)?.focus({preventScroll:true});
+ }}
 }
 function valueContext(f,side) {
  const start=f.start.slice(0,7).replace('-','.'),end=f.start.slice(0,4)===f.end.slice(0,4)?f.end.slice(5,7):f.end.slice(0,7).replace('-','.');
@@ -155,6 +186,7 @@ function render() {
   return `<tr data-row="${r.metric}" class="${selectedMetric===r.metric?'selected':''}"><td class="row-index">${String(i+1).padStart(2,'0')}</td><td><button class="metric-name" data-metric="${r.metric}" aria-pressed="${selectedMetric===r.metric}">${labels[r.metric]}<small>${shortLabels[r.metric]}</small></button></td>${['current','base'].map(side=>`<td class="value-cell" data-label="${side==='current'?'A 기준':'B 비교'}"><button class="number-button ${selectedMetric===r.metric&&selectedSide===side?'active':''}" data-fact="${r[side].id}" data-side="${side}" data-metric="${r.metric}" aria-describedby="context-${side}-${r.metric}" aria-label="${labels[r.metric]} ${side==='current'?'기준':'비교'} ${money(r[side])} ${unit(r[side])} 근거">${money(r[side])}</button>${valueContext(r[side],side)}</td>`).join('')}<td class="growth ${ok?(Number(value)<0?'negative':''):'warn'}">${ok?(Number(value)>0?'+':'')+esc(value)+'%':'—'}</td><td class="status-cell"><span class="${ok?'ok':'warn'}">${ok?'조건 일치':esc(issues[r.result.issues[0]]?.[0]||'확인 필요')}</span></td></tr>`;
  }).join('');
  $('#worksheet-rows').querySelectorAll('tr').forEach(tr=>tr.onclick=e=>{
+  if(busy)return;
   const b=e.target.closest('[data-metric]');selectedMetric=tr.dataset.row;selectedSide=b?.dataset.side||'current';selectRow();if(b?.dataset.fact)openFinanceSources(selectedSide);
  });
  $('#execution-status').textContent=current.execution_mode==='live_mcp'?`실제 MCP 재검증 완료 · ${current.trace.length}회 도구 호출 · ${(current.latency_ms/1000).toFixed(2)}초`:`수집 수치의 표 계산 · ${current.latency_ms.toFixed(1)} ms · 현재 MCP 호출 없음`;
