@@ -1,0 +1,92 @@
+[
+  {
+    "width": 1440,
+    "check": "same selection retains values; pending labels, locked export/source; replay restores selected metric",
+    "method": "real preview response replay, not a live MCP run"
+  },
+  {
+    "width": 1440,
+    "check": "http503 clears retained values, chart and export",
+    "method": "injected browser fault"
+  },
+  {
+    "width": 1440,
+    "check": "tool_timeout clears retained values, chart and export",
+    "method": "injected browser fault"
+  },
+  {
+    "width": 1440,
+    "check": "abort clears retained values, chart and export",
+    "method": "injected browser fault"
+  },
+  {
+    "width": 1440,
+    "check": "empty_success clears retained values, chart and export",
+    "method": "injected browser fault"
+  },
+  {
+    "width": 1440,
+    "check": "changed condition removes old result immediately",
+    "method": "held request / injected failure"
+  },
+  {
+    "width": 390,
+    "check": "same selection retains values; pending labels, locked export/source; replay restores selected metric",
+    "method": "real preview response replay, not a live MCP run"
+  },
+  {
+    "width": 390,
+    "check": "http503 clears retained values, chart and export",
+    "method": "injected browser fault"
+  },
+  {
+    "width": 390,
+    "check": "tool_timeout clears retained values, chart and export",
+    "method": "injected browser fault"
+  },
+  {
+    "width": 390,
+    "check": "abort clears retained values, chart and export",
+    "method": "injected browser fault"
+  },
+  {
+    "width": 390,
+    "check": "empty_success clears retained values, chart and export",
+    "method": "injected browser fault"
+  },
+  {
+    "width": 390,
+    "check": "changed condition removes old result immediately",
+    "method": "held request / injected failure"
+  },
+  {
+    "width": 320,
+    "check": "same selection retains values; pending labels, locked export/source; replay restores selected metric",
+    "method": "real preview response replay, not a live MCP run"
+  },
+  {
+    "width": 320,
+    "check": "http503 clears retained values, chart and export",
+    "method": "injected browser fault"
+  },
+  {
+    "width": 320,
+    "check": "tool_timeout clears retained values, chart and export",
+    "method": "injected browser fault"
+  },
+  {
+    "width": 320,
+    "check": "abort clears retained values, chart and export",
+    "method": "injected browser fault"
+  },
+  {
+    "width": 320,
+    "check": "empty_success clears retained values, chart and export",
+    "method": "injected browser fault"
+  },
+  {
+    "width": 320,
+    "check": "changed condition removes old result immediately",
+    "method": "held request / injected failure"
+  }
+]
