@@ -1,0 +1,38 @@
+{
+  "checks": [
+    {
+      "viewport": [
+        1365,
+        900
+      ],
+      "human_development_cases": 7,
+      "real_backend": "http://127.0.0.1:8804",
+      "exports": true,
+      "injected_503_recovery": true,
+      "injected_transport_timeout": true,
+      "late_delivery_after_edit_ignored": true,
+      "document_switch": true,
+      "sk_balance": true,
+      "samsung_quarter": true,
+      "page_errors": []
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "human_development_cases": 7,
+      "real_backend": "http://127.0.0.1:8804",
+      "exports": true,
+      "injected_503_recovery": true,
+      "injected_transport_timeout": true,
+      "late_delivery_after_edit_ignored": true,
+      "document_switch": true,
+      "sk_balance": true,
+      "samsung_quarter": true,
+      "page_errors": []
+    }
+  ],
+  "tls_note": "Local HTTP unless URL explicitly HTTPS; browser never ignores HTTPS certificate errors.",
+  "new_paid_calls": 0
+}
