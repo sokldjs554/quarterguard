@@ -9,7 +9,7 @@ with sync_playwright() as pw:
  for width,height in [(1365,900),(390,844)]:
   page=browser.new_page(viewport={'width':width,'height':height},accept_downloads=True)
   errors=[];page.on('pageerror',lambda e:errors.append(str(e)))
-  page.goto(a.url);page.locator('[data-view="search"]').click();picker=page.locator('#source-document');picker.select_option('apple-2024-10k')
+  page.goto(a.url);page.locator('[data-view="analysis"]').click();picker=page.locator('#source-document');picker.select_option('apple-2024-10k')
   q=page.locator('#source-evidence-query');button=page.locator('#apple-review-submit');box=page.locator('#apple-review-result');export=page.locator('#apple-review-export')
   page.locator('#source-evidence-form button').click();expect(page.locator('#source-evidence-results .source-cell-card')).to_have_count(4)
   for i,c in enumerate(cases):

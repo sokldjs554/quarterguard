@@ -1,3 +1,4 @@
+import {view,showStage,mountNavigation} from './navigation.js';
 import {mountProgress} from './progress.js';
 import {$,esc,labels,shortLabels,issues,money,unit,scope,docTitle,api,errorText,download,traceHTML,localTime} from './shared.js';
 import {evidenceInspector} from './evidence.js';
@@ -52,6 +53,7 @@ function bindNote(row) {
  reviewControls();
 }
 function settings(open) {
+ if(open)showStage('compare');
  $('#comparison-settings').hidden=!open;$('#settings-btn').setAttribute('aria-expanded',String(open));
 }
 const reviewSettings={PERIOD_MISMATCH:['base-period','B 기간 설정 확인'],SCOPE_MISMATCH:['base-scope','B 범위 설정 확인']};
@@ -81,10 +83,6 @@ function updateContext() {
 }
 const options={document:[['s24q3','2024년 3분기 보고서'],['s24q2','2024년 반기 보고서']],year:[[2024,'2024년'],[2023,'2023년']],scope:[['CFS','연결'],['OFS','별도']],period:[['q','단독 분기'],['ytd','누적']],currency:[['KRW','백만 원'],['USD','천 USD · 참고']]};
 const optionNames={document:'문서',year:'연도',scope:'범위',period:'기간',currency:'단위'};
-function view(name) {
- document.querySelectorAll('.view').forEach(v=>v.hidden=v.id!==name);
- document.querySelectorAll('[data-view]').forEach(b=>{b.classList.toggle('active',b.dataset.view===name);if(b.dataset.view===name)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
-}
 function selectors() {
  for(const side of ['current','base']) {
   $(`[data-side="${side}"]`).innerHTML=Object.entries(options).map(([key,values])=>`<label class="${key==='document'?'document-select':''}" for="${side}-${key}"><span>${optionNames[key]}</span><select id="${side}-${key}" aria-label="${side==='current'?'기준':'비교'} ${optionNames[key]}">${values.map(([value,label])=>`<option value="${value}" ${defaults[side][key]===value?'selected':''}>${label}</option>`).join('')}</select></label>`).join('');
@@ -109,7 +107,8 @@ function setBusy(value) {
 }
 async function execute(live) {
  const token=++requestId,request=selection(),focusId=document.activeElement?.id;
- clearNote();current=null;clearRecovery();updateContext();$('#work-alert').hidden=true;$('#trace-btn').disabled=true;$('#trace-dialog').close();setBusy(true);
+ clearNote();current=null;clearRecovery();
+ $('#comparison-overview').innerHTML='<p role="status">선택한 조건의 수치를 대조하고 있습니다.</p>';updateContext();$('#work-alert').hidden=true;$('#trace-btn').disabled=true;$('#trace-dialog').close();setBusy(true);
  $('#execution-status').textContent=live?'근거 조회·문맥 대조 진행 중 · 실제 MCP 실행':'선택한 자료의 표 계산 중';
  $('#table-summary').textContent='자료 대조 중';
  $('#worksheet-rows').innerHTML='<tr><td colspan="6" class="empty" role="status">선택한 자료의 근거 대조 중</td></tr>';
@@ -129,6 +128,7 @@ async function execute(live) {
   $('#work-alert').textContent=errorText(e)+' · 설정 초기화 또는 근거 재검증으로 다시 시도할 수 있습니다.';$('#work-alert').hidden=false;
   $('#worksheet-rows').innerHTML='<tr><td colspan="6" class="empty">현재 설정의 결과 없음</td></tr>';
   $('#finding').innerHTML='<h3>검토 결과 없음</h3><p class="calculation-note">이전 결과를 현재 설정의 결과로 표시하지 않습니다.</p>';
+  $('#comparison-overview').innerHTML='<p>현재 설정의 비교 결과가 없습니다. 조건을 확인하고 다시 실행하세요.</p>';
   $('#table-summary').textContent='대조 미완료';$('#execution-status').textContent='실행 미완료 · 성공 판정 없음';
  } finally {if(token===requestId){setBusy(false);if(focusId&&document.activeElement===document.body)document.getElementById(focusId)?.focus({preventScroll:true});}}
 }
@@ -148,7 +148,7 @@ function render() {
   return `<tr data-row="${r.metric}" class="${selectedMetric===r.metric?'selected':''}"><td class="row-index">${String(i+1).padStart(2,'0')}</td><td><button class="metric-name" data-metric="${r.metric}">${labels[r.metric]}<small>${shortLabels[r.metric]}</small></button></td>${['current','base'].map(side=>`<td class="value-cell" data-label="${side==='current'?'A 기준':'B 비교'}"><button class="number-button ${selectedMetric===r.metric&&selectedSide===side?'active':''}" data-fact="${r[side].id}" data-side="${side}" data-metric="${r.metric}" aria-describedby="context-${side}-${r.metric}" aria-label="${labels[r.metric]} ${side==='current'?'기준':'비교'} ${money(r[side])} ${unit(r[side])} 근거">${money(r[side])}</button>${valueContext(r[side],side)}</td>`).join('')}<td class="growth ${ok?'':'warn'}">${ok?(Number(value)>0?'+':'')+esc(value)+'%':'—'}</td><td class="status-cell"><span class="${ok?'ok':'warn'}">${ok?'조건 일치':esc(issues[r.result.issues[0]]?.[0]||'확인 필요')}</span></td></tr>`;
  }).join('');
  $('#worksheet-rows').querySelectorAll('tr').forEach(tr=>tr.onclick=e=>{
-  const b=e.target.closest('[data-metric]');selectedMetric=tr.dataset.row;selectedSide=b?.dataset.side||'current';selectRow();if(b?.dataset.fact&&matchMedia('(max-width:600px)').matches)$('#source-panel').scrollIntoView({block:'start'});
+  const b=e.target.closest('[data-metric]');selectedMetric=tr.dataset.row;selectedSide=b?.dataset.side||'current';selectRow();if(b?.dataset.fact){showStage('evidence',{focus:true});$('.work-stages').scrollIntoView({block:'start'});}
  });
  $('#execution-status').textContent=current.execution_mode==='live_mcp'?`실제 MCP 재검증 완료 · ${current.trace.length}회 도구 호출 · ${(current.latency_ms/1000).toFixed(2)}초`:`수집 수치의 표 계산 · ${current.latency_ms.toFixed(1)} ms · 현재 MCP 호출 없음`;
  $('#trace-btn').disabled=false;selectRow();
@@ -158,6 +158,9 @@ function selectRow() {
  document.querySelectorAll('[data-row]').forEach(tr=>tr.classList.toggle('selected',tr.dataset.row===selectedMetric));
  document.querySelectorAll('[data-fact]').forEach(b=>b.classList.toggle('active',b.dataset.metric===selectedMetric&&b.dataset.side===selectedSide));
  const a=row.current,b=row.base,r=row.result,ok=r.status==='verified';
+ const dateRange=f=>`${f.start.slice(0,7).replace('-','.')} — ${f.end.slice(0,7).replace('-','.')}`;
+ $('#comparison-overview').innerHTML=`<div class="overview-label"><span class="eyebrow">SELECTED METRIC</span><strong>${labels[row.metric]}</strong><small>${current.selection.mode==='qoq'?'전분기 대비':'전년 동기 대비'}</small></div>${[['A','기준',a],['B','비교',b]].map(([letter,title,f])=>`<div class="overview-amount"><span><b>${letter}</b> ${title} · ${dateRange(f)}</span><strong>${money(f)}<small>${unit(f)}</small></strong><p>${f.months}개월 · ${scope(f)}</p></div>`).join('')}<div class="overview-result ${ok?'':'on-hold'}"><span>${ok?'조건 일치':'계산 보류'}</span><strong>${ok?(Number(r.growth_pct)>0?'+':'')+esc(r.growth_pct)+'%':'—'}</strong><small>${ok?'선택 조건의 산술 비교':esc(issues[r.issues[0]]?.[0]||'조건 확인 필요')}</small></div>`;
+
  $('#finding').innerHTML=`<div class="finding-heading"><h3>${labels[row.metric]} · 검토 근거</h3><span class="${ok?'ok':'warn'}">${ok?'비교 조건 일치':'계산 보류'}</span></div><div class="context-checks"><span class="${r.issues.includes('PERIOD_MISMATCH')?'bad':''}">기간 ${a.months}개월 ↔ ${b.months}개월</span><span class="${r.issues.includes('SCOPE_MISMATCH')?'bad':''}">범위 ${scope(a)} ↔ ${scope(b)}</span><span class="${r.issues.some(x=>['CURRENCY_MISMATCH','CONVENIENCE_TRANSLATION'].includes(x))?'bad':''}">${unit(a)} ↔ ${unit(b)}</span></div>${ok?`<div class="calculation">(${money(a)} ÷ ${money(b)} − 1) × 100 = ${esc(r.growth_pct)}%</div><p class="calculation-note">문서·행·열의 출처 확인 · Decimal 계산 · 소수점 4자리 반올림</p>`:r.issues.map(x=>`<div class="finding-issue">${esc(issues[x]?.[0]||x)}<small>${esc(issues[x]?.[1]||'근거 재확인 필요')}</small>${reviewSettings[x]?`<button class="review-setting-link" data-review-setting="${reviewSettings[x][0]}">${reviewSettings[x][1]} →</button>`:''}</div>`).join('')}`;
  bindReviewSettings($('#finding'));
  inspector.show(row[selectedSide],[a,b],selectedSide==='current'?0:1);$('#source-counter').textContent=`${selectedSide==='current'?'A 기준':'B 비교'} · ${labels[row.metric]}`;
@@ -192,7 +195,7 @@ async function boot() {
   });
   $('#source-index').innerHTML=sources.map(s=>`<div class="source-index-row"><a href="${esc(s.url)}" target="_blank" rel="noopener">${docTitle(s.id)} · Samsung Electronics ↗</a><span>${s.pages} pages · ${s.report_end}</span></div>`).join('');
   ready=true;await execute(false);loadReview();
- } catch(e) {$('#boot-error').hidden=false;$('#work-alert').hidden=true;$('#desk').setAttribute('aria-busy','false');$('#table-summary').textContent='연결 불가';$('#execution-status').textContent='수집 자료 연결 필요';}
+ } catch(e) {$('#comparison-overview').innerHTML='<p>자료 연결 실패 · 다시 연결한 뒤 비교할 수 있습니다.</p>';$('#boot-error').hidden=false;$('#work-alert').hidden=true;$('#desk').setAttribute('aria-busy','false');$('#table-summary').textContent='연결 불가';$('#execution-status').textContent='수집 자료 연결 필요';}
 }
 $('#search-form').onsubmit=async e=>{
  e.preventDefault();const ticket=++searchId,box=$('#search-results');box.innerHTML='<div class="empty busy-pulse" role="status">근거 검색 중</div>';
@@ -220,7 +223,7 @@ $('#search-form').onsubmit=async e=>{
  }catch(e){if(ticket===searchId)box.innerHTML=`<div class="error-message" role="alert">${esc(errorText(e))} · 연결 복구 후 재검색</div>`;}
 };
 selectors();
-document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>view(b.dataset.view));
+mountNavigation();
 $('#reset-btn').onclick=()=>{setSelection(defaults);selectedMetric='revenue';selectedSide='current';execute(false);};
 $('#run-btn').onclick=()=>execute(true);$('#trace-btn').onclick=openTrace;$('#close-trace').onclick=()=>$('#trace-dialog').close();
 $('#download-btn').onclick=()=>current&&download(current,`quarterguard-worksheet-${current.run_id}.json`);
@@ -229,6 +232,7 @@ $('#settings-btn').onclick=()=>settings($('#comparison-settings').hidden);
 $('#settings-close').onclick=()=>{settings(false);$('#settings-btn').focus();};
 $('#settings-results').onclick=()=>{
  settings(false);
+ showStage('compare');
  const target=!$('#boot-error').hidden?$('#boot-error'):!$('#work-alert').hidden?$('#work-alert'):$('#sheet-title');
  target.focus({preventScroll:true});target.scrollIntoView({block:'start'});
 };

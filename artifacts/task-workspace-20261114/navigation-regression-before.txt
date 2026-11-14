@@ -1,0 +1,88 @@
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/sync_api/_generated.py", line 23332, in to_be_visible
+    self._sync(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 852, in to_be_visible
+    await self._expect_impl(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 128, in _expect_impl
+    _record_soft_or_raise(
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/playwright/_impl/_assertions.py", line 60, in _record_soft_or_raise
+    raise error
+AssertionError: Locator expected to be visible
+Actual value: hidden 
+Call log:
+  - Expect "to_be_visible" with timeout 1000ms
+  - waiting for locator("#comparison-panel")
+    10 × locator resolved to <section hidden="" role="tabpanel" class="worksheet" id="comparison-panel" aria-labelledby="stage-compare">…</section>
+       - unexpected value "hidden"
+
+Aria snapshot:
+- link "작업 영역으로 이동":
+  - /url: "#main"
+- complementary "작업 탐색":
+  - link "QuarterGuard 홈":
+    - /url: "#home"
+    - text: Q QuarterGuard FINANCIAL REVIEW
+  - text: WORKSPACE
+  - navigation "주 메뉴":
+    - button "검토 시작"
+    - button "분기 비교"
+    - button "문서 분석"
+    - button "근거 검색"
+    - button "검증 기록"
+  - text: 비교 작업지 문서 2
+  - button "2024년 3분기 179쪽 · 영문 IR" [pressed]:
+    - strong: 2024년 3분기
+    - text: 179쪽 · 영문 IR
+  - button "2024년 반기 287쪽 · 영문 IR":
+    - strong: 2024년 반기
+    - text: 287쪽 · 영문 IR
+  - text: 공개 자료 워크스페이스
+  - paragraph: 공시 원문에서 판단의 근거까지.
+  - link "프로젝트 정보 ↗":
+    - /url: https://github.com/sokldjs554/quarterguard
+- banner:
+  - text: 워크스페이스 /
+  - strong: 분기 비교
+  - link "지원 자료 안내 ↗":
+    - /url: https://github.com/sokldjs554/quarterguard/blob/main/docs/data.md
+- main:
+  - text: 삼성전자 / 실적 검토
+  - heading "분기 실적 비교" [level=1]
+  - paragraph: 삼성전자 · 공개 보고서의 수치와 비교 조건을 함께 검토합니다.
+  - button "CSV 내보내기"
+  - button "비교 검증"
+  - region "선택 항목 비교 요약":
+    - text: SELECTED METRIC
+    - strong: 매출액
+    - text: 전분기 대비 A 기준 · 2024.07 — 2024.09
+    - strong: 79,098,731백만 원
+    - paragraph: 3개월 · 연결
+    - text: B 비교 · 2024.04 — 2024.06
+    - strong: 74,068,302백만 원
+    - paragraph: 3개월 · 연결
+    - text: 조건 일치
+    - strong: +6.7916%
+    - text: 선택 조건의 산술 비교
+  - text: 전분기 대비 | A 2024년 3분기 단독 · 연결 · 백만 원 / B 2024년 2분기 단독 · 연결 · 백만 원
+  - button "비교 설정"
+  - tablist "분기 검토 단계":
+    - tab "01 수치 비교"
+    - tab "02 원문 근거"
+    - tab "03 개인 메모" [selected]
+  - tabpanel "03 개인 메모":
+    - heading "내 검토 메모" [level=2]
+    - button "비교표로 돌아가기 →"
+    - paragraph: 비교표에서 선택한 항목에 메모를 남깁니다. 이 브라우저에만 보관하며, 확인 표시는 계산 승인과 별개입니다.
+    - region "개인 검토 기록":
+      - text: 개인 검토 메모 · 매출액
+      - button "확인 표시"
+      - textbox "개인 검토 메모 · 매출액":
+        - /placeholder: 검토한 내용이나 확인이 필요한 사항을 남기세요.
+      - status: 이 브라우저에만 저장됩니다.
+      - button "메모 저장"
+  - paragraph: 공개 예시 자료 · 수집 수치의 자동 계산과 도구 재검증을 구분합니다. 외부 API는 검증 기록 화면에서 별도로 요청합니다. 이 작업지는 자동으로 호출하지 않습니다.
+- contentinfo: 공개 문서 기반 검토 · 투자 추천이나 감사 의견이 아닙니다. v1.4.0 · 3487057

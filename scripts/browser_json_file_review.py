@@ -17,7 +17,7 @@ def main():
     page=browser.new_page(viewport={'width':width,'height':height},accept_downloads=True)
     page.set_default_timeout(20000);errors=[];requests=[]
     page.on('pageerror',lambda e:errors.append(str(e)));page.on('request',lambda r:requests.append({'method':r.method,'url':r.url}))
-    page.goto(a.url,timeout=60000);page.locator('[data-view="search"]').click();page.locator('#source-document').select_option('apple-2024-10k')
+    page.goto(a.url,timeout=60000);page.locator('[data-view="analysis"]').click();page.locator('#source-document').select_option('apple-2024-10k')
     q=page.locator('#source-evidence-query');q.fill(A7);page.locator('#apple-review-submit').click();expect(page.locator('#apple-review-export')).to_be_enabled()
     with page.expect_download() as pending:page.locator('#apple-review-export').click()
     saved=a.output/f'A7-{width}.json';pending.value.save_as(saved);original=json.loads(saved.read_text())

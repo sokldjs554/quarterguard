@@ -13,7 +13,7 @@ def main():
         browser=pw.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--no-sandbox'])
         for width,height in [(1365,900),(390,844)]:
             page=browser.new_page(viewport={'width':width,'height':height},accept_downloads=True)
-            page.goto(a.url);page.locator('[data-view="search"]').click()
+            page.goto(a.url);page.locator('[data-view="analysis"]').click()
             expect(page.locator('#source-calculator summary')).to_be_visible(timeout=3000)
             page.locator('#source-calculator summary').click()
             mode=page.locator('#source-calc-mode');current=page.locator('#source-calc-current');base=page.locator('#source-calc-base')
