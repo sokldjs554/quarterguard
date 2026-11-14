@@ -5,36 +5,38 @@
 <meta name="description" content="보고서의 재무 수치와 근거를 대조하고 검토 기록을 남기는 공시 검토 도구">
 <title>QuarterGuard · 공시 검토</title>
 <link rel="stylesheet" href="/assets/style.css">
-<link rel="stylesheet" href="/assets/editorial.css">
+<link rel="stylesheet" href="/assets/finance.css">
 </head>
 <body>
 <a class="skip-link" href="#main">작업 영역으로 이동</a>
-<header class="masthead">
- <div class="masthead-top"><a class="wordmark" href="#home" aria-label="QuarterGuard 홈">QuarterGuard<span>.</span></a><div class="masthead-note">기업공시 검토실<span>PUBLIC DISCLOSURE RESEARCH</span></div><a class="edition-link" href="https://github.com/sokldjs554/quarterguard" target="_blank" rel="noopener">프로젝트 기록 ↗</a></div>
- <nav class="edition-nav" aria-label="주 메뉴"><button data-view="home">검토 목록</button><button data-view="work">분기 비교</button><button data-view="analysis">문서 분석</button><button data-view="search">근거 검색</button><button data-view="review">검증 기록</button><span class="edition-status">공개 문서 기반</span></nav>
-</header>
+<aside class="finance-rail">
+ <a class="finance-brand" href="#work"><span>Q</span>QuarterGuard</a>
+ <nav aria-label="주 메뉴"><button data-view="work"><span aria-hidden="true">▦</span>기업 분석</button><button data-view="analysis"><span aria-hidden="true">▤</span>문서 분석</button><button data-view="search"><span aria-hidden="true">⌕</span>근거 검색</button><button data-view="review"><span aria-hidden="true">◷</span>검증 기록</button><button data-view="home"><span aria-hidden="true">☷</span>검토 자료</button></nav>
+ <div class="finance-rail-label">비교 작업지</div><div class="finance-company"><span>S</span>삼성전자 <small>005930</small></div>
+ <div class="finance-rail-label">연결된 보고서 <span id="document-count">2</span></div><div id="document-list"><p class="empty">문서 불러오는 중</p></div>
+ <div class="finance-rail-note">공개 공시 자료<p>수치와 비교 조건을<br>함께 확인합니다.</p><a href="https://github.com/sokldjs554/quarterguard/blob/main/docs/data.md" target="_blank" rel="noopener">지원 범위 ↗</a></div>
+</aside>
 <div class="workspace-body">
-<div class="edition-location"><span>QUARTERGUARD / <strong id="route-label">검토 시작</strong></span><a href="https://github.com/sokldjs554/quarterguard/blob/main/docs/data.md" target="_blank" rel="noopener">지원 자료와 범위 ↗</a></div>
+<header class="finance-topbar"><span>QuarterGuard <span class="crumb-divider">/</span> <strong id="route-label">기업 분석</strong></span><a href="https://github.com/sokldjs554/quarterguard" target="_blank" rel="noopener">프로젝트 기록 ↗</a></header>
 <main id="main" tabindex="-1">
 <section id="home" class="view" aria-labelledby="home-title">
- <div class="cover-kicker"><span>THE DISCLOSURE DESK</span><span>문서에서 숫자로, 숫자에서 근거로.</span></div>
- <div class="editorial-cover"><h1 id="home-title" tabindex="-1">숫자에는<br><em>맥락</em>이 필요합니다<span class="title-period">.</span></h1><div class="cover-caption"><span class="caption-index">[ 원문을 읽는 일 ]</span><p>같은 매출이라도 기간과 범위가 다르면<br>같은 기준의 비교가 아닙니다.</p><p>원문을 펼치고, 조건을 대조하고,<br>확인한 근거를 기록하세요.</p><a href="#work">삼성전자 비교부터 살펴보기 ↗</a></div></div>
- <div class="research-index"><section aria-labelledby="research-title"><div class="index-heading"><h2 id="research-title">검토할 자료</h2><span>선택 문서 / 3개 기업</span></div>
-  <div class="dossier-list">
-   <button class="dossier" data-start="samsung"><span class="dossier-number">01</span><span class="dossier-company"><strong>삼성전자</strong><small>Samsung Electronics</small></span><span class="dossier-detail"><b>분기 실적 비교</b><span>2024 반기·3분기 문서 · 6개 손익 항목</span></span><span class="dossier-arrow" aria-hidden="true">↗</span></button>
-   <button class="dossier" data-start="skhynix"><span class="dossier-number">02</span><span class="dossier-company"><strong>SK하이닉스</strong><small>SK hynix</small></span><span class="dossier-detail"><b>연간 실적 · 잔액 · 제품 비중</b><span>2024·2023 연결재무제표 · 백만 원</span></span><span class="dossier-arrow" aria-hidden="true">↗</span></button>
-   <button class="dossier" data-start="apple"><span class="dossier-number">03</span><span class="dossier-company"><strong>Apple</strong><small>Apple Inc.</small></span><span class="dossier-detail"><b>공시 질문과 계산 근거</b><span>FY2024 Form 10-K · 백만 미국 달러</span></span><span class="dossier-arrow" aria-hidden="true">↗</span></button>
-  </div></section>
-  <aside class="margin-notes" aria-labelledby="principles-title"><h2 id="principles-title">검토의 세 가지 기준</h2><ol><li><strong>원문이 먼저입니다.</strong><p>문서·페이지·행·열을 따라<br>수치의 출처를 확인합니다.</p></li><li><strong>같은 조건으로 비교합니다.</strong><p>기간·연결 범위·통화·단위를<br>계산 전에 대조합니다.</p></li><li><strong>모호하면 보류합니다.</strong><p>조건이 맞지 않으면 값을 만들지 않고<br>확인할 내용을 남깁니다.</p></li></ol><a href="#review">검증 기록 읽기 ↗</a></aside>
- </div>
- <div class="editorial-colophon"><span>공개 자료로 시작하는 재무 검토</span><span>원문 확인 → 조건 대조 → 계산 또는 보류 → 기록</span></div>
+ <div class="title-line"><div><h1 id="home-title" tabindex="-1">검토 자료</h1><p class="page-description">기업과 문서를 선택해 검토를 시작하세요.</p></div><span class="page-context">공개 자료 · 3개 기업</span></div>
+ <div class="finance-document-index">
+ <button data-start="samsung"><span class="index-symbol">S</span><span><strong>삼성전자</strong><small>2024년 반기·3분기 영문 IR</small></span><span>분기 실적 비교 · 6개 손익 항목</span><b>→</b></button>
+ <button data-start="skhynix"><span class="index-symbol">SK</span><span><strong>SK하이닉스</strong><small>2024·2023 연결재무제표</small></span><span>연간 실적 · 잔액 · 제품 비중</span><b>→</b></button>
+ <button data-start="apple"><span class="index-symbol">A</span><span><strong>Apple</strong><small>FY2024 Form 10-K</small></span><span>공시 질문 · 계산 근거</span><b>→</b></button>
+ </div><p class="finance-index-note">원문 확인 → 조건 대조 → 계산 또는 보류 → 검토 기록</p>
 </section>
 
 <section id="work" class="view" hidden>
- <div class="workspace-heading"><div><div class="breadcrumb">REVIEW / 01 <span>—</span> SAMSUNG ELECTRONICS</div><h1 tabindex="-1">분기 실적을 대조합니다.</h1><p class="page-description">삼성전자 · 공개 보고서의 수치와 비교 조건을 함께 검토합니다.</p></div><div class="heading-actions"><button id="export-btn" class="secondary" disabled>CSV 내보내기</button><button id="run-btn" class="primary" disabled>비교 검증</button></div></div>
- <details class="document-drawer"><summary>비교 작업지 원문 <span id="document-count">2</span><span class="drawer-hint">보고서 선택 · 원문 자료</span></summary><div id="document-list"><p class="empty">문서 불러오는 중</p></div></details>
- <section id="comparison-overview" class="comparison-overview" aria-label="선택 항목 비교 요약"><p>비교 자료를 불러오고 있습니다.</p></section>
- <div class="work-toolbar"><div id="selection-summary">보고서 조건 불러오는 중</div><button id="settings-btn" class="secondary" aria-expanded="false" aria-controls="comparison-settings">비교 설정</button></div>
+ <div class="workspace-heading"><div class="finance-company-heading"><span class="finance-company-logo">S</span><div><h1 tabindex="-1">삼성전자</h1><p class="page-description">Samsung Electronics · 005930 · 공개 공시</p></div></div><div class="heading-actions"><button id="export-btn" class="secondary" disabled>CSV 내보내기</button><button id="finance-source-btn" class="secondary" disabled>근거 확인 ↗</button><button id="run-btn" class="primary" disabled>비교 검증</button></div></div>
+ <div class="work-stages" role="tablist" aria-label="분기 검토 단계">
+  <button id="stage-compare" role="tab" data-stage="compare" aria-controls="comparison-panel" aria-selected="true">재무 비교</button>
+  <button id="stage-evidence" role="tab" data-stage="evidence" aria-controls="source-panel" aria-selected="false" tabindex="-1">원문 근거</button>
+  <button id="stage-notes" role="tab" data-stage="notes" aria-controls="notes-panel" aria-selected="false" tabindex="-1">개인 메모</button>
+ </div>
+ <div class="finance-quick"><span class="quick-a" id="quick-current">A · 자료 연결 중</span><span class="quick-divider"></span><span class="quick-letter">B</span><select id="quick-document" aria-label="빠른 B 문서" disabled><option value="s24q2">2024년 반기</option><option value="s24q3">2024년 3분기</option></select><select id="quick-period" aria-label="빠른 B 기간" disabled><option value="q">단독 분기</option><option value="ytd">누적</option></select><select id="quick-scope" aria-label="빠른 B 범위" disabled><option value="CFS">연결</option><option value="OFS">별도</option></select><button id="settings-btn" class="secondary" aria-expanded="false" aria-controls="comparison-settings">전체 조건</button></div>
+ <div class="work-toolbar"><div id="selection-summary">보고서 조건 불러오는 중</div></div>
  <section id="comparison-settings" class="comparison-settings" hidden aria-label="비교 설정">
   <div class="settings-top"><h2>비교 조건</h2><label for="mode">비교 방식 <select id="mode"><option value="qoq">전분기 대비</option><option value="yoy">전년 동기 대비</option></select></label><button id="reset-btn" class="quiet" disabled>설정 초기화</button><button id="settings-close" class="quiet">닫기</button></div>
   <div class="column-settings"><fieldset id="current-settings"><legend>A · 기준 자료</legend><div class="selectors" data-side="current"></div></fieldset><fieldset id="base-settings"><legend>B · 비교 자료</legend><div class="selectors" data-side="base"></div></fieldset></div>
@@ -42,14 +44,11 @@
  </section>
  <div id="work-alert" class="error-message" role="alert" tabindex="-1" hidden></div>
  <div id="boot-error" class="boot-error" tabindex="-1" hidden><h2>자료에 연결할 수 없습니다</h2><p>서버 연결을 확인한 뒤 다시 시도해 주세요.</p><button id="boot-retry" class="primary">다시 연결</button></div>
- <div class="work-stages" role="tablist" aria-label="분기 검토 단계">
-  <button id="stage-compare" role="tab" data-stage="compare" aria-controls="comparison-panel" aria-selected="true"><span>01</span> 수치 비교</button>
-  <button id="stage-evidence" role="tab" data-stage="evidence" aria-controls="source-panel" aria-selected="false" tabindex="-1"><span>02</span> 원문 근거</button>
-  <button id="stage-notes" role="tab" data-stage="notes" aria-controls="notes-panel" aria-selected="false" tabindex="-1"><span>03</span> 개인 메모</button>
- </div>
  <div class="desk" id="desk" aria-busy="true">
   <section class="worksheet" id="comparison-panel" role="tabpanel" aria-labelledby="stage-compare">
-   <div class="section-bar"><h2 id="sheet-title" tabindex="-1">손익 항목</h2><span id="table-summary" role="status">준비 중</span></div>
+   <section id="comparison-overview" class="comparison-overview" aria-label="선택 항목 비교 요약"><p>비교 자료를 불러오고 있습니다.</p></section>
+   <section id="comparison-chart" class="finance-chart" aria-label="금액 비교와 출처" hidden></section>
+   <div class="section-bar"><h2 id="sheet-title" tabindex="-1">손익계산서</h2><span id="table-summary" role="status">준비 중</span></div>
    <section id="comparison-recovery" class="comparison-recovery" aria-label="비교 조건 수정" hidden></section>
    <div class="sheet-scroll" tabindex="0" aria-label="재무 비교표 가로 스크롤"><table class="financial-table"><thead><tr><th scope="col" class="row-index">#</th><th scope="col">항목</th><th scope="col" id="current-heading">기준 A</th><th scope="col" id="base-heading">비교 B</th><th scope="col">증감률</th><th scope="col">검토</th></tr></thead><tbody id="worksheet-rows"><tr><td colspan="6" class="empty">수치와 출처 로딩 중</td></tr></tbody></table></div>
    <div class="sheet-legend">숫자를 선택하면 문서 근거에서 출처를 확인할 수 있습니다.</div>
@@ -111,6 +110,7 @@
 <footer><span>공개 문서 기반 검토 · 투자 추천이나 감사 의견이 아닙니다.</span><span id="version">버전 확인 중</span></footer>
 </div>
 <dialog id="trace-dialog"><div class="dialog-heading"><h2>검증 실행 기록</h2><button id="close-trace" class="icon-button" aria-label="실행 기록 닫기">×</button></div><div id="trace-content"></div><button id="download-btn" class="secondary">실행 JSON 내려받기</button></dialog>
+<dialog id="finance-source-dialog" class="finance-source-dialog" aria-labelledby="finance-source-title"><div class="finance-drawer-heading"><h2 id="finance-source-title">원문 근거</h2><button id="finance-source-close" class="icon-button" aria-label="근거 창 닫기">×</button></div><div id="finance-source-content"></div></dialog>
 <script type="module" src="/assets/app.js"></script>
 <script type="module" src="/assets/source-evidence.js"></script>
 </body></html>
