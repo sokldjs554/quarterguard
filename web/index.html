@@ -5,19 +5,15 @@
 <meta name="description" content="보고서의 재무 수치와 근거를 대조하고 검토 기록을 남기는 공시 검토 도구">
 <title>QuarterGuard · 공시 검토</title>
 <link rel="stylesheet" href="/assets/style.css">
-<link rel="stylesheet" href="/assets/finance.css">
+<link rel="stylesheet" href="/assets/workbook.css">
 </head>
 <body>
 <a class="skip-link" href="#main">작업 영역으로 이동</a>
-<aside class="finance-rail">
- <a class="finance-brand" href="#work"><span>Q</span>QuarterGuard</a>
- <nav aria-label="주 메뉴"><button data-view="work"><span aria-hidden="true">▦</span>기업 분석</button><button data-view="analysis"><span aria-hidden="true">▤</span>문서 분석</button><button data-view="search"><span aria-hidden="true">⌕</span>근거 검색</button><button data-view="review"><span aria-hidden="true">◷</span>검증 기록</button><button data-view="home"><span aria-hidden="true">☷</span>검토 자료</button></nav>
- <div class="finance-rail-label">비교 작업지</div><div class="finance-company"><span>S</span>삼성전자 <small>005930</small></div>
- <div class="finance-rail-label">연결된 보고서 <span id="document-count">2</span></div><div id="document-list"><p class="empty">문서 불러오는 중</p></div>
- <div class="finance-rail-note">공개 공시 자료<p>수치와 비교 조건을<br>함께 확인합니다.</p><a href="https://github.com/sokldjs554/quarterguard/blob/main/docs/data.md" target="_blank" rel="noopener">지원 범위 ↗</a></div>
-</aside>
-<div class="workspace-body">
-<header class="finance-topbar"><span>QuarterGuard <span class="crumb-divider">/</span> <strong id="route-label">기업 분석</strong></span><a href="https://github.com/sokldjs554/quarterguard" target="_blank" rel="noopener">프로젝트 기록 ↗</a></header>
+<header class="workbook-appbar">
+ <a class="workbook-brand" href="#work"><svg viewBox="0 0 24 26" fill="none" aria-hidden="true"><path d="M3 2h12l6 6v16H3V2Z"/><path d="M15 2v7h6M7 13h10M7 17h7"/></svg>QuarterGuard</a>
+ <nav aria-label="주 메뉴"><button data-view="work">재무 비교</button><button data-view="analysis">문서 분석</button><button data-view="search">근거 검색</button><button data-view="review">검증 기록</button><button data-view="home">검토 자료</button></nav>
+ <a class="project-link" href="https://github.com/sokldjs554/quarterguard" target="_blank" rel="noopener">프로젝트 ↗</a><span id="route-label" class="sr-only">재무 비교</span>
+</header><div class="workspace-body">
 <main id="main" tabindex="-1">
 <section id="home" class="view" aria-labelledby="home-title">
  <div class="title-line"><div><h1 id="home-title" tabindex="-1">검토 자료</h1><p class="page-description">기업과 문서를 선택해 검토를 시작하세요.</p></div><span class="page-context">공개 자료 · 3개 기업</span></div>
@@ -25,18 +21,17 @@
  <button data-start="samsung"><span class="index-symbol">S</span><span><strong>삼성전자</strong><small>2024년 반기·3분기 영문 IR</small></span><span>분기 실적 비교 · 6개 손익 항목</span><b>→</b></button>
  <button data-start="skhynix"><span class="index-symbol">SK</span><span><strong>SK하이닉스</strong><small>2024·2023 연결재무제표</small></span><span>연간 실적 · 잔액 · 제품 비중</span><b>→</b></button>
  <button data-start="apple"><span class="index-symbol">A</span><span><strong>Apple</strong><small>FY2024 Form 10-K</small></span><span>공시 질문 · 계산 근거</span><b>→</b></button>
- </div><p class="finance-index-note">원문 확인 → 조건 대조 → 계산 또는 보류 → 검토 기록</p>
+ </div><details class="report-library"><summary>삼성 비교 작업지 보고서 <span id="document-count">2</span></summary><div id="document-list"></div><a href="https://github.com/sokldjs554/quarterguard/blob/main/docs/data.md" target="_blank" rel="noopener">지원 자료 범위 ↗</a></details><p class="finance-index-note">원문 확인 → 조건 대조 → 계산 또는 보류 → 검토 기록</p>
 </section>
 
 <section id="work" class="view" hidden>
  <div class="workspace-heading"><div class="finance-company-heading"><span class="finance-company-logo">S</span><div><h1 tabindex="-1">삼성전자</h1><p class="page-description">Samsung Electronics · 005930 · 공개 공시</p></div></div><div class="heading-actions"><button id="export-btn" class="secondary" disabled>CSV 내보내기</button><button id="finance-source-btn" class="secondary" disabled>근거 확인 ↗</button><button id="run-btn" class="primary" disabled>비교 검증</button></div></div>
- <div class="work-stages" role="tablist" aria-label="분기 검토 단계">
+ <div class="workbook-toolbar"><div class="work-stages" role="tablist" aria-label="분기 검토 단계">
   <button id="stage-compare" role="tab" data-stage="compare" aria-controls="comparison-panel" aria-selected="true">재무 비교</button>
   <button id="stage-evidence" role="tab" data-stage="evidence" aria-controls="source-panel" aria-selected="false" tabindex="-1">원문 근거</button>
   <button id="stage-notes" role="tab" data-stage="notes" aria-controls="notes-panel" aria-selected="false" tabindex="-1">개인 메모</button>
- </div>
- <div class="finance-quick"><span class="quick-a" id="quick-current">A · 자료 연결 중</span><span class="quick-divider"></span><span class="quick-letter">B</span><select id="quick-document" aria-label="빠른 B 문서" disabled><option value="s24q2">2024년 반기</option><option value="s24q3">2024년 3분기</option></select><select id="quick-period" aria-label="빠른 B 기간" disabled><option value="q">단독 분기</option><option value="ytd">누적</option></select><select id="quick-scope" aria-label="빠른 B 범위" disabled><option value="CFS">연결</option><option value="OFS">별도</option></select><button id="settings-btn" class="secondary" aria-expanded="false" aria-controls="comparison-settings">전체 조건</button></div>
- <div class="work-toolbar"><div id="selection-summary">보고서 조건 불러오는 중</div></div>
+ </div><button id="settings-btn" class="secondary" aria-expanded="false" aria-controls="comparison-settings">전체 비교 조건</button></div>
+ <div class="sr-only" id="selection-summary">보고서 조건 불러오는 중</div>
  <section id="comparison-settings" class="comparison-settings" hidden aria-label="비교 설정">
   <div class="settings-top"><h2>비교 조건</h2><label for="mode">비교 방식 <select id="mode"><option value="qoq">전분기 대비</option><option value="yoy">전년 동기 대비</option></select></label><button id="reset-btn" class="quiet" disabled>설정 초기화</button><button id="settings-close" class="quiet">닫기</button></div>
   <div class="column-settings"><fieldset id="current-settings"><legend>A · 기준 자료</legend><div class="selectors" data-side="current"></div></fieldset><fieldset id="base-settings"><legend>B · 비교 자료</legend><div class="selectors" data-side="base"></div></fieldset></div>
@@ -47,12 +42,13 @@
  <div class="desk" id="desk" aria-busy="true">
   <section class="worksheet" id="comparison-panel" role="tabpanel" aria-labelledby="stage-compare">
    <section id="comparison-overview" class="comparison-overview" aria-label="선택 항목 비교 요약"><p>비교 자료를 불러오고 있습니다.</p></section>
-   <section id="comparison-chart" class="finance-chart" aria-label="금액 비교와 출처" hidden></section>
    <div class="section-bar"><h2 id="sheet-title" tabindex="-1">손익계산서</h2><span id="table-summary" role="status">준비 중</span></div>
+   <div class="workbook-mobile-controls"><span>B 조건</span><select data-quick="document" aria-label="모바일 B 문서" disabled><option value="s24q2">반기 보고서</option><option value="s24q3">3분기 보고서</option></select><select data-quick="period" aria-label="모바일 B 기간" disabled><option value="q">단독 분기</option><option value="ytd">누적</option></select><select data-quick="scope" aria-label="모바일 B 범위" disabled><option value="CFS">연결</option><option value="OFS">별도</option></select></div><div id="workbook-mobile-context" class="workbook-mobile-context"></div>
    <section id="comparison-recovery" class="comparison-recovery" aria-label="비교 조건 수정" hidden></section>
-   <div class="sheet-scroll" tabindex="0" aria-label="재무 비교표 가로 스크롤"><table class="financial-table"><thead><tr><th scope="col" class="row-index">#</th><th scope="col">항목</th><th scope="col" id="current-heading">기준 A</th><th scope="col" id="base-heading">비교 B</th><th scope="col">증감률</th><th scope="col">검토</th></tr></thead><tbody id="worksheet-rows"><tr><td colspan="6" class="empty">수치와 출처 로딩 중</td></tr></tbody></table></div>
+   <div class="sheet-scroll" tabindex="0" aria-label="재무 비교표 가로 스크롤"><table class="financial-table"><thead><tr><th scope="col" class="row-index">#</th><th scope="col">항목</th><th scope="col" id="current-heading"><span class="heading-letter">A</span><span id="current-heading-label">기준 자료</span><span id="quick-current" class="sr-only"></span></th><th scope="col" id="base-heading"><span class="heading-letter">B</span><span id="base-heading-label">비교 자료</span><div class="finance-quick"><select id="quick-document" aria-label="빠른 B 문서" disabled><option value="s24q2">2024 반기</option><option value="s24q3">2024 3분기</option></select><select id="quick-period" aria-label="빠른 B 기간" disabled><option value="q">단독 분기</option><option value="ytd">누적</option></select><select id="quick-scope" aria-label="빠른 B 범위" disabled><option value="CFS">연결</option><option value="OFS">별도</option></select></div></th><th scope="col">증감률</th><th scope="col">검토</th></tr></thead><tbody id="worksheet-rows"><tr><td colspan="6" class="empty">수치와 출처 로딩 중</td></tr></tbody></table></div>
    <div class="sheet-legend">숫자를 선택하면 문서 근거에서 출처를 확인할 수 있습니다.</div>
-   <section id="finding" class="finding" aria-live="polite"><h3>검토 항목</h3><p>표에서 항목을 선택하세요.</p></section>
+   <section id="comparison-chart" class="finance-chart" aria-label="선택 항목의 계산과 양쪽 출처" hidden></section>
+   <details id="finding-details" class="finding-details"><summary>판정 조건·계산식 자세히</summary><section id="finding" class="finding" aria-live="polite"><h3>검토 항목</h3><p>표에서 항목을 선택하세요.</p></section></details>
    <div class="execution-line"><span id="execution-status" role="status">자료 준비 중</span><button id="trace-btn" class="link-button" disabled>실행 상세</button></div>
   </section>
   <section class="evidence-panel" id="source-panel" role="tabpanel" aria-labelledby="stage-evidence" hidden><div class="stage-return"><p>선택한 수치의 문서·행·열을 확인하세요.</p><button class="secondary" data-return-compare>비교표로 돌아가기 →</button></div><div class="section-bar"><h2>문서 근거</h2><span id="source-counter">—</span></div><div id="evidence-content"><div class="empty">수치를 선택하면 해당 근거를 표시합니다.</div></div></section>

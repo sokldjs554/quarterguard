@@ -1,5 +1,5 @@
 // Task navigation changes presentation only; financial state stays in its owner modules.
-const titles={home:'검토 시작',work:'기업 분석',analysis:'문서 분석',search:'근거 검색',review:'검증 기록'};
+const titles={home:'검토 자료',work:'재무 비교',analysis:'문서 분석',search:'근거 검색',review:'검증 기록'};
 const stages={compare:'comparison-panel',evidence:'source-panel',notes:'notes-panel'};
 export function showStage(name,{focus=false}={}) {
  if(!Object.hasOwn(stages,name))name='compare';

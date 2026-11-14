@@ -1,0 +1,250 @@
+{
+  "at": "2026-11-14T16:08:59.210376+00:00",
+  "checks": [
+    {
+      "width": 1440,
+      "name": "normal six rows and chart",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "selected operating profit and signed growth",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "B evidence exact value and page",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "source table and return to comparison",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "period hold and recovery action above table",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "edit condition then close settings and return",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "scope hold and separate statement page 104",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "combined mismatch",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "existing personal note and mark do not approve held comparison",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "normal recovery",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "full settings YoY and quick-header synchronization",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "currency mismatch never plotted as verified",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "original CSV export with 25 columns preserved",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "natural-language search candidate to comparison",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "Apple product and service margins",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "Apple held result download and in-app JSON comparison",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "Apple question change invalidates previous result",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "SK actual balance change",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "SK product revenue share",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "SK inventory hold and JSON roundtrip",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "document library opens real Apple workflow",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "preserved historical and current evidence records",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "actual 18 MCP tools, not prepared replay",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 1440,
+      "name": "failed request clears chart, source and export",
+      "kind": "injected HTTP 503"
+    },
+    {
+      "width": 1440,
+      "name": "recovery after injected error",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 390,
+      "name": "normal six rows and chart",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 390,
+      "name": "selected operating profit and signed growth",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 390,
+      "name": "B evidence exact value and page",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 390,
+      "name": "source table and return to comparison",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 390,
+      "name": "period hold and recovery action above table",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 390,
+      "name": "edit condition then close settings and return",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 390,
+      "name": "scope hold and separate statement page 104",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 390,
+      "name": "combined mismatch",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 390,
+      "name": "existing personal note and mark do not approve held comparison",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 390,
+      "name": "normal recovery",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 390,
+      "name": "full settings YoY and quick-header synchronization",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 390,
+      "name": "currency mismatch never plotted as verified",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 390,
+      "name": "original CSV export with 25 columns preserved",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 390,
+      "name": "natural-language search candidate to comparison",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 390,
+      "name": "Apple product and service margins",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 390,
+      "name": "Apple held result download and in-app JSON comparison",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 390,
+      "name": "Apple question change invalidates previous result",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 390,
+      "name": "SK actual balance change",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 390,
+      "name": "SK product revenue share",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 390,
+      "name": "SK inventory hold and JSON roundtrip",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 390,
+      "name": "document library opens real Apple workflow",
+      "kind": "actual API / automated browser"
+    },
+    {
+      "width": 390,
+      "name": "preserved historical and current evidence records",
+      "kind": "actual API / automated browser"
+    }
+  ],
+  "passed": 47,
+  "errors": [],
+  "paid_provider_calls": 0,
+  "actual_mcp_tools": [
+    18
+  ],
+  "actor": "AI Playwright; not human validation",
+  "transport": "local HTTP",
+  "commit_expected": "",
+  "physical_device": false
+}
