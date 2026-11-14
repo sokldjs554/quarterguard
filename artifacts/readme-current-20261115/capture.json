@@ -1,0 +1,39 @@
+{
+  "captured_at_utc": "2026-11-14T17:06:07.098823+00:00",
+  "public_url": "https://quarterguard.onrender.com/#work",
+  "health": {
+    "status": "ok",
+    "facts": 192,
+    "commit": "da576ea931c760c47ac0a9bbf1d47e5535c72f27",
+    "version": "1.4.0"
+  },
+  "asset_checks": [
+    {
+      "path": "/",
+      "sha256": "65bb77ddcf72473b62326459427688e3f7711d7071b41cd03c9b5dc5e14a3197"
+    },
+    {
+      "path": "/assets/app.js",
+      "sha256": "8411b9b43707ad35c02d74c228cc5f2ff253021b630510aaf2448bee289fae4b"
+    },
+    {
+      "path": "/assets/workbook.css",
+      "sha256": "cf66c61ef77a10ee7eb054d5c6cb12931923ebf98a39c147f90f4a0210c51d44"
+    },
+    {
+      "path": "/assets/verification-state.mjs",
+      "sha256": "2ece03687cabc1a8a6f2f61082aa646f229891a54dac9f394fde5b53fff7d12f"
+    }
+  ],
+  "transport": "browser over fixed-origin relay with upstream TLS verification; direct Chromium HTTPS has ERR_CERT_AUTHORITY_INVALID",
+  "actor": "AI automated browser, not a new human review",
+  "screenshots": {
+    "normal.png": "actual preview API: 6.7916%, no MCP call",
+    "period-hold.png": "actual preview API: 3 vs 6 months, six growth values withheld",
+    "source.png": "actual source-location dialog; extracted metadata and publisher link, not a PDF image",
+    "mobile.png": "actual 390px browser viewport, not a physical device"
+  },
+  "publisher_link": "https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2024_3Q_Interim_Report.pdf#page=34",
+  "new_llm_calls": 0,
+  "new_mcp_calls": 0
+}

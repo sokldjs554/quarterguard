@@ -1,0 +1,8 @@
+{
+  "id": "dep-dbs90lm8bjmc73e9fof0",
+  "status": "live",
+  "commit": "da576ea931c760c47ac0a9bbf1d47e5535c72f27",
+  "ci_run": 43617236635,
+  "ci_status": "success",
+  "browser_transport": "TLS-verified fixed-origin relay; direct Chromium HTTPS fails ERR_CERT_AUTHORITY_INVALID"
+}

@@ -1,0 +1,17 @@
+{
+  "kind": "documentation consistency check; no new test-suite run",
+  "checked": [
+    {
+      "file": "README.md",
+      "local_links_resolve": 44
+    },
+    {
+      "file": "docs/readme-history.md",
+      "local_links_resolve": 33
+    }
+  ],
+  "old_readme_preserved_sha256": "7fd73db31dec549364e43c9fb05fe2e0d49e56e72f86377177f3102d7776a6af",
+  "runtime_code_changed": false,
+  "capture_commit": "da576ea931c760c47ac0a9bbf1d47e5535c72f27",
+  "new_paid_calls": 0
+}
