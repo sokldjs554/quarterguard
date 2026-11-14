@@ -1,0 +1,38 @@
+✔ Apple cards preserve USD, fiscal dates, printed HTML location and signed outflows (40.406463ms)
+✔ wrong unit, scope, origin and link reject before render (0.574018ms)
+✔ raw source row labels are escaped (0.802481ms)
+✔ stale review cannot render for new question (0.709957ms)
+✔ source context escapes text and only links HTTPS publisher PDFs at the supplied page (3.173613ms)
+✔ empty, missing and unresolved context never show old source links (5.010571ms)
+✔ scope-only decision basis is separate, escaped, and absent from legacy context (0.325315ms)
+✔ real A7 export retains question, source location and withholding on reopen (5.583982ms)
+✔ real S4 export retains both inputs, source locations and no computed ratio (0.743756ms)
+✔ whitespace and object key order do not imply different JSON values (2.732236ms)
+✔ changed question, amount, missing field, extra field and evidence order differ (2.350389ms)
+✔ without a current result, a readable file is not claimed to match (0.532148ms)
+✔ malformed, oversized, unsupported and excessively nested files fail (5.043778ms)
+✔ all loaded strings remain literal data including HTML and script-like URLs (0.800627ms)
+✔ unsafe numeric values cannot be silently rounded into a match (0.460705ms)
+✔ current closeout shows completed human work and separates fresh generation from replay (5.085506ms)
+✔ fresh paid batch displays poorer gate result without inventing human approval (0.789746ms)
+✔ final human review is visible with remaining overblocking and no new generation claim (1.14095ms)
+✔ current evidence separates product scope, reviewed responses, latest guard, and actors (0.213029ms)
+✔ historical failures are dated and never relabeled as current status (18.942239ms)
+✔ malformed current summary fails and text is escaped (1.229182ms)
+✔ latest model batch is separate from prior human labels and has unresolved prose warnings (0.541699ms)
+✔ confirmed v5 human verdicts do not become an overall accuracy improvement (0.366938ms)
+✔ v6 separates structural regression, new tasks, and still-pending human review (1.284989ms)
+✔ binding followup separates offline recovery from generation and preserves human labels (0.880433ms)
+✔ review context includes ordered evidence, mode and document version (0.920322ms)
+✔ review persists only valid fields; damaged storage is ignored (1.020681ms)
+✔ storage write failures propagate so UI cannot claim saved (0.47983ms)
+✔ CSV preserves numerical output and separates manual review from automated status (0.702598ms)
+✔ CSV neutralizes formula-like notes including leading whitespace (0.583337ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 226.405771

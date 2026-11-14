@@ -1,0 +1,52 @@
+[
+  {
+    "width": 320,
+    "height": 568,
+    "views": [
+      "work",
+      "search",
+      "review"
+    ],
+    "horizontal_overflow": false
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "views": [
+      "work",
+      "search",
+      "review"
+    ],
+    "horizontal_overflow": false
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "views": [
+      "work",
+      "search",
+      "review"
+    ],
+    "horizontal_overflow": false
+  },
+  {
+    "width": 1280,
+    "height": 900,
+    "views": [
+      "work",
+      "search",
+      "review"
+    ],
+    "horizontal_overflow": false
+  },
+  {
+    "width": 1440,
+    "height": 1000,
+    "views": [
+      "work",
+      "search",
+      "review"
+    ],
+    "horizontal_overflow": false
+  }
+]
