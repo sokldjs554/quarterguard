@@ -1,0 +1,7 @@
+{
+  "result": "실제 MCP 재검증 완료 · 18회 도구 호출 · 2.44초",
+  "trace_header": "현재 MCP 실제 실행 완료\n18회 도구 호출 · 생성형 모델 0회 · 2026. 11. 14. 오후 6:33:27 KST\nMCP protocol 2025-11-25",
+  "actor": "AI-operated Playwright",
+  "paid_calls": 0,
+  "prepared_replay": false
+}

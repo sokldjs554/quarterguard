@@ -30,7 +30,7 @@ with sync_playwright() as p:
             box = locator.bounding_box()
             assert box and box['y'] >= 0 and box['y'] + box['height'] <= height, box
 
-        page.goto(URL, wait_until='networkidle')
+        page.goto(URL+'#work', wait_until='networkidle')
         ready()
         page.locator('#settings-btn').click()
         page.locator('#base-period').select_option('ytd')
