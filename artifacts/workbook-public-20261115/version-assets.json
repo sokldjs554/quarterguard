@@ -1,0 +1,41 @@
+{
+  "health": {
+    "status": "ok",
+    "facts": 192,
+    "commit": "26d37b5625167c39a68891751103c05299f7b3aa",
+    "version": "1.4.0"
+  },
+  "assets": [
+    {
+      "file": "index.html",
+      "sha256": "52997196a96a7ee164d4b5a4892550abf71b802bf9794f84a7338b949c20fd2b",
+      "matches_tested_branch": true
+    },
+    {
+      "file": "workbook.css",
+      "sha256": "c141067abf3c72fc0e7ce7f920865d638631b93ecc13d775291869a44b226fe3",
+      "matches_tested_branch": true
+    },
+    {
+      "file": "app.js",
+      "sha256": "f87b252b1d33b584fb559cf221476dedd12c23656d64950919824bc940050969",
+      "matches_tested_branch": true
+    },
+    {
+      "file": "finance-view.js",
+      "sha256": "90a569926a89b0a657269db6553c8b2f5a0fe50f60eea81f1ad2b56b9a6de668",
+      "matches_tested_branch": true
+    },
+    {
+      "file": "navigation.js",
+      "sha256": "d27c0de8e42196abb78060850f38eb2c62607b82238897d23acf7c4e29ea271a",
+      "matches_tested_branch": true
+    }
+  ],
+  "TLS_verification": true,
+  "certificate_bypass": false,
+  "direct_browser_https": {
+    "result": "failed",
+    "error": "Page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://quarterguard.onrender.com/\nCall log:\n  - navigating to \"https://quarterguard.onrender.com/\", waiting until \"load\"\n"
+  }
+}
