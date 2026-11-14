@@ -1,0 +1,10 @@
+{
+  "service_id": "srv-dbhclkom7kps73ehrmqg",
+  "workspace_id": "tea-db9hb2dg1s2s738nd1a0",
+  "deploy_id": "dep-dbs8ihmq1p3s73ehbk60",
+  "status": "live",
+  "commit": "26d37b5625167c39a68891751103c05299f7b3aa",
+  "finished_at": "2026-11-14T16:17:20.673157Z",
+  "trigger": "new_commit",
+  "manual_trigger": false
+}
