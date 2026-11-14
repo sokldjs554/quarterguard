@@ -1,3 +1,4 @@
+import {renderFinance,clearFinance,openFinanceSources,mountFinanceSources} from './finance-view.js';
 import {view,showStage,mountNavigation} from './navigation.js';
 import {mountProgress} from './progress.js';
 import {$,esc,labels,shortLabels,issues,money,unit,scope,docTitle,api,errorText,download,traceHTML,localTime} from './shared.js';
@@ -76,6 +77,8 @@ function renderRecovery(rows) {
 }
 function updateContext() {
  const request=selection();
+ for(const key of ['document','period','scope'])$(`#quick-${key}`).value=request.base[key];
+ $('#quick-current').textContent=`A · ${request.current.year}년 ${request.current.document==='s24q3'?'3분기':'2분기'} · ${request.current.period==='q'?'단독':'누적'} · ${request.current.scope==='CFS'?'연결':'별도'}`;
  const describe=s=>`${s.year}년 ${s.document==='s24q3'?'3분기':'2분기'} ${s.period==='ytd'?'누적':'단독'} · ${s.scope==='CFS'?'연결':'별도'} · ${s.currency==='KRW'?'백만 원':'천 USD'}`;
  $('#selection-summary').textContent=`${request.mode==='qoq'?'전분기':'전년 동기'} 대비 | A ${describe(request.current)} / B ${describe(request.base)}`;
  const row=current?.rows?.find(r=>r.metric===selectedMetric);
@@ -87,6 +90,7 @@ function selectors() {
  for(const side of ['current','base']) {
   $(`[data-side="${side}"]`).innerHTML=Object.entries(options).map(([key,values])=>`<label class="${key==='document'?'document-select':''}" for="${side}-${key}"><span>${optionNames[key]}</span><select id="${side}-${key}" aria-label="${side==='current'?'기준':'비교'} ${optionNames[key]}">${values.map(([value,label])=>`<option value="${value}" ${defaults[side][key]===value?'selected':''}>${label}</option>`).join('')}</select></label>`).join('');
  }
+ for(const key of ['document','period','scope'])$(`#quick-${key}`).onchange=()=>{$(`#base-${key}`).value=$(`#quick-${key}`).value;execute(false);};
  document.querySelectorAll('.selectors select').forEach(s=>s.onchange=()=>execute(false));
  $('#mode').onchange=()=>execute(false);
 }
@@ -101,13 +105,13 @@ function setSelection(request) {
 }
 function setBusy(value) {
  busy=value;$('#desk').setAttribute('aria-busy',String(value));
- document.querySelectorAll('.selectors select, #mode, #run-btn, #reset-btn, [data-document]').forEach(x=>x.disabled=value||!ready);
+ document.querySelectorAll('.selectors select, .finance-quick select, #mode, #run-btn, #reset-btn, [data-document]').forEach(x=>x.disabled=value||!ready);
  reviewControls();
  $('#execution-status').classList.toggle('busy-pulse',value);
 }
 async function execute(live) {
  const token=++requestId,request=selection(),focusId=document.activeElement?.id;
- clearNote();current=null;clearRecovery();
+ clearNote();current=null;clearRecovery();clearFinance();
  $('#comparison-overview').innerHTML='<p role="status">선택한 조건의 수치를 대조하고 있습니다.</p>';updateContext();$('#work-alert').hidden=true;$('#trace-btn').disabled=true;$('#trace-dialog').close();setBusy(true);
  $('#execution-status').textContent=live?'근거 조회·문맥 대조 진행 중 · 실제 MCP 실행':'선택한 자료의 표 계산 중';
  $('#table-summary').textContent='자료 대조 중';
@@ -148,7 +152,7 @@ function render() {
   return `<tr data-row="${r.metric}" class="${selectedMetric===r.metric?'selected':''}"><td class="row-index">${String(i+1).padStart(2,'0')}</td><td><button class="metric-name" data-metric="${r.metric}">${labels[r.metric]}<small>${shortLabels[r.metric]}</small></button></td>${['current','base'].map(side=>`<td class="value-cell" data-label="${side==='current'?'A 기준':'B 비교'}"><button class="number-button ${selectedMetric===r.metric&&selectedSide===side?'active':''}" data-fact="${r[side].id}" data-side="${side}" data-metric="${r.metric}" aria-describedby="context-${side}-${r.metric}" aria-label="${labels[r.metric]} ${side==='current'?'기준':'비교'} ${money(r[side])} ${unit(r[side])} 근거">${money(r[side])}</button>${valueContext(r[side],side)}</td>`).join('')}<td class="growth ${ok?'':'warn'}">${ok?(Number(value)>0?'+':'')+esc(value)+'%':'—'}</td><td class="status-cell"><span class="${ok?'ok':'warn'}">${ok?'조건 일치':esc(issues[r.result.issues[0]]?.[0]||'확인 필요')}</span></td></tr>`;
  }).join('');
  $('#worksheet-rows').querySelectorAll('tr').forEach(tr=>tr.onclick=e=>{
-  const b=e.target.closest('[data-metric]');selectedMetric=tr.dataset.row;selectedSide=b?.dataset.side||'current';selectRow();if(b?.dataset.fact){showStage('evidence',{focus:true});$('.work-stages').scrollIntoView({block:'start'});}
+  const b=e.target.closest('[data-metric]');selectedMetric=tr.dataset.row;selectedSide=b?.dataset.side||'current';selectRow();if(b?.dataset.fact)openFinanceSources(selectedSide);
  });
  $('#execution-status').textContent=current.execution_mode==='live_mcp'?`실제 MCP 재검증 완료 · ${current.trace.length}회 도구 호출 · ${(current.latency_ms/1000).toFixed(2)}초`:`수집 수치의 표 계산 · ${current.latency_ms.toFixed(1)} ms · 현재 MCP 호출 없음`;
  $('#trace-btn').disabled=false;selectRow();
@@ -158,8 +162,7 @@ function selectRow() {
  document.querySelectorAll('[data-row]').forEach(tr=>tr.classList.toggle('selected',tr.dataset.row===selectedMetric));
  document.querySelectorAll('[data-fact]').forEach(b=>b.classList.toggle('active',b.dataset.metric===selectedMetric&&b.dataset.side===selectedSide));
  const a=row.current,b=row.base,r=row.result,ok=r.status==='verified';
- const dateRange=f=>`${f.start.slice(0,7).replace('-','.')} — ${f.end.slice(0,7).replace('-','.')}`;
- $('#comparison-overview').innerHTML=`<div class="overview-label"><span class="eyebrow">SELECTED METRIC</span><strong>${labels[row.metric]}</strong><small>${current.selection.mode==='qoq'?'전분기 대비':'전년 동기 대비'}</small></div>${[['A','기준',a],['B','비교',b]].map(([letter,title,f])=>`<div class="overview-amount"><span><b>${letter}</b> ${title} · ${dateRange(f)}</span><strong>${money(f)}<small>${unit(f)}</small></strong><p>${f.months}개월 · ${scope(f)}</p></div>`).join('')}<div class="overview-result ${ok?'':'on-hold'}"><span>${ok?'조건 일치':'계산 보류'}</span><strong>${ok?(Number(r.growth_pct)>0?'+':'')+esc(r.growth_pct)+'%':'—'}</strong><small>${ok?'선택 조건의 산술 비교':esc(issues[r.issues[0]]?.[0]||'조건 확인 필요')}</small></div>`;
+ renderFinance(row,current.selection.mode);
 
  $('#finding').innerHTML=`<div class="finding-heading"><h3>${labels[row.metric]} · 검토 근거</h3><span class="${ok?'ok':'warn'}">${ok?'비교 조건 일치':'계산 보류'}</span></div><div class="context-checks"><span class="${r.issues.includes('PERIOD_MISMATCH')?'bad':''}">기간 ${a.months}개월 ↔ ${b.months}개월</span><span class="${r.issues.includes('SCOPE_MISMATCH')?'bad':''}">범위 ${scope(a)} ↔ ${scope(b)}</span><span class="${r.issues.some(x=>['CURRENCY_MISMATCH','CONVENIENCE_TRANSLATION'].includes(x))?'bad':''}">${unit(a)} ↔ ${unit(b)}</span></div>${ok?`<div class="calculation">(${money(a)} ÷ ${money(b)} − 1) × 100 = ${esc(r.growth_pct)}%</div><p class="calculation-note">문서·행·열의 출처 확인 · Decimal 계산 · 소수점 4자리 반올림</p>`:r.issues.map(x=>`<div class="finding-issue">${esc(issues[x]?.[0]||x)}<small>${esc(issues[x]?.[1]||'근거 재확인 필요')}</small>${reviewSettings[x]?`<button class="review-setting-link" data-review-setting="${reviewSettings[x][0]}">${reviewSettings[x][1]} →</button>`:''}</div>`).join('')}`;
  bindReviewSettings($('#finding'));
@@ -224,6 +227,7 @@ $('#search-form').onsubmit=async e=>{
 };
 selectors();
 mountNavigation();
+mountFinanceSources(side=>{selectedSide=side;selectRow();showStage('evidence',{focus:true});$('.work-stages').scrollIntoView({block:'start'});});
 $('#reset-btn').onclick=()=>{setSelection(defaults);selectedMetric='revenue';selectedSide='current';execute(false);};
 $('#run-btn').onclick=()=>execute(true);$('#trace-btn').onclick=openTrace;$('#close-trace').onclick=()=>$('#trace-dialog').close();
 $('#download-btn').onclick=()=>current&&download(current,`quarterguard-worksheet-${current.run_id}.json`);

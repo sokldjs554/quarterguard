@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {chartModel} from '../web/finance-chart.mjs';
+const fact=(value,start,end)=>({value:String(value),start,end,months:3,currency:'KRW',scale:1000000,scope:'CFS'});
+const row=()=>({current:fact(79098731,'2024-07-01','2024-09-30'),base:fact(74068302,'2024-04-01','2024-06-30'),result:{status:'verified',issues:[],growth_pct:'6.7916'}});
+test('chart uses exact inputs in chronological order, axis includes zero',()=>{const m=chartModel(row());assert.deepEqual(m.bars.map(x=>x.value),[74068302,79098731]);assert.deepEqual(m.bars.map(x=>x.side),['base','current']);assert.equal(m.min,0);assert.ok(m.max>79098731);});
+test('held comparisons never generate chart bars',()=>{for(const code of ['PERIOD_MISMATCH','SCOPE_MISMATCH','CONVENIENCE_TRANSLATION']){const r=row();r.result={status:'needs_review',issues:[code],growth_pct:null};assert.equal(chartModel(r),null);}assert.equal(chartModel(null),null);});
+test('defensive currency, scale and missing result rejection',()=>{for(const [field,value] of [['currency','USD'],['scale',1000],['scope','OFS']]){const r=row();r.base[field]=value;assert.equal(chartModel(r),null);}const r=row();r.result.growth_pct=null;assert.equal(chartModel(r),null);});
+test('negative current has a visible zero baseline and negative bar',()=>{const r=row();r.current.value='-20';r.base.value='40';const m=chartModel(r);assert.ok(m.min<0);assert.ok(m.max>40);assert.equal(m.bars[1].value,-20);});
+test('zero current retains finite nonzero axis extent',()=>{const r=row();r.current.value='0';const m=chartModel(r);assert.equal(m.min,0);assert.ok(m.max>0);});
+test('invalid values do not become zero or produce infinite SVG',()=>{for(const value of ['',null,'NaN','Infinity','1e309']){const r=row();r.current.value=value;assert.equal(chartModel(r),null);}});
+test('reversed comparison dates use real facts rather than hardcoded quarters',()=>{const r=row();[r.current,r.base]=[r.base,r.current];const m=chartModel(r);assert.deepEqual(m.bars.map(x=>x.side),['current','base']);assert.equal(m.bars[0].fact.start,'2024-04-01');});
