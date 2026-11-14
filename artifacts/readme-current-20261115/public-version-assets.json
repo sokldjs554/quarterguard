@@ -1,0 +1,28 @@
+{
+  "at": "2026-11-14T16:47:26.688214+00:00",
+  "health": {
+    "status": "ok",
+    "facts": 192,
+    "commit": "da576ea931c760c47ac0a9bbf1d47e5535c72f27",
+    "version": "1.4.0"
+  },
+  "verified_https": true,
+  "assets": [
+    {
+      "path": "/",
+      "sha256": "65bb77ddcf72473b62326459427688e3f7711d7071b41cd03c9b5dc5e14a3197"
+    },
+    {
+      "path": "/assets/app.js",
+      "sha256": "8411b9b43707ad35c02d74c228cc5f2ff253021b630510aaf2448bee289fae4b"
+    },
+    {
+      "path": "/assets/workbook.css",
+      "sha256": "cf66c61ef77a10ee7eb054d5c6cb12931923ebf98a39c147f90f4a0210c51d44"
+    },
+    {
+      "path": "/assets/verification-state.mjs",
+      "sha256": "2ece03687cabc1a8a6f2f61082aa646f229891a54dac9f394fde5b53fff7d12f"
+    }
+  ]
+}
