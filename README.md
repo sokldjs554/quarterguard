@@ -4,6 +4,8 @@
 
 [공개 데모](https://quarterguard.onrender.com/) · [최신 지원 근거·공고 대조](docs/application-evidence-20261112.md) · [최종 사람 검수 묶음](docs/validation-kit/final-handoff-20261112/README.md) · [본인 코드 검토](docs/code-review-kit/README.md) · [서버 커밋 확인](https://quarterguard.onrender.com/health)
 
+**현재 디자인 (2026-11-14):** 고정 사이드바와 카드 격자를 없애고 종이색·명조 제목·가로 문서 목록·전체 폭 비교표를 적용했습니다. [현재 화면과 검증](docs/editorial-design-20261114.md). 아래 두 UI 기록은 이전 버전입니다.
+
 **화면 재구성 (2026-11-14):** [검토 시작](https://quarterguard.onrender.com/#home)에서 삼성 분기 비교·SK하이닉스 연간 분석·Apple 공시 질문을 선택합니다. 분기 비교의 수치 비교·원문 근거·개인 메모를 분리하고, SK·Apple은 독립된 문서 분석 화면으로 옮겼습니다. [변경 및 검증 기록](docs/task-workspace-20261114.md). 이전 UI와 평가·참여 기록은 보존했습니다.
 
 **화면 개선(2026-11-14):** 사용자가 선택한 C안에 따라 짙은 청록색 탐색 영역과 밝은 비교표·원문 패널을 적용했습니다. [변경 내용·새 화면·검증 범위](docs/ui-c-20261114.md). 계산·검색·저장 로직과 이전 평가 기록은 그대로 보존합니다. 이번 변경의 새 사람 검수·유료 API 호출은 0건입니다.
