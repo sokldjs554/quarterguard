@@ -1,0 +1,30 @@
+[
+  {
+    "repository": "sokldjs554/quarterguard",
+    "sha": "635a0cba04b22634ed8dc9d923d228d8541ec5bc"
+  },
+  {
+    "repository": "sokldjs554/toss-ads-ai-project",
+    "sha": "b5793cc83dfbb5272bd3245a6058b8985dc49865"
+  },
+  {
+    "repository": "sokldjs554/ko-search-clinic",
+    "sha": "f3ca14a68329cd3ef95e5b362f6224d35fe397ca"
+  },
+  {
+    "repository": "sokldjs554/harbinger",
+    "sha": "7daa95603d7dc7235135933b8ff18113c8133128"
+  },
+  {
+    "repository": "sokldjs554/tabletrace",
+    "sha": "437362e4dd360c042c7e808f7f51a34fa2f9d4fb"
+  },
+  {
+    "repository": "sokldjs554/llm-data-analyst-agent",
+    "sha": "3ff18e7c2701de9124550be9d9aa29f09e7a4f83"
+  },
+  {
+    "repository": "sokldjs554/aiops-sentinel",
+    "sha": "2faf9fd9b8acf95ea4082e3aa1aeb5a3345f8f44"
+  }
+]

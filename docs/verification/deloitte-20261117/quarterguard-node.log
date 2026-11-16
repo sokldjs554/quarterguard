@@ -1,0 +1,47 @@
+✔ Apple cards preserve USD, fiscal dates, printed HTML location and signed outflows (42.778746ms)
+✔ wrong unit, scope, origin and link reject before render (0.437545ms)
+✔ raw source row labels are escaped (0.24138ms)
+✔ stale review cannot render for new question (0.273196ms)
+✔ source context escapes text and only links HTTPS publisher PDFs at the supplied page (13.167274ms)
+✔ empty, missing and unresolved context never show old source links (2.639401ms)
+✔ scope-only decision basis is separate, escaped, and absent from legacy context (0.602706ms)
+✔ chart uses exact inputs in chronological order, axis includes zero (15.702754ms)
+✔ held comparisons never generate chart bars (0.294078ms)
+✔ defensive currency, scale and missing result rejection (0.197576ms)
+✔ negative current has a visible zero baseline and negative bar (0.203853ms)
+✔ zero current retains finite nonzero axis extent (0.288588ms)
+✔ invalid values do not become zero or produce infinite SVG (0.232747ms)
+✔ reversed comparison dates use real facts rather than hardcoded quarters (0.236987ms)
+✔ real A7 export retains question, source location and withholding on reopen (5.112608ms)
+✔ real S4 export retains both inputs, source locations and no computed ratio (1.318093ms)
+✔ whitespace and object key order do not imply different JSON values (2.82646ms)
+✔ changed question, amount, missing field, extra field and evidence order differ (5.374614ms)
+✔ without a current result, a readable file is not claimed to match (0.822995ms)
+✔ malformed, oversized, unsupported and excessively nested files fail (21.974882ms)
+✔ all loaded strings remain literal data including HTML and script-like URLs (0.92014ms)
+✔ unsafe numeric values cannot be silently rounded into a match (0.74944ms)
+✔ current closeout shows completed human work and separates fresh generation from replay (9.608854ms)
+✔ fresh paid batch displays poorer gate result without inventing human approval (1.737086ms)
+✔ final human review is visible with remaining overblocking and no new generation claim (2.138722ms)
+✔ current evidence separates product scope, reviewed responses, latest guard, and actors (0.804549ms)
+✔ historical failures are dated and never relabeled as current status (54.943161ms)
+✔ malformed current summary fails and text is escaped (0.520522ms)
+✔ latest model batch is separate from prior human labels and has unresolved prose warnings (0.34733ms)
+✔ confirmed v5 human verdicts do not become an overall accuracy improvement (0.393093ms)
+✔ v6 separates structural regression, new tasks, and still-pending human review (0.956772ms)
+✔ binding followup separates offline recovery from generation and preserves human labels (1.621273ms)
+✔ review context includes ordered evidence, mode and document version (1.539032ms)
+✔ review persists only valid fields; damaged storage is ignored (1.619732ms)
+✔ storage write failures propagate so UI cannot claim saved (0.954691ms)
+✔ CSV preserves numerical output and separates manual review from automated status (1.079509ms)
+✔ CSV neutralizes formula-like notes including leading whitespace (0.992086ms)
+✔ only successful same-condition live reverification retains the table (1.083221ms)
+✔ every financial context change clears the old table (0.485385ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 39
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 655.809687

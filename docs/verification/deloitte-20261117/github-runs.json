@@ -1,0 +1,248 @@
+{
+  "quarterguard": [
+    {
+      "name": "verification",
+      "sha": "635a0cba04b22634ed8dc9d923d228d8541ec5bc",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/quarterguard/actions/runs/43620347903",
+      "at": "2026-11-14T17:19:32Z"
+    },
+    {
+      "name": "verification",
+      "sha": "32cdb436d7664f206accb3a599f4bd360e5aa809",
+      "branch": "docs/readme-wording",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/quarterguard/actions/runs/43620187330",
+      "at": "2026-11-14T17:17:42Z"
+    },
+    {
+      "name": "verification",
+      "sha": "32cdb436d7664f206accb3a599f4bd360e5aa809",
+      "branch": "docs/readme-wording",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/quarterguard/actions/runs/43620162129",
+      "at": "2026-11-14T17:17:25Z"
+    },
+    {
+      "name": "verification",
+      "sha": "090ed0ac2ea4144f7bcc7aead32005a4f3c27585",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/quarterguard/actions/runs/43619798447",
+      "at": "2026-11-14T17:13:10Z"
+    },
+    {
+      "name": "verification",
+      "sha": "b1d4a8eedf1e14a866d34bd2228b662dac48de54",
+      "branch": "docs/evidence-first-readme",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/quarterguard/actions/runs/43619646749",
+      "at": "2026-11-14T17:11:21Z"
+    }
+  ],
+  "toss-ads-ai-project": [
+    {
+      "name": "normalization-public-ui",
+      "sha": "b5793cc83dfbb5272bd3245a6058b8985dc49865",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/toss-ads-ai-project/actions/runs/40076068270",
+      "at": "2026-10-24T08:02:04Z"
+    },
+    {
+      "name": "ci",
+      "sha": "b5793cc83dfbb5272bd3245a6058b8985dc49865",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/toss-ads-ai-project/actions/runs/40076009819",
+      "at": "2026-10-24T08:03:59Z"
+    },
+    {
+      "name": "pages",
+      "sha": "b5793cc83dfbb5272bd3245a6058b8985dc49865",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/toss-ads-ai-project/actions/runs/40076009803",
+      "at": "2026-10-24T07:55:57Z"
+    },
+    {
+      "name": "normalization-public-ui",
+      "sha": "bd1f28f2dc6e8c54e9c7932961ab5e73af496c61",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/toss-ads-ai-project/actions/runs/40075066221",
+      "at": "2026-10-24T07:42:43Z"
+    },
+    {
+      "name": "ci",
+      "sha": "bd1f28f2dc6e8c54e9c7932961ab5e73af496c61",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/toss-ads-ai-project/actions/runs/40075012580",
+      "at": "2026-10-24T07:48:26Z"
+    }
+  ],
+  "ko-search-clinic": [
+    {
+      "name": "CI",
+      "sha": "a7df146d04948a00743f6374e4702379122a9d78",
+      "branch": "feat/research-verification-v5-20261030",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/ko-search-clinic/actions/runs/41336564755",
+      "at": "2026-11-01T18:28:59Z"
+    },
+    {
+      "name": "CI",
+      "sha": "a7df146d04948a00743f6374e4702379122a9d78",
+      "branch": "feat/research-verification-v5-20261030",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/ko-search-clinic/actions/runs/41336559702",
+      "at": "2026-11-01T18:28:27Z"
+    },
+    {
+      "name": "CI",
+      "sha": "842988626ca28e1d988ea3d3d93e34dc9244bc33",
+      "branch": "feat/research-verification-v5-20261030",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/ko-search-clinic/actions/runs/41336363387",
+      "at": "2026-11-01T18:26:11Z"
+    },
+    {
+      "name": "CI",
+      "sha": "842988626ca28e1d988ea3d3d93e34dc9244bc33",
+      "branch": "feat/research-verification-v5-20261030",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/ko-search-clinic/actions/runs/41336358778",
+      "at": "2026-11-01T18:26:53Z"
+    },
+    {
+      "name": "CI",
+      "sha": "c711749cadd76d2ef07ea0f935cb741fd3fa3067",
+      "branch": "feat/research-verification-v5-20261030",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/ko-search-clinic/actions/runs/41335949839",
+      "at": "2026-11-01T18:22:04Z"
+    }
+  ],
+  "harbinger": [
+    {
+      "name": "ci",
+      "sha": "7daa95603d7dc7235135933b8ff18113c8133128",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/harbinger/actions/runs/40435358083",
+      "at": "2026-10-27T02:08:00Z"
+    },
+    {
+      "name": "ci",
+      "sha": "9373bbc4abe1e7694431646d4932a9ccde5941e2",
+      "branch": "docs/operator-final-receipt-20261027",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/harbinger/actions/runs/40434028261",
+      "at": "2026-10-27T01:54:34Z"
+    },
+    {
+      "name": "ci",
+      "sha": "88c0a21a54ca3069652931d5e3d1c3e2122738b5",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/harbinger/actions/runs/40432176325",
+      "at": "2026-10-27T01:38:17Z"
+    },
+    {
+      "name": "ci",
+      "sha": "124fe038754d38e74854ce2057d0bf179b65ef74",
+      "branch": "docs/monitoring-persistence-result-20261027",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/harbinger/actions/runs/40430553540",
+      "at": "2026-10-27T01:21:01Z"
+    },
+    {
+      "name": "ci",
+      "sha": "d0b8a5eefdc41ee5811ad3c288e5e238a41b7a58",
+      "branch": "docs/monitoring-persistence-result-20261027",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "url": "https://github.com/sokldjs554/harbinger/actions/runs/40430244274",
+      "at": "2026-10-27T01:07:10Z"
+    }
+  ],
+  "tabletrace": [
+    {
+      "name": "pages",
+      "sha": "437362e4dd360c042c7e808f7f51a34fa2f9d4fb",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/tabletrace/actions/runs/43904238732",
+      "at": "2026-11-16T16:09:34Z"
+    },
+    {
+      "name": "ci",
+      "sha": "437362e4dd360c042c7e808f7f51a34fa2f9d4fb",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/tabletrace/actions/runs/43904238719",
+      "at": "2026-11-16T16:12:08Z"
+    },
+    {
+      "name": "pages",
+      "sha": "4c503b10f59064a98290d9e53ef02cd53331ce6d",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/tabletrace/actions/runs/43899428835",
+      "at": "2026-11-16T15:43:49Z"
+    },
+    {
+      "name": "ci",
+      "sha": "4c503b10f59064a98290d9e53ef02cd53331ce6d",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/tabletrace/actions/runs/43899428678",
+      "at": "2026-11-16T15:46:10Z"
+    },
+    {
+      "name": "ci",
+      "sha": "761840022a775b2e8b10c2361fabb959aa9cae86",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/tabletrace/actions/runs/43842892395",
+      "at": "2026-11-16T09:50:05Z"
+    }
+  ],
+  "llm-data-analyst-agent": [
+    {
+      "name": "tests",
+      "sha": "3ff18e7c2701de9124550be9d9aa29f09e7a4f83",
+      "branch": "main",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/sokldjs554/llm-data-analyst-agent/actions/runs/30114829955",
+      "at": "2026-07-24T17:55:09Z"
+    }
+  ]
+}
