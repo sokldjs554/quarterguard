@@ -46,3 +46,7 @@ QG 현재 조사 SHA의 [CI](https://github.com/sokldjs554/quarterguard/actions/
 ## 변경 범위
 
 README에서 3분 검토 안내·공고 대조표로 바로 이동하도록 연결했다. 새 문서에는 실제 LLM 경로, 규칙 경로, 데이터 준비/검색/계산, 실행 방법, 직접 기여의 근거와 한계를 정리했다. 기존 실행 수치·정본·모델 응답·사람 판정은 수정하지 않았다. 새 유료 API 호출·운영 DB 접근·인프라 변경은 없다.
+
+## 새 PR에서 발견한 CI 환경 변경
+
+QuarterGuard 문서 PR의 [CI](https://github.com/sokldjs554/quarterguard/actions/runs/43922706967)는 성공했다. Preflight와 Harbinger는 Ubuntu 26.04에서 고정된 Playwright 버전의 Chromium 설치가 실패해 브라우저 작업을 Ubuntu 24.04로 고정했다. Preflight의 UI 실패는 이전 성공 CI 버전 Streamlit 1.66.1에서 해소됐고 핵심·대화 UI 187개가 통과했다. 최초 로그와 변경·재실행 링크는 각 프로젝트의 검증 문서에 기록했다. 이는 운영 서버 변경이 아니라 Draft PR의 CI/의존성 보완이다.

@@ -93,11 +93,11 @@ ko-search-clinic의 [PR #2](https://github.com/sokldjs554/ko-search-clinic/pull/
 3. **기업 운영 경험의 차이:** 실제 고객 데이터, 조직 IAM/SSO, 장기 SLA, 장애 대응 당직, 감사·보안 인증 근거는 부족하다. 관련 코드의 존재로 대체하지 않는다.
 4. **자격증·협업:** 관련 자격증 증빙과 실제 사람과의 개발 협업 역할·방법·결과를 확인한다. 사용자 피드백이나 AI 협업을 사람 팀 공동 개발로 바꾸지 않는다.
 5. **클라우드 구분:** Render는 별도, AWS는 Harbinger, GCP는 설정 또는 학습 환경 수준, Azure는 미확인으로 유지한다.
-6. **Preflight 테스트 재현성:** 이번 전체 검사에서 4,425개는 통과했지만 68개 건너뜀·2개 실패·10개 오류가 남았다. 브라우저/격리 DB 환경 준비와 Streamlit 긴 입력 안내의 테스트 기대를 구분해 정리했다. 핵심 162검사는 후속 부분 실행에서 통과했지만 전체 통과로 표현하지 않는다.
+6. **Preflight 테스트 재현성:** 이번 전체 검사에서 4,425개는 통과했지만 68개 건너뜀·2개 실패·10개 오류가 남았다. 브라우저/격리 DB 환경 준비와 Streamlit 긴 입력 안내의 테스트 기대를 구분해 정리했다. 이전 성공 CI 환경을 근거로 Ubuntu 24.04·Streamlit 1.66.1을 고정한 후 핵심·대화 UI 187개가 통과했다. 전체 CI 결과는 별도 실행 링크에서 확인하며 부분 검사를 전체 통과로 표현하지 않는다.
 
 ## 이번 수정·검증과 최종 링크
 
-QuarterGuard의 처음 보는 사람용 3분 안내·LLM/규칙 경로·재현 명령과 이 공고 대조표를 추가했다. Preflight에는 같은 목적의 안내와 개발 의존성·격리 DB·Chromium 테스트 절차를 보완했다. Harbinger에는 AWS 실제 실행과 GCP 설정 파일, 현재 접속 상태를 구분하는 안내를 추가했다. 제품 코드·정본·정책·모델·기존 평가 수치는 변경하지 않았다.
+QuarterGuard의 처음 보는 사람용 3분 안내·LLM/규칙 경로·재현 명령과 이 공고 대조표를 추가했다. Preflight에는 같은 목적의 안내와 개발 의존성·격리 DB·Chromium 테스트 절차를 보완했다. Harbinger에는 AWS 실제 실행과 GCP 설정 파일, 현재 접속 상태를 구분하는 안내를 추가했다. 새 PR CI에서 Preflight·Harbinger의 Playwright가 Ubuntu 26.04를 지원하지 않아 브라우저 테스트 작업을 Ubuntu 24.04로 고정했고, Preflight는 이전 성공 버전 Streamlit 1.66.1로 고정했다. 제품 코드·정본·정책·모델·기존 평가 수치는 변경하지 않았다.
 
 [이번 검사 명령·수치·원본 로그·배포 상태](verification/deloitte-20261117/README.md)에 전체 결과를 정리했다. 과거 CI와 이번 로컬 검사를 합산하지 않는다. 새 유료 LLM·DART 호출, GPU 학습, EC2 재배포는 수행하지 않았다.
 
@@ -108,3 +108,5 @@ QuarterGuard의 처음 보는 사람용 3분 안내·LLM/규칙 경로·재현 �
 | Harbinger | [AWS 진입](https://sokldjs554.github.io/harbinger/live.html) · [저장 예제](https://sokldjs554.github.io/harbinger/) · [저장소](https://github.com/sokldjs554/harbinger) | 진입 페이지 HTTP 200, 연결되는 AWS IP의 TLS 검증 실패. 과거 AWS 배포 성공 기록 확인 |
 | TableTrace | [저장 결과 데모](https://sokldjs554.github.io/tabletrace/) · [저장소](https://github.com/sokldjs554/tabletrace) | HTTP 200·현재 SHA Pages/CI 성공. 공개 백엔드 추론 아님 |
 | ko-search-clinic | [main](https://github.com/sokldjs554/ko-search-clinic) · [RAG PR #2](https://github.com/sokldjs554/ko-search-clinic/pull/2) · [연구 PR #3](https://github.com/sokldjs554/ko-search-clinic/pull/3) | 서비스/연구 브랜치 미병합. 공개 운영 데모는 이번 조사에서 확인하지 못함 |
+
+변경은 Draft PR [QuarterGuard #90](https://github.com/sokldjs554/quarterguard/pull/90), [Preflight #7](https://github.com/sokldjs554/toss-ads-ai-project/pull/7), [Harbinger #23](https://github.com/sokldjs554/harbinger/pull/23)에 보관했다. main 병합·공개 앱 재배포는 수행하지 않았다. 최초 실패와 후속 수정 검사는 각 PR의 검증 문서에서 함께 확인할 수 있다.
