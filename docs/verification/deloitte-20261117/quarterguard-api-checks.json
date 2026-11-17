@@ -1,0 +1,37 @@
+{
+  "transport": "FastAPI TestClient in-process + actual MCP subprocess",
+  "checks": [
+    {
+      "name": "normal",
+      "status": 200,
+      "result": "verified",
+      "growth_pct": "6.7916",
+      "issues": []
+    },
+    {
+      "name": "period",
+      "status": 200,
+      "result": "needs_review",
+      "growth_pct": null,
+      "issues": [
+        "PERIOD_MISMATCH"
+      ]
+    },
+    {
+      "name": "scope",
+      "status": 200,
+      "result": "needs_review",
+      "growth_pct": null,
+      "issues": [
+        "SCOPE_MISMATCH"
+      ]
+    },
+    {
+      "name": "actual_stdio_mcp",
+      "tool_calls": 18,
+      "workflow_success": true,
+      "model_calls": 0
+    }
+  ],
+  "public_browser": false
+}
