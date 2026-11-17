@@ -2,6 +2,18 @@
 
 확인일: 2026-11-17 KST. [공고 원문](https://join.deloitte.co.kr/WiseRecruit2/User/RecruitView.aspx?ridx=5231)의 경영지원부문 IT AI 엔지니어 채용을 기준으로 한다. 저장소 코드·실행 산출물·GitHub Actions·공개 HTTP 확인을 구분했다. 이번 조사·문서 수정·재검사는 Codex가 수행했다.
 
+## 후속 확인: 병합·공개 화면·본인 역할
+
+2026-11-17 후속 확인에서 QuarterGuard #90, Preflight #7, Harbinger #23을 main에 병합했다. 아래 최초 조사 당시의 로컬 실패·접속 제한 기록은 당시 상태를 보존한 것이다. 현재 확인 결과는 이 절과 문서 끝의 최종 링크를 우선한다.
+
+- QuarterGuard 배포 화면에서 `7d37947` 빌드를 확인했다. 정상 비교 6.7916%, 비교 검증의 실제 MCP 18회 실행 완료, B를 6개월 누적으로 변경했을 때 기간 불일치·계산 보류를 확인했다. 이 공개 경로는 LLM을 호출하지 않는다.
+- Preflight 배포 화면에서 `634fb6e` 빌드를 확인했다. 무료 예시 3건은 통과 2·보류 1, 모델 대역 9회, 실제 LLM 0회·비용 0으로 완료됐다. 이번에 새 유료 LIVE 요청이나 로그인 검증을 수행한 것은 아니다.
+- Harbinger 저장 예제는 응답했다. AWS 직접 주소는 브라우저에서도 인증서 이름 불일치가 나타났으며 우회하지 않았다. 기존 EC2 재배포·인증서 수정은 수행하지 않았다.
+- Preflight 전체 CI는 4,505개 통과를 확인했다. QuarterGuard는 Python 405통과·1건너뜀, Node 39통과. Harbinger의 PR 검사는 일반·브라우저·운영·Docker·TensorFlow가 성공했고, 병합 후 재검사는 일반·TensorFlow 성공을 확인했으며 Docker 작업은 이 기록 시점에 진행 중이다.
+- [추가 기여 기록](code-review-kit/05-period-diagnostic-test-20261111.md)을 확인해 QuarterGuard의 개인 제출 테스트를 기간 2 + DART 3 + 진단 1 = 총 6개로 정리했다. 진단 테스트 내부의 2개 subTest는 별도 테스트 2개로 세지 않는다.
+- [Harbinger 역할 기록](https://github.com/sokldjs554/harbinger/blob/main/docs/submission-evidence-20261026.md)에는 본인의 GitHub Secret·네이버 SMTP 설정과 실제 메일 수신 확인이 명시되어 있다. 전체 AWS 배포 명령을 직접 수행했다는 뜻으로 확대하지 않는다.
+- 이번 후속 병합·공개 화면 검사·지원 문서 작성은 Codex가 수행했다. 본인의 새 개발·운영 실적으로 표현하지 않는다.
+
 ## 추천 결론
 
 **새 프로젝트나 새 데모를 만들 필요는 없다. QuarterGuard를 대표로, Preflight의 LLM 운영 구조와 Harbinger의 AWS 운영 근거를 조합한다.** TableTrace는 오픈소스 LLM 활용 질문에 대비한 추가 사례로 둔다. 프로젝트 수를 늘리기보다 실제 수행 범위와 본인 역할을 명확히 하는 것이 우선이다.
@@ -64,7 +76,7 @@ ko-search-clinic의 [PR #2](https://github.com/sokldjs554/ko-search-clinic/pull/
 |---|---|---|
 | QuarterGuard | 기간 진단 설명 코드 수정·제출, 기간·DART·진단 테스트 보강, macOS 전체 회귀 실행 보고, 사용·검수 피드백 | [코드 제출 기록](code-review-kit/04-period-diagnostic-author-20261110.md)에 AI의 통합·별도 재검사 명시. 제출 당시 환경·날짜·도움 범위 일부 누락. 전체 제품 독립 구현으로 확대 금지 |
 | Preflight | 범위·우선순위 결정, 결과 검수, 선호 응답 수집, LIVE 입력·판단 저장·재접속, 경쟁 서비스 사용 | AI 개발 도구가 코드·테스트·배포·분석·문서 지원. 본인이 직접 작성한 개별 제품 코드의 추가 증빙 필요 |
-| Harbinger | 제품·기술 범위 결정, 피드백·결과 확인, 장애/복구 메일 수신 확인 | Codex의 구현·실험 세부 기준·코드·검증·문서 지원 기록. 직접 실행한 AWS 설정/명령 범위는 확인 필요 |
+| Harbinger | 제품·기술 범위 결정, 피드백·결과 확인, 장애/복구 메일 수신 확인 | Codex의 구현·실험 세부 기준·코드·검증·문서 지원 기록. Secret·SMTP 직접 설정 기록은 확인. EC2 배포/복구 명령의 직접 수행 범위는 확인 필요 |
 | TableTrace | 저장소에는 소유자 제출 모듈·평가 문항·Kaggle/Colab 실행이 기록됨 | AI 지원 범위와 코드별 작성 과정을 별도 확인해야 함. 이번 조사만으로 README의 모든 저자 표기를 독립 인증하지 않음 |
 | 이번 보완 | 사용자가 목표·우선 프로젝트·사실성 기준을 지정 | 조사·선정 판단·문서 작성·테스트 실행·PR 준비는 Codex가 수행. 사용자 본인의 새 개발 실적으로 쓰지 않음 |
 
@@ -88,8 +100,8 @@ ko-search-clinic의 [PR #2](https://github.com/sokldjs554/ko-search-clinic/pull/
 
 ## 남은 보완 우선순위
 
-1. **현재 공개 접속 확인:** Render 응답 시간 초과와 AWS TLS 검증 한계를 제출 전에 사용자 환경 또는 승인된 운영 계정에서 확인한다. 이번 환경의 실패만으로 서버 장애라고 단정하지 않는다.
-2. **AWS 직접 수행 범위:** 서비스가 AWS에서 실행됐다는 증거는 있지만 본인이 설정·배포·복구를 직접 수행한 작업은 별도로 정리해야 한다. 현재 권한 없이 운영 상태를 변경하지 않았다.
+1. **현재 공개 접속 확인:** 후속 검사에서 두 Render 서비스의 화면 동작과 배포 빌드를 확인했다. Harbinger AWS 인증서 이름 오류는 남아 있으며 저장 예제를 제공한다.
+2. **AWS 직접 수행 범위:** 서비스가 AWS에서 실행됐다는 증거는 있지만 본인이 설정·배포·복구를 직접 수행한 작업은 별도로 정리해야 한다. 본인의 GitHub Secret·SMTP 설정과 수신 확인은 추가로 확인했다. EC2 배포 명령·복구 명령의 직접 수행 여부는 별도다.
 3. **기업 운영 경험의 차이:** 실제 고객 데이터, 조직 IAM/SSO, 장기 SLA, 장애 대응 당직, 감사·보안 인증 근거는 부족하다. 관련 코드의 존재로 대체하지 않는다.
 4. **자격증·협업:** 관련 자격증 증빙과 실제 사람과의 개발 협업 역할·방법·결과를 확인한다. 사용자 피드백이나 AI 협업을 사람 팀 공동 개발로 바꾸지 않는다.
 5. **클라우드 구분:** Render는 별도, AWS는 Harbinger, GCP는 설정 또는 학습 환경 수준, Azure는 미확인으로 유지한다.
@@ -103,10 +115,10 @@ QuarterGuard의 처음 보는 사람용 3분 안내·LLM/규칙 경로·재현 �
 
 | 결과물 | 링크 | 이번 확인의 범위 |
 |---|---|---|
-| QuarterGuard | [데모](https://quarterguard.onrender.com/#work) · [저장소](https://github.com/sokldjs554/quarterguard) | 현재 SHA CI 성공·로컬 회귀/MCP 확인. 공개 HTTP 시간 초과, 현재 서버 SHA 미확인 |
-| Preflight | [무료 데모](https://sokldjs554.github.io/toss-ads-ai-project/app/) · [LIVE](https://preflight-toss-ads.onrender.com/?view=LIVE%20검토) · [저장소](https://github.com/sokldjs554/toss-ads-ai-project) | 무료 페이지 HTTP 200·현재 SHA Pages 성공. LIVE health 시간 초과, 로그인·새 모델 호출 미확인 |
+| QuarterGuard | [데모](https://quarterguard.onrender.com/#work) · [저장소](https://github.com/sokldjs554/quarterguard) | 후속 공개 화면 7d37947 확인. 실제 MCP 18회 실행, 정상 계산·기간 불일치 보류 동작 확인 |
+| Preflight | [무료 데모](https://sokldjs554.github.io/toss-ads-ai-project/app/) · [LIVE](https://preflight-toss-ads.onrender.com/?view=LIVE%20검토) · [저장소](https://github.com/sokldjs554/toss-ads-ai-project) | 무료 페이지·LIVE health 응답. Render 634fb6e 무료 예시 실행 확인. 로그인·새 모델 호출은 이번에 미실행 |
 | Harbinger | [AWS 진입](https://sokldjs554.github.io/harbinger/live.html) · [저장 예제](https://sokldjs554.github.io/harbinger/) · [저장소](https://github.com/sokldjs554/harbinger) | 진입 페이지 HTTP 200, 연결되는 AWS IP의 TLS 검증 실패. 과거 AWS 배포 성공 기록 확인 |
 | TableTrace | [저장 결과 데모](https://sokldjs554.github.io/tabletrace/) · [저장소](https://github.com/sokldjs554/tabletrace) | HTTP 200·현재 SHA Pages/CI 성공. 공개 백엔드 추론 아님 |
 | ko-search-clinic | [main](https://github.com/sokldjs554/ko-search-clinic) · [RAG PR #2](https://github.com/sokldjs554/ko-search-clinic/pull/2) · [연구 PR #3](https://github.com/sokldjs554/ko-search-clinic/pull/3) | 서비스/연구 브랜치 미병합. 공개 운영 데모는 이번 조사에서 확인하지 못함 |
 
-변경은 Draft PR [QuarterGuard #90](https://github.com/sokldjs554/quarterguard/pull/90), [Preflight #7](https://github.com/sokldjs554/toss-ads-ai-project/pull/7), [Harbinger #23](https://github.com/sokldjs554/harbinger/pull/23)에 보관했다. main 병합·공개 앱 재배포는 수행하지 않았다. 최초 실패와 후속 수정 검사는 각 PR의 검증 문서에서 함께 확인할 수 있다.
+변경은 PR [QuarterGuard #90](https://github.com/sokldjs554/quarterguard/pull/90), [Preflight #7](https://github.com/sokldjs554/toss-ads-ai-project/pull/7), [Harbinger #23](https://github.com/sokldjs554/harbinger/pull/23)으로 main에 병합했다. QuarterGuard·Preflight의 자동 배포와 실제 공개 화면을 확인했다. Harbinger AWS 재배포는 수행하지 않았다. 최초 실패와 후속 수정 검사는 각 PR의 검증 문서에서 함께 확인할 수 있다.
