@@ -9,7 +9,7 @@
 - QuarterGuard 배포 화면에서 `7d37947` 빌드를 확인했다. 정상 비교 6.7916%, 비교 검증의 실제 MCP 18회 실행 완료, B를 6개월 누적으로 변경했을 때 기간 불일치·계산 보류를 확인했다. 이 공개 경로는 LLM을 호출하지 않는다.
 - Preflight 배포 화면에서 `634fb6e` 빌드를 확인했다. 무료 예시 3건은 통과 2·보류 1, 모델 대역 9회, 실제 LLM 0회·비용 0으로 완료됐다. 이번에 새 유료 LIVE 요청이나 로그인 검증을 수행한 것은 아니다.
 - Harbinger 저장 예제는 응답했다. AWS 직접 주소는 브라우저에서도 인증서 이름 불일치가 나타났으며 우회하지 않았다. 기존 EC2 재배포·인증서 수정은 수행하지 않았다.
-- Preflight 전체 CI는 4,505개 통과를 확인했다. QuarterGuard는 Python 405통과·1건너뜀, Node 39통과. Harbinger의 PR 검사는 일반·브라우저·운영·Docker·TensorFlow가 성공했고, 병합 후 재검사는 일반·TensorFlow 성공을 확인했으며 Docker 작업은 이 기록 시점에 진행 중이다.
+- Preflight 전체 CI는 4,505개 통과를 확인했다. QuarterGuard는 Python 405통과·1건너뜀, Node 39통과. Harbinger의 PR 검사는 일반·브라우저·운영·Docker·TensorFlow가 성공했고, 병합 후 재검사(44025837571)도 일반·TensorFlow·Docker 전 작업 성공을 확인했다.
 - [추가 기여 기록](code-review-kit/05-period-diagnostic-test-20261111.md)을 확인해 QuarterGuard의 개인 제출 테스트를 기간 2 + DART 3 + 진단 1 = 총 6개로 정리했다. 진단 테스트 내부의 2개 subTest는 별도 테스트 2개로 세지 않는다.
 - [Harbinger 역할 기록](https://github.com/sokldjs554/harbinger/blob/main/docs/submission-evidence-20261026.md)에는 본인의 GitHub Secret·네이버 SMTP 설정과 실제 메일 수신 확인이 명시되어 있다. 전체 AWS 배포 명령을 직접 수행했다는 뜻으로 확대하지 않는다.
 - 이번 후속 병합·공개 화면 검사·지원 문서 작성은 Codex가 수행했다. 본인의 새 개발·운영 실적으로 표현하지 않는다.
