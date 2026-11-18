@@ -2,15 +2,15 @@
 
 기업 공시를 분석표·보고서로 옮기는 사람이 **수치의 원문 위치와 비교 조건을 함께 확인**하는 금융 검토 작업지입니다. 기간·연결 범위·통화·단위가 맞으면 계산하고, 다르면 이유를 표시하며 판단을 보류합니다. AI 코딩 도구를 활용한 개인 프로젝트입니다.
 
-[공개 데모](https://quarterguard.onrender.com/#work) · [핵심 기술적 판단](#핵심-기술적-판단) · [본인 기여](#본인-기여와-수행-근거) · [공고 대조·지원 근거](docs/application-evidence-20261112.md) · [서버 버전](https://quarterguard.onrender.com/health)
+## 직접 고친 부분
 
-## 직접 수정한 코드와 테스트
+9개월 누적 금액과 3개월 금액을 비교하면 계산 함수는 기간 길이 검사에서 멈춥니다. 저는 LLM이 보류 사유를 설명할 때 실제로 실행한 검사와 따로 재계산한 날짜 조건을 구별할 수 있도록 설명 지침·안내·출처 표식을 수정했습니다. 두 결과를 함께 확인하는 진단 테스트 1개를 제출했습니다. [설명 코드](docs/code-review-kit/04-period-diagnostic-author-20261110.md) · [진단 테스트와 제출 기록](docs/code-review-kit/05-period-diagnostic-test-20261111.md)
 
-9개월 누적 금액과 3개월 금액을 비교할 때, 계산 함수는 기간 길이 검사에서 멈춥니다. 저는 설명에 별도로 재계산한 날짜 조건까지 실제 보류 사유처럼 섞이는 문제를 다뤘습니다. 설명 지침과 출처 표식을 고치고, 비교 함수의 반환값과 진단 출처를 함께 확인하는 테스트 1개를 제출했습니다. [설명 코드 수정 기록](docs/code-review-kit/04-period-diagnostic-author-20261110.md) · [제출한 진단 테스트](docs/code-review-kit/05-period-diagnostic-test-20261111.md)
+기간 테스트 2개와 DART 대조 테스트 3개도 보강해 실행·커밋했습니다. 같은 두 해의 3분기 매출은 전분기 비교에서 보류하고 전년 동기 비교에서 17.3491%를 반환합니다. DART 대조에서는 단위 환산, 배율 누락, 동일 금액의 중복 후보를 검사했습니다. [기간 비교 기록](docs/code-review-kit/review-20261108.md) · [DART 기록](docs/code-review-kit/review-dart-20261109.md)
 
-기간 비교 테스트 2개와 DART 대조 테스트 3개도 보강해 실행·커밋했습니다. 같은 두 해의 3분기 매출을 전분기 기준으로 비교하면 보류하고, 전년 동기 기준으로 비교하면 성장률 17.3491%를 반환하는지 확인했습니다. DART에서는 단위 환산, 배율 누락, 동일 금액의 중복 후보를 검사했습니다. [기간 비교 실행 기록](docs/code-review-kit/review-20261108.md) · [DART 실행 기록](docs/code-review-kit/review-dart-20261109.md)
+**데모에서 확인하기**  매출액을 선택한 뒤 B를 누적으로 바꾸면 보류 이유가 표시됩니다. 기본 비교 버튼은 정해진 MCP 도구를 실행합니다. 실제 LLM의 도구 선택·설명 생성 기록은 별도로 열 수 있습니다. [공개 데모](https://quarterguard.onrender.com/#work) · [3분 안내와 재현 명령](docs/it-ai-review-guide.md) · [모델 실행 근거](docs/model-completion-live-results-20261112.md)
 
-**처음 검토한다면:** [3분 확인 순서·실제 LLM 경로·재현 명령](docs/it-ai-review-guide.md)에서 공개 작업지, 별도 모델 도구 선택 실험, 저장 응답 재검사를 구분해 볼 수 있습니다. [딜로이트 IT AI 공고와 프로젝트 대조](docs/deloitte-it-ai-audit-20261117.md)에는 AWS 근거와 현재 접속 확인의 한계도 따로 정리했습니다.
+[핵심 기술적 판단](#핵심-기술적-판단) · [본인 기여 상세](#본인-기여와-수행-근거) · [지원 근거](docs/application-evidence-20261112.md) · [직무 대조](docs/deloitte-it-ai-audit-20261117.md) · [서버 버전](https://quarterguard.onrender.com/health)
 
 ## 공개 화면으로 보는 검토 흐름
 
